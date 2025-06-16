@@ -1,0 +1,141 @@
+\section{A Simple Formal Model of the Framework}\label{sec:formalism}
+
+This simple, descriptive formal model illustrates how morphosyntactic structure, meaning, and community norms interact to determine grammaticality. For any utterance $u$, let:
+
+\begin{enumerate}
+    \item $M(u)$ be the morphosyntactic structure of $u$. $M(u)$ encompasses word order, inflection, and syntactic relationships. It attempts to generate a morphosyntactic meaning, $\mu(u)$.
+    \item $\mu(u)$ be the morphosyntactic meaning of $u$, derived from the structure $M(u)$. This represents the meaning contributed specifically by the morphosyntactic form.
+    \item $\sigma(u)$ be the composite socio-semantic--pragmatic meaning of the utterance, including phonological, lexical, and constructional components. This represents the overall intended or contextually derived meaning, integrating morphosyntactic, lexical, and pragmatic information.
+    \item $K(u) \in [0,1]$ be a compatibility function measuring coherence between $\mu(u)$ and $\sigma(u)$. $K(u) = 1$ indicates full coherence, meaning that $\mu(u)$ provides a valid structural basis for $\sigma(u)$. $K(u) = 0$ indicates a fundamental clash, where $\mu(u)$ provides a structure that is incompatible with the intended or contextually relevant meaning in $\sigma(u)$. This clash can arise from conflicting temporal specifications, incompatible argument structures, or other mismatches between the structural implications of the morphosyntax and the overall meaning.
+    \item $C^t(u) \in [0,1]$ be the community acceptance of the form--meaning pairing, $M(u)$--$\mu(u)$, at time $t$. $C^t(u) = 1$ indicates full acceptance (the pairing of $M(u)$ and $\mu(u)$ is conventional and widely used). $C^t(u) = 0$ indicates no acceptance (the pairing isn't recognised or is actively rejected). Values between 0 and 1 represent varying degrees of acceptance, reflecting factors like frequency, regional variation, and ongoing language change.
+    \item $F(u) \in [-1,0]$ be the \enquote{feeling of ungrammaticality}, where $-1$ indicates strong rejection and $0$ indicates no negative feeling. $F(u)$ reflects the subjective response to perceived instability in the form--meaning relationship and can be influenced by factors like processing difficulty, the strength of the violated convention (reflected in $C^t(u)$), and the type of mismatch between $\mu(u)$ and $\sigma(u)$.
+\end{enumerate}
+
+The grammaticality $G(u)$ of an utterance at time $t$ is then defined as:
+
+\[
+G(u) = C^t(u) \cdot K(u) \cdot \begin{cases}
+1 & \text{if } M(u) \text{ evokes a } \mu(u) \\
+0 & \text{otherwise}
+\end{cases}
+\]
+
+\noindent \textbf{Interpretation Rule:} In the formula for $G(u)$, if $M(u)$ doesn't evoke a $\mu(u)$, the conditional part evaluates to 0, resulting in $G(u) = 0$. Although $K(u)$ and $C^t(u)$ are technically undefined in this situation (as there is no $\mu(u)$ to assess for compatibility or community acceptance), we interpret them as having a value of 0 for the purposes of calculating $G(u)$. This interpretation reflects the fundamental principle of MMMG: if the morphosyntactic form fails to generate any meaning, the entire form--meaning relationship is disrupted, and grammaticality is zero, regardless of other factors.
+
+\subsection{Applying the Model}
+
+Here I illustrate applications of the model to the following cases from previous sections.
+
+\begin{enumerate}
+    \item \textit{Colorless green ideas sleep furiously}:
+    \begin{itemize}
+        \item \(M(u)\): Declarative clause with bare plural subject and intransitive predicate evokes \(\mu(u)\).
+        \item \(\mu(u)\): Generic plural subject performing action with manner modification.
+        \item \(\therefore \begin{cases} 1 \end{cases}\) (condition 1: \(M(u)\) yields a \(\mu(u)\)).
+        \item \(\sigma(u)\): Abstract concepts with contradictory properties performing physically impossible actions in an intense manner.
+        \item \(K(u) = 1\) (no conflict between \(\mu(u)\) and \(\sigma(u)\)).
+        \item \(C^t(u) = 1\) (The community accepts the pairing of \(M(u)\) with \(\mu(u)\)).
+        \item \(\therefore G(u) = 1 \cdot 1 \cdot 1 = 1\) (fully grammatical).
+        \item \(F(u) \approx 0\) (Minimal negative feeling despite semantic oddity, as there's no morphosyntactic violation).
+    \end{itemize}
+
+    \item \textit{Can the have running?}:
+    \begin{itemize}
+        \item \(M(u)\): list of words fails to evoke \(\mu(u)\).
+        \item \(\mu(u)\): No coherent morphosyntactic meaning.
+        \item \(\therefore \begin{cases} 0 \end{cases}\) (condition 1: \(M(u)\) fails to yield a \(\mu(u)\)).
+        \item \(\sigma(u)\): Question about ability or permission and a running activity.
+        \item \(K(u) = 0\) (By the interpretation rule, since \(M(u)\) fails to evoke \(\mu(u)\), \(K(u)\) is considered 0).
+        \item \(C^t(u) = 0\) (By the interpretation rule, since \(M(u)\) fails to evoke \(\mu(u)\), \(C^t(u)\) is considered 0).
+        \item \(\therefore G(u) = 0 \cdot 0 \cdot 0 = 0\) (categorically ungrammatical).
+        \item \(F(u) = -1\) (Immediate strong negative feeling due to the complete failure of form--meaning mapping).
+    \end{itemize}
+
+    \item \textit{I've finished it yesterday}:
+    \begin{itemize}
+        \item \(M(u)\): Declarative clause evokes \(\mu(u)\).
+        \item \(\mu(u)\): First-person subject has completed an action with relevance to the present with temporal modification.
+        \item \(\therefore \begin{cases} 1 \end{cases}\) (condition 1: \(M(u)\) yields a \(\mu(u)\)).
+        \item \(\sigma(u)\): Speaker indicates completion of an action during the previous day, with the intended meaning focusing on the finished state of the action rather than its current relevance.
+        \item \(K(u) = 0\) (Nearly complete incompatibility due to the temporal clash between present perfect structure suggesting current relevance and \textit{yesterday} indicating completed action with no current relevance).
+        \item \(C^t(u) = 1\) (The community accepts the pairing of \(M(u)\) with \(\mu(u)\)).
+        \item \(\therefore G(u) = 1 \cdot 0 \cdot 1 = 0\) (ungrammatical due to meaning clash).
+        \item \(F(u) = -1\) (Strong negative feeling due to the temporal clash).
+    \end{itemize}
+
+    \item \textit{It very good} (expecting \textit{it's very good}):
+    \begin{itemize}
+        \item \(M(u)\): Pronoun + AdjP evokes \(\mu(u)\).
+        \item \(\mu(u)\): Predication of quality to a subject.
+        \item \(\therefore \begin{cases} 1 \end{cases}\) (condition 1: \(M(u)\) yields a \(\mu(u)\)).
+        \item \(\sigma(u)\): Speaker assesses an object or situation positively, in an informal or non-native English context.
+        \item \(K(u) = 1\) (\(\mu(u)\) and \(\sigma(u)\) align).
+        \item \(C^t(u) = 0.1\) (The community doesn't accept this \(M(u)\) for \(\mu(u)\) at $t$, though it's not entirely unfamiliar).
+        \item \(\therefore G(u) = 0.1 \cdot 1 \cdot 1 = 0\) (ungrammatical despite meaning coherence).
+        \item \(F(u) = -0.9\) (Strong negative feeling due to the missing copula).
+    \end{itemize}
+
+    \item \textit{It very good} (expecting \textit{I consider it very good}):
+    \begin{itemize}
+    \item \(M(u)\): Pronoun + AdjP evokes \(\mu(u)\).
+    \item \(\mu(u)\): Predication of quality to a subject.
+    \item \(\therefore \begin{cases} 1 \end{cases}\) (condition 1: \(M(u)\) yields a \(\mu(u)\)).
+    \item \(\sigma(u)\): Speaker evaluates something positively, in a context where the utterance is expected to be part of a larger evaluative construction.
+    \item \(K(u) \approx 0.5\) (Partial compatibility as \(\mu(u)\) provides only part of the structure needed for the intended meaning).
+    \item \(C^t(u) \approx 0.7\) (In \enquote{small clauses} and certain complement structures, this form is acceptable in standard English).
+    \item \(\therefore G(u) \approx 0.7 \cdot 0.5 \cdot 1 \approx 0.35\) (moderate grammaticality).
+    \item \(F(u) \approx -0.3\) (Moderate negative feeling due to apparent incompleteness in this context).
+    \end{itemize}
+
+    \item \textit{We sheared three sheeps}:
+    \begin{itemize}
+        \item \(M(u)\): Declarative clause with subject, verb, and quantified object evokes \(\mu(u)\).
+        \item \(\mu(u)\): A first-person group performed a completed action on a specific quantity of animals.
+        \item \(\therefore \begin{cases} 1 \end{cases}\) (condition 1: \(M(u)\) yields a \(\mu(u)\)).
+        \item \(\sigma(u)\): Speaker reports that they and others removed wool from three individual ovine animals.
+        \item \(K(u) = 1\) (\(\mu(u)\) and \(\sigma(u)\) align).
+        \item \(C^t(u) = 0.1\) (The community doesn't accept this \(M(u)\) for \(\mu(u)\); the zero-marked form is required).
+        \item \(\therefore G(u) \approx 0.1 \cdot 1 \cdot 1 \approx 0.1\) (very low grammaticality).
+        \item \(F(u) = -1\) (Strong negative feeling due to violation of irregular plural formation rule).
+    \end{itemize}
+
+    \item \textit{I saw Joan, a friend of whose was visiting}:
+    \begin{itemize}
+        \item \(M(u)\): Declarative clause with object NP + adjunct relative clause containing independent relative \textit{whose} evokes \(\mu(u)\).
+        \item \(\mu(u)\): First-person subject completed an action involving a person connected to another entity via possessive relation.
+        \item \(\therefore \begin{cases} 1 \end{cases}\) (condition 1: \(M(u)\) yields a \(\mu(u)\)).
+        \item \(\sigma(u)\): Speaker reports seeing Joan, and additionally notes that someone connected to Joan was visiting.
+        \item \(K(u) = 1\) (\(\mu(u)\) and \(\sigma(u)\) align).
+        \item \(C^t(u) \approx 0.3\) (Independent relative \textit{whose} is rare and many speakers would prefer \textit{whose friend}).
+        \item \(\therefore G(u) \approx 0.3 \cdot 1 \cdot 1 = 0.3\) (low to moderate grammaticality).
+        \item \(F(u) \approx -0.7\) (Strong negative feeling for many speakers due to unfamiliarity with and difficulty processing the independent relative \textit{whose}).
+    \end{itemize}
+\end{enumerate}
+
+This analysis shows how ungrammaticality can arise through distinct paths while maintaining a unified formal framework. A construction can be ungrammatical because: (i) its morphosyntactic form fails to evoke any meaning (\(M(u)\) fails to yield \(\mu(u)\), as in \textit{Can the have running?}), (ii) its morphosyntactic meaning clashes with its composite meaning (\(K(u) = 0\), as in \textit{I've finished it yesterday} or the independent use of \textit{It very good}), or (iii) the community doesn't (yet) accept this form for expressing this meaning (\(C^t(u) = 0\), as in \textit{sheeps} or predicative \textit{It very good}).  Community acceptance isn't static: a construction like \textit{I've finished it yesterday}~-- currently ungrammatical due to its \(K(u) = 0\)~-- could become grammatical if diachronic changes in usage lead speakers to reinterpret the tense-aspect system, thereby altering the compatibility between \(\mu(u)\) and \(\sigma(u)\).
+
+Some cases, like \textit{It very good}, can be ungrammatical in different ways depending on what meaning the speaker is attempting to express. The framework also captures gradient acceptability through partial community acceptance (\(C^t(u) \approx 0.3\) for independent \textit{whose}). Both categorical and gradient ungrammaticality emerge from the same basic components. From this perspective, grammaticality is a dynamic equilibrium, shaped by the interaction of structural coherence and communal negotiation.
+
+\subsection{Community Dynamics and Actuation}
+
+The evolution of community acceptance $C^t(u)$ follows Verhulst's logistic equation from population dynamics (see \textcite{kauhanen2025} for a lucid linguistic introduction):
+\[
+\frac{dC}{dt} = \Delta \cdot C(1 - C)
+\]
+where $\Delta = \alpha - \beta$ represents the net bias towards acceptance. Here, $\alpha$ denotes the rate at which speakers switch from rejection to acceptance upon exposure to the construction, whilst $\beta$ represents the opposing flow from acceptance back to rejection. This differential equation yields the familiar S-curve of language change~\autocite{kroch1989}, emerging naturally from the microscopic dynamics of speaker interactions rather than being imposed as a descriptive convenience.
+
+The parameter $\Delta$ serves as a stability criterion for grammatical change. When $\Delta > 0$, the construction enjoys a net advantage, and community acceptance grows logistically towards full adoption. When $\Delta < 0$, the form faces systematic disadvantage, and acceptance declines towards zero. The critical moment of \textit{actuation}~-- when a previously marginal construction begins to spread through the community~-- occurs precisely when $\Delta$ crosses zero, transforming the equilibrium at $C = 0$ from stable to unstable.
+
+This bifurcation framework clarifies why certain innovations succeed whilst others fail: successful actuation requires not merely the presence of innovative speakers, but a fundamental shift in the community's linguistic dynamics such that $\alpha$ exceeds $\beta$. Such shifts may arise from language contact, generational change, processing pressures, or interactions with other grammatical subsystems.
+
+For small speech communities ($N < 10^4$), stochastic effects become significant, and the deterministic logistic growth must be supplemented with fixation probabilities derived from birth--death processes~\autocite{kauhanen2022,nowak2006}. In such cases, even constructions with $\Delta > 0$ may fail to achieve community acceptance due to random extinction events, whilst those with $\Delta < 0$ may occasionally succeed through demographic accidents.\footnote{The exact fixation probability for $k$ initial adopters in a population of $N$ speakers is given by the formula in \textcite{nowak2006}, but for most purposes the deterministic approximation suffices when $N$ is large.}
+
+This formulation captures several key aspects of the framework:
+
+\begin{itemize}
+    \item A morphosyntactic structure must evoke a meaning to be potentially grammatical.
+    \item The composite and morphosyntactic meanings must be compatible to some degree.
+    \item Community acceptance follows principled dynamics rather than arbitrary curves.
+    \item Subjective feelings of ungrammaticality ($F(u)$) are distinct from objective grammaticality ($G(u)$).
+    \item Actuation can be defined precisely as the moment when community dynamics favour the innovation.
+\end{itemize}

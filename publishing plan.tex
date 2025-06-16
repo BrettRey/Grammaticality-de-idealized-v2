@@ -1,0 +1,208 @@
+Below is a publishing roadmap that has worked for other broad‑spectrum programmes (Optimality Theory, Construction Grammar, Exemplar Theory) and that fits the structure of *Grammaticality de‑idealized*.
+
+---
+
+## 0 Orienting facts
+
+| Move                    | Typical vehicle                                                                              | Word limit     | Primary audience              | Goal                             |
+| ----------------------- | -------------------------------------------------------------------------------------------- | -------------- | ----------------------------- | -------------------------------- |
+| Manifesto               | flagship generalist journal (*Language*, *Glossa*, *Journal of Linguistics*)                 | 9 000–12 000   | all linguists                 | stake the claim, signal ambition |
+| Formal skeleton         | theoretically focused journal (*Linguistic Inquiry*, *Natural Language & Linguistic Theory*) | 8 000–10 000   | syntacticians, model builders | show precise machinery           |
+| Empirical demonstration | data‑driven journal (*Cognitive Linguistics*, *Frontiers in Language Sciences*)              | 8 000–10 000   | typologists, psycholinguists  | prove the model earns its keep   |
+| Tutorial synthesis      | invited handbook chapter, Oxford Research Encyclopedia entry                                 | 7 000–9 000    | newcomers                     | teach the framework              |
+| Monograph               | LangSci Press, OUP, CUP                                                                      | 80 000–110 000 | specialists                   | definitive exposition, archival  |
+
+Launching everything at once splinters attention; spacing the pieces 6‑to‑12 months apart keeps the programme in view while letting peer commentary feed forward.
+
+---
+
+## 1 Phase‑by‑phase plan
+
+### Phase A  (three‑month window)
+
+1. Deposit the full draft on Lingbuzz/OSF as a citable preprint.
+2. Abstract‑length talk: LSA annual meeting or GLOW.
+3. Compact 12‑page proceedings version (LSA, GLOW, or CLS) that previews the model equations (§ formalism) and the decision tree (§ diag‑tree).
+
+> *Purpose:* time‑stamp the idea, collect objections early, and create references you can cite in the later journal papers.
+
+### Phase B  (6–9 months)
+
+**“Manifesto” article**
+
+* Core narrative: §§ 1–3 of the draft (impasse, six components, decision tree).
+* One worked example per violation type; strip out most formalism.
+* Journal target: *Language* “Target Article” or *Glossa* “General Linguistics”.
+* Request open peer commentary if the venue allows; it accelerates uptake.
+
+**Length trimming tricks**
+
+```latex
+% in the manifesto file
+\input{intro-core.tex}      % 3 800 words
+\input{six-components.tex}  % 3 000 words
+\input{decision-tree.tex}   % 1 600 words
+\input{implications-lite.tex}% 1 800 words
+```
+
+A single pass to 10 k words is feasible.
+
+### Phase C  (Year 2)
+
+**Formal‑model article**
+
+* §§ formalism, Fu‑operationalisation, Turkish appendix.
+* Emphasise identifiability and the latent‑variable measurement model; park broader philosophical claims.
+* Venue: *Natural Language & Linguistic Theory* or *Journal of Language Modelling*.
+* Supplementary notebook in an OSF repository that reproduces the simulations.
+
+### Phase D  (Years 2–3)
+
+**Empirical testbeds**
+
+1. **Diachronic S‑curve prediction**
+   Corpus study (Penn Parsed Corpora family, ONZE, DARPA YCOE) that estimates Δ > 0 actuation points.
+   Outlet: *Language Variation & Change*.
+
+2. **Cross‑linguistic feature integration**
+   Gender‑mismatch ratings (Spanish, English, Japanese) + ERP follow‑ups.
+   Outlet: *Cognitive Linguistics* or *Second Language Research*.
+
+Each paper can stand alone but cites the manifesto for theory and the model paper for statistics.
+
+### Phase E  (Year 3 or 4)
+
+**Monograph**
+
+*Working title:* *Grammaticality De‑Idealized*.
+Publisher choices:
+
+* **LangSci Press** no fees, CC‑BY, typesetting controlled by author (matches your existing workflow).
+* **OUP/CUP** wider library penetration, but slower production and costly open‑access option.
+
+Structure:
+
+1. Part I Conceptual foundations (expanded manifesto).
+2. Part II Formal model (expanded Phase C).
+3. Part III Empirical portfolios (Phases D 1–2 + future studies).
+4. Part IV Implications for acquisition, change, clinical work.
+
+---
+
+## 2 Division of labour across pieces
+
+| Content block in current draft                                 | Where it should land                                                        |
+| -------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| § previous‑impasse                                             | manifesto                                                                   |
+| §§ framework core + diag‑tree                                  | manifesto                                                                   |
+| § formalism (minus derivations)                                | model article                                                               |
+| Full derivations, parameter‑fitting, Turkish harmony extension | online appendix + model article                                             |
+| § patterns/ungrammaticality                                    | manifesto (short) + handbook chapter (long)                                 |
+| § subjective feeling, misattribution                           | model article                                                               |
+| § change‑mechanisms                                            | diachronic empirical paper                                                  |
+| § predictions on L2                                            | separate SLA article                                                        |
+| Entire bibliography                                            | maintained centrally; each spin‑off pulls required entries via `refsection` |
+
+---
+
+## 3 Conventional launch trajectories in linguistics
+
+1. **Conference sketch → flagship journal article → monograph**
+   Optimality Theory (Prince & Smolensky 1991 Rutgers technical report → *LI* 1993 squib → 2004 monograph).
+
+2. **Data‑heavy pilot → theory article → follow‑up series**
+   Construction Grammar (Fillmore 1988 proceedings → *Language* 1989 case study → Goldberg 1995 book).
+
+3. **Broad manifesto with commentary → model paper → cross‑field adoption**
+   Exemplar phonology (Pierrehumbert 2001 *Frequency & the Emergence of Linguistic Structure* → Goldinger 2007 *Psychonomic Bulletin & Review* → Johnson 2015 monograph).
+
+Your proposed path mirrors trajectory 3: stake a claim, specify the machinery, then let domains test it.
+
+---
+
+## 4 Venue selection rationale
+
+* **High‑impact generalist journals** maximise visibility and force the most stringent review; perfect for the manifesto.
+* **Theoretical journals** value formal explicitness; ideal for the equation‑heavy core.
+* **Empirical/psycholinguistic journals** reward novel predictions and methods; good for evidence papers.
+* **Open‑access monograph** cements the programme and guarantees longevity; LangSci’s workflow dovetails with your LaTeX toolchain and CC‑BY ethos.
+
+---
+
+## 5 Practicalities
+
+* Use the same title stem across pieces (*Grammaticality de‑idealized I, II,* etc.) to make citation chaining obvious.
+* Register ORCID‑based author IDs in all deposits; link code/data via DOI (Zenodo or OSF).
+* Keep a single `.bib` masterfile; export sectional `refsections` to avoid duplicated entries.
+* For each spin‑off, include a boxed “What’s new here” paragraph to head off redundancy complaints.
+* Accept that journal review will force trimming; keep full derivations in an online appendix, not in print.
+
+---
+
+## 6 Risks and mitigations
+
+| Risk                                     | Why it arises            | Mitigation                                                                    |
+| ---------------------------------------- | ------------------------ | ----------------------------------------------------------------------------- |
+| Reviewer sees overlap across submissions | synchronous pipelines    | stagger submissions by ≥ 3 months; cross‑cite explicitly                      |
+| Theory dismissed as “all talk”           | manifesto too conceptual | release simulation notebook with manifesto even if details wait for Phase C   |
+| Fatigue before monograph finishes        | serial deadlines         | treat monograph as edited compilation of earlier articles; recycle but update |
+
+---
+
+## 7 Suggested 36‑month timeline (indicative)
+
+| Month | Deliverable                         |
+| ----- | ----------------------------------- |
+| 1     | Lingbuzz preprint                   |
+| 2     | LSA abstract                        |
+| 6     | proceedings paper                   |
+| 9     | manifesto submitted                 |
+| 15    | formal model submitted              |
+| 18    | gender‑ERP experiment preregistered |
+| 24    | diachronic corpus paper submitted   |
+| 28    | handbook chapter drafted            |
+| 30    | gender‑ERP paper submitted          |
+| 36    | monograph manuscript delivered      |
+
+---
+
+### One‑paragraph LaTeX skeleton for the manifesto
+
+```latex
+\documentclass{langsci}
+\title{Grammaticality de‑idealized: A community‑anchored view}
+\author{Brett Reynolds}
+\begin{document}
+\maketitle
+
+\section{Introduction}
+% 600 words
+
+\section{Six mechanisms of (un)grammaticality}
+% condensed § framework
+
+\section{Decision tree for quick diagnosis}
+% 1 page figure + prose
+
+\section{Implications}
+% typology, change, acquisition (one subsection each)
+
+\section{Outlook}
+% invite commentary
+
+\bibliography{gdi-manifesto}
+\end{document}
+```
+
+Compile to stay under 30 printed pages.
+
+---
+
+## Take‑home
+
+1. **Lead with a compact manifesto** in a top‑tier open‑access journal to spark debate.
+2. **Follow with a formal model piece** that nails the mathematics and measurement.
+3. **Publish at least two data‑driven tests** that any critic must engage.
+4. **Consolidate** everything, plus accumulated feedback, in an open‑access monograph.
+
+Spacing the outputs keeps the field talking, gives you natural conference material each year, and builds a citation trail that converges on the book.

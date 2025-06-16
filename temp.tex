@@ -1,0 +1,76 @@
+Below is a focussed gap analysis.  It isolates the major conceptual units that survive only in the full manuscript and shows exactly where the Lingbuzz abridgement now underspecifies the programme.  I finish with concrete insertion points and word‑count estimates so you can re‑introduce the missing pieces without blowing up the 12‑page limit.
+
+---
+
+## 1 Core components present in the manuscript but absent or skeletal in the Lingbuzz draft
+
+| Component                                               | Manuscript loci                                | Lingbuzz status                              | Consequence of omission                                                                              |
+| ------------------------------------------------------- | ---------------------------------------------- | -------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| *Objective G(u) vs subjective F(u)* split               | §§ subjective feeling, Fu, misattribution      | Dropped; only linear “feeling” language left | Undercuts the central claim that *grammaticality illusion* exists and is predictable                 |
+| Psychometric model of *F(u)* (graded‑response IRT)      | § Fu                                           | Cut                                          | No formal grounding for gradient ratings; reviewers lose the link between maths and experiments      |
+| Processing‑cost term and locality function $L(u)$       | §§ processing constraints, dependency locality | Reduced to two paragraphs                    | Prediction that centre‑embedding is *illusory* ungrammaticality is no longer derivable               |
+| Measurement model for entrenchment $C^t(u)$             | § formalism (latent CFA)                       | Stub reference only                          | Makes the frequency–acceptability dissociation look ad‑hoc                                           |
+| Noise‑penalty filter (error detection vs raw frequency) | § formalism                                    | Absent                                       | Cannot explain why frequent errors (agreement) stay ungrammatical while rare patterns sometimes pass |
+| Logistic change equation and Δ bifurcation              | § change‑mechanisms, actuation                 | Gone                                         | S‑curve prediction and diachronic testbed lose theoretical anchor                                    |
+| *Misattribution* typology (false positives / negatives) | § misattribution                               | Omitted                                      | Removes direct bridge to processing‑heavy psycholinguistics literature                               |
+| Diagnostics table & decision tree                       | §§ diag‑tree                                   | Figure removed                               | Fast “what kind of violation is this?” heuristic no longer available to readers                      |
+| Turkish harmony case study                              | Appendix A                                     | Cut                                          | No concrete interface example; formalism seems language‑agnostic and speculative                     |
+
+---
+
+## 2 Why the *grammaticality illusion* section matters
+
+1. **Unique selling point** Generative, CxG, and UBA all trade on *G = acceptability*.  Only your model predicts systematic dissociations (e.g. centre‑embedding, garden‑paths, agreement‑masking).
+2. **Empirical leverage** It converts run‑of‑the‑mill rating experiments into tests of specific parameters (α, β, γ).
+3. **Review expectations** A *Language* target article will attract psycholinguists who will look for a principled story about gradient data; without *F(u)* they will treat the piece as arm‑chair.
+
+---
+
+## 3  restoration kit for the Lingbuzz version
+
+
+| Item                                                                                | Location to insert                   | Words | Notes                                          |
+| ----------------------------------------------------------------------------------- | ------------------------------------ | ----- | ---------------------------------------------- |
+| 120‑word *G vs F* intro + definition                                                | end of § Six mechanisms              | 120   | One paragraph, reference to Appendix for maths |
+| Box 1: equations for $G(u)$ and $F(u)$ (no IRT, just top‑level)                     | margin box after above paragraph     | n/a   | Half page, 3 lines of LaTeX                    |
+| 80‑word locality explanation + centre‑embedding example                             | § Processing constraints             | 80    | Retain equation $L(u)$ only in supplement      |
+| 100‑word description of entrenchment latent factor with 4 indicators                | § Community entrenchment             | 100   | Replace long CFA exposition with pointer       |
+| 150‑word misattribution vignette with *The old man the boats* and agreement‑masking | new mini‑subsection after processing | 150   | Shows *illusory* effect concretely             |
+| 180‑word prediction bullet list (satiation, ERP, S‑curve)                           | § Implications                       | 180   | Bridges to planned empirical papers            |
+| Figure: decision tree scaled to occupy ¼ page                                       | after Six mechanisms                 | n/a   | already drawn; paste                           |
+
+---
+
+## 4 Actionable next steps
+
+1. **Draft the additions/changes using the manuscript text as quarry
+2. **Move full maths and Turkish appendix to an online supplement**; link by DOI in a footnote.
+3. **Add one line in the abstract:** *“…and shows why some ratings reflect a grammaticality illusion rather than the grammar itself.”*
+4. **Update OSF repo** with *supplement.pdf* so reviewers can check derivations.
+
+---
+
+### Quick template for the box (fits 9 cm width)
+
+```latex
+\begin{tcolorbox}[colback=lsLightBlue!30]
+\textbf{Core equations}
+
+\vspace{-0.5\baselineskip}
+\[
+G(u)=C^{t}(u)\,K(u)\,\mathbf{1}_{\!M\to\mu}
+\qquad
+F(u)=-\alpha\bigl(1-G(u)\bigr)-\gamma\,\text{ProcCost}(u)+\eta
+\]
+
+\small These two lines encode the objective–subjective split.
+If any factor in \(G(u)\) is zero the utterance is ungrammatical;
+\(F(u)\) is the listener’s graded felt anomaly.
+\end{tcolorbox}
+```
+
+-
+
+---
+
+Re‑inserting the objective–subjective machinery at this light weight restores the conceptual integrity of the programme.
