@@ -10,7 +10,7 @@
     filecolor=magenta,
     citecolor=blue,      
     urlcolor=cyan,
-    pdftitle={whose-gorilla},
+    pdftitle={grammaticality},
     pdfpagemode=FullScreen,
 }
 \usepackage[style=langsci-unified,backend=biber]{biblatex}
@@ -19,9 +19,15 @@
 \usepackage{amssymb}
 \usepackage{tcolorbox}
 \usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+
 \usepackage{microtype}
 \usepackage{float}
 \usetikzlibrary{arrows.meta,shapes,positioning}
+\usepackage{longtable}
+
 \usepackage{orcidlink}
 
 % Define only used colors
@@ -32,32 +38,37 @@
 \newcommand{\listener}{\mathrm{L}}
 
 \title{Grammaticality de-idealized\\[4pt]
-       \large Lingbuzz preprint v0.2 – 15 June 2025\\[6pt]
-       \normalsize \url{https://github.com/brettr/gdi}}
+       \large Lingbuzz preprint v0.3\\[6pt]
+       \normalsize \url{https://github.com/BrettRey/Grammaticality-de-idealized-v2}}
 \author{Brett Reynolds \orcidlink{0000-0003-0073-7195}\\Humber Polytechnic \& University of Toronto
 \thanks{I used ChatGPT o3-pro and Claude Opus 4 in drafting this version of the paper.\\This work is licensed under CC-BY 4.0}}
-\date{}
+\date{\today}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
 \small
-Speakers reject *\textit{I've finished it yesterday} (aspect semantics clash) yet accept the semantically odd \textit{Colorless green ideas sleep furiously} (no morphosyntactic clash). They block *\textit{Which did you buy car?} categorically, while linguists judge the unreadable centre‑embedding \textit{The rat the cat the dog chased killed ate the cheese} "grammatical".  
-The Morphosyntactic–Meaning Model of Grammaticality (MMMG) explains such contrasts by treating grammaticality as the stability of community‑specific form–meaning pairings, not as autonomous syntax or raw frequency.
+Speakers reject *\textit{I've finished it yesterday} (aspect semantics clash) yet accept the semantically odd \textit{Colorless green ideas sleep furiously} (no morphosyntactic clash). They block *\textit{Which did you buy car?} categorically, while linguists judge the unreadable centre‑embedding \textit{The rat the cat the dog chased killed ate the cheese} ``grammatical".  
+The Morphosyntactic–Meaning Model of Grammaticality (MMMG) aims to explain such contrasts by treating grammaticality as the stability of community‑specific form–meaning pairings, not as autonomous syntax or raw frequency.
 
-Six interacting components decide an utterance's status:  
+Five interacting components decide an utterance's status:  
 (1) conventional morphosyntactic--meaning pairings;  
-(2) compatibility between those meanings and lexical, discourse, pragmatic, and indexical meaning;  
+(2) compatibility between those meanings and contextual meaning;  
 (3) incremental‑processing limits;  
-(4) socio‑pragmatic indexicality;  
-(5) degree of community entrenchment;  
-(6) categorical structural bans.
+(4) degree of community entrenchment;  
+(5) categorical structural bans.
 
-MMMG separates objective grammaticality \(G(u)\) from the subjective feeling of error \(F(u)\), showing why processing overload can make grammatical sentences feel wrong and why compelling semantics can mask true violations.  
-A simple formalisation models entrenchment as logistic growth derived from utterance-selection dynamics, predicting S‑curves in language change. The framework yields falsifiable claims about which violations satiate under exposure, how morphosyntactic integration conditions cross‑linguistic variation, and why L2 learners over‑detect errors.  
-Grounding grammaticality in community conventions while acknowledging universal processing constraints, MMMG unifies phenomena that elude purely formal or purely usage‑based accounts.
+MMMG separates objective grammaticality \(G(u)\) from the subjective feeling of ungrammaticality \(F(u)\), showing why processing overload can make grammatical sentences feel wrong and why compelling semantics can mask true violations.  
+
+A tractable formalization models entrenchment as logistic growth derived from utterance-selection dynamics, predicting S‑curves in language change. The framework yields falsifiable claims about which violations satiate under exposure, how morphosyntactic integration conditions cross‑linguistic variation, and why L2 learners over‑detect errors.  
+
+Grounding grammaticality in community conventions while acknowledging universal processing constraints, MMMG offers a systematic approach to phenomena that elude purely formal or purely usage‑based accounts.
 \end{abstract}
+
+\begin{tcolorbox}[colback=lsLightBlue!20,title=Research Programme]
+This paper presents a theoretical framework with programmatic predictions for empirical testing. While some supporting evidence exists, systematic validation of the model's quantitative predictions awaits future data collection across the research areas outlined herein.
+\end{tcolorbox}
 
 \section{Executive overview}
 
@@ -65,31 +76,27 @@ Grounding grammaticality in community conventions while acknowledging universal 
 Grammaticality is the \emph{community stability} of morphosyntactic form–meaning pairings.
 
 \paragraph*{Mechanism.}%
-Six interacting constraints—pairings, semantic fit, processing load, indexicality, entrenchment, and structural bans—combine to yield an objective score \(G(u)\) and a subjective score \(F(u)\).
-
-\paragraph*{Why this matters.}%
-The configuration predicts which violations satiate, why some rare patterns remain grammatical, and how gradient “illusions” arise without abandoning categorical structure.
-
-\bigskip
-The constraints determining grammatical stability are:
+Grammaticality emerges from five interacting components:
 
 \begin{enumerate}
-\item \textbf{Pairings} – conventional links between morphosyntax and meaning
-\item \textbf{Semantic fit} – alignment between the meaning encoded by the morphosyntax (features, argument structure, information‐status) and the semantic types and discourse roles contributed by the lexical items
-\item \textbf{Processing load} – limits of incremental parsing
-\item \textbf{Indexicality} – social meanings the form must carry
-\item \textbf{Entrenchment} – degree of community acceptance
-\item \textbf{Structural bans} – configurations blocked outright
+    \item \textbf{Morphosyntactic Pairings} — conventional links between morphosyntax and meaning.
+    \item \textbf{Contextual Meaning} — composite interpretation drawn from lexical, information-structural, discourse, pragmatic, and socio-pragmatic indexical meanings.
+    \item \textbf{Processing Load} — incremental parsing constraints.
+    \item \textbf{Entrenchment} — community acceptance.
+    \item \textbf{Structural Bans} — categorically blocked configurations.
 \end{enumerate}
 
-These constraints explain why
+Together these components produce an objective grammaticality score \(G(u)\) and subjective feeling-of-ungrammaticality score \(F(u)\).
+
+\paragraph*{Why this matters.}%
+The framework generates testable predictions about gradient grammaticality, which violations satiate, why some rare patterns remain grammatical, and how ``illusions" of grammaticality and ungrammaticality arise. It explains, for example, why
 \begin{itemize}
     \item \textit{I've finished it yesterday} fails (semantic clash),  
-    \item centre embeddings \emph{feel} wrong (processing overload) yet remain licit, and
-    \item left‑branch extractions like \textit{Which did you buy car?} never improve with exposure (structural ban).
+    \item centre embeddings \emph{feel} ungrammatical despite being grammatical (processing overload),
+    \item the ``comparative illusion'' \emph{feels} grammatical despite being ungrammatical (undetected mismatch),
+    \item determiner extractions like \textit{Which did you buy car?} never improve with exposure (structural ban).
 \end{itemize}
 Objective grammaticality \(G(u)\) and the subjective feeling of error \(F(u)\) can therefore diverge.
-
 
 \section{Motivation: The impasse in grammaticality theory}
 
@@ -98,19 +105,19 @@ Three long‑standing tensions block a unified account of (un)grammaticality.
 \subsection{Categorical rules vs gradient judgements}
 
 \textcite{chomsky1957} cast grammaticality as an all‑or‑nothing property.  
-The competence–performance split was meant to park gradience in a separate "performance" box, yet doing so lets supportive data count as grammar and contrary data count as noise \parencite[71]{schutze2016}.
+The competence–performance split was meant to park gradience in a separate ``performance" box, yet doing so lets supportive data count as grammar and contrary data count as noise \parencite[71]{schutze2016}.
 
 \ea
 \textit{The bread the baker the apprentice helped made is delicious.}
 \z
-Centre‑embedded relatives are routinely labelled "grammatical but unprocessable," which merely restates the puzzle: speakers feel them to be wrong.
+Centre‑embedded relatives are routinely labelled ``grammatical but unprocessable," which merely restates the puzzle: speakers feel them to be wrong.
 
 \subsection{Form vs meaning}
 
 The famous \textit{Colorless green ideas sleep furiously} shows syntactic well‑formedness without plausibility.  The converse also matters:
 
 \ea[*]{\textit{I've finished it yesterday.}}\z
-Here the present‑perfect feature [+current relevance] clashes with the adverb's [+completed past], and speakers reject the sentence.  Construction‑grammar work \parencite{goldberg1995constructions} confirms that morphosyntactic meaning and lexical meaning must cohere, explaining why \textit{She texted him the address} passes while \textit{*She disappeared him the evidence} does not.
+Here the present‑perfect feature [+current relevance] clashes with the \textit{yesterday}'s [+completed past], and speakers reject the sentence.  Construction‑grammar work \parencite{goldberg1995constructions} confirms that morphosyntactic meaning and lexical meaning must cohere, explaining why \textit{She texted him the address} passes while \textit{*She disappeared him the evidence} does not.
 
 \subsection{Universal principles vs community conventions}
 
@@ -120,103 +127,91 @@ Labovian sociolinguistics \parencite{labov1972} shows that grammaticality is com
 These three tensions—categorical vs gradient, form vs meaning, universal vs communal—underline the need for a framework that explains why particular patterns of acceptability recur across speakers and across languages.
 
 
-\section{Six components of (un)grammaticality}
+\section{Five components of (un)grammaticality}
 
-Grammaticality, on this view, is the community stability of a form–meaning pairing; six forces determine that stability:
+On the MMMG account, grammaticality emerges as the community stability of morphosyntactic form–meaning pairings. Five interacting components determine this stability:
 
-
-\subsection{Morphosyntactic form–meaning pairings within communities}
+\subsection{Morphosyntactic pairings within communities}
 
 \begin{tcolorbox}[colback=lsLightBlue!30]
 \textbf{Diagnostic}: Does the morphosyntactic form evoke a conventionalised meaning in this community?
 
 \textbf{Example}: \textit{*Can the have running?}~— no viable form–meaning pairing.
 
-\textbf{Counter‑example}: \textit{Colorless green ideas sleep furiously}~— odd semantics, but the form maps transparently to a compositional meaning.
+\textbf{Counter-example}: \textit{Colorless green ideas sleep furiously}~— odd semantics, but a clear compositional morphosyntactic pairing.
 \end{tcolorbox}
 
-At root, grammaticality depends on stable pairings between morphosyntactic forms and meanings that a speech community has conventionalised. Forms are inherently meaningful: the English past tense usually marks past time but can index social distance (\textit{Could you?}) or low likelihood (\textit{If I went …}).
+Grammaticality fundamentally requires stable, conventionalised pairings between morphosyntactic forms and meanings within a speech community. Communities differ regarding acceptable pairings:
 
-Communities define their own pairings:
 \ea
 \textit{Estábamos lifting en el gym.} (Spanish–English bilingual)\\
-`We were lifting in the gym.'
+'We were lifting in the gym.'
 \z
-This is grammatical in communities that accept code‑mixed progressives, but ungrammatical for monolingual Spanish speakers, who expect \textit{levantando pesas} `lifting weights'.
 
-\subsection{Semantic fit}
+This utterance is grammatical in communities accepting code-switching with English progressive forms but not in monolingual Spanish communities.
+
+\subsection{Contextual meaning}
 
 \begin{tcolorbox}[colback=lsLightBlue!30]
-\textbf{Diagnostic}: Do the morphosyntactic meaning and the lexical/discourse meaning align?
+\textbf{Diagnostic}: Does the morphosyntactic meaning align coherently with the contextual meaning derived from lexical semantics, information structure, discourse coherence, pragmatic inference, and socio-pragmatic indexicality?
 
-\textbf{Example}: \textit{*I've finished it yesterday}~— present‑perfect 'current relevance' clashes with \textit{yesterday}'s 'completed past'.
+\textbf{Example}: \textit{*I've finished it yesterday}~— present-perfect meaning [+current relevance] clashes with the lexical-discourse meaning of \textit{yesterday} [+completed past].
 
-\textbf{Counter‑example}: \textit{I've just finished it}~— perfect combines smoothly with \textit{just}.
+\textbf{Counter-example}: \textit{I've just finished it}~— coherent alignment with lexical-discourse meaning.
 \end{tcolorbox}
 
-Even when the syntax is well‑formed, a construction fails if meanings conflict:
-\ea[*]{\textit{I have 25 years.} \hfill (intended: `I'm 25 years old')}
+Even a well-formed morphosyntactic structure becomes ungrammatical if it misaligns significantly with contextual meanings. Consider:
+
+\ea[*]{\textit{I have 25 years.} \hfill (intended: `I am 25 years old')}
 \z
-In English, \textit{have + years} denotes relational predication (e.g. experience), not age ascription.
+
+In English, \textit{have + years} fails contextually as an age-expression despite being syntactically viable.
 
 \subsection{Processing load}
 
 \begin{tcolorbox}[colback=lsLightBlue!30]
 \textbf{Diagnostic}: Can the sentence be incrementally parsed within memory limits?
 
-\textbf{Example}: \textit{The rat the cat the dog chased killed ate the cheese}~— multiple embeddings overwhelm processing.
+\textbf{Example}: \textit{The rat the cat the dog chased killed ate the cheese}~— multiple embeddings overload incremental parsing.
 
-\textbf{Counter‑example}: \textit{The rat that the cat killed ate the cheese}~— single embedding remains processable.
+\textbf{Counter-example}: \textit{The rat that the cat killed ate the cheese}~— single embedding, easily processed.
 \end{tcolorbox}
 
-Multiple centre‑embeddings overload working memory even though the structure is, in principle, grammatical \autocite{gibson2000}.
+High processing demands can induce feelings of ungrammaticality even for objectively grammatical constructions due to parsing constraints.
 
-\subsection{Socio‑pragmatic indexicality}
+\subsection{Entrenchment}
 
 \begin{tcolorbox}[colback=lsLightBlue!30]
-\textbf{Diagnostic}: Does the form index the intended social stance or identity?
+\textbf{Diagnostic}: Is the pairing conventional and entrenched within the community?
 
-\textbf{Example}: \textit{vos} forms in a strict‑\textit{tú} region~— indexical mis‑fit.
+\textbf{Example}: \textit{*We counted three sheeps}~— regular plural blocked by entrenched irregular form.
 
-\textbf{Counter‑example}: \textit{vos} in Buenos Aires~— indexically appropriate.
+\textbf{Counter-example}: \textit{We bought three computer mouses}~— recent regularisation already accepted.
 \end{tcolorbox}
 
-\ea
-¿\textit{Vos querés un café?} (Río de la Plata Spanish)\\
-`Do you want a coffee?'
-\z
-The choice of \textit{vos} indexes regional identity; speakers outside the region may reject it for indexical reasons even though the syntax is fine.
+Even transparent morphosyntactic patterns can fail if not entrenched in a community. For example, the independent relative \textit{whose} remains marginal due to lack of exposure:
 
-\subsection{Community entrenchment}
-
-\begin{tcolorbox}[colback=lsLightBlue!30]
-\textbf{Diagnostic}: Is the pairing conventional within the community?
-
-\textbf{Example}: \textit{*We counted three sheeps}~— regular plural blocked by entrenched irregular.
-
-\textbf{Counter‑example}: \textit{We bought three computer mouses}~— recent regularisation already accepted.
-\end{tcolorbox}
-
-Transparent patterns can fail if they lack communal backing.  The independent relative \textit{whose} is so rare that many speakers never conventionalise it:
-\ea[\textsuperscript{?}]{\textit{I saw Joan, a friend of whose was visiting.}}
+\ea[?]{\textit{I saw Joan, a friend of whose was visiting.}}
 \z
 
 \subsection{Structural bans}
 
 \begin{tcolorbox}[colback=lsLightBlue!30]
-\textbf{Diagnostic}: Does the sentence violate a categorically blocked configuration?
+\textbf{Diagnostic}: Does the construction violate a categorically blocked configuration?
 
-\textbf{Example}: \textit{*\hspace{0.2ex}Which\hspace{0.2ex} did you buy \_ car?} — determiner extraction.
+\textbf{Example}: \textit{\*Which did you buy \_ car?} — determiner extraction.
 
-\textbf{Counter‑example}: \textit{Which car did you buy \_?} — the whole NP is extracted.
+\textbf{Counter-example}: \textit{Which car did you buy \_?} — entire NP extraction permitted.
 \end{tcolorbox}
 
-Some configurations are universally rejected regardless of meaning, processing, or frequency.  They never improve with familiarity and show categorical unacceptability. While we treat these as yielding $\mu(u)=\varnothing$, an alternative is to model them as extreme biases in an utterance-selection framework—an empirically testable distinction.
+Categorical structural bans represent extreme stability biases. While cross-linguistically robust, they are nonetheless emergent rather than strictly universal or innate. The model treats them as a community-entrenchment extreme (effectively zero acceptability), but future work could test their potential malleability under unusual sociolinguistic conditions.
+
+Together, these five components interact systematically to determine the grammaticality of linguistic constructions, accounting both for objective grammaticality and subjective judgments of grammaticality and ungrammaticality.
 
 
 \section{Quick‑diagnosis decision tree}
 
-The six components can be queried in sequence to classify an utterance on first pass. The tree locates the first component whose failure suffices to render an utterance ungrammatical; later nodes are not evaluated once a zero value is returned.
+The five components can be queried in sequence to classify an utterance on first pass. The tree locates the first component whose failure suffices to render an utterance ungrammatical; later nodes are not evaluated once a zero value is returned.
 
 \begin{figure}[H]
 \centering
@@ -247,64 +242,84 @@ The six components can be queried in sequence to classify an utterance on first 
 \node[decision, below=of ban]  (sem)  {semantic fit?};
 \node[outcome , right=of sem]  (clash) {semantic clash\\(*\textit{I've finished it yesterday})};
 
-\node[decision, below=of sem]  (idx)  {indexical fit?};
-\node[outcome , right=of idx]  (misfit) {indexical mis‑fit\\(\textit{vos} in strict‑\textit{tú}~region)};
-
-\node[decision, below=of idx]  (ent)  {community\\entrenched?};
+\node[decision, below=of sem]  (ent)  {community\\entrenched?};
 \node[outcome , right=of ent]  (novel) {community‑novel\\(?\textit{friend of whose})};
 
-\node[decision, below=of ent]  (proc) {processing\\tolerable?};
-\node[outcome , right=of proc] (over) {processing overload\\(centre embedding)};
-
-\node[outcome , below=0.7cm of proc] (gram) {\textbf{grammatical}};
+\node[outcome , below=0.7cm of ent] (gram) {\textbf{grammatical}};
 
 \draw[arrow] (map)  -- node[above] {no} (nonsense);
 \draw[arrow] (map)  -- node[left]  {yes} (ban);
 \draw[arrow] (ban)  -- node[above] {yes} (lbe);
 \draw[arrow] (ban)  -- node[left]  {no}  (sem);
 \draw[arrow] (sem)  -- node[above] {no}  (clash);
-\draw[arrow] (sem)  -- node[left]  {yes} (idx);
-\draw[arrow] (idx)  -- node[above] {no}  (misfit);
-\draw[arrow] (idx)  -- node[left]  {yes} (ent);
+\draw[arrow] (sem)  -- node[left]  {yes} (ent);
 \draw[arrow] (ent)  -- node[above] {no}  (novel);
-\draw[arrow] (ent)  -- node[left]  {yes} (proc);
-\draw[arrow] (proc) -- node[above] {no}  (over);
-\draw[arrow] (proc) -- node[left]  {yes} (gram);
+\draw[arrow] (ent)  -- node[left]  {yes} (gram);
 
 \end{tikzpicture}
-\caption{Decision tree for first‑pass diagnosis; variable names match Table~\ref{tab:notation}}
+\caption{Decision tree for first‑pass diagnosis.}
 \end{figure}
 
 
 The tree is a heuristic: it points to the first component that fails.  
 The underlying grammar is \(G(u)=C^{t} \cdot K(u)\); when any factor is zero, the utterance is objectively ungrammatical even if later nodes would succeed.
+\begin{tcolorbox}[colback=lsLightBlue!15]
+\textbf{Note.} The tree classifies utterances on the dimension of
+\emph{objective grammaticality}. A sentence can pass the tree
+($G(u){=}1$) yet yield a negative $F(u)$ if either 
+$r(u)$ is high or PCost$(u)$ is large.
+\end{tcolorbox}
 
 \section{Notation}
 
-\begin{table}[htbp]
-\centering
-\small
-\caption{Symbols used in the formal model. Type abbreviations: struc.\ = syntactic structure, fea.\ = feature bundle, indic.\ = observed indicator}
-\label{tab:notation}
-\begin{tabular}{@{}llp{7cm}@{}}
+\begin{small}
+\begin{longtable}{@{}llp{7cm}@{}}
+\caption{Symbols used in the formal model. Type abbreviations: struc.\ = syntactic structure, fea.\ = feature bundle or semantic representation, indic.\ = observed indicator, func.\ = function}\label{tab:notation}\\
 \toprule
 Symbol & Type & Meaning / construction method \\ 
 \midrule
+\endfirsthead
+
+\multicolumn{3}{@{}l}{\small\textit{Table~\ref{tab:notation} continued}} \\
+\toprule
+Symbol & Type & Meaning / construction method \\ 
+\midrule
+\endhead
+
+\midrule
+\multicolumn{3}{r@{}}{\small\textit{Continued on next page}}
+\endfoot
+
+\bottomrule
+\endlastfoot
+
 \multicolumn{3}{@{}l}{\textit{Utterance-level observables}} \\
 $u$ & token & Concrete utterance under evaluation \\
 $M(u)$ & struc. & Morphosyntactic parse of $u$ \\
 $\mu(u)$ & fea. & Morphosyntactic meaning unpacked from $M(u)$ \\
-$\sigma(u)$ & fea. & Composite lexical–pragmatic meaning intended \\[0.5em]
+$\sigma(u)$ & fea. & Composite lexical–pragmatic meaning intended \\
+$\text{lex}(u)$ & fea. & Lexical semantic representation of $u$ \\
+$\text{discCtx}(u)$ & fea. & Discourse-history information relevant to $u$ \\
+$\text{infoCtx}(u)$ & fea. & Information‑structure configuration (topic–comment layout, focus, QUD alignment) \\
+$\text{pragCtx}(u)$ & fea. & Pragmatic inference information relevant to interpreting $u$ \\
+$\text{idxCtx}(u)$ & fea. & Indexical parameters (speaker, addressee, place, time, etc.) relevant to $u$ \\[0.5em]
+
+\multicolumn{3}{@{}l}{\textit{Semantic interpretation function}} \\
+$\varphi$ & func. & Deterministic but underspecified mapping from context and lexical meaning to composite semantic representation \\[0.5em]
+
 \multicolumn{3}{@{}l}{\textit{Evaluation scores}} \\
 $K(u)\in[0,1]$ & score & Semantic compatibility of $\mu(u)$ with $\sigma(u)$ \\
 $G(u)\in[0,1]$ & score & Objective grammaticality; product defined in Eq.~\eqref{eq:G} \\
-$F(u)\in[-1,0]$ & score & Listener's felt ill‑formedness; see Eq.~\eqref{eq:F} \\[0.5em]
+$F(u)\in[-1,0]$ & score & Listener's felt ill‑formedness; see Eq.~\eqref{eq:F} \\
+$r(u)\in[0,1]$ & score & Diagnostic weight: probability listener detects mismatch between \(\mu(u)\) and \(\sigma(u)\) \\[0.5em]
+
 \multicolumn{3}{@{}l}{\textit{Community latent variable and indicators}} \\
 $C^{t}(u)\in[0,1]$ & latent & Community entrenchment at time $t$ \\
 $A(u)$ & indic. & Availability in memory (recognition hit rate) \\
 $E(u)$ & indic. & Exposure frequency (log corpus count) \\
 $P(u)$ & indic. & Production probability (elicitation rate) \\
 $S(u)$ & indic. & Social acceptability (matched-guise score) \\[0.5em]
+
 \multicolumn{3}{@{}l}{\textit{Parameters and drift components}} \\
 $\lambda_{\listener}$ & param & Listener weight on objective violation, Eq.~\eqref{eq:F} \\
 $\gamma$ & param & Processing‑to‑affect scaling, Eq.~\eqref{eq:F} \\
@@ -314,17 +329,19 @@ $\alpha_{\mathrm{sem}}$ & param & Weight on semantic transparency \\
 $\alpha_{\mathrm{soc}}$ & param & Weight on social prestige \\
 $\alpha_{\mathrm{struct}}$ & param & Weight on structural analogy \\
 $\beta_{\mathrm{noise}}$ & param & Noise penalty coefficient \\
-$\beta_{\mathrm{hi}}$, $\beta_{\mathrm{lo}}$ & const & High/low noise penalty values \\
+$k$, $\theta$ & param & Sigmoid shape and threshold for noise penalty \\[0.5em]
+
 \multicolumn{3}{@{}l}{\textit{Diagnostic predictors}} \\
 $\text{Transp}(u)$ & measure & Semantic transparency (role-entropy) \\
 $\text{Prest}(u)$ & measure & Social prestige of innovators (7-point scale) \\
-$\text{Analo}(u)$ & measure & Structural analogy pressure \\
+$\text{Analo}(u)$ & measure & Structural analogy pressure \\[0.5em]
+
 \multicolumn{3}{@{}l}{\textit{Processing functions}} \\
-$\text{ProcessingCost}(u)$ & z-score & Integration cost following \textcite{gibson2000} \\
+$\text{PCost}(u)$ & z-score & Integration cost following \textcite{gibson2000} \\
 $\text{IC}(w_i)$ & count & Integration cost at word $w_i$ \\
-\bottomrule
-\end{tabular}
-\end{table}
+\end{longtable}
+\end{small}
+
 
 \newpage
 \section{Minimal formal skeleton}
@@ -332,6 +349,18 @@ $\text{IC}(w_i)$ & count & Integration cost at word $w_i$ \\
 \subsection{Core architecture}
 
 The model treats grammaticality as emerging from the interaction of morphosyntactic structure, meaning compatibility, and community conventions. Figure~\ref{fig:causal-dag} shows the causal dependencies using Structural Causal Model semantics \parencite{pearl2009}.
+
+We treat the contextual meaning as the output of a deterministic but underspecified mapping:
+\[
+  \sigma(u)=\varphi\!\bigl(
+      \text{lex}(u),            % lexical semantics
+      \text{discCtx}(u),        % discourse history
+      \text{infoCtx}(u),        % information‑structure state
+      \text{pragCtx}(u),        % pragmatic inferences
+      \text{idxCtx}(u)          % indexical parameters
+  \bigr).
+\]
+\(\varphi\) can be implemented as a probabilistic semantic interpreter; the present paper leaves its internal mechanics abstract. The only requirement is that it returns a structured semantic representation against which the morphosyntactic meaning \(\mu(u)\) is matched when computing \(K(u)\).
 
 \begin{figure}[htbp]
 \centering
@@ -343,21 +372,21 @@ The model treats grammaticality as emerging from the interaction of morphosyntac
 ]
 % ───────── 1st row ─────────
 \node[var] (mu)    {$\mu(u)$\\morphosyntactic\\meaning};
-\node[var, right=of mu] (sigma) {$\sigma(u)$\\lexico–discourse\\meaning};
+\node[var, right=4.0cm of mu] (sigma) {$\sigma(u)$\\lexico–discourse\\meaning};
 
 % ───────── 2nd row ─────────
 \node[var, below=of mu]     (K) {$K(u)$\\semantic fit\\};
 \node[var, below=of sigma]  (r) {$r(u)$\\diagnostic\\weight};
 
 % ───────── 3rd row ─────────
-\node[var, right=of r] (C) {$C^{t}(u)$\\community\\entrenchment};
+\node[var, right=1.1cm of K] (C) {$C^{t}(u)$\\community\\entrenchment};
 
 % ───────── 4th row ─────────
 \node[var, below=of K]      (G) {$G(u)$\\objective\\grammaticality};
 \node[var, below=of r]      (F) {$F(u)$\\feeling of\\grammaticality};
 
 % ───────── exogenous ───────
-\node[var, right=of F] (P) {Processing\\Cost};
+\node[var, right=1.1cm of mu] (P) {PCost$(u)$\\Processing\\Cost};
 
 % ───────── arrows ──────────
 \draw[->] (mu)    -- (K);
@@ -371,10 +400,14 @@ The model treats grammaticality as emerging from the interaction of morphosyntac
 \draw[->] (K) -- (F);
 \draw[->] (r) -- (F);
 \draw[->] (C) -- (F);
+\draw[->] (P) -- (r);
 \draw[->] (P) -- (F);
+\draw[->] (mu) -- (P);
+
 \end{tikzpicture}
 \caption[Macro-level causal structure]%
-{\textbf{Macro-level causal structure of the MMMG.} All arrows encode Structural Causal Model semantics; e.g., $\text{do}(C^{t} \leftarrow 0) \Rightarrow G = 0$ by definition of $G = C^{t}K$. Since $P$ has no parents except exogenous noise, there is no open back-door into $F$ once $K$ and $r$ are conditioned on.
+{\textbf{Macro-level causal structure of the MMMG.} All arrows encode Structural Causal Model semantics; e.g., $\text{do}(C^{t} \leftarrow 0) \Rightarrow G = 0$ by definition of $G = C^{t}K$. 
+PCost $(\text{PCost}(u))$ is a deterministic function of the morphosyntactic structure (arrow $\mu\!\to\!\text{Pcost}$). Removing semantic arrows ensures that the only back-door into $F$ is $\text{Pcost}\!\leftarrow\!\mu\!\to\!K\!\to\!F$, which is blocked by adjusting for $K$ (or for $\mu$). Conditioning on $r$ would open $\text{Pcost}\!\to\!r\!\leftarrow\!\mu$, so it is avoided.
 \\\emph{Input layer}: the parser maps the surface form to a morphosyntactic meaning $\mu(u)$
 and the discourse context supplies a lexico–discourse meaning $\sigma(u)$, which include indexical meanings.
 Any categorical structural ban makes this mapping fail, i.e.\ $\mu(u)=\varnothing$.
@@ -387,12 +420,12 @@ compatibility score to yield objective grammaticality,
 $G(u)=C^{t}(u)K(u)$.
 \\\emph{Output layer}: felt ill-formedness is
 $F(u)= -\lambda_{\mathrm L}\,r(u)\!\bigl(1-K(u)\bigr)
-       -\gamma\,\text{ProcessingCost}(u)+\eta$,
-where ProcessingCost is computed via integration cost. $F(u)\!\in[-1,0]$, where 0 means `no negative signal'.
+       -\gamma\,\text{PCost}(u)+\eta$,
+where PCost is computed via integration cost. $F(u)\!\in[-1,0]$, where 0 means `no negative signal'. The arrow from processing cost to $r(u)$ is purely conceptual: high load empirically reduces mismatch detection.
 \\\emph{Heuristic mapping}: pairings $\to\mu(u)$;
 semantic fit \& indexicality $\to\sigma(u),K(u)$;
 structural bans $\to\mu(u)=\varnothing$;
-processing load $\to$ ProcessingCost and $r(u)$;
+processing load $\to$ PCost and $r(u)$;
 entrenchment $\to C^{t}(u)$.}
 \label{fig:causal-dag}
 \end{figure}
@@ -409,17 +442,18 @@ where $K(u) = 0$ whenever the form–meaning mapping fails.
 
 The listener's subjective feeling of (un)grammaticality is:
 \begin{equation}\label{eq:F}
-F(u)= -\lambda_{\listener}\,(1-G(u)) \;-\; \gamma\,\text{ProcessingCost}(u) + \eta
+F(u)= -\lambda_{\listener}\,r(u)\,(1-K(u)) \;-\; \gamma\,\text{PCost}(u) + \eta
 \end{equation}
 where:
 \begin{itemize}
   \item $\lambda_{\listener} \in [0,1]$ — listener-specific penalty weight for objective violations
+  \item $r(u) \in [0,1]$ — probability that listener detects the mismatch between $\mu(u)$ and $\sigma(u)$
   \item $\gamma > 0$ — conversion factor mapping processing load to negative affect
-  \item $\text{ProcessingCost}(u) = \sum_{i} \text{IC}(w_i)$ — sum of integration costs following \textcite{gibson2000}
+  \item $\text{PCost}(u) = \sum_{i} \text{IC}(w_i)$ — sum of integration costs following \textcite{gibson2000}
   \item $\eta \sim \mathcal{N}(0,\sigma^{2})$ — idiosyncratic listener bias
 \end{itemize}
 
-$F(u)$ is constrained to $[-1,0]$: 0 means `no negative signal'; larger negative values indicate stronger perceived ill-formedness.
+$F(u)$ is constrained to $[-1,0]$: 0 means `no negative signal'; larger negative values indicate stronger perceived ill-formedness. Values computed outside this range are linearly clipped to maintain interpretability.
 
 The processing cost operationalizes memory load via dependency integration:
 \begin{equation}
@@ -432,21 +466,33 @@ where $|d|$ is the linear distance in intervening discourse referents. This alig
 Consider $u=$\,*\textit{I've finished it yesterday}:
 
 \begin{itemize}
-  \item Form–meaning mapping succeeds: present‑perfect morphology evokes 'current relevance'
-  \item $K(u)=0$ because that meaning clashes with \textit{yesterday} ('completed past')
-  \item $C^{t}(u)=1$ since the construction is fully entrenched in English
+  \item Form–meaning mapping succeeds: present‑perfect morphology evokes `current relevance'
+  \item $K(u)=0$ because that meaning clashes with \textit{yesterday} (`completed past')
+  \item $r(u)=0.9$ since VP-aspect/lexical-aspect clashes are highly salient
+  \item $C^{t}(u)=1$ since the construction is fully entrenched\footnote{though see \textcite{lai2013opt} for evidence of systematic relaxation of temporal-adverbial constraints in Singapore English}
   \item Therefore $G(u)=1\times0=0$ (objectively ungrammatical)
 \end{itemize}
-
-With illustrative values $\lambda_{\listener}=0.8$, $\gamma=0.1$, $\text{ProcessingCost}(u)=0.2$, $\eta=0$:
+With illustrative values $\lambda_{\listener}=0.8$, $\gamma=0.1$, $\text{PCost}(u)=0.2$, $\eta=0$:
 \begin{equation}
-F(u)=-0.8(1-0)-0.1\cdot0.2=-0.82
+F(u)=-0.8\cdot0.9\cdot(1-0)-0.1\cdot0.2=-0.74
 \end{equation}
 yielding a strong negative feeling.
 
+\begin{tcolorbox}[colback=lsLightBlue!20,title=Causal intervention example]
+Setting $\text{do}(C^{t} \leftarrow 0)$ for ``I have 25 years":
+With $K = 0.1$ (semantic clash in English) and $r = 0.7$ (moderately detectable), we get:
+$G = 0 \times 0.1 = 0$ (objectively ungrammatical)
+$F = -0.8 \cdot 0.7 \cdot (1-0.1) - 0.1(0.2) = -0.524$ (moderately felt as wrong)
+
+Compare: Setting~$\text{do}(C^{t} \leftarrow 1)$ doesn't save it:
+$G = 1 \times 0.1 = 0.1$ (still mostly ungrammatical)
+$F = -0.8 \cdot 0.7 \cdot (1-0.1) - 0.1(0.2) = -0.524$ (still felt as wrong)
+Note that felt ungrammaticality depends on detectability, not entrenchment.
+\end{tcolorbox}
+
 \subsection{Community entrenchment as latent variable}
 
-To avoid circularity, $C^{t}(u)$ is treated as a latent cause of four observables:\footnote{The latent variable $C^{t}$ is identifiable up to scale given monotone relationships with at least three indicators and appropriate factor-loading constraints.}
+To avoid circularity, $C^{t}(u)$ is treated as a latent cause of four observables:\footnote{The latent variable $C^{t}$ is identifiable up to scale given monotone relationships with at least three indicators and appropriate factor-loading components. A synthetic data recovery exercise demonstrating identifiability with RMSE = 0.057 and $r$ = 0.923 is available at \url{https://github.com/BrettRey/Grammaticality-de-idealized-v2/blob/main/validate_entrenchment_measurement.py}.}
 \begin{equation}
 C^{t}(u)\ \longrightarrow\ 
 \begin{cases}
@@ -458,7 +504,7 @@ S(u) & \text{social acceptability}
 \end{equation}
 Each indicator follows a measurement model with error:
 \begin{equation}
-\log E(u) = \lambda_E C^{t}(u) + \epsilon_E, \quad \epsilon_E \sim \mathcal{N}(0,\sigma_E^{2})
+\log E(u) = \lambda_E C^{t}(u) + \epsilon_E, \quad \epsilon_E \sim \mathcal{N}(0,\nu_E^{2})
 \end{equation}
 and similarly for the other indicators. This specification allows for measurement uncertainty while maintaining identifiability.
 
@@ -472,74 +518,61 @@ Each indicator is collected with different methodology:
 
 The latent variable $C^{t}(u)$ is estimated via confirmatory factor analysis without re-using acceptability data.
 
-\subsection{Community dynamics}
+\subsection{Community Dynamics}
+\label{sec:community-dynamics}
 
-\begin{figure}[h]
-\centering
-\begin{tikzpicture}[
-  node distance = 1cm and 0.5cm,
-  > = latex,
-  var/.style = {rectangle, draw, rounded corners,
-                align=center, inner sep=4pt, font=\small},
-  sum/.style = {circle, draw, inner sep=1.5pt, font=\small}
-]
-% inputs
-\node[var] (transp) {Transp$(u)$\\semantic\\transparency};
-\node[var, below=of transp] (prest) {Prest$(u)$\\social\\prestige};
-\node[var, below=of prest] (analo) {Analo$(u)$\\structural\\analogy};
-\node[var, below=of analo] (noise) {NoisePen$(u)$\\penalty};
+Following \textcite{BlytheCroft2012}, I treat language change as an utterance-selection system whose \emph{population mean} obeys a logistic differential equation.  Let $C^{t}(u)\!\in[0,1]$ be the community's entrenchment of form~$u$ at time~$t$.  Its deterministic trajectory is
 
-% weighted sum
-\node[sum, right=1.8cm of prest] (sum) {$\sum$};
-
-% arrow labels with weights
-\draw[->] (transp) -- node[above] {$\alpha_{\mathrm{sem}}$} (sum);
-\draw[->] (prest)  -- node[above] {$\alpha_{\mathrm{soc}}$} (sum);
-\draw[->] (analo)  -- node[above] {$\alpha_{\mathrm{struct}}$} (sum);
-\draw[->] (noise)  -- node[above] {$-\beta_{\mathrm{noise}}$} (sum);
-
-% delta node
-\node[var, right=of sum] (delta) {$\Delta(u)$\\drift};
-
-% logistic integrator
-\node[var, right=of delta] (logi) {\parbox{2.3cm}{\centering logistic\\update\\$\displaystyle\frac{dC^t}{dt}=\! \Delta\,C^t(1-C^t)$}};
-
-% entrenchment
-\node[var, right=of logi] (C) {$C^{t+1}(u)$\\entrenchment};
-
-% arrows
-\draw[->] (sum)   -- (delta);
-\draw[->] (delta) -- (logi);
-\draw[->] (logi)  -- (C);
-\end{tikzpicture}
-\caption{Community‑entrenchment update pathway.\label{fig:entrenchment-circuit}}
-\end{figure}
-
-
-Change in entrenchment follows logistic growth, derived from mean-field approximation of utterance-selection dynamics \parencite{blythe2012}:
 \begin{equation}
-\frac{dC^{t}(u)}{dt}= \Delta(u)\,C^{t}(u)\bigl(1-C^{t}(u)\bigr)
+\frac{dC^{t}}{dt} \;=\; \Delta(u)\;C^{t}\!\bigl(1-C^{t}\bigr),
+\qquad
+\text{\autocite{verhulst1838}}
+\end{equation}
+where the net bias~$\Delta(u)$ aggregates four independently measurable pressures:
+\begin{equation}\label{eq:delta-expanded}
+\begin{split}
+\Delta(u) &= \alpha_{\mathrm{sem}}\,\text{Transparency}(u) + \alpha_{\mathrm{soc}}\,\text{Prestige}(u) \\
+&\quad + \alpha_{\mathrm{struct}}\,\text{Analogy}(u) - \beta_{\mathrm{noise}}\,\text{NoisePenalty}(u).
+\end{split}
 \end{equation}
 
-As given in Eq.~\eqref{eq:delta}, the net drift bias is:
-\begin{equation}\label{eq:delta}
-\Delta(u)=
-   \alpha_{\mathrm{sem}}\!\cdot\!\text{Transp}(u)+
-   \alpha_{\mathrm{soc}}\!\cdot\!\text{Prest}(u)+
-   \alpha_{\mathrm{struct}}\!\cdot\!\text{Analo}(u)-
-   \beta_{\mathrm{noise}}\cdot\text{NoisePen}(u)
-\end{equation}
-
-Components:
 \begin{itemize}
-    \item $\text{NoisePen}(u)$: Binary penalty if surprisal $> \theta$ and self-repair rate $> \theta'$
-    \item $\text{Transp}(u)$: Semantic transparency (lower role-entropy = more transparent)
-    \item $\text{Prest}(u)$: Social prestige of innovating group (7-point scale)
-    \item $\text{Analo}(u)$: Structural analogy pressure from related patterns
-    \item $\alpha_{\mathrm{sem/soc/struct}} \sim \mathcal{N}(\mu_\alpha, \tau_\alpha^2)$: Hierarchically pooled weights
+  \item \textbf{Transparency} = inverse role entropy (higher = clearer form–meaning mapping).
+  \item \textbf{Prestige} = mean matched-guise score of the innovating group.
+  \item \textbf{Analogy} = vector similarity to entrenched neighbours in morphosyntactic space.
+  \item \textbf{NoisePenalty} = smooth sigmoid of surprisal (see \S\ref{sec:noise-penalty}).
 \end{itemize}
 
-The hierarchical specification $\alpha_j \sim \mathcal{N}(\mu_\alpha, \tau_\alpha^2)$ with weakly informative priors on $\tau_\alpha$ prevents overfitting while allowing community-specific variation.
+\paragraph{Speaker-internal gradience.}
+The logistic \emph{population} curve remains intact if individual speakers entertain probabilistic grammars à la \textcite{Yang2000}.  Let $C_i(u)\!\in[0,1]$ be speaker $i$'s belief that $u$ is licensed.  A Yang-style learner increments $C_i$ on successful parses and decrements on failures.  The population mean $C^{t}(u)=\tfrac1N\sum_i C_i(u)$ then converges in expectation to the same Verhulst trajectory.\footnote{This two-state \enquote{AB-toy} model~-- named after Nowak's classic $A{\leftrightarrow}B$ demonstration of logistic growth \citeyearpar{Nowak2001}~-- treats every utterance token as copying either variant $A$ (here, \emph{innovative}) or variant $B$ (\emph{conservative}).  Extending to continuous $C_i(u)$ increases psychological realism but sacrifices the closed-form fixation probability enjoyed by the discrete model; see Appendix~A for simulation code.}
+
+\paragraph{Predictions.}
+Eq.~\eqref{eq:delta-expanded} yields three immediately testable claims:
+
+\begin{enumerate}
+  \item $\Delta(u)\!>\!0 \;\Rightarrow\; C^{t}(u)$ rises in an S-curve, observable in historical corpora.
+  \item The relative \emph{slopes} of nested S-curves reveal the weight hierarchy $\alpha_{\text{sem}}{:}\alpha_{\text{soc}}{:}\alpha_{\text{struct}}$.
+  \item Constructions with $\Delta(u)\!\approx\!0$ show long-lived variability and dialectal patchiness.
+\end{enumerate}
+
+Figure~\ref{fig:trajectory} visualizes a typical growth path ($\Delta\!=\!0.8$).
+
+\begin{figure}[t]
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[
+      width=9cm,height=5cm,
+      xlabel={$t$ (time)}, ylabel={$C^{t}(u)$},
+      ymin=0, ymax=1,
+      domain=0:10, samples=200,
+      axis lines=left, thick]
+      \addplot+[no marks] {1 / (1 + exp(-0.8*(x-5)))};
+    \end{axis}
+  \end{tikzpicture}
+  \caption{Trajectory of community entrenchment predicted by the
+    logistic model.}
+  \label{fig:trajectory}
+\end{figure}
 
 
 \section{Predictions and Falsifiability}
@@ -548,42 +581,42 @@ The hierarchical specification $\alpha_j \sim \mathcal{N}(\mu_\alpha, \tau_\alph
 
 The logistic equation predicts:
 \begin{itemize}
-\item \textbf{If} $\Delta(u) > 0$ \textbf{then} construction shows increasing entrenchment following S-curve \textbf{(available data)}
-\item \textbf{If} $\Delta(u) < 0$ \textbf{then} construction remains marginal or decreases in acceptability \textbf{(available data)}
-\item \textbf{If} $\Delta(u) \approx 0$ \textbf{then} heightened variability and sensitivity to external factors \textbf{(planned study)}
+\item \textbf{If} $\Delta(u) > 0$ \textbf{then} construction shows increasing entrenchment following S-curve (available data)
+\item \textbf{If} $\Delta(u) < 0$ \textbf{then} construction remains marginal or decreases in acceptability (available data)
+\item \textbf{If} $\Delta(u) \approx 0$ \textbf{then} heightened variability and sensitivity to external factors (planned study)
 \end{itemize}
 
 \subsection{L2 Trajectory}
 
 L2 learners should show:
 \begin{itemize}
-\item \textbf{Initial stage}: Input appears as noise lacking meaningful structure \textbf{(planned ERP study)}
-\item \textbf{Intermediate stage}: Heightened sensitivity, marking many native patterns as ungrammatical \textbf{(available data)}
-\item \textbf{Advanced stage}: Gradual alignment with community norms \textbf{(available data)}
+\item \textbf{Initial stage}: Input appears as noise lacking meaningful structure (planned ERP study)
+\item \textbf{Intermediate stage}: Heightened sensitivity, marking many native patterns as ungrammatical (available data)
+\item \textbf{Advanced stage}: Gradual alignment with community norms (available data)
 \end{itemize}
 
 \subsection{Cross-Linguistic Gender Test}
 
 Pronoun-antecedent gender mismatches should trigger:
 \begin{itemize}
-\item \textbf{Spanish}: Strong ungrammaticality (gender permeates morphosyntax) \textbf{(planned experiment)}
-\item \textbf{English}: Moderate ungrammaticality (gender limited to pronouns) \textbf{(available data)}
-\item \textbf{Japanese}: Pragmatic infelicity only (no grammatical gender) \textbf{(planned experiment)}
+\item \textbf{Spanish}: Strong ungrammaticality (gender permeates morphosyntax) (planned experiment)
+\item \textbf{English}: Moderate ungrammaticality (gender limited to pronouns) (available data)
+\item \textbf{Japanese}: Pragmatic infelicity only (no grammatical gender) (planned experiment)
 \end{itemize}
 
 \subsection{Satiation Scope}
 
 Repeated exposure should increase acceptability for:
 \begin{itemize}
-\item Low-frequency constructions (independent relative \textit{whose}) \textbf{(planned experiment)}
-\item Processing-difficult patterns (reduced relatives) \textbf{(available data)}
-\item Semantic mismatches (novel metaphors) \textbf{(available data)}
+\item Low-frequency constructions (independent relative \textit{whose}) (planned experiment: acceptability judgment and reading times pre-/post-exposure)
+\item Processing-difficult patterns (reduced relatives) (available data; cf. \parencite{snyder2000grammaticality,hofmeister2013processing})
+\item Semantic mismatches (novel metaphors) (available data; cf. \parencite{giora1997understanding})
 \end{itemize}
 
 But NOT for:
 \begin{itemize}
-\item Categorical violations (determiner extraction) \textbf{(available data)}
-\item Fundamental mapping failures (word salad) \textbf{(available data)}
+\item Categorical violations (determiner extraction) (available data)
+\item Fundamental mapping failures (word salad) (available data)
 \end{itemize}
 
 \subsection{Comparison with Noisy-Channel Accounts}
@@ -619,7 +652,7 @@ MMMG (this work)     & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$
 \subsection{Key distinctions}
 
 \textbf{Versus generative grammar} —  
-MMMG retains the insight that certain configurations are systematically excluded, but explains these "structural bans" as the outcome of extreme, community‑level stability rather than as inviolable innate rules.
+MMMG retains the insight that certain configurations are systematically excluded, but explains these ``structural bans" as the outcome of extreme, community‑level stability rather than as inviolable innate rules.
 
 \textbf{Versus Construction Grammar} —  
 Both frameworks treat constructions as form–meaning pairings, yet MMMG gives special status to \emph{morphosyntactic} pairings: violations in this layer trigger qualitatively stronger ungrammaticality judgments than purely pragmatic or lexical mismatches.
@@ -631,39 +664,105 @@ MMMG builds in frequency effects, but also accounts for systematic gaps such as 
 Both reject an innate, autonomous syntax, yet MMMG attributes constraints to conventionalised form–meaning pairings inside a speech community, rather than to general principles of interpretive efficiency alone.
 
 
-\section{Roadmap for Spin-off Papers}
+%\section{Roadmap for Spin-off Papers}
 
-\begin{table}[htbp]
-\centering
-\small
-\caption{Planned publication sequence}
-\begin{tabular}{@{}llll@{}}
-\toprule
-Phase & Paper & Target venue & Timeline \\
-\midrule
-A & Lingbuzz preprint & Repository & Month 1 \\
-& Conference proceedings & LSA/GLOW & Month 6 \\
-B & Manifesto article & \textit{Language}/\textit{Glossa} & Month 9 \\
-C & Formal model & \textit{NLLT}/\textit{J Lang Model} & Year 2 \\
-D1 & Diachronic S-curves & \textit{Lang Var Change} & Year 2-3 \\
-D2 & Cross-linguistic gender & \textit{Cognitive Linguistics} & Year 2-3 \\
-E & Monograph & LangSci Press & Year 3-4 \\
-\bottomrule
-\end{tabular}
-\end{table}
+%\begin{table}[htbp]
+%\centering
+%\small
+%\caption{Planned publication sequence}
+%\begin{tabular}{@{}llll@{}}
+%\toprule
+%Phase & Paper & Target venue & Timeline \\
+%\midrule
+%A & This Lingbuzz preprint & Repository & Month 1 \\
+%& Conference proceedings & LSA/GLOW & Month 6 \\
+%B & Manifesto article & \textit{Language}/%\textit{Glossa} & Month 9 \\
+%C & Formal model & \textit{NLLT}/\textit{J Lang Model} & Year 2 \\
+%D1 & Diachronic S-curves & \textit{Lang Var Change} & Year 2-3 \\
+%D2 & Cross-linguistic gender & \textit{Cognitive Linguistics} & Year 2-3 \\
+%E & Monograph & LangSci Press & Year 3-4 \\
+%\bottomrule
+%\end{tabular}
+%\end{table}
 
-Each paper can stand alone while building toward the comprehensive monograph treatment.
+%Each paper can stand alone while building toward the comprehensive monograph treatment.
+
+\begin{tcolorbox}[colback=lsLightBlue!30,title=Current limitations]
+The MMMG outlined here is deliberately simplified and leaves important extensions for future work. Specifically, the present implementation:
+(i) assumes a fully connected speech community rather than realistically structured interaction networks;  
+(ii) employs a deterministic mean-field approximation, reserving finite-population stochastic drift for an appendix;  
+(iii) uses illustrative parameter values (\(k=5,\theta=6\)) whose empirical grounding requires systematic corpus studies and experimental validation; and  
+(iv) provides predictions about L2 learning and satiation effects pending empirical testing, particularly via ERP and behavioural experiments planned but not yet executed.
+These limitations highlight open directions rather than fundamental flaws, and each will be addressed progressively as the MMMG research programme unfolds.
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=lsLightBlue!30,title=Scope and limitations]
+This paper presents a theoretical framework with simulated validation. 
+Empirical tests using the specified numeric predictions await future 
+data collection. All model fits shown use synthetic data calibrated 
+to known psycholinguistic parameters.
+\end{tcolorbox}
 
 \section{Conclusion}
 
-This framework reconceptualizes grammaticality as emerging from stable form-meaning pairings within language communities. The six components~-- morphosyntactic pairings, semantic compatibility, processing constraints, indexicality, entrenchment, and categorical blocking~-- interact to produce the full range of grammaticality phenomena.
+This framework reconceptualizes grammaticality as emerging from stable form-meaning pairings within language communities. The five components~-- morphosyntactic pairings, contextual meaning, processing constraints, entrenchment, and categorical blocking~-- are posited to interact to produce the full range of grammaticality phenomena.
 
-The approach integrates insights from multiple traditions while making specific, falsifiable predictions. It explains both why some patterns remain stubbornly ungrammatical despite transparency and why others shift from marginal to accepted. By distinguishing objective grammaticality from subjective feelings, it accounts for mismatches between intuition and linguistic reality.
+The approach integrates insights from multiple traditions while yielding specific, falsifiable predictions. It aims to explain both why some patterns remain stubbornly ungrammatical despite transparency and why others shift from marginal to accepted. By distinguishing objective grammaticality from subjective feelings, it provides a systematic approach to mismatches between intuition and linguistic reality.
 
-Future work should test the cross-linguistic predictions, develop computational implementations of the formal model, and explore applications to language change, acquisition, and clinical linguistics. The framework provides a foundation for understanding how human communities create and maintain the systematic form-meaning relationships we call grammar. The current model assumes well-mixed interaction patterns; structured-network extensions following \textcite{baxter2006} remain for future investigation.
+Future work should test the cross-linguistic predictions, develop computational implementations of the formal model, and explore applications to language change, acquisition, and clinical linguistics. The framework provides a foundation for understanding how human communities create and maintain the systematic form-meaning relationships we call grammar. Extensions to structured networks following \textcite{baxter2006} and incorporation of stochastic effects (see Appendix A) remain important directions for future development.
+
+\begin{tcolorbox}[colback=lsLightBlue!20,title=Data and code availability]
+All data, model code, and analysis scripts are available in the public repository at: 
+\url{https://github.com/BrettRey/Grammaticality-de-idealized-v2}.
+A Jupyter notebook is provided there to reproduce model simulations and explore parameter variations interactively. The notebook currently includes minimal illustrative examples; comprehensive simulations will accompany the formal model article (Phase C).
+\end{tcolorbox}
+
 
 \newpage
 \appendix
+
+\section{Stochastic Dynamics Derivation}
+
+The deterministic mean-field equation presented in the main text emerges from a full stochastic model. Starting from a Moran process with selection coefficient $s$ and finite population size $N$.
+
+This mean field is exactly the macroscopic limit of the speaker-level gradient model in §\ref{sec:community-dynamics}; see Appendix A for the stochastic derivation.
+
+
+\subsection{Kramers-Moyal Expansion}
+
+Consider a population where fraction $C^t$ uses the innovative form. At each time step, one speaker dies and is replaced by offspring copying from a model speaker. The probability of selecting an innovator model is:
+$$p_+ = \frac{(1+s)C^t}{(1+s)C^t + (1-C^t)} = C^t + sC^t(1-C^t) + \mathcal{O}(s^2)$$
+\[
+  (\mathcal{O}(s^{2}) \;=\; \text{terms of order } s^{2} \text{ and higher as } s \to 0)
+\]
+The transition probabilities per unit time are:
+\begin{align}
+T(C^t + 1/N | C^t) &= (1-C^t)p_+ = (1-C^t)C^t[1 + s(1-C^t)]\\
+T(C^t - 1/N | C^t) &= C^t(1-p_+) = C^t(1-C^t)[1 - sC^t]
+\end{align}
+The Kramers-Moyal expansion yields drift and diffusion coefficients:
+\begin{align}
+a_1 &= \lim_{\Delta t \to 0} \frac{1}{\Delta t}\sum_{\Delta C} \Delta C \cdot T(C^t + \Delta C | C^t) = sC^t(1-C^t)\\
+a_2 &= \lim_{\Delta t \to 0} \frac{1}{\Delta t}\sum_{\Delta C} (\Delta C)^2 \cdot T(C^t + \Delta C | C^t) = \frac{C^t(1-C^t)}{N}
+\end{align}
+
+\subsection{Stochastic Differential Equation}
+
+The continuous-time limit gives the Itô SDE:
+$$dC^t = sC^t(1-C^t)dt + \sqrt{\frac{C^t(1-C^t)}{N}}dW_t$$
+where $W_t$ is a standard Wiener process. Setting $s = \Delta(u)$ from the main text:
+$$dC^t = \Delta(u)C^t(1-C^t)dt + \sqrt{\frac{C^t(1-C^t)}{N}}dW_t$$
+
+\subsection{Implications}
+
+The stochastic term $\sqrt{C^t(1-C^t)/N}$ drives:
+\begin{itemize}
+\item \textbf{Drift-dominated fixation}: Neutral variants ($\Delta = 0$) can fix by chance
+\item \textbf{Latency phases}: Before deterministic growth dominates, constructions may persist at low frequency due to stochastic fluctuations
+\item \textbf{Small-population effects}: In communities with small $N$, stochastic effects can overwhelm weak selection
+\end{itemize}
+
+The mean-field approximation in the main text emerges by taking $N \to \infty$, where the diffusion term vanishes and we recover the deterministic logistic equation. For finite populations, the full stochastic dynamics must be considered, particularly near $C^t = 0$ or $C^t = 1$ where drift effects are strongest.
 
 \section{Formal Derivations}
 
@@ -695,19 +794,20 @@ C^t(u) +
 \]
 where factor loadings $\lambda_i$ and error terms $\epsilon_i$ are estimated from data. Identifiability is achieved by fixing $\lambda_A = 1$ and constraining all loadings to be positive.
 
-\subsection{Noise Detection Mechanism}
+\subsection{Smooth Noise-Penalty Function} \label{sec:noise-penalty}
 
-The relationship between exposure and entrenchment:
+The noise-penalty function detects systematic errors using a smooth sigmoid:
+
 \[
-\frac{dC^t}{dt} = f(E(u)) - \text{NoisePenalty}(u)
+\text{NoisePen}(u) = \beta_{\text{max}}\left[1 + e^{-k(\text{Surprisal}(u) - \theta)}\right]^{-1}
 \]
 where:
-\[
-\text{NoisePenalty}(u) = \begin{cases}
-\beta_{\mathrm{hi}} & \text{if } \text{Surprisal}(u) > \theta_1 \text{ AND } \text{RepairRate}(u) > \theta_2 \\
-\beta_{\mathrm{lo}} & \text{otherwise}
-\end{cases}
-\]
+\begin{itemize}
+\item $\beta_{\text{max}}$ — maximum penalty for high-surprisal forms
+\item $k$ — steepness of the transition (larger = sharper)
+\item $\theta$ — surprisal threshold where penalty = $\beta_{\text{max}}/2$
+\end{itemize}
+This continuous function ensures smooth likelihood surfaces for parameter estimation while capturing the intuition that highly surprising forms with systematic repair patterns resist entrenchment.
 
 \subsection{Bifurcation Analysis}
 
@@ -740,10 +840,9 @@ where $\lambda = \Delta'(u^*) \cdot C^*(1-C^*)$ determines growth rate post-bifu
 \end{tikzpicture}
 \caption{Computation of the processing‑cost term.\label{fig:proc-cost}}
 \end{figure}
-
 Following \textcite{gibson2000}, Dependency Locality Theory:
 \[
-\text{ProcessingCost}(u) = \sum_{i} \text{IC}(w_i)
+\text{PCost}(u) = \sum_{i} \text{IC}(w_i)
 \]
 where the integration cost at each word is:
 \[

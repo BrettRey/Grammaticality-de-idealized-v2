@@ -1,0 +1,540 @@
+\documentclass[12pt,letterpaper]{article}
+
+\usepackage{xcolor}
+\usepackage{fontspec}
+\usepackage{tipa}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{microtype}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,shapes,positioning,fit,backgrounds}
+
+\usepackage[style=langsci-unified,backend=biber]{biblatex}
+\addbibresource{refs.bib}
+
+% Define the missing colors
+\definecolor{lsLightBlue}{RGB}{201,233,246}
+\definecolor{lsMidBlue}{RGB}{0,114,178}
+\definecolor{lsDarkBlue}{RGB}{0,62,110}
+\definecolor{lsLightGreen}{RGB}{181,226,140}
+\definecolor{lsMidGreen}{RGB}{97,163,65}
+\definecolor{lsDarkGreen}{RGB}{0,116,0}
+\definecolor{lsLightOrange}{RGB}{255,229,204}
+\definecolor{lsMidOrange}{RGB}{255,117,0}
+\definecolor{lsDarkOrange}{RGB}{193,89,0}
+\definecolor{lsLightGray}{RGB}{240,240,240}
+\definecolor{lsMidGray}{RGB}{180,180,180}
+\definecolor{lsDarkGray}{RGB}{77,77,77}
+\definecolor{lsNightBlue}{RGB}{0,49,80}
+\definecolor{lsNightGreen}{RGB}{0,75,0}
+\definecolor{lsNightOrange}{RGB}{154,77,0}
+\definecolor{lsDOIGray}{RGB}{80,80,80}
+
+\usepackage{csquotes}
+\usepackage{langsci-gb4e}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    citecolor=blue,    
+    urlcolor=cyan,
+    pdftitle={MMMG+ERP},
+}
+\usepackage[normalem]{ulem}
+\usepackage{orcidlink}
+\usepackage{authblk}
+\usepackage{amsmath}
+\usepackage{rotating}
+
+
+% Redefine page number format in citations
+\DeclareFieldFormat{postnote}{#1}
+\DeclareFieldFormat{multipostnote}{#1}
+
+\title{A theoretical proposal for mapping ERP components onto the Morphosyntactic-Meaning Model of Grammaticality}
+
+\author{Brett Reynolds}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This paper outlines a programmatic framework for connecting the Morphosyntactic-Meaning Model of Grammaticality (MMMG) to event-related potential (ERP) research in language processing. MMMG distinguishes between objective grammaticality $G(u)$—whether a form-meaning pairing is licensed within a speech community—and the subjective feeling of ungrammaticality $F(u)$, a metacognitive response measurable at the individual level. I propose that ERP components reflect different aspects of how $F(u)$ is computed in real-time, rather than directly indexing grammatical violations. Specifically, I develop preliminary hypotheses mapping early components (ELAN/LAN) to morphosyntactic evaluation, N400 to semantic compatibility computation, and P600 to threshold-dependent repair mechanisms. Using MMMG's formal apparatus, I derive initial predictions about how ERP amplitudes should vary with compatibility scores $K(u)$, community entrenchment $C^t(u)$, and processing costs $P(u)$. These proposals generate testable predictions about context-dependent modulation of neural responses, individual differences in component expression, and conditions under which satiation should occur. While empirical validation remains future work, this framework offers a principled approach to interpreting the complex and sometimes contradictory ERP literature through the lens of form-meaning stability dynamics.
+\end{abstract}
+
+\section{Introduction}
+The relationship between theoretical models of grammaticality and their neural implementation remains one of the most challenging questions in the cognitive neuroscience of language. While decades of ERP research have identified reliable neural signatures associated with linguistic violations—most prominently the N400 and P600 components—the theoretical interpretation of these components remains contentious \autocite{Kuperberg2007, Brouwer2012, Leckey2020}. Different laboratories report conflicting findings, components appear and disappear across languages and contexts, and the same violation types can elicit qualitatively different neural responses depending on subtle experimental factors.
+
+The Morphosyntactic-Meaning Model of Grammaticality (MMMG; Reynolds, this volume) offers a novel theoretical lens through which to view these empirical puzzles. By distinguishing between objective grammaticality $G(u)$—whether a form-meaning pairing is licensed within a speech community—and the subjective feeling of ungrammaticality $F(u)$—the metacognitive response that \enquote{something is wrong here}—MMMG provides a framework for understanding why neural measures of grammatical processing show such variability.
+
+This paper presents a programmatic proposal for connecting MMMG's formal framework to ERP research. Rather than claiming definitive mappings between theoretical constructs and neural components, I develop a series of hypotheses about how different ERP components might reflect distinct aspects of $F(u)$ computation. These hypotheses generate specific, testable predictions that future empirical work can evaluate. 
+
+The key insight is that neural measures necessarily reflect individual-level cognitive processes rather than community-level linguistic conventions. When we measure ERPs, we're not directly accessing $G(u)$—the abstract property of whether a construction is grammatical within a community—but rather $F(u)$, the individual's real-time response to detected instability in form-meaning mappings. This distinction has profound implications for interpreting the sometimes contradictory findings in the ERP literature.
+
+The paper proceeds as follows. Section 2 briefly reviews the MMMG framework and its implications for neural measurement. Section 3 develops hypotheses about how specific ERP components might map onto different aspects of $F(u)$ computation, deriving preliminary quantitative predictions from MMMG's formal apparatus. Section 4 addresses the measurement problem: how observable ERP amplitudes relate to MMMG's latent theoretical constructs. Section 5 explores how these mappings explain patterns in the existing literature, including foreign accent effects, clinical populations, and individual differences. Section 6 presents novel predictions for future empirical testing. The paper concludes by acknowledging the programmatic nature of this proposal and outlining the empirical work needed to validate or refine these theoretical connections.
+
+\section{The MMMG framework: a brief review}
+\subsection{Core components}
+MMMG proposes that grammaticality emerges from stable form-meaning pairings within language communities. For any utterance u, the framework distinguishes:
+
+\begin{itemize}
+    \item $G(u)$: Objective grammaticality, determined by:
+    \begin{itemize}
+        \item Successful morphosyntactic-to-meaning mapping (M \(\to\) \(\mu\))
+        \item Compatibility $K(u)$ between morphosyntactic and composite meanings
+        \item Community entrenchment $C^t(u)$ of the form-meaning pairing
+    \end{itemize}
+    \item $F(u)$: Subjective feeling of ungrammaticality:
+    \[
+        F(u) = -\alpha(1-G(u)) - \gamma \cdot P(u) + \varepsilon_{indiv}
+    \]
+    where P(u) represents processing cost and \(\varepsilon\) captures individual variation.
+\end{itemize}
+
+\subsection{Critical implications for neural measurement}
+Three aspects of MMMG are crucial for interpreting ERP data:
+
+\begin{itemize}
+    \item \textbf{Community vs. Individual}: $G(u)$ exists at the community level as a property of shared linguistic conventions. $F(u)$ exists in individual minds as a metacognitive response. ERPs can only measure $F(u)$.
+    \item \textbf{Decomposability}: $F(u)$ reflects multiple factors (mapping success, compatibility, entrenchment, processing cost) that may have distinct neural signatures.
+    \item \textbf{Context Sensitivity}: Both $G(u)$ and $F(u)$ are relative to communicative situations, predicting systematic modulation of neural responses by contextual factors.
+\end{itemize}
+
+\section{Mapping ERP components onto MMMG}
+\subsection{Early left anterior negativity (ELAN): A controversial component}
+
+This section provides a qualitative alignment of classical ERP components
+with the ingredients of $F(u)$; no equations yet.
+
+The status of the ELAN component (100--200ms) remains highly controversial in the neurolinguistic literature. While some studies report an early negativity for phrase structure violations like:
+
+\ea \label{ex:ELAN}
+\textit{*The house the in.}
+\z
+
+\textcite{Steinhauer2012} present compelling evidence that many purported ELAN effects may actually be artifacts of baseline problems, component overlap, or statistical issues. Their comprehensive review suggests that what appears as an early effect in grand averages often reflects a subset of participants showing early N400-like responses rather than a distinct component.
+
+\subsubsection{Hypothetical ELAN-MMMG mapping}
+
+If ELAN exists as a genuine component, MMMG would predict it reflects the earliest stage of detecting that the morphosyntactic-to-meaning mapping has likely failed. In formal terms, this would correspond to the binary indicator function in the grammaticality equation:
+
+\[
+\text{ELAN amplitude} \propto \begin{cases}
+-\lambda_E & \text{if } M(u) \not\to \mu(u) \\
+0 & \text{otherwise}
+\end{cases}
+\]
+
+where $\lambda_E$ represents the individual's sensitivity to catastrophic mapping failure. This predicts ELAN should:
+\begin{itemize}
+    \item Appear only for violations where no morphosyntactic meaning can be recovered
+    \item Show minimal gradience (binary detection)
+    \item Resist modulation by context or frequency
+\end{itemize}
+
+\subsubsection{Alternative interpretation: Early morphosyntactic N400}
+
+Following \textcite{Steinhauer2012}, an alternative hypothesis is that apparent ELAN effects reflect early activation of the same neural generators responsible for the N400, triggered when morphosyntactic violations are severe enough to immediately block semantic integration. Under this view:
+
+\[
+\text{Early negativity} = \beta_N \cdot (1 - K_{\text{morph}}(u)) \cdot \text{Severity}(u)
+\]
+
+where Severity$(u)$ captures how quickly the violation is detected during incremental processing.
+
+\subsubsection{Empirical differentiation}
+
+These competing accounts make different predictions:
+\begin{enumerate}
+    \item \textbf{True ELAN hypothesis:} Should show invariant latency and scalp distribution across violation types
+    \item \textbf{Early N400 hypothesis}: Should show graded responses and similar generators to semantic N400
+\end{enumerate}
+
+The MMMG framework remains agnostic about which interpretation is correct but provides formal tools for testing these alternatives. Future work using source localization and systematic manipulation of violation severity could distinguish between these accounts.
+
+\subsubsection{Cross-linguistic considerations}
+
+The reported cross-linguistic variation in ELAN findings—robust in German but inconsistent in English—might reflect differences in how quickly mapping failure can be detected given each language's morphosyntactic properties. Languages with richer morphology might enable earlier detection, leading to more consistent early components. This prediction could be formalized as:
+\[
+\text{ELAN probability} = \sigma\left(\frac{\text{MorphComplexity}(L) - \tau}{\gamma}\right)
+\]
+where $\sigma$ is the sigmoid function, MorphComplexity$(L)$ quantifies a language's morphological richness, and $\tau$, $\gamma$ are threshold and slope parameters.
+
+\subsection{Left anterior negativity (LAN): morphosyntactic compatibility checking}
+The LAN component (300--500ms) encompasses two distinct phenomena that must be carefully distinguished. The left-anterior morphosyntactic LAN appears for violations where individual elements map successfully but their combination violates compatibility constraints:
+\ea \label{ex:LAN}
+\textit{The boys plays in the garden.}
+\z
+
+In MMMG terms, this morphosyntactic LAN indexes the computation that K$_{morph}$(u) < 1 and contributes to the processing cost term $P(u)$. The high individual variability in LAN effects---with only about 55\% of participants showing the component \autocite{Tanner2014}---aligns with MMMG's prediction that individuals may differ in their sensitivity to morphosyntactic compatibility based on their entrenchment of specific patterns.
+
+In contrast, sustained frontal negativities (often extending beyond 500~ms) have been linked to increased working-memory demands in syntactically complex sentences \autocite{Fiebach2002,Coulson1998}. These effects constitute an additive processing-cost term in $F(u)$, explaining why simple agreement violations elicit early phasic negativities whereas lengthy dependencies evoke later, sustained anterior activity.
+
+\subsection{N400: semantic compatibility and expectation}
+
+The N400 component presents an interpretive challenge for grammaticality research. While traditionally associated with semantic anomaly, most N400-eliciting violations do not involve ungrammaticality in the MMMG sense:
+
+\ea\label{ex:N400-grammatical}
+\textit{I take my coffee with cream and socks.}
+\z
+
+This sentence is perfectly grammatical—the morphosyntactic form successfully maps to a meaning, all form-meaning pairings are stable within the community, and no morphosyntactic constraints are violated. The bizarreness of the resulting meaning is irrelevant to grammaticality.
+
+\subsubsection{When N400 reflects grammaticality: morphosyntactic-semantic mismatches}
+
+The N400 becomes relevant to grammaticality specifically when semantic incompatibility involves morphosyntactic meaning. Consider:
+
+\ea\label{ex:N400-grammaticality}
+\gll Der Löffel wurde gegessen.\\
+the.MASC spoon was eaten\\
+\glt 'The spoon was eaten.'
+\z
+
+In German, this passive construction is grammatical when interpreted metaphorically but would show N400 effects due to the semantic oddness. However, if we consider:
+
+\ea\label{ex:N400-ungrammatical}
+\textit{*The key to the cabinets are missing.}
+\z
+
+Here the plural morphology on \textit{are} clashes with the singular head noun \textit{key}. Some studies report N400 rather than LAN for such agreement violations, particularly when the mismatch creates semantic/conceptual conflict between singular and plural interpretations.
+
+\subsubsection{Formalization for grammaticality-relevant N400}
+
+When N400 indexes grammaticality (not mere semantic anomaly), it should reflect the semantic compatibility term $K_{\text{sem}}(u)$ from MMMG, but only when morphosyntactic meaning is involved:
+
+\[
+\text{N400}_{\text{gram}} = \beta_{N400} \cdot (1 - K_{\text{sem}}(u)) \cdot \mathbb{1}_{\text{morphosyn involved}}
+\]
+
+This predicts N400 for grammaticality when:
+\begin{itemize}
+    \item Tense/aspect morphology conflicts with temporal adverbials (*I've finished it yesterday)
+    \item Number morphology creates conceptual conflicts
+    \item Case marking implies impossible thematic relations
+\end{itemize}
+
+\subsubsection{Dissociating semantic anomaly from ungrammaticality}
+
+The framework predicts distinct neural signatures:
+\begin{itemize}
+    \item Pure semantic anomaly (socks in coffee): N400 without grammaticality violation
+    \item Morphosyntactic-semantic mismatch: N400 indexing actual ungrammaticality
+    \item Pure morphosyntactic violation: LAN/P600 without N400
+\end{itemize}
+
+This distinction is crucial for MMMG: grammaticality requires morphosyntactic involvement. The N400 to "coffee with socks" reflects prediction error and semantic integration difficulty but says nothing about grammaticality. Only when morphosyntactic meaning contributes to semantic incompatibility does N400 index ungrammaticality.
+
+\subsection{P600: repair and reanalysis when
+  \texorpdfstring{$\lvert F(u)\rvert$}{|F(u)|} exceeds threshold}
+
+The P600 component presents the most complex interpretive challenge. Rather than viewing it as a direct index of syntactic violation, MMMG suggests P600 reflects cognitive operations triggered when the absolute value of $F(u)$ exceeds a threshold $\theta$, prompting repair attempts:
+\ea\label{ex:P600}
+\textit{The hearty meal was devouring by the kids.}
+\z
+
+Formally, the P600 amplitude should scale with the magnitude of detected ungrammaticality once the threshold is crossed:
+\[
+\text{P600 amplitude} \propto 
+\begin{cases}
+-F(u) & \text{if } |F(u)| > \theta \\
+0 & \text{otherwise}
+\end{cases}
+\]
+where $\theta$ is determined by the parameters $\alpha$ (sensitivity to objective ungrammaticality) and $\gamma$ (weighting of processing cost).
+
+This reconceptualization explains several puzzling P600 phenomena:
+
+\begin{itemize}
+    \item \textbf{Semantic P600}: When semantic violations are severe enough to trigger reanalysis (high $|F(u)|$)
+    \item \textbf{Absence for some violations}: When $F(u)$ doesn't exceed $\theta$, or is so negative that repair is abandoned
+    \item \textbf{Individual differences}: Variation in thresholds ($\theta$) for triggering repair mechanisms based on different $\alpha$ and $\gamma$ values
+\end{itemize}
+The P600 thus represents not ungrammaticality per se, but the cognitive response to detected problems---attempting to find an alternative parse, checking for processing errors, or updating linguistic representations.
+
+\section{Formalizing the Mapping: From MMMG Variables to ERP Amplitudes}
+
+Here the same alignments are expressed as explicit functions that future empirical work can parameterize.
+
+
+\subsection{The measurement model}
+
+MMMG provides a formal framework with specific variables that should, in principle, relate systematically to ERP measurements. The core challenge is that ERPs measure neural responses (in microvolts) while MMMG describes abstract linguistic properties. We need a measurement model that bridges this gap.
+
+For any utterance $u$, MMMG defines:
+\begin{enumerate}
+    \item $G(u) = C^t(u) \cdot K(u) \cdot \mathbb{1}_{M \to \mu}$ (objective grammaticality)
+    \item $F(u) = -\alpha(1-G(u)) - \gamma \cdot P(u) + \varepsilon_{indiv}$ (subjective feeling)
+\end{enumerate}
+I propose that ERP components reflect different aspects of the computation leading to $F(u)$:
+
+\subsection{N400 amplitude predictions}
+
+The N400 should primarily reflect semantic compatibility computation:
+\[
+\text{N400}_{\text{amp}} = \beta_{N400} \cdot \left[(1 - K_{\text{sem}}(u)) + \omega \cdot \text{Surprisal}(u)\right] + \varepsilon_{N400}
+\]
+where:
+\begin{itemize}
+    \item $K_{\text{sem}}(u) \in [0,1]$ is semantic compatibility from MMMG
+    \item Surprisal$(u) = -\log P(w|context)$ captures predictability
+    \item $\beta_{N400}$ scales the neural response
+    \item $\omega$ weights the contribution of prediction error
+\end{itemize}
+
+This formulation makes specific predictions:
+\begin{itemize}
+    \item Pure semantic violations: Maximum N400 when $K_{\text{sem}} = 0$
+    \item Gradient effects: N400 amplitude inversely proportional to compatibility
+    \item Context effects: Surprisal term explains cloze probability effects
+\end{itemize}
+
+\subsection{LAN amplitude predictions}
+
+The LAN should reflect morphosyntactic compatibility checking and working memory load:
+\[
+\text{LAN}_{\text{amp}} = \beta_{LAN} \cdot (1 - K_{\text{morph}}(u)) + \gamma_{LAN} \cdot \text{WM}_{\text{load}}(u)
+\]
+For agreement violations, we can decompose $K_{\text{morph}}$ further:
+\[
+K_{\text{morph}}(u) = \prod_{f \in \text{Features}} \mathbb{1}_{\text{match}}(f)
+\]
+
+This predicts:
+\begin{itemize}
+    \item Categorical LAN for feature mismatches
+    \item Additive effects of multiple violations
+    \item Individual differences based on $\beta_{LAN}$ variation
+\end{itemize}
+
+\subsection{P600 amplitude predictions}
+
+The P600 reflects repair attempts when $|F(u)|$ exceeds threshold $\theta$:
+\[
+\text{P600}_{\text{amp}} = \begin{cases}
+\beta_{P600} \cdot |F(u)| \cdot \text{Repair}_{\text{prob}}(u) & \text{if } |F(u)| > \theta \\
+0 & \text{otherwise}
+\end{cases}
+\]
+where Repair$_{\text{prob}}(u)$ represents the probability that a repair exists:
+\[
+\text{Repair}_{\text{prob}}(u) = \frac{C^t(u_{\text{repaired}})}{C^t(u_{\text{repaired}}) + \epsilon}
+\]
+
+This explains:
+\begin{itemize}
+    \item Why some violations elicit P600 (repairable) while others don't
+    \item Semantic P600: When semantic violations trigger repair attempts
+    \item Individual variation in threshold $\theta$
+\end{itemize}
+
+\subsection{Component interaction predictions}
+
+The model predicts specific patterns of component co-occurrence:
+\[
+P(\text{P600} | \text{N400}) = \sigma\left(\frac{|F_{\text{N400}}(u)| - \theta}{\tau}\right)
+\]
+where $F_{\text{N400}}(u)$ is the contribution to $F(u)$ from semantic incompatibility alone.
+
+This formal framework generates quantitative predictions that can be tested against existing data and in future experiments.
+\section{Temporal dynamics of \texorpdfstring{$F(u)$}{F(u)} computation}
+
+The default temporal sequence of ERP components reveals how $F(u)$ is computed incrementally:
+\begin{itemize}
+    \item \textbf{Phase 1 (0--200ms)}: Automatic detection of catastrophic mapping failure (ELAN)
+    \item \textbf{Phase 2 (200--500ms)}: Parallel evaluation of morphosyntactic (LAN) and semantic (N400) compatibility
+    \item \textbf{Phase 3 (500--1000ms)}: Integration and response---repair attempts (P600) or acceptance
+\end{itemize}
+
+\textcite{Wlotko2013} show that semantically anomalous yet syntactically well-formed sentence completions elicit a robust centro-parietal N400, with no detectable early left-anterior negativity. This pattern is consistent with the MMMG observation that purely semantic anomalies are grammatical—when morphosyntax successfully maps to meaning, semantic bizarreness alone doesn't constitute ungrammaticality. The N400 in such cases reflects semantic processing difficulty, not grammatical violation.
+
+
+
+\section{Context effects and community-specific processing}
+\subsection{Foreign accent effects}
+Recent findings that grammatical violations in foreign-accented speech can elicit N400 instead of P600 responses \autocite{Hanulova2018} directly support MMMG's context-sensitivity. In MMMG terms, gender agreement errors show different patterns than number errors because:
+
+\begin{itemize}
+    \item The foreign accent signals a different communicative situation
+    \item Gender errors have higher $C^t(u)$ values in L2-accented contexts due to their frequency in L2 speech
+    \item Number errors remain relatively uncommon even in L2 speech, maintaining low $C^t(u)$
+\end{itemize}
+
+The differential entrenchment explains why gender errors (e.g., \textit{*la} problema) become expected in L2 contexts while number errors (e.g., \textit{*los} problema) continue to trigger violation responses. This isn't simply \enquote{error normalization} but reflects genuine differences in what counts as a stable form-meaning pairing in different communicative contexts.
+
+\subsection{Bilingual processing}
+Code-switching contexts provide another test case. When Spanish--English bilinguals process mixed utterances:
+\ea\label{ex:bilingual}
+\textit{El teacher les gave muchos deberes.}
+\z
+Fluent Spanish--English code-switchers exhibit an attenuated LAN–P600 profile, replaced by a biphasic N400–late positivity at the switch point \autocite{Moreno2002}. This altered, rather than absent, violation response suggests that mixed-language forms enjoy partial community stability (high $C^t(u)$) within code-switching contexts.
+
+\section{Clinical populations: when \texorpdfstring{$F(u)$}{F(u)} computation changes}
+\subsection{Broca's aphasia}
+
+Patients with Broca’s aphasia display reduced or absent P600s, sometimes accompanied by anterior or N400-like negativities, when processing morphosyntactic violations \autocite{Wassenaar2005,Kielar2012}. The pattern indicates that the usual repair mechanism is weakened, forcing greater reliance on semantic routes to a negative $F(u)$.
+
+\begin{itemize}
+    \item Morphosyntactic compatibility checking (normally reflected in LAN/P600) is impaired
+    \item Compensation through semantic route (N400) becomes primary
+    \item $F(u)$ remains negative but arrives through different computational path
+\end{itemize}
+This demonstrates that $F(u)$ can be computed through multiple routes, with clinical damage revealing the system's modularity and plasticity.
+
+\subsection{Specific language impairment}
+Children with SLI show reduced or absent early negativities but preserved P600 effects \autocite{Fonteneau2008}. In MMMG terms:
+
+\begin{itemize}
+    \item Early detection mechanisms contributing to $F(u)$ are impaired
+    \item But threshold-crossing still triggers repair attempts (P600)
+    \item Suggests hierarchical computation where later stages can operate despite earlier deficits
+\end{itemize}
+
+\section{Individual differences: the \texorpdfstring{\(\varepsilon_{indiv}\)}~~factor}
+MMMG's inclusion of individual variation (\(\varepsilon_{indiv}\)) in $F(u)$ computation predicts systematic individual differences in ERP responses. Recent evidence supports this:
+
+\begin{itemize}
+    \item \textbf{Stable individual differences}: Some individuals consistently show LAN effects while others show N400 dominance \autocite{Tanner2014}
+    \item \textbf{Proficiency effects}: L2 speakers show different ERP patterns that change with proficiency \autocite{Steinhauer2009}
+    \item \textbf{Working memory}: Evidence for a systematic link between working-memory span and LAN amplitude is still mixed. High-span listeners show stronger early anterior responses to animacy cues \autocite{Nakano2010}, but comparable correlations in agreement-driven LAN paradigms are not yet reliable; for the moment I treat any WM modulation of the LAN as a plausible but unconfirmed contributor to \(\varepsilon_{indiv}\).
+\end{itemize}
+These aren't just \enquote{noise} but reflect genuine differences in how individuals compute $F(u)$ from linguistic input.
+
+\section{Novel predictions}
+MMMG makes several testable predictions about ERP responses:
+
+\subsection{Community membership effects}
+\textbf{Prediction}: Speakers from different dialect communities should show different ERP responses to the same construction when it has different $G(u)$ values across communities.
+\textbf{Test case}: Double modals (\textit{might could}) should elicit violation ERPs in standard English speakers but not in speakers from double-modal communities.
+
+\subsection{Entrenchment dynamics}
+\textbf{Prediction}: Novel constructions with high analogical support should show initial violation ERPs that diminish with exposure as $C^t(u)$ increases.
+\textbf{Test case}: Track ERP responses to novel but interpretable constructions (e.g., \textit{to coffee} as a verb) across multiple exposures. Analogical support can be quantified using:
+\begin{itemize}
+    \item Derivational entropy based on existing beverage-to-verb mappings (e.g., \textit{to wine}, \textit{to tea})
+    \item Google n-gram frequencies of \enquote{Let's [BEVERAGE]} constructions
+    \item Levin verb-class distance metrics for denominal conversion patterns
+\end{itemize}
+
+\subsection{Blocking effects}
+\textbf{Prediction}: Constructions that are blocked by competing forms should show qualitatively different ERPs than those violating categorical constraints.
+\textbf{Test case}: Compare ERPs to \textit{sheeps} (blocked by irregular) versus \textit{which did you see car?} (structural violation).
+
+\subsection{Communicative context manipulation}
+\textbf{Prediction}: The same violation should elicit different ERP patterns when communicative context is manipulated to change expected $C^t(u)$ values.
+\textbf{Test case}: Present violations in contexts suggesting different speaker backgrounds (child speech, L2 speaker, dialect speaker) and measure ERP modulation.
+
+\section{Methodological implications}
+\subsection{Interpreting ERP evidence}
+MMMG suggests several principles for interpreting ERP data:
+
+\begin{itemize}
+    \item No single ERP component indexes \enquote{ungrammaticality}---different components reflect different aspects of $F(u)$ computation
+    \item Component presence/absence doesn't directly indicate grammatical status---it reveals which route to computing $F(u)$ is active
+    \item Individual and group differences are theoretically meaningful---they reflect different weightings in $F(u)$ computation
+\end{itemize}
+
+\subsection{Experimental design considerations}
+To properly test MMMG predictions, ERP studies should:
+
+\begin{itemize}
+    \item \textbf{Manipulate communicative context}: Test how speaker/situation information affects neural responses
+    \item \textbf{Track entrenchment}: Use longitudinal designs to observe how $C^t(u)$ changes affect ERPs
+    \item \textbf{Measure multiple components}: Employ mass-univariate cluster-based permutation tests or mixed-effects regression models analyzing amplitude × time × region interactions to avoid cherry-picking temporal windows or spatial regions
+    \item \textbf{Include individual difference measures}: Assess working memory, dialect background, and other factors affecting \(\varepsilon_{indiv}\)
+\end{itemize}
+
+\section{Reconsidering classic debates}
+\subsection{The semantic P600 controversy}
+The longstanding debate about \enquote{semantic P600} effects \autocite{Kuperberg2007} requires reframing under MMMG. The P600 reflects repair attempts when |F(u)| exceeds threshold, regardless of the source of the negative feeling. Consider:
+
+\ea
+\textit{*The hearty meal was devouring the kids.}
+\z
+
+This triggers P600 because multiple repair strategies are available: reanalyzing as passive (\textit{was devoured by}), coercing an animate reading of \textit{meal}, or searching for a metaphorical interpretation. The availability of repair paths, not the type of violation, determines P600 presence.
+
+Contrast this with:
+\ea
+\textit{The hearty meal was purple.}
+\z
+
+This might not elicit P600 despite semantic oddness because:
+\begin{enumerate}
+    \item $|F(u)|$ may not exceed threshold (odd but processable)
+    \item No obvious repair improves the sentence (reanalysis won't help)
+\end{enumerate}
+
+Under MMMG, P600 amplitude should reflect:
+\[
+\text{P600}_{\text{amp}} = \begin{cases}
+\beta_{P600} \cdot |F(u)| \cdot \text{RepairViability}(u) & \text{if } |F(u)| > \theta \\
+0 & \text{otherwise}
+\end{cases}
+\]
+where RepairViability captures whether plausible repairs exist—morphosyntactic, semantic, or pragmatic. This explains why some semantic anomalies elicit P600 (when reanalysis might help) while others don't (when no repair seems viable).
+
+\subsection{Syntax-first vs. interactive processing}
+MMMG suggests this debate creates a false dichotomy. Early morphosyntactic violation detection (ELAN) can coexist with parallel semantic/syntactic evaluation (LAN/N400) because $F(u)$ computation involves multiple parallel streams contributing to an overall instability signal. The brain simultaneously evaluates multiple types of form-meaning stability.
+
+\section{Implications for neurolinguistic theory}
+\subsection{Beyond the competence-performance distinction}
+MMMG's $G(u)$/F(u) distinction offers a more nuanced alternative to the traditional competence-performance dichotomy. Rather than treating neural responses as imperfect reflections of abstract competence, MMMG suggests ERPs reveal the real-time computation of form-meaning stability---a psychologically real process that interfaces with but doesn't directly reflect community-level grammatical knowledge.
+
+\subsection{The neural basis of grammatical intuitions}
+MMMG provides a mechanistic account of how grammatical intuitions arise. The feeling of ungrammaticality $F(u)$ emerges from:
+
+\begin{itemize}
+    \item Early automatic detection (ELAN)
+    \item Parallel compatibility evaluation (LAN/N400)
+    \item Threshold-dependent repair attempts (P600)
+\end{itemize}
+This multi-stage process explains both the immediacy and the gradedness of grammatical intuitions.
+
+\section{Conclusion}
+
+This paper has presented a programmatic framework for connecting the Morphosyntactic-Meaning Model of Grammaticality to neurolinguistic research using event-related potentials. The core proposal—that ERP components reflect different aspects of computing the subjective feeling of ungrammaticality $F(u)$ rather than directly indexing objective grammaticality $G(u)$—offers a principled approach to interpreting the complex and often contradictory findings in the ERP literature.
+
+The theoretical mappings proposed here remain hypotheses requiring empirical validation. I have suggested that:
+\begin{itemize}
+    \item Early negativities (whether ELAN or early N400) may reflect detection of morphosyntactic mapping failure
+    \item The N400 indexes semantic compatibility computation scaled by predictability  
+    \item The LAN reflects morphosyntactic feature checking and working memory load
+    \item The P600 emerges when the magnitude of $F(u)$ exceeds an individual's threshold for triggering repair mechanisms
+\end{itemize}
+
+These proposals are formalized through explicit equations linking MMMG variables to predicted ERP amplitudes, generating testable predictions about component magnitude, timing, and co-occurrence patterns.
+
+Several aspects of this framework require further development:
+
+First, the measurement model linking theoretical constructs to neural responses needs refinement through empirical testing. The scaling parameters ($\beta$, $\gamma$, $\omega$) and thresholds ($\theta$, $\tau$) proposed here are placeholders for values that must be estimated from data.
+
+Second, the treatment of individual differences through the $\varepsilon_{indiv}$ term requires elaboration. Future work should specify how working memory capacity, language proficiency, and other individual factors modulate the various scaling parameters.
+
+Third, the framework must be extended to handle languages with different morphosyntactic properties. The preliminary suggestions about cross-linguistic variation in early component expression need systematic investigation.
+
+Despite these limitations, the framework offers several advantages:
+\begin{itemize}
+    \item It explains why the same violations elicit different components across contexts
+    \item It predicts when satiation should and shouldn't occur
+    \item It accounts for individual and cross-linguistic variation in ERP patterns
+    \item It clarifies the relationship between categorical grammar and gradient neural responses
+\end{itemize}
+
+Future empirical work should focus on:
+1. Testing quantitative predictions about ERP amplitude scaling with compatibility scores
+2. Investigating how community entrenchment $C^t(u)$ modulates neural responses
+3. Examining component transitions as $F(u)$ crosses critical thresholds
+4. Tracking ERP changes during grammaticalization of novel constructions
+
+By recognizing that ERPs measure individual-level responses to form-meaning instability rather than abstract grammatical violations, this framework promises to advance our understanding of how neural systems implement grammatical knowledge. The programmatic nature of this proposal invites empirical testing, refinement, and extension. Only through such collaborative theoretical and empirical work can we ultimately understand how the brain computes grammaticality—or more precisely, how it detects and responds to various types of form-meaning instability in linguistic input.
+
+\newpage
+\begin{sloppypar}
+\printbibliography[title=References]
+\end{sloppypar}
+
+
+\end{document}
