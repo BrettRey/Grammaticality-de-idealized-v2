@@ -49,7 +49,7 @@
 
 \begin{abstract}
 \small
-Speakers reject *\textit{I've finished it yesterday} (aspect semantics clash) yet accept the semantically odd \textit{Colorless green ideas sleep furiously} (no morphosyntactic clash). They block *\textit{Which did you buy car?} categorically, while linguists judge the unreadable centre‑embedding \textit{The rat the cat the dog chased killed ate the cheese} ``grammatical".  
+Speakers reject *\textit{I've finished it yesterday} (aspect semantics clash) yet accept the semantically odd \textit{Colorless green ideas sleep furiously} (no morphosyntactic clash). They block *\textit{Which did you buy car?} categorically, while linguists judge the unprocessable centre‑embedding \textit{The rat the cat the dog chased killed ate the cheese} \enquote{grammatical}.  
 The Morphosyntactic–Meaning Model of Grammaticality (MMMG) aims to explain such contrasts by treating grammaticality as the stability of community‑specific form–meaning pairings, not as autonomous syntax or raw frequency.
 
 Five interacting components decide an utterance's status:  
@@ -88,12 +88,12 @@ Grammaticality emerges from five interacting components:
 
 Together these components produce an objective grammaticality score \(G(u)\) and subjective feeling-of-ungrammaticality score \(F(u)\).
 
-\paragraph*{Why this matters.}%
-The framework generates testable predictions about gradient grammaticality, which violations satiate, why some rare patterns remain grammatical, and how ``illusions" of grammaticality and ungrammaticality arise. It explains, for example, why
+\paragraph*{Why this matters.}
+The framework generates testable predictions about gradient grammaticality, which violations satiate, why some rare patterns remain grammatical, and how \enquote{illusions} of grammaticality and ungrammaticality arise. It explains, for example, why
 \begin{itemize}
     \item \textit{I've finished it yesterday} fails (semantic clash),  
     \item centre embeddings \emph{feel} ungrammatical despite being grammatical (processing overload),
-    \item the ``comparative illusion'' \emph{feels} grammatical despite being ungrammatical (undetected mismatch),
+    \item the \enquote{comparative illusion} \emph{feels} grammatical despite being ungrammatical (undetected mismatch),
     \item determiner extractions like \textit{Which did you buy car?} never improve with exposure (structural ban).
 \end{itemize}
 Objective grammaticality \(G(u)\) and the subjective feeling of error \(F(u)\) can therefore diverge.
@@ -105,12 +105,12 @@ Three long‑standing tensions block a unified account of (un)grammaticality.
 \subsection{Categorical rules vs gradient judgements}
 
 \textcite{chomsky1957} cast grammaticality as an all‑or‑nothing property.  
-The competence–performance split was meant to park gradience in a separate ``performance" box, yet doing so lets supportive data count as grammar and contrary data count as noise \parencite[71]{schutze2016}.
+The competence–performance split was meant to park gradience in a separate \enquote{performance} box, yet doing so lets supportive data count as grammar and contrary data count as noise \parencite[71]{schutze2016}.
 
 \ea
 \textit{The bread the baker the apprentice helped made is delicious.}
 \z
-Centre‑embedded relatives are routinely labelled ``grammatical but unprocessable," which merely restates the puzzle: speakers feel them to be wrong.
+Centre‑embedded relatives are routinely labelled \enquote{grammatical but unprocessable,} which merely restates the puzzle: speakers feel them to be wrong.
 
 \subsection{Form vs meaning}
 
@@ -324,7 +324,7 @@ $S(u)$ & indic. & Social acceptability (matched-guise score) \\[0.5em]
 $\lambda_{\listener}$ & param & Listener weight on objective violation, Eq.~\eqref{eq:F} \\
 $\gamma$ & param & Processing‑to‑affect scaling, Eq.~\eqref{eq:F} \\
 $\eta$ & noise & Listener-specific bias term \\
-$\Delta(u)$ & drift & Net entrenchment bias, Eq.~\eqref{eq:delta} \\
+$\Delta(u)$ & drift & Net entrenchment bias, Eq.~\eqref{eq:delta-expanded} \\
 $\alpha_{\mathrm{sem}}$ & param & Weight on semantic transparency \\
 $\alpha_{\mathrm{soc}}$ & param & Weight on social prestige \\
 $\alpha_{\mathrm{struct}}$ & param & Weight on structural analogy \\
@@ -408,8 +408,8 @@ We treat the contextual meaning as the output of a deterministic but underspecif
 \caption[Macro-level causal structure]%
 {\textbf{Macro-level causal structure of the MMMG.} All arrows encode Structural Causal Model semantics; e.g., $\text{do}(C^{t} \leftarrow 0) \Rightarrow G = 0$ by definition of $G = C^{t}K$. 
 PCost $(\text{PCost}(u))$ is a deterministic function of the morphosyntactic structure (arrow $\mu\!\to\!\text{Pcost}$). Removing semantic arrows ensures that the only back-door into $F$ is $\text{Pcost}\!\leftarrow\!\mu\!\to\!K\!\to\!F$, which is blocked by adjusting for $K$ (or for $\mu$). Conditioning on $r$ would open $\text{Pcost}\!\to\!r\!\leftarrow\!\mu$, so it is avoided.
-\\\emph{Input layer}: the parser maps the surface form to a morphosyntactic meaning $\mu(u)$
-and the discourse context supplies a lexico–discourse meaning $\sigma(u)$, which include indexical meanings.
+\\\emph{Input layer}: the surface form receives a morphosyntactic meaning $\mu(u)$
+and the context supplies a lexico–discourse-indexical meaning $\sigma(u)$.
 Any categorical structural ban makes this mapping fail, i.e.\ $\mu(u)=\varnothing$.
 \\\emph{Fit layer}: the compatibility score $K(u)\!\in[0,1]$ already folds together ordinary
 semantic fit, indexical coherence, and the hard zero caused by a mapping failure.
@@ -479,7 +479,7 @@ F(u)=-0.8\cdot0.9\cdot(1-0)-0.1\cdot0.2=-0.74
 yielding a strong negative feeling.
 
 \begin{tcolorbox}[colback=lsLightBlue!20,title=Causal intervention example]
-Setting $\text{do}(C^{t} \leftarrow 0)$ for ``I have 25 years":
+Setting $\text{do}(C^{t} \leftarrow 0)$ for \enquote{I have 25 years}:
 With $K = 0.1$ (semantic clash in English) and $r = 0.7$ (moderately detectable), we get:
 $G = 0 \times 0.1 = 0$ (objectively ungrammatical)
 $F = -0.8 \cdot 0.7 \cdot (1-0.1) - 0.1(0.2) = -0.524$ (moderately felt as wrong)
@@ -652,7 +652,7 @@ MMMG (this work)     & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$
 \subsection{Key distinctions}
 
 \textbf{Versus generative grammar} —  
-MMMG retains the insight that certain configurations are systematically excluded, but explains these ``structural bans" as the outcome of extreme, community‑level stability rather than as inviolable innate rules.
+MMMG retains the insight that certain configurations are systematically excluded, but explains these \enquote{structural bans} as the outcome of extreme, community‑level stability rather than as inviolable innate rules.
 
 \textbf{Versus Construction Grammar} —  
 Both frameworks treat constructions as form–meaning pairings, yet MMMG gives special status to \emph{morphosyntactic} pairings: violations in this layer trigger qualitatively stronger ungrammaticality judgments than purely pragmatic or lexical mismatches.
