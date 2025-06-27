@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage{fontspec}
+\usepackage{microtype}
+\usepackage{csquotes}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue
+}
+
+\title{When Grammar Feels Wrong\\[0.5em]
+\large Why my model says it’s not \enquote{rules} but the mix of community habits, meaning fit, and mental bandwidth that makes “I’ve finished it yesterday” grate.}
+
+\author{Brett Reynolds\footnote{I used ChatGPT o3 and Clause Opus in drafting and editing this.}}
+
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\noindent Every English speaker knows that \enquote{Can the have running?} is ungrammatical. But explaining \emph{why} it's ungrammatical—and why we converge on this judgment without explicit instruction—has puzzled linguists for decades.
+
+The puzzle pushed me to build the Morphosyntactic–Meaning Model of Grammaticality (MMMG), a mathematical framework that treats language rules not as fixed laws but as patterns that emerge when communities pair forms with meanings.
+
+I picture grammar as those dirt shortcuts (\enquote{desire paths}) that spring up on any campus quad. No architect plans them. No map records them. They appear wherever people actually walk. As soon as a trail proves useful, each footstep deepens it until maintenance crews eventually lay concrete. Trails that lead nowhere fade; fenced-off routes never form. Grammar works the same way: the sentences we actually produce wear channels in our collective linguistic landscape.
+
+\section*{The Ingredients of Grammar}
+
+In my view a sentence is grammatical only when three conditions line up, but there is a fourth ingredient that can fool our intuitions.
+
+\textbf{1. Form-meaning pairings:} Most people think meaning comes from words, but grammatical forms themselves carry meaning. Take the past tense: it usually means past time, but compare \enquote{Can/Could you help me?} Here, the past tense means \enquote{I'm being polite,} not \enquote{I needed your help yesterday.} In \enquote{If I go/went to Mars...}, the shift to the past-tense signals commitment less tightly held. The form has its own meaning palette beyond just marking when something happened.
+
+Or consider the change in meaning that shifting a few words around brings: \enquote{what creatures those are} has an exclamative force, \enquote{what creatures are those} an inaquisitive one.
+
+In the extreme case \enquote{Can the have running?} fails so spectacularly because the grammar suggests so many possible meanings that it fails to convey anything coherent at all.
+
+\textbf{2. Meaning compatibility:}
+A sentence counts as grammatical only when the meaning supplied by each form fits with the meanings of every other form and with the discourse context as a whole. That is why Chomsky’s \enquote{colorless green ideas sleep furiously} passes muster: the lexical senses may rub against each other, but the grammatical meanings are impeccable.
+
+A counter-example is \enquote{I’ve gone there yesterday}. The present perfect links the trip to the speaker’s present, while \enquote{yesterday} pins it to a finished past; the clash between those instructions produces the sense of error even though the syntax follows a common pattern.
+
+\smallskip
+Perhaps surprisingly, a great many of the ungrammatical things we hear fulfill these conditions: \enquote{you very good}, \enquote{I goed there}, \enquote{please, pay attention on this}. So, another condition is needed to pick out the grammatical utterances.
+
+\textbf{3. Community entrenchment:}  
+A pattern counts as grammatical only when a speech community has walked it often enough to leave a track. The \enquote{double \emph{be}} in \enquote{The thing is, is …} is routine in conversation yet rarely printed; many who say it would still reject it on the page. British speakers say \enquote{at the weekend} without thinking; Americans never think to say it at all. \enquote{There's many reasons} flows in speech but draws a red pen in essays, while \enquote{we're allowed having another cookie} was common among my children's elementary school friends. All are locally grammatical because repetition has entrenched them. When usage shifts, the record updates: the progressive passive \enquote{The house is being built}, pilloried as “barbarous” in the 1790s, is now standard, whereas its predecessor \enquote{The house is building} sounds antique. Community footprints, not abstract logic, decide which trails become pavement.
+
+\smallskip
+Grammaticality is nothing more (and nothing less) than the fit a community has ratified between a form and the meanings swirling around it. Yet heavy processing load can fool the mind the way a visual illusion can fool the eye: a well-formed sentence may strike us as wrong, while a malformed one can slip by unnoticed.
+
+\textbf{4. Processing load:}  
+Our brains can juggle only a few syntactic chunks at once. Push them past capacity and a grammatical sentence feels broken. Take the garden-path line \enquote{The old man the phones}. We start by treating \enquote{old man} as a noun phrase; at \enquote{phones} we need to rewind and promote \enquote{old} to subject and \enquote{man} to verb. Nothing violates English grammar, but most readers declare it wrong on the first pass.
+
+The effect also runs the other way. Low-load strings can glide past despite real faults. \enquote{More people have been to Russia than I have} raises no flags for many, though it actually fails step 2. And an agreement error can hide inside a long noun phrase: \enquote{The patchwork of laws governing background checks, addressing assault-weapons limits, and regulating open-carry practices help explain why people continue to be wounded and killed.} 
+
+Here the singular head noun \enquote{patchwork} should take \enquote{helps}, but the intervening plurals saturate our attention making \enquote{help} \textit{feel} right. Processing ease—or overload—masks the fault the way a quick flourish lets a magician palm a coin.
+
+\section*{Language as a Living System}
+
+Because entrenchment is communal, grammaticality evolves. My model borrows equations from population biology: innovations spread along the classic S-curve—slow start, rapid climb, then plateau. The rise of \emph{going to} as a future marker and the decline of \emph{whom} follow this trajectory exactly. The same forces that make some sentences feel wrong also decide which novelties survive.
+
+\section*{Why This Matters}
+
+The MMMG framework predicts learning curves in second-language acquisition: novices hear only noise, intermediates begin to map form to meaning but still wander outside community norms, and advanced learners converge on those norms.  It also clarifies why some errors fade with exposure while others never budge.  You can train your ear to accept \enquote{goed} → \enquote{went}, but no amount of input will license a sentence such as \enquote{Who did you say that left?} English allows \enquote{Who did you say left?} but blocks the otherwise identical version with \enquote{that}, even though superficially similar cases like \enquote{Who did you say that you saw?} are fine.
+
+For large language models, the lesson is blunt. Mimicking human grammar takes more than shuffling word forms: a system has to pick the right speech community, track its conventions, weigh meaning compatibility, and distinguish the merely rare from the truly impossible. Astonishingly, current LLMs now clear those grammatical hurdles almost without a stumble—at least in English. Where they still commonly falter is with veracity: their sentences line up perfectly, but the world they describe can be fictional.
+
+\section*{Testing the Theory}
+
+The account is testable. Speakers of Spanish, where gender infuses morphology, should treat pronoun-gender mismatches as deeply ungrammatical; English speakers should rate them milder; Japanese speakers, whose language lacks grammatical gender, should find them merely odd. I plan to run studies to probe these predictions.
+
+\section*{The Grammar in Your Head}
+
+Grammar turns out to involve a dynamic compromise among form, meaning, memory, and social convention, all bounded by our cognitive limits. Each time I speak, I steer through those constraints without thinking, and so do you. That we still converge on almost the same judgments of what sounds right is, quite literally, wonderful.
+
+And, when we fail to converge—when a sentence that sounds natural to me jars for you—three things are usually at work: meanings collide, community trails thin, or cognition strains. Those pressures keep grammar in motion, yet they mostly balance out, letting us meet in the middle. That tension between flux and common ground is what I call grammaticality.
+
+\end{document}

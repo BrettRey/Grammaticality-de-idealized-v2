@@ -9,6 +9,10 @@
 
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta,shapes,positioning,fit,backgrounds}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+
 
 \usepackage[style=langsci-unified,backend=biber]{biblatex}
 \addbibresource{refs.bib}
@@ -208,6 +212,11 @@ The language community treats evidential distinctions as central enough to be ba
 Needless to say that, while English speakers can say \textit{I heard that he arrived} or \textit{He must have arrived}, these are optional lexical or modal resources rather than required elements of the grammar. The English community simply doesn't regard evidential distinctions as something that must always be encoded morphosyntactically.
 
 \textcite{kilani2005} demonstrate this principle systematically in their analysis of verbal morphology across French and other Romance languages. They show how apparently similar verbal systems can encode quite different semantic distinctions as grammatically obligatory, reflecting each community's conventions about which meaning distinctions must be systematically marked. For instance, while both French and Italian mark aspect morphologically, they differ in which aspectual distinctions are grammaticalized versus left to optional lexical expression.
+
+\paragraph{Why further layers are necessary}
+Establishing a form--meaning mapping is a prerequisite for grammaticality, but it isn't sufficient. Individuals routinely interpret strings that the community nevertheless judges ill-formed. That very flexibility forces the grammar to police \emph{how} a pairing is licensed, not merely \emph{whether} one can be imagined in principle. In other words, the system needs additional filters that (i) rule out mappings that conflict with conventional constructional meanings (\S\ref{sec:semantic-compatibility}), (ii) flag mappings whose recovery cost overwhelms processing resources (\S\ref{sec:processing-constraints}), and (iii) block mappings the community has never ratified (\S\ref{sec:community-acceptance}). Only by layering these constraints on top of the initial pairing do we predict the empirical fact that *\textit{Furiously sleep ideas green colorless} elicits universal rejection while (\ref{ex:center}) feels bad in everyday quotation yet is accepted as “grammatical but hard to process’’ once speakers are walked through the intended parse. The extra layers therefore partition the wide space of imaginable pairings into the much smaller subset that a community recognizes as bona fide grammatical resources.
+
+One might object that the community’s verdict alone should settle the matter: if speakers converge on using a form, why not define $G(u)$ as simply `whatever the community accepts'? That move is circular and empirically empty: it can neither flag emerging innovations whose status is still contested nor explain why stable dialectal differences persist despite mutual intelligibility. A purely sociological definition would also mis-classify well-attested performance errors (e.g.\ agreement slips in live speech) as \enquote{grammatical} whenever they pass unnoticed, and it would leave us with no basis for diagnosing why learners systematically avoid forms that the target community fully endorses. Separating the mapping, compatibility, and acceptance layers therefore avoids trivializing the concept of grammaticality while still granting the community the final say on which pairings endure.
 
 \subsubsection{Semantic compatibility}\label{sec:semantic-compatibility}
 
@@ -718,25 +727,73 @@ This formulation predicts that processing difficulty can make grammatical senten
 
 
 
-\subsection{Community Dynamics}
+\subsection{Community dynamics}\label{sec:community-dynamics}
 
-The evolution of community entrenchment follows a modified logistic equation:
+I model the proportion $C^{t}(u)$ of speakers who \emph{license} the pairing $\langle M(u),\mu(u)\rangle$ at time $t$ with the Verhulst (logistic) differential equation
 
+\begin{equation}\label{eq:logistic}
+\frac{dC^{t}}{dt}= \Delta(u)\,C^{t}\bigl(1-C^{t}\bigr),
+\end{equation}
+where the net bias $\Delta(u)$ aggregates the main motivations already
+identified:
 \[
-\frac{dC^t}{dt} = \Delta(u) \cdot C^t(1 - C^t)
+\Delta(u)=
+  \alpha_{\text{semantic}}\;\text{Transparency}(u)
+  +\alpha_{\text{social}}\;\text{Prestige}(u)
+  +\alpha_{\text{structural}}\;\text{Analogy}(u)
+  \;-\;\beta\;\text{NoisePenalty}(u).
 \]
-where the net bias $\Delta(u)$ depends on multiple factors:
+The logistic form yields three immediate consequences.
 
-\[
-\Delta(u) = \alpha_{\text{semantic}} \cdot \text{Transparency}(u) + \alpha_{\text{social}} \cdot \text{Prestige}(u) + \alpha_{\text{structural}} \cdot \text{Analogy}(u) - \beta \cdot \text{NoisePenalty}(u)
-\]
-
-This formulation makes specific predictions:
 \begin{itemize}
-    \item Constructions with $\Delta(u) > 0$ will show increasing entrenchment over time
-    \item The S-curve of language change emerges naturally from the logistic dynamics
-    \item Different motivations (semantic, social, structural) can be empirically weighted
+\item If $\Delta(u)\!>\!0$, entrenchment grows monotonically and the familiar
+  S-curve of change follows directly from \eqref{eq:logistic}.
+\item Weighting the coefficients $\alpha_{\ast},\beta$ in fitted
+  data lets us compare the empirical strength of semantic,
+  social, and structural pressures in any speech community.
+\item When $\Delta(u)\!<\!0$, the construction retreats towards extinction:
+  $C^{t}\!\to\!0$.
 \end{itemize}
+
+\paragraph{Speaker-internal gradience.}
+The derivation above adopts the classic two-state
+\emph{A~vs.~B} model: each speaker is either an \emph{acceptor}
+($A$) or a \emph{rejector} ($B$), so $C^{t}$ is the proportion of
+$A$-speakers in the population.\footnote{For the original
+evolutionary-dynamics treatment see \textcite{Nowak2001}.}
+Nothing essential changes if individual grammars are themselves
+probabilistic.  Let every speaker store a personal weight
+$C_{i}(u)\in[0,1]$ that a Yang-style variational learner updates
+after each encounter with $u$ \autocite{Yang2000}.  The
+population value becomes the mean
+$C^{t}(u)=\tfrac{1}{N}\sum_{i}C_{i}(u)$, whose expectation still
+satisfies \eqref{eq:logistic}
+\autocite{BlytheCroft2012}.  The logistic trajectory,
+and with it the dual-sigmoid pattern in
+Figure~\ref{fig:trajectory}, are therefore a genuine population-level
+prediction, not an artefact of categorical individual states.
+(The trade-off is that the neat closed-form fixation
+probabilities of the two-state model must be replaced by numerical
+simulation once individual gradience is allowed.)
+
+\begin{figure}[t]
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[
+        width=9cm,height=5cm,
+        xlabel={$t$ (time)},
+        ylabel={$C^{t}(u)$},
+        ymin=0, ymax=1,
+        domain=0:10, samples=200,
+        axis lines=left, thick]
+      \addplot+[no marks] {1 / (1 + exp(-1.4*(x-5)))}; % logistic curve
+    \end{axis}
+  \end{tikzpicture}
+  \caption{Trajectory of community entrenchment
+           ($C^{t}(u)$) predicted by the logistic model.}
+  \label{fig:trajectory}
+\end{figure}
+
 
 \subsection{Bootstrapping Novel Constructions}
 
@@ -1134,7 +1191,7 @@ If it could be shown that phonology alone caused feelings of ungrammaticality, t
 
 \newpage
 \section*{Acknowledgements}
-Thanks to Peter Evans, Geoff Pullum, Muhammad Ali Khalidi, and Ryan Nefdt, Irene Kosmas, and Mostafa Hasrati for comments and suggestions. I'd like to thank Jamie Ramsden for bringing up the cases of \textit{a orange} and \textit{le hiver}.
+Thanks to Peter Evans, Geoff Pullum, Muhammad Ali Khalidi, and Ryan Nefdt, Irene Kosmas, and Mostafa Hasrati for comments and suggestions. I'd like to thank Jamie Ramsden for bringing up the cases of \textit{a orange} and \textit{le hiver}. Henri Kauhanen for reviewing the formalization.
 
 I used the large language models Claude 3.5, ChatGPT o1 pro, and DeepSeek V3 in drafting and editing this paper.
 
