@@ -1,0 +1,203 @@
+\documentclass[12pt]{article}
+\usepackage{xcolor}
+\usepackage{fontspec}
+\usepackage{booktabs}
+\usepackage{csquotes}
+\usepackage{langsci-gb4e}
+\usepackage[style=langsci-unified,backend=biber]{biblatex}
+\addbibresource{refs.bib}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tcolorbox}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{microtype}
+\usepackage{float}
+\usetikzlibrary{arrows.meta,shapes,positioning}
+\usepackage{orcidlink}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    citecolor=blue,      
+    urlcolor=cyan,
+    pdftitle={Grammaticality as Kind},
+    pdfpagemode=FullScreen,
+}
+
+\setmainfont{Charis SIL}
+
+\title{Pre-registration:\\Morphological vs~Phonological Locus of Edge-Case Unacceptability}
+\author{Brett Reynolds \orcidlink{0000-0003-0073-7195}\\Humber Polytechnic \& University of Toronto\thanks{I used ChatGPT o3 and Claude Opus 4 in drafting this version of the paper. I take responsibility for all content. \\This work is licensed under CC-BY 4.0}}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Motivation and theoretical background}
+
+The Morphosyntactic-Meaning Model of Grammaticality (MMMG; \cite{ReynoldsThisVolume}) posits that grammaticality emerges from the stability of community-specific morphosyntax–meaning pairings. Under this account, purely phonological errors that leave meaning intact fall outside the domain of grammar proper—they may sound wrong but are not ungrammatical. This predicts a sharp empirical boundary: speakers should systematically distinguish morphosyntactic violations from phonological deviance, even when both occur within grammatical morphemes.
+
+Two edge cases provide critical tests. First, hiatus-avoidance failures in the indefinite article (*\textit{a apple}, *\textit{an table}) involve a grammatical category (determiners) but constitute purely phonological errors; the morphosyntactic meaning [+indefinite, +singular] remains intact. Under MMMG, these should pattern with pronunciation slips, not grammatical errors. However, their occurrence in a core functional category may lead speakers to perceive them as morphosyntactic violations.
+
+Second, voicing mismatches in the past-tense suffix (\textit{walked} /wɔːkɛd/ instead of /wɔːkt/) affect realization of a grammatical morpheme but involve no semantic consequences. The morphosyntactic meaning [+past] is preserved regardless of allomorphic realization. MMMG predicts these should cluster with phonetic errors, though their morphological locus may influence categorization.
+
+No existing dataset tests this predicted dissociation while controlling for semantic, pragmatic, and metalinguistic confounds. If speakers reliably sort indefinite-article errors with morphological violations despite their phonological nature, this would challenge MMMG's claim that only meaning-affecting morphosyntactic failures constitute grammatical errors. Conversely, if voicing errors pattern with phonological slips despite affecting a grammatical morpheme, this supports MMMG's meaning-based criterion.
+
+This study employs open card-sorting with dual-modality presentation (text + audio) to capture spontaneous categorization while preserving phonetic information. By comparing how speakers group these edge cases relative to clear morphological violations, clear phonetic errors, and baseline grammatical sentences, we can empirically map the boundary between grammatical and non-grammatical errors as conceived by native speakers.
+
+
+\section{Research questions}
+\begin{enumerate}
+\item Do English indefinite-article mismatches (\textit{a apple}, \textit{an table}) pattern with morphologically ill-formed fillers rather than with phonetic mispronunciations in a neutral card-sorting task?
+\item Do voicing-alternation deviations in the past-tense suffix (\textit{walked} pronounced /wɔːkɛd/) pattern with purely phonetic mispronunciations rather than with morphological deviations?
+\end{enumerate}
+Evidence for an RQ is affirmative if the corresponding edge items cluster with the predicted filler type more often than with the alternative type; indeterminate otherwise.
+
+\section{Hypotheses}
+\begin{description}
+\item[$H_{a\_morph}$:] The co-classification probability between \textit{a/an} mismatches and \textit{morphological-foil} items exceeds the co-classification probability between \textit{a/an} mismatches and \textit{phonetic-foil} items by at least $\delta = .15$.
+\item[$H_{v\_phon}$:] The co-classification probability between voicing-error items and phonetic-foil items exceeds the co-classification probability between voicing-error items and morphological-foil items by at least $\delta = .15$.
+\end{description}
+
+\section{Design overview}
+Open card-sort with forced dual-modality cue:
+\begin{itemize}
+\item printed sentence on each card;
+\item audio plays on hover (identical text across conditions except for the phonetic manipulations).
+\end{itemize}
+
+\section{Materials}
+
+\subsection{4.1\quad Critical micro-scenario sentence skeleton}
+\textit{Kim talked to Pat this morning.}
+
+\subsection{4.2\quad Condition sets (12 items each)}
+\begin{center}
+\begin{tabular}{@{}lp{10cm}@{}}
+\toprule
+\textbf{Label} & \textbf{Description and construction method}\\
+\midrule
+Baseline-good & Text identical to skeleton; audio canonical.\\
+edge-epenthesis & Text skeleton modified with indefinite article preceding a vowel or consonant noun (\textit{a apple}, \textit{an table}); audio matches text.\\
+Edge-voicing & Text baseline; audio past-tense verb realised /–ɛd/ where /–t/ expected.\\
+Morphological-foil & Verb-form errors (\textit{Kim \;meet \;Pat}, \textit{Kim talking to Pat}). Text and audio match.\\
+Phonetic-foil & Severe segmental distortions without morphological impact (e.g.\ /mɔːnɪŋ/ $\rightarrow$ /mɔːnəŋ/).\\
+Hard-ungrammatical & Syntactic control (*\textit{Kim talked Pat to this morning}).\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{4.3\quad Audio recording}
+One professional speaker, General American English, 44.1 kHz; RMS amplitude normalised; all tokens peak-aligned.
+
+\section{Participants \,(UPDATED)}
+\begin{itemize}
+  \item \textbf{Target sample} $n=120$ self-reported native speakers of North-American English (Canada or USA), recruited via Prolific.
+  \item Inclusion criteria: native anglophone upbringing; ≥ 95 \% prior approval; passes headphone check.
+  \item Compensation: CAD \$7.50 for $\approx$25~min (≈ \$18~h$^{-1}$).
+\end{itemize}
+
+\section{Procedure}
+\begin{enumerate}
+\item Browser presents interactive board with 72 shuffled cards.
+\item Hover reveals audio; participants free to re-listen.
+\item Warm-up: three-card odd-one-out demonstration using practice cards (see §7.1); data not analysed.
+\item Sorting phase: drag cards into piles “that belong together” with the constraint “do not group by subject matter”.
+\item Label phase: free-text explanation for each pile.
+\item Debrief and demographic questions.
+\end{enumerate}
+
+\section{Exclusion rules}
+
+\subsection{7.1\quad Participant-level}
+\begin{itemize}
+\item Failure to move all cards ($<$3 piles) $\Rightarrow$ exclude.
+\item Warm-up error + self-report of grouping by topic $\Rightarrow$ exclude.
+\item Completion time $<$1st percentile or $>$99th percentile (pre-computed) $\Rightarrow$ exclude.
+\end{itemize}
+
+\subsection{7.2\quad Card-level}
+None; all critical cards remain in analysis.
+
+\section{Outcome variables}
+
+\begin{enumerate}
+\item Co-classification matrix $M$ ($72\times72$) for each participant (1 = cards in same pile).
+\item Pile labels (qualitative coding not preregistered, exploratory).
+\end{enumerate}
+
+\section{Statistical analysis plan \,(UPDATED)}
+
+\subsection{9.1\quad Bayesian model}
+
+\paragraph{Data reduction per participant.}
+For each contrast (\(\Delta_{\text{article}},\;\Delta_{\text{voicing}}\)) compute
+\[
+x_i \;=\; \Delta_{k,i},\quad i = 1,\dots, 120.
+\]
+
+\paragraph{Likelihood (unknown $\sigma$).}
+\[
+x_i \mid \mu_k,\sigma_k^2 \;\sim\; \mathcal N(\mu_k,\sigma_k^2).
+\]
+
+\paragraph{Priors.}
+\[
+\mu_k \;\sim\; \mathcal N(0,\;0.25^2),\qquad
+\sigma_k \;\sim\; \text{Jeffreys}(p(\sigma)\propto\sigma^{-1}).
+\]
+Under these priors the marginal posterior of \(\mu_k\) is a
+Student-\(t_{n-1}\bigl(\bar x,\; s/\sqrt n\bigr)\).
+
+\paragraph{Decision rule.}
+\[
+\text{Evidence for}\;H_{k}\;\text{iff}
+\;\Pr\!\bigl(\mu_k > \delta \mid \text{data}\bigr)\;>\;0.95,
+\quad \delta = 0.15.
+\]
+Posterior probabilities computed analytically via the
+Student-\(t\) CDF.
+
+\subsection{9.2\quad Secondary analyses}
+\begin{enumerate}
+\item Adjusted Rand index between each participant’s clustering and three a-priori partitions; multilevel beta-regression with participant random effects.
+\item Sensitivity check excluding participants whose pile labels contain the words \textit{grammar}, \textit{pronunciation}, or \textit{sound}.
+\end{enumerate}
+
+\section{Power justification \,(UPDATED)}
+
+\begin{description}
+\item[Simulation set-up.]  
+10,000 Monte-Carlo datasets per cell; \(\mu_{\text{true}}=0.20\), \(\sigma_{\text{true}}=0.20\);
+posterior decision rule from §9.1.
+
+\item[Results.]  
+
+\begin{center}
+\begin{tabular}{@{}ccc@{}}
+\toprule
+Sample size $n$ & Power (\(\Pr(\text{detect})\)) \\
+\midrule
+60  & 0.61\\
+80  & 0.72\\
+100 & 0.79\\
+\textbf{120} & \textbf{0.86}\\
+150 & 0.91\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\item[Conclusion.]  
+We fix \(n=120\) to achieve \(\ge 0.80\) power while containing recruitment cost.
+\end{description}
+
+\section{Open science commitments}
+\begin{itemize}
+\item Materials, data, scripts released on OSF upon publication (\url{https://osf.io/xxxxx}).
+\item Deviations from this plan will be explicitly labeled as exploratory.
+\end{itemize}
+
+\end{document}

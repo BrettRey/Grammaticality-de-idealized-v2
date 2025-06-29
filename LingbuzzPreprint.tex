@@ -41,7 +41,7 @@
        \large Lingbuzz preprint v0.3\\[6pt]
        \normalsize \url{https://github.com/BrettRey/Grammaticality-de-idealized-v2}}
 \author{Brett Reynolds \orcidlink{0000-0003-0073-7195}\\Humber Polytechnic \& University of Toronto
-\thanks{I used ChatGPT o3-pro and Claude Opus 4 in drafting this version of the paper.\\This work is licensed under CC-BY 4.0}}
+\thanks{I used ChatGPT o3-pro and Claude Opus 4 in drafting this version of the paper. I take responsibility for all content. \\This work is licensed under CC-BY 4.0}}
 \date{\today}
 
 \begin{document}
@@ -79,11 +79,11 @@ Grammaticality is the \emph{community stability} of morphosyntactic form–meani
 Grammaticality emerges from five interacting components:
 
 \begin{enumerate}
-    \item \textbf{Morphosyntactic Pairings} — conventional links between morphosyntax and meaning.
-    \item \textbf{Contextual Meaning} — composite interpretation drawn from lexical, information-structural, discourse, pragmatic, and socio-pragmatic indexical meanings.
-    \item \textbf{Processing Load} — incremental parsing constraints.
-    \item \textbf{Entrenchment} — community acceptance.
-    \item \textbf{Structural Bans} — categorically blocked configurations.
+    \item \textbf{Morphosyntactic Pairings}~-- conventional links between morphosyntax and meaning.
+    \item \textbf{Contextual Meaning}~-- composite interpretation drawn from lexical, information-structural, discourse, pragmatic, and socio-pragmatic indexical meanings.
+    \item \textbf{Processing Load}~-- incremental parsing constraints.
+    \item \textbf{Entrenchment}~-- community acceptance.
+    \item \textbf{Structural Bans}~-- categorically blocked configurations.
 \end{enumerate}
 
 Together these components produce an objective grammaticality score \(G(u)\) and subjective feeling-of-ungrammaticality score \(F(u)\).
@@ -104,20 +104,27 @@ Three long‑standing tensions block a unified account of (un)grammaticality.
 
 \subsection{Categorical rules vs gradient judgements}
 
-\textcite{chomsky1957} cast grammaticality as an all‑or‑nothing property.  
-The competence–performance split was meant to park gradience in a separate \enquote{performance} box, yet doing so lets supportive data count as grammar and contrary data count as noise \parencite[71]{schutze2016}.
+\textcite{chomsky1957} cast grammaticality as an all‑or‑nothing property, but speakers show systematic gradience in their judgments. Consider center-embedded relatives:
 
 \ea
 \textit{The bread the baker the apprentice helped made is delicious.}
 \z
-Centre‑embedded relatives are routinely labelled \enquote{grammatical but unprocessable,} which merely restates the puzzle: speakers feel them to be wrong.
+Such sentences are routinely labeled \enquote{grammatical but unprocessable,} revealing the inadequacy of binary classification. Speakers consistently rate these as worse than simple relatives, yet better than clear violations like *\textit{Bread the baker helped the made is delicious}. 
+
+The competence–performance split was meant to handle this gradience by relegating it to \enquote{performance,} but this approach lets supportive data count as grammar while dismissing contrary evidence as mere noise \parencite[71]{schutze2016}. What's needed is a framework that can capture systematic gradations in acceptability as part of grammatical competence itself.
+
+\paragraph{Ontological remark}
+For an extended defence of grammaticality as a homeostatic property-cluster kind, and a typology of the mechanisms that stabilize that cluster—see the companion paper \textit{Grammaticality as Kind: Ontology, Epistemology, and Empirical Pay-off} \parencite{ReynoldsKind_inprep}.  The two studies are intended to be read in parallel: the present article models how community entrenchment shapes judgment patterns, while \textcite{ReynoldsKind_inprep} clarifies why such patterns warrant kind-level treatment in the first place.
 
 \subsection{Form vs meaning}
 
-The famous \textit{Colorless green ideas sleep furiously} shows syntactic well‑formedness without plausibility.  The converse also matters:
+The famous \textit{Colorless green ideas sleep furiously} shows syntactic well‑formedness without semantic plausibility, suggesting form and meaning can be evaluated independently. Yet speakers also reject semantically coherent strings when morphosyntactic meaning conflicts with lexical meaning:
 
 \ea[*]{\textit{I've finished it yesterday.}}\z
-Here the present‑perfect feature [+current relevance] clashes with the \textit{yesterday}'s [+completed past], and speakers reject the sentence.  Construction‑grammar work \parencite{goldberg1995constructions} confirms that morphosyntactic meaning and lexical meaning must cohere, explaining why \textit{She texted him the address} passes while \textit{*She disappeared him the evidence} does not.
+
+Here the present‑perfect's [+current relevance] clashes with \textit{yesterday}'s [+completed past]. Construction‑grammar work \parencite{goldberg1995constructions} shows that such misalignments trigger systematic rejections: \textit{She texted him the address} succeeds while \textit{*She disappeared him the evidence} fails because the constructional meaning requires compatible lexical semantics.
+
+The puzzle is determining which meaning mismatches matter for grammaticality and which are merely pragmatically odd but formally acceptable.
 
 \subsection{Universal principles vs community conventions}
 
@@ -129,16 +136,25 @@ These three tensions—categorical vs gradient, form vs meaning, universal vs co
 
 \section{Five components of (un)grammaticality}
 
-On the MMMG account, grammaticality emerges as the community stability of morphosyntactic form–meaning pairings. Five interacting components determine this stability:
+On the MMMG account, grammaticality emerges as the community stability of morphosyntactic form–meaning pairings.
+
+\paragraph{Why multiple layers are necessary}
+Establishing a form–meaning mapping is a prerequisite for grammaticality, but it can't be sufficient. Individuals routinely interpret strings that communities nevertheless judge ill-formed. That very flexibility means the grammar must constrain \emph{how} a pairing gets licensed, not merely \emph{whether} one can be constructed in principle. The framework therefore requires additional filters that (i) rule out mappings conflicting with conventional meanings, (ii) flag mappings whose recovery cost overwhelms processing resources, and (iii) block mappings the community has never endorsed.
+
+Only by layering these constraints on top of the initial pairing do we predict the empirical fact that *\textit{Furiously sleep ideas green colorless} elicits universal rejection while (\ref{ex:centre}) feels bad in everyday quotation yet is accepted as \enquote{grammatical but hard to process} once speakers are walked through the intended parse.  Such contrasts suggest that grammaticality judgments reflect multiple constraint layers operating on an initial form–meaning pairing.
+
+One might object that community acceptance alone should settle the matter: if speakers converge on using a form, why not define grammaticality as simply \enquote{whatever the community accepts}? This approach faces circularity and empirical problems. It can't predict the trajectory of contested innovations, explain why stable dialectal differences persist despite mutual intelligibility, or avoid misclassifying performance errors as \enquote{grammatical} when they pass unnoticed. More problematically, it provides no basis for understanding why learners systematically avoid forms that target communities fully endorse.
+
+The layered architecture therefore aims to avoid trivializing grammaticality while still granting communities the decisive role in determining which form–meaning pairings ultimately stabilize. Five interacting components determine this stability:
 
 \subsection{Morphosyntactic pairings within communities}
 
 \begin{tcolorbox}[colback=lsLightBlue!30]
 \textbf{Diagnostic}: Does the morphosyntactic form evoke a conventionalised meaning in this community?
 
-\textbf{Example}: \textit{*Can the have running?}~— no viable form–meaning pairing.
+\textbf{Example}: \textit{*Can the have running?}~-- no viable form–meaning pairing.
 
-\textbf{Counter-example}: \textit{Colorless green ideas sleep furiously}~— odd semantics, but a clear compositional morphosyntactic pairing.
+\textbf{Counter-example}: \textit{Colorless green ideas sleep furiously}~-- odd semantics, but a clear compositional morphosyntactic pairing.
 \end{tcolorbox}
 
 Grammaticality fundamentally requires stable, conventionalised pairings between morphosyntactic forms and meanings within a speech community. Communities differ regarding acceptable pairings:
@@ -155,16 +171,15 @@ This utterance is grammatical in communities accepting code-switching with Engli
 \begin{tcolorbox}[colback=lsLightBlue!30]
 \textbf{Diagnostic}: Does the morphosyntactic meaning align coherently with the contextual meaning derived from lexical semantics, information structure, discourse coherence, pragmatic inference, and socio-pragmatic indexicality?
 
-\textbf{Example}: \textit{*I've finished it yesterday}~— present-perfect meaning [+current relevance] clashes with the lexical-discourse meaning of \textit{yesterday} [+completed past].
+\textbf{Example}: \textit{*I've finished it yesterday}~-- present-perfect meaning [+current relevance] clashes with the lexical-discourse meaning of \textit{yesterday} [+completed past].
 
-\textbf{Counter-example}: \textit{I've just finished it}~— coherent alignment with lexical-discourse meaning.
+\textbf{Counter-example}: \textit{I've just finished it}~-- coherent alignment with lexical-discourse meaning.
 \end{tcolorbox}
 
 Even a well-formed morphosyntactic structure becomes ungrammatical if it misaligns significantly with contextual meanings. Consider:
 
 \ea[*]{\textit{I have 25 years.} \hfill (intended: `I am 25 years old')}
 \z
-
 In English, \textit{have + years} fails contextually as an age-expression despite being syntactically viable.
 
 \subsection{Processing load}
@@ -172,9 +187,9 @@ In English, \textit{have + years} fails contextually as an age-expression despit
 \begin{tcolorbox}[colback=lsLightBlue!30]
 \textbf{Diagnostic}: Can the sentence be incrementally parsed within memory limits?
 
-\textbf{Example}: \textit{The rat the cat the dog chased killed ate the cheese}~— multiple embeddings overload incremental parsing.
+\textbf{Example}: \textit{The rat the cat the dog chased killed ate the cheese}~-- multiple embeddings overload incremental parsing.
 
-\textbf{Counter-example}: \textit{The rat that the cat killed ate the cheese}~— single embedding, easily processed.
+\textbf{Counter-example}: \textit{The rat that the cat killed ate the cheese}~-- single embedding, easily processed.
 \end{tcolorbox}
 
 High processing demands can induce feelings of ungrammaticality even for objectively grammatical constructions due to parsing constraints.
@@ -184,24 +199,26 @@ High processing demands can induce feelings of ungrammaticality even for objecti
 \begin{tcolorbox}[colback=lsLightBlue!30]
 \textbf{Diagnostic}: Is the pairing conventional and entrenched within the community?
 
-\textbf{Example}: \textit{*We counted three sheeps}~— regular plural blocked by entrenched irregular form.
+\textbf{Example}: \textit{*We counted three sheeps}~-- regular plural blocked by entrenched irregular form.
 
-\textbf{Counter-example}: \textit{We bought three computer mouses}~— recent regularisation already accepted.
+\textbf{Counter-example}: \textit{We bought three computer mouses}~-- recent regularization already accepted.
 \end{tcolorbox}
 
-Even transparent morphosyntactic patterns can fail if not entrenched in a community. For example, the independent relative \textit{whose} remains marginal due to lack of exposure:
+Even transparent morphosyntactic patterns can fail if not entrenched in a community. The independent relative construction in (\ref{ex:whose}) illustrates this: while \textit{whose} clearly signals possession and relativization, the construction requires stringent information-structural licensing conditions (contrastive focus, structural parallelism, or deictic anchoring) that arise only rarely in natural discourse \autocite{ReynoldsWhose}:
 
-\ea[?]{\textit{I saw Joan, a friend of whose was visiting.}}
+\ea[?]{\textit{I saw Joan, a friend of whose was visiting.}}\label{ex:whose}
 \z
+
+This extreme pragmatic selectivity creates a \enquote{double anaphora} burden—speakers must simultaneously recover both the possessor and the elided possessum—that severely limits the construction's distribution. The result is a grammatical pattern that remains marginally entrenched not due to morphosyntactic opacity, but because the required licensing contexts occur so infrequently that most speakers encounter insufficient exemplars to establish robust entrenchment.
 
 \subsection{Structural bans}
 
 \begin{tcolorbox}[colback=lsLightBlue!30]
 \textbf{Diagnostic}: Does the construction violate a categorically blocked configuration?
 
-\textbf{Example}: \textit{\*Which did you buy \_ car?} — determiner extraction.
+\textbf{Example}: \textit{\*Which did you buy \_ car?}~-- determiner extraction.
 
-\textbf{Counter-example}: \textit{Which car did you buy \_?} — entire NP extraction permitted.
+\textbf{Counter-example}: \textit{Which car did you buy \_?}~-- entire NP extraction permitted.
 \end{tcolorbox}
 
 Categorical structural bans represent extreme stability biases. While cross-linguistically robust, they are nonetheless emergent rather than strictly universal or innate. The model treats them as a community-entrenchment extreme (effectively zero acceptability), but future work could test their potential malleability under unusual sociolinguistic conditions.
@@ -446,11 +463,11 @@ F(u)= -\lambda_{\listener}\,r(u)\,(1-K(u)) \;-\; \gamma\,\text{PCost}(u) + \eta
 \end{equation}
 where:
 \begin{itemize}
-  \item $\lambda_{\listener} \in [0,1]$ — listener-specific penalty weight for objective violations
-  \item $r(u) \in [0,1]$ — probability that listener detects the mismatch between $\mu(u)$ and $\sigma(u)$
-  \item $\gamma > 0$ — conversion factor mapping processing load to negative affect
-  \item $\text{PCost}(u) = \sum_{i} \text{IC}(w_i)$ — sum of integration costs following \textcite{gibson2000}
-  \item $\eta \sim \mathcal{N}(0,\sigma^{2})$ — idiosyncratic listener bias
+  \item $\lambda_{\listener} \in [0,1]$~-- listener-specific penalty weight for objective violations
+  \item $r(u) \in [0,1]$~-- probability that listener detects the mismatch between $\mu(u)$ and $\sigma(u)$
+  \item $\gamma > 0$~-- conversion factor mapping processing load to negative affect
+  \item $\text{PCost}(u) = \sum_{i} \text{IC}(w_i)$~-- sum of integration costs following \textcite{gibson2000}
+  \item $\eta \sim \mathcal{N}(0,\sigma^{2})$~-- idiosyncratic listener bias
 \end{itemize}
 
 $F(u)$ is constrained to $[-1,0]$: 0 means `no negative signal'; larger negative values indicate stronger perceived ill-formedness. Values computed outside this range are linearly clipped to maintain interpretability.
@@ -574,6 +591,10 @@ Figure~\ref{fig:trajectory} visualizes a typical growth path ($\Delta\!=\!0.8$).
   \label{fig:trajectory}
 \end{figure}
 
+\paragraph{Extension note.}  
+The present paper restricts itself to community‐average entrenchment.  
+A companion article, \emph{Habitus-conditioned grammaticality: A Bourdieusian extension of MMMG} \autocite{Reynolds_inprep}, formalizes how listener position in social space (\textbf{x}) shapes the feeling‐of-ungrammaticality function $F(u)$ and fractionalizes entrenchment $C^{t}(u)$ by class.  That work supplies the mathematical details, pilot data, and simulation results sketched only briefly here.  Readers interested in the habitus layer should consult that follow-up study once released on Lingbuzz; the core MMMG results below are independent of its assumptions.
+
 
 \section{Predictions and Falsifiability}
 
@@ -651,16 +672,16 @@ MMMG (this work)     & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$
 
 \subsection{Key distinctions}
 
-\textbf{Versus generative grammar} —  
+\textbf{Versus generative grammar}~--  
 MMMG retains the insight that certain configurations are systematically excluded, but explains these \enquote{structural bans} as the outcome of extreme, community‑level stability rather than as inviolable innate rules.
 
-\textbf{Versus Construction Grammar} —  
+\textbf{Versus Construction Grammar}~--  
 Both frameworks treat constructions as form–meaning pairings, yet MMMG gives special status to \emph{morphosyntactic} pairings: violations in this layer trigger qualitatively stronger ungrammaticality judgments than purely pragmatic or lexical mismatches.
 
-\textbf{Versus usage‑based models} —  
+\textbf{Versus usage‑based models}~--  
 MMMG builds in frequency effects, but also accounts for systematic gaps such as the independent relative \textit{whose}: a pattern can be blocked even when its components are frequent and compositionally transparent.
 
-\textbf{Versus relevance‑theoretic accounts} —  
+\textbf{Versus relevance‑theoretic accounts}~--  
 Both reject an innate, autonomous syntax, yet MMMG attributes constraints to conventionalised form–meaning pairings inside a speech community, rather than to general principles of interpretive efficiency alone.
 
 
@@ -803,9 +824,9 @@ The noise-penalty function detects systematic errors using a smooth sigmoid:
 \]
 where:
 \begin{itemize}
-\item $\beta_{\text{max}}$ — maximum penalty for high-surprisal forms
-\item $k$ — steepness of the transition (larger = sharper)
-\item $\theta$ — surprisal threshold where penalty = $\beta_{\text{max}}/2$
+\item $\beta_{\text{max}}$~-- maximum penalty for high-surprisal forms
+\item $k$~-- steepness of the transition (larger = sharper)
+\item $\theta$~-- surprisal threshold where penalty = $\beta_{\text{max}}/2$
 \end{itemize}
 This continuous function ensures smooth likelihood surfaces for parameter estimation while capturing the intuition that highly surprising forms with systematic repair patterns resist entrenchment.
 
