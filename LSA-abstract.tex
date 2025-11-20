@@ -1,0 +1,69 @@
+%https://chatgpt.com/s/t_68516ad1087c8191a6b04292bb15ec30
+\documentclass[11pt]{article}
+\usepackage[margin=2cm]{geometry}
+\begin{document}
+
+\begin{center}
+\textbf{Grammaticality as community‑stability of form–meaning pairings}
+\end{center}
+
+\noindent\textbf{Problem} Speakers accept the semantically odd \emph{Colorless green ideas sleep furiously} yet reject *\emph{I’ve finished it yesterday}.  They block *\emph{Which did you buy \_ car?}, but linguists label deeply centre‑embedded relatives grammatical despite universal discomfort.  Existing theories explain only slices of this pattern.
+
+\medskip
+\noindent\textbf{Proposal} I develop the \emph{Morphosyntactic–Meaning Model of Grammaticality (MMMG)}.  
+Grammaticality is defined as the community‑level \emph{stability} of morphosyntactic form–meaning pairings.  
+Five interacting components decide an utterance’s status:  
+(1) conventional morphosyntactic pairings;  
+(2) compatibility between those meanings and contextual meaning;  
+(3) incremental‑processing limits;  
+(4) degree of entrenchment in the speech community;  
+(5) categorical structural bans.  
+The product of (1)–(4) yields objective grammaticality \(G(u)\); component (5) sets \(G(u)=0\) when active.  
+A separate equation derives the felt ill‑formedness \(F(u)\) from \(G(u)\), detection probability \(r(u)\), and processing cost.
+
+\medskip
+\noindent\textbf{Method} A formal skeleton casts the system as a Structural Causal Model.  
+Entrenchment \(C^{t}(u)\) is treated as a latent variable with four indicators: corpus frequency, production probability, memory availability, and matched‑guise acceptability.  
+Change in \(C^{t}(u)\) follows logistic growth driven by semantic transparency, social prestige, structural analogy, and a smooth noise‑penalty term derived from surprisal.  
+The model is identifiable and recovers simulated ground‑truth parameters with RMSE < 0.06 for \(C^{t}(u)\).
+
+\medskip
+\noindent\textbf{Key results}  
+\vspace{-0.4\baselineskip}
+\begin{enumerate}
+\item Centre embeddings have \(G(u)=1\) but large processing cost; their low \(F(u)\) matches empirical discomfort without postulating ungrammaticality.
+\item The comparative illusion \emph{More people have been to Russia than I have} has \(G(u)=0\) (semantic mismatch) yet high \(r(u)\approx0.1\); intuitively it \emph{feels} fine until scrutiny, predicting documented judgement instability.
+\item The independent relative \emph{whose} scores \(G(u)\approx0.3\) because mapping and semantics succeed but \(C^{t}(u)\) is weak; exposure‑satiation experiments therefore predict rising acceptability, unlike determiner extraction where the structural‑ban term fixes \(G(u)=0\).
+\end{enumerate}
+
+\noindent\textbf{Predictions} The model yields falsifiable claims: (i) only constructions with \(G(u)>0\) satiate under repeated exposure; (ii) diachronic adoption follows S‑curves whose slope is proportional to the net entrenchment bias \(\Delta\); (iii) languages with richer morphological gender display sharper fall‑offs in \(G(u)\) for pronoun‑antecedent mismatches.
+
+\medskip
+\noindent\textbf{Contribution} MMMG unifies categorical bans, gradient judgements, processing illusions, and community variation within a single quantitative architecture, supplying clear empirical tests for future work.
+
+% --- page 2 of the same document ---
+\clearpage
+\noindent\textbf{Examples}\\[-0.8\baselineskip]
+\begin{enumerate}
+\item[] \emph{Colorless green ideas sleep furiously} — well‑formed mapping, semantics odd.  
+\item[] *\emph{I’ve finished it yesterday} — mapping OK, meaning clash.  
+\item[] *\emph{Which did you buy \_ car?} — structural ban (determiner extraction).  
+\item[] \emph{The rat the cat the dog chased killed ate the cheese} — processing overload, \(G(u)=1\).
+\end{enumerate}
+
+\medskip
+\noindent\textbf{Fig. 1} Decision tree locating the first component whose failure yields \(G(u)=0\).  
+\includegraphics[width=\textwidth]{diag-tree.pdf}  % shrink your existing TikZ figure to 16 cm width
+
+\medskip
+\noindent\textbf{Selected references}\\[-0.8\baselineskip]
+\begin{enumerate}
+\setlength\itemsep{0pt}
+\item \textcite{chomsky1957}. \emph{Syntactic Structures}.  
+\item \textcite{goldberg1995constructions}. \emph{Constructions}.  
+\item \textcite{gibson2000}. Dependency locality theory.  
+\item \textcite{schutze2016}. \emph{The Empirical Base of Linguistics}.  
+\end{enumerate}
+
+
+\end{document}

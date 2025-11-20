@@ -1,0 +1,392 @@
+\documentclass[12pt]{article}
+\usepackage{xcolor}
+\usepackage{fontspec}
+\usepackage{booktabs}
+\usepackage{csquotes}
+\usepackage{langsci-gb4e}
+\usepackage[style=langsci-unified,backend=biber]{biblatex}
+\addbibresource{refs.bib}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tcolorbox}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{microtype}
+\usepackage{float}
+\usetikzlibrary{arrows.meta,shapes,positioning}
+\usepackage{orcidlink}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    citecolor=blue,      
+    urlcolor=cyan,
+    pdftitle={Grammaticality as Kind},
+    pdfpagemode=FullScreen,
+}
+
+\setmainfont{Charis SIL}
+
+\title{Pre-registration:\\Morphological vs~Phonological Locus of Edge-Case Unacceptability}
+\author{Brett Reynolds \orcidlink{0000-0003-0073-7195}\\Humber Polytechnic \& University of Toronto\thanks{I used ChatGPT o3 and Claude Opus 4 in drafting this version of the paper. I take responsibility for all content. \\This work is licensed under CC-BY 4.0}}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Motivation and theoretical background}
+
+The Morphosyntactic-Meaning Model of Grammaticality (MMMG; \cite{ReynoldsThisVolume}) posits that grammaticality emerges from the stability of community-specific morphosyntax–meaning pairings. Under this account, purely phonological errors that leave meaning intact fall outside the domain of grammar proper—they may sound wrong but are not ungrammatical. This predicts a sharp empirical boundary: speakers should systematically distinguish morphosyntactic violations from phonological deviance, even when both occur within grammatical morphemes.
+
+Two edge cases provide critical tests. First, hiatus-avoidance failures in the indefinite article (*\textit{a apple}, *\textit{an table}) involve a grammatical category (determiners) but constitute purely phonological errors; the morphosyntactic meaning [+indefinite, +singular] remains intact. Under MMMG, these should pattern with pronunciation slips, not grammatical errors. However, their occurrence in a core functional category may lead speakers to perceive them as morphosyntactic violations.
+
+Second, voicing mismatches in the past-tense suffix (\textit{walked} /wɔːkɛd/ instead of /wɔːkt/) affect realization of a grammatical morpheme but involve no semantic consequences. The morphosyntactic meaning [+past] is preserved regardless of allomorphic realization. MMMG predicts these should cluster with phonetic errors, though their morphological locus may influence categorization.
+
+No existing dataset tests this predicted dissociation while controlling for semantic, pragmatic, and metalinguistic confounds. If speakers reliably sort indefinite-article errors with morphological violations despite their phonological nature, this would challenge MMMG's claim that only meaning-affecting morphosyntactic failures constitute grammatical errors. Conversely, if voicing errors pattern with phonological slips despite affecting a grammatical morpheme, this supports MMMG's meaning-based criterion.
+
+This study employs open card-sorting with dual-modality presentation (text + audio) to capture spontaneous categorization while preserving phonetic information. By comparing how speakers group these edge cases relative to clear morphological violations, clear phonetic errors, and baseline grammatical sentences, we can empirically map the boundary between grammatical and non-grammatical errors as conceived by native speakers.
+
+
+\section{Research questions}
+\begin{enumerate}
+\item Do English indefinite-article mismatches (\textit{a apple}, \textit{an table}) pattern with morphologically ill-formed fillers rather than with phonetic mispronunciations in a neutral card-sorting task?
+\item Do voicing-alternation deviations in the past-tense suffix (\textit{walked} pronounced /wɔːkɛd/) pattern with purely phonetic mispronunciations rather than with morphological deviations?
+\end{enumerate}
+Evidence for an RQ is affirmative if the corresponding edge items cluster with the predicted filler type more often than with the alternative type; indeterminate otherwise.
+
+\section{Hypotheses}
+\begin{description}
+\item[$H_{a\_morph}$:] The co-classification probability between \textit{a/an} mismatches and \textit{morphological-foil} items exceeds the co-classification probability between \textit{a/an} mismatches and \textit{phonetic-foil} items by at least $\delta = .15$.
+\item[$H_{v\_phon}$:] The co-classification probability between voicing-error items and phonetic-foil items exceeds the co-classification probability between voicing-error items and morphological-foil items by at least $\delta = .15$.
+\end{description}
+
+\section{Design overview}
+Open card-sort with forced dual-modality cue:
+\begin{itemize}
+\item printed sentence on each card;
+\item audio plays on hover (identical text across conditions except for the phonetic manipulations).
+\end{itemize}
+
+\section{Materials}
+
+\subsection{Critical micro-scenario sentence skeleton}
+\textit{Kim talked to Pat this morning.}
+
+\subsection{Condition sets (12 items each)}
+\begin{center}
+\begin{tabular}{@{}lp{10cm}@{}}
+\toprule
+\textbf{Label} & \textbf{Description and construction method}\\
+\midrule
+Baseline-good & Text identical to skeleton; audio canonical.\\
+edge-epenthesis & Text skeleton modified with indefinite article preceding a vowel or consonant noun (\textit{a apple}, \textit{an table}); audio matches text.\\
+Edge-voicing & Text baseline; audio past-tense verb realised /–ɛd/ where /–t/ expected.\\
+Morphological-foil & Verb-form errors (\textit{Kim \;meet \;Pat}, \textit{Kim talking to Pat}). Text and audio match.\\
+Phonetic-foil & Severe segmental distortions without morphological impact (e.g.\ /mɔːnɪŋ/ $\rightarrow$ /mɔːnəŋ/).\\
+Hard-ungrammatical & Syntactic control (*\textit{Kim talked Pat to this morning}).\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Audio recording}
+One professional speaker, General American English, 44.1 kHz; RMS amplitude normalised; all tokens peak-aligned.
+
+\subsection{Complete Stimulus Materials}
+
+\paragraph{Edge-Epenthesis (3 items)}
+\begin{enumerate}
+\item Kim bought a apple this morning. /kɪm bɔːt ə ˈæpəl ðɪs ˈmɔːɹnɪŋ/
+\item Chris needs a umbrella today. /kɹɪs niːdz ə ʌmˈbɹɛlə təˈdeɪ/
+\item Jordan drove an car last night. /ˈdʒɔːɹdən dɹoʊv ən kɑːɹ læst naɪt/
+\end{enumerate}
+
+\paragraph{Edge-Voicing (6 items)}
+\begin{enumerate}
+\item Sam walked there yesterday. /sæm wɔːkɛd ðɛɹ ˈjɛstɚdeɪ/
+\item Pat helped Alex earlier. /pæt hɛlpɛd ˈælɪks ˈɜːɹliɚ/
+\item Taylor has worked there before. /ˈteɪlɚ hæz wɜːɹkɛd ðɛɹ bɪˈfɔːɹ/
+\item Jamie dropped Mike's cups. /ˈdʒeɪmi dɹɑpɛd maɪks kʌps/
+\item Morgan likes these books. /ˈmɔːɹɡən laɪks ðiːz bʊkɛz/
+\item Casey walks there daily. /ˈkeɪsi wɔːkɛz ðɛɹ ˈdeɪli/
+\end{enumerate}
+
+\paragraph{Baseline-Good (18 items)}
+\begin{enumerate}
+\item Drew talked to Robin this morning. /dɹuː tɔːkt tə ˈɹɑːbɪn ðɪs ˈmɔːɹnɪŋ/
+\item Alex bought a book yesterday. /ˈælɪks bɔːt ə bʊk ˈjɛstɚdeɪ/
+\item Kim saw an elephant last night. /kɪm sɔː ən ˈɛlɪfənt læst naɪt/
+\item Sam has eaten lunch already. /sæm hæz ˈiːtən lʌntʃ ɔːlˈɹɛdi/
+\item Chris watches the birds daily. /kɹɪs ˈwɑːtʃɪz ðə bɜːɹdz ˈdeɪli/
+\item Taylor needs an answer today. /ˈteɪlɚ niːdz ən ˈænsɚ təˈdeɪ/
+\item Jordan looked for Pat yesterday. /ˈdʒɔːɹdən lʊkt fɔːɹ pæt ˈjɛstɚdeɪ/
+\item Jamie has written a letter. /ˈdʒeɪmi hæz ˈɹɪtən ə ˈlɛtɚ/
+\item Morgan likes these movies. /ˈmɔːɹɡən laɪks ðiːz ˈmuːviz/
+\item Casey reached Drew earlier. /ˈkeɪsi ɹiːtʃt dɹuː ˈɜːɹliɚ/
+\item Robin brings her friends often. /ˈɹɑːbɪn bɹɪŋz hɚ fɹɛndz ˈɔːfən/
+\item Pat found the keys quickly. /pæt faʊnd ðə kiːz ˈkwɪkli/
+\item Alex walks there every day. /ˈælɪks wɔːks ðɛɹ ˈɛvɹi deɪ/
+\item Kim likes those stories. /kɪm laɪks ðoʊz ˈstɔːɹiz/
+\item Sam needs a new phone. /sæm niːdz ə nuː foʊn/
+\item Chris has finished the work. /kɹɪs hæz ˈfɪnɪʃt ðə wɜːɹk/
+\item Taylor brought three books. /ˈteɪlɚ bɹɔːt θɹiː bʊks/
+\item Drew sees an opportunity. /dɹuː siːz ən ˌɑːpɚˈtuːnəti/
+\end{enumerate}
+
+\paragraph{Morphological-Foil (15 items)}
+\begin{enumerate}
+\item Alex bought these book yesterday. /ˈælɪks bɔːt ðiːz bʊk ˈjɛstɚdeɪ/
+\item Kim needs this umbrellas today. /kɪm niːdz ðɪs ʌmˈbɹɛləz təˈdeɪ/
+\item Sam saw those elephant clearly. /sæm sɔː ðoʊz ˈɛlɪfənt ˈklɪɹli/
+\item Chris wants a books quickly. /kɹɪs wɑːnts ə bʊks ˈkwɪkli/
+\item Taylor found this keys earlier. /ˈteɪlɚ faʊnd ðɪs kiːz ˈɜːɹliɚ/
+\item Jordan runned there yesterday. /ˈdʒɔːɹdən ɹʌnd ðɛɹ ˈjɛstɚdeɪ/
+\item Jamie bringed the gift earlier. /ˈdʒeɪmi bɹɪŋd ðə ɡɪft ˈɜːɹliɚ/
+\item Morgan catched the ball quickly. /ˈmɔːɹɡən kætʃd ðə bɔːl ˈkwɪkli/
+\item Casey writed the note carefully. /ˈkeɪsi ɹaɪtɪd ðə noʊt ˈkɛɹfəli/
+\item Robin swimmed there daily. /ˈɹɑːbɪn swɪmd ðɛɹ ˈdeɪli/
+\item Drew walking there last night. /dɹuː ˈwɔːkɪŋ ðɛɹ læst naɪt/
+\item Pat have saw that movie. /pæt hæv sɔː ðæt ˈmuːvi/
+\item Alex been there yesterday. /ˈælɪks bɪn ðɛɹ ˈjɛstɚdeɪ/
+\item Kim eating lunch earlier. /kɪm ˈiːtɪŋ lʌntʃ ˈɜːɹliɚ/
+\item Sam are working today. /sæm ɑːɹ ˈwɜːɹkɪŋ təˈdeɪ/
+\end{enumerate}
+
+\paragraph{Phonetic-Foil (15 items)}
+\begin{enumerate}
+\item Chris talked to Pat this morning. /kɹɪs tɔːkt tə pæt ðɪs ˈmɔːnəŋ/
+\item Taylor called Alex yesterday. /ˈteɪlɚ kɔːld ˈælɪks ˈjɛstɚdeɪ/
+\item Jordan helped Sam last night. /ˈdʒɔːɹdən hɛlpt sæm læs naɪt/
+\item Jamie asked Drew earlier. /ˈdʒeɪmi æskt dɹuː ˈɜːljɚ/
+\item Morgan watched Kim this afternoon. /ˈmɔːɹɡən wɑːtʃt kɪm ðɪs ˈæftɚnʊn/
+\item Casey walked with Pat last week. /ˈkeɪsi wɔːkt wɪθ pæt læs wiːk/
+\item Robin looked for Chris yesterday. /ˈɹɑːbɪn lʊkt fɔːɹ kɹɪs ˈjɛstɚdaɪ/
+\item Drew worked with Alex this morning. /dɹuː wɜːkt wɪθ ˈælɪks ðɪs ˈmɔːɹnɪŋ/
+\item Pat moved near Taylor last night. /pæt muːvd nɪɚ ˈteɪlɚ læst naɪt/
+\item Alex reached Jordan earlier. /ˈælɪks ɹiːtʃt ˈdʒɔːdən ˈɜːɹliɚ/
+\item Kim passed Sam this afternoon. /kɪm pæst sæm ðəs ˈæftɚnuːn/
+\item Sam knocked for Jamie last week. /sæm nɑːkt fɔːɹ ˈdʒeɪmi lɑːs wiːk/
+\item Chris needs more time. /kɹɪs niːts mɔːɹ taɪm/
+\item Taylor brought the book. /ˈteɪlɚ bɹɔːt ðə bʊk/
+\item Jordan likes the music. /ˈdʒɔːɹdən laɪks ðə ˈmjuːzɪk/
+\end{enumerate}
+
+\paragraph{Hard-Ungrammatical (15 items)}
+\begin{enumerate}
+\item Kim talked Pat to this morning. /kɪm tɔːkt pæt tə ðɪs ˈmɔːɹnɪŋ/
+\item Sam Alex called yesterday. /sæm ˈælɪks kɔːld ˈjɛstɚdeɪ/
+\item Helped Chris Jordan night last. /hɛlpt kɹɪs ˈdʒɔːɹdən naɪt læst/
+\item Taylor Jamie asked earlier. /ˈteɪlɚ ˈdʒeɪmi æskt ˈɜːɹliɚ/
+\item Casey Morgan watched afternoon this. /ˈkeɪsi ˈmɔːɹɡən wɑːtʃt ˈæftɚnuːn ðɪs/
+\item With walked Drew Robin last week. /wɪθ wɔːkt dɹuː ˈɹɑːbɪn læst wiːk/
+\item For looked Pat Kim yesterday. /fɔːɹ lʊkt pæt kɪm ˈjɛstɚdeɪ/
+\item Alex with worked this Sam morning. /ˈælɪks wɪθ wɜːɹkt ðɪs sæm ˈmɔːɹnɪŋ/
+\item Near Jordan moved Chris night last. /nɪɹ ˈdʒɔːɹdən muːvd kɹɪs naɪt læst/
+\item Reached Jamie earlier Taylor. /ɹiːtʃt ˈdʒeɪmi ˈɜːɹliɚ ˈteɪlɚ/
+\item Drew passed Morgan afternoon this. /dɹuː pæst ˈmɔːɹɡən ˈæftɚnuːn ðɪs/
+\item For knocked Robin last Casey week. /fɔːɹ nɑːkt ˈɹɑːbɪn læst ˈkeɪsi wiːk/
+\item Bought these Kim yesterday book. /bɔːt ðiːz kɪm ˈjɛstɚdeɪ bʊk/
+\item Pat the found quickly keys. /pæt ðə faʊnd ˈkwɪkli kiːz/
+\item Saw Sam elephant an clearly. /sɔː sæm ˈɛlɪfənt ən ˈklɪɹli/
+\end{enumerate}
+
+\section{Participants}
+\begin{itemize}
+  \item \textbf{Target sample} $n=120$ self-reported native speakers of North-American English (Canada or USA), recruited via Prolific.
+  \item Inclusion criteria: native anglophone upbringing; ≥ 95 \% prior approval; passes headphone check.
+  \item Compensation: CAD \$7.50 for $\approx$25~min (≈ \$18~h$^{-1}$).
+\end{itemize}
+
+\section{Procedure}
+\subsection{Interface and Presentation}
+\begin{itemize}
+\item Participants see a 9×8 grid of 72 face-down cards on screen
+\item Cards display generic backing (no visible text initially)
+\item Click on any card to reveal its text content
+\item Hover over revealed cards to play audio (repeatable)
+\item All cards remain available throughout the task
+\item Drag-and-drop functionality for sorting into piles
+\item Piles can be created, merged, or reorganized at any time
+\end{itemize}
+\subsection{Task Sequence}
+\begin{enumerate}
+\item \textbf{Instructions}: Explanation of interface and sorting goal
+\item \textbf{Warm-up}: Three-card practice trial with pre-revealed cards demonstrating the sorting task (data not analysed)
+\item \textbf{Main sorting phase}:
+\begin{itemize}
+\item Participants explore cards at their own pace
+\item Must click each card at least once to reveal text
+\item Sort revealed cards into piles that ``belong together''
+\item Explicit instruction: ``Do not group by subject matter (who did what to whom)''
+\item No minimum or maximum number of piles
+\item Task complete when all 72 cards assigned to piles
+\end{itemize}
+\item \textbf{Labeling phase}: Free-text description for each pile
+\item \textbf{Post-task questions}:
+\begin{itemize}
+\item ``For any pile, were there items you grouped together but that felt somewhat different from each other? Please describe.''
+\item Demographics and language background
+\end{itemize}
+\end{enumerate}
+
+\section{Exclusion rules}
+
+\subsection{Participant-level}
+\begin{itemize}
+\item Failure to move all cards ($<$3 piles) $\Rightarrow$ exclude.
+\item Warm-up error + self-report of grouping by topic $\Rightarrow$ exclude.
+\item Completion time $<$1st percentile or $>$99th percentile (pre-computed) $\Rightarrow$ exclude.
+\end{itemize}
+
+\subsection{Card-level}
+None; all critical cards remain in analysis.
+
+\section{Outcome variables}
+\subsection{Primary outcomes}
+\begin{enumerate}
+\item Co-classification matrix $M (72\times72)$ for each participant (1 = cards in same pile)
+\item Number of piles created
+\item Pile labels (qualitative coding not preregistered, exploratory)
+\end{enumerate}
+
+\subsection{Secondary outcomes (exploratory)}
+\begin{enumerate}
+\item Card exploration order (sequence of first-click timestamps)
+\item Audio engagement metrics (hover count per card)
+\item Sorting dynamics (timestamp of card-to-pile assignments)
+\item Post-task reflection on within-pile heterogeneity
+\end{enumerate}
+
+\section{Data structure specification}
+
+\subsection{Primary data representation}
+Each participant's sorting decisions will be encoded as a symmetric $72 \times 72$ binary co-classification matrix $M_p$ where:
+\begin{itemize}
+\item $M_p[i,j] = 1$ if cards $i$ and $j$ are in the same pile for participant $p$
+\item $M_p[i,j] = 0$ if cards $i$ and $j$ are in different piles  
+\item $M_p[i,i] = 1$ for all $i$ (diagonal elements)
+\item $M_p[i,j] = M_p[j,i]$ (symmetry enforced)
+\end{itemize}
+
+\subsection{Aggregation structure}
+All participant matrices will be stored in a three-dimensional array of dimension $72 \times 72 \times n$ where $n$ is the number of participants after exclusions.
+
+\subsection{Contrast extraction}
+For hypothesis testing, specific submatrices will be extracted:
+\begin{itemize}
+\item Edge-epenthesis items: indices 1--3
+\item Edge-voicing items: indices 4--9
+\item Morphological-foil items: indices 25--39
+\item Phonetic-foil items: indices 40--54
+\end{itemize}
+
+Mean co-classification probabilities between item sets will be computed as:
+\begin{equation}
+\bar{p}_{A,B} = \frac{1}{n \cdot |A| \cdot |B|} \sum_{p=1}^{n} \sum_{i \in A} \sum_{j \in B} M_p[i,j]
+\end{equation}
+where $A$ and $B$ are sets of item indices.
+
+\section{Statistical analysis plan}
+
+\subsection{Bayesian model}
+
+\paragraph{Data reduction per participant.}
+For each contrast (\(\Delta_{\text{article}},\;\Delta_{\text{voicing}}\)) compute
+\[
+x_i \;=\; \Delta_{k,i},\quad i = 1,\dots, 120.
+\]
+
+\paragraph{Likelihood (unknown $\sigma$).}
+\[
+x_i \mid \mu_k,\sigma_k^2 \;\sim\; \mathcal N(\mu_k,\sigma_k^2).
+\]
+
+\paragraph{Priors.}
+\[
+\mu_k \;\sim\; \mathcal N(0,\;0.25^2),\qquad
+\sigma_k \;\sim\; \text{Jeffreys}(p(\sigma)\propto\sigma^{-1}).
+\]
+Under these priors the marginal posterior of \(\mu_k\) is a
+Student-\(t_{n-1}\bigl(\bar x,\; s/\sqrt n\bigr)\).
+
+\paragraph{Decision rule.}
+\[
+\text{Evidence for}\;H_{k}\;\text{iff}
+\;\Pr\!\bigl(\mu_k > \delta \mid \text{data}\bigr)\;>\;0.95,
+\quad \delta = 0.15.
+\]
+Posterior probabilities computed analytically via the
+Student-\(t\) CDF.
+
+\subsection{Secondary analyses}
+\begin{enumerate}
+\item Adjusted Rand index between each participant’s clustering and three a-priori partitions; multilevel beta-regression with participant random effects.
+\item Sensitivity check excluding participants whose pile labels contain the words \textit{grammar}, \textit{pronunciation}, or \textit{sound}.
+\end{enumerate}
+
+\section{Power justification \,(UPDATED)}
+
+\begin{description}
+\item[Simulation set-up.]  
+10,000 Monte-Carlo datasets per cell; \(\mu_{\text{true}}=0.20\), \(\sigma_{\text{true}}=0.20\);
+posterior decision rule from §9.1.
+
+\item[Results.]  
+
+\begin{center}
+\begin{tabular}{@{}ccc@{}}
+\toprule
+Sample size $n$ & Power (\(\Pr(\text{detect})\)) \\
+\midrule
+60  & 0.61\\
+80  & 0.72\\
+100 & 0.79\\
+\textbf{120} & \textbf{0.86}\\
+150 & 0.91\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\item[Conclusion.]  
+We fix \(n=120\) to achieve \(\ge 0.80\) power while containing recruitment cost.
+\end{description}
+
+\section{Open science commitments}
+\begin{itemize}
+\item Materials, data, scripts released on OSF upon publication (\url{https://osf.io/xxxxx}).
+\item Deviations from this plan will be explicitly labeled as exploratory.
+\end{itemize}
+\newpage
+\appendix
+\section{Python simulation code}
+The script reproduces the power table above and is archived with the prereg materials.
+\begin{verbatim}
+import numpy as np
+from scipy.stats import t
+
+def posterior_prob_mu_gt_delta(xbar, s, n, delta):
+    df  = n - 1
+    se  = s / np.sqrt(n)
+    t_z = (delta - xbar) / se
+    return 1 - t.cdf(t_z, df)
+
+def simulate_power(mu_true=.20, sigma_true=.20,
+                   n=120, delta=.15, sims=10000, thresh=.95):
+    hits = 0
+    for _ in range(sims):
+        sample = np.random.normal(mu_true, sigma_true, n)
+        xbar   = sample.mean()
+        s      = sample.std(ddof=1)
+        if posterior_prob_mu_gt_delta(xbar, s, n, delta) > thresh:
+            hits += 1
+    return hits / sims
+
+# quick sanity check
+for n in [60, 80, 100, 120, 150]:
+    print(n, simulate_power(n=n, sims=5000))
+
+\end{verbatim}
+
+
+\end{document}
