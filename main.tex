@@ -48,9 +48,16 @@
 }
 \usepackage[normalem]{ulem}
 \usepackage{orcidlink}
-\usepackage{authblk}
+
 \usepackage{amsmath}
 \usepackage{rotating}
+\usepackage[most]{tcolorbox}
+\newtcolorbox{note}{
+  colback=lsLightGray,
+  colframe=lsMidBlue,
+  boxrule=0.5pt,
+  sharp corners,
+}
 
 
 % Redefine page number format in citations
@@ -66,10 +73,10 @@
 \maketitle
 
 \begin{abstract}
-    This paper introduces a novel theoretical framework for (un)gram\-maticality, distinct from traditional grammars focused solely on language production or description. The proposed model conceptualizes (un)grammaticality explicitly as coherence in form–meaning pairings accepted or rejected by language communities, integrating morphosyntactic, semantic–pragmatic, and social dimensions. Previous approaches, including generative grammar, Construction Grammar, and psycholinguistic models, have not adequately explained why grammaticality is specifically restricted to morphosyntax, why semantically coherent constructions may nonetheless be deemed ungrammatical, or why certain semantically transparent structures remain systematically blocked. The present framework addresses these gaps by providing a principled explanation of (un)grammaticality rooted in community standards for communicative coherence, rather than relying exclusively on structural or intuition-based definitions.
+    This paper introduces a novel theoretical framework for (un)gram\-maticality, distinct from traditional grammars focused solely on language production or description. The proposed model conceptualizes (un)grammaticality explicitly as coherence in conditioned form--value relations accepted or rejected by language communities, integrating morphosyntactic, semantic--pragmatic, and social dimensions. Previous approaches, including generative grammar, Construction Grammar, and psycholinguistic models, have not adequately explained why grammaticality is specifically restricted to morphosyntax, why semantically coherent constructions may nonetheless be deemed ungrammatical, or why certain semantically transparent structures remain systematically blocked. The present framework addresses these gaps by providing a principled explanation of (un)grammaticality rooted in community standards for communicative coherence, rather than relying exclusively on structural or intuition-based definitions.
 \end{abstract}
 
-Report: https://chatgpt.com/share/68498638-5d38-8009-94ca-7007915fe08a
+\url{https://chatgpt.com/share/68498638-5d38-8009-94ca-7007915fe08a}
 
 \newpage
 \section*{Introduction}
@@ -78,6 +85,7 @@ Every competent speaker of English knows that *\textit{Can the have running} is 
 
 \ea \label{ex:starting-stars}
 \ea\label{ex:nonsense} *\textit{Can the have running?}
+\ex\label{ex:colorless-grammatica} \textit{~Colorless green ideas sleep furiously.} \autocite{chomsky1957}
 \ex\label{ex:tense} *\textit{I've finished it yesterday.}
 \ex\textsuperscript{?}\textit{I saw Joan, a friend of whose was visiting.}\label{ex:whose} 
 \ex\label{ex:center} \textit{~The bread the baker the apprentice helped made is delicious.}
@@ -89,17 +97,17 @@ While all might receive asterisks in many analyses, they represent fundamentally
 
 Different theoretical traditions have emphasized different aspects of grammaticality: formal approaches focus on abstract principles, usage-based theories stress frequency and entrenchment, and processing accounts highlight cognitive constraints. But we still lack a unified framework that can explain both categorical blocks and gradient acceptability while accounting for cross-linguistic variation and change over time.
 
-This paper presents such a framework, building on insights from both generative and functional traditions to propose that grammaticality should be understood in terms of form--meaning pairings that evolve within specific language communities. These pairings interact with both universal processing constraints and sociolinguistic factors to produce the complex patterns of acceptability we observe in actual language use. The framework rests on three key premises:
+This paper presents such a framework, building on insights from both generative and functional traditions to propose that grammaticality should be understood in terms of form--value relations that evolve within specific language communities. These relations interact with both universal processing constraints and sociolinguistic factors to produce the complex patterns of acceptability we observe in actual language use. The framework rests on three key premises:
 
 \begin{enumerate}
-\item At its core, grammaticality involves conventional form--meaning pairings within specific language communities, dialects, registers, and situations.
-\item These pairings interact systematically with processing constraints, sociolinguistic factors, and other linguistic subsystems (phonology, semantics, pragmatics).
-\item Grammaticality reflects the degree to which an utterance establishes stable, community-recognized form-meaning pairings. Various factors can disrupt this stability~-- from complete absence of conventional pairings to conflicts between competing interpretations~-- producing a spectrum of ungrammaticality effects that share the core property of form-meaning instability.
+\item At its core, grammaticality involves conventional form--value relations within specific language communities, dialects, registers, and situations.
+\item These relations interact systematically with processing constraints, sociolinguistic factors, and other linguistic subsystems (phonology, semantics, pragmatics).
+\item Grammaticality reflects the degree to which an utterance establishes stable, community-recognized form--value relations. Various factors can disrupt this stability---from complete absence of a licensable analysis to conflicts between competing construals to lack of community licensing---producing a spectrum of ungrammaticality effects unified by form--value instability.
 \end{enumerate}
 
-These premises directly address key limitations in previous approaches to grammaticality. The first premise moves beyond the abstract competence model of early generative grammar while while building upon its analyses of systematic constraints. It provides a theoretical foundation for explaining both categorical blocks like (\ref{ex:lbe}) and gradient acceptability like (\ref{ex:whose}), aligning with Francis's \autocite{francis2022} arguments for incorporating gradience into core grammatical theory. The second premise resolves a long-standing tension between formal syntactic approaches and processing-based accounts by explicitly modelling their interaction rather than treating them as competing explanations. This allows us to explain why some ungrammatical constructions resist improvement through exposure while others become more acceptable with familiarity. The third premise provides a principled basis for phenomena that have resisted unified explanation in both generative and functional frameworks.
+These premises directly address key limitations in previous approaches to grammaticality. The first premise moves beyond the abstract competence model of early generative grammar while building upon its analyses of systematic constraints. It provides a theoretical foundation for explaining both categorical blocks like (\ref{ex:lbe}) and gradient acceptability like (\ref{ex:whose}), aligning with Francis's \autocite{francis2022} arguments for incorporating gradience into core grammatical theory. The second premise resolves a long-standing tension between formal syntactic approaches and processing-based accounts by explicitly modelling their interaction rather than treating them as competing explanations. This allows us to explain why some ungrammatical constructions resist improvement through exposure while others become more acceptable with familiarity. The third premise provides a principled basis for phenomena that have resisted unified explanation in both generative and functional frameworks.
 
-The paper proceeds as follows. Section \ref{sec:previous} examines the impasse in grammaticality theory, tracing how different theoretical traditions~-- from early generative grammar through contemporary experimental approaches~-- have attempted to reconcile form, meaning, and acceptability. Section \ref{sec:framework} presents the framework in detail, identifying twelve key principles that govern grammaticality and grammaticality judgments. Section \ref{sec:formalism} presents a simple formal model that illustrates how the framework's key components interact to produce grammaticality judgments. Section \ref{sec:implications} explores the theoretical implications of this approach, particularly its relationship to generative grammar, Construction Grammar, and usage-based theories, and includes specific predictions about cross-linguistic variation in grammaticality judgments and the conditions under which satiation effects should occur. The paper concludes by acknowledging limitations of the current framework and suggesting directions for future research using corpus analysis, experimental methods, and cross-linguistic investigation.
+The paper proceeds as follows. Section \ref{sec:previous} examines the impasse in grammaticality theory, tracing how different theoretical traditions~-- from early generative grammar through contemporary experimental approaches~-- have attempted to reconcile form, meaning, and acceptability. Section \ref{sec:framework} presents the framework in detail, defining the three constitutive variables that determine grammaticality and identifying recurrent diagnostic instability modes that govern judgments. Section \ref{sec:formalism} presents a simple formal model that illustrates how the framework's key components interact to produce grammaticality judgments. Section \ref{sec:implications} explores the theoretical implications of this approach, particularly its relationship to generative grammar, Construction Grammar, and usage-based theories, and includes specific predictions about cross-linguistic variation in grammaticality judgments and the conditions under which satiation effects should occur. The paper concludes by acknowledging limitations of the current framework and suggesting directions for future research using corpus analysis, experimental methods, and cross-linguistic investigation.
 
 \section{The Impasse in Grammaticality Theory}\label{sec:previous}
 
@@ -109,37 +117,39 @@ First, there is the tension between categorical rules and gradient judgments. \t
 
 Second, there is the tension between form and meaning in grammaticality. Chomsky's famous example (\ref{ex:colorless-grammatica}) was intended to demonstrate that syntax operates independently from semantics. But many grammaticality judgments clearly depend on meaning. When speakers reject (\ref{ex:tense}) \textit{*I've finished it yesterday}, they're responding to a clash between the present perfect's current relevance meaning and the adverb's completed past meaning. Generative semanticists like \textcite{lakoff1971} and \textcite{mccawley1968} demonstrated that many seemingly syntactic constraints have semantic motivations. \textcite{morgan1973} showed that contextual factors can dramatically alter judgments: \textit{Spiro conjectures Ex-Lax} becomes perfectly acceptable as an answer to \textit{Does anyone know what Mrs. Nixon frosts her cakes with?} Construction Grammar \autocite{goldberg1995constructions} has productively integrated form and meaning, showing how constructions carry meanings that interact with lexical semantics. This perspective helps explain why novel uses that align with established constructional meanings (like \textit{She texted him the address}) are accepted, while those that clash with constructional semantics (like \textit{*She disappeared him the evidence}) are rejected.
 
-Third, there is the tension between universal principles and community conventions. Sociolinguistic research \autocite{labov1972} has demonstrated that grammaticality must reference community norms rather than universal principles alone. Cross-linguistic variation in grammatical patterns shows that each language community conventionalizes particular form--meaning mappings through historical processes. These conventions become entrenched through statistical preemption \autocite{Goldberg2011}~-- speakers learn that certain forms are ungrammatical precisely because they encounter alternative expressions in contexts where the ungrammatical form would otherwise be expected. Usage-based approaches \autocite{bybee2006} have emphasized that grammatical knowledge emerges from patterns of language use, but haven't fully explained why certain extremely rare constructions remain grammatical while other, more frequent patterns trigger ungrammaticality judgments. (see Author (in prep.) for an evolutionary account of the attentional bias that supplies the relevant input statistics.)
+Third, there is the tension between universal principles and community conventions. Sociolinguistic research \autocite{labov1972} has demonstrated that grammaticality must reference community norms rather than universal principles alone. Cross-linguistic variation in grammatical patterns shows that each language community conventionalizes particular form--value mappings through historical processes. These conventions become entrenched through statistical preemption \autocite{Goldberg2011}~-- speakers learn that certain forms are ungrammatical precisely because they encounter alternative expressions in contexts where the ungrammatical form would otherwise be expected. Usage-based approaches \autocite{bybee2006} have emphasized that grammatical knowledge emerges from patterns of language use, but haven't fully explained why certain extremely rare constructions remain grammatical while other, more frequent patterns trigger ungrammaticality judgments. (see Author (in prep.) for an evolutionary account of the attentional bias that supplies the relevant input statistics.)
 
 These tensions have created a landscape where each framework captures important aspects of grammaticality but none provides a comprehensive account. Experimental approaches have improved methodological rigour but sometimes mistake measurement for explanation. As \textcite{schutze2016} reminds us, acceptability judgments are behavioural measures that require theoretical interpretation. What's needed is not another taxonomic classification of grammaticality types, but rather a framework that explains why grammaticality judgments pattern as they do across languages and communities.
 
-\section{The Morphosyntactic-Meaning Model of Grammaticality}\label{sec:framework}
+\section{The Morphosyntactic-Value Model of Grammaticality}\label{sec:framework}
 
-This section presents the proposed MMMG framework, organizing the account around six core components that interact to determine grammaticality, followed by analysis of the patterns these interactions produce and the mechanisms driving change over time.
+This section presents the proposed MVMG framework. The term \emph{value} is used here in the Saussurean sense of \textit{valeur} \autocite{saussure1916}: the identity of a linguistic unit is constituted not by a direct label but by its systemic relations---what it contrasts with, what contexts license it, what interpretations it makes available. Throughout, I treat grammatical knowledge as a conditioned \textbf{form--value relation}; when this relation is sufficiently stable in a community---i.e.\ when a dominant value is reliably recoverable and socially licensed---I refer to it informally as a \textbf{form--value pairing}.
 
-\subsection{Core Components of Grammaticality}\label{sec:core-components}
+The formal architecture rests on three constitutive variables---morphosyntactic mapping ($\mathsf{map}$), interpretive coherence ($K$), and community licensing ($C_t$)---whose interaction determines grammaticality (\S\ref{sec:formalism}). For expository purposes, however, it is useful to distinguish recurrent \emph{instability modes}: diagnostic categories that correspond to different ways of driving $\mathsf{map}$, $K$, or $C_t$ toward zero, plus processing and prescriptive factors that modulate the subjective feeling $F_{i,t}$ without affecting grammatical status directly.
 
-The framework identifies six causally interpretable dimensions that interact to determine whether a construction is grammatical within a given communicative context. These components represent the fundamental building blocks from which grammaticality emerges.
+\subsection{Diagnostic Categories}\label{sec:core-components}
 
-\subsubsection{Morphosyntactic form--meaning pairings within communities}\label{sec:f-m-pair-in-community}
+The diagnostic categories described below are not primitives of the model but rather convenient labels for the most common routes to ungrammaticality. Each can be traced to one or more of the constitutive variables, as the formal core in \S\ref{sec:formalism} makes explicit.
 
-At its foundation, grammaticality depends on the existence of stable pairings between morphosyntactic forms and their meanings within specific language communities. This component encompasses both the basic insight that forms carry meaning and the observation that different communities conventionalize different form--meaning relationships.
+\subsubsection{Morphosyntactic form--value relations within communities}\label{sec:f-m-pair-in-community}
 
-\paragraph{Form--meaning pairings}
+At its foundation, grammaticality depends on the existence of stable pairings between morphosyntactic forms and their meanings within specific language communities. This component encompasses both the basic insight that forms carry meaning and the observation that different communities conventionalize different form--value relationships.
+
+\paragraph{Form--value relations}
 
 That forms are inherently meaningful~-- syntactic and morphological forms just as much as words~-- is a key tenet of Construction Grammar. And just as words tend to be polysemous, typically having a core sense that is overwhelmingly more common than all others \autocite{Kilgarriff2004}, so too do morphosyntactic forms. For instance, the English past tense usually means past time, but it can also denote deference/social distance as in (\textit{Could you?}) or a low level of likelihood (\textit{If I went \dots}).
 
 A construction like that instantiated by \textit{old men} is a bare plural construction. Setting aside its lexical semantics, we can think about the meaning of its form like this: In English, a bare plural often denotes a category or kind, rather than a specific, individuated set or token. The adjective \textit{old} is a pre-head modifier attached to \textit{men}, contributing a property (advanced age) attributed to the head noun (adult male humans).
 
-But the same construction instantiated by \textit{other men} shows how a single construction type can accommodate different form--meaning relationships. While both strings share the same surface syntax of [Modifier:AdjP Head:NP-\textsc{pl}], \textit{old} contributes a property that directly modifies the noun's denotation, while \textit{other} establishes a complementary relation, requiring a contextually salient reference set of men and defining its denotation in terms of non-membership in that set. This illustrates how the pre-nominal modifier construction, like the past-tense form discussed above, can encode quite different meanings. In sum, forms have meanings and are usually polysemous.
+But the same construction instantiated by \textit{other men} shows how a single construction type can accommodate different form--value relationships. While both strings share the same surface syntax of [Modifier:AdjP Head:NP-\textsc{pl}], \textit{old} contributes a property that directly modifies the noun's denotation, while \textit{other} establishes a complementary relation, requiring a contextually salient reference set of men and defining its denotation in terms of non-membership in that set. This illustrates how the pre-nominal modifier construction, like the past-tense form discussed above, can encode quite different meanings. In sum, forms have meanings and are usually polysemous.
 
-Neuroimaging studies from Ev Fedorenko and her collaborators, using fMRI and functional localization techniques, offer evidence for the close relationship between syntactic and semantic processing \autocite{Fedorenko2011, Fedorenko2012, Fedorenko2024}. Their ``language localizer'' consistently identifies a network of brain regions in the frontal and temporal lobes that show significantly higher activation during language tasks than during non-language tasks \autocite{Fedorenko2010,}. This language network responds to both syntactic and semantic manipulations, suggesting a shared neural substrate for processing both structure and meaning. This aligns with the MMMG's assertion that morphosyntactic form and meaning are deeply intertwined within specific language communities.
+Neuroimaging studies from Ev Fedorenko and her collaborators, using fMRI and functional localization techniques, offer evidence for the close relationship between syntactic and semantic processing \autocite{Fedorenko2011, Fedorenko2012, Fedorenko2024}. Their ``language localizer'' consistently identifies a network of brain regions in the frontal and temporal lobes that show significantly higher activation during language tasks than during non-language tasks \autocite{Fedorenko2010}. This language network responds to both syntactic and semantic manipulations, suggesting a shared neural substrate for processing both structure and meaning. This aligns with the MVMG's assertion that morphosyntactic form and meaning are deeply intertwined within specific language communities.
 
 \paragraph{Community-specific conventions}
 
 Grammaticality emerges from regularities that hold within a particular language community, dialect, register, or situation, or what \textcite[3]{wiese2023} calls a ``communicative-situation''.
 
-These ``com-sits'' are neither static nor mutually exclusive. A speaker may simultaneously participate in multiple overlapping communities (professional, regional, generational), each with its own grammatical conventions. And these communities evolve over time as speakers join or leave them, as communicative needs change, and as social dynamics shift. This fluidity, rather than undermining the role of community in grammaticality, helps explain phenomena like style-shifting, the emergence of new dialects, and the gradual acceptance of initially marginal constructions. What matters for grammaticality is not the permanence of any particular community but rather the stability of form--meaning pairings within whatever constellation of communities is relevant to a given communicative situation.
+These ``com-sits'' are neither static nor mutually exclusive. A speaker may simultaneously participate in multiple overlapping communities (professional, regional, generational), each with its own grammatical conventions. And these communities evolve over time as speakers join or leave them, as communicative needs change, and as social dynamics shift. This fluidity, rather than undermining the role of community in grammaticality, helps explain phenomena like style-shifting, the emergence of new dialects, and the gradual acceptance of initially marginal constructions. What matters for grammaticality is not the permanence of any particular community but rather the stability of form--value relations within whatever constellation of communities is relevant to a given communicative situation.
 
 This is visible in early child language, where toddlers produce utterances that deviate from adult norms but remain internally consistent within the child's developing system. A toddler in a monolingual English household might say:
 
@@ -177,13 +187,13 @@ In a slightly different case, as a second-language speaker of Japanese, I used t
 cute-\textsc{pres} \textsc{cop.pres}\\
 \glt `(That)'s cute.' (intended)}
 \z
-Conventionally, though, the redundant tense marking has no accepted meaning, making the use of the copula ungrammatical to most Japanese speakers, though it felt meaningful and grammatical to me. The example underscores that stable form--meaning pairings emerge from and depend on the shared linguistic routines of a particular community, and individuals with differing trajectories of acquisition may diverge in their grammatical judgments.
+Conventionally, though, the redundant tense marking has no accepted meaning, making the use of the copula ungrammatical to most Japanese speakers, though it felt meaningful and grammatical to me. The example underscores that stable form--value relations emerge from and depend on the shared linguistic routines of a particular community, and individuals with differing trajectories of acquisition may diverge in their grammatical judgments.
 
 The specific linguistic context can matter too. ``To take an obvious case which Jerry Morgan [(\citeyear{morgan1973})] discussed recently, certain combinations of words are extremely strange if presented in isolation but are perfectly normal as answers to certain questions. \textit{Spiro conjectures Ex-Lax} would generally be felt to be unintelligible if presented out of context but is a perfectly normal answer to the question \textit{Does anyone know what Mrs. Nixon frosts her cakes with?}'' \autocite[252, italics added]{McCawley1974}.\footnote{The humour derives from political tensions of the Watergate era, when both Vice-President Spiro Agnew and President Nixon would ultimately resign from office.}
 
 These examples illustrate how each language community, dialect, register, and situation defines its own grammaticality conditions. A form that is grammatical in one communicative situation may be ungrammatical when viewed from the perspective of another. The facts of grammaticality can also diverge for conversants from different communities. This divergence arises because grammaticality is community- and situation-relative: the same utterance can be fully grammatical for those who share the relevant background and ungrammatical for those who don't. The linguist's task is therefore to determine whether a form is grammatical for any language community, or systematically excluded across all.
 
-The stability of form--meaning pairings within speech communities can be empirically modelled, as demonstrated by \textcite{blythe2009speech}. Their utterance selection model treats speech communities as networks where speakers track and reproduce linguistic variants based on their interactions. When applied to dialect formation, these models show how competing linguistic variants spread and eventually stabilize, with initial variant frequency strongly predicting which form will prevail.
+The stability of form--value relations within speech communities can be empirically modelled, as demonstrated by \textcite{blythe2009speech}. Their utterance selection model treats speech communities as networks where speakers track and reproduce linguistic variants based on their interactions. When applied to dialect formation, these models show how competing linguistic variants spread and eventually stabilize, with initial variant frequency strongly predicting which form will prevail.
 
 \paragraph{Community values and grammatical distinctions}
 
@@ -193,7 +203,7 @@ The progressive aspect provides a useful example. In English, it's not merely an
 \ea
 \textit{She is studying right now.}
 \z
-Here, the progressive form \textit{is studying} isn't just a stylistic choice. it's the recognized, grammatical way to express a currently unfolding activity. English speakers strongly prefer (and in many contexts, demand) the progressive construction to convey immediacy and ongoingness.
+Here, the progressive form \textit{is studying} isn't just a stylistic choice. It's the recognized, grammatical way to express a currently unfolding activity. English speakers strongly prefer (and in many contexts, demand) the progressive construction to convey immediacy and ongoingness.
 
 French, by contrast, doesn't treat the progressive aspect as a grammatically mandatory distinction. While one can signal ongoing activity through adverbs or periphrastic constructions, standard French doesn't have a dedicated progressive form. The sentence:
 \ea
@@ -209,18 +219,18 @@ A similar dynamic emerges with evidentiality, the grammatical marking of informa
 \z
 The language community treats evidential distinctions as central enough to be baked into the grammar. A speaker can't simply omit evidential marking without sounding ungrammatical.
 
-Needless to say that, while English speakers can say \textit{I heard that he arrived} or \textit{He must have arrived}, these are optional lexical or modal resources rather than required elements of the grammar. The English community simply doesn't regard evidential distinctions as something that must always be encoded morphosyntactically.
+Of course, while English speakers can say \textit{I heard that he arrived} or \textit{He must have arrived}, these are optional lexical or modal resources rather than required elements of the grammar. The English community simply doesn't regard evidential distinctions as something that must always be encoded morphosyntactically.
 
 \textcite{kilani2005} demonstrate this principle systematically in their analysis of verbal morphology across French and other Romance languages. They show how apparently similar verbal systems can encode quite different semantic distinctions as grammatically obligatory, reflecting each community's conventions about which meaning distinctions must be systematically marked. For instance, while both French and Italian mark aspect morphologically, they differ in which aspectual distinctions are grammaticalized versus left to optional lexical expression.
 
 \paragraph{Why further layers are necessary}
-Establishing a form--meaning mapping is a prerequisite for grammaticality, but it isn't sufficient. Individuals routinely interpret strings that the community nevertheless judges ill-formed. That very flexibility forces the grammar to police \emph{how} a pairing is licensed, not merely \emph{whether} one can be imagined in principle. In other words, the system needs additional filters that (i) rule out mappings that conflict with conventional constructional meanings (\S\ref{sec:semantic-compatibility}), (ii) flag mappings whose recovery cost overwhelms processing resources (\S\ref{sec:processing-constraints}), and (iii) block mappings the community has never ratified (\S\ref{sec:community-acceptance}). Only by layering these constraints on top of the initial pairing do we predict the empirical fact that *\textit{Furiously sleep ideas green colorless} elicits universal rejection while (\ref{ex:center}) feels bad in everyday quotation yet is accepted as “grammatical but hard to process’’ once speakers are walked through the intended parse. The extra layers therefore partition the wide space of imaginable pairings into the much smaller subset that a community recognizes as bona fide grammatical resources.
+Establishing a form--value mapping is a prerequisite for grammaticality, but it isn't sufficient. Individuals routinely interpret strings that the community nevertheless judges ill-formed. That very flexibility forces the grammar to police \emph{how} a relation is licensed, not merely \emph{whether} one can be imagined in principle. In other words, the system needs additional filters that (i) rule out mappings that conflict with conventional constructional meanings (\S\ref{sec:semantic-compatibility}), (ii) flag mappings whose recovery cost overwhelms processing resources (\S\ref{sec:processing-constraints}), and (iii) block mappings the community has never ratified (\S\ref{sec:community-acceptance}). Only by layering these constraints on top of the initial relation do we predict the empirical fact that *\textit{Furiously sleep ideas green colorless} elicits universal rejection while (\ref{ex:center}) feels bad in everyday quotation yet is accepted as “grammatical but hard to process’’ once speakers are walked through the intended parse. The extra layers therefore partition the wide space of imaginable relations into the much smaller subset that a community recognizes as bona fide grammatical resources.
 
-One might object that the community’s verdict alone should settle the matter: if speakers converge on using a form, why not define $G(u)$ as simply `whatever the community accepts'? That move is circular and empirically empty: it can neither flag emerging innovations whose status is still contested nor explain why stable dialectal differences persist despite mutual intelligibility. A purely sociological definition would also mis-classify well-attested performance errors (e.g.\ agreement slips in live speech) as \enquote{grammatical} whenever they pass unnoticed, and it would leave us with no basis for diagnosing why learners systematically avoid forms that the target community fully endorses. Separating the mapping, compatibility, and acceptance layers therefore avoids trivializing the concept of grammaticality while still granting the community the final say on which pairings endure.
+One might object that the community’s verdict alone should settle the matter: if speakers converge on using a form, why not define $G_t(u,c)$ as simply \enquote{whatever the community accepts}? That move is circular and empirically empty: it can neither flag emerging innovations whose status is still contested nor explain why stable dialectal differences persist despite mutual intelligibility. A purely sociological definition would also mis-classify well-attested performance errors (e.g.\ agreement slips in live speech) as \enquote{grammatical} whenever they pass unnoticed, and it would leave us with no basis for diagnosing why learners systematically avoid forms that the target community fully endorses. Separating the mapping, compatibility, and acceptance layers therefore avoids trivializing the concept of grammaticality while still granting the community the final say on which pairings endure.
 
 \subsubsection{Semantic compatibility}\label{sec:semantic-compatibility}
 
-Beyond the existence of form--meaning pairings, grammaticality requires compatibility between the morphosyntactic meaning and the composite semantic meaning of an utterance. This component captures cases where individual elements are well-formed but their combination creates semantic conflicts.
+Beyond the existence of form--value relations, grammaticality requires compatibility between the morphosyntactic meaning and the composite semantic meaning of an utterance. This component captures cases where individual elements are well-formed but their combination creates semantic conflicts.
 
 Consider the temporal incompatibility in:
 \ea[*]{\textit{I've finished it yesterday.}}\label{ex:tense-sem}
@@ -266,38 +276,35 @@ L(u)=\sum_{i}\ell\!\bigl(|d_i|\bigr),\qquad
 \ell(k)=
   \begin{cases}
     k, & k\le K_{\text{sat}},\\[4pt]
-    K_{\text{sat}}+\beta\,(k-K_{\text{sat}})^{\gamma}, & k>K_{\text{sat}},\;0<\gamma<1.
+    K_{\text{sat}}+\beta\,(k-K_{\text{sat}})^{\eta}, & k>K_{\text{sat}},\;0<\eta<1.
   \end{cases}
 \]
 
 \paragraph{Embedding in the model}
-Locality influences both the subjective feeling of ungrammaticality and the entrenchment dynamic:
-\[
-F(u)= -\alpha\bigl(1-G(u)\bigr)\;-\;\gamma_L\,L(u)\;-\;P_{\text{other}}(u)+\eta,
-\]
-\[
-\frac{dC^{t}}{dt}= \Delta(u)\;2^{-\,L(u)/L_{1/2}}\;C^{t}\bigl(1-C^{t}\bigr),
-\]
-where \(L_{1/2}\) is the “half-life’’: the locality load that halves the net bias toward entrenchment.  
-\(P_{\text{other}}(u)\) is initialised with cue-based interference \autocite{LewisVasishth2005} plus any residual surprisal term.
+Locality influences both the subjective feeling of ungrammaticality and the licensing dynamics. In the feeling model (\S\ref{sec:feeling-new}), it appears as a component of the processing vector $\mathbf{P}_i$. In the dynamics, locality can be included among the utility features $\mathbf{f}(v;n,c)$ that determine $\rho_t(v\mid n,c)$ (\S\ref{sec:usage}). This lowers the counterfactual choice probability of high-locality variants, which both reduces their expected positive evidence stream $s_t$ and weakens the evidential force of their non-occurrence, since $p_t(u,c)$ scales with $\rho_t(u\mid n(u),c)$.
+
+In addition, high-cost tokens are more likely to be classified as performance slips or repairs by learners, which can be modelled as increased error evidence $e_t(u,c)$ in \eqref{eq:beta-update}.
+
+Throughout, we treat the discrete Bayesian update in \S\ref{sec:update} as the primary dynamics module; the continuous-time logistic form $\dot{C}_t = \Delta C_t(1-C_t)$ is demoted to a mean-field approximation for qualitative analysis of the expected trajectory.
 
 \begin{table}[h]
 \centering
-\caption{Core components $\rightarrow$ formal representation (updated)}
+\caption{Mapping diagnostic categories to the constitutive variables}
 \label{tab:vars2}
 \begin{tabular}{@{}ll@{}}
 \toprule
-Narrative component & Formal representation (functions of \(u\))\\
+Diagnostic Category & Formal representation (functions of \(u, c\))\\
 \midrule
-\textsc{Pairing viability}        & indicator that \(M\!\to\!\mu\) succeeds\\
-\textsc{Semantic compatibility}   & \(K_{\text{sem}}\in[0,1]\)\\
-\textsc{Indexical compatibility}  & \(K_{\text{index}}\in[0,1]\)\\
-\textsc{Dependency locality}      & \(L(u)=\sum_i\ell(|d_i|)\)\\
-\textsc{Residual processing cost} & \(P_{\text{other}}(u)\) (interference, surprisal)\\
-\textsc{Entrenchment trajectory}  & \(C^{t}\) (logistic over speakers \(\times\) time)\\
-\textsc{Structural constraints}   & hard \(0\) on \(M\!\to\!\mu\)\\
+\textsc{Form--value relation}    & $\mathsf{map}(u,c)=1$ (representational viability)\\
+\textsc{Interpretive coherence}   & $K(u,c) \in [0,1]$ (includes semantic/indexical clarity)\\
+\textsc{Community licensing}      & $C_t(u,c) \in [0,1]$ (entrenchment dynamic)\\
+\textsc{Dependency locality}      & $L(u)$ (part of processing vector $\mathbf{P}_i$)\\
+\textsc{Processing constraints}   & $\mathbf{P}_i(u,c)$ (interference, locality, surprisal)\\
+\textsc{Apparent categoricality} & $C_t(u,c) \approx 0$ (stable gaps under preemption)\textsuperscript{\textdagger}\\
 \bottomrule
 \end{tabular}
+\\[4pt]
+{\footnotesize \textsuperscript{\textdagger}Residual representational bans, if any, would manifest as $\mathsf{map}(u,c)=0$.}
 \end{table}
 
 \subsubsection{Socio-pragmatic indexicality}\label{sec:socio-indexical}
@@ -322,7 +329,7 @@ This demonstrates that the meaning component of a construction goes beyond seman
 
 \subsubsection{Community entrenchment and acceptance}\label{sec:community-acceptance}
 
-Even well-formed constructions with clear meanings may be judged ungrammatical if they lack community acceptance. This component captures the degree to which a form--meaning pairing has become conventionalized within a speech community.
+Even well-formed constructions with clear meanings may be judged ungrammatical if they lack community acceptance. This component captures the degree to which a form--value relation has become conventionalized within a speech community.
 
 \ea[*]{\textit{We sheared three sheeps.}}\label{ex:sheeps-entrench}
 \z
@@ -337,27 +344,29 @@ The independent relative genitive pronoun \textit{whose} provides an example, be
 \textit{I saw Joan, a friend of whose was visiting.}\\\hfill(adapted from Huddleston \& Pullum \citeyear[472]{Huddleston2002})}
 \z
 
-A search of the 1-billion-word Corpus of Contemporary American English returned no instances of this construction. This extreme infrequency means that many speakers never encounter it, while others have limited exposure. Some speakers can make the analogical leap from similar constructions to accept examples like (\ref{ex:whose-entrench}), while others can't construct a stable form--meaning pairing. Even among those who grasp the construction analytically, \textcite{shain2020fmri}'s fMRI research suggests that its unexpectedness would trigger high surprisal, leading to increased processing costs that may manifest as feelings of ungrammaticality.
+A search of the 1-billion-word Corpus of Contemporary American English returned no instances of this construction. This extreme infrequency means that many speakers never encounter it, while others have limited exposure. Some speakers can make the analogical leap from similar constructions to accept examples like (\ref{ex:whose-entrench}), while others can't construct a stable form--value relation. Even among those who grasp the construction analytically, \textcite{shain2020fmri}'s fMRI research suggests that its unexpectedness would trigger high surprisal, leading to increased processing costs that may manifest as feelings of ungrammaticality.
 
 This mismatch between predicted and observed frequency leads to divergent speaker responses: some can make the analogical leap and assume the construction represents a legitimate, if rare, community pattern; others make the leap but interpret its rarity as evidence that the community doesn't accept it; still others can't construct the analogy and either conclude the form is ungrammatical or question their own ability to process it correctly.
 
-\subsubsection{Categorical structural constraints}\label{sec:categorical-constraints}
+\subsubsection{Apparent categorical gaps}\label{sec:categorical-constraints}
 
-Some constructions face systematic blocking that appears independent of meaning, processing, or community conventions. These constraints, such as the left branch condition, represent categorical prohibitions that resist explanation through the other components.
+Some constructions face rejection so persistent that it \emph{appears} categorical. Left-branch extraction is the textbook case:
 
 \ea[*]{\textit{Which did you buy }[\_\_\textit{ car}]\textit{?}}\label{ex:LBC-cat}
 \z
 
-The intended meaning, `Which car did you buy?' is, if not entirely transparent, at least easily grasped. Nothing in the semantics or pragmatics prevents understanding the speaker's intent. Nor does the construction seem excessively complex to process~-- if English allowed it, it would be no harder than other \textit{wh}-movement structures. Yet English categorically disallows extracting \textit{which} alone from the left branch of a noun phrase. ``No study has yielded reliable evidence of satiation on [\dots] Left-Branch [\dots] violations'' \autocite[22]{Snyder2022}.
+The intended meaning is easily grasped; nothing in the semantics or pragmatics prevents understanding the speaker's intent. Nor does the construction seem excessively complex to process. Yet English speakers categorically reject it, and ``no study has yielded reliable evidence of satiation on [\dots] Left-Branch [\dots] violations'' \autocite[22]{Snyder2022}.
 
-Several diagnostic criteria help identify these systematically blocked constructions:
+Under MVMG, such patterns are analysed not as hard representational bans ($\mathsf{map}=0$) but as \textbf{stable gaps}: community licensing $C_t(u,c)$ is driven toward zero by persistent preemption (see \S\ref{sec:update} and \S\ref{sec:categorical-without-bans}). Because the opportunity set for the construction is large and no tokens ever appear, the effective preemption mass $p_t(u,c)$ accumulates rapidly, pushing the posterior mean licensing rate to a stable equilibrium at zero. Additional processing penalties---such as systematic garden-path reanalysis when the bare \textit{wh}-phrase is encountered---can strengthen the subjective categoricality without any independent structural veto being posited.
+
+Several diagnostic criteria help identify these stable-gap constructions:
 \begin{enumerate}
-\item \textbf{Persistent unacceptability:} The construction never gains acceptance, no matter how many times it's presented or under what circumstances. Neither familiarity nor repetition leads speakers to reconsider the judgment.
-\item \textbf{Categorical rather than gradient:} While some marginal forms occupy a gray area, these blocked structures are unequivocally rejected. Speakers don't hesitate or offer intermediate ratings; they find the constructions simply impossible.
-\item \textbf{Independence from processing or semantic factors:} The prohibition remains despite the utterance's apparent semantic clarity or ease of interpretation. it's not a matter of complexity or lexical confusion; the syntax itself forbids the form.
+\item \textbf{Persistent unacceptability:} The construction never gains acceptance; familiarity and repetition do not shift judgments.
+\item \textbf{Categorical rejection:} Speakers find the constructions simply impossible, with no intermediate ratings.
+\item \textbf{Resistance to satiation:} Unlike processing-heavy cases, repeated exposure does not improve acceptability.
 \end{enumerate}
 
-The existence of such patterns poses a significant challenge for the MMMG framework. While I have proposed that grammaticality emerges from the interaction of form--meaning pairings within communities, these cases resist explanation in terms of meaning, processing, or community norms. Something appears to block these constructions independently of these factors. If we can't ultimately explain these blocks in terms of form--meaning relationships and their interaction with processing and social factors, this would constitute a serious challenge to the framework's central claims.
+If future work uncovers constructions that resist even this stable-gap analysis---forms for which $\mathsf{map}(u,c)=0$ truly holds because no parse is available---they would represent a residual class of hard representational bans. For now, treating classic cases like LBE as $C_t\to 0$ under preemption keeps the constitutive core minimal and pushes the explanatory work into the dynamics of community licensing.
 
 \bigskip
 \noindent
@@ -369,24 +378,25 @@ post hoc.
 
 \begin{table}[h]
 \centering
-\caption{Core components $\rightarrow$ formal repertory}
+\caption{Core notation and stability variables}
 \label{tab:vars}
 \begin{tabular}{@{}ll@{}}
 \toprule
-Narrative component & Formal trace (all functions of $u$)\\
+Symbol & Meaning \\
 \midrule
-\textsc{Pairing viability}
-        & indicator that $M\!\to\!\mu$ succeeds\\
-\textsc{Semantic compatibility}
-        & $K_{\text{sem}}\in[0,1]$\\
-\textsc{Indexical compatibility}
-        & $K_{\text{index}}\in[0,1]$\\
-\textsc{Processing cost}
-        & additive term feeding subjective $F$ only\\
-\textsc{Entrenchment trajectory}
-        & $C^{t}$ (logistic over speakers $\times$ time)\\
-\textsc{Structural constraints}
-        & hard zero on $M\!\to\!\mu$ (blocks all other terms)\\
+$\mathbb{I}[\varphi]$ & Indicator function (1 if $\varphi$ is true, 0 otherwise) \\
+$c \in \mathcal{C}$ & Conditioning state (communicative situation + norm-centre) \\
+$u$ & Utterance type (abstracted constructional token) \\
+$M(u)$ & Morphosyntactic representation of $u$ \\
+$\mu(u)$ & Morphosyntactic meaning evoked by $M(u)$ \\
+$\mathsf{map}(u,c)$ & Mapping viability (1 if $M \to \mu$ is licensed in $c$) \\
+$K(u,c)$ & Coherence/concentration of interpretation $p(\omega \mid u,c)$ \\
+$C_t(u,c)$ & Licensing rate/entrenchment in population at time $t$ \\
+$\widetilde{G}_t(u,c)$ & Graded stability score: $\mathsf{map} \cdot C_t \cdot K$ \\
+$G_t(u,c)$ & Categorical membership predicate (thresholded $\widetilde{G}_t$) \\
+$\tau(c)$ & Context-dependent stability threshold \\
+$F_{i,t}(u,c)$ & Subjective feeling of anomaly for individual $i$ at time $t$ \\
+$p_t(u,c)$ & Effective preemption mass (expected non-occurrence) \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -397,26 +407,25 @@ Narrative component & Formal trace (all functions of $u$)\\
 \subsection{Diagnosing (un)grammaticality at a glance}
 \label{sec:diag-tree}
 
-For exposition the six components can be read as a short decision
+For exposition the recurrent instability modes can be read as a short decision
 tree. The grammar proper is still the product
-$G=C^{t}K \cdot\text{map}$ of §\ref{sec:formalism}; the tree is a
-didactic shell that lets the reader classify examples without running
-the full algebra.
+$\widetilde{G}_t = \mathsf{map} \cdot C_t \cdot K$ of §\ref{sec:formalism}; the list
+below classifies examples by their primary instability mode.
 
 \begin{center}
 \begin{tabular}{@{}l@{\;$\longrightarrow$\;}l@{}}
 \toprule
 Condition & Canonical outcome\\
 \midrule
-$M\!\not\!\to\!\mu$ &
+$\mathsf{map}=0$ &
 \emph{nonsense} (*\textit{Can the have running})\\[4pt]
-$K_{\text{sem}}=0$ &
-semantic clash (*\textit{I’ve finished it yesterday})\\[4pt]
-$K_{\text{index}}=0$ &
-indexical mis-fit (\textit{vos} in a strict-\textit{tú} setting)\\[4pt]
-$C^{t}\approx0$ &
+$K(u,c)\approx 0$ &
+semantic/indexical clash (*\textit{I’ve finished it yesterday})\\[4pt]
+$C_t(u,c)\approx 0$, low $p_t$ &
 community-novel (\textit{friend of whose})\\[4pt]
-high processing cost, parse recovered &
+$C_t(u,c)\approx 0$, high $p_t$ &
+stable gap (left-branch extraction)\\[4pt]
+high $\mathbf{P}_i$ cost, parse recovered &
 transient ill-formedness (centre embedding)\\[4pt]
 otherwise &
 grammatical\\
@@ -427,13 +436,13 @@ grammatical\\
 
 \subsection{Patterns of (Un)grammaticality}\label{sec:patterns}
 
-When these six core components interact, they produce systematic patterns in how constructions succeed or fail to achieve grammatical status. Understanding these patterns helps explain the diverse phenomena traditionally grouped under ``ungrammaticality.''
+When these recurring components interact, they produce systematic patterns in how constructions succeed or fail to achieve grammatical status. Understanding these patterns helps explain the diverse phenomena traditionally grouped under ``ungrammaticality.''
 
 \subsubsection{When constructions are ungrammatical}\label{sec:ungrammatical}
 
-Ungrammaticality arises when the community's expected patterns are violated in ways that can't be reconciled through available interpretive strategies. The six core components generate distinct types of violation:
+Ungrammaticality arises when the community's expected patterns are violated in ways that can't be reconciled through available interpretive strategies. The diagnostic categories generate distinct types of violation:
 
-\paragraph{No viable form--meaning pairing}
+\paragraph{No viable form--value relation}
 In some cases, the form of an utterance simply doesn't map onto any conceivable interpretation recognized by the community:
 \ea[*]{\textit{Can the have running?}}\label{ex:running-pattern}
 \z
@@ -442,14 +451,14 @@ Here, the modal \textit{can} expects a subject and a verb phrase to form a coher
 \paragraph{Semantic incompatibility}
 When morphosyntactic and lexical meanings clash, the construction fails despite having well-formed individual components. This includes temporal conflicts (as in \textit{*I've finished it yesterday}), inappropriate predication types (as in \textit{*I have 25 years} for age), and information-structural contradictions (as in the lifeguard example).
 
-\paragraph{Processing overload}
+\paragraph{Processing overload}\label{sec:processing}
 Constructions that exceed cognitive processing capacity trigger ungrammaticality judgments even when structurally well-formed. Multiple center embeddings exemplify this pattern, where incremental parsing becomes impossible despite theoretical grammaticality.
 
 \paragraph{Lack of community entrenchment}
 Even transparent, processable constructions fail when they violate established community conventions. The \textit{sheeps} example shows how regularization can be blocked by entrenched irregular forms, while the extreme rarity of independent relative \textit{whose} prevents stable conventionalization.
 
-\paragraph{Violation of categorical constraints}
-Some constructions are systematically blocked by structural prohibitions that operate independently of the other components. Left-branch extraction represents the clearest case of such categorical blocking.
+\paragraph{Apparent categorical gaps}\label{sec:systematic-blocking}
+Some constructions are rejected so persistently that they behave as if categorically banned. Under MVMG, these are analysed as \emph{stable gaps}: $\mathsf{map}(u,c)=1$ and $K(u,c)$ can be high, but community licensing is driven toward $C_t(u,c)\approx 0$ by persistent preemption in a large opportunity set (\S\ref{sec:update}, \S\ref{sec:categorical-without-bans}). Left-branch extraction is the textbook case.
 
 \subsubsection{Degrees of violation}\label{sec:degrees}
 
@@ -457,23 +466,23 @@ Grammaticality isn't binary; rather, it reflects the scope and intensity of comp
 
 Minor violations might involve a single component with partial conflict~-- for instance, a construction with moderate processing difficulty but full semantic compatibility and strong community entrenchment. Such cases often receive intermediate acceptability ratings and may improve with exposure.
 
-Severe violations typically involve multiple components or complete failure of a single critical component. A construction lacking any viable form--meaning pairing represents total breakdown, while violations of categorical constraints produce consistent, strong rejection regardless of other factors.
+Severe violations typically involve multiple components or complete failure of a single critical component. A construction lacking any viable form--value relation represents total breakdown, while violations of categorical constraints produce consistent, strong rejection regardless of other factors.
 
 The interaction between components can amplify or mitigate violations. High community entrenchment can partially offset processing difficulty, while semantic transparency can make marginal syntactic patterns more acceptable. Conversely, multiple minor violations can compound to produce strong ungrammaticality judgments.
 
 \subsection{The Subjective Experience of Grammaticality}\label{sec:subjective}
 
-While the six components determine objective grammaticality, speakers experience violations through subjective feelings and judgments that don't always align perfectly with grammatical status.
+While the constitutive variables determine objective grammaticality, speakers experience violations through subjective feelings and judgments that don't always align perfectly with grammatical status.
 
 \subsubsection{The feeling of ungrammaticality}\label{sec:feeling}
 
 The subjective \textsc{feeling of ungrammaticality} represents speakers' metacognitive response to linguistic violations. This distinction parallels other well-studied metacognitive feelings like the \textsc{feeling of knowing} (FOK; \cite{hart1965}), which emerges when we feel certain we know something but can't retrieve it.
 
-Note that there is no positive feeling of grammaticality, just as there is no feeling of having sufficient oxygen, only negative feelings experienced in the absences. The feeling of ungrammaticality, then, can be seen as the negative response triggered when an utterance violates expected form--meaning patterns.
+Note that there is no positive feeling of grammaticality, just as there is no feeling of having sufficient oxygen, only negative feelings experienced in the absences. The feeling of ungrammaticality, then, can be seen as the negative response triggered when an utterance violates expected form--value patterns.
 
 This notion echoes Edward Sapir's concept of ``form-feeling"~-- an often unconscious grasp of language patterns \autocite{Sapir1921, Sapir1927b}. Evidence from aphasia supports the distinction between grammaticality and its subjective experience. Patients with Broca's aphasia, who produce agrammatic speech, often exhibit self-monitoring behavior, attempting self-correction and expressing frustration with their grammatical errors \autocite{oomen2005}.
 
-The feeling of ungrammaticality can be conceptualized as a negative response triggered by the detection of unstable or missing form--meaning pairings. This response wouldn't define grammaticality itself but would instead serve as a speaker's heuristic detection mechanism. This distinction helps explain:
+The feeling of ungrammaticality can be conceptualized as a negative response triggered by the detection of unstable or missing form--value relations. This response wouldn't define grammaticality itself but would instead serve as a speaker's heuristic detection mechanism. (For the sake of this conceptual overview, we assume the speaker treats the conditioning state $c$ as known; the full formal definition in \S\ref{sec:feeling-new} generalizes this to handle uncertainty about context.) This distinction helps explain:
 
 \begin{enumerate}
     \item Gradient Judgments: Varying degrees of certainty about marginal constructions reflect differences in the strength of the negative response rather than categorical grammatical status.
@@ -501,10 +510,10 @@ The framework distinguishes two conceptually distinct levels:
 \toprule
 Level & Nature & Observable through\\
 \midrule
-Objective grammaticality $G(u)$ & Whether a form--meaning pairing & Converging evidence:\\
+Objective grammaticality $G_t(u,c)$ & Whether a form--value relation & Converging evidence:\\
 & is licensed in a speech community & corpora, production,\\
 & & repair behaviour\\[6pt]
-Subjective feeling $F(u)$ & Metacognitive warning signal & Directly observable:\\
+Subjective feeling $F_{i,t}(u,c)$ & Metacognitive warning signal & Directly observable:\\
 & that ``something is wrong here'' & ratings, eye-tracking,\\
 & & self-reports\\
 \bottomrule
@@ -515,33 +524,23 @@ This distinction parallels the measurement problem in other sciences: we cannot 
 
 \paragraph{What factor analysis reveals}
 
-When researchers conduct factor analyses on acceptability ratings~-- a common approach in experimental syntax~-- they necessarily target the structure of $F(u)$, not $G(u)$ directly. The factors that emerge from such analyses reflect both genuine grammatical constraints and additional sources of variance that modulate subjective responses without affecting grammatical status.
+When researchers conduct factor analyses on acceptability ratings~-- a common approach in experimental syntax~-- they necessarily target the structure of $F_{i,t}(u,c)$, not $G_t(u,c)$ directly. The factors that emerge from such analyses reflect both genuine grammatical constraints and additional sources of variance that modulate subjective responses without affecting grammatical status.
 
-Consider the typical factors recovered from rating studies and their theoretical interpretation:
+\begin{itemize}
+\item \textbf{Morphosyntactic licensing}: When this factor loads heavily on rejected items, it likely reflects a core component of $G_t(u,c)$. Violations of morphosyntactic constraints directly prevent stable form--value mappings.
+\item \textbf{Semantic--pragmatic coherence}: This factor, including information structure clashes, also constitutes part of $G_t(u,c)$. Semantic incompatibilities make utterances objectively ungrammatical within the community's conventions.
+\item \textbf{Community entrenchment/frequency}: High-frequency patterns that speakers have conventionalized represent part of $G_t(u,c)$. A pattern the community has never established simply isn't grammatical, regardless of its theoretical possibility.
+\item \textbf{Sociolinguistic appropriateness}: This factor shows mixed status. Clear indexical clashes can affect $G_t(u,c)$ when they prevent the intended social meaning from being conveyed. However, mere stylistic infelicities typically affect only $F_{i,t}$.
+\item \textbf{Processing cost/memory load}: This factor clearly belongs to $F_{i,t}$ rather than $G_t(u,c)$. Heavy processing demands can depress ratings even for constructions that violate no grammatical constraints.
+\item \textbf{Morphophonological well-formedness}: When phonological patterns realize obligatory morphosyntactic features, violations affect $G_t(u,c)$. Otherwise, they merely influence the subjective response $F_{i,t}$.
+\end{itemize}
 
-\begin{enumerate}
-\item \textbf{Morphosyntactic licensing}: When this factor loads heavily on rejected items, it likely reflects a core component of $G(u)$. Violations of morphosyntactic constraints directly prevent stable form--meaning mappings.
+This distinction between $G_t(u,c)$ and $F_{i,t}(u,c)$ has immediate methodological consequences. If research aims to uncover the grammar itself, investigators should model only those factors that map onto objective grammaticality while treating others as measurement noise or scale covariates. Conversely, research into human judgment behaviour should retain the full factor structure, as it is precisely $F_{i,t}$ that predicts how speakers will rate sentences presented out of context.
 
-\item \textbf{Semantic--pragmatic coherence}: This factor, including information structure clashes, also constitutes part of $G(u)$. Semantic incompatibilities make utterances objectively ungrammatical within the community's conventions.
+The distinction also explains certain puzzling phenomena in the experimental literature. Satiation effects may reflect changes in $F_{i,t}$ without necessarily altering $G_t(u,c)$. A construction might remain objectively ungrammatical in the community's system while triggering progressively weaker negative responses through familiarization. Similarly, the persistence of gradient judgments for certain phenomena suggests that the subjective response system $F_{i,t}$ operates on a continuum even when the underlying grammatical system $G_t(u,c)$ makes categorical distinctions.
 
-\item \textbf{Community entrenchment/frequency}: High-frequency patterns that speakers have conventionalized represent part of $G(u)$. A pattern the community has never established simply isn't grammatical, regardless of its theoretical possibility.
-
-\item \textbf{Sociolinguistic appropriateness}: This factor shows mixed status. Clear indexical clashes (such as using \textit{vos} forms in a strict-\textit{tú} dialect region) can affect $G(u)$ when they prevent the intended social meaning from being conveyed. However, mere stylistic infelicities typically affect only $F(u)$.
-
-\item \textbf{Processing cost/memory load}: This factor clearly belongs to $F(u)$ rather than $G(u)$. Heavy processing demands can depress ratings even for constructions that violate no grammatical constraints, as with multiply center-embedded structures.
-
-\item \textbf{Prescriptive awareness}: Knowledge of prescriptive rules primarily influences $F(u)$ by making speakers more sensitive to certain variations. These social attitudes about ``correct'' language leave the objective grammatical system~-- what the community actually licenses~-- untouched.
-
-\item \textbf{Morphophonological well-formedness}: When phonological patterns realize obligatory morphosyntactic features (as in Turkish vowel harmony on inflectional suffixes), violations affect $G(u)$. Otherwise, they merely influence the subjective response $F(u)$.
-\end{enumerate}
-
-\paragraph{Empirical implications}
-
-This distinction between $G(u)$ and $F(u)$ has immediate methodological consequences. If research aims to uncover the grammar itself, investigators should model only those factors that map onto objective grammaticality while treating others as measurement noise or scale covariates. Conversely, research into human judgment behaviour should retain the full factor structure, as it is precisely $F(u)$ that predicts how speakers will rate sentences presented out of context.
-
-The distinction also explains certain puzzling phenomena in the experimental literature. Satiation effects, where repeated exposure increases acceptability ratings, may reflect changes in $F(u)$ without necessarily altering $G(u)$. A construction might remain objectively ungrammatical in the community's system while triggering progressively weaker negative responses through familiarization. Similarly, the persistence of gradient judgments for certain phenomena suggests that the subjective response system $F(u)$ operates on a continuum even when the underlying grammatical system $G(u)$ makes categorical distinctions.
-
-Most importantly, recognizing this distinction prevents circular reasoning in grammatical theory. Rather than defining grammaticality through acceptability ratings~-- which would conflate $G(u)$ with $F(u)$~-- the framework treats ratings as one type of evidence among many for inferring the underlying grammatical system. This approach maintains the empirical vulnerability of grammatical hypotheses while acknowledging the complex relationship between competence and performance, between the community's linguistic system and individual speakers' responses to it.
+Most importantly, recognizing this distinction prevents circular reasoning in grammatical theory. Rather than defining grammaticality through acceptability ratings~-- which would conflate $G_t$ with $F_{i,t}$~-- the framework treats ratings as one type of evidence among many for inferring the underlying grammatical system.
+ This approach maintains the empirical vulnerability of grammatical hypotheses while acknowledging the complex relationship between competence and performance, between the community's linguistic system and individual speakers' responses to it.
 
 \subsubsection{Misattribution effects}\label{sec:misattribution}
 
@@ -573,7 +572,7 @@ The singular subject \textit{patchwork} clashes with plural \textit{help}, but t
 
 \subsection{Mechanisms of Grammatical Change}\label{sec:change-mechanisms}
 
-The stability of form--meaning pairings isn't static. Various motivations drive the acceptance of new forms and the rejection of established ones, explaining how grammatical systems evolve over time.
+The stability of form--value relations isn't static. Various motivations drive the acceptance of new forms and the rejection of established ones, explaining how grammatical systems evolve over time. \label{sec:motivations}
 
 \subsubsection{Semantic motivations for reanalysis}\label{subsec:semantic-motivations}
 
@@ -591,7 +590,7 @@ Frequent usage in contexts where motion implied subsequent action (e.g., \textit
 \textit{It's going to rain.}
 \z
 
-What once expressed physical trajectory now functions as a predictive futurate marker. The form--meaning pairing changed through semantic reanalysis, driven by communicative utility.
+What once expressed physical trajectory now functions as a predictive futurate marker. The form--value relation changed through semantic reanalysis, driven by communicative utility.
 
 \subsubsection{Social motivations for accepting or rejecting forms}\label{subsec:social-motivations}
 
@@ -620,216 +619,281 @@ Forms are sometimes accepted precisely because their structure reflects their me
 \ea[]{\textit{a big big problem}}\label{ex:big-big-change}
 \z
 
-The formal repetition iconically mirrors the magnitude being expressed. Such patterns are readily interpretable and likely to spread because the form--meaning link is immediately apparent.
+The formal repetition iconically mirrors the magnitude being expressed. Such patterns are readily interpretable and likely to spread because the form--value link is immediately apparent.
 
 Note that iconicity remains syntactically constrained. It occurs in pre-head modifiers but is ungrammatical as predicative complement:
 \ea[*]{\textit{the problem was big big}}\label{ex:big-big2-change}
 \z
 
-These diverse motivations~-- semantic, social, structural, and iconic~-- can interact and sometimes conflict. While Optimality Theory has productively modeled such competing pressures through ranked constraints \autocite{prince2004}, MMMG views their resolution as emerging from community practice rather than solely from fixed rankings. The specific weighting of motivations reflects historically established patterns and communicative needs within language communities.
+These diverse motivations~-- semantic, social, structural, and iconic~-- can interact and sometimes conflict. While Optimality Theory has productively modeled such competing pressures through ranked constraints \autocite{prince2004}, MVMG views their resolution as emerging from community practice rather than solely from fixed rankings. The specific weighting of motivations reflects historically established patterns and communicative needs within language communities.
 
-\section{A Simple Formal Model of the Framework}\label{sec:formalism}
+\section{A formal core: grammaticality as conditioned stability}
+\label{sec:formalism}
 
-This section presents a formal model illustrating how morphosyntactic structure, meaning, and community norms interact to determine grammaticality. The model incorporates insights from the availability heuristic and measurement theory to avoid circularity while maintaining empirical testability.
+The framework separates two explanatory targets:
+(i) a \emph{state theory} specifying what it is for an utterance type to be grammatical
+\emph{for a population in a communicative situation} at time $t$;
+(ii) a \emph{dynamics module} specifying how such states tend to arise and persist.
+The state theory is constitutive; the dynamics module is etiological.
 
-\subsection{Core Components}
+\subsection{Conditioning structure}
+\label{sec:conditioning}
 
-For any utterance $u$, let:
+Let $c\in\mathcal{C}$ be a \emph{conditioning state}---a construed communicative situation
+(\textcite{wiese2023}) together with whatever norm-centre is treated as relevant.
+Nothing here requires $c$ to be externally given; interlocutors can misalign about $c$,
+and $c$ can be learned, split, and renegotiated over time.
 
-\begin{enumerate}
-    \item $M(u)$ be the morphosyntactic structure of $u$, encompassing word order, inflection, and syntactic relationships.
-    
-    \item $\mu(u)$ be the morphosyntactic meaning derived from $M(u)$, representing the meaning contributed specifically by the morphosyntactic form.
-    
-    \item $\sigma(u)$ be the composite socio-semantic--pragmatic meaning, integrating morphosyntactic, lexical, and pragmatic information.
-    
-    \item $K(u) \in [0,1]$ be the compatibility between $\mu(u)$ and $\sigma(u)$, where $K(u) = 1$ indicates full coherence and $K(u) = 0$ indicates fundamental clash.
-    
-    \item $C^t(u) \in [0,1]$ be the community entrenchment of the form--meaning pairing at time $t$. Crucially, this is not defined circularly through grammaticality judgments, but rather as a latent variable estimated from multiple independent indicators (detailed below).
-    
-    \item $F(u) \in [-1,0]$ be the subjective feeling of ungrammaticality, where $-1$ indicates strong rejection and $0$ indicates no negative feeling.
-\end{enumerate}
+For many purposes it is useful to think of $c$ as a bundle that may include
+situational features (activity type, medium, footing), stable baselines tied to
+speaker ascription, and norm-orientation (discourse-community identification),
+but the formalism treats $c$ abstractly as the conditioning variable that selects
+the relevant distribution of form--value relations.
 
-\subsection{Measuring Community Entrenchment}
+\subsection{Objects}
+\label{sec:objects}
 
-To avoid circularity, $C^t(u)$ is conceptualized as a latent variable that generates multiple observable indicators:
+Let $u$ range over utterance \emph{types} (constructional tokens abstracted over),
+with morphosyntactic representation $M(u)$.  Let $\sigma(u,c)$ be the
+utterance-level interpretation made available in $c$ (lexical content plus
+pragmatic enrichment, indexical resolution, discourse update, etc.).
 
+The framework distinguishes three state quantities.
+
+\paragraph{(i) Mapping viability}
+Let $\mathsf{map}(u,c)\in\{0,1\}$ indicate whether there exists, for $u$ in $c$,
+a licensed morphosyntactic analysis that yields a morphosyntactic meaning:
 \[
-C^t(u) \rightarrow \begin{cases}
-A(u) & \text{(availability in memory)} \\
-E(u) & \text{(exposure frequency in corpora)} \\
-P(u) & \text{(production probability)} \\
-S(u) & \text{(social acceptability index)}
+\mathsf{map}(u,c)=
+\begin{cases}
+1 & \text{if }\exists a\in\mathcal{A}(u,c)\text{ such that }\mu=\mu(a)\text{ is well-defined}\\
+0 & \text{otherwise.}
 \end{cases}
 \]
+This is the only truly categorical failure mode: if no analysis is available,
+there is no candidate form--value relation to stabilize.
 
-Each indicator is independently measurable:
-\begin{itemize}
-    \item $A(u)$: Recognition memory tasks, lexical decision times
-    \item $E(u)$: Raw token frequency in corpora
-    \item $P(u)$: Sentence completion tasks, elicited production
-    \item $S(u)$: Matched-guise studies, social attitude surveys
-\end{itemize}
-
-The relationship between these indicators and the latent $C^t(u)$ is specified by a measurement model:
+\paragraph{(ii) Coherence as concentration of interpretation}
+Even when $\mathsf{map}(u,c)=1$, interpretation can be unstable: multiple
+incompatible construals may compete, or the best available construal may require
+high-cost repair. Model this by a distribution over candidate interpretations
+$\Omega(u,c)$:
 \[
-\begin{aligned}
-A(u) &= \lambda_A C^t(u) + \epsilon_A \\
-\log E(u) &= \lambda_E C^t(u) + \epsilon_E \\
-P(u) &= \lambda_P C^t(u) + \epsilon_P \\
-S(u) &= \lambda_S C^t(u) + \epsilon_S
-\end{aligned}
+p(\omega\mid u,c)\propto \exp\bigl(-E(\omega;u,c)\bigr),\qquad \omega\in\Omega(u,c).
 \]
-where $\lambda_i$ are factor loadings and $\epsilon_i$ are measurement errors.
-
-\subsection{From Exposure to Entrenchment}
-
-Not all frequent forms become entrenched. The relationship between exposure frequency $E(u)$ and community entrenchment $C^t(u)$ is mediated by a noise detection mechanism:
-
+Define \emph{coherence} as the concentration of this distribution:
 \[
-\frac{dC^t}{dt} = f(E(u)) - \text{NoisePenalty}(u)
+K(u,c)=\max_{\omega\in\Omega(u,c)} p(\omega\mid u,c)\in(0,1].
 \]
-The noise penalty function identifies systematic errors:
+Intuitively, $K$ is high when a single construal dominates, and low when
+construals are diffuse, mutually inconsistent, or repair-dependent.
+
+Crucially, $E(\omega;u,c)$ is an \emph{open-ended} energy model:
 \[
-\text{NoisePenalty}(u) = \begin{cases}
-\beta_{\text{high}} & \text{if } u \text{ triggers error detection} \\
-\beta_{\text{low}} & \text{otherwise}
-\end{cases}
+E(\omega;u,c)=\sum_{j\in\mathcal{J}(c)} w_j\,\phi_j(\omega;u,c),
 \]
-Error detection is operationalized through processing measures: high surprisal given local context, increased reading times at points of violation, and systematic self-repair in production. This explains why agreement errors like \textit{*The keys to the cabinet is here} maintain high $E(u)$ but low $C^t(u)$.
+where $\mathcal{J}(c)$ is the set of coherence demands that are live in $c$
+(temporal alignment, information-structural fit, indexical stance alignment, etc.).
+The theory does not assume a fixed inventory of $\phi_j$; it assumes only that
+coherence is measurable as concentration, and decomposable when needed.
 
-\subsection{Grammaticality Function}
+This decomposition allows us to bridge the narrative diagnostic categories of \S\ref{sec:core-components} to the formal variables. For instance, we may group coherence demands by their subsystem---denoting the sum over purely semantic demands as $E_{\text{sem}}$ and over indexical/pragmatic demands as $E_{\text{index}}$---to yield an expositional factorization $K \approx K_{\text{sem}} \cdot K_{\text{index}}$. In practice, however, the framework assumes that stability depends on the joint concentration of all constraints live in the communicative situation $c$.
 
-The grammaticality $G(u)$ at time $t$ is:
+\paragraph{(iii) Community licensing (entrenchment) under conditioning}
+For individual $i$ at time $t$, let $\Lambda_{i,t}(u,c)\in\{0,1\}$ indicate whether
+$i$ \emph{licenses} $u$ as a community resource in $c$ (i.e.\ treats the pairing as
+a legitimate option rather than a performance slip or nonce error).
 
+Define the population-level licensing rate:
 \[
-G(u) = C^t(u) \cdot K(u) \cdot \begin{cases}
-1 & \text{if } M(u) \text{ successfully evokes } \mu(u) \\
-0 & \text{otherwise}
-\end{cases}
+C_t(u,c)=\Pr_i\bigl(\Lambda_{i,t}(u,c)=1\bigr)\in[0,1].
 \]
-This multiplicative formulation ensures that grammaticality requires all components: successful form--meaning mapping, semantic compatibility, and community entrenchment.
+This is the object previously called \enquote{entrenchment}.  Here it is explicitly
+conditioned on $c$.
 
-\subsection{The Feeling of Ungrammaticality}
+\subsection{Objective grammaticality as a conditioned state property}
+\label{sec:objective-G}
 
-The subjective feeling $F(u)$ reflects both objective grammaticality and processing factors:
+We write $\mathbb{I}[\cdot]$ for the indicator function:
+$\mathbb{I}[\phi]=1$ if $\phi$ is true and $0$ otherwise.
 
+The state theory distinguishes a graded stability score from a categorical
+membership predicate.
+
+\subsubsection{A graded stability score}
+
+Recall that $\mathsf{map}(u,c)\in\{0,1\}$ indicates whether $u$ has at least one
+available morphosyntactic analysis in conditioning state $c$ that yields a
+well-defined morphosyntactic meaning. Let $K(u,c)\in(0,1]$ be coherence as
+concentration of the interpretation distribution, and let $C_t(u,c)\in[0,1]$ be
+the population licensing rate at time $t$ in $c$.
+
+Define the graded stability score:
 \[
-F(u) = -\alpha \cdot (1 - G(u)) - \gamma \cdot \text{ProcessingCost}(u) + \eta
+\widetilde{G}_t(u,c)=\mathsf{map}(u,c)\cdot C_t(u,c)\cdot K(u,c)\in[0,1].
 \]
-where:
-\begin{itemize}
-    \item $\alpha$ scales the response to grammatical violations
-    \item $\gamma$ captures additional negativity from processing difficulty
-    \item $\eta$ represents individual variation and noise
-\end{itemize}
-This formulation predicts that processing difficulty can make grammatical sentences feel ungrammatical ($G(u) = 1$ but $F(u) < 0$), while familiar ungrammatical patterns might escape detection ($G(u) = 0$ but $F(u) \approx 0$).
+This quantity is the workhorse for modelling gradience and for linking the
+state theory to behavioural measures.
+
+\subsubsection{A categorical membership predicate}
+
+Communities often treat grammaticality as a constitutive membership fact:
+either a pairing counts as an available resource in $c$ or it does not.
+A categorical predicate can be defined by thresholding the graded score:
+\[
+G_t(u,c)=\mathbb{I}\!\left[\widetilde{G}_t(u,c)\ge \tau(c)\right].
+\]
+The threshold $\tau(c)$ is not a hidden grammatical parameter. It is a decision
+criterion associated with the communicative situation: some situations are
+strict about what counts as \enquote{in the repertoire}, others are permissive.
+
+\subsubsection{A Decision-Theoretic Motivation}
+Suppose a judge in $c$
+is choosing between two labels, $\ell\in\{\textsc{in-repertoire},\textsc{not-in-repertoire}\}$,
+and faces asymmetric losses. Let $L_{\textsc{fa}}(c)$ be the loss of treating an
+item as \textsc{in-repertoire} when it is not, and $L_{\textsc{fr}}(c)$ the loss
+of treating an item as \textsc{not-in-repertoire} when it is. Under the
+simplifying assumption that $\widetilde{G}_t(u,c)$ is a calibrated signal of
+stability, the optimal rule is to accept $u$ as \textsc{in-repertoire} whenever:
+\[
+\widetilde{G}_t(u,c)\;\ge\;\tau(c)\;=\;\frac{L_{\textsc{fa}}(c)}{L_{\textsc{fa}}(c)+L_{\textsc{fr}}(c)}.
+\]
+On this view, $\tau(c)$ is induced by payoff structure: high-stakes institutional
+contexts raise $L_{\textsc{fa}}$ (and thus $\tau$), whereas in-group, low-stakes
+contexts raise $L_{\textsc{fr}}$ (lowering $\tau$).
+
+\subsection{What $\mathsf{map}$ does and does not do}
+\label{sec:map-clarification}
+
+The mapping predicate $\mathsf{map}(u,c)$ is reserved for genuine
+analyzability failure: cases where no morphosyntactic analysis is available that
+yields any well-defined morphosyntactic meaning in $c$. This is the only
+categorical failure mode in the representational sense.
+
+Importantly, phenomena traditionally described as categorical \enquote{structural
+bans} are not treated here as mapping failures. In those cases, the intended
+analysis is typically available as a candidate representation---so
+$\mathsf{map}(u,c)=1$---and the intended construal can be coherent once
+stipulated (so $K(u,c)$ need not be small). What makes the pattern behave
+categorically in the community is instead the licensing term: under the relevant
+conditioning states, the community converges on near-universal non-licensing,
+$C_t(u,c)\approx 0$. This is the formal counterpart of what earlier drafts (and
+\texttt{LingbuzzPreprint.tex}) call \enquote{near-zero entrenchment}.
+
+\subsection{Interlocutor misalignment about conditioning}
+\label{sec:misalignment-conditioning}
+
+Because $c$ is construed, interlocutors can disagree about which conditioning state is
+in force.  Let a hearer $h$ maintain a posterior $q_h(c\mid e)$ over conditioning states
+given cues $e$ (situational cues, ascription cues, stance cues, etc.).  Then the hearer’s
+expected stability score is
+\[
+\widetilde{G}^{(h)}_t(u\mid e)=\sum_{c\in\mathcal{C}} \widetilde{G}_t(u,c)\,q_h(c\mid e).
+\]
+
+\subsection{The feeling of (un)grammaticality}
+\label{sec:feeling-new}
+
+Let $F_{i,t}(u,c)\in[-1,0]$ be the subjective anomaly signal for individual $i$.
+Model it as a response to low stability plus implementation costs and ideological overlays:
+\[
+F_{i,t}(u,c)=
+-\alpha\bigl(1-\widetilde{G}^{(h)}_t(u\mid e)\bigr)
+-\mathbf{\gamma}^{\top}\mathbf{P}_{i}(u,c)
+-\delta\,D_i(u,c)
++\varepsilon_i,
+\]
+where $h=i$ is the hearer processing the signal, and $\widetilde{G}^{(h)}_t$ is the hearer's expected stability score accounting for situational uncertainty (\S\ref{sec:misalignment-conditioning}).
+$\mathbf{P}_{i}(u,c)$ is a vector of processing/repair costs (locality, interference,
+garden-path reanalysis, surprisal, etc.). $D_i(u,c)$ is prescriptive dissonance.
+
+\subsection{Measurement model for $C_t$}
+\label{sec:measurement-C}
+
+$C_t(u,c)$ is latent and is estimated from converging indicators rather than from ratings.
+Let $\mathbf{y}_t(u,c)$ be a vector of observable traces (corpus rate per opportunity,
+elicited production probability, repair probability, recognition latency, social evaluation).
+A minimal measurement model is
+\[
+\mathbf{y}_t(u,c)=\mathbf{b}+\mathbf{\Lambda}\,\mathrm{logit}\!\bigl(C_t(u,c)\bigr)+\boldsymbol{\epsilon}.
+\]
+
+\section{Dynamics: why the state tends to become what it is}
+\label{sec:dynamics-new}
+
+The dynamics module explains trajectories of $C_t(u,c)$ (and, in principle,
+refinements of the conditioning partition itself).  It does not define grammaticality.
+
+\subsection{Niches, competitors, and opportunity sets}
+\label{sec:niches}
+
+Let $n$ index a \emph{constructional niche} (a communicative job), and let
+$\mathcal{V}_{n}$ be the set of competitor variants that can do that job
+in some conditioning states.
+Let $N_t(n,c)$ be the number of opportunities for niche $n$ in conditioning state $c$
+over some time window, and $k_t(v,n,c)$ the observed count of variant $v\in\mathcal{V}_n$.
+
+\subsection{Usage as licensing $\times$ choice among licensed options}
+\label{sec:usage}
+
+Separate \emph{licensing} from \emph{selection}.  A variant can be licensed but rarely chosen.
+
+Let $\rho_t(v\mid n,c)\in[0,1]$ be the probability of choosing $v$ among those who license it
+in niche $n$ under $c$.  A flexible choice model is a softmax over utilities:
+\[
+\rho_t(v\mid n,c)=\frac{\exp\bigl(U_t(v;n,c)\bigr)}{\sum_{v'\in\mathcal{V}_n}\exp\bigl(U_t(v';n,c)\bigr)},
+\qquad
+U_t(v;n,c)=\boldsymbol{\theta}^{\top}\mathbf{f}(v;n,c).
+\]
+
+At the population level, the expected usage rate $\pi_t(v\mid n,c)\approx C_t(v,c)\cdot \rho_t(v\mid n,c)$.
 
 
 
-\subsection{Community dynamics}\label{sec:community-dynamics}
+\subsection{Dynamics: preemption as effective opportunity mass}
+\label{sec:update}
 
-I model the proportion $C^{t}(u)$ of speakers who \emph{license} the pairing $\langle M(u),\mu(u)\rangle$ at time $t$ with the Verhulst (logistic) differential equation
+The core idea is that
+learners update licensing not only from positive uses of $u$ but also from
+structured non-occurrence when $u$ is a plausible competitor and is repeatedly
+not chosen. The update should not treat all \enquote{opportunities} as equally
+informative: absence is evidential only to the extent that $u$ would have had
+non-trivial probability of being chosen if it were licensed.
 
-\begin{equation}\label{eq:logistic}
-\frac{dC^{t}}{dt}= \Delta(u)\,C^{t}\bigl(1-C^{t}\bigr),
+For a target variant $u$ associated with niche $n(u)$, define the \emph{effective
+preemption mass} in a time window as the expected number of $u$-tokens that would
+have been produced if $u$ were a licensed competitor:
+\[
+p_t(u,c)
+=\sum_{j=1}^{N_t(n(u),c)}
+\rho_t\!\bigl(u\mid n(u),c\bigr),
+\]
+where $N_t(n(u),c)$ is the number of niche opportunities observed in that window.
+This quantity is large only when (i) the opportunity set is large and (ii) $u$
+would have been chosen at non-trivial rates if licensed.
+
+A simple Bayesian learner for licensing represents each $(u,c)$ with a Beta
+posterior $\mathrm{Beta}(a_t,b_t)$, updated by three evidence streams:
+$s_t$ (positive evidence), $e_t$ (error evidence), and $p_t$ (effective preemption mass).
+Update: $a_{t+1}=a_t+s_t$, $b_{t+1}=b_t+e_t+p_t$.
+The implied population mean licensing rate is then:
+\begin{equation}\label{eq:beta-update}
+C_{t+1}(u,c)=\frac{a_{t+1}}{a_{t+1}+b_{t+1}}.
 \end{equation}
-where the net bias $\Delta(u)$ aggregates the main motivations already
-identified:
-\[
-\Delta(u)=
-  \alpha_{\text{semantic}}\;\text{Transparency}(u)
-  +\alpha_{\text{social}}\;\text{Prestige}(u)
-  +\alpha_{\text{structural}}\;\text{Analogy}(u)
-  \;-\;\beta\;\text{NoisePenalty}(u).
-\]
-The logistic form yields three immediate consequences.
 
-\begin{itemize}
-\item If $\Delta(u)\!>\!0$, entrenchment grows monotonically and the familiar
-  S-curve of change follows directly from \eqref{eq:logistic}.
-\item Weighting the coefficients $\alpha_{\ast},\beta$ in fitted
-  data lets us compare the empirical strength of semantic,
-  social, and structural pressures in any speech community.
-\item When $\Delta(u)\!<\!0$, the construction retreats towards extinction:
-  $C^{t}\!\to\!0$.
-\end{itemize}
-
-\paragraph{Speaker-internal gradience.}
-The derivation above adopts the classic two-state
-\emph{A~vs.~B} model: each speaker is either an \emph{acceptor}
-($A$) or a \emph{rejector} ($B$), so $C^{t}$ is the proportion of
-$A$-speakers in the population.\footnote{For the original
-evolutionary-dynamics treatment see \textcite{Nowak2001}.}
-Nothing essential changes if individual grammars are themselves
-probabilistic.  Let every speaker store a personal weight
-$C_{i}(u)\in[0,1]$ that a Yang-style variational learner updates
-after each encounter with $u$ \autocite{Yang2000}.  The
-population value becomes the mean
-$C^{t}(u)=\tfrac{1}{N}\sum_{i}C_{i}(u)$, whose expectation still
-satisfies \eqref{eq:logistic}
-\autocite{BlytheCroft2012}.  The logistic trajectory,
-and with it the dual-sigmoid pattern in
-Figure~\ref{fig:trajectory}, are therefore a genuine population-level
-prediction, not an artefact of categorical individual states.
-(The trade-off is that the neat closed-form fixation
-probabilities of the two-state model must be replaced by numerical
-simulation once individual gradience is allowed.)
-
-\begin{figure}[t]
-  \centering
-  \begin{tikzpicture}
-    \begin{axis}[
-        width=9cm,height=5cm,
-        xlabel={$t$ (time)},
-        ylabel={$C^{t}(u)$},
-        ymin=0, ymax=1,
-        domain=0:10, samples=200,
-        axis lines=left, thick]
-      \addplot+[no marks] {1 / (1 + exp(-1.4*(x-5)))}; % logistic curve
-    \end{axis}
-  \end{tikzpicture}
-  \caption{Trajectory of community entrenchment
-           ($C^{t}(u)$) predicted by the logistic model.}
-  \label{fig:trajectory}
-\end{figure}
+\begin{note}
+\textbf{The mean-field approximation.} While we treat the discrete update \eqref{eq:beta-update} as the primary dynamics, it is sometimes useful to approximate the expected trajectory of the posterior mean $C_t(u,c)$ by a deterministic ODE. Under stationarity and large-sample assumptions, replacing the stochastic evidence streams by their expectations yields an approximation of the form $\dot{C}=r(u,c)\,C(1-C)$, where $r(u,c)$ is a net evidence rate (roughly, expected positive evidence minus expected preemption/error evidence per unit time, with $\rho_t$ determining the effective opportunity mass). We use this ODE only for qualitative fixed-point and comparative-statics arguments.
+\end{note}
 
 
-\subsection{Bootstrapping Novel Constructions}
+\subsection{How apparent categorical gaps arise without hard bans}
+\label{sec:categorical-without-bans}
 
-For previously unseen constructions, initial entrenchment is estimated through structural similarity:
-
-\[
-C^0(u_{\text{novel}}) = \max_{u' \in \text{Entrenched}} \left[ C^t(u') \cdot \exp(-d(u_{\text{novel}}, u')) \right]
-\]
-where $d(\cdot, \cdot)$ is a distance metric in feature space (e.g., edit distance over dependency structures). This allows the model to make predictions about novel constructions based on analogical reasoning.
-
-\subsection{Empirical Predictions}
-
-This formalization generates testable predictions:
-
-\begin{enumerate}
-    \item \textbf{Measurement convergence}: The indicators $A(u)$, $E(u)$, $P(u)$, and $S(u)$ should load positively on a common factor identifiable as $C^t(u)$.
-    
-    \item \textbf{Dissociation of frequency and entrenchment}: High $E(u)$ with systematic error properties should predict low $C^t(u)$ and continued ungrammaticality judgments.
-    
-    \item \textbf{Time-lagged prediction}: Current values of $C^t(u)$ and $\Delta(u)$ should predict future grammaticality judgments according to the logistic growth model.
-    
-    \item \textbf{Satiation effects}: Experimental manipulation of $E(u)$ should increase $C^t(u)$ only for constructions where NoisePenalty$(u)$ is low.
-    
-    \item \textbf{Cross-linguistic consistency}: Constructions with similar values of $K(u)$ and $C^t(u)$ should show comparable acceptability across languages, controlling for structural differences.
-\end{enumerate}
-
-\subsection{Model Fitting and Validation}
-
-The model parameters can be estimated using hierarchical Bayesian methods:
-
-\begin{enumerate}
-    \item Estimate $C^t(u)$ for a sample of constructions using confirmatory factor analysis on the four indicators
-    \item Fit the logistic growth parameters using historical corpus data
-    \item Validate predictions on held-out constructions and future time points
-    \item Compare model predictions to simpler alternatives (e.g., frequency-only models)
-\end{enumerate}
+When $\mathsf{map}(u,c)=1$ and $K(u,c)$ is high but $C_t(u,c)$ is driven toward zero by
+persistent preemption in a large opportunity set, the community converges on a sharp,
+non-satiating rejection profile.  Additional processing penalties in $\mathbf{P}_i(u,c)$
+(e.g.\ systematic garden-path repair due to an entrenched fused-head construal) can strengthen
+the subjective categoricality without any independent structural veto being posited.
 
 This approach transforms the framework from a descriptive theory into a quantitative model capable of precise predictions about grammaticality judgments and their evolution over time.
 
@@ -843,25 +907,22 @@ The variable $F(u)\in[-1,0]$ represents the \textit{felt} well-formedness of an
 utterance.\footnote{Negative scale is chosen for algebraic symmetry with the
 loss terms in §\ref{sec:formalism}; any monotone rescaling would be equivalent.}
 It is computed at the output of comprehension, not during
-incremental parsing:
+incremental parsing. For clarity, we give the conditioning-known special case; the general form in \S\ref{sec:feeling-new} replaces $\widetilde{G}_t(u,c)$ with the hearer’s expected stability $\widetilde{G}^{(i)}_t(u\mid e)$ under uncertainty about $c$:
 
 \[
-F(u)=
- -\alpha\bigl(1-G(u)\bigr)
- -\beta P(u)
- -\gamma D(u)
- +\varepsilon_{\!\text{indiv}} ,
+F_{i,t}(u,c)=
+ -\alpha\bigl(1-\widetilde{G}_t(u,c)\bigr)
+ -\mathbf{\gamma}^{\top}\mathbf{P}_{i}(u,c)
+ -\delta D_i(u,c)
+ +\varepsilon_i ,
 \]
 
 \begin{itemize}
-  \item $G(u)\in\{0,1\}$ — objective grammaticality (§\ref{sec:formalism}).
-  \item $P(u)\in[0,\infty)$ — residual processing cost after noise filtering
-        (surprisal, interference, locality), normalised by the speaker’s
-        working-memory span.
-  \item $D(u)\in[0,1]$ — degree of prescriptive dissonance: the learner’s
-        stored school rules conflicting with the heard form.
-  \item $\varepsilon_{\!\text{indiv}}\sim\mathcal N(0,\sigma^2)$ — stable
-        speaker-specific bias.
+  \item $\widetilde{G}_t(u,c)\in[0,1]$ — graded stability score (§\ref{sec:formalism}).
+  \item $\mathbf{P}_i(u,c)$ — vector of implementation costs (locality, interference,
+        surprisal, garden-path reanalysis).
+  \item $D_i(u,c)\in[0,1]$ — prescriptive dissonance for individual $i$.
+  \item $\varepsilon_i \sim\mathcal N(0,\sigma^2)$ — speaker-specific bias.
 \end{itemize}
 
 %-------------------------
@@ -910,18 +971,18 @@ latent continuum on which factor analysis (as in § 1) operates.
 \item Any experiment that manipulates familiarity, working-memory load,
       or prescriptive priming will shift $F$ without changing $G$.
 \item In change-over-time studies, $F$ is the leading indicator: entrenchment
-      first dampens $\beta P(u)$, then lifts $C^t$ and flips $G$ from $0$ to~$1$.
+      first dampens cost terms in $\mathbf{P}_i$, then lifts $C_t$ and flips $G_t$ from $0$ to~$1$.
 \end{enumerate}
 
 
 
 \section{Theoretical Implications}\label{sec:implications}
 
-MMMG yields several important implications for our understanding of grammaticality:
+MVMG yields several important implications for our understanding of grammaticality:
 
-First, it supports treating grammaticality as an emergent property unified by the stability of form--meaning pairings. Different patterns in the distribution of grammatical constructions across adjective types illustrate this~-- despite the existence of clear patterns governing modifier selection by adjectives, these patterns resist reduction to simple rules. Instead, they arise from complex interactions between modifier semantics, adjective scale structure, and discourse-pragmatic factors. For instance, the distribution of \textit{much} versus \textit{more} with different adjective classes (comparative governors, participial adjectives, etc.) shows complex patterns that can be explained but not easily predicted from simpler principles \autocite{reynolds2024why}. This helps explain why efforts to reduce grammaticality to simple necessary and sufficient conditions have repeatedly fallen short.
+First, it supports treating grammaticality as an emergent property unified by the stability of form--value relations. Different patterns in the distribution of grammatical constructions across adjective types illustrate this~-- despite the existence of clear patterns governing modifier selection by adjectives, these patterns resist reduction to simple rules. Instead, they arise from complex interactions between modifier semantics, adjective scale structure, and discourse-pragmatic factors. For instance, the distribution of \textit{much} versus \textit{more} with different adjective classes (comparative governors, participial adjectives, etc.) shows complex patterns that can be explained but not easily predicted from simpler principles \autocite{reynolds2024why}. This helps explain why efforts to reduce grammaticality to simple necessary and sufficient conditions have repeatedly fallen short.
 
-Second, this framework clarifies how formal and usage-based approaches capture different aspects of grammatical stability. The stability of grammatical patterns depends both on their internal systematic properties (emphasized by formal approaches) and on their role in meeting communicative needs (emphasized by functional accounts). Many grammatical phenomena exhibit stability patterns that can't be reduced to local collections of features. Consider how discourse context affects grammaticality judgments: whether a construction maintains stable form--meaning relationships often depends on broader patterns of language use that can't be localized to specific morphosyntactic features. This helps explain why purely local syntactic models often fail to capture the full range of grammaticality phenomena.
+Second, this framework clarifies how formal and usage-based approaches capture different aspects of grammatical stability. The stability of grammatical patterns depends both on their internal systematic properties (emphasized by formal approaches) and on their role in meeting communicative needs (emphasized by functional accounts). Many grammatical phenomena exhibit stability patterns that can't be reduced to local collections of features. Consider how discourse context affects grammaticality judgments: whether a construction maintains stable form--value relationships often depends on broader patterns of language use that can't be localized to specific morphosyntactic features. This helps explain why purely local syntactic models often fail to capture the full range of grammaticality phenomena.
 
 Third, the analysis suggests specific predictions about how grammatical stability is maintained and lost. If grammatical constructions are maintained through multiple interacting factors, we should expect:
 \begin{enumerate}
@@ -931,79 +992,77 @@ Third, the analysis suggests specific predictions about how grammatical stabilit
     \item Gradient effects in grammaticality judgments reflecting varying degrees of stability
 \end{enumerate}
 
-Fourth, MMMG illuminates the relationship between competence and performance. Rather than treating these as fundamentally different phenomena, we can understand them as different manifestations of the same stability conditions. Processing limitations and other performance factors help shape which form--meaning pairings become stable, while those stable pairings in turn constrain possible performance patterns.
+Fourth, MVMG illuminates the relationship between competence and performance. Rather than treating these as fundamentally different phenomena, we can understand them as different manifestations of the same stability conditions. Processing limitations and other performance factors help shape which form--value relations become stable, while those stable pairings in turn constrain possible performance patterns.
 
-Finally, this approach offers a new perspective on systematic constraints in grammar, such as the English ban on left-branch extraction. Instead of viewing these as either innate rules or processing limitations, we can understand them as particularly robust stability conditions in form--meaning pairings. Their persistence reflects deep patterns of stability, while cross-linguistic variation shows how different stable solutions can emerge in different communities.
+Finally, this approach offers a new perspective on systematic constraints in grammar, such as the English ban on left-branch extraction. Instead of viewing these as either innate rules or processing limitations, we can understand them as particularly robust stability conditions in form--value relations. Their persistence reflects deep patterns of stability, while cross-linguistic variation shows how different stable solutions can emerge in different communities.
 
-These implications suggest concrete directions for future research. We need more detailed studies of how multiple properties interact to create and maintain stable form--meaning pairings, better methods for measuring degrees of stability, and closer examination of the transition points where grammatical systems reorganize. The framework also calls for renewed attention to variation across language communities, as different stability patterns may shed light on the fundamental nature of grammatical organization.
+These implications suggest concrete directions for future research. We need more detailed studies of how multiple properties interact to create and maintain stable form--value relations, better methods for measuring degrees of stability, and closer examination of the transition points where grammatical systems reorganize. The framework also calls for renewed attention to variation across language communities, as different stability patterns may shed light on the fundamental nature of grammatical organization.
 
-The crucial idea is that grammaticality represents a real linguistic kind~-- stable form--meaning pairings maintained through community practice~-- rather than merely a disjunctive collection of sufficient conditions. This unifying concept helps explain both the diversity of grammatical phenomena and their underlying commonality.
+The crucial idea is that grammaticality represents a real linguistic kind~-- stable form--value relations maintained through community practice~-- rather than merely a disjunctive collection of sufficient conditions. This unifying concept helps explain both the diversity of grammatical phenomena and their underlying commonality.
 
 \subsection{Actuation and the dynamics of grammatical change}
 
-The formal framework developed in \S\ref{sec:formalism} yields important implications for understanding when and why grammatical norms shift within speech communities. The concept of \textit{actuation}~-- the moment when community dynamics shift to favour a linguistic innovation~-- can now be defined precisely as the point when $\Delta = \alpha - \beta$ crosses zero, transforming a construction's status from systematically rejected ($\Delta < 0$) to potentially accepted ($\Delta > 0$).
+The concept of \textit{actuation} can now be defined as a sign change in the expected evidence balance for licensing. Informally, actuation occurs when the expected positive stream $s_t(u,c)$ begins to outweigh the combined negative streams $e_t(u,c)+p_t(u,c)$ across successive windows, so that the posterior mean $C_{t+1}(u,c)$ in \eqref{eq:beta-update} increases rather than decays. In the mean-field approximation (box in \S\ref{sec:update}), this corresponds to the regime in which the net evidence rate $r(u,c)$ becomes positive, yielding the familiar S-curve at the population level.
 
-This bifurcation represents a qualitative change in the community's linguistic system: what was previously a stable equilibrium at $C^t(u) = 0$ (universal rejection) becomes unstable, allowing the construction to spread through the population. The framework thus provides a principled explanation for why certain innovations succeed whilst others fail, even when both appear individually sensible or useful.
+The factors that drive such bifurcations align with the motivations discussed in \S\ref{sec:motivations}. Semantic reanalysis may increase utility (and thus $\rho_t$) by making a form--value relation more transparent or useful. Social pressures may shift utilities (prestige effects) or alter the relevant community standard. Structural motivations such as analogical extension can systematically raise licensing probability by borrowing strength from frequent neighbors. Processing innovations may reduce error rates ($e_t$) or locality costs, improving the net evidence balance.
 
-The factors that drive such bifurcations align with the motivations discussed in \S\ref{sec:motivations}. Semantic reanalysis may increase $\alpha$ by making a form--meaning pairing more transparent or useful. Social pressures may simultaneously increase $\alpha$ (through prestige effects) and decrease $\beta$ (by reducing resistance to the innovation). Structural motivations such as analogical extension can systematically raise $\alpha$ by providing speakers with familiar patterns to guide their acceptance. Processing constraints may affect both parameters: forms that become easier to parse see increased $\alpha$, whilst those that strain cognitive resources face elevated $\beta$.
+Actuation is not simply a matter of individual innovation but requires coordinated community-level change. A few speakers adopting a marginal construction does not guarantee its success; actuation demands that the underlying dynamics shift such that acceptance systematically outweighs rejection across the speech community. This explains why many innovations fail despite being individually sensible~-- they appear before the community conditions are right for the evidence balance to become positive.
 
-Actuation is not simply a matter of individual innovation but requires coordinated community-level change. A few speakers adopting a marginal construction does not guarantee its success; actuation demands that the underlying dynamics shift such that acceptance systematically outweighs rejection across the speech community. This explains why many innovations fail despite being individually sensible~-- they appear before the community conditions are right for $\Delta$ to become positive.
+The bifurcation framework also clarifies why certain changes appear to accelerate once they begin. Near the critical point where evidence streams balance, small perturbations in community attitudes can trigger rapid shifts between rejection and acceptance. As the evidence balance becomes more strongly positive, the construction moves further from the unstable rejection state, making reversal increasingly unlikely. This creates the characteristic S-curve pattern observed in many documented language changes~\autocite{kroch1989}, emerging naturally from the underlying population dynamics.
 
-The bifurcation framework also clarifies why certain changes appear to accelerate once they begin. Near the critical point $\Delta = 0$, small perturbations in community attitudes can trigger rapid shifts between rejection and acceptance. As $\Delta$ becomes more strongly positive, the construction moves further from the unstable rejection state, making reversal increasingly unlikely. This creates the characteristic S-curve pattern observed in many documented language changes~\autocite{kroch1989}, emerging naturally from the underlying population dynamics.
-
-For constructions currently existing in the marginal zone~-- those with $\Delta \approx 0$~-- the framework predicts heightened sensitivity to external factors and greater cross-community variation. Small speech communities may show particularly volatile behaviour near bifurcation points, as stochastic effects can overwhelm weak deterministic trends. This may explain why certain changes appear to originate in geographically or socially peripheral communities before spreading to larger population centres.
+For constructions currently existing in the marginal zone~-- those with near-zero evidence balance~-- the framework predicts heightened sensitivity to external factors and greater cross-community variation. Small speech communities may show particularly volatile behaviour near bifurcation points, as stochastic effects can overwhelm weak deterministic trends. This may explain why certain changes appear to originate in geographically or socially peripheral communities before spreading to larger population centres.
 
 \subsection{Macro-typological constraints on grammatical design}
 
 Recent macro-typological work sharpens the question of how strongly grammar is constrained across languages. \textcite{verkerk2025} test 191 implicational universals from the Universals Archive against Grambank’s 2{,}430-language morphosyntactic sample, using Bayesian models that control explicitly for genealogical and areal non-independence and then follow up with spatiophylogenetic analyses of evolutionary rates. A naïve analysis that ignores relatedness appears to support the vast majority of proposed universals, but once phylogeny and geography are accounted for, only about a third (60 of 191) remain statistically supported. Support is concentrated in relatively narrow domains: most hierarchical universals and a substantial minority of “narrow” word-order universals survive, whereas “broad” word-order universals and miscellaneous others fare poorly. Diachronically, supported universals typically correspond to “harmonic” combinations of features (for instance, consistent head–dependent orders) that languages are more likely to evolve into than out of, with these preferred configurations recurring independently across lineages.
 
-From an MMMG perspective, these findings are best viewed as identifying recurrent attractors in the global design space of morphosyntactic form–meaning pairings rather than as evidence for a small set of exceptionless grammatical laws. On the present account, such attractors correspond to configurations for which the net bias $\Delta(u)$ in the entrenchment dynamics of \S\ref{sec:community-dynamics} is positive across a wide range of communities: they are cognitively and communicatively favourable enough that repeated episodes of change tend to push $C^{t}(u)$ toward fixation in lineage after lineage. At the same time, the fact that roughly two-thirds of the tested universals fail once autocorrelation is controlled for dovetails with a de-idealized view of grammaticality. Community-specific conventions still have considerable freedom in how they realize form–meaning pairings, with only some regions of the space strongly preferred. Large-scale comparative work of this kind therefore complements MMMG: it circumscribes which parts of morphosyntactic possibility space are globally stable, while the present framework provides a meso-level account of how local community dynamics and form–meaning coherence give rise to those long-run macro-typological regularities.
+From an MVMG perspective, these findings are best viewed as identifying recurrent attractors in the global design space of morphosyntactic form–value relations rather than as evidence for a small set of exceptionless grammatical laws. On the present account, such attractors correspond to configurations for which the net evidence balance (positive evidence $s_t$ vs.\ preemption/error mass $e_t+p_t$) in the entrenchment dynamics of \S\ref{sec:update} is positive across a wide range of communities: they are cognitively and communicatively favourable enough that repeated episodes of change tend to push $C_t(u,c)$ toward fixation in lineage after lineage. At the same time, the fact that roughly two-thirds of the tested universals fail once autocorrelation is controlled for dovetails with a de-idealized view of grammaticality. Community-specific conventions still have considerable freedom in how they realize form–value relations, with only some regions of the space strongly preferred. Large-scale comparative work of this kind therefore complements MVMG: it circumscribes which parts of morphosyntactic possibility space are globally stable, while the present framework provides a meso-level account of how local community dynamics and form–value coherence give rise to those long-run macro-typological regularities.
 
 \subsection{Relationship to Generative Grammar}
 
 The generative tradition has provided linguistics with foundational contributions into the systematic nature of grammatical knowledge. Most fundamentally, it demonstrates that grammaticality can't be reduced to semantic plausibility, processing ease, or frequency of attestation. When Chomsky introduced \textit{Colorless green ideas sleep furiously}, he showed definitively that speakers can recognize syntactically well-formed sentences even when they are semantically bizarre. The framework coherently explains categorical constraints like the impossibility of extracting determiner-adjective sequences in English (*\textit{Which do you prefer car?}), and critically, it captures the fact that such sequences remain ungrammatical even when their intended meaning is clear and processing demands are low. 
 
-MMMG shares with generative grammar several foundational observations: that grammaticality judgments reflect systematic, real patterns \autocite{Dennett1991}; that these patterns can't be reduced to meaning or processing alone; and that certain syntactic configurations appear to be categorically excluded regardless of context. The analysis of multiple center embeddings presented in \S\ref{sec:processing} builds directly on ideas about recursive structure, and our treatment of systematic blocking (\S\ref{sec:systematic-blocking}) acknowledges the generative discovery that some constructions appear to be universally excluded by the grammar itself.
+MVMG shares with generative grammar several foundational observations: that grammaticality judgments reflect systematic, real patterns \autocite{Dennett1991}; that these patterns can't be reduced to meaning or processing alone; and that certain syntactic configurations appear to be categorically excluded regardless of context. The analysis of multiple center embeddings presented in \S\ref{sec:processing} builds directly on ideas about recursive structure, and our treatment of systematic blocking (\S\ref{sec:systematic-blocking}) acknowledges the generative discovery that some constructions appear to be universally excluded by the grammar itself.
 
 The generative tradition has also identified fascinating puzzles that any theory of grammar must address, such as the independent relative \textit{whose} (\ref{ex:whose}). As \textcite{hankamer1973whose} observe, this construction appears to violate no syntactic principles: independent genitives are possible (\textit{Mine was visiting}), independent interrogative \textit{whose} is grammatical (\textit{Whose was open?}), and \textit{whose} functions perfectly well as a dependent relative pronoun (\textit{the student whose friend was visiting}). The generative tradition's careful documentation of such cases, where seemingly parallel constructions show puzzlingly different grammatical status, has been invaluable in pushing theoretical development forward.
 
-Where MMMG departs from generative grammar is in its explanation of such patterns. Rather than positing an autonomous syntactic component, MMMG suggests that grammatical constraints emerge from the interaction of form--meaning pairings within specific language communities and situations. The independent relative \textit{whose} construction illustrates this difference. For this construction to be felicitous, multiple conditions must converge: the possessor must be sufficiently accessible in the discourse while the possessum is predictable enough to license ellipsis, yet the possessive relationship needs to be semantically significant enough to warrant explicit marking. Moreover, this configuration must occur in a context where a relative clause is the optimal way to package this information. The extreme rarity of contexts satisfying all these conditions appears to prevent the construction from becoming conventionalized in the grammar at all~-- speakers encounter it so rarely, despite perfectly common components, that even when all conditions align perfectly, the construction feels alien.
+Where MVMG departs from generative grammar is in its explanation of such patterns. Rather than positing an autonomous syntactic component, MVMG suggests that grammatical constraints emerge from the interaction of form--value relations within specific language communities and situations. The independent relative \textit{whose} construction illustrates this difference. For this construction to be felicitous, multiple conditions must converge: the possessor must be sufficiently accessible in the discourse while the possessum is predictable enough to license ellipsis, yet the possessive relationship needs to be semantically significant enough to warrant explicit marking. Moreover, this configuration must occur in a context where a relative clause is the optimal way to package this information. The extreme rarity of contexts satisfying all these conditions appears to prevent the construction from becoming conventionalized in the grammar at all~-- speakers encounter it so rarely, despite perfectly common components, that even when all conditions align perfectly, the construction feels alien.
 
-This approach draws on the generative observations about systematic constraints while providing a different perspective on their source. Where generative theory must explain why a syntactically possible and pragmatically useful construction is systematically avoided, MMMG suggests that extreme mismatches between predicted and observed frequency may themselves be evidence of grammatical blocking, even when the exact nature of the block remains unclear. The framework thus preserves what is most valuable in generative theory~-- its recognition of systematic grammatical constraints~-- while embedding those insights in a broader theory of how form--meaning pairings become established and maintained in language communities.
+This approach draws on the generative observations about systematic constraints while providing a different perspective on their source. Where generative theory must explain why a syntactically possible and pragmatically useful construction is systematically avoided, MVMG suggests that extreme mismatches between predicted and observed frequency may themselves be evidence of grammatical blocking, even when the exact nature of the block remains unclear. The framework thus preserves what is most valuable in generative theory~-- its recognition of systematic grammatical constraints~-- while embedding those insights in a broader theory of how form--value relations become established and maintained in language communities.
 
-Other cases that generative grammar struggles to explain are those that are grammatical with one meaning but ungrammatical with another, such as (\ref{ex:have-years}) \textit{I have 16 years}. While syntactically identical to grammatical expressions like \textit{I have 16 dollars}, this construction becomes ungrammatical specifically when used to express age. A purely syntactic account must somehow explain why the same structure is well-formed in one case but ill-formed in another, despite no apparent syntactic differences. MMMG, in contrast, locates the source of ungrammaticality in the community's form--meaning conventions: \textit{have}+numeral years has become conventionalized for expressing duration or future time (\textit{I have 16 years until retirement}) but blocked for expressing age, where a different construction (\textit{I am 16 years old}) is the established pattern. Similar cases arise with plural forms that are grammatical with some meanings but not others (e.g., \textit{peoples} for ethnic groups but not multiple individuals) and with verbs that resist certain arguments despite no obvious syntactic prohibition (e.g., \textit{discuss about}). These meaning-dependent grammaticality patterns suggest that what gets blocked or licensed often depends on specific form--meaning associations rather than purely structural constraints.
+Other cases that generative grammar struggles to explain are those that are grammatical with one meaning but ungrammatical with another, such as (\ref{ex:have-years-sem}) \textit{I have 16 years}. While syntactically identical to grammatical expressions like \textit{I have 16 dollars}, this construction becomes ungrammatical specifically when used to express age. A purely syntactic account must somehow explain why the same structure is well-formed in one case but ill-formed in another, despite no apparent syntactic differences. MVMG, in contrast, locates the source of ungrammaticality in the community's form--value conventions: \textit{have}+numeral years has become conventionalized for expressing duration or future time (\textit{I have 16 years until retirement}) but blocked for expressing age, where a different construction (\textit{I am 16 years old}) is the established pattern. Similar cases arise with plural forms that are grammatical with some meanings but not others (e.g., \textit{peoples} for ethnic groups but not multiple individuals) and with verbs that resist certain arguments despite no obvious syntactic prohibition (e.g., \textit{discuss about}). These meaning-dependent grammaticality patterns suggest that what gets blocked or licensed often depends on specific form--value associations rather than purely structural constraints.
 
 \subsection{Relationship to Construction Grammar}
 
-Construction Grammar (CxG) \autocite{fillmore1988mechanisms, kay1999grammatical,  goldberg1995constructions, goldberg2019, sag2012sign} represents a significant theoretical advancs in our understanding of linguistic knowledge. At its core, CxG argues that language consists of learned pairings between form and meaning at multiple levels of complexity. These form--meaning pairings, or constructions, range from individual morphemes to abstract syntactic patterns. This perspective helps explain phenomena that proved challenging for earlier approaches, which often struggled to account for how speakers learn and use both regular patterns and idiomatic expressions without requiring separate mechanisms for ``core'' grammar versus ``periphery''.
+Construction Grammar (CxG) \autocite{fillmore1988mechanisms, kay1999grammatical,  goldberg1995constructions, goldberg2019, sag2012sign} represents a significant theoretical advance in our understanding of linguistic knowledge. At its core, CxG argues that language consists of learned pairings between form and meaning at multiple levels of complexity. These form--value relations, or constructions, range from individual morphemes to abstract syntactic patterns. This perspective helps explain phenomena that proved challenging for earlier approaches, which often struggled to account for how speakers learn and use both regular patterns and idiomatic expressions without requiring separate mechanisms for ``core'' grammar versus ``periphery''.
 
 CxG's most valuable contribution lies in demonstrating that meaning suffuses all levels of grammatical organization. Rather than treating syntax as an autonomous formal system that interfaces with semantics only at certain designated points, CxG reveals how meaning and form are inseparable aspects of linguistic knowledge. For instance, the \textit{What's} X \textit{doing} Y? construction (as in \textit{What's this fly doing in my soup?}) carries an implication of incongruity that can't be derived from its component parts \autocite{kay1999grammatical}. Such examples provide compelling evidence that constructional meaning exists beyond pure compositionality and that constructions inherently package form and meaning together.
 
 Recent work strengthens the empirical foundation for CxG's framework. \textcite{weissweiler2023construction} demonstrate how construction grammar provides a theoretical framework for probing how neural language models handle different levels of linguistic abstraction. Their findings suggest that transformer models may learn construction-like representations, offering new evidence for CxG's cognitive reality while also providing tools for analyzing artificial neural networks.
 
-MMMG shares these fundamental CxG views about the centrality of form--meaning pairings and the importance of treating meaning as integral to grammar rather than merely interfacing with it. But MMMG departs from CxG on at least one key point: while CxG treats all constructions as instances of the same theoretical kind, differing only in their internal complexity and degree of schematicity, MMMG maintains that morphosyntactic form--meaning pairings play a uniquely privileged role in grammaticality judgments.
+MVMG shares these fundamental CxG views about the centrality of form--value relations and the importance of treating meaning as integral to grammar rather than merely interfacing with it. But MVMG departs from CxG on at least one key point: while CxG treats all constructions as instances of the same theoretical kind, differing only in their internal complexity and degree of schematicity, MVMG maintains that morphosyntactic form--value relations play a uniquely privileged role in grammaticality judgments.
 
 This difference becomes clear when we account for how speakers judge various types of linguistic violations. While CxG's unified treatment of constructions suggests no principled basis for treating different types of violations differently, speakers consistently judge morphosyntactic violations (like \textit{*Furiously sleep ideas green colorless}) as ``ungrammatical'' in a qualitatively different way than they judge violations of register, politeness norms, or genre expectations. Even when morphosyntactic violations result in perfectly interpretable utterances (like \textit{*I have 25 years} to express age), speakers treat them as ungrammatical in a way that differs from their reactions to pragmatically inappropriate but grammatically stable expressions.
 
-This asymmetry suggests that morphosyntax constitutes a distinct type of linguistic knowledge~-- not because it operates autonomously from meaning (as earlier formal theories claimed), but because it represents a particular kind of form--meaning pairing that plays a special role in defining the basic combinatorial possibilities of a language. MMMG thus preserves CxG's fundamental ideas about the inseparability of form and meaning while recognizing the unique status of morphosyntactic form--meaning pairings in speakers' grammatical knowledge.
+This asymmetry suggests that morphosyntax constitutes a distinct type of linguistic knowledge~-- not because it operates autonomously from meaning (as earlier formal theories claimed), but because it represents a particular kind of form--value relation that plays a special role in defining the basic combinatorial possibilities of a language. MVMG thus preserves CxG's fundamental ideas about the inseparability of form and meaning while recognizing the unique status of morphosyntactic form--value relations in speakers' grammatical knowledge.
 
-By maintaining this position, MMMG captures what is most valuable in the CxG approach~-- its systematic treatment of form--meaning pairings across different levels of linguistic structure~-- while better accounting for the special status that speakers accord to morphosyntactic form--meaning pairings in their grammaticality judgments. Rather than treating this special status as evidence for autonomous syntax (as generative approaches do), MMMG suggests it reflects the unique role that morphosyntactic patterns play in establishing the basic meaning-making resources of a language community.
+By maintaining this position, MVMG captures what is most valuable in the CxG approach~-- its systematic treatment of form--value relations across different levels of linguistic structure~-- while better accounting for the special status that speakers accord to morphosyntactic form--value relations in their grammaticality judgments. Rather than treating this special status as evidence for autonomous syntax (as generative approaches do), MVMG suggests it reflects the unique role that morphosyntactic patterns play in establishing the basic meaning-making resources of a language community.
 
 \subsection{Relationship to Usage-Based Approaches}
 
-MMMG shares with Usage-Based approaches (UBA) \autocite{bybee2006, bybee2007frequency, bybee2010} the idea that linguistic knowledge emerges from patterns of actual language use rather than from an autonomous formal system. Both perspectives reject the notion that grammaticality can be reduced to abstract rules operating independently of meaning and context. However, MMMG diverges from UBA in its treatment of the special status of morphosyntactic well-formedness, particularly in cases where frequency patterns present theoretical puzzles.
+MVMG shares with Usage-Based approaches (UBA) \autocite{bybee2006, bybee2007frequency, bybee2010} the idea that linguistic knowledge emerges from patterns of actual language use rather than from an autonomous formal system. Both perspectives reject the notion that grammaticality can be reduced to abstract rules operating independently of meaning and context. However, MVMG diverges from UBA in its treatment of the special status of morphosyntactic well-formedness, particularly in cases where frequency patterns present theoretical puzzles.
 
-The analysis of independent relative \textit{whose}, as in \textsuperscript{?}\textit{I saw Joan, a friend of whose was visiting} is a case in point. A simple UBA account might predict that this construction's marginality stems from its low frequency. But this explanation proves insufficient: the construction isn't merely rare but dramatically rarer than we would expect given the frequency of its component parts. Independent \textit{whose} appears in interrogatives (\textit{Whose is that?}), and the relative \textit{whose} is common in dependent contexts (\textit{the student whose paper was late}). Given these frequencies, analogical extension should make the independent relative use more common than it is. The extreme rarity of independent relative \textit{whose} in corpora, despite the grammatical availability of comparable elements and contexts, marks it as more than just infrequent~-- it points to a systematic gap in form--meaning pairings.
+The analysis of independent relative \textit{whose}, as in \textsuperscript{?}\textit{I saw Joan, a friend of whose was visiting} is a case in point. A simple UBA account might predict that this construction's marginality stems from its low frequency. But this explanation proves insufficient: the construction isn't merely rare but dramatically rarer than we would expect given the frequency of its component parts. Independent \textit{whose} appears in interrogatives (\textit{Whose is that?}), and the relative \textit{whose} is common in dependent contexts (\textit{the student whose paper was late}). Given these frequencies, analogical extension should make the independent relative use more common than it is. The extreme rarity of independent relative \textit{whose} in corpora, despite the grammatical availability of comparable elements and contexts, marks it as more than just infrequent~-- it points to a systematic gap in form--value relations.
 
-Where UBA would treat all linguistic patterns~-- whether phonological, morphological, syntactic, or pragmatic~-- as equally driven by usage and frequency effects, MMMG maintains that morphosyntactic patterns play a uniquely central role in grammaticality judgments. This helps explain why some extremely rare constructions remain fully grammatical (like center-embedded relatives), while other constructions that should be analogically available remain stubbornly marginal despite clear communicative potential. The framework suggests that what appears to be simple rarity may sometimes reflect deeper incompatibilities in form--meaning mapping that resist entrenchment even when analogical patterns would predict otherwise.
+Where UBA would treat all linguistic patterns~-- whether phonological, morphological, syntactic, or pragmatic~-- as equally driven by usage and frequency effects, MVMG maintains that morphosyntactic patterns play a uniquely central role in grammaticality judgments. This helps explain why some extremely rare constructions remain fully grammatical (like center-embedded relatives), while other constructions that should be analogically available remain stubbornly marginal despite clear communicative potential. The framework suggests that what appears to be simple rarity may sometimes reflect deeper incompatibilities in form--value mapping that resist entrenchment even when analogical patterns would predict otherwise.
 
-This theoretical position allows MMMG to incorporate many valuable findings from UBA~-- particularly regarding the role of frequency in entrenching constructional patterns~-- while maintaining crucial distinctions between morphosyntactic well-formedness and other types of linguistic acceptability. Cases like independent relative \textit{whose} demonstrate that we need a theory that can distinguish between patterns that are simply uncommon and those that are systematically excluded from the grammar in ways that resist frequency-based explanation.
+This theoretical position allows MVMG to incorporate many valuable findings from UBA~-- particularly regarding the role of frequency in entrenching constructional patterns~-- while maintaining crucial distinctions between morphosyntactic well-formedness and other types of linguistic acceptability. Cases like independent relative \textit{whose} demonstrate that we need a theory that can distinguish between patterns that are simply uncommon and those that are systematically excluded from the grammar in ways that resist frequency-based explanation.
 
 \subsection{Relationship to Logicality of Language Accounts}
 
 An alternative perspective, prominent in recent formal semantics, suggests certain types of unacceptability stem from the language faculty itself possessing a deductive system that identifies and filters sentences with logically trivial meanings (tautologies or contradictions) \autocite[cf.][]{del_pinal_logicality_2019, chierchia_logic_2013, fox_economy_2000}. This `logicality of language' hypothesis attempts to explain, for example, systematic restrictions on quantifiers by arguing the unacceptable cases are `L-trivial'~-- their triviality arises solely from the meaning and configuration of logical/functional terms (like \textit{every}, \textit{some}, \textit{not}), irrespective of the open-class words (like \textit{student}, \textit{run}) \autocite{gajewski_l-triviality_2009}. A key challenge is explaining why simple tautologies or contradictions (e.g., \textit{It is raining and it is not raining}) are often acceptable. \textcite{del_pinal_logicality_2019} argues against `Logical Skeletons' (which assume the system ignores open-class word identity) in favour of `LF+RESCALE', a view where the system sees standard logical forms but allows optional, context-dependent modulation of open-class terms (e.g., interpreting the second `raining' as `raining hard') to yield non-trivial meanings.
 
-MMMG offers a potentially broader and more unified account. While `logicality' approaches excel at explaining restrictions tied to functional vocabulary via L-triviality, MMMG aims to cover a wider spectrum of ungrammaticality, including cases not easily reducible to logical contradiction, such as absent form--meaning pairings (\ref{ex:nonsense}), strong deviations from conventional community forms (\ref{ex:sheeps}), or extreme, unexpected rarity (\ref{ex:whose}). Furthermore, by grounding grammaticality in community-specific conventions (\S\ref{sec:f-m-pair-in-community}) and allowing for gradient compatibility ($K(u)$) and acceptance ($C^t(u)$), MMMG inherently accommodates cross-linguistic variation and degrees of acceptability, aspects less central to the L-triviality filter. While LF+RESCALE provides a specific mechanism for acceptable `trivialities', MMMG suggests these might arise from more general principles of interpretation within community norms, potentially avoiding the need to posit a dedicated deductive module and specific operators like RESCALE, and offering a clearer distinction between objective grammatical status and subjective processing effects or `feelings' (\S\ref{sec:feeling}). Thus, MMMG frames grammaticality as an emergent consequence of communicative practice rather than a direct output of logical computation within syntax.
+MVMG offers a potentially broader and more unified account. While `logicality' approaches excel at explaining restrictions tied to functional vocabulary via L-triviality, MVMG aims to cover a wider spectrum of ungrammaticality, including cases not easily reducible to logical contradiction, such as absent form--value relations (\ref{ex:nonsense}), strong deviations from conventional community forms (\ref{ex:sheeps}), or extreme, unexpected rarity (\ref{ex:whose}). Furthermore, by grounding grammaticality in community-specific conventions (\S\ref{sec:f-m-pair-in-community}) and allowing for gradient compatibility ($K(u,c)$) and acceptance ($C_t(u,c)$), MVMG inherently accommodates cross-linguistic variation and degrees of acceptability, aspects less central to the L-triviality filter. While LF+RESCALE provides a specific mechanism for acceptable `trivialities', MVMG suggests these might arise from more general principles of interpretation within community norms, potentially avoiding the need to posit a dedicated deductive module and specific operators like RESCALE, and offering a clearer distinction between objective grammatical status and subjective processing effects or `feelings' (§\ref{sec:feeling-new}). Thus, MVMG frames grammaticality as an emergent consequence of communicative practice rather than a direct output of logical computation within syntax.
 
 
 
@@ -1018,11 +1077,11 @@ Recent work by \textcite{scottphillips2024communication} offers a fundamental ob
     \label{fig:impossible trident}
 \end{figure}
 
-MMMG shares several key premises with this account. Both frameworks reject the need for an innate grammar faculty, locating linguistic intuitions instead within general cognitive systems. Both recognize that language emerges from communicative needs rather than autonomous syntactic principles. MMMG's emphasis on community-specific form--meaning pairings builds directly on Scott-Phillips's arguments about how communicative pressures shape linguistic conventions.
+MVMG shares several key premises with this account. Both frameworks reject the need for an innate grammar faculty, locating linguistic intuitions instead within general cognitive systems. Both recognize that language emerges from communicative needs rather than autonomous syntactic principles. MVMG's emphasis on community-specific form--value relations builds directly on Scott-Phillips's arguments about how communicative pressures shape linguistic conventions.
 
-The frameworks differ primarily in their explanatory mechanisms. Where Scott-Phillips argues that grammaticality judgments reduce to impossibilities of efficient interpretation, MMMG suggests that while communicative pressures shape which form--meaning pairings become conventionalized, these pairings then create systematic constraints that can't be reduced to efficiency alone. For Scott-Phillips, we must demonstrate that (\ref{ex:tense}) contains inherent contradictions making efficient interpretation impossible. MMMG instead analyzes how the meaning of tense--aspect morphosyntax clashes with the meaning of the lexeme \textit{yesterday}. While these analyses might ultimately converge, it remains unclear why the criterion of inherent impossibility of interpretation should apply specifically to morphosyntactic violations rather than to lexical-lexical conflicts or certain phonological patterns. The scope of what constitutes an interpretive impossibility requires further theoretical development.
+The frameworks differ primarily in their explanatory mechanisms. Where Scott-Phillips argues that grammaticality judgments reduce to impossibilities of efficient interpretation, MVMG suggests that while communicative pressures shape which form--value relations become conventionalized, these pairings then create systematic constraints that can't be reduced to efficiency alone. For Scott-Phillips, we must demonstrate that (\ref{ex:tense}) contains inherent contradictions making efficient interpretation impossible. MVMG instead analyzes how the meaning of tense--aspect morphosyntax clashes with the meaning of the lexeme \textit{yesterday}. While these analyses might ultimately converge, it remains unclear why the criterion of inherent impossibility of interpretation should apply specifically to morphosyntactic violations rather than to lexical-lexical conflicts or certain phonological patterns. The scope of what constitutes an interpretive impossibility requires further theoretical development.
 
-This difference has important empirical implications. MMMG makes relatively concrete demands: we can test whether specific form--meaning pairings are stable within a community and identify precise points of morphosyntactic-lexical conflict. The challenge for relevance-theoretic accounts, as Scott-Phillips (personal communication, Dec. 16, 2024) acknowledges, lies in establishing independent, empirically vulnerable claims about what makes efficient interpretation inherently impossible rather than merely difficult. Future work comparing specific predictions of each approach~-- particularly around how novel constructions become acceptable or unacceptable~-- could help clarify their relationship and complementary insights.
+This difference has important empirical implications. MVMG makes relatively concrete demands: we can test whether specific form--value relations are stable within a community and identify precise points of morphosyntactic-lexical conflict. The challenge for relevance-theoretic accounts, as Scott-Phillips (personal communication, Dec. 16, 2024) acknowledges, lies in establishing independent, empirically vulnerable claims about what makes efficient interpretation inherently impossible rather than merely difficult. Future work comparing specific predictions of each approach~-- particularly around how novel constructions become acceptable or unacceptable~-- could help clarify their relationship and complementary insights.
 
 \subsection{Predictions}
 
@@ -1043,7 +1102,7 @@ For instance, consider the case of the independent relative \textit{whose}, as i
     \item Competition with a Preferred Alternative: The more frequent and established construction with the dependent relative pronoun (\textit{whose package was open}) competes with the independent \textit{whose} form.
 \end{enumerate}
 
-This multi-factorial analysis of ungrammaticality parallels findings from acquisition research. \textcite{dressler1995} demonstrate that children's early morphological development shows similar interactions between frequency, processing constraints, and competition from established forms. Their work suggests these factors represent general principles in how form--meaning pairings become stabilized or blocked within a community.
+This multi-factorial analysis of ungrammaticality parallels findings from acquisition research. \textcite{dressler1995} demonstrate that children's early morphological development shows similar interactions between frequency, processing constraints, and competition from established forms. Their work suggests these factors represent general principles in how form--value relations become stabilized or blocked within a community.
 
 According to the framework, repeated exposure could lead to satiation because of:
 
@@ -1056,11 +1115,11 @@ According to the framework, repeated exposure could lead to satiation because of
 Crucially, the framework predicts that satiation will be more likely and more pronounced for constructions where the ungrammaticality is due to factors like low frequency, processing difficulty, or weak morphosyntactic integration, rather than a violation like that imposed by left branch extraction (e.g., *\textit{What did you see car?}).
 
 \bigskip
-The MMMG framework also makes specific predictions about second language acquisition. Since grammaticality judgments depend on established form--meaning pairings within a language community, learners encountering a new language should initially perceive it as lacking meaningful structure rather than explicitly ungrammatical. While some meaning may be derived through cognates or gestures, much of the input will appear as ``noise'' due to the absence of shared conventions. As learners begin acquiring basic form--meaning correspondences, they are predicted to show heightened sensitivity to violations, marking as ungrammatical many constructions that native speakers accept. This sensitivity reflects interference from L1 form--meaning pairings and incomplete internalization of L2 norms, both of which contribute to the gradient nature of early L2 grammaticality judgments.
+The MVMG framework also makes specific predictions about second language acquisition. Since grammaticality judgments depend on established form--value relations within a language community, learners encountering a new language should initially perceive it as lacking meaningful structure rather than explicitly ungrammatical. While some meaning may be derived through cognates or gestures, much of the input will appear as ``noise'' due to the absence of shared conventions. As learners begin acquiring basic form--value correspondences, they are predicted to show heightened sensitivity to violations, marking as ungrammatical many constructions that native speakers accept. This sensitivity reflects interference from L1 form--value relations and incomplete internalization of L2 norms, both of which contribute to the gradient nature of early L2 grammaticality judgments.
 
-Finally, as learners join the L2 speech community and internalize its form--meaning pairings, their judgments should gradually align with those of competent speakers or signers. This trajectory differs from traditional competence-based accounts, which treat grammaticality as an all-or-nothing property. Instead, the MMMG framework predicts that learners’ judgments will initially be more gradient, reflecting partial integration into multiple linguistic systems. This gradience arises from the competing influences of L1 transfer, incomplete entrenchment of L2 norms, and reduced exposure to native-like input. This view aligns with Selinker's (\citeyear{selinker1972}) concept of interlanguage, which similarly conceptualizes L2 development as involving systematic intermediate states rather than simple progression from ``incorrect'' to ``correct'' grammar.
+Finally, as learners join the L2 speech community and internalize its form--value relations, their judgments should gradually align with those of competent speakers or signers. This trajectory differs from traditional competence-based accounts, which treat grammaticality as an all-or-nothing property. Instead, the MVMG framework predicts that learners’ judgments will initially be more gradient, reflecting partial integration into multiple linguistic systems. This gradience arises from the competing influences of L1 transfer, incomplete entrenchment of L2 norms, and reduced exposure to native-like input. This view aligns with Selinker's (\citeyear{selinker1972}) concept of interlanguage, which similarly conceptualizes L2 development as involving systematic intermediate states rather than simple progression from ``incorrect'' to ``correct'' grammar.
 
-The prediction of initial ``meaninglessness'' could be tested through psycholinguistic measures, such as ERP studies tracking neural responses to unfamiliar structures or self-paced reading tasks assessing the processing of anomalous input. These methods would provide empirical evidence distinguishing the MMMG framework from traditional SLA models, which emphasize innate competence and static grammaticality judgments. Integrating these predictions with research on interlanguage development and transfer could further refine the framework’s applicability to SLA contexts.
+The prediction of initial ``meaninglessness'' could be tested through psycholinguistic measures, such as ERP studies tracking neural responses to unfamiliar structures or self-paced reading tasks assessing the processing of anomalous input. These methods would provide empirical evidence distinguishing the MVMG framework from traditional SLA models, which emphasize innate competence and static grammaticality judgments. Integrating these predictions with research on interlanguage development and transfer could further refine the framework’s applicability to SLA contexts.
 
 \section{Limitations}\label{sec:limitations}
 
@@ -1094,17 +1153,17 @@ Despite these limitations, the proposed framework provides a robust and flexible
 
 \section{Conclusion}
 
-This paper has proposed a novel framework for understanding grammaticality, one that moves beyond the traditional competence-performance dichotomy and embraces the dynamic interplay of form, meaning, processing constraints, and sociolinguistic factors. By conceptualizing grammaticality as an emergent property of stable form--meaning pairings within specific language communities, the framework accounts for both the categorical and gradient aspects of grammaticality judgments. It explains why some constructions are rigidly ungrammatical, others fluctuate between marginal and acceptable, and still others evolve into stable, conventionalized patterns.
+This paper has proposed a novel framework for understanding grammaticality, one that moves beyond the traditional competence-performance dichotomy and embraces the dynamic interplay of form, meaning, processing constraints, and sociolinguistic factors. By conceptualizing grammaticality as an emergent property of stable form--value relations within specific language communities, the framework accounts for both the categorical and gradient aspects of grammaticality judgments. It explains why some constructions are rigidly ungrammatical, others fluctuate between marginal and acceptable, and still others evolve into stable, conventionalized patterns.
 
-The framework's core tenets~-- that grammaticality involves conventional form--meaning pairings, that these pairings interact with processing constraints and sociolinguistic factors, and that different types of violations arise from different mismatches between form and meaning~-- provide a principled basis for understanding a wide range of linguistic phenomena. The analysis of examples drawn from both formal syntax and experimental data has demonstrated the framework's explanatory power, illuminating challenging cases that have resisted unified explanation in previous approaches.
+The framework's core tenets~-- that grammaticality involves conventional form--value relations, that these pairings interact with processing constraints and sociolinguistic factors, and that different types of violations arise from different mismatches between form and meaning~-- provide a principled basis for understanding a wide range of linguistic phenomena. The analysis of examples drawn from both formal syntax and experimental data has demonstrated the framework's explanatory power, illuminating challenging cases that have resisted unified explanation in previous approaches.
 
 The framework generates testable predictions about which ungrammatical constructions might change over time and offers potential applications for language teaching, clinical linguistics, and language documentation. It predicts that grammaticality judgments will vary systematically across languages depending on the degree of alignment between morphosyntactic form and lexical meaning and that satiation effects should be more readily inducible for constructions where ungrammaticality stems from factors like low frequency, processing difficulty, or weak morphosyntactic integration rather than categorical violations.
 
-Integrating the methodologies outlined in the previous section offers a path toward a more comprehensive understanding of how form--meaning pairings become stable within communities, what factors promote or inhibit their entrenchment, and how cross-linguistic variation arises. Future work can refine the metrics for identifying stable form--meaning mappings, develop computational models to predict emergent regularities, and expand the empirical base to underrepresented languages and language contact situations.
+Integrating the methodologies outlined in the previous section offers a path toward a more comprehensive understanding of how form--value relations become stable within communities, what factors promote or inhibit their entrenchment, and how cross-linguistic variation arises. Future work can refine the metrics for identifying stable form--value mappings, develop computational models to predict emergent regularities, and expand the empirical base to underrepresented languages and language contact situations.
 
 While acknowledging the limitations of the current formulation, this paper argues that the proposed framework represents a significant step toward a more comprehensive and nuanced understanding of grammaticality. By integrating insights from generative, functional, and usage-based approaches, it offers a unified perspective that recognizes the multifaceted nature of linguistic knowledge and its grounding in both individual cognition and community practice.
 
-Future research should focus on further refining the framework, developing more precise methods for measuring form--meaning stability, and investigating the complex interactions between different types of motivations (semantic, social, structural, and iconic). Cross-linguistic studies, particularly those focusing on languages with different degrees of morphosyntactic integration of features like gender, will be important for testing the framework's predictions and exploring the diverse ways in which grammatical systems can emerge and evolve.
+Future research should focus on further refining the framework, developing more precise methods for measuring form--value stability, and investigating the complex interactions between different types of motivations (semantic, social, structural, and iconic). Cross-linguistic studies, particularly those focusing on languages with different degrees of morphosyntactic integration of features like gender, will be important for testing the framework's predictions and exploring the diverse ways in which grammatical systems can emerge and evolve.
 
 Ultimately, the study of grammaticality offers a window into the fundamental workings of human language. By de-idealizing grammaticality and embracing its dynamic, community-relative nature, we can gain a deeper understanding of the cognitive and social forces that shape language. This framework provides a robust foundation for such investigations, paving the way for a more integrated and comprehensive understanding of what it means for an utterance to be considered part of a language.
 
@@ -1117,7 +1176,7 @@ Ultimately, the study of grammaticality offers a window into the fundamental wor
 Turkish illustrates a sharp distinction between \emph{lexical} disharmony inside stems and
 \emph{allomorphic} harmony on inflectional suffixes.%
 \footnote{See \autocite{Sezer1981,KabakVogel2001} for discussion of the phonology and \autocite{Arik2015} for experimental evidence on native judgments.} 
-Only the latter interacts with morphosyntactic well‑formedness in the sense of the MMMG.
+Only the latter interacts with morphosyntactic well‑formedness in the sense of the MVMG.
 
 \paragraph{Stem‑internal vowels: disharmony tolerated.}
 Loanwords such as \textit{doktor} `doctor' violate backness harmony, yet are fully acceptable;
@@ -1131,7 +1190,7 @@ the language community simply memorises the form, so $C(u)=1$ and $K(u)=1$.
 Because no morphosyntactic feature is left unrealised, the morphosyntax--meaning
 mapping $\!M(u)\!\rightarrow\!\mu(u)$ succeeds and
 \[
-G(u)=C^t(u)\cdot K(u)\cdot\text{map}=1.
+\widetilde{G}_t(u,c)=C_t(u,c)\cdot K(u,c)\cdot\mathsf{map}(u,c)=1.
 \]
 
 \paragraph{Suffixal harmony: morphosyntactic requirement.}
@@ -1161,38 +1220,38 @@ so $K(u)=0$ and the word is ungrammatical.
 \z
 \z
 
-\paragraph{MMMG account.}
+\paragraph{MVMG account.}
 For the ill‑formed *\textit{kitap-ler} and *\textit{gül-du}:
 
 \begin{itemize}
 \item \emph{Mapping} succeeds: the plural / past node selects an exponent.
-\item \emph{Compatibility} $K(u)=0$: the chosen allomorph fails to realise the
+\item \emph{Compatibility} $K(u,c)=0$: the chosen allomorph fails to realise the
       \textsc{[back]} feature copied from the stem.
-\item \emph{Community acceptance} $C^t(u)=1$: every speaker knows how plural
+\item \emph{Community acceptance} $C_t(u,c)=1$: every speaker knows how plural
       and past are expressed.
 \end{itemize}
 
-Hence $G(u)=0$ and speakers judge the word as categorically wrong, not merely
-odd‑sounding.  By contrast, \textit{doktor} in (\ref{ex:doktor}) keeps $K(u)=1$;
+Hence $G_t(u,c)=0$ and speakers judge the word as categorically wrong, not merely
+odd‑sounding.  By contrast, \textit{doktor} in (\ref{ex:doktor}) keeps $K(u,c)=1$;
 harmony is a phonotactic preference that affects only the phonological
-well‑formedness component of $F(u)$, not grammaticality.
+well‑formedness component of $F_{i,t}(u,c)$, not grammaticality.
 
 \paragraph{Localised exceptions.}
 Some derivational suffixes (e.g.~\textit{-imsi} `‑ish') are lexically
-marked ``disharmonic''.  The community memorises them with $C^t(u)=1$, so no
-feature remains unrealised and $G(u)=1$ despite vowel mismatch.  Clitic
+marked ``disharmonic''.  The community memorises them with $C_t(u,c)=1$, so no
+feature remains unrealised and $G_t(u,c)=1$ despite vowel mismatch.  Clitic
 boundaries that start a fresh harmony cycle \autocite{KabakVogel2001} are
 handled the same way: they satisfy the morphosyntactic mapping and leave
 harmony to phonology alone.
 
 In sum, Turkish suffix harmony errors are genuine morphosyntax--phonology
-interface violations, making them \emph{ungrammatical} under MMMG, whereas
+interface violations, making them \emph{ungrammatical} under MVMG, whereas
 stem disharmony merely lowers phonological well‑formedness and so affects only
-the listener's feeling $F(u)$.
+the listener's feeling $F_{i,t}(u,c)$.
 
 
 
-If it could be shown that phonology alone caused feelings of ungrammaticality, that would constitute a serious challenge to this framework's central claim about the necessary involvement of morphosyntactic form--meaning pairings in grammaticality.
+If it could be shown that phonology alone caused feelings of ungrammaticality, that would constitute a serious challenge to this framework's central claim about the necessary involvement of morphosyntactic form--value relations in grammaticality.
 
 
 \newpage
