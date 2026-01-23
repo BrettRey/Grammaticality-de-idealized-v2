@@ -73,15 +73,12 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[LE]{\small\scshape\leftmark}
-\fancyhead[RO]{\small\scshape Grammaticality de-idealized}
-\fancyfoot[LE,RO]{\thepage}
-\renewcommand{\headrulewidth}{0pt}
-
-% For oneside documents (most papers):
 \fancyhead[L]{\small\scshape\leftmark}
 \fancyhead[R]{\small\thepage}
 \fancyfoot{}
+\setlength{\headheight}{13.6pt}
+\addtolength{\topmargin}{-1.6pt}
+\renewcommand{\headrulewidth}{0pt}
 
 % ===========================
 % COLORS & HYPERLINKS
@@ -239,8 +236,6 @@ This paper presents such a framework, building on insights from both generative 
 These premises directly address key limitations in previous approaches to grammaticality. The first premise moves beyond the abstract competence model of early generative grammar while building upon its analyses of systematic constraints. It provides a theoretical foundation for explaining both categorical constraints like (\ref{ex:lbe}) and gradient acceptability like (\ref{ex:whose}), aligning with Francis's \autocite{francis2022} arguments for incorporating gradience into core grammatical theory. The second premise resolves a long-standing tension between formal syntactic approaches and processing-based accounts by explicitly modelling their interaction rather than treating them as competing explanations. This allows us to explain why some ungrammatical constructions resist improvement through exposure while others become more acceptable with familiarity. The third premise provides a principled basis for phenomena that have resisted unified explanation in both generative and functional frameworks.
 
 Section \ref{sec:previous} examines the impasse in grammaticality theory, tracing how different theoretical traditions --  from early generative grammar through contemporary experimental approaches --  have attempted to reconcile form, meaning, and acceptability. Section \ref{sec:framework} presents the framework in detail, defining the three constitutive variables that determine grammaticality and identifying recurrent diagnostic instability modes that govern judgments. Section \ref{sec:formalism} presents a simple formal model that illustrates how the framework's key components interact to produce grammaticality judgments. Section \ref{sec:implications} explores the theoretical implications of this approach, particularly its relationship to generative grammar, Construction Grammar, and usage-based theories, and includes specific predictions about cross-linguistic variation in grammaticality judgments and the conditions under which satiation effects should occur. The paper concludes by acknowledging limitations of the current framework and suggesting directions for future research using corpus analysis, experimental methods, and cross-linguistic investigation.
-
-\section{The impasse in grammaticality theory}\label{sec:previous}
 
 \section{The impasse in grammaticality theory}\label{sec:previous}
 
@@ -1035,7 +1030,7 @@ in some conditioning states.
 Let $N_t(n,c)$ be the number of opportunities for niche $n$ in conditioning state $c$
 over some time window, and $k_t(v,n,c)$ the observed count of variant $v\in\mathcal{V}_n$.
 
-\subsection{Usage as licensing $\times$ choice among licensed options}
+\subsection{Usage as \texorpdfstring{licensing $\times$ choice}{licensing x choice} among licensed options}
 \label{sec:usage}
 
 Separate \emph{licensing} from \emph{selection}.  A variant can be licensed but rarely chosen.
