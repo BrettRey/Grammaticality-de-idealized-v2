@@ -1,0 +1,113 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage{setspace}
+\usepackage{geometry}
+\geometry{margin=1in}
+\setstretch{1.1}
+
+\title{Left-Branch Extraction in English: A CGEL-Based Stress Test}
+\author{(exploratory note)}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Aim}
+We examine why English resists left-branch extraction (LBE) from noun phrases when described in the CGEL architecture (\emph{NP} $\rightarrow$ \emph{DetP} in determiner function $+$ \emph{Nom}). Goal: stress-test non-generative explanations; if the account collapses under counterexamples, we discard it. No claim of proof.
+
+\section{CGEL scaffolding}
+In CGEL the NP consists of a Determinative Phrase (DetP) plus a nominal (Nom). The nominal contains the head noun with its complements and pre-/post-head modifiers. Possessive/genitives are DetP in determiner function; prenominal adjectives sit inside Nom before the head noun.
+
+\section{Multiple live hypotheses (meant to be broken)}
+\begin{enumerate}[label=H\arabic*., leftmargin=1.2cm]
+  \item \textbf{Relevance/QUD}: Bare LBE fails because adjectives/determiners are rarely the primary QUD target; pied-piping foregrounds the whole nominal. \emph{Torpedo}: find contexts where the modifier alone is the QUD and bare LBE is still rejected.
+  \item \textbf{Prosodic adjacency/edge}: English requires modifier--noun adjacency and lacks a prosodic edge for stranded modifiers; pied-piping keeps adjacency. \emph{Torpedo}: show a prosodically acceptable LBE that speakers like.
+  \item \textbf{Recoverability/morpho-cues}: With no case/agreement on modifiers/Det, a stranded noun isn't linkable. \emph{Torpedo}: add overt cues (classifier, agreement play) and see if LBE stays bad.
+  \item \textbf{Packaging integrity (CGEL NP as minimal unit)}: English moves or elides DetP+Nom as a package; breaking it is illicit. \emph{Torpedo}: find a productive English construction that leaves an overt noun while extracting its left branch.
+  \item \textbf{Linearization cost}: LBE disrupts required order; freer-order languages avoid the cost. \emph{Torpedo}: show an English construction that tolerates similar disruption but still bans LBE.
+  \item \textbf{Freezing/movement history}: Prior NP movement freezes interior; baseline LBE is already bad, topicalisation worsens it. \emph{Torpedo}: topicalised DPs where pied-piping is perfect.
+  \item \textbf{Usage/frequency}: LBE is rare in input; gradient unacceptability reflects expectations. \emph{Torpedo}: exposure/training that fails to improve LBE.
+  \item \textbf{Determiner semantics}: Wh-determiners need an overt domain; stranding the noun breaks presuppositions. \emph{Torpedo}: a determiner whose semantics is satisfied by a stranded noun yet LBE is still bad.
+\end{enumerate}
+
+None of these is assumed decisive; keep all on the table until a clear counterexample collapses them.
+
+\section{English data: baseline and probes (for all hypotheses)}
+\subsection{Canonical bad LBE}
+\begin{enumerate}[label=\alph*)]
+  \item *\textbf{How expensive} did they buy \underline{a} car? (adjectival LBE from Nom)
+  \item *\textbf{Whose} did you read \underline{book}? (possessor/genitive LBE from DetP)
+\end{enumerate}
+
+\subsection{Pied-piping successes}
+\begin{enumerate}[label=\alph*)]
+  \item \textbf{How expensive a car} did they buy?
+  \item \textbf{Whose book} did you read?
+\end{enumerate}
+
+\subsection{Prosody and QUD attempts}
+\begin{enumerate}[label=\alph*)]
+  \item Context QUD: ``Which \emph{color}?'' \\
+        *\textbf{Which red} did you buy car? (still crashes)
+  \item Contrastive stress: \textbf{HOW} expensive did they buy a car? (judged odd $\rightarrow$ at best marginally improved, not acceptable)
+\end{enumerate}
+
+\subsection{Possessor vs adjective asymmetry}
+Even in strongly contrastive contexts, possessor LBE seems worse than adjective LBE:
+\begin{enumerate}[label=\alph*)]
+  \item *\textbf{Whose} did you dent car? (DetP extracted)
+  \item ??\textbf{How heavy} did you lift box? (slightly less awful for some speakers)
+\end{enumerate}
+
+\subsection{Freezing/topicalisation}
+\begin{enumerate}[label=\alph*)]
+  \item *That car, \textbf{how expensive a} \underline{\phantom{XX}} did they buy? (pied-piping degraded after topicalisation)
+  \item *That car, \textbf{how expensive} did they buy \underline{\phantom{XX}}? (bare LBE still impossible)
+\end{enumerate}
+
+\section{Known slippery cases (keep testing)}
+\begin{itemize}
+  \item \textbf{Echo/reprise}: \emph{You bought WHICH car?} — acceptable but a different construction (does not license information LBE).
+  \item \textbf{Sluicing/ellipsis}: \emph{They bought a car, but I don't know how expensive}. Noun is unpronounced; does not show LBE.
+  \item \textbf{Fragments/headlines/appositives}: English allows bare nouns or modifiers here; need to check whether any genuinely pronounce the noun and extract the modifier in an information question.
+  \item \textbf{Idioms/light nouns}: no solid cases where the adjective alone carries the idiom and could license extraction.
+  \item \textbf{Prosody}: no solid reports of contrastive-stress fully rescuing LBE; if found, prosodic-edge accounts gain weight over packaging.
+\end{itemize}
+
+\section{What would falsify the account?}
+\begin{enumerate}[label=F\arabic*., leftmargin=1.2cm]
+  \item Naturally occurring English examples where only the adjective/determiner is extracted in an information question and judged fully acceptable (not echo, not metalinguistic).
+  \item Clear evidence that strong contrastive prosody alone makes bare LBE acceptable across speakers.
+  \item Contexts where the modifier is the QUD target and bare LBE rates on par with pied-piping.
+  \item Any case where possessor LBE patterns like pied-piping in acceptability (would undercut the foreground clash claim for DetP).
+\end{enumerate}
+
+\section{Predictions per hypothesis (English)}
+\begin{itemize}
+  \item \textbf{Relevance/QUD}: modifier-targeted contexts improve LBE slightly but never reach pied-piping; neutral contexts stay bad.
+  \item \textbf{Prosodic edge}: contrastive-stress variants should rate better than flat prosody; true rescue would favour this account.
+  \item \textbf{Recoverability/morpho-cues}: adding overt cues (e.g., classifier-like of-phrases) should improve LBE; if not, cue hypothesis weakens.
+  \item \textbf{Packaging integrity}: no pronounced noun with extracted left branch in ordinary clauses; only pied-piping/ellipsis acceptable.
+  \item \textbf{Linearization}: anything that breaks modifier–noun adjacency stays bad; if an adjacency-violating construction is good, this account weakens.
+  \item \textbf{Freezing}: topicalised/scrambled DPs degrade even pied-piping; if not, freezing is irrelevant.
+  \item \textbf{Usage}: exposure/training might raise ratings marginally; if ratings stay flat, usage is insufficient.
+  \item \textbf{Determiner semantics}: determiners that permit domain drop (e.g., \"which ones\") should be better than bare \"which\" + overt noun; if not, semantics isn’t the blocker.
+\end{itemize}
+
+\section{Where this could break}
+Any robust, context-independent good LBE in English (non-echo, non-ellipsis) sinks packaging/recoverability accounts. Likewise, if prosody or QUD alone fully licenses bare LBE, prosodic/relevance factors outrank packaging. If adjacency-violating constructions are fine, linearization is not the issue. We should be prepared to drop whatever fails first.
+
+\section{Open tasks}
+\begin{enumerate}[label=O\arabic*., leftmargin=1.2cm]
+  \item Catalogue English near-miss cases (literary, dialect, fragments) and classify them.
+  \item Compare bare LBE vs pied-piping across determiners vs adjectives vs quantifiers.
+  \item Look for idiom/light-noun cases where the modifier might carry the idiom.
+  \item Identify modifier-QUD contexts and check whether pied-piping still wins.
+  \item (Crossing to other hypotheses) Note any adjacency-breaking constructions that are grammatical; see if they correlate with better LBE.
+\end{enumerate}
+
+\section{Takeaway}
+Multiple hypotheses stay on the table; none is claimed decisive. The note is a checklist for where to attack: find genuine English LBE successes or show that prosody/QUD overrides packaging, and we jettison the failing story.
+
+\end{document}
