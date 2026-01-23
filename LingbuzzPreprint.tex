@@ -222,14 +222,22 @@ This extreme pragmatic selectivity creates a \enquote{double anaphora} burden—
 \subsection{Structural bans}
 
 \begin{tcolorbox}[colback=lsLightBlue!30]
+<<<<<<< HEAD
 \textbf{Diagnostic}: Does the construction instantiate a configuration whose entrenchment is effectively zero in the speech community?
+=======
+\textbf{Diagnostic}: Does the construction violate a categorically blocked configuration?
+>>>>>>> origin/main
 
 \textbf{Example}: \textit{\*Which did you buy \_ car?}~-- determiner extraction.
 
 \textbf{Counter-example}: \textit{Which car did you buy \_?}~-- entire NP extraction permitted.
 \end{tcolorbox}
 
+<<<<<<< HEAD
 So-called structural bans are best treated as extreme cases of low entrenchment. While cross-linguistically robust, they are nonetheless emergent rather than strictly universal or innate. The model treats them as a community-entrenchment extreme (effectively zero acceptability), but future work could test their potential malleability under unusual sociolinguistic conditions.
+=======
+Categorical structural bans represent extreme stability biases. While cross-linguistically robust, they are nonetheless emergent rather than strictly universal or innate. The model treats them as a community-entrenchment extreme (effectively zero acceptability), but future work could test their potential malleability under unusual sociolinguistic conditions.
+>>>>>>> origin/main
 
 Together, these five components interact systematically to determine the grammaticality of linguistic constructions, accounting both for objective grammaticality and subjective judgments of grammaticality and ungrammaticality.
 
@@ -261,8 +269,13 @@ The five components can be queried in sequence to classify an utterance on first
 \node[decision] (map)  {form–meaning\\pairing?};
 \node[outcome , right=of map]  (nonsense) {no pairing\\(*\textit{Can the have running})};
 
+<<<<<<< HEAD
 \node[decision, below=of map]  (ban)  {near-zero entrenchment?};
 \node[outcome , right=of ban]  (lbe)  {near-zero entrenchment\\(*\textit{Which did you buy \_ car?})};
+=======
+\node[decision, below=of map]  (ban)  {structural ban?};
+\node[outcome , right=of ban]  (lbe)  {structural ban\\(*\textit{Which did you buy \_ car?})};
+>>>>>>> origin/main
 
 \node[decision, below=of ban]  (sem)  {semantic fit?};
 \node[outcome , right=of sem]  (clash) {semantic clash\\(*\textit{I've finished it yesterday})};
@@ -568,9 +581,12 @@ where the net bias~$\Delta(u)$ aggregates four independently measurable pressure
   \item \textbf{NoisePenalty} = smooth sigmoid of surprisal (see \S\ref{sec:noise-penalty}).
 \end{itemize}
 
+<<<<<<< HEAD
 \paragraph{Innovation cues.}
 A subset of constructions enters the speech community through what \textcite{Bergs2025} calls \textsc{extravagance}~-- the speaker’s calculated push for noticeability~-- and through transient spikes in \textsc{sociocognitive salience}.  In MMMG these cues are treated as initial conditions on the entrenchment trajectory \(C^{t}(u)\), not as separate predictive terms.  They raise the starting point of the logistic curve but require no additional machinery.
 
+=======
+>>>>>>> origin/main
 \paragraph{Speaker-internal gradience.}
 The logistic \emph{population} curve remains intact if individual speakers entertain probabilistic grammars à la \textcite{Yang2000}.  Let $C_i(u)\!\in[0,1]$ be speaker $i$'s belief that $u$ is licensed.  A Yang-style learner increments $C_i$ on successful parses and decrements on failures.  The population mean $C^{t}(u)=\tfrac1N\sum_i C_i(u)$ then converges in expectation to the same Verhulst trajectory.\footnote{This two-state \enquote{AB-toy} model~-- named after Nowak's classic $A{\leftrightarrow}B$ demonstration of logistic growth \citeyearpar{Nowak2001}~-- treats every utterance token as copying either variant $A$ (here, \emph{innovative}) or variant $B$ (\emph{conservative}).  Extending to continuous $C_i(u)$ increases psychological realism but sacrifices the closed-form fixation probability enjoyed by the discrete model; see Appendix~A for simulation code.}
 
@@ -602,9 +618,12 @@ Figure~\ref{fig:trajectory} visualizes a typical growth path ($\Delta\!=\!0.8$).
   \label{fig:trajectory}
 \end{figure}
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/main
 \paragraph{Extension note.}  
 The present paper restricts itself to community‐average entrenchment.  
 A companion article, \emph{Habitus-conditioned grammaticality: A Bourdieusian extension of MMMG} \autocite{Reynolds_inprep}, formalizes how listener position in social space (\textbf{x}) shapes the feeling‐of-ungrammaticality function $F(u)$ and fractionalizes entrenchment $C^{t}(u)$ by class.  That work supplies the mathematical details, pilot data, and simulation results sketched only briefly here.  Readers interested in the habitus layer should consult that follow-up study once released on Lingbuzz; the core MMMG results below are independent of its assumptions.
@@ -650,7 +669,11 @@ Repeated exposure should increase acceptability for:
 
 But NOT for:
 \begin{itemize}
+<<<<<<< HEAD
 \item Near-zero-entrenchment violations (determiner extraction) (available data)
+=======
+\item Categorical violations (determiner extraction) (available data)
+>>>>>>> origin/main
 \item Fundamental mapping failures (word salad) (available data)
 \end{itemize}
 
@@ -687,7 +710,11 @@ MMMG (this work)     & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$
 \subsection{Key distinctions}
 
 \textbf{Versus generative grammar}~--  
+<<<<<<< HEAD
 MMMG retains the insight that certain configurations are systematically excluded, but explains these \enquote{near-zero entrenchment} (structural bans) as the outcome of extreme, community‑level stability rather than as inviolable innate rules.
+=======
+MMMG retains the insight that certain configurations are systematically excluded, but explains these \enquote{structural bans} as the outcome of extreme, community‑level stability rather than as inviolable innate rules.
+>>>>>>> origin/main
 
 \textbf{Versus Construction Grammar}~--  
 Both frameworks treat constructions as form–meaning pairings, yet MMMG gives special status to \emph{morphosyntactic} pairings: violations in this layer trigger qualitatively stronger ungrammaticality judgments than purely pragmatic or lexical mismatches.

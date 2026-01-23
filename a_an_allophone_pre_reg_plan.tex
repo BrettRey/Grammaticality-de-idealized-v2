@@ -71,10 +71,10 @@ Open card-sort with forced dual-modality cue:
 
 \section{Materials}
 
-\subsection{Critical micro-scenario sentence skeleton}
+\subsection{4.1\quad Critical micro-scenario sentence skeleton}
 \textit{Kim talked to Pat this morning.}
 
-\subsection{Condition sets (12 items each)}
+\subsection{4.2\quad Condition sets (12 items each)}
 \begin{center}
 \begin{tabular}{@{}lp{10cm}@{}}
 \toprule
@@ -191,7 +191,7 @@ One professional speaker, General American English, 44.1 kHz; RMS amplitude norm
 \item Saw Sam elephant an clearly. /sɔː sæm ˈɛlɪfənt ən ˈklɪɹli/
 \end{enumerate}
 
-\section{Participants}
+\section{Participants \,(UPDATED)}
 \begin{itemize}
   \item \textbf{Target sample} $n=120$ self-reported native speakers of North-American English (Canada or USA), recruited via Prolific.
   \item Inclusion criteria: native anglophone upbringing; ≥ 95 \% prior approval; passes headphone check.
@@ -228,17 +228,21 @@ One professional speaker, General American English, 44.1 kHz; RMS amplitude norm
 \item ``For any pile, were there items you grouped together but that felt somewhat different from each other? Please describe.''
 \item Demographics and language background
 \end{itemize}
-\end{enumerate}
 
 \section{Exclusion rules}
 
+<<<<<<< HEAD
 \subsection{Participant-level}
+=======
+\subsection{7.1\quad Participant-level}
+>>>>>>> origin/main
 \begin{itemize}
 \item Failure to move all cards ($<$3 piles) $\Rightarrow$ exclude.
 \item Warm-up error + self-report of grouping by topic $\Rightarrow$ exclude.
 \item Completion time $<$1st percentile or $>$99th percentile (pre-computed) $\Rightarrow$ exclude.
 \end{itemize}
 
+<<<<<<< HEAD
 \subsection{Card-level}
 None; all critical cards remain in analysis.
 
@@ -290,6 +294,21 @@ where $A$ and $B$ are sets of item indices.
 \section{Statistical analysis plan}
 
 \subsection{Bayesian model}
+=======
+\subsection{7.2\quad Card-level}
+None; all critical cards remain in analysis.
+
+\section{Outcome variables}
+
+\begin{enumerate}
+\item Co-classification matrix $M$ ($72\times72$) for each participant (1 = cards in same pile).
+\item Pile labels (qualitative coding not preregistered, exploratory).
+\end{enumerate}
+
+\section{Statistical analysis plan \,(UPDATED)}
+
+\subsection{9.1\quad Bayesian model}
+>>>>>>> origin/main
 
 \paragraph{Data reduction per participant.}
 For each contrast (\(\Delta_{\text{article}},\;\Delta_{\text{voicing}}\)) compute
@@ -319,7 +338,11 @@ Student-\(t_{n-1}\bigl(\bar x,\; s/\sqrt n\bigr)\).
 Posterior probabilities computed analytically via the
 Student-\(t\) CDF.
 
+<<<<<<< HEAD
 \subsection{Secondary analyses}
+=======
+\subsection{9.2\quad Secondary analyses}
+>>>>>>> origin/main
 \begin{enumerate}
 \item Adjusted Rand index between each participant’s clustering and three a-priori partitions; multilevel beta-regression with participant random effects.
 \item Sensitivity check excluding participants whose pile labels contain the words \textit{grammar}, \textit{pronunciation}, or \textit{sound}.
@@ -357,6 +380,7 @@ We fix \(n=120\) to achieve \(\ge 0.80\) power while containing recruitment cost
 \item Materials, data, scripts released on OSF upon publication (\url{https://osf.io/xxxxx}).
 \item Deviations from this plan will be explicitly labeled as exploratory.
 \end{itemize}
+<<<<<<< HEAD
 \newpage
 \appendix
 \section{Python simulation code}
@@ -388,5 +412,7 @@ for n in [60, 80, 100, 120, 150]:
 
 \end{verbatim}
 
+=======
+>>>>>>> origin/main
 
 \end{document}
