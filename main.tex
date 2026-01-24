@@ -425,9 +425,9 @@ This neural organization helps explain why simpler, more memorable forms tend to
 
 Processing constraints also interact with other components. A construction that is marginal due to low situational acceptance may become completely unacceptable when combined with processing difficulty. Conversely, highly entrenched constructions may remain acceptable despite considerable processing demands, suggesting that strong conventionalization can partially offset processing costs.
 
-\subsubsection{Dependency locality as a modelling primitive}\label{sec:dependency-locality}
+\subsubsection{Dependency locality}\label{sec:dependency-locality}
 
-Integration cost rises with dependency length; self-paced reading shows difficulty peaks at loci of long-distance integration, with locality accounting for 59--73\% of variance in reading times \autocite{GrodnerGibson2005}. I therefore model a dedicated locality cost $L(u)$, summing over the dependencies of $u$, rather than hiding the effect inside a residual term. The cost grows with dependency length but saturates at extreme distances (the precise functional form appears in \S\ref{sec:formalism}).
+Integration cost rises with dependency length; self-paced reading shows difficulty peaks at loci of long-distance integration, with locality accounting for 59--73\% of variance in reading times \autocite{GrodnerGibson2005}. Because locality effects are so robust and well-documented, the formal treatment in \S\ref{sec:formalism} treats dependency locality as a dedicated component rather than hiding it inside a residual term.
 
 Locality influences both the subjective feeling of ungrammaticality and the licensing dynamics. High-locality constructions feel worse to process, even when structurally well-formed. And because such constructions are harder to produce and parse, speakers tend to avoid them, which over time reduces their conventionalization. The formal treatment appears in \S\ref{sec:formalism}.
 
