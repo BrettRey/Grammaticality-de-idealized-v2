@@ -378,7 +378,7 @@ Beyond the existence of form--value relations, grammaticality requires compatibi
 Consider the temporal incompatibility in:
 \ea[*]{\mention{I've finished it yesterday.}}\label{ex:tense-sem}
 \z
-Here, the present perfect construction encodes current relevance while \mention{yesterday} specifies completed past time. Unlike lexically incongruous combinations like \mention{colorless green ideas}, which remain grammatical because they don't violate morphosyntactic meanings, this example shows a direct clash between the temporal semantics required by the grammatical construction and the lexical temporal specification.
+Here, the present perfect construction encodes current relevance while \mention{yesterday} specifies completed past time. Unlike lexically incongruous combinations like \mention{colorless green ideas}, which remain grammatical because the clash doesn't involve morphosyntactic form--value relations, this example shows a direct conflict between the temporal value encoded by the grammatical construction and the lexical temporal specification.
 
 Another type of value incompatibility arises when a construction is used with a meaning it can't encode:
 \ea[*]{\textit{I have 25 years.} \hfill intended as `I'm 25 years old'}\label{ex:have-years-sem}
@@ -386,7 +386,7 @@ Another type of value incompatibility arises when a construction is used with a 
 In English, \mention{have}+\mention{years} denotes relational predication between agents and temporal intervals (like periods until retirement or spans of experience), rather than ascribing a temporal measure of age. This value mismatch makes the construction inappropriate for expressing age.
 
 Sometimes value incompatibility involves conflicting information-structural requirements:
-\ea[*]{\textit{Who did the lifeguard who saved \_ work in New Jersey?} \\\hfill\label{ex:lifeguard-sem}\hfill\autocite{cuneogoldberg2023}}\z
+\ea[*]{\textit{Who did the lifeguard who saved \_ work in New Jersey?} \hfill\label{ex:lifeguard-sem}\hfill\autocite{cuneogoldberg2023}}\z
 Here there is a clash in information structure: the same participant is simultaneously focused through fronting \mention{who} while being backgrounded by the relative clause construction \autocite{cuneogoldberg2023}.
 
 These examples illustrate how value compatibility operates as an independent component of grammaticality. Even when morphosyntactic forms exist and are properly combined according to structural rules, the values they encode need to align coherently for the construction to be grammatical.
@@ -399,7 +399,7 @@ Language processing engages both dedicated language networks and domain-general 
 \textit{The bread the baker the apprentice helped made is delicious.}\label{ex:center-process}
 \z
 
-Evidence for these constraints comes from multiple sources. Studies of sentence processing show that dependencies spanning multiple intervening elements increase processing difficulty, with new referents between dependent elements compounding memory load \autocite{gibson2000,Gibson2025}. In (\ref{ex:center-process}), while each individual relation (like \textit{the apprentice helped} and \textit{the baker made}) is interpretable in isolation, their nested combination overwhelms incremental processing. What formal syntax treats as permissible multiple embedding appears ungrammatical to human processors due to excessive bridging costs.
+Evidence for these constraints comes from multiple sources. Studies of sentence processing show that dependencies spanning multiple intervening elements increase processing difficulty, with new referents between dependent elements compounding memory load \autocite{gibson2000,Gibson2025}. In (\ref{ex:center-process}), while each individual relation (like \textit{the apprentice helped} and \textit{the baker made}) is interpretable in isolation, their nested combination overwhelms incremental processing. The construction is grammatical, but excessive bridging costs from its nested structure trigger feelings of ungrammaticality.
 
 Rather than reflecting simple memory limitations, processing constraints emerge from the interaction between specialized language networks and other cognitive systems \autocite{Fedorenko2024}. The parallel evolution of these neural networks suggests that what speakers experience as processing difficulty may reflect optimization pressures for efficient communication across specialized brain systems rather than a single cognitive bottleneck.
 
@@ -409,10 +409,8 @@ Processing constraints also interact with other components. A construction that 
 
 \subsubsection{Dependency locality as a modelling primitive}\label{sec:dependency-locality}
 
-\textsc{Motivation.}
 Integration cost rises with dependency length; self-paced reading shows difficulty peaks at loci of long-distance integration, with locality accounting for 59--73\% of variance in reading times \autocite{GrodnerGibson2005}. I therefore model a dedicated locality cost \(L(u)\) rather than hiding the effect inside a residual term.
 
-\textsc{Cost function.}
 For each dependency \(d_i\) of utterance \(u\) define
 \begin{equation*}
 L(u)=\sum_{i}\ell\!\bigl(|d_i|\bigr),\qquad
@@ -423,7 +421,6 @@ L(u)=\sum_{i}\ell\!\bigl(|d_i|\bigr),\qquad
   \end{cases}
 \end{equation*}
 
-\textsc{Embedding in the model.}
 Locality influences both the subjective feeling of ungrammaticality and the licensing dynamics. In the feeling model (\S\ref{sec:feeling-new}), it appears as a component of the processing vector $\mathbf{R}_i$. In the dynamics, locality can be included among the utility features $\mathbf{f}(v;n,c)$ that determine $\rho_t(v\mid n,c)$ (\S\ref{sec:usage}). This lowers the counterfactual choice probability of high-locality variants, which both reduces their expected positive evidence stream $s_t$ and weakens the evidential force of their non-occurrence, since $p_t(u,c)$ scales with $\rho_t(u\mid n(u),c)$.
 
 In addition, high-cost tokens are more likely to be classified as performance slips or repairs by learners, which can be modelled as increased error evidence $e_t(u,c)$ in \eqref{eq:beta-update}.
