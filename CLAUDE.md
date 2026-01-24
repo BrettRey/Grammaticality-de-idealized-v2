@@ -4,13 +4,13 @@ This file provides guidance to Claude Code when working with this project.
 
 ## Project Overview
 
-**Title:** Grammaticality De-idealized: The MMMG Model
+**Title:** Grammaticality De-idealized: The MVMG Model
 **Author:** Brett Reynolds
 
-This paper develops the Morphosyntactic-Meaning Model of Grammaticality (MMMG), formalizing the distinction between objective grammaticality G(u) and subjective feeling of grammaticality F(u).
+This paper develops the Morphosyntactic-Value Model of Grammaticality (MVMG), formalizing the distinction between objective grammaticality G(u) and subjective feeling of grammaticality F(u).
 
 Key equations:
-- G(u) = C^t(u) · K(u) · map (objective: community licensing × speaker knowledge × mapping)
+- G(u) = C^t(u) · K(u) · map (objective: situational licensing × speaker knowledge × mapping)
 - F(u) = -α(1-G(u)) - γL·L(u) - Pother(u) + η (subjective: includes processing costs, noise)
 
 ## Build System
@@ -33,13 +33,17 @@ xelatex LingbuzzPreprint.tex && biber LingbuzzPreprint && xelatex LingbuzzPrepri
 
 ## Cross-Project Connections
 
-- **Grammar_and_emergence**: The MMMG's F(u)/G(u) distinction maps to emergence paper's commutativity question
+- **Grammar_and_emergence**: The MVMG's F(u)/G(u) distinction maps to emergence paper's commutativity question
 - **Grammaticality_as_Kind_Miller**: Companion paper (metaphysics vs methodology framing)
 - **Transparent_free_relatives**: TFRs as empirical test case for gradient grammaticality
 
 ## House Style
 
 See portfolio-level `.house-style/` for LaTeX conventions and writing style.
+
+## Editorial Approach (Lesson Learned)
+
+**Don't do superficial find/replace for terminology changes.** When asked to change terminology throughout the document (e.g., "meaning" → "value"), read sections holistically and rewrite editorially. Piecemeal substitutions create awkward or incoherent prose. Step back, understand what the section is trying to say, and rewrite it properly with the new terminology integrated naturally.
 
 ## Multi-Agent Dispatch (MANDATORY)
 
