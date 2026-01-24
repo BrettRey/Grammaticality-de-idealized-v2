@@ -1,0 +1,361 @@
+% !TEX TS-program = xelatex
+\documentclass[12pt,letterpaper]{article}
+
+% ===========================
+% BASIC PACKAGES
+% ===========================
+\usepackage[british]{babel}
+\usepackage[final]{microtype}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{float}
+\usepackage{xspace}
+
+% ===========================
+% OPTIONAL HOUSE STYLE (fonts)
+% ===========================
+\usepackage{fontspec}
+\setmainfont{EB Garamond}[Numbers=OldStyle,Ligatures=TeX]
+\newfontfamily\ipafont{Charis SIL}
+\newcommand{\ipa}[1]{{\ipafont #1}}
+\providecommand{\liningnums}[1]{{\addfontfeatures{Numbers=Lining}#1}}
+\setmonofont{Inconsolata}[Scale=MatchLowercase]
+
+% ===========================
+% PAGE LAYOUT
+% ===========================
+\usepackage[
+  letterpaper,
+  inner=1.25in,
+  outer=1in,
+  top=1in,
+  bottom=1.25in,
+  marginparwidth=0.6in,
+]{geometry}
+
+% ===========================
+% HEADINGS
+% ===========================
+\usepackage{titlesec}
+\titleformat{\section}{\normalfont\scshape}{\llap{\thesection\quad}}{0pt}{}
+\titleformat{\subsection}{\normalfont\scshape}{\thesubsection\quad}{0pt}{}
+\titleformat{\subsubsection}{\normalfont}{\thesubsubsection\quad}{0pt}{}
+\titlespacing*{\section}{0pt}{2ex plus 1ex minus .2ex}{1ex plus .2ex}
+\titlespacing*{\subsection}{0pt}{1.5ex plus 1ex minus .2ex}{0.5ex plus .2ex}
+\titlespacing*{\subsubsection}{0pt}{1ex plus 0.5ex minus .1ex}{0.3ex plus .1ex}
+
+% ===========================
+% RUNNING HEADS
+% ===========================
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\scshape\leftmark}
+\fancyhead[R]{\small\thepage}
+\setlength{\headheight}{13.6pt}
+\addtolength{\topmargin}{-1.6pt}
+\renewcommand{\headrulewidth}{0pt}
+
+% ===========================
+% COLOURS & HYPERLINKS
+% ===========================
+\usepackage{xcolor}
+\definecolor{linkmaroon}{RGB}{128,0,32}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=linkmaroon,
+  citecolor=linkmaroon,
+  urlcolor=linkmaroon,
+  pdftitle={The asterisk de-idealized},
+  pdfauthor={Brett Reynolds},
+}
+
+% ===========================
+% QUOTATIONS
+% ===========================
+\usepackage[style=american]{csquotes}
+
+% ===========================
+% SEMANTIC MACROS
+% ===========================
+\newcommand{\term}[1]{\textsc{#1}}
+\newcommand{\mention}[1]{\textit{#1}}
+\newcommand{\mentionh}[1]{⟨#1⟩}
+\newcommand{\olang}[1]{\textit{#1}}
+\newcommand{\abbr}[1]{\textsc{#1}}
+\newcommand{\eg}{e.g.\,\xspace}
+\newcommand{\ie}{i.e.\,\xspace}
+\newcommand{\etc}{etc.\xspace}
+
+% ===========================
+% JUDGEMENT MARKERS (TEXT-MODE SAFE)
+% ===========================
+\newcommand{\judgesep}{\kern-0.15em}
+\newcommand{\ungram}[1]{*\judgesep#1}
+\newcommand{\marg}[1]{?\judgesep#1}
+\newcommand{\odd}[1]{\#\judgesep#1}
+
+% ===========================
+% LINGUISTIC EXAMPLES
+% ===========================
+\usepackage{langsci-gb4e}
+\makeatletter
+\@ifundefined{noautomath}{}{\noautomath}
+\makeatother
+
+% ===========================
+% BIBLIOGRAPHY
+% ===========================
+\usepackage[backend=biber,style=apa,natbib=true,doi=true,isbn=false,url=true]{biblatex}
+\addbibresource{refs.bib}
+\newcommand{\posscite}[1]{\citeauthor{#1}'s (\citeyear{#1})}
+
+% ===========================
+% TITLE
+% ===========================
+\title{The asterisk de-idealized:\\Looking back at grammaticality, moving forward with conditioned stability}
+\author{Brett Reynolds\\Humber Polytechnic \& University of Toronto\\\href{mailto:brett.reynolds@humber.ca}{brett.reynolds@humber.ca}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+The notion of \term{grammaticality} has done foundational work in theoretical linguistics, but it has also become a persistent site of conceptual confusion. The same asterisk is used to mark (i) strings that defeat structural analysis, (ii) structurally viable utterances that fail to stabilise an interpretation, (iii) forms that are interpretable but not licensed as resources in a community's repertoire, and (iv) cases that are grammatically well-formed yet feel unacceptable for reasons of processing or ideology. This article reviews how twentieth-century theory inherited a largely categorical, well-formedness-centred conception of grammaticality, how later work redistributed explanatory pressure onto processing, usage, and social norms, and why the resulting competence--performance--usage triangulation has not resolved the impasse.
+
+Moving forward, I propose a state-theoretic reconceptualisation of grammaticality as \term{conditioned stability} of form--value relations within communicative situations. Grammatical status depends on three constitutive quantities: mapping viability $\mathsf{map}$ (a categorical prerequisite), interpretive coherence $K$ (stability of value under the constraints live in a situation), and situational licensing $C_t$ (population-level acceptance of a form--value relation as a community resource). A graded stability score $\widetilde{G}_t=\mathsf{map}\cdot K\cdot C_t$ underwrites gradience, while categorical judgements arise by thresholding relative to a situation-specific decision criterion. Distinguishing grammaticality from the \term{feeling of anomaly} yields a principled account of classic dissociations between acceptability ratings and grammatical status. The framework reframes longstanding debates and motivates a concrete research agenda for measuring licensing, modelling opportunity-sensitive non-occurrence, and operationalising conditioning states in a way that makes theoretical claims empirically vulnerable.
+\end{abstract}
+
+\noindent Keywords: grammaticality; acceptability; form--value relations; norms; preemption; processing; communicative situation
+
+\section{Introduction}
+
+Every competent speaker of English knows that \ungram{\mention{Can the have running}} is impossible, but the source of this certainty is still not settled. What, exactly, is being asserted when an utterance is labelled \term{ungrammatical}? Consider a familiar cluster:
+
+\ea \label{ex:cluster}
+\ea \ungram{\mention{Can the have running?}}\label{ex:nonsense}
+\ex \mention{Colorless green ideas sleep furiously.}\label{ex:cgi} \autocite{chomsky1957}
+\ex \ungram{\mention{I've finished it yesterday.}}\label{ex:pp-yesterday}
+\ex \marg{\mention{I saw Joan, a friend of whose was visiting.}}\label{ex:whose}
+\ex \mention{The bread the baker the apprentice helped made is delicious.}\label{ex:center}
+\ex \textbf{A:} \mention{How old are you?}\quad \textbf{B:} \ungram{\mention{I have 25 years.}}\label{ex:age}
+\ex \ungram{\mention{Which did you buy car?}}\label{ex:lbe}
+\z\z
+
+These items share the folk verdict that \enquote{something is wrong}, but they do not share a single type of failure. (\ref{ex:nonsense}) defeats structural analysis. (\ref{ex:cgi}) is structurally impeccable while value coherence at the lexical--conceptual level is bizarre but recoverable. (\ref{ex:pp-yesterday}) is interpretively transparent yet fails by a conventional morphosyntactic--temporal alignment. (\ref{ex:whose}) is, for many speakers, not confidently rejected so much as weakly licensed or uncertain. (\ref{ex:center}) is often rejected in the wild but becomes acceptable once a parse is stabilised, suggesting a processing-driven illusion. (\ref{ex:age}) is viable and interpretable but not licensed in the relevant English norm-centres, despite being ordinary in French and Spanish. (\ref{ex:lbe}) is short and interpretable but is treated as categorically excluded.
+
+The history of grammaticality theory can be read as a sequence of attempts to compress such heterogeneity into a single explanatory core. Formal approaches treated grammaticality as categorical well-formedness; processing accounts treated gradience as performance; usage-based theories treated acceptability as the shadow of frequency and entrenchment; sociolinguistics treated grammaticality as norm-relative; experimental syntax refined measurement but did not settle what was being measured. The result is a familiar triangulation in which the same data are alternately explained away as \enquote{competence}, \enquote{performance}, or \enquote{usage}, often with little agreement on what would count as decisive evidence \autocite{schutze2016, sprouse2016}.
+
+This article is a contribution to the Journal of Linguistics section \enquote{Looking Back, Moving Forward}. Looking back, I argue that the impasse persists because grammaticality has been asked to do the work of three distinct questions at once. Moving forward, I propose a minimal state theory that separates those questions and thereby restores empirical vulnerability. The core proposal is that grammaticality is \term{conditioned stability} of form--value relations within a communicative situation: grammatical status depends on (i) mapping viability, (ii) interpretive coherence, and (iii) situational licensing. The same decomposition also clarifies how the \term{feeling of anomaly} arises as a metacognitive signal whose sources include, but are not exhausted by, grammatical status; this distinction explains why some constructions feel ungrammatical while being licit, and why some illicit constructions escape detection \autocite{Fanselow2021}.
+
+\section{Looking back: what the asterisk has been made to mean}
+
+\subsection{Well-formedness as membership}
+
+The modern theoretical role of grammaticality was shaped by the mid-century identification of grammar with a formal system generating a set of well-formed expressions. In this tradition, grammaticality is a categorical membership fact: a string is grammatical iff it is generated by the grammar \autocite{chomsky1957}. This view captures the hard edge of cases like (\ref{ex:nonsense}), where the system crashes before any stable analysis is available. It also provides a clean division of labour: semantics and pragmatics interpret outputs; performance systems realise them.
+
+The cost of this idealisation is that it forces the field to treat gradience as epiphenomenal. The competence--performance distinction \autocite{chomsky1965} allowed formal theory to preserve categorical grammar by relocating variability to processing and attention, but the move is methodologically hazardous: once invoked, it can immunise the grammar from counterevidence by labelling inconvenient data as performance noise \autocite[71]{schutze2016}. Much subsequent work can be read as a search for principled ways to reintroduce gradience without abandoning the insight that some failures are genuinely categorical.
+
+\subsection{Meaning, coherence, and the limits of well-formedness}
+
+Chomsky's (\ref{ex:cgi}) was designed to show that structural well-formedness does not reduce to semantic plausibility. That point remains foundational: a theory that equates grammaticality with \enquote{interpretability} will misclassify many robust structural constraints. Yet (\ref{ex:cgi}) also revealed a complementary fact: humans routinely accept structurally well-formed utterances whose values are conceptually odd, while rejecting other utterances whose intended interpretation is transparent. This tension motivated a long tradition of work linking acceptability to interpretive pressures, including semantic motivation for constraints \autocite{lakoff1971, mccawley1968} and constructional meaning \autocite{goldberg1995constructions}.
+
+What these traditions collectively established is not that meaning replaces grammar, but that the stability of interpretation is itself a locus of constraint. An utterance may be structurally viable and yet fail because the values encoded by its parts cannot be reconciled under the constraints that are live in a situation. The present perfect plus a deictic past adverbial in (\ref{ex:pp-yesterday}) is a canonical case: the intended meaning is obvious, but the morphosyntactic temporal value conflicts with the adverbial anchoring. Conversely, many lexical clashes are tolerated as long as they do not implicate morphosyntactic value.
+
+\subsection{Processing and the reallocation of gradience}
+
+If grammar is categorical but judgements are gradient, one obvious move is to treat gradience as a function of processing. The processing literature has supplied a large inventory of robust effects---dependency locality, interference, garden-path reanalysis---that depress ratings and slow reading times for structures that are otherwise analysable \autocite{gibson2000, GrodnerGibson2005}. Classic centre-embedding examples like (\ref{ex:center}) are often treated as the poster children: they are grammatical in the sense of analysable and interpretable, but they trigger strong negative responses because incremental parsing is strained.
+
+Processing explanations, however, do not exhaust the landscape. Some constructions remain sharply rejected even when short and interpretable, and even when repeated exposure does not improve ratings. The literature on satiation and adaptation was partly motivated by precisely this need: some degraded structures improve with exposure, others do not, and the difference cannot be reduced to length or memory load alone. Processing is therefore essential for explaining the \term{feeling of anomaly}, but it is not, by itself, a theory of grammatical status.
+
+\subsection{Usage, norms, and the social life of grammaticality}
+
+Usage-based approaches shifted attention to the role of frequency and entrenchment: speakers learn the distributions of forms, and those distributions shape what feels acceptable \autocite{bybee2006, bybee2010}. A key advance in this tradition is the recognition of \term{preemption}: a form can be rejected not because it is structurally impossible, but because a competitor is consistently selected in the same niche, providing indirect negative evidence \autocite{Goldberg2011}. The classic contrast between \mention{I am 25 years old} and \ungram{\mention{I have 25 years}} in English illustrates the point: the latter is transparent and structurally viable, yet systematically non-licensed in the relevant norm-centres.
+
+Sociolinguistic work, meanwhile, insisted that grammaticality is not simply a property of a language in the abstract but of a community's normed repertoire \autocite{labov1972}. Indexical values attached to forms can shift what a situation licenses, and speakers routinely disagree about what counts as \enquote{the} grammar because they construe different norm-centres as relevant \autocite{Silverstein1976, Eckert2012}. This is not an embarrassment; it is part of the phenomenon. The problem is that, in much theoretical practice, norm-relativity is treated as a complication external to grammar rather than as a constitutive feature of what grammatical status amounts to.
+
+\subsection{Why the impasse persists}
+
+Looking back, the asterisk has been used to mark at least four different things: (i) failure of structural analysis, (ii) failure of interpretive coherence, (iii) failure of community licensing, and (iv) strong negative affect driven by processing or ideology. The field has accumulated powerful partial explanations for each, but no shared state theory that makes clear which kind of evidence speaks to which explanatory target. The result is that debates about grammaticality often conflate a state claim (what is licensed as a resource) with a measurement claim (what ratings track), and both with an etiological claim (why a resource became licensed or not).
+
+The next section isolates the conceptual source of the impasse and states a minimal decomposition that the subsequent proposal formalises.
+
+\section{The impasse diagnosed: three questions collapsed into one label}
+
+The heterogeneity in (\ref{ex:cluster}) is not noise; it is structural. Grammaticality theory has repeatedly attempted to treat grammatical status as a unified phenomenon when it is, in fact, the intersection of three distinct questions.
+
+\subsection{Structural viability}
+
+Some inputs fail because no structural analysis is available that yields a well-typed morphosyntactic representation. In such cases, the failure is categorical and does not depend on meaning, social norm-centres, or processing effort; the analysis crashes. (\ref{ex:nonsense}) is emblematic: the category sequence prevents the construction of a viable constituent structure.
+
+Treating this failure mode as real is non-negotiable: without it, the notion of grammar loses its basic explanatory purchase. The mistake is to elevate this single prerequisite into the definition of grammaticality.
+
+\subsection{Interpretive coherence}
+
+Many strings are structurally viable but unstable in value. Sometimes the instability is semantic (temporal alignment, argument structure satisfaction); sometimes pragmatic or information-structural (topic/focus fit); sometimes indexical (social meaning clashes with footing). The common thread is not \enquote{meaningfulness} in a folk sense but the stability of a dominant construal under the constraints live in the relevant situation.
+
+(\ref{ex:pp-yesterday}) illustrates this clearly: the intended interpretation is obvious, but the morphosyntactic value encoded by the present perfect conflicts with the temporal anchoring provided by \mention{yesterday}. The result is not structural nonsense but interpretive instability grounded in conventional form--value relations.
+
+\subsection{Situational licensing}
+
+A third class of cases are structurally viable and interpretively coherent, yet rejected because they are not licensed as resources in a community's repertoire. Here the role of usage and norms is constitutive: the community has not conventionalised the relevant form--value relation as a legitimate option under the norm-centres that define the communicative situation.
+
+(\ref{ex:age}) is again emblematic. The form is not nonsensical, and it is interpretable. Its rejection is a fact about English community conventions, not about universal cognitive limits. Crucially, the same form is licit in other languages, which shows that the relevant factor is licensing, not viability or coherence.
+
+\subsection{A fourth label: the feeling of anomaly}
+
+The three components above are constitutive for grammatical status. But speakers' judgements also reflect a \term{feeling of anomaly}: a metacognitive negative signal triggered by instability or high repair cost. This feeling is an important object of study, but it is not identical to grammaticality. It yields false positives, where licit constructions feel bad, and false negatives, where illicit constructions pass undetected \autocite{Fanselow2021}. Treating ratings as direct readouts of grammatical status therefore guarantees conceptual confusion.
+
+The remainder of the paper proposes a minimal state theory that makes these distinctions explicit and thereby clarifies what it is for an utterance type to be grammatical \emph{in a communicative situation}.
+
+\section{Moving forward: grammaticality as conditioned stability of form--value relations}
+
+\subsection{Conditioning states and communicative situations}
+
+Let $c$ be a \term{conditioning state}: a construed communicative situation together with whatever norm-centre is treated as relevant \autocite{wiese2023}. The point is not to reify $c$ as a fixed external context; interlocutors can misalign about which $c$ is in force, and $c$ can be renegotiated. The modelling commitment is simply that grammatical status is always assessed relative to some such conditioning.
+
+This move is not an optional sociolinguistic add-on. It is the minimal way to state the empirical fact that grammars are socially situated repertoires: the same speaker can license different resources in different situations, and different speakers can rationally disagree about licensing when they construe different norm-centres.
+
+\subsection{Three constitutive quantities}
+
+For an utterance type $u$ in conditioning state $c$ at time $t$, define three state quantities.
+
+\subsubsection{Mapping viability}
+
+Let $\mathsf{map}(u,c)\in\{0,1\}$ indicate whether there exists at least one viable morphosyntactic analysis for $u$ in $c$ that yields a well-typed representation. $\mathsf{map}$ is intended to capture genuine analyzability failure and only that. It is the categorical prerequisite highlighted by the well-formedness tradition.
+
+\subsubsection{Interpretive coherence}
+
+Let $K(u,c)\in[0,1]$ represent the stability of interpretation: the degree to which the utterance yields a dominant, non-contradictory construal under the constraints live in $c$. Formally, $K$ can be modelled as concentration of a distribution over candidate construals; for present purposes, the important point is that $K$ is distinct from $\mathsf{map}$. Structural viability does not guarantee coherence.
+
+\subsubsection{Situational licensing}
+
+Let $C_t(u,c)\in[0,1]$ be the population-level licensing rate: the probability that an individual drawn from the relevant norm-centred population treats $u$ as a legitimate community resource in $c$ rather than as an error, performance slip, or alien form. This quantity is the formal analogue of what usage-based work calls entrenchment, but explicitly conditioned on $c$ and not equated with token frequency.
+
+$C_t$ is where norms live. It is also where many apparently categorical exclusions can be located without positing hard representational bans: a form can be structurally viable and interpretable while being near-universally non-licensed in a given situation.
+
+\subsection{A stability score and a membership predicate}
+
+Define a graded stability score:
+\begin{equation}\label{eq:stability}
+\widetilde{G}_t(u,c)=\mathsf{map}(u,c)\cdot K(u,c)\cdot C_t(u,c)\in[0,1].
+\end{equation}
+
+This score underwrites gradience: lowering any component lowers stability. Communities also often treat grammaticality as a categorical membership fact: either a resource is in the repertoire or not. Model this by thresholding:
+\begin{equation}\label{eq:membership}
+G_t(u,c)=\mathbb{I}\!\left[\widetilde{G}_t(u,c)\ge \tau(c)\right],
+\end{equation}
+where $\tau(c)$ is a situation-specific decision criterion. The point is not to smuggle a hidden grammatical parameter into the theory; $\tau(c)$ is a property of how strict the situation is about what counts as \enquote{in} the repertoire. High-stakes institutional contexts can set a high threshold; low-stakes in-group contexts can set a lower one.
+
+This formalises an intuition that is often stated informally but rarely built into the state theory: what counts as \enquote{grammatical} for practical purposes is not only about the resource itself but about the decision regime of the situation.
+
+\subsection{Grammaticality versus the feeling of anomaly}
+
+The state theory above defines grammatical status via $\widetilde{G}_t$ and $\tau(c)$. Speakers' ratings, however, often track a different quantity: a subjective anomaly signal driven by low stability, processing costs, and ideological overlays. This distinction predicts systematic dissociations:
+
+\begin{itemize}
+\item Licit but degraded: $\mathsf{map}=1$, $K$ high, $C_t$ high, but processing costs depress ratings (classic centre embedding).
+\item Illicit but unnoticed: $\mathsf{map}=1$ and the intended meaning is salient, so the anomaly signal is weak even when a relevant coherence constraint is violated (agreement attraction and other slips in complex structures).
+\end{itemize}
+
+Treating acceptability ratings as direct readouts of grammatical status therefore conflates a state claim with a measurement channel. The methodological consequence is that claims about $G_t$ should be supported by converging indicators, with ratings treated as evidence primarily about the anomaly signal and only indirectly about licensing.
+
+\section{Diagnostic profiles: what different failures look like}
+
+The value of a state theory is not only definitional; it lies in the diagnostic profiles it predicts. The decomposition in (\ref{eq:stability}) yields a compact typology of recurrent instability modes.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}p{4.2cm}p{7.8cm}@{}}
+\toprule
+Profile & Canonical signature\\
+\midrule
+$\mathsf{map}=0$ & Structural crash; categorical rejection; no amount of context stabilises meaning (\ref{ex:nonsense}).\\[4pt]
+$\mathsf{map}=1$, $K\approx 0$ & Value incompatibility; intended meaning may be guessable, but conventional form--value constraints in $c$ block stabilisation (\ref{ex:pp-yesterday}).\\[4pt]
+$\mathsf{map}=1$, $K$ high, $C_t\approx 0$ & Non-licensing; interpretable but treated as not in the repertoire; often cross-linguistically variable (\ref{ex:age}, \ref{ex:lbe}).\\[4pt]
+$\mathsf{map}=1$, $K$ high, $C_t$ low/uncertain & Rarity/indeterminacy; weak consensus; high variance across speakers (\ref{ex:whose}).\\[4pt]
+$\mathsf{map}=1$, $K$ high, $C_t$ high, but high processing cost & Illusory ungrammaticality; improves with guidance; ratings track repair cost more than status (\ref{ex:center}).\\
+\bottomrule
+\end{tabular}
+\caption{Recurrent diagnostic profiles as regions of the state space.}
+\label{tab:profiles}
+\end{table}
+
+Two contrasts are particularly important for the future research agenda: stable non-licensing versus rarity, and objective status versus felt anomaly.
+
+\subsection{Stable non-licensing versus rarity}
+
+A raw corpus absence is compatible with two very different states. A construction can be rare because the opportunity set is tiny, leaving speakers with little evidence either way; or it can be rare because, despite a large opportunity set, it is systematically preempted by competitors, driving licensing toward zero. The independent relative genitive in (\ref{ex:whose}) plausibly belongs to the first class for many speakers: the configuration that would make it useful is itself rare, so the absence of tokens does not straightforwardly imply categorical exclusion.
+
+Left-branch extraction in (\ref{ex:lbe}) behaves differently. The communicative niche is common, competitors are available (\mention{Which car did you buy?}), and speakers show robust categorical rejection. This profile is naturally analysed as near-zero licensing in the relevant norm-centres, consistent with a preemption-based trajectory \autocite{Goldberg2011}. The important point for the state theory is that categoricality need not be located in $\mathsf{map}$: the intended analysis can be available and interpretation can be coherent once stipulated, while the community nonetheless treats the relation as not in the repertoire.
+
+\subsection{Illusory ungrammaticality and misattribution}
+
+Processing-driven illusions illustrate why the feeling of anomaly cannot be equated with grammatical status. Centre embedding (\ref{ex:center}) is analysable and interpretable, but incremental parsing strains working memory and dependency integration, triggering strong negative affect. Similarly, garden-path items can feel nonsensical until reanalysed:
+
+\ea \mention{The old man the boats.} \autocite{ritchie1984}\label{ex:old-man}
+\z
+
+A first-pass parse yields nonsense; reanalysis yields a coherent, licit structure. In such cases, ratings track repair difficulty, not licensing. Conversely, illicit structures can pass unnoticed when meaning is compelling, yielding false negatives \autocite{pullum2009}.
+
+The state theory predicts that such dissociations are not exceptional; they are expected whenever the anomaly signal pools multiple sources of difficulty.
+
+\section{Evidence and measurement: what it would take to test the state theory}
+
+A \enquote{moving forward} programme must specify what would count as evidence. The constitutive variables suggest a principled division of labour among data types.
+
+\subsection{Mapping viability}
+
+Evidence for $\mathsf{map}$ comes from analyzability: whether speakers can assign a stable category structure, whether repairs consistently fail, and whether comprehension collapses even under supportive contexts. Structural crash cases are rare but diagnostically clean.
+
+\subsection{Coherence}
+
+Evidence for $K$ comes from interpretive stability under controlled manipulations of the relevant constraints (temporal alignment, argument structure, information structure, indexical consistency). Here experimental pragmatics and semantics supply tools for isolating which constraints are doing the work, while corpus work can reveal conventional distributional restrictions that track those constraints.
+
+\subsection{Licensing}
+
+$C_t$ is latent and cannot be inferred from ratings alone. It should be estimated from converging indicators: production probability in elicitation, corpus frequency normalised by opportunity sets, repair behaviour, recognition latency, and social evaluation under explicit norm-centre manipulations. The state theory motivates an explicit measurement model for $C_t$ in which acceptability ratings are treated primarily as observations of the anomaly signal, not of licensing.
+
+The most immediate methodological challenge is operationalising \term{opportunity}. Preemption-based accounts require not only token counts but niche counts: how often the communicative job arises in the relevant $c$. A key empirical task for the moving-forward agenda is therefore to develop operational definitions of niches for different constructions and to measure non-occurrence relative to those opportunities.
+
+\section{Key questions for future theoretical research}
+
+The state theory reframes several longstanding debates as tractable research questions.
+
+\subsection{How should conditioning states be operationalised?}
+
+If grammaticality is conditioned, then specifying $c$ is not optional. Future work must develop operational proxies for norm-centres and communicative situations: genre, medium, stance, audience design, institutional stakes, and community membership. A crucial prediction is that constructions whose status is driven by $C_t$ will be more sensitive to $c$-manipulation than map-failures and many coherence-failures.
+
+\subsection{What are the right objects of licensing?}
+
+The theory treats $u$ as an utterance type, but in practice the granularity of $u$ matters. Are we licensing surface strings, abstract constructions, families of patterns? A moving-forward programme must articulate principled criteria for individuating $u$ in a way that makes the licensing term empirically meaningful rather than vacuous.
+
+\subsection{How do stable gaps emerge and persist?}
+
+The present paper has remained mostly constitutive. The natural next step is an etiological module: a model of how $C_t(u,c)$ trajectories arise under positive evidence, error evidence, and opportunity-sensitive preemption. The crucial question is not whether preemption exists, but what its effective strength is across niches and how it interacts with processing difficulty and social evaluation. This is where classic \enquote{categorical} constraints become a test case: the moving-forward claim is that at least some of them can be redescribed as stable non-licensing sustained by strong preemption in large opportunity sets.
+
+\subsection{How should typological generalisations be interpreted?}
+
+If grammatical systems are normed repertoires shaped by stability dynamics, typological regularities are naturally viewed as recurring attractors in design space rather than as exceptionless laws. The task is to identify which combinations of form--value relations are robustly stable across lineages and which are contingent on local history and norm-centres. Large-scale typology therefore becomes evidence about the global stability landscape rather than a direct route to categorical universals.
+
+\subsection{What role should language models play?}
+
+Language models are now unavoidable instruments in linguistic practice. The state theory suggests a principled way to use them without mistaking their outputs for grammatical truth. If a model is treated as a proxy for the anomaly signal, it may be useful for predicting processing difficulty and surprisal-like effects; if it is treated as evidence about licensing, it must be grounded in opportunity-normalised distributions and norm-centre conditioning. The moving-forward agenda is therefore methodological: what, exactly, are models approximating when they mimic human judgements, and which variable in (\ref{eq:stability}) does that approximation correspond to?
+
+\section{Conclusion}
+
+Looking back, grammaticality has functioned as a foundational organising notion in theoretical linguistics, but it has been burdened with incompatible tasks: marking structural crash, signalling coherence failure, recording community norms, and reporting subjective anomaly. The resulting conceptual overloading has fuelled recurring disputes about whether data are \enquote{competence}, \enquote{performance}, or \enquote{usage}.
+
+Moving forward, grammaticality can be reconceptualised as a state property: conditioned stability of form--value relations within a communicative situation. A minimal decomposition into mapping viability $\mathsf{map}$, interpretive coherence $K$, and situational licensing $C_t$ yields a compact diagnostic typology and clarifies why acceptability ratings are an imperfect thermometer. The same framework reframes categorical exclusions as potentially emergent stable non-licensing sustained by opportunity-sensitive preemption, and it motivates a concrete research agenda: operationalising conditioning states, defining licensable objects, measuring opportunity sets, and building convergent estimators for licensing that do not collapse grammatical status into subjective affect.
+
+If grammaticality is to remain a useful concept for theoretical linguistics, it must become a target of explanation rather than a presupposed label. The state theory proposed here is intended as a step in that direction: not a replacement for existing insights about structure, meaning, processing, or norms, but a minimal architecture that makes their interaction explicit and testable.
+
+\newpage
+\begin{sloppypar}
+\printbibliography[title=References]
+\end{sloppypar}
+
+\end{document}
