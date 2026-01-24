@@ -746,8 +746,9 @@ $\widetilde{G}_t(u,c)$ & Graded stability score ($=\mathsf{map}\cdot K \cdot C_t
 $F_{i,t}(u,c)$ & Subjective feeling of anomaly\\
 $L(u)$ & Dependency locality cost\\
 $\mathbf{R}_i(u,c)$ & Processing cost vector (interference, locality, surprisal)\\[3pt]
-\multicolumn{2}{l}{\textit{Dynamics (\S\ref{sec:dynamics})}}\\
+\multicolumn{2}{l}{\textit{Dynamics (\S\ref{sec:dynamics-new})}}\\
 $N_t(n,c)$ & Number of opportunities for niche $n$ in state $c$\\
+$\rho_t(v\mid n,c)$ & Choice probability among licensed variants\\
 $s_t, e_t, p_t$ & Positive evidence, error evidence, preemption mass\\
 \bottomrule
 \end{tabular}
@@ -960,7 +961,7 @@ The status of the four canonical examples (\S\ref{sec:diag-tree}) can now be def
    Result: $\widetilde{G}$ intermediate. Status: Marginal/Undefined.
    
    \item \textbf{*Which did you buy car?} (Stable Gap): 
-   $\mathsf{map}=1$, $K \approx 1$, but $C_t \to 0$ with high certainty. Since $N_t$ is large (questions are frequent) and the counterfactual utility $\rho$ is high, the effective preemption mass $p_t$ is large. This drives the Beta posterior mass rapidly to zero (Figure~\ref{fig:simulation}).
+   $\mathsf{map}=1$, $K \approx 1$, but $C_t \to 0$ with high certainty. Since $N_t$ is large (questions are frequent) and the counterfactual choice probability $\rho_t$ is high, the effective preemption mass $p_t$ is large. This drives the Beta posterior mass rapidly to zero (Figure~\ref{fig:simulation}).
    Result: $\widetilde{G} \approx 0$. Status: Categorically Ungrammatical.
 \end{enumerate}
 
