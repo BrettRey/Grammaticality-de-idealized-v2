@@ -429,34 +429,6 @@ Processing constraints also interact with other components. A construction that 
 
 Integration cost rises with dependency length; self-paced reading shows difficulty peaks at loci of long-distance integration, with locality accounting for 59--73\% of variance in reading times \autocite{GrodnerGibson2005}. I therefore model a dedicated locality cost \(L(u)\) rather than hiding the effect inside a residual term.
 
-Table~\ref{tab:vars2} provides a notation roadmap for the formal apparatus developed below.
-
-\begin{table}[H]
-\centering
-\caption{Mapping diagnostic categories to the constitutive variables}
-\label{tab:vars2}
-\begin{tabular}{@{}ll@{}}
-\toprule
-Diagnostic Category & Formal representation (functions of \(u, c\))\\
-\midrule
-\textsc{Form--value relation}    & $\mathsf{map}(u,c)=1$ (representational viability)\\
-\textsc{Interpretive coherence}   & $K(u,c) \in [0,1]$ (includes semantic/indexical clarity)\\
-\textsc{Situational licensing}      & $C_t(u,c) \in [0,1]$ (entrenchment dynamic)\\
-\textsc{Dependency locality}      & $L(u)$ (part of processing vector $\mathbf{R}_i$)\\
-\textsc{Processing constraints}   & $\mathbf{R}_i(u,c)$ (interference, locality, surprisal)\\
-\textsc{Apparent categoricality} & $C_t(u,c) \approx 0$ (stable gaps under preemption)\textsuperscript{\textdagger}\\
-\midrule
-\multicolumn{2}{l}{\textit{Additional Notation}}\\
-$c \in \mathcal{C}$ & Conditioning state (situation + norm-centre)\\
-$u$ & Utterance type\\
-$F_{i,t}(u,c)$ & Subjective feeling of anomaly\\
-$p_t(u,c)$ & Effective preemption mass\\
-\bottomrule
-\end{tabular}
-\vspace{4pt}
-{\footnotesize \textsuperscript{\textdagger}Residual representational bans, if any, would manifest as $\mathsf{map}(u,c)=0$.}
-\end{table}
-
 For each dependency \(d_i\) of utterance \(u\) define
 \begin{equation*}
 L(u)=\sum_{i}\ell\!\bigl(|d_i|\bigr),\qquad
@@ -767,6 +739,28 @@ The framework separates two explanatory targets:
 \emph{for a population in a communicative situation} at time $t$;
 (ii) a \term{dynamics module} specifying how such states tend to arise and persist.
 The state theory is constitutive; the dynamics module is etiological.
+Table~\ref{tab:vars2} summarizes the notation.
+
+\begin{table}[H]
+\centering
+\caption{Notation summary}
+\label{tab:vars2}
+\begin{tabular}{@{}ll@{}}
+\toprule
+Symbol & Interpretation\\
+\midrule
+$u$ & Utterance type\\
+$c \in \mathcal{C}$ & Conditioning state (situation + norm-centre)\\
+$\mathsf{map}(u,c)$ & Structural viability ($\in\{0,1\}$)\\
+$K(u,c)$ & Interpretive coherence ($\in[0,1]$)\\
+$C_t(u,c)$ & Situational licensing at time $t$ ($\in[0,1]$)\\
+$L(u)$ & Dependency locality cost\\
+$\mathbf{R}_i(u,c)$ & Processing cost vector (interference, locality, surprisal)\\
+$F_{i,t}(u,c)$ & Subjective feeling of anomaly\\
+$p_t(u,c)$ & Effective preemption mass\\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \subsection{Conditioning structure}
 \label{sec:conditioning}
