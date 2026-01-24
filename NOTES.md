@@ -22,7 +22,7 @@ Kim proposed collaboration on TFRs (Dec 27). TFRs may show **gradient acceptabil
 - Partial match → marginal
 - Mismatch → degraded
 
-This could be empirical evidence for the MVMG-style gradient grammaticality model – TFRs as a test case for F(u) predictions.
+This could be empirical evidence for the MVMG-style gradient grammaticality model -- TFRs as a test case for F(u) predictions.
 
 ---
 
