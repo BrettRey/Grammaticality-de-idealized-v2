@@ -294,7 +294,7 @@ $C_t(u,c)$ & Situational Licensing (Social convention) \\
 \label{tab:vars}
 \end{table}
 
-For expository purposes, it is useful to distinguish recurrent \term{instability modes}: diagnostic categories that correspond to different ways of driving $\mathsf{map}$, $K$, or $C_t$ toward zero, plus processing and prescriptive factors that modulate the subjective feeling $F_{i,t}$ without affecting grammatical status directly.
+For expository purposes, it is useful to distinguish recurrent \term{instability modes}: diagnostic categories that correspond to different ways of driving $\mathsf{map}$, $K$, or $C_t$ toward zero, plus processing and prescriptive factors that modulate how grammatical something \emph{feels} without affecting grammatical status directly.
 
 \subsection{Diagnostic categories}\label{sec:core-components}
 
@@ -481,7 +481,7 @@ Some constructions face rejection so persistent that it \emph{appears} categoric
 
 The intended meaning is easily grasped; nothing in the semantics or pragmatics prevents understanding the speaker's intent. Nor does the construction seem excessively complex to process. Yet English speakers categorically reject it, and \enquote{ungrammaticality} \autocite[22]{Snyder2022}.
 
-Under MVMG, such patterns are analysed not as hard representational bans ($\mathsf{map}=0$) but as \textbf{stable gaps}: situational licensing $C_t(u,c)$ is driven toward zero by persistent preemption (see \S\ref{sec:update} and \S\ref{sec:categorical-without-bans}). Because the opportunity set for the construction is large and no tokens ever appear, the effective preemption mass $p_t(u,c)$ accumulates rapidly, pushing the posterior mean licensing rate to a stable equilibrium at zero. Additional processing penalties~-- such as systematic garden-path reanalysis when the bare \textit{wh}-phrase is encountered~-- can strengthen the subjective categoricality without any independent structural veto being posited.
+Under MVMG, such patterns are analysed not as hard representational bans ($\mathsf{map}=0$) but as \textbf{stable gaps}: situational licensing $C_t(u,c)$ is driven toward zero by persistent preemption. Because the communicative job is common and an established competitor always wins (e.g., \mention{Which car did you buy?}), speakers accumulate overwhelming evidence that the construction isn't part of the repertoire. Additional processing penalties~-- such as systematic garden-path reanalysis when the bare \textit{wh}-phrase is encountered~-- can strengthen the subjective categoricality without any independent structural veto being posited. The formal dynamics appear in \S\ref{sec:formalism}.
 
 Several diagnostic criteria help identify these stable-gap constructions:
 \begin{enumerate}
@@ -490,7 +490,7 @@ Several diagnostic criteria help identify these stable-gap constructions:
 \item \textbf{Resistance to satiation:} Unlike processing-heavy cases, repeated exposure doesn't improve acceptability.
 \end{enumerate}
 
-\textbf{Prediction:} If participants are led to treat presented tokens (like \abbr{lbe}) as intentional dialectal/ingroup resources (lowering $e_t$ and raising perceived counterfactual utility), then satiation (or at least reduced feeling of ungrammaticality) should be more likely than in standard paradigms where high effective preemption $p_t$ dominates.
+\textbf{Prediction:} If participants are led to treat presented tokens (like \abbr{lbe}) as intentional dialectal or ingroup resources rather than errors, then satiation (or at least reduced feeling of ungrammaticality) should be more likely than in standard paradigms where the construction is treated as simply wrong.
 
 If future work uncovers constructions that resist even this stable-gap analysis~-- forms for which $\mathsf{map}(u,c)=0$ truly holds because no structural analysis is available~-- they would represent a residual class of hard representational bans. For now, treating classic cases like \abbr{lbe} as $C_t\to 0$ under preemption keeps the constitutive core minimal and pushes the explanatory work into the dynamics of situational licensing.
 
@@ -511,11 +511,11 @@ $\mathsf{map}=0$ &
 \term{nonsense} (\ungram{\mention{Can the have running}})\\[4pt]
 $K(u,c)\approx 0$ &
 semantic/indexical clash (*\textit{I've finished it yesterday})\\[4pt]
-$C_t(u,c)\approx 0$, low $p_t$ &
+$C_t(u,c)\approx 0$, rarely encountered &
 community-novel (\textit{friend of whose})\\[4pt]
-$C_t(u,c)\approx 0$, high $p_t$ &
+$C_t(u,c)\approx 0$, strongly preempted &
 stable gap (left-branch extraction)\\[4pt]
-high $\mathbf{R}_i$ cost, structure recovered &
+high processing cost, structure recoverable &
 transient ill-formedness (centre embedding)\\[4pt]
 otherwise &
 grammatical\\
@@ -735,15 +735,20 @@ Table~\ref{tab:vars2} summarizes the notation.
 \toprule
 Symbol & Interpretation\\
 \midrule
+\multicolumn{2}{l}{\textit{State theory}}\\
 $u$ & Utterance type\\
 $c \in \mathcal{C}$ & Conditioning state (situation + norm-centre)\\
 $\mathsf{map}(u,c)$ & Structural viability ($\in\{0,1\}$)\\
 $K(u,c)$ & Interpretive coherence ($\in[0,1]$)\\
 $C_t(u,c)$ & Situational licensing at time $t$ ($\in[0,1]$)\\
-$L(u)$ & Dependency locality cost\\
-$\mathbf{R}_i(u,c)$ & Processing cost vector (interference, locality, surprisal)\\
+$\widetilde{G}_t(u,c)$ & Graded stability score ($=\mathsf{map}\cdot K \cdot C_t$)\\[3pt]
+\multicolumn{2}{l}{\textit{Feeling model}}\\
 $F_{i,t}(u,c)$ & Subjective feeling of anomaly\\
-$p_t(u,c)$ & Effective preemption mass\\
+$L(u)$ & Dependency locality cost\\
+$\mathbf{R}_i(u,c)$ & Processing cost vector (interference, locality, surprisal)\\[3pt]
+\multicolumn{2}{l}{\textit{Dynamics (\S\ref{sec:dynamics})}}\\
+$N_t(n,c)$ & Number of opportunities for niche $n$ in state $c$\\
+$s_t, e_t, p_t$ & Positive evidence, error evidence, preemption mass\\
 \bottomrule
 \end{tabular}
 \end{table}
