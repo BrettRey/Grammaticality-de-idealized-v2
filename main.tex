@@ -427,17 +427,7 @@ Processing constraints also interact with other components. A construction that 
 
 \subsubsection{Dependency locality as a modelling primitive}\label{sec:dependency-locality}
 
-Integration cost rises with dependency length; self-paced reading shows difficulty peaks at loci of long-distance integration, with locality accounting for 59--73\% of variance in reading times \autocite{GrodnerGibson2005}. I therefore model a dedicated locality cost \(L(u)\) rather than hiding the effect inside a residual term.
-
-For each dependency \(d_i\) of utterance \(u\) define
-\begin{equation*}
-L(u)=\sum_{i}\ell\!\bigl(|d_i|\bigr),\qquad
-\ell(k)=
-  \begin{cases}
-    k, & k\le K_{\text{sat}},\\[4pt]
-    K_{\text{sat}}+\beta\,(k-K_{\text{sat}})^{\eta}, & k>K_{\text{sat}},\;0<\eta<1.
-  \end{cases}
-\end{equation*}
+Integration cost rises with dependency length; self-paced reading shows difficulty peaks at loci of long-distance integration, with locality accounting for 59--73\% of variance in reading times \autocite{GrodnerGibson2005}. I therefore model a dedicated locality cost $L(u)$, summing over the dependencies of $u$, rather than hiding the effect inside a residual term. The cost grows with dependency length but saturates at extreme distances (the precise functional form appears in \S\ref{sec:formalism}).
 
 Locality influences both the subjective feeling of ungrammaticality and the licensing dynamics. In the feeling model (\S\ref{sec:feeling-new}), it appears as a component of the processing vector $\mathbf{R}_i$. In the dynamics, locality can be included among the utility features $\mathbf{f}(v;n,c)$ that determine $\rho_t(v\mid n,c)$ (\S\ref{sec:usage}). This lowers the counterfactual choice probability of high-locality variants, which both reduces their expected positive evidence stream $s_t$ and weakens the evidential force of their non-occurrence, since $p_t(u,c)$ scales with $\rho_t(u\mid n(u),c)$.
 
@@ -924,7 +914,16 @@ F_{i,t}(u,c)=
 \end{equation*}
 where $h=i$ is the hearer processing the signal, and $\widetilde{G}^{(h)}_t$ is the hearer's expected stability score accounting for situational uncertainty (\S\ref{sec:misalignment-conditioning}).
 $\mathbf{R}_{i}(u,c)$ is a vector of processing/repair costs (locality, interference,
-garden-path reanalysis, surprisal, etc.). $D_i(u,c)$ is prescriptive dissonance.
+garden-path reanalysis, surprisal, etc.). The locality component $L(u)$ sums over dependencies $d_i$:
+\begin{equation*}
+L(u)=\sum_{i}\ell\!\bigl(|d_i|\bigr),\qquad
+\ell(k)=
+  \begin{cases}
+    k, & k\le K_{\text{sat}},\\[4pt]
+    K_{\text{sat}}+\beta\,(k-K_{\text{sat}})^{\eta}, & k>K_{\text{sat}}.
+  \end{cases}
+\end{equation*}
+Here $|d_i|$ is the length of dependency $i$ (in intervening discourse referents or words), $K_{\text{sat}}$ is a saturation threshold beyond which additional distance contributes sublinearly, and $\beta,\eta$ (with $0<\eta<1$) control the rate of that sublinear growth. $D_i(u,c)$ is prescriptive dissonance.
 
 \textsc{Interpretation.} $F=0$ corresponds to a null affect (no anomaly reported), while $F<0$ is a metacognitive warning proportional to the summed evidence of misfiring. The same feeling can arise from different mixtures of causes (structural, procedural, or social).
 
