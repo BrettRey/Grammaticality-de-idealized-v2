@@ -429,11 +429,7 @@ Processing constraints also interact with other components. A construction that 
 
 Integration cost rises with dependency length; self-paced reading shows difficulty peaks at loci of long-distance integration, with locality accounting for 59--73\% of variance in reading times \autocite{GrodnerGibson2005}. I therefore model a dedicated locality cost $L(u)$, summing over the dependencies of $u$, rather than hiding the effect inside a residual term. The cost grows with dependency length but saturates at extreme distances (the precise functional form appears in \S\ref{sec:formalism}).
 
-Locality influences both the subjective feeling of ungrammaticality and the licensing dynamics. In the feeling model (\S\ref{sec:feeling-new}), it appears as a component of the processing vector $\mathbf{R}_i$. In the dynamics, locality can be included among the utility features $\mathbf{f}(v;n,c)$ that determine $\rho_t(v\mid n,c)$ (\S\ref{sec:usage}). This lowers the counterfactual choice probability of high-locality variants, which both reduces their expected positive evidence stream $s_t$ and weakens the evidential force of their non-occurrence, since $p_t(u,c)$ scales with $\rho_t(u\mid n(u),c)$.
-
-In addition, high-cost tokens are more likely to be classified as performance slips or repairs by learners, which can be modelled as increased error evidence $e_t(u,c)$ in \eqref{eq:beta-update}.
-
-Throughout, I treat the discrete Bayesian update in \S\ref{sec:update} as the primary dynamics module; the continuous-time logistic form $\dot{C}_t = \Delta C_t(1-C_t)$ is demoted to a mean-field approximation for qualitative analysis of the expected trajectory.
+Locality influences both the subjective feeling of ungrammaticality and the licensing dynamics. High-locality constructions feel worse to process, even when structurally well-formed. And because such constructions are harder to produce and parse, speakers tend to avoid them, which over time reduces their conventionalization. The formal treatment appears in \S\ref{sec:formalism}.
 
 \subsubsection{Socio-pragmatic indexicality}\label{sec:socio-indexical}
 
