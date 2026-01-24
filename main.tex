@@ -445,32 +445,6 @@ In addition, high-cost tokens are more likely to be classified as performance sl
 
 Throughout, I treat the discrete Bayesian update in \S\ref{sec:update} as the primary dynamics module; the continuous-time logistic form $\dot{C}_t = \Delta C_t(1-C_t)$ is demoted to a mean-field approximation for qualitative analysis of the expected trajectory.
 
-\begin{table}[h]
-\centering
-\caption{Mapping diagnostic categories to the constitutive variables}
-\label{tab:vars2}
-\begin{tabular}{@{}ll@{}}
-\toprule
-Diagnostic Category & Formal representation (functions of \(u, c\))\\
-\midrule
-\textsc{Form--value relation}    & $\mathsf{map}(u,c)=1$ (representational viability)\\
-\textsc{Interpretive coherence}   & $K(u,c) \in [0,1]$ (includes semantic/indexical clarity)\\
-\textsc{Situational licensing}      & $C_t(u,c) \in [0,1]$ (entrenchment dynamic)\\
-\textsc{Dependency locality}      & $L(u)$ (part of processing vector $\mathbf{R}_i$)\\
-\textsc{Processing constraints}   & $\mathbf{R}_i(u,c)$ (interference, locality, surprisal)\\
-\textsc{Apparent categoricality} & $C_t(u,c) \approx 0$ (stable gaps under preemption)\textsuperscript{\textdagger}\\
-\midrule
-\multicolumn{2}{l}{\textit{Additional Notation}}\\
-$c \in \mathcal{C}$ & Conditioning state (situation + norm-centre)\\
-$u$ & Utterance type\\
-$F_{i,t}(u,c)$ & Subjective feeling of anomaly\\
-$p_t(u,c)$ & Effective preemption mass\\
-\bottomrule
-\end{tabular}
-\vspace{4pt}
-{\footnotesize \textsuperscript{\textdagger}Residual representational bans, if any, would manifest as $\mathsf{map}(u,c)=0$.}
-\end{table}
-
 \subsubsection{Socio-pragmatic indexicality}\label{sec:socio-indexical}
 
 The meaning of a construction extends beyond compositional semantics to include socio-pragmatic dimensions~--  how linguistic forms index aspects of social context, speaker identity, group membership, stance, or interpersonal relationships \autocite{Eckert2012, Silverstein1976}.
@@ -765,6 +739,33 @@ The framework separates two explanatory targets:
 \emph{for a population in a communicative situation} at time $t$;
 (ii) a \term{dynamics module} specifying how such states tend to arise and persist.
 The state theory is constitutive; the dynamics module is etiological.
+Table~\ref{tab:vars2} provides a notation roadmap.
+
+\begin{table}[H]
+\centering
+\caption{Mapping diagnostic categories to the constitutive variables}
+\label{tab:vars2}
+\begin{tabular}{@{}ll@{}}
+\toprule
+Diagnostic Category & Formal representation (functions of \(u, c\))\\
+\midrule
+\textsc{Form--value relation}    & $\mathsf{map}(u,c)=1$ (representational viability)\\
+\textsc{Interpretive coherence}   & $K(u,c) \in [0,1]$ (includes semantic/indexical clarity)\\
+\textsc{Situational licensing}      & $C_t(u,c) \in [0,1]$ (entrenchment dynamic)\\
+\textsc{Dependency locality}      & $L(u)$ (part of processing vector $\mathbf{R}_i$)\\
+\textsc{Processing constraints}   & $\mathbf{R}_i(u,c)$ (interference, locality, surprisal)\\
+\textsc{Apparent categoricality} & $C_t(u,c) \approx 0$ (stable gaps under preemption)\textsuperscript{\textdagger}\\
+\midrule
+\multicolumn{2}{l}{\textit{Additional Notation}}\\
+$c \in \mathcal{C}$ & Conditioning state (situation + norm-centre)\\
+$u$ & Utterance type\\
+$F_{i,t}(u,c)$ & Subjective feeling of anomaly\\
+$p_t(u,c)$ & Effective preemption mass\\
+\bottomrule
+\end{tabular}
+\vspace{4pt}
+{\footnotesize \textsuperscript{\textdagger}Residual representational bans, if any, would manifest as $\mathsf{map}(u,c)=0$.}
+\end{table}
 
 \subsection{Conditioning structure}
 \label{sec:conditioning}
