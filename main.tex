@@ -144,6 +144,7 @@
 % ===========================
 \usepackage{booktabs}
 \usepackage{array}
+\usepackage{float}
 \usepackage{graphicx}
 \graphicspath{{figures/}}
 
@@ -276,7 +277,24 @@ These three problems~-- structural viability, interpretive coherence, and situat
 
 This section presents the proposed MVMG framework. The term \term{value} is used here in the Saussurean sense of \mention{valeur} \autocite{saussure1916}: the identity of a linguistic unit is constituted not by intrinsic properties but by its position in a system of contrasts~-- what it patterns with, what it opposes, what interpretations it makes available. It is not to be confused with feature-value assignment or decision-theoretic value. Throughout, I treat grammatical knowledge as a conditioned \textbf{form--value relation}; when this relation is sufficiently stable in a communicative situation~-- i.e.~when a dominant value is reliably recoverable and socially licensed~-- I refer to it informally as an established \textbf{form--value relationship}.
 
-The formal architecture rests on three constitutive variables~-- morphosyntactic mapping ($\mathsf{map}$), interpretive coherence ($K$), and situational licensing ($C_t$)~-- whose interaction determines grammaticality (\S\ref{sec:formalism}). For expository purposes, however, it is useful to distinguish recurrent \term{instability modes}: diagnostic categories that correspond to different ways of driving $\mathsf{map}$, $K$, or $C_t$ toward zero, plus processing and prescriptive factors that modulate the subjective feeling $F_{i,t}$ without affecting grammatical status directly.
+The formal architecture rests on three constitutive variables~-- morphosyntactic mapping ($\mathsf{map}$), interpretive coherence ($K$), and situational licensing ($C_t$)~-- whose interaction determines grammaticality (\S\ref{sec:formalism}). Table~\ref{tab:vars} summarizes these variables; the formal definitions appear in \S\ref{sec:formalism}.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{ll}
+\toprule
+Variable & Component \\
+\midrule
+$\mathsf{map}(u,c)$ & Structural Viability (Categorical prerequisite) \\
+$K(u,c)$ & Interpretive Coherence (Semantics/Pragmatics) \\
+$C_t(u,c)$ & Situational Licensing (Social convention) \\
+\bottomrule
+\end{tabular}
+\caption{The three constitutive variables of the MVMG framework.}
+\label{tab:vars}
+\end{table}
+
+For expository purposes, it is useful to distinguish recurrent \term{instability modes}: diagnostic categories that correspond to different ways of driving $\mathsf{map}$, $K$, or $C_t$ toward zero, plus processing and prescriptive factors that modulate the subjective feeling $F_{i,t}$ without affecting grammatical status directly.
 
 \subsection{Diagnostic categories}\label{sec:core-components}
 
@@ -515,33 +533,6 @@ Several diagnostic criteria help identify these stable-gap constructions:
 \textbf{Prediction:} If participants are led to treat presented tokens (like \abbr{lbe}) as intentional dialectal/ingroup resources (lowering $e_t$ and raising perceived counterfactual utility), then satiation (or at least reduced feeling of ungrammaticality) should be more likely than in standard paradigms where high effective preemption $p_t$ dominates.
 
 If future work uncovers constructions that resist even this stable-gap analysis~-- forms for which $\mathsf{map}(u,c)=0$ truly holds because no structural analysis is available~-- they would represent a residual class of hard representational bans. For now, treating classic cases like \abbr{lbe} as $C_t\to 0$ under preemption keeps the constitutive core minimal and pushes the explanatory work into the dynamics of situational licensing.
-
-\bigskip
-\noindent
-To help the reader see exactly where each narrative component lives in
-the equations of §\ref{sec:formalism}, Table~\ref{tab:vars} gives the
-mapping once and for all.  Nothing here is new mathematics; it is a
-glossary that prevents the impression that the symbols were chosen
-post hoc.
-
-\begin{table}[ht]
-\centering
-\begin{tabular}{ll}
-\toprule
-Variable & Component \\
-\midrule
-$\mathsf{map}(u,c)$ & Structural Viability (Categorical prerequisite) \\
-$K(u,c)$ & Interpretive Coherence (Semantics/Pragmatics) \\
-$C_t(u,c)$ & Situational Licensing (Social convention) \\
-\bottomrule
-\end{tabular}
-\caption{The three constitutive variables of the MVMG framework.}
-\label{tab:vars}
-\end{table}
-
-
-\vspace*{-1ex}  % compactness; delete if unwanted white-space
-
 
 \subsection{Diagnosing (un)grammaticality at a glance}
 \label{sec:diag-tree}
