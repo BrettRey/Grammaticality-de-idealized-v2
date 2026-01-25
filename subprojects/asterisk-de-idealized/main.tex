@@ -122,9 +122,11 @@
 \begin{document}
 \maketitle
 
-The notion of \term{grammaticality} has done foundational work in theoretical linguistics, but it's also become a persistent site of conceptual confusion. The same asterisk is used to mark (i)~strings that defeat structural analysis, (ii)~structurally viable utterances that fail to stabilise an interpretation, (iii)~forms that are interpretable but aren't licensed as resources in a community's repertoire, and (iv)~cases that are grammatically well-formed but feel unacceptable for reasons of processing or ideology. This article reviews how twentieth-century theory inherited a largely categorical, well-formedness-centred conception of grammaticality, how later work redistributed explanatory pressure onto processing, usage, and social norms, and why the resulting competence--performance--usage triangulation hasn't resolved the impasse.
+\begin{abstract}
+The asterisk has done foundational work in theoretical linguistics, but it also hides a persistent conflation. The same diacritic is used to mark strings that defeat structural analysis, structurally viable utterances whose values do not stabilise under the constraints of an interpreted situation, interpretable forms that are nevertheless not licensed as community resources, and cases that are grammatically well-formed yet feel unacceptable for reasons of processing or ideology. This article argues that the resulting competence--performance--usage triangulation has not resolved the impasse because grammaticality has been asked to answer several distinct questions at once.
 
-Moving forward, I propose a state-theoretic reconceptualisation of grammaticality as \term{conditioned stability} of form--value relations within communicative situations. Grammatical status depends on mapping viability $\mathsf{map}$ (a categorical prerequisite), interpretive coherence $K$ (stability of value under the constraints live in a situation), and situational licensing $C_t$ (population-level acceptance of a form--value relation as a community resource). A graded stability score $\widetilde{G}_t=\mathsf{map}\cdot K\cdot C_t$ underwrites gradience, while categorical judgements arise by thresholding relative to a situation-specific decision criterion. Distinguishing grammaticality from the \term{feeling of ungrammaticality} yields a principled account of classic dissociations between acceptability ratings and grammatical status. The framework reframes longstanding debates and motivates a concrete research agenda for measuring licensing, modelling opportunity-sensitive non-occurrence, and operationalising conditioning states in a way that makes theoretical claims empirically vulnerable.
+Moving forward, I propose a minimal state theory that reconceptualises grammaticality as conditioned stability of form--value relations within communicative situations. Grammatical status depends on (i) mapping viability, (ii) interpretive coherence, and (iii) situational licensing. Distinguishing grammatical status from the feeling of ungrammaticality makes principled sense of classic dissociations between acceptability ratings and repertoire membership. The proposal yields operational diagnostics for separating coherence failures from non-licensing, motivates an opportunity-normalised notion of negative evidence, and states concrete conditions under which the framework would be disconfirmed.
+\end{abstract}
 
 \noindent Keywords: grammaticality; acceptability; form--value relations; norms; preemption; processing; communicative situation
 
@@ -222,9 +224,51 @@ This multiplicative scoring means that if any single component is zero~-- if the
 \begin{equation}\label{eq:membership}
 G_t(u,c)=\mathbb{I}\!\left[\widetilde{G}_t(u,c)\ge \tau(c)\right],
 \end{equation}
-where $\tau(c)$ is a situation-specific decision criterion. This equation asserts that an utterance is grammatical ($G=1$) if its composite stability score meets or exceeds a required threshold, and ungrammatical ($G=0$) otherwise. Rather than smuggling a hidden grammatical parameter into the theory, the point is that $\tau(c)$ is a property of how strict the situation is about what counts as \enquote{in} the repertoire. High-stakes institutional contexts can set a high threshold; low-stakes in-group contexts can set a lower one.
+where $\tau(c)$ is a situation-specific decision criterion. The point is that $\tau(c)$ is a property of how strict the situation is about what counts as \enquote{in} the repertoire. High-stakes institutional contexts can set a high threshold; low-stakes in-group contexts can set a lower one.
+
+A concern is that $\tau(c)$ might immunise the theory if it is allowed to vary freely. Two constraints matter. First, $\tau(c)$ is not construction-specific: it is fixed for a conditioning state and therefore shifts the boundary for \emph{all} utterance types evaluated in that state. Adjusting $\tau$ to rescue a single problematic case entails collateral predictions for a broad set of anchor items. Second, $\tau(c)$ can be motivated by a standard decision-theoretic rationale in which classification losses differ by situation. Let $L_{\textsc{fa}}(c)$ be the loss of treating an item as in-repertoire when it is not, and $L_{\textsc{fr}}(c)$ the loss of treating an item as not-in-repertoire when it is. A natural constraint is
+\[
+\tau(c)=\frac{L_{\textsc{fa}}(c)}{L_{\textsc{fa}}(c)+L_{\textsc{fr}}(c)}.
+\]
+This ties $\tau$ to independently characterisable properties of $c$ (stakes, institutional norms, gatekeeping pressure). Empirically, $\tau(c)$ can be estimated by calibrating participants on an anchor set spanning clear in-repertoire and clear not-in-repertoire items for the target $c$, rather than being tuned post hoc to accommodate the construction under dispute.
 
 This formalises an intuition that is often stated informally but is rarely built into the state theory: what counts as \enquote{grammatical} for practical purposes depends on the decision regime of the situation, not just the resource itself.
+
+\subsection{Why this combination rule is not decorative}\label{sec:combination}
+
+The three-way decomposition is the theoretical commitment; the choice of a specific combination operator is a modelling decision. The operator should nevertheless be constrained by desiderata that make it empirically non-trivial.
+
+First, the core is non-compensatory: mapping failure, catastrophic incoherence, or categorical non-licensing should each be sufficient to drive grammatical status to zero in the relevant $c$. This excludes simple weighted sums as a model of grammatical status, since they permit a high value on one dimension to compensate for near-zero on another. Second, the graded score should reflect compounding instability: two moderate deficits should typically be worse than either deficit alone. Third, the operator should be monotone in each argument, and it should allow a transparent generalisation to relative weighting if later work justifies it.
+
+Several standard operators meet the non-compensatory constraint. The minimum operator,
+\[
+\widetilde{G}^{\min}_t(u,c)=\min\{\mathsf{map}(u,c),K(u,c),C_t(u,c)\},
+\]
+treats the weakest link as decisive. This makes a clear prediction: once one component is identified as the bottleneck, further degradation elsewhere should not matter for the objective score. At the other extreme, a weighted sum predicts systematic compensation:
+\[
+\widetilde{G}^{\Sigma}_t(u,c)=w_{\mathsf{map}}\mathsf{map}+w_KK+w_CC_t,
+\]
+which is often plausible as a model of subjective ratings but is a poor fit for a state theory of grammatical status precisely because it allows a community to \enquote{make up for} incoherence by licensing alone.
+
+The product rule adopted in \eqref{eq:stability},
+\[
+\widetilde{G}^{\times}_t(u,c)=\mathsf{map}(u,c)\cdot K(u,c)\cdot C_t(u,c),
+\]
+is the simplest operator that is non-compensatory and compounding. It also has a useful interpretive property: in log-space, the components contribute additively ($\log \widetilde{G}=\log \mathsf{map}+\log K+\log C_t$), which aligns naturally with an evidence-accumulation picture in which distinct sources of instability contribute independent penalties. If future work motivates differential weighting, the product generalises straightforwardly to a weighted geometric form, $\mathsf{map}\cdot K^{\alpha}\cdot C_t^{\beta}$, with $\alpha,\beta>0$.
+
+The choice among $\min$ and $\times$ is empirically discriminable. Consider a factorial manipulation that independently lowers coherence and licensing while holding mapping constant: for the same morphosyntactic frame, introduce a mild value-clash (lowering $K$) and, independently, present the construction under a norm-centre that treats it as non-native or marginal (lowering $C_t$).\footnote{The licensing manipulation can be implemented by norm-centre framing (ingroup/dialect/resource vs error) and by register/stakes manipulations, which are predicted to affect $\tau(c)$ and, in some cases, $C_t$ itself.} The minimum rule predicts that once either $K$ or $C_t$ is the bottleneck, the second manipulation should not further depress the objective score; the product rule predicts a systematic interaction (compounding), since the combined manipulation reduces stability more than either alone. This is a substantive prediction about the structure of the state space, not a restatement of the verbal story.
+
+\subsection{Separating coherence from licensing: operational criteria}\label{sec:KvsC}
+
+A recurring worry is that coherence failure $K\approx 0$ and non-licensing $C_t\approx 0$ may collapse into one another, since both yield low stability. The separation is not a matter of intuitionistic sorting; it is a commitment to distinct measurement signatures.
+
+\textsc{Coherence} concerns the stability of a dominant construal under the constraints live in $c$. It is therefore primarily diagnosed by interpretive measures: paraphrase agreement, comprehension accuracy, response times to inference questions, and variability of construal across subjects and contexts. A low-$K$ item is predicted to exhibit high interpretive dispersion: speakers disagree about what it would mean, or arrive at unstable, repair-heavy construals.
+
+\textsc{Licensing} concerns whether a community treats a form--value relation as a legitimate resource in the repertoire in $c$, rather than as a slip, a learner form, or an alien option. It is therefore diagnosed by repertoire measures: production probability in elicitation, willingness-to-use judgements (\enquote{would you say this?}), norm-centre self-ascription tasks (\enquote{is this part of your dialect/register?}), correction/repair behaviour, and corpus frequency normalised by an opportunity proxy. A low-$C_t$ item is predicted to be readily interpretable (often with high paraphrase agreement) but nevertheless rejected as \enquote{not a thing we do} in the relevant norm-centres.
+
+These diagnostics cut across the tempting verbal contrast between \enquote{values cannot be reconciled} and \enquote{the community does not accept the reconciliation}. In practice, the decisive question is whether the source of degradation is interpretive dispersion or repertoire exclusion.
+
+This is why (\ref{ex:pp-yesterday}) is a useful but non-trivial diagnostic. Many speakers can recover the intended meaning of \mention{I've finished it yesterday} with little difficulty, which pushes it toward a low-$C_t$ profile (repertoire exclusion of a specific tense--adverb pairing) rather than a pure low-$K$ profile. On the other hand, if an experimental design reveals systematic competition between two construals (a present-perfect reading vs a coerced simple-past reading), then the same item will show low $K$ by exhibiting dispersion in paraphrase and inference tasks even when participants are instructed to treat the form as a legitimate dialectal resource. The framework is therefore falsifiable here: it predicts that the K-diagnosis and the C-diagnosis diverge in their measurement signatures.
 
 \subsection{Grammaticality versus the feeling of ungrammaticality}
 
@@ -289,6 +333,21 @@ A \enquote{moving forward} programme has to specify what would count as evidence
 
 One central challenge involves operationalising \term{opportunity}. Preemption-based accounts require not only token counts but niche counts: how often the communicative job arises in the relevant $c$. A key empirical task for the moving-forward agenda is to develop operational definitions of niches for different constructions and to measure non-occurrence relative to those opportunities.
 
+\subsection{A worked opportunity proxy: independent relative genitives}\label{sec:opportunity-worked}
+
+Opportunity-normalisation is the hinge between mere corpus rarity and evidence of systematic exclusion. The general problem is that niches are not directly annotated in corpora: we rarely observe \enquote{the speaker needed to express X} as an explicit variable. A workable starting point is to use competitor forms as a lower-bound proxy for opportunities. If speakers reliably realise a niche using an established competitor, then each observed competitor token witnesses an opportunity in which the target variant could, in principle, have been selected.
+
+For the independent relative genitive in (\ref{ex:whose}), a plausible niche is: \enquote{predicate something of an associate of a discourse-salient possessor while packaging the possessor relation in a relative dependency}. Directly counting such niches is difficult. But we can approximate an opportunity lower bound by counting competitor realisations in the same discourse environments, such as:
+(i) \mention{I saw Joan; a friend of hers was visiting};
+(ii) \mention{I saw Joan; one of her friends was visiting};
+(iii) \mention{I saw Joan, whose friend was visiting};
+(iv) \mention{I saw Joan; Joan's friend was visiting}.
+Each token of (i)--(iv) is evidence that the niche occurred and was realised by a competitor.
+
+Let $N^{\ast}$ be the competitor count in a corpus slice intended to approximate the relevant $c$ (genre, register, period). Then $N^{\ast}$ provides a conservative lower bound on the opportunity set $N_t(n,c)$. The question \enquote{does zero attestation matter?} becomes \enquote{is zero attestation surprising given $N^{\ast}$ and a plausible counterfactual choice probability?}. If a target variant would have been chosen with probability $\rho$ among licensed competitors, then the expected number of tokens is $N^{\ast}\rho$. Even small values of $\rho$ yield strong expectations when $N^{\ast}$ is large; conversely, when $N^{\ast}$ is small, absence is weak evidence and should predict uncertainty rather than categorical exclusion.
+
+This proxy operationalisation is deliberately coarse, but it is already discriminating: it separates cases where \enquote{no tokens} is probative (large $N^{\ast}$) from cases where it is not (small $N^{\ast}$). It also makes clear what a \enquote{moving forward} corpus programme must provide: explicit definitions of competitor sets for niches and principled choices of corpus slices approximating $c$.
+
 \section[Questions for future research]{Key questions for future theoretical research}
 
 The state theory reframes several longstanding debates as tractable research questions.
@@ -302,6 +361,26 @@ The state theory reframes several longstanding debates as tractable research que
 \paragraph{How should typological generalisations be interpreted?} If grammatical systems are normed repertoires shaped by stability dynamics, typological regularities are naturally viewed as recurring attractors in design space rather than as exceptionless laws. The task is to identify which combinations of form--value relations are robustly stable across lineages and which are contingent on local history and norm-centres. Large-scale typology therefore becomes evidence about the global stability landscape rather than a direct route to categorical universals.
 
 \paragraph{What role should language models play?} Language models are now unavoidable instruments in linguistic practice. The state theory suggests a principled way to use them without mistaking their outputs for grammatical truth. If a model is treated as a proxy for the ungrammaticality signal, it may be useful for predicting processing difficulty and surprisal-like effects; if it's treated as evidence about licensing, it has to be grounded in opportunity-normalised distributions and norm-centre conditioning. The resulting agenda is methodological: what, exactly, are models approximating when they mimic human judgements, and which variable in (\ref{eq:stability}) does that approximation correspond to?
+
+\section{What would count against this framework?}\label{sec:falsify}
+
+A framework that decomposes grammatical status into multiple components risks appearing too flexible unless each component is tied to independent evidence. The present proposal is disconfirmed, or at least seriously pressured, by any of the following patterns.
+
+\begin{enumerate}
+\item \textbf{No measurable dissociation between coherence and licensing.} If constructions diagnosed as low-$C_t$ (repertoire exclusion) systematically exhibit the same interpretive-dispersion profile as constructions diagnosed as low-$K$, and if tasks designed to separate these signatures fail across a range of phenomena, then the K/C distinction is not empirically supported.
+
+\item \textbf{Opportunity-normalised absence does not discriminate stable gaps from rarity.} If constructions widely treated as \enquote{categorical} do not show strong opportunity proxies via large competitor counts ($N^{\ast}$) while rare/uncertain constructions do, then the central methodological claim about opportunity-sensitive negative evidence is undermined.
+
+\item \textbf{Norm-centre and stakes manipulations do not affect the predicted targets.} If explicit manipulations of conditioning state (register, institutional stakes, dialect framing) do not systematically shift threshold behaviour (as indexed by anchor sets) and do not preferentially affect constructions hypothesised to be licensing-sensitive, then the conditioning architecture is mis-specified.
+
+\item \textbf{The combination rule makes the wrong interaction predictions.} If factorial manipulations that independently target coherence and licensing show no compounding interaction where the product rule predicts one, then either a different non-compensatory operator is required (e.g.\ $\min$), or the assumption that the components contribute independently to objective stability is incorrect.
+
+\item \textbf{Robust cases of categorical exclusion with high independent evidence of licensing.} If a construction is demonstrably used productively in the relevant $c$ (high production probability and opportunity-normalised corpus rates) and yields stable construals, yet is still treated as categorically ungrammatical in repertoire-membership tasks by the same population, then the proposal that grammatical status is constituted by licensing plus coherence plus mapping is incomplete.
+\end{enumerate}
+
+\begin{sloppypar}
+These conditions are intentionally stated as empirical profiles rather than as verbal counterexamples, since the point is to align theoretical claims with distinct measurement channels.
+\end{sloppypar}
 
 \section{Conclusion}
 
