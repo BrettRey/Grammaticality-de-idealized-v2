@@ -17,11 +17,15 @@
 
 \usepackage{booktabs}
 \usepackage{array}
+\usepackage{amsmath}
 
-\usepackage[style=american]{csquotes}
+\usepackage[style=british]{csquotes}
 
 \usepackage{xcolor}
 \definecolor{linkmaroon}{RGB}{128, 0, 32}
+
+\usepackage[backend=biber,style=apa,natbib=true,doi=true,isbn=false,url=true]{biblatex}
+\addbibresource{refs.bib}
 
 \usepackage{hyperref}
 \hypersetup{
@@ -32,9 +36,6 @@
   pdftitle={The operator stratum},
   pdfauthor={Brett Reynolds},
 }
-
-\usepackage[backend=biber,style=apa,natbib=true,doi=true,isbn=false,url=true]{biblatex}
-\addbibresource{refs.bib}
 
 \usepackage{langsci-gb4e}
 \makeatletter
@@ -52,26 +53,26 @@
 \maketitle
 
 \begin{abstract}
-Grammaticality judgements show a striking selectivity: speakers routinely treat violations of clause structure, agreement, tense--aspect, polarity, or case as a distinct kind of wrongness, while treating accent shifts, many lexical substitutions, and register choices as matters of style, identity, or appropriateness rather than \enquote{grammar}. This paper proposes that this selectivity is not an artefact of English or of any particular syntactic theory. Rather, it reflects a cross-linguistically robust division in the \term{value} of linguistic resources. I argue that communities conventionalise a relatively small set of contrasts as \term{operators}: publicly accountable form--value relations that organise how utterances update shared commitments, allocate participant roles, and stabilise combinatorial possibility. These \term{operator} relations are what grammaticality talk tracks. Clause structure falls under this stratum because it is itself a system of operators (clause typing, argument linking, dependency management, and scope), not because it is autonomous from meaning. Accent and open-class lexical choice typically fall outside because they primarily contribute indexical and conceptual value that is negotiable, defeasible, and weakly tied to public uptake obligations, though phonological and gestural material can enter the operator stratum when grammaticalised (e.g.\ tone, interrogative prosody, sign-language nonmanuals). The proposal predicts where strong categorical judgements, repair behaviour, and rapid preemption dynamics should cluster across languages, and it reframes typological diversity as variation in which contrasts are recruited into the operator stratum.
+Grammaticality judgments show a striking selectivity: speakers routinely treat violations of clause structure, agreement, tense--aspect, polarity, or case as a distinct kind of wrongness, while treating accent shifts, many lexical substitutions, and register choices as matters of style, identity, or appropriateness rather than \enquote{grammar}. This paper proposes that this selectivity is not an artefact of English or of any particular syntactic theory. Rather, it reflects a cross-linguistically robust division in the \term{value} of linguistic resources. I argue that communities conventionalize a relatively small set of contrasts as \term{operators}: publicly accountable form--value relations that organize how utterances update shared commitments, allocate participant roles, and stabilize combinatorial possibility. These \term{operator} relations are what grammaticality talk tracks. Clause structure falls under this stratum because it is itself a system of operators (clause typing, argument linking, dependency management, and scope), not because it is autonomous from meaning. Accent and open-class lexical choice typically fall outside because they primarily contribute indexical and conceptual value that is negotiable, defeasible, and weakly tied to public uptake obligations, though phonological and gestural material can enter the operator stratum when grammaticalized (e.g.\ tone, interrogative prosody, sign-language nonmanuals). The proposal predicts where strong categorical judgments, repair behaviour, and rapid preemption dynamics should cluster across languages, and it reframes typological diversity as variation in which contrasts are recruited into the operator stratum.
 \end{abstract}
 
 \section{The puzzle: why \enquote{grammar} picks out some things and not others}
 
-In ordinary metalinguistic practice, speakers distinguish at least three kinds of linguistic mismatch. Some mismatches are treated as straightforward errors of \enquote{grammar}, often with an accompanying sense that there is nothing to debate: wrong agreement, illicit clause structure, incompatible tense--aspect morphology, missing obligatory evidentials, or mis-selected question particles. Other mismatches are treated as infelicities of social positioning: an accent that indexes the wrong stance, a style that fails to fit the activity type, a form that sounds \enquote{too formal} or \enquote{too intimate}. Still other mismatches are treated as mere lexical choice: one could have used a more apt word, but the choice does not make the utterance ill-formed.
+In ordinary metalinguistic practice, speakers distinguish at least three kinds of linguistic mismatch. Some mismatches are treated as straightforward errors of \enquote{grammar}, often with an accompanying sense that there's nothing to debate: wrong agreement, illicit clause structure, incompatible tense--aspect morphology, missing obligatory evidentials, or mis-selected question particles. Other mismatches are treated as infelicities of social positioning: an accent that indexes the wrong stance, a style that fails to fit the activity type, a form that sounds \enquote{too formal} or \enquote{too intimate}. Still other mismatches are treated as mere lexical choice: one could have used a more apt word, but the choice does not make the utterance ill-formed.
 
-A familiar temptation is to reduce this to a contrast between \enquote{structure} and \enquote{use}: morphosyntax counts as grammar; accent and lexical choice do not. But that gloss is neither typologically adequate nor theoretically explanatory. Many languages grammaticalise prosody, phonation, or tone in ways that make them as obligatory and contrastive as agreement or tense \parencite{hyman2011,ladd2008}. Many grammatical categories are not universal: a language may lack tense marking \parencite{comrie1985} or number inflection \parencite{corbett2000} while still sustaining robust categorical judgements elsewhere. And some lexical items function as narrow operators, with distributional constraints and systematic scope effects indistinguishable from those of inflectional morphology \parencite{hoppertraugott2003,bybee2010}.
+A familiar temptation is to reduce this to a contrast between \enquote{structure} and \enquote{use}: morphosyntax counts as grammar; accent and lexical choice don't. But that gloss is neither typologically adequate nor theoretically explanatory. Many languages grammaticalize prosody, phonation, or tone in ways that make them as obligatory and contrastive as agreement or tense \parencite{hyman2011,ladd2008}. Many grammatical categories aren't universal: a language may lack tense marking \parencite{comrie1985} or number inflection \parencite{corbett2000} while still sustaining robust categorical judgments elsewhere. And some lexical items function as narrow operators, with distributional constraints and systematic scope effects indistinguishable from those of inflectional morphology \parencite{hoppertraugott2003,bybee2010}.
 
-The core question is therefore not \enquote{why morphosyntax is special} in the sense of being autonomous or insulated. It is why certain form--value relations are treated as the community's basic meaning-making infrastructure, so that violations are policed as membership facts, while other relations are treated as negotiable resources for stance, identity, and content selection. The argument developed here is that this difference tracks a difference in \term{value} in the Saussurean sense: what a unit is, is its place in a system of contrasts \parencite{saussure1916}. Grammaticality judgements target a particular kind of value: \term{operator value}.
+The core question is therefore not \enquote{why morphosyntax is special} in the sense of being autonomous or insulated. It's why certain form--value relations are treated as the community's basic meaning-making infrastructure, so that violations are policed as membership facts, while other relations are treated as negotiable resources for stance, identity, and content selection. The argument developed here is that this difference tracks a difference in \term{value}. The term \term{value} is used here in the Saussurean sense of \mention{valeur} \parencite{saussure1916}: the identity of a linguistic unit is constituted not by intrinsic properties but by its position in a system of contrasts~-- what it patterns with, what it opposes, what interpretations it makes available. It is not to be confused with feature-value assignment or decision-theoretic value. Throughout, I treat grammatical knowledge as a conditioned \textbf{form--value relation}; when this relation is sufficiently stable in a communicative situation~-- i.e.\ when a dominant value is reliably recoverable and socially licensed---I refer to it informally as an established \textbf{form--value relationship}. Grammaticality judgments target a particular kind of value: \term{operator value}.
 
 \section{Value, commitments, and why some contrasts are publicly accountable}
 
-The starting point is a deliberately non-idealised view of grammar. A community's linguistic system is not merely a set of strings or derivations, but a repertoire of conventionalised form--value relations that enable coordination in interaction. The relevant sense of coordination is the one captured by work on common ground and grounding: interlocutors do not merely produce signals; they attempt to make commitments mutually recognisable and mutually ratifiable \parencite{stalnaker1978,stalnaker2002,clarkbrennan1991,clark1996}. This makes some aspects of linguistic form \term{publicly accountable} in a way that others are not.
+The starting point is a deliberately non-idealized view of grammar. A community's linguistic system isn't merely a set of strings or derivations, but a repertoire of conventionalized form--value relations that enable coordination in interaction. The relevant sense of coordination is the one captured by work on common ground and grounding: interlocutors don't merely produce signals; they attempt to make commitments mutually recognizable and mutually ratifiable \parencite{stalnaker1978,stalnaker2002,clarkbrennan1991,clark1996}. This makes some aspects of linguistic form \term{publicly accountable} in a way that others aren't.
 
 Two observations matter.
 
-First, interaction is organised around obligations of uptake and repair. When an utterance is not understood, or is understood under a suspect analysis, interlocutors systematically mobilise repair mechanisms \parencite{schegloffjeffersonsacks1977}. These mechanisms presuppose that some dimensions of form are designed to be recognisably \enquote{the same thing} across tokens and across speakers, because they are the dimensions on which the interactional work turns.
+First, interaction is organized around obligations of uptake and repair. When an utterance isn't understood, or is understood under a suspect analysis, interlocutors systematically mobilize repair mechanisms \parencite{schegloffjeffersonsacks1977}. These mechanisms presuppose that some dimensions of form are designed to be recognizably \enquote{the same thing} across tokens and across speakers, because they are the dimensions on which the interactional work turns.
 
-Second, public accountability is selective. Indexical meaning is real and systematic, but it is typically tolerated as variable, defeasible, and contextually negotiable. Accent and style are paradigmatic examples: they are central to social meaning, but they are not normally treated as licensing conditions on what an utterance can \enquote{count as} in the way that clause-typing, polarity, or evidential marking can be \parencite{eckert2008,eckert2012,agha2007,coupland2007}. Lexical choice is similarly accountable in an ethical or epistemic sense (one can be challenged for using a slur, or for choosing a misleading term), but this is a different sort of accountability than \enquote{this form is not in the repertoire}.
+Second, public accountability is selective. Indexical meaning is real and systematic, but it is typically tolerated as variable, defeasible, and contextually negotiable. Accent and style are paradigmatic examples: they are central to social meaning, but they aren't normally treated as licensing conditions on what an utterance can \enquote{count as} in the way that clause-typing, polarity, or evidential marking can be \parencite{eckert2008,eckert2012,agha2007,coupland2007}. Lexical choice is similarly accountable in an ethical or epistemic sense (one can be challenged for using a slur, or for choosing a misleading term), but this is a different sort of accountability than \enquote{this form isn't in the repertoire}.
 
 These observations invite a more explicit distinction. If \term{value} is always relational and contrastive, then the relevant question is which contrasts a community treats as foundational for public update in interaction. Those contrasts constitute what I will call the \term{operator stratum}.
 
@@ -81,117 +82,165 @@ These observations invite a more explicit distinction. If \term{value} is always
 
 A form--value relation belongs to the \term{operator stratum} of a communicative situation if it satisfies both of the following conditions.
 
-\textsc{(i) Public update condition.} The relation conventionally contributes to how an utterance updates shared commitments or allocates interactional roles (speaker, addressee, evidential access, epistemic authority, polarity, modality), in a way that is recognisably \emph{intended} rather than merely inferred. This includes not only propositional content, but clause-type and illocutionary organisation, which structure what counts as an appropriate next move \parencite{stalnaker2002,farkasbruce2010}.
+\textsc{(i) Public update condition.} The relation conventionally contributes to how an utterance updates shared commitments or allocates interactional roles, but in a specific way: it functions as an \emph{instruction} or \emph{control setting} for the update, rather than merely as a description of content. This includes clause-type, illocutionary force, and evidential anchoring, which structure what counts as an appropriate next move \parencite{stalnaker2002,farkasbruce2010}. It is distinguished from open-class meaning by being conventionally encoded as an update instruction~-- a signal that constrains uptake, ratification, and the space of licit next moves~-- rather than merely contributing descriptive content whose interactional consequences are left to contextual inference.
 
-\textsc{(ii) Repertoire condition.} The community treats the relation as part of its stable meaning-making resources: it is a conventional option with a restricted paradigm, and it is governed by distributional constraints whose violation is typically treated as a categorical mismatch rather than as an idiosyncratic stylistic choice.
+\textsc{(ii) Repertoire condition.} The community treats the relation as part of its stable meaning-making resources: it is a conventional option with a restricted paradigm, and it is governed by distributional constraints whose violation is typically treated as a categorical mismatch. This excludes idioms and fixed collocations, which may be rigid but don't function as combinatorial values in a contrastive system.
 
-The claim is not that operator resources are always morphological or always syntactic. It is that they are conventionalised as \emph{operators}: closed-system contrasts that function as control parameters for interpretation and interaction. Morphology and clause structure are privileged \emph{where they instantiate operators}, not by virtue of being a separate module.
+The claim isn't that operator resources are always morphological or always syntactic. It's that they're conventionalized as \emph{operators}: closed-system contrasts that function as control parameters for interpretation and interaction. Morphology and clause structure are privileged \emph{where they instantiate operators}, not by virtue of being a separate module.
 
 \subsection{Diagnostics}
 
 The operator stratum can be diagnosed empirically, and the diagnostics are explicitly cross-linguistic.
 
-\textsc{Paradigmatic closure.} Operator relations typically occupy relatively small, enumerable paradigms: polarity contrasts, evidential sets, tense--aspect systems, agreement paradigms, switch-reference markers, question particles, complementiser inventories, and so on. Open-class lexical sets do not behave this way.
+\textsc{Paradigmatic closure.} Operator relations typically occupy relatively small, enumerable paradigms: polarity contrasts, evidential sets, tense--aspect systems, agreement paradigms, switch-reference markers, question particles, complementiser inventories, and so on. Open-class lexical sets don't behave this way.
 
 \textsc{Broad scope.} Operator choices often have clause-wide consequences, affecting argument linking, scope, clause type, or discourse update potential.
 
-\textsc{High opportunity mass.} Many operator niches are encountered constantly in ordinary interaction: polar questioning, reference tracking, temporal anchoring, attribution of source. This produces strong preemption dynamics: a competitor that systematically wins in a large opportunity set quickly drives a rival option toward non-licensing \parencite{bybee2006,bybee2010}. The force of the diagnostic does not depend on any particular learning model; it depends on the fact that repeated structured non-occurrence is evidential.
+\textsc{Opportunity mass and preemption.} Many operator niches are encountered constantly in ordinary interaction, which produces strong preemption dynamics: a competitor that systematically wins in a large opportunity set quickly drives a rival option toward non-licensing \parencite{bybee2006,bybee2010}. Where opportunity mass is lower, the same kinds of relations may still be operator-like, but categoricality and preemption effects are predicted to be weaker and more register-bound.
 
-\textsc{Repair sensitivity.} Operator mismatches are disproportionately likely to trigger repair sequences, often early and often with a \enquote{you can't say that} flavour rather than a negotiation of style or attitude \parencite{schegloffjeffersonsacks1977}. This predicts a difference in repair profiles across mismatch types, and it predicts cross-linguistic differences depending on which contrasts are grammaticalised.
+\textsc{Repair sensitivity.} Operator mismatches are disproportionately likely to trigger repair sequences, often early and often with a \enquote{you can't say that} flavour rather than a negotiation of style or attitude \parencite{schegloffjeffersonsacks1977}. This predicts a difference in repair profiles across mismatch types, and it predicts cross-linguistic differences depending on which contrasts are grammaticalized.
 
 \textsc{Neurocognitive separation in \emph{response profile}, not in module.} The proposal is compatible with domain-general accounts of prediction and error signalling, but it predicts that operator violations should systematically elicit distinct response profiles from conceptual anomalies, because operator mismatches interfere with the mapping from form to public update, rather than merely producing a surprising concept combination. This aligns with well-known ERP dissociations between semantic incongruity and morphosyntactic anomaly \parencite{kutashillyard1980,osterhoutholcomb1992,friederici2011} without implying that syntax is autonomous.
 
-None of these diagnostics depends on English. If they are right, then where a language grammaticalises a contrast, that contrast should behave \enquote{like grammar} even when the exponent is tonal, prosodic, or gestural.
+None of these diagnostics depends on English. If they're right, then where a language grammaticalizes a contrast, that contrast should behave \enquote{like grammar} even when the exponent is tonal, prosodic, or gestural.
 
 \section{Why clause structure belongs to the operator stratum}
 
-Clause structure is often discussed as if it were a matter of arranging words. That is an English-biased picture. Cross-linguistically, clause structure is realised through diverse exponent types: affix order in polysynthetic systems, templatic morphology, clitic clusters, tone melodies, nonmanual marking, rigid word order, flexible order coupled with case, and various mixtures. The generalisation relevant here is not about linearisation. It is about the \term{operator value} of clausal architecture.
+Clause structure is often discussed as if it were a matter of arranging words. That's an English-biased picture. Cross-linguistically, clause structure is realized through diverse exponent types: affix order in polysynthetic systems, templatic morphology, clitic clusters, tone melodies, nonmanual marking, rigid word order, flexible order coupled with case, and various mixtures. The generalization relevant here isn't about linearization. It's about the \term{operator value} of clausal architecture.
 
 Clause structure packages at least four operator families.
 
-\textsc{Clause type and response space.} Interrogatives, imperatives, declaratives, and related types encode different update potentials and different norms for what counts as a relevant next move. This is interactionally basic, and languages grammaticalise clause type using heterogeneous resources (particles, morphology, intonation, or combinations) \parencite{dryer2013,ladd2008}. A clause-typing mismatch therefore disrupts public coordination, not merely aesthetic preferences.
+\textsc{Clause type and response space.} Interrogatives, imperatives, declaratives, and related types encode different update potentials and different norms for what counts as a relevant next move. This is interactionally basic, and languages grammaticalize clause type using heterogeneous resources (particles, morphology, intonation, or combinations) \parencite{dryer2013,ladd2008}. A clause-typing mismatch therefore disrupts public coordination, not merely aesthetic preferences.
 
 \textsc{Argument linking and participant roles.} Clause structure encodes which participant is presented as actor, undergoer, experiencer, and so on. The particular implementation varies typologically, but the operator function is stable: it constrains the space of recoverable role assignments, and it does so in a publicly accountable way.
 
 \textsc{Dependency management and scope.} Relative clauses, complement structures, and long-distance dependencies are not simply compositional ornaments. They package how information is nested, attributed, and scoped. These are conditions on what an utterance publicly commits to and how it can be challenged or responded to \parencite{stalnaker2002,farkasbruce2010}.
 
-\textsc{Reference tracking across clauses.} Many languages treat cross-clausal coherence as an operator domain. Switch-reference is a textbook case: a morphosyntactic system signals whether the subject of one clause is the same as or different from that of another, thereby reducing ambiguity in multi-clause sequences \parencite{vangijn2016}. The key point here is not the particular pivot (which varies) but the fact that a community can grammaticalise the tracking problem as operator value.
+\textsc{Reference tracking across clauses.} Many languages treat cross-clausal coherence as an operator domain. Switch-reference is a textbook case: a morphosyntactic system signals whether the subject of one clause is the same as or different from that of another, thereby reducing ambiguity in multi-clause sequences \parencite{vangijn2016}. The key point here is not the particular pivot (which varies) but the fact that a community can grammaticalize the tracking problem as operator value.
 
-To illustrate the form of the claim, consider a canonical switch-reference pattern discussed in the typological literature, where a medial verb carries an identity vs.\ non-identity marker whose value is computed relative to a subsequent clause \parencite{vangijn2016}. The operator is not \enquote{a content word}. It is a clause-linking control parameter. Violations are therefore predicted to be treated as structural mismatches: the wrong marker makes the clause-linking update incoherent in the relevant conventions.
+To illustrate the form of the claim, consider a canonical switch-reference pattern discussed in the typological literature, where a medial verb carries an identity vs.\ non-identity marker whose value is computed relative to a subsequent clause \parencite{vangijn2016}. The operator isn't \enquote{a content word}. It's a clause-linking control parameter. Violations are therefore predicted to be treated as structural mismatches: the wrong marker makes the clause-linking update incoherent in the relevant conventions.
 
-In this sense clause structure is operator-rich. It is a bundle of public control settings. That is why its violations feel like violations of the community's basic repertoire, in much the way that the wrong tense or agreement value does.
+In this sense clause structure is operator-rich. It's a bundle of public control settings. That's why its violations feel like violations of the community's basic repertoire, in much the way that the wrong tense or agreement value does.
 
 \section{Why tense and number behave similarly without being universal}
 
 On the present account, tense and number behave \enquote{like grammar} in languages where they are part of the operator stratum, and they are irrelevant to grammaticality talk where they are not grammaticalised. This avoids a common slippage between \enquote{salience in familiar European languages} and \enquote{cross-linguistic necessity} \parencite{haspelmath2007}.
 
-Tense marking is an especially transparent example. Where tense is grammaticalised, it functions as a conventional operator on temporal anchoring and discourse update, and violations are often treated as categorical mismatches \parencite{comrie1985}. Where tense is not grammaticalised, temporal anchoring is managed through other operator resources (aspect, evidential access, discourse particles) and through contextual inference. The proposal predicts that speakers in the latter case should not experience missing tense marking as \enquote{ungrammatical}, because there is no operator expectation to violate.
+Tense marking is an especially transparent example. Where tense is grammaticalized, it functions as a conventional operator on temporal anchoring and discourse update, and violations are often treated as categorical mismatches \parencite{comrie1985}. Where tense isn't grammaticalized, temporal anchoring is managed through other operator resources (aspect, evidential access, discourse particles) and through contextual inference. The proposal predicts that speakers in the latter case shouldn't experience missing tense marking as \enquote{ungrammatical}, because there's no operator expectation to violate.
 
 Number behaves analogously. In languages where number is obligatory in agreement or nominal morphology, it is part of the operator repertoire for tracking reference in public commitments, and its violation is a paradigmatic licensing failure. In languages where number is optional or limited, other resources fill the reference-tracking role, and number mismatches have different status \parencite{corbett2000}.
 
-The point is not that operator systems are fixed across languages. It is that grammaticality judgements target operator systems \emph{wherever they are}.
+The point isn't that operator systems are fixed across languages. It's that grammaticality judgments target operator systems \emph{wherever they are}.
 
 \section{Why accent and lexical choice are usually different}
 
-Accent and lexical choice are not \enquote{less meaningful}. They typically have different kinds of value.
+Accent and lexical choice aren't \enquote{less meaningful}. They typically have different kinds of value.
 
 \subsection{Indexical value and negotiability}
 
-Accent, style, and register contribute indexical value: they position speakers relative to social categories, stances, and activity types \parencite{silverstein1976,eckert2008,agha2007,coupland2007}. Indexical value is often rich and structured, but it is not typically implemented as a small closed paradigm with obligatory selection conditions tied to public update. It is negotiable in ways operators are not. Interlocutors can reinterpret an accent shift as play, accommodation, quotation, or stance work without treating it as a licensing failure. The accountability regime is therefore different: style can be challenged, but it is not ordinarily policed as \enquote{not in the repertoire}.
+Accent, style, and register contribute indexical value: they position speakers relative to social categories, stances, and activity types \parencite{silverstein1976,eckert2008,agha2007,coupland2007}. Indexical value is often rich and structured, but it isn't typically implemented as a small closed paradigm with obligatory selection conditions tied to public update. It is negotiable in ways operators aren't. Interlocutors can reinterpret an accent shift as play, accommodation, quotation, or stance work without treating it as a licensing failure. The accountability regime is therefore different: style can be challenged, but it is not ordinarily policed as \enquote{not in the repertoire}.
 
-This is not a claim that indexicality is optional in any substantive sense. It is a claim about \emph{how communities conventionalise it}. Much indexical meaning is \emph{meta-pragmatic}: it becomes salient through social ideologies and enregisterment processes \parencite{agha2007,eckert2012}. That makes it both powerful and variable, but it rarely functions as a control parameter that must take a specific value for the utterance to count as a recognised move.
+This isn't a claim that indexicality is optional in any substantive sense. It's a claim about \emph{how communities conventionalize it}. Much indexical meaning is \emph{meta-pragmatic}: it becomes salient through social ideologies and enregisterment processes \parencite{agha2007,eckert2012}. That makes it both powerful and variable, but it rarely functions as a control parameter that must take a specific value for the utterance to count as a recognized move.
 
 \subsection{Conceptual value and open classes}
 
-Open-class lexical items primarily contribute conceptual content, and the system is designed to be expansible and to tolerate innovation. Lexical choice can be infelicitous, misleading, or socially harmful, but it is seldom treated as a failure of combinatorial licensing. Indeed, lexical innovation is one of the routine mechanisms by which communities extend their repertoire, and it typically proceeds without the categorical judgement profile associated with operator violations.
+Open-class lexical items primarily contribute conceptual content, and the system is designed to be expansible and to tolerate innovation. Lexical choice can be infelicitous, misleading, or socially harmful, but it is seldom treated as a failure of combinatorial licensing. Indeed, lexical innovation is one of the routine mechanisms by which communities extend their repertoire, and it typically proceeds without the categorical judgment profile associated with operator violations.
 
-This is why \enquote{wrong word} and \enquote{wrong clause structure} often feel qualitatively different even when both are understood. A wrong operator setting threatens the public recognisability of the intended update; a non-optimal lexical choice typically does not.
+This is why \enquote{wrong word} and \enquote{wrong clause structure} often feel qualitatively different even when both are understood. A wrong operator setting threatens the public recognizability of the intended update; a non-optimal lexical choice typically doesn't.
 
 \subsection{The crucial qualification: phonology and lexicon can become operators}
 
 Nothing in this account entails a substance-based boundary. Phonological material can be an operator exponent, and lexical items can be operators when they grammaticalise.
 
-Tonal exponents that mark tense, focus, or polarity are paradigmatic operator systems, and they should attract categorical judgements accordingly \parencite{hyman2011}. Intonational contours that conventionalise clause type are operator exponents, and they should pattern like question particles, not like accent \parencite{ladd2008}. In signed languages, nonmanual markers that encode clause type or operator scope similarly belong in the operator stratum \parencite{sandlerlillomartin2006}.
+Tonal exponents that mark tense, focus, or polarity are paradigmatic operator systems, and they should attract categorical judgments accordingly \parencite{hyman2011}. Intonational contours that conventionalize clause type are operator exponents, and they should pattern like question particles, not like accent \parencite{ladd2008}. In signed languages, nonmanual markers that encode clause type or operator scope similarly belong in the operator stratum \parencite{sandlerlillomartin2006}.
 
-Conversely, lexical items can undergo grammaticalisation and become operator-like: they shrink paradigmatically, lose descriptive content, and acquire scope and distributional constraints \parencite{hoppertraugott2003,bybee2010}. On this view, the difference between lexical and operator value is a difference in \emph{conventional role} rather than in form.
+Conversely, lexical items can undergo grammaticalization and become operator-like: they shrink paradigmatically, lose descriptive content, and acquire scope and distributional constraints \parencite{hoppertraugott2003,bybee2010}. On this view, the difference between lexical and operator value is a difference in \emph{conventional role} rather than in form.
 
-This qualification is not a complication; it is the typological payoff. It predicts that the boundary tracked by grammaticality talk is not \enquote{morphosyntax vs.\ phonology} or \enquote{syntax vs.\ lexicon}. It is \enquote{operator vs.\ non-operator}.
+This qualification isn't a complication; it's the typological payoff. It predicts that the boundary tracked by grammaticality talk isn't \enquote{morphosyntax vs.\ phonology} or \enquote{syntax vs.\ lexicon}. It's \enquote{operator vs.\ non-operator}.
 
 \section{Typological consequences: what varies is which contrasts are recruited as operators}
 
-The operator stratum is a comparative concept: it identifies a functional role that can be realised by different structures in different languages \parencite{haspelmath2007}. This frames typological diversity in a way that avoids smuggling in English categories as universals.
+The operator stratum is a comparative concept: it identifies a functional role that can be realized by different structures in different languages \parencite{haspelmath2007}. This frames typological diversity in a way that avoids smuggling in English categories as universals.
 
-Two domains are particularly instructive.
+Four domains are particularly instructive.
 
 \subsection{Evidentiality and epistemic authority}
 
-In many languages, evidentiality is grammaticalised and obligatory in a way that makes it an operator on epistemic access and public commitment \parencite{aikhenvald2004}. Where this is the case, evidential mismatches should pattern as operator violations: they are not merely \enquote{odd} or \enquote{misleading}; they are failures to supply a required value in a closed system. This predicts strong categoricality in judgement and robust repair sensitivity. Where evidentiality is not grammaticalised, similar meanings are available through lexical or periphrastic means, but their status is different: they can be challenged as deceptive or inappropriate without being treated as structurally illicit.
+In many languages, evidentiality is grammaticalized and obligatory in a way that makes it an operator on epistemic access and public commitment \parencite{aikhenvald2004}. Where this is the case, evidential mismatches should pattern as operator violations: they aren't merely \enquote{odd} or \enquote{misleading}; they're failures to supply a required value in a closed system. This predicts strong categoricality in judgment and robust repair sensitivity. Where evidentiality isn't grammaticalized, similar meanings are available through lexical or periphrastic means, but their status is different: they can be challenged as deceptive or inappropriate without being treated as structurally illicit.
 
 \subsection{Egophoricity and perspective management}
 
-Tibetic languages and others have been argued to grammaticalise distinctions tied to perspective, authority, or ego involvement, with ongoing debates about how to characterise these systems \parencite{tournadre2008,floydnorcliffesanroque2018}. Regardless of the preferred analysis, these systems are prime candidates for operator status: they govern whose epistemic position is encoded as the relevant anchor for a clause's update potential. If so, they should behave like grammar in the same sense as agreement or polarity does: restricted paradigms, distributional constraints, and a categorical judgement profile when violated in the relevant communicative situations.
+Tibetic languages and others have been argued to grammaticalize distinctions tied to perspective, authority, or ego involvement, with ongoing debates about how to characterize these systems \parencite{tournadre2008,floydnorcliffesanroque2018}. Regardless of the preferred analysis, these systems are prime candidates for operator status: they govern whose epistemic position is encoded as the relevant anchor for a clause's update potential. If so, they should behave like grammar in the same sense as agreement or polarity does: restricted paradigms, distributional constraints, and a categorical judgment profile when violated in the relevant communicative situations.
 
 The operator-stratum view predicts a convergence between such perspective systems and more familiar operator categories. It also predicts that where languages do \emph{not} recruit perspective into the operator stratum, similar meanings will remain expressible but will be policed differently (as pragmatic misalignment rather than licensing failure).
 
-\section{Grammaticality judgements as a social technology}
+\subsection{Phonological operators vs.\ accent}
 
-If grammaticality talk targets operator value, then grammaticality judgements are themselves a social technology: a way of policing the operator repertoire of a communicative situation. This aligns with two independently motivated ideas.
+The operator/indexical distinction cuts across the substance of the signal. Tonal languages provide a crucial test case. In many Bantu languages, specific tonal melodies mark tense, aspect, or polarity \parencite{hyman2011}. These aren't \enquote{accent} features; they're operators.
 
-First, grammatical conventions are community property: they are the stabilised solutions that allow rapid coordination under uncertainty \parencite{clarkbrennan1991,stalnaker2002}. Second, the repair system treats some departures as requiring correction and others as negotiable \parencite{schegloffjeffersonsacks1977}. Operator violations are predicted to sit at the intersection: they are departures that threaten coordination precisely because they disrupt publicly accountable control settings.
+\begin{exe}
+\ex
+\begin{xlist}
+\ex \text{High tone on verb root} $\to$ \textsc{Remote Past}
+\ex \text{Low tone on verb root} $\to$ \textsc{Recent Past}
+\end{xlist}
+\end{exe}
 
-This framing also clarifies why categoricality is common but not inevitable. Some operator systems are heavily conventionalised, high-opportunity, and tightly constrained, which makes non-licensing stable and judgements sharp. Others are lower-opportunity or contested across overlapping norm centres, which makes judgements more variable. The key claim is that \emph{wherever categoricality emerges}, it should cluster around operator value.
+A speaker who produces the wrong tone in these contexts need not be heard as merely \enquote{accented}; they may instead be heard as having selected the wrong tense value or polarity setting, inviting repair of the \enquote{did you mean X or Y?} type. This contrasts with sociolinguistic variation in the same languages, where tonal realization may shift to index region or age without affecting the operator value. The public update criterion distinguishes the two: the operator tone is an instruction for temporal/logical anchoring; the sociolinguistic variant is a performance of identity.
+
+\subsection{Clause-linking: switch-reference as instruction}
+
+Switch-reference systems exemplify how clause structure functions as an operator mechanism beyond simple word order. In languages with these systems, a medial verb must be marked to indicate whether its subject is coreferential with the subject of the following clause \parencite{vangijn2016}.
+
+\begin{exe}
+\ex
+\begin{xlist}
+\ex \text{Verb-SS} \dots \text{Verb} (Instruction: \textit{Keep same participant active})
+\ex \text{Verb-DS} \dots \text{Verb} (Instruction: \textit{Switch participant role})
+\end{xlist}
+\end{exe}
+
+This marker is an explicit instruction for reference tracking: it constrains the assignment of participant roles in the upcoming increment. A mismatch~-- using the same-subject marker when the subjects are different~-- is therefore predicted to trigger repair that targets reference assignment and clause linkage, rather than negotiation of stance or stylistic appropriateness. This confirms that \enquote{public update} involves specific structural control settings, not just general meaningfulness.
+
+\subsection{The boundary case: T/V and grammaticalised social deixis}
+
+T/V distinctions (honorific pronouns and agreement) present the sharpest boundary case. They encode social positioning (indexical value), yet in many languages they are paradigmatically closed, morphologically obligatory, and strictly policed. Under the present account, this is exactly what is expected when indexical features enter the operator stratum. When a distinction like \enquote{addressee status} is grammaticalized as part of the agreement paradigm (e.g., distinct 2nd-person plural forms used for singular polite address), it acquires operator status. It becomes a control setting for the interactional role allocation. Violations then cease to be merely \enquote{rude} (a social infraction) and become \enquote{ungrammatical} (a licensing failure), eliciting the categorical judgment profile. This illustrates the channel: indexical value becomes operator value when it is recruited into the closed-set infrastructure of public update.
+
+\section{Grammaticality judgments as a social technology}
+
+If grammaticality talk targets operator value, then grammaticality judgments are themselves a social technology: a way of policing the operator repertoire of a communicative situation. This aligns with two independently motivated ideas.
+
+First, grammatical conventions are community property: they're the stabilized solutions that allow rapid coordination under uncertainty \parencite{clarkbrennan1991,stalnaker2002}. Second, the repair system treats some departures as requiring correction and others as negotiable \parencite{schegloffjeffersonsacks1977}. Operator violations are predicted to sit at the intersection: they're departures that threaten coordination precisely because they disrupt publicly accountable control settings.
+
+This framing also clarifies why categoricality is common but not inevitable. Some operator systems are heavily conventionalized, high-opportunity, and tightly constrained, which makes non-licensing stable and judgments sharp. Others are lower-opportunity or contested across overlapping norm centres, which makes judgments more variable. The key claim is that \emph{wherever categoricality emerges}, it should cluster around operator value.
+
+\subsection{Policing the repertoire vs.\ policing the person}
+
+A common objection is that speakers frequently label accent or dialect choices as \enquote{bad grammar} to enforce social hierarchies. Acknowledging the operator stratum doesn't require denying this reality. Instead, it provides a way to distinguish first-order interactional crashes from second-order ideological policing. When a speaker is corrected for a switch-reference error or a missing evidential, the repair typically addresses a failure of uptake: \enquote{I don't know who did it} or \enquote{what's your source?} When a speaker is corrected for an accent or a stigmatised variant that is clearly understood, the policing aims at the person's social index, not the utterance's structural update \parencite{agha2007,eckert2012}. The fact that ideologies misappropriate the term \enquote{grammar} for the latter doesn't dissolve the reality of the former.
+
+\subsection{The limits of accountability: why slurs are not operator failures}
+
+Similarly, lexical choices like slurs or taboo words are \enquote{publicly accountable} in a strong sense~-- using them can trigger immediate sanction. However, they aren't operator violations. They don't typically cause the structural update to fail or the role allocation to crash; rather, they perform a move that is morally or socially impermissible. They are accountable as \emph{actions}, whereas operator violations are accountable as \emph{defective tools}. The \enquote{you can't say that} reaction to a slur is a blocking of the social move; the \enquote{you can't say that} reaction to an operator failure is a rejection of the instrument.
+
+\section{Integration with the MVMG architecture}
+
+This account aligns directly with the formal model of grammaticality developed in the companion paper (Reynolds, \textit{Grammaticality De-idealized}). That model defines the objective stability of a grammatical norm $G(u)$ as the product of situational licensing $C_t(u)$, interpretive coherence $K(u)$, and structural viability \textsf{map}. The operator stratum hypothesis specifies the domain of $C_t$.
+
+In the MVMG framework, $C_t(u)$ tracks whether a form is licensed in the current communicative situation. The central claim here is that $C_t$ tracks \emph{operator values}. When a speaker produces a form that violates an operator constraint (e.g., a switch-reference error or a tense mismatch), it drives $C_t \to 0$, resulting in a catastrophic drop in $G(u)$. This corresponds to the categorical \enquote{ungrammatical} judgment.
+
+By contrast, indexical mismatches (accent, register shifts) don't target $C_t$. They may lower the subjective feeling of grammaticality $F(u)$ via social penalty terms ($P_{other}$), or they may affect interpretive coherence $K(u)$ if the signal is hard to process, but they don't zero out the licensing term. This separation explains why operator violations feel effectively \enquote{unnegotiable} (the licensing term is binary or near-binary) while indexical mismatches feel gradient or situational. Furthermore, the \enquote{high opportunity mass} diagnostic explains how $C_t$ stabilizes: frequent mandatory updating of operator values provides the dense data needed for the community to converge on sharp non-licensing boundaries.
 
 \section{Predictions and research strategies}
 
-The proposal generates tractable empirical predictions across subdisciplines, which is part of its point: it is meant to be usable by typologists, sociolinguists, psycholinguists, and interaction analysts.
+The proposal generates tractable empirical predictions across subdisciplines, which is part of its point: it's meant to be usable by typologists, sociolinguists, psycholinguists, and interaction analysts.
 
-\textsc{(1) Repair asymmetries.} In conversational corpora, operator mismatches should show higher rates of other-initiated repair and more direct formulation as \enquote{can't say} or \enquote{that's not how it goes} than indexical mismatches, which should more often be negotiated as stance or appropriateness \parencite{schegloffjeffersonsacks1977}. Cross-linguistically, the targets of repair should correlate with what is grammaticalised.
+\textsc{(1) Repair asymmetries.} In conversational corpora, operator mismatches should show higher rates of other-initiated repair and more direct formulation as \enquote{can't say} or \enquote{that's not how it goes} than indexical mismatches, which should more often be negotiated as stance or appropriateness \parencite{schegloffjeffersonsacks1977}. Cross-linguistically, the targets of repair should correlate with what is grammaticalized.
 
-\textsc{(2) Satiation asymmetries.} Repetition should attenuate anomaly responses more readily for non-operator mismatches and for low-entrenchment operator candidates than for high-opportunity, strongly preempted operator gaps. This follows from the role of opportunity mass in stabilising non-licensing \parencite{bybee2006,bybee2010}.
+\textsc{(2) Satiation asymmetries.} Repetition should attenuate anomaly responses more readily for non-operator mismatches and for low-entrenchment operator candidates than for high-opportunity, strongly preempted operator gaps. This follows from the role of opportunity mass in stabilizing non-licensing \parencite{bybee2006,bybee2010}.
 
-\textsc{(3) Phonological operator effects.} In languages where tone or intonation functions as an operator exponent, violations should elicit judgement and processing profiles more similar to morphosyntactic anomalies than to accent shifts, consistent with the idea that the relevant factor is operator value, not segmental content \parencite{hyman2011,ladd2008}.
+\textsc{(3) Phonological operator effects.} In languages where tone or intonation functions as an operator exponent, violations should elicit judgment and processing profiles more similar to morphosyntactic anomalies than to accent shifts, consistent with the idea that the relevant factor is operator value, not segmental content \parencite{hyman2011,ladd2008}.
 
-\textsc{(4) Sociolinguistic stratification without grammaticalisation.} Accent and register differences should show systematic indexical fields and enregisterment dynamics \parencite{eckert2008,agha2007}, but the metalinguistic categorisation as \enquote{grammar} should be predicted to arise mainly when the indexical resource becomes part of a closed operator system (e.g.\ a grammaticalised honorific agreement paradigm, not merely polite lexical choice).
+\textsc{(4) Sociolinguistic stratification without grammaticalization.} Accent and register differences should show systematic indexical fields and enregisterment dynamics \parencite{eckert2008,agha2007}, but the metalinguistic categorization as \enquote{grammar} should be predicted to arise mainly when the indexical resource becomes part of a closed operator system (e.g.\ a grammaticalized honorific agreement paradigm, not merely polite lexical choice).
 
 \textsc{(5) Processing signatures as responses to operator failure.} ERP and related measures should distinguish operator mismatches from conceptual anomalies in ways that are consistent with their different roles in public update, without requiring a modular syntax/semantics division \parencite{kutashillyard1980,osterhoutholcomb1992,friederici2011}.
 
@@ -199,11 +248,11 @@ None of these predictions presupposes a particular formal architecture. They pre
 
 \section{Conclusion}
 
-The motivating puzzle was why clause structure is treated as \enquote{grammar} in much the same way as tense or number marking is, while accent and much lexical choice are treated differently. The proposed answer is that grammaticality talk tracks a difference in value: the operator stratum. Clause structure belongs to it because it is itself a system of operators governing public update, role allocation, scope, and cross-clausal coherence. Tense and number belong where they are grammaticalised as operators. Accent and open-class lexical choice typically do not, because they primarily contribute indexical and conceptual value whose accountability regime is different, though phonological and lexical material can enter the operator stratum when grammaticalised.
+The motivating puzzle was why clause structure is treated as \enquote{grammar} in much the same way as tense or number marking is, while accent and much lexical choice are treated differently. The proposed answer is that grammaticality talk tracks a difference in value: the operator stratum. Clause structure belongs to it because it is itself a system of operators governing public update, role allocation, scope, and cross-clausal coherence. Tense and number belong where they are grammaticalised as operators. Accent and open-class lexical choice typically don't, because they primarily contribute indexical and conceptual value whose accountability regime is different, though phonological and lexical material can enter the operator stratum when grammaticalized.
 
-This reframing makes three payoffs explicit. It de-Englishes the problem by predicting that \enquote{what counts as grammar} varies with which contrasts are grammaticalised, while preserving the generalisation that grammaticality targets operator value. It makes room for phonological and gestural operator exponents without weakening the empirical distinction between operator mismatch and style mismatch. And it yields a research programme with converging evidence streams: typological distribution, interactional repair, and processing signatures.
+This reframing makes three payoffs explicit. It de-Englishes the problem by predicting that \enquote{what counts as grammar} varies with which contrasts are grammaticalized, while preserving the generalization that grammaticality targets operator value. It makes room for phonological and gestural operator exponents without weakening the empirical distinction between operator mismatch and style mismatch. And it yields a research programme with converging evidence streams: typological distribution, interactional repair, and processing signatures.
 
-If grammaticality is the community's name for stability in its operator repertoire, then the special status of clause structure is not evidence for autonomous syntax. It is evidence for the social fact that some form--value relations function as the infrastructure of shared meaning-making.
+If grammaticality is the community's name for stability in its operator repertoire, then the special status of clause structure isn't evidence for autonomous syntax. It's evidence for the social fact that some form--value relations function as the infrastructure of shared meaning-making.
 
 \printbibliography
 \end{document}
