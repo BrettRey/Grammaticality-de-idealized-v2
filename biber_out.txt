@@ -1,0 +1,8 @@
+INFO - This is Biber 2.19
+INFO - Logfile is 'main.blg'
+INFO - Reading 'main.bcf'
+INFO - Found 67 citekeys in bib section 0
+INFO - Processing section 0
+INFO - Looking for bibtex file 'refs.bib' for section 0
+INFO - LaTeX decoding ...
+INFO - Found BibTeX data source 'refs.bib'

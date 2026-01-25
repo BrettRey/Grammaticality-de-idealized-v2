@@ -1,0 +1,337 @@
+% Verified bibliography (biblatex-compatible)
+% Generated: 2026-01-24
+
+@book{agha2007,
+  author    = {Agha, Asif},
+  title     = {Language and Social Relations},
+  date      = {2007},
+  publisher = {Cambridge University Press},
+  location  = {Cambridge},
+  doi       = {10.1017/CBO9780511618284},
+  isbn      = {9780521576857}
+}
+
+@book{aikhenvald2004,
+  author    = {Aikhenvald, Alexandra Y.},
+  title     = {Evidentiality},
+  date      = {2004},
+  publisher = {Oxford University Press},
+  location  = {Oxford},
+  doi       = {10.1093/oso/9780199263882.001.0001},
+  isbn      = {9780199263882}
+}
+
+@book{bybee2010,
+  author    = {Bybee, Joan},
+  title     = {Language, Usage and Cognition},
+  date      = {2010},
+  publisher = {Cambridge University Press},
+  location  = {Cambridge},
+  doi       = {10.1017/CBO9780511750526},
+  isbn      = {9780521616836}
+}
+
+@article{bybee2006,
+  author  = {Bybee, Joan},
+  title   = {From Usage to Grammar: The Mind's Response to Repetition},
+  journal = {Language},
+  date    = {2006},
+  volume  = {82},
+  number  = {4},
+  pages   = {711--733},
+  doi     = {10.1353/lan.2006.0186}
+}
+
+@incollection{clarkbrennan1991,
+  author    = {Clark, Herbert H. and Brennan, Susan E.},
+  title     = {Grounding in Communication},
+  booktitle = {Perspectives on Socially Shared Cognition},
+  editor    = {Resnick, Lauren B. and Levine, John M. and Teasley, Stephanie D.},
+  date      = {1991},
+  publisher = {American Psychological Association},
+  location  = {Washington, DC},
+  pages     = {127--149},
+  url       = {https://web.stanford.edu/~clark/1990s/Clark%2C%20H.H.%20_%20Brennan%2C%20S.E.%20_Grounding%20in%20communication_%201991.pdf},
+  urldate   = {2026-01-24}
+}
+
+@book{clark1996,
+  author    = {Clark, Herbert H.},
+  title     = {Using Language},
+  date      = {1996},
+  publisher = {Cambridge University Press},
+  location  = {Cambridge},
+  doi       = {10.1017/CBO9780511620539},
+  isbn      = {9780521450904}
+}
+
+@book{comrie1985,
+  author    = {Comrie, Bernard},
+  title     = {Tense},
+  date      = {1985},
+  publisher = {Cambridge University Press},
+  location  = {Cambridge},
+  doi       = {10.1017/CBO9781139165815}
+}
+
+@book{corbett2000,
+  author    = {Corbett, Greville G.},
+  title     = {Number},
+  date      = {2000},
+  publisher = {Cambridge University Press},
+  location  = {Cambridge},
+  doi       = {10.1017/CBO9781139164344}
+}
+
+@book{coupland2007,
+  author    = {Coupland, Nikolas},
+  title     = {Style: Language Variation and Identity},
+  date      = {2007},
+  publisher = {Cambridge University Press},
+  location  = {Cambridge},
+  doi       = {10.1017/CBO9780511755064}
+}
+
+@incollection{dryer2013,
+  author    = {Dryer, Matthew S.},
+  title     = {Polar Questions},
+  booktitle = {The World Atlas of Language Structures Online},
+  editor    = {Dryer, Matthew S. and Haspelmath, Martin},
+  date      = {2013},
+  publisher = {Max Planck Institute for Evolutionary Anthropology},
+  location  = {Leipzig},
+  url       = {https://wals.info/chapter/116},
+  urldate   = {2026-01-24}
+}
+
+@article{eckert2008,
+  author  = {Eckert, Penelope},
+  title   = {Variation and the Indexical Field},
+  journal = {Journal of Sociolinguistics},
+  date    = {2008},
+  volume  = {12},
+  number  = {4},
+  pages   = {453--476},
+  doi     = {10.1111/j.1467-9841.2008.00374.x}
+}
+
+@article{eckert2012,
+  author  = {Eckert, Penelope},
+  title   = {Three Waves of Variation Study: The Emergence of Meaning in the Study of Sociolinguistic Variation},
+  journal = {Annual Review of Anthropology},
+  date    = {2012},
+  volume  = {41},
+  pages   = {87--100},
+  doi     = {10.1146/annurev-anthro-092611-145828}
+}
+
+@article{farkasbruce2010,
+  author  = {Farkas, Donka F. and Bruce, Kim B.},
+  title   = {On Reacting to Assertions and Polar Questions},
+  journal = {Journal of Semantics},
+  date    = {2010},
+  volume  = {27},
+  number  = {1},
+  pages   = {81--118},
+  doi     = {10.1093/jos/ffp010}
+}
+
+@collection{floydnorcliffesanroque2018,
+  editor    = {Floyd, Simeon and Norcliffe, Elisabeth and San Roque, Lila},
+  title     = {Egophoricity},
+  date      = {2018},
+  publisher = {John Benjamins},
+  location  = {Amsterdam and Philadelphia},
+  series    = {Typological Studies in Language},
+  number    = {118},
+  doi       = {10.1075/tsl.118},
+  isbn      = {9789027206992},
+  eisbn     = {9789027265548}
+}
+
+@article{friederici2011,
+  author  = {Friederici, Angela D.},
+  title   = {The Brain Basis of Language Processing: From Structure to Function},
+  journal = {Physiological Reviews},
+  date    = {2011},
+  volume  = {91},
+  number  = {4},
+  pages   = {1357--1392},
+  doi     = {10.1152/physrev.00006.2011}
+}
+
+@article{haspelmath2007,
+  author  = {Haspelmath, Martin},
+  title   = {Pre-established Categories Don't Exist: Consequences for Language Description and Typology},
+  journal = {Linguistic Typology},
+  date    = {2007},
+  volume  = {11},
+  number  = {1},
+  pages   = {119--132},
+  doi     = {10.1515/LINGTY.2007.011}
+}
+
+@incollection{hyman2011,
+  author    = {Hyman, Larry M.},
+  title     = {Tone: Is It Different?},
+  booktitle = {The Handbook of Phonological Theory},
+  editor    = {Goldsmith, John A. and Riggle, Jason and Yu, Alan C. L.},
+  edition   = {2},
+  date      = {2011},
+  publisher = {Wiley-Blackwell},
+  pages     = {197--239}
+}
+
+@book{hoppertraugott2003,
+  author    = {Hopper, Paul J. and Traugott, Elizabeth Closs},
+  title     = {Grammaticalization},
+  edition   = {2},
+  date      = {2003},
+  publisher = {Cambridge University Press},
+  location  = {Cambridge},
+  doi       = {10.1017/CBO9781139165525}
+}
+
+@article{kutashillyard1980,
+  author  = {Kutas, Marta and Hillyard, Steven A.},
+  title   = {Reading Senseless Sentences: Brain Potentials Reflect Semantic Incongruity},
+  journal = {Science},
+  date    = {1980},
+  volume  = {207},
+  number  = {4427},
+  pages   = {203--205},
+  doi     = {10.1126/science.7350657}
+}
+
+@book{labov1972,
+  author    = {Labov, William},
+  title     = {Sociolinguistic Patterns},
+  date      = {1972},
+  publisher = {University of Pennsylvania Press},
+  location  = {Philadelphia},
+  isbn      = {9780812215272}
+}
+
+@book{ladd2008,
+  author    = {Ladd, D. Robert},
+  title     = {Intonational Phonology},
+  edition   = {2},
+  date      = {2008},
+  publisher = {Cambridge University Press},
+  location  = {Cambridge},
+  doi       = {10.1017/CBO9780511808814}
+}
+
+@article{osterhoutholcomb1992,
+  author  = {Osterhout, Lee and Holcomb, Phillip J.},
+  title   = {Event-related Brain Potentials Elicited by Syntactic Anomaly},
+  journal = {Journal of Memory and Language},
+  date    = {1992},
+  volume  = {31},
+  number  = {6},
+  pages   = {785--806},
+  doi     = {10.1016/0749-596X(92)90039-Z}
+}
+
+@book{saussure1916,
+  author    = {Saussure, Ferdinand de},
+  title     = {Cours de linguistique g{\'e}n{\'e}rale},
+  editor    = {Bally, Charles and Sechehaye, Albert and Riedlinger, Albert},
+  date      = {1916},
+  publisher = {Payot},
+  location  = {Paris}
+}
+
+@incollection{silverstein1976,
+  author    = {Silverstein, Michael},
+  title     = {Shifters, Linguistic Categories, and Cultural Description},
+  booktitle = {Meaning in Anthropology},
+  editor    = {Basso, Keith H. and Selby, Henry A.},
+  date      = {1976},
+  publisher = {University of New Mexico Press},
+  location  = {Albuquerque},
+  pages     = {11--55}
+}
+
+@article{schegloffjeffersonsacks1977,
+  author  = {Schegloff, Emanuel A. and Jefferson, Gail and Sacks, Harvey},
+  title   = {The Preference for Self-correction in the Organization of Repair in Conversation},
+  journal = {Language},
+  date    = {1977},
+  volume  = {53},
+  number  = {2},
+  pages   = {361--382},
+  doi     = {10.2307/413107}
+}
+
+@incollection{stalnaker1978,
+  author    = {Stalnaker, Robert C.},
+  title     = {Assertion},
+  booktitle = {Pragmatics},
+  editor    = {Cole, Peter},
+  bookseries= {Syntax and Semantics},
+  number    = {9},
+  date      = {1978},
+  publisher = {Academic Press},
+  location  = {New York},
+  pages     = {315--332}
+}
+
+@article{stalnaker2002,
+  author  = {Stalnaker, Robert},
+  title   = {Common Ground},
+  journal = {Linguistics and Philosophy},
+  date    = {2002},
+  volume  = {25},
+  number  = {5-6},
+  pages   = {701--721},
+  doi     = {10.1023/A:1020867916902}
+}
+
+@article{stivers2009,
+  author  = {Stivers, Tanya and Enfield, N. J. and Brown, Penelope and Englert, Christina and Hayashi, Makoto and Heinemann, Trine and Hoymann, Friederike and Rossano, Federico and de Ruiter, Jan P. and Yoon, Kyung-Eun and Levinson, Stephen C.},
+  title   = {Universals and Cultural Variation in Turn-taking in Conversation},
+  journal = {Proceedings of the National Academy of Sciences of the United States of America},
+  date    = {2009},
+  volume  = {106},
+  number  = {26},
+  pages   = {10587--10592},
+  doi     = {10.1073/pnas.0903616106}
+}
+
+@incollection{tournadre2008,
+  author    = {Tournadre, Nicolas},
+  title     = {Arguments against the Concept of `Conjunct'/{`Disjunct'} in Tibetan},
+  booktitle = {Chomolangma, Demawend und Kasbek: Festschrift f{\"u}r Roland Bielmeier zu seinem 65. Geburtstag},
+  editor    = {Huber, Brigitte and Volkart, Marianne and Widmer, Paul and Schwieger, Peter},
+  date      = {2008},
+  volume    = {1},
+  pages     = {281--308},
+  url       = {https://www.nicolas-tournadre.net/wp-content/uploads/multimedia/2008-Conjunct.pdf},
+  urldate   = {2026-01-24}
+}
+
+@incollection{vangijn2016,
+  author    = {van Gijn, Rik},
+  title     = {Switch Reference: An Overview},
+  booktitle = {Switch Reference 2.0},
+  editor    = {van Gijn, Rik and Hammond, Jeremy},
+  date      = {2016},
+  publisher = {John Benjamins},
+  location  = {Amsterdam and Philadelphia},
+  series    = {Typological Studies in Language},
+  number    = {114},
+  pages     = {1--53},
+  doi       = {10.1075/tsl.114.01van},
+  isbn      = {9789027206954},
+  eisbn     = {9789027266774}
+}
+
+@book{sandlerlillomartin2006,
+  author    = {Sandler, Wendy and Lillo-Martin, Diane},
+  title     = {Sign Language and Linguistic Universals},
+  date      = {2006},
+  publisher = {Cambridge University Press},
+  location  = {Cambridge},
+  doi       = {10.1017/CBO9780511486775}
+}
