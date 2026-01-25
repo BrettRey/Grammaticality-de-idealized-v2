@@ -7,15 +7,12 @@
 \usepackage[british]{babel}
 \usepackage[final]{microtype}
 \usepackage{amsmath,amssymb}
+\numberwithin{equation}{section}
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{array}
 \usepackage{float}
 \usepackage{xspace}
-
-% ===========================
-% OPTIONAL HOUSE STYLE (fonts)
-% ===========================
 \usepackage{fontspec}
 \setmainfont{EB Garamond}[Numbers=OldStyle,Ligatures=TeX]
 \newfontfamily\ipafont{Charis SIL}
@@ -232,7 +229,7 @@ Let $K(u,c)\in[0,1]$ represent the stability of interpretation: the degree to wh
 
 \subsubsection{Situational licensing}
 
-Let $C_t(u,c)\in[0,1]$ be the population-level licensing rate: the probability that an individual drawn from the relevant norm-centred population treats $u$ as a legitimate community resource in $c$ rather than as an error, performance slip, or alien form (ranging from 0, no licensing, to 1, universal licensing). This quantity is the formal analogue of what usage-based work calls entrenchment, but explicitly conditioned on $c$. While $C_t$ is fundamentally informed by frequency, it represents the latent status of licensing rather than a simple tally of token occurrences.
+Let $C_t(u,c)\in[0,1]$ be the population-level licensing rate: the probability that an individual drawn from the relevant norm-centred population treats $u$ as a legitimate community resource in $c$ rather than as an error, performance slip, or alien form (where 1 represents universal community acceptance and 0 indicates total exclusion). This quantity is the formal analogue of what usage-based work calls entrenchment, but explicitly conditioned on $c$. While $C_t$ is fundamentally informed by frequency, it represents the latent status of licensing rather than a simple tally of token occurrences.
 
 $C_t$ is where norms live. It's also where many apparently categorical exclusions can be located without positing hard representational bans: a form can be structurally viable and interpretable while being near-universally non-licensed in a given situation.
 
@@ -242,12 +239,12 @@ Define a graded stability score:
 \begin{equation}\label{eq:stability}
 \widetilde{G}_t(u,c)=\mathsf{map}(u,c)\cdot K(u,c)\cdot C_t(u,c)\in[0,1].
 \end{equation}
-
-This score underwrites gradience: lowering any component lowers stability. Communities also often treat grammaticality as a categorical membership fact: either a resource is in the repertoire or not. Model this by thresholding:
+This multiplicative scoring means that if any single component is zero~-- if the mapping fails, if interpretation is impossible, or if the community does not license the form~-- the entire relation is ungrammatical. Stability underwrites gradience: lowering any component reduces the overall score.
+ Communities also often treat grammaticality as a categorical membership fact: either a resource is in the repertoire or not. Model this by thresholding:
 \begin{equation}\label{eq:membership}
 G_t(u,c)=\mathbb{I}\!\left[\widetilde{G}_t(u,c)\ge \tau(c)\right],
 \end{equation}
-where $\tau(c)$ is a situation-specific decision criterion. Rather than smuggling a hidden grammatical parameter into the theory, the point is that $\tau(c)$ is a property of how strict the situation is about what counts as \enquote{in} the repertoire. High-stakes institutional contexts can set a high threshold; low-stakes in-group contexts can set a lower one.
+where $\tau(c)$ is a situation-specific decision criterion. This equation asserts that an utterance is grammatical ($G=1$) if its composite stability score meets or exceeds a required threshold, and ungrammatical ($G=0$) otherwise. Rather than smuggling a hidden grammatical parameter into the theory, the point is that $\tau(c)$ is a property of how strict the situation is about what counts as \enquote{in} the repertoire. High-stakes institutional contexts can set a high threshold; low-stakes in-group contexts can set a lower one.
 
 This formalises an intuition that is often stated informally but is rarely built into the state theory: what counts as \enquote{grammatical} for practical purposes depends on the decision regime of the situation, not just the resource itself.
 
