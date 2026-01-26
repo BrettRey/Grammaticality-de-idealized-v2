@@ -1,5 +1,35 @@
 # Project Notes
 
+---
+
+## ⚠️ PRIORITY: Integrate Operator Stratum Paper ⚠️
+
+**Status:** NOT STARTED (Jan 25, 2026)
+**Source:** `subprojects/operator-stratum/Reynolds_Operator_Stratum.pdf` (uploaded to lingbuzz)
+
+The CxG section (~line 1144 in main.tex) claims morphosyntax is "uniquely privileged" but doesn't explain WHY. The operator stratum paper provides the answer.
+
+### What to add:
+
+1. **refs.bib**: Add Reynolds 2026 citation for operator stratum paper
+
+2. **main.tex CxG section**: Explain WHY morphosyntax is special:
+   - Morphosyntactic form-value relations serve as **operators**
+   - Operators = closed-paradigm contrasts that configure public update, allocate participant roles, constrain uptake
+   - Information-theoretic: operators are header-like (few bits, large downstream entropy reduction)
+
+3. **Consider adding** the three-stratum distinction:
+   - Expression-shape ("not a word")
+   - Operator ("can't say that")
+   - Payload (negotiation)
+
+### Key quote from stratum paper:
+> Operators configure how utterances update shared commitments, allocate participant roles, and constrain uptake.
+
+**Delete this section once integration is complete.**
+
+---
+
 ## External Feedback
 
 ### Jong-Bok Kim (Dec 2025) - On licensing vs gradience

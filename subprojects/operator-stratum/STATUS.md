@@ -1,8 +1,9 @@
 # STATUS.md - The Operator Stratum
 
 **Created:** 2026-01-24
-**Last updated:** 2026-01-24
-**Status:** Complete draft
+**Last updated:** 2026-01-25
+**Status:** Published preprint
+**LingBuzz:** Uploaded 2026-01-25
 **Parent project:** Grammaticality_de_idealized (MVMG)
 
 ## Summary
