@@ -1,8 +1,8 @@
 # STATUS.md - The Asterisk De-idealized
 
 **Created:** 2026-01-24
-**Last updated:** 2026-01-24
-**Status:** Complete draft
+**Last updated:** 2026-01-26
+**Status:** Complete draft (16 pages)
 **Parent project:** Grammaticality_de_idealized (MVMG)
 **Target:** Journal of Linguistics "Looking Back, Moving Forward" section
 
@@ -39,8 +39,8 @@ This paper IS the MVMG presented for a general theoretical linguistics audience.
 
 ## Connection to Other Papers
 
-- **Operator stratum**: Defines what operators ARE; this paper explains HOW their status is determined
-- **LBE paper**: Provides the learning-theoretic Bayesian foundation for C_t trajectories
+- **Operator stratum** (now cited): Defines what operators ARE; this paper explains HOW their status is determined
+- **LBE paper** (now cited): Provides the learning-theoretic Bayesian foundation for C_t trajectories
 - **Varieties paper**: Elaborates the S/A/I conditioning structure for c
 
 ## Build
@@ -50,3 +50,24 @@ xelatex main.tex && biber main && xelatex main.tex
 ```
 
 Uses parent project's refs.bib via symlink.
+
+## Session Log
+
+### 2026-01-26
+
+Imported insights from polished operator-stratum paper while maintaining distinct focus:
+
+**Added paragraphs:**
+- Three-stratum infrastructure model (expression-shape / operator / payload)
+- Information-theoretic perspective (operators as protocol headers, entropy reduction)
+- Repair asymmetry predictions (operator vs payload mismatches)
+- Forward-reference to operator hypothesis in §8 (future research)
+
+**Citations added:**
+- Shannon 1948, Cover & Thomas 2006 (information theory)
+- reynolds2026operators, reynolds2026lbe (LingBuzz preprints)
+- Fixed sprouse2016 → sprouse2013
+
+**Distinctiveness preserved:**
+- Asterisk paper: state theory (what grammaticality IS) — formal equations, falsification conditions, opportunity methodology
+- Operator paper: domain theory (what gets policed AS grammar) — typological predictions, cross-linguistic scope
