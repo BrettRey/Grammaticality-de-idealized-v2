@@ -1,10 +1,17 @@
 # STATUS.md - The Operator Stratum
 
 **Created:** 2026-01-24
-**Last updated:** 2026-01-25
-**Status:** Published preprint
-**LingBuzz:** Uploaded 2026-01-25
+**Last updated:** 2026-01-26
+**Status:** Published preprint (revised)
+**LingBuzz:** Uploaded 2026-01-25; revision ready for re-upload
 **Parent project:** Grammaticality_de_idealized (MVMG)
+
+### 2026-01-26 Session Notes
+- Revised per Geoff Pullum feedback on title/abstract opacity
+- New title: "Why clause structure is judged like tense and agreement: a coordination account of grammaticality"
+- Leavened 8 dense passages (concrete examples before abstractions throughout)
+- Key pattern: introduce what something *does* before naming it
+- `Reynolds_Clause_Structure_Grammaticality.pdf` ready for LingBuzz
 
 ## Summary
 
