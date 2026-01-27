@@ -13,6 +13,8 @@
 \usepackage{array}
 \usepackage{float}
 \usepackage{xspace}
+\usepackage{tikz}
+\usetikzlibrary{calc,positioning,arrows.meta,fit,backgrounds,shapes.geometric}
 \usepackage{fontspec}
 \setmainfont{EB Garamond}[Numbers=OldStyle,Ligatures=TeX]
 \newfontfamily\ipafont{Charis SIL}
@@ -275,6 +277,62 @@ This ties $\tau$ to independently characterizable properties of $c$ (stakes, ins
 
 This formalizes an intuition that's often stated informally but rarely built into the state theory: what counts as \enquote{grammatical} for practical purposes depends on the decision regime of the situation, not just the resource itself.
 
+\begin{figure}[t]
+\centering
+\def\BoxH{1.2cm} % ratings box height
+\def\RowSep{1.7cm} % main-row centre-to-centre distance
+\def\HalfRow{0.85cm} % half-row offset
+\def\Col{2.7cm} % main column spacing
+\def\Dx{0.5cm} % slight right-offset for half-row nodes
+
+\begin{tikzpicture}[
+  latent/.style={circle, draw, line width=0.6pt,
+    minimum size=\BoxH, font=\normalsize, inner sep=0pt},
+  observed/.style={rectangle, rounded corners=5pt, draw,
+    line width=0.6pt, minimum height=\BoxH, minimum width=1.9cm,
+    font=\small, inner sep=6pt, align=center},
+  every edge/.style={draw, line width=0.5pt, -{Stealth[length=4pt, width=3pt]}},
+]
+
+  % === Row baselines (subset of full grid) ===
+  \coordinate (r3) at (0,0);
+  \path (r3) ++(0,-\RowSep) coordinate (r4);
+  \path (r4) ++(0,-\RowSep) coordinate (r5);
+
+  % === Column baselines ===
+  \coordinate (c1) at (0,0);
+  \path (c1) ++(\Col,0) coordinate (c2);
+  \path (c2) ++(\Col,0) coordinate (c3);
+  \path (c3) ++(\Col,0) coordinate (c4);
+
+  % === Nodes ===
+  \node[observed] (tau) at (c1 |- r3) {$\tau(c)$};
+  \node[latent] (map) at (c2 |- r3) {$\mathsf{map}$};
+  \node[latent] (K) at (c3 |- r3) {$K$};
+  \node[latent] (Ct) at (c4 |- r3) {$C_t$};
+
+  \node[latent] (Gtilde) at (c3 |- r4) {$\widetilde{G}_t$};
+  \node[observed,anchor=west] (ratings) at ($(Ct.west)+(0,-\RowSep)$) {ratings};
+  \node[observed,anchor=west] (proc) at ($(ratings.east)+(\Dx,0)$) {\shortstack{processing\\costs}};
+
+  \node[latent] (Gt) at (c3 |- r5) {$G_t$};
+
+  % === Edges ===
+  \path (map) edge (Gtilde);
+  \path (K) edge (Gtilde);
+  \path (Ct) edge (Gtilde);
+
+  \path (Gtilde) edge (Gt);
+  \path (tau) edge (Gt);
+
+  \path (Gtilde) edge (ratings);
+  \path (proc) edge (ratings);
+
+\end{tikzpicture}
+\caption{The minimal state architecture. Grammatical status $\widetilde{G}_t$ combines mapping, coherence, and repertoire status. Acceptability ratings reflect $\widetilde{G}_t$ filtered through processing costs, while categorical membership $G_t$ involves a situation-specific threshold $\tau(c)$.}
+\label{fig:minimal}
+\end{figure}
+
 \subsection{Why this combination rule isn't decorative}\label{sec:combination}
 
 (If you accept the decomposition, the point of this subsection is just to show that the multiplication yields discriminable interaction predictions. Skim if pressed.)
@@ -382,20 +440,102 @@ Left-branch extraction in (\ref{ex:lbe}) behaves differently. The communicative 
 
 \subsection{Illusory ungrammaticality and misattribution}
 
-Processing-driven illusions illustrate why the feeling of ungrammaticality can't be equated with grammatical status. Centre embedding (\ref{ex:center})'s analyzable and interpretable, but incremental parsing strains working memory and dependency integration, triggering strong negative affect. Similarly, garden-path items can feel nonsensical until reanalyzed:
+Processing-driven illusions illustrate why the feeling of ungrammaticality can't be equated with grammatical status. Centre embedding (\ref{ex:center})'s analyzable and interpretable, but incremental parsing strains working memory and dependency integration, triggering strong negative affect \autocite{Gibson2026}. Similarly, garden-path items can feel nonsensical until reanalyzed:
 
 \ea \mention{The old man the boats.} \autocite{ritchie1984}\label{ex:old-man}
 \z
 
-A first-pass parse yields nonsense; reanalysis yields a coherent, licit structure. In such cases, ratings track repair difficulty, not repertoire status. Conversely, illicit structures can pass unnoticed when meaning is compelling, yielding false negatives \autocite{pullum2009}.
+A first-pass parse yields nonsense; reanalysis yields a coherent, licit structure. In such cases, ratings track repair difficulty, not repertoire status \autocite[cf.][on acceptability as an introspective report of processing cost]{Gibson2026}. Conversely, illicit structures can pass unnoticed when meaning is compelling, yielding false negatives \autocite{pullum2009}.
 
-The repair system provides converging evidence. When repair does occur, mismatches targeting operator-like dimensions~-- tense errors, agreement failures, clause-type confusions~-- are predicted to elicit open-class repair initiation (\mention{what?}, \mention{who did it?}) and explicit rejection, because they disrupt the publicly accountable control settings on which uptake depends. Mismatches targeting payload or indexical dimensions are predicted to elicit stance negotiation and accommodation (\mention{did you mean...?}, \mention{why are you talking like that?}), because the utterance's update potential remains intact even when its content or social positioning is problematic. This asymmetry is independent of the feeling of ungrammaticality: a processing-heavy but licit structure may feel terrible without triggering the repair profile associated with genuine operator failure.
+The repair system provides converging evidence. When repair does occur, mismatches targeting operator-like dimensions \autocite{reynolds2026operators}~-- tense errors, agreement failures, clause-type confusions~-- are predicted to elicit open-class repair initiation (\mention{what?}, \mention{who did it?}) and explicit rejection, because they disrupt the publicly accountable control settings on which uptake depends. Mismatches targeting payload or indexical dimensions are predicted to elicit stance negotiation and accommodation (\mention{did you mean...?}, \mention{why are you talking like that?}), because the utterance's update potential remains intact even when its content or social positioning is problematic. This asymmetry is independent of the feeling of ungrammaticality: a processing-heavy but licit structure may feel terrible without triggering the repair profile associated with genuine operator failure.
 
 The state theory predicts such dissociations whenever the ungrammaticality signal pools multiple sources of difficulty.
 
 \section[Evidence and measurement]{Evidence and measurement: what it would take to test the state theory}\label{sec:evidence}
 
 A \enquote{moving forward} programme has to specify what would count as evidence. The constitutive variables suggest a principled division of labour among data types.
+
+\begin{figure}[t]
+\centering
+\def\BoxH{1.2cm}
+\def\RowSep{1.7cm}
+\def\HalfRow{0.85cm}
+\def\Col{2.7cm}
+\def\Branch{2.6cm}
+\def\Dx{0.5cm}
+
+\begin{tikzpicture}[
+  latent/.style={circle, draw, line width=0.6pt,
+    minimum size=\BoxH, font=\normalsize, inner sep=0pt},
+  observed/.style={rectangle, rounded corners=5pt, draw,
+    line width=0.6pt, minimum height=\BoxH, minimum width=1.9cm,
+    font=\small, inner sep=6pt, align=center},
+  every edge/.style={draw, line width=0.5pt, -{Stealth[length=4pt, width=3pt]}},
+]
+
+  % === Rows/Cols ===
+  \coordinate (r1) at (0,0);
+  \path (r1) ++(0,-\RowSep) coordinate (r2);
+  \path (r2) ++(0,-\RowSep) coordinate (r3);
+  \path (r3) ++(0,-\RowSep) coordinate (r4);
+  \path (r4) ++(0,-\RowSep) coordinate (r5);
+
+  \coordinate (c1) at (0,0);
+  \path (c1) ++(\Col,0) coordinate (c2);
+  \path (c2) ++(\Col,0) coordinate (c3);
+  \path (c3) ++(\Col,0) coordinate (c4);
+
+  % === Nodes ===
+  % Row 1/2: Indicators for K and Ct
+  \node[observed] (dispersion) at (c3 |- r2) {\shortstack{construal\\variability}};
+  
+  % Row 3: State layer
+  \node[observed] (tau) at (c1 |- r3) {$\tau(c)$};
+  \node[latent] (map) at (c2 |- r3) {$\mathsf{map}$};
+  \node[latent] (K) at (c3 |- r3) {$K$};
+  \node[latent] (Ct) at (c4 |- r3) {$C_t$};
+
+  % Row 4: Stability & Ratings
+  \node[latent] (Gtilde) at (c3 |- r4) {$\widetilde{G}_t$};
+  \node[observed,anchor=west] (ratings) at ($(Ct.west)+(0,-\RowSep)$) {ratings};
+
+  % C_t indicators (aligned relative to ratings/Ct)
+  \node[observed,anchor=west] (prod) at ($(ratings.east)+(\Dx,2*\RowSep)$) {\shortstack{production\\probability}};
+  \node[observed,anchor=west] (corpus) at ($(prod.west)+(0,\RowSep)$) {\shortstack{corpus freq.\\/\,opportunity}};
+  \node[observed,anchor=west] (repair) at ($(prod.west)+(0,-\RowSep)$) {\shortstack{repair\\behaviour}};
+
+  % Row 4/5: Ratings modifiers
+  \node[observed,anchor=west] (proc) at ($(ratings.east)+(\Dx,0)$) {\shortstack{processing\\costs}};
+  \node[observed,anchor=west] (ideo) at ($(ratings.east)+(\Dx,-\RowSep)$) {\shortstack{ideological\\filtering}};
+
+  % Row 5: Membership
+  \node[latent] (Gt) at (c3 |- r5) {$G_t$};
+
+  % === Edges ===
+  % State -> Stability
+  \path (map) edge (Gtilde);
+  \path (K) edge (Gtilde);
+  \path (Ct) edge (Gtilde);
+
+  % Threshold -> Membership
+  \path (Gtilde) edge (Gt);
+  \path (tau) edge (Gt);
+
+  % Ratings channel
+  \path (Gtilde) edge (ratings);
+  \path (proc) edge (ratings);
+  \path (ideo) edge (ratings);
+
+  % Indicator channels (generative: Latent -> Observed)
+  \path (K) edge (dispersion);
+  \path (Ct) edge (prod);
+  \path (Ct) edge (corpus.south west);
+  \path (Ct) edge (repair);
+
+\end{tikzpicture}
+\caption{The medium-resolution architecture. Adds observable indicators for $K$ and $C_t$, and ideological filtering on ratings. Arrows represent generative influence; inference runs in the opposite direction.}
+\label{fig:medium}
+\end{figure}
 
 For mapping viability, evidence comes from analyzability: whether speakers can assign a stable category structure, whether repairs consistently fail, and whether comprehension collapses even under supportive contexts. Structural crash cases are rare but diagnostically clean.
 
@@ -427,6 +567,104 @@ This proxy operationalization is deliberately coarse, but it's already discrimin
 The state theory reframes several longstanding debates as tractable research questions.
 
 How should conditioning states be operationalized? If grammaticality is conditioned, then specifying $c$ isn't optional. Future work has to develop operational proxies for norm-centres and communicative situations: genre, medium, stance, audience design, institutional stakes, and community membership. An important prediction is that constructions whose status is driven by $C_t$ will be more sensitive to $c$-manipulation than map-failures and many coherence-failures.
+
+\begin{figure}[t]
+\centering
+\def\BoxH{1.2cm}
+\def\RowSep{1.7cm}
+\def\HalfRow{0.85cm}
+\def\Col{2.7cm}
+\def\Branch{2.6cm}
+\def\Dx{0.5cm}
+
+\begin{tikzpicture}[
+  latent/.style={circle, draw, line width=0.6pt,
+    minimum size=\BoxH, font=\normalsize, inner sep=0pt},
+  observed/.style={rectangle, rounded corners=5pt, draw,
+    line width=0.6pt, minimum height=\BoxH, minimum width=1.9cm,
+    font=\small, inner sep=6pt, align=center},
+  cond/.style={diamond, draw, line width=0.6pt, minimum size=\BoxH,
+    font=\normalsize, inner sep=3pt, align=center},
+  every edge/.style={draw, line width=0.5pt, -{Stealth[length=4pt, width=3pt]}},
+]
+
+  % === Rows/Cols ===
+  \coordinate (r1) at (0,0);
+  \path (r1) ++(0,-\RowSep) coordinate (r2);
+  \path (r2) ++(0,-\RowSep) coordinate (r3);
+  \path (r3) ++(0,-\RowSep) coordinate (r4);
+  \path (r4) ++(0,-\RowSep) coordinate (r5);
+
+  \coordinate (c1) at (0,0);
+  \path (c1) ++(\Col,0) coordinate (c2);
+  \path (c2) ++(\Col,0) coordinate (c3);
+  \path (c3) ++(\Col,0) coordinate (c4);
+
+  % === Row 1: Conditioning Anchors ===
+  \node[observed] (stakes) at (c1 |- r1) {stakes};
+  \node[cond] (S) at (c2 |- r1) {$S$};
+  \node[cond] (A) at (c3 |- r1) {$A$};
+  \node[cond] (I) at (c4 |- r1) {$I$};
+
+  % === Row 2: c ===
+  \node[latent] (c) at (c3 |- r2) {$c$};
+
+  % === Row 3: State layer ===
+  \node[observed] (tau) at (c1 |- r3) {$\tau(c)$};
+  \node[latent] (map) at (c2 |- r3) {$\mathsf{map}$};
+  \node[latent] (K) at (c3 |- r3) {$K$};
+  \node[latent] (Ct) at (c4 |- r3) {$C_t$};
+
+  % === Row 4: Stability & Ratings ===
+  \node[latent] (Gtilde) at (c3 |- r4) {$\widetilde{G}_t$};
+  \node[observed,anchor=west] (ratings) at ($(Ct.west)+(0,-\RowSep)$) {ratings};
+
+  % C_t indicators (Generative: from Ct)
+  \node[observed,anchor=west] (prod) at ($(ratings.east)+(\Dx,2*\RowSep)$) {\shortstack{production\\probability}};
+  \node[observed,anchor=west] (corpus) at ($(prod.west)+(0,\RowSep)$) {\shortstack{corpus freq.\\/\,opportunity}};
+  \node[observed,anchor=west] (repair) at ($(prod.west)+(0,-\RowSep)$) {\shortstack{repair\\behaviour}};
+
+  % Row 4/5: Ratings modifiers
+  \node[observed,anchor=west] (proc) at ($(ratings.east)+(\Dx,0)$) {\shortstack{processing\\costs}};
+  \node[observed,anchor=west] (ideo) at ($(ratings.east)+(\Dx,-\RowSep)$) {\shortstack{ideological\\filtering}};
+
+  % Row 5: Membership
+  \node[latent] (Gt) at (c3 |- r5) {$G_t$};
+
+  % === Edges: Conditioning ===
+  \path (S) edge (c);
+  \path (A) edge (c);
+  \path (I) edge (c);
+  \path (stakes) edge (tau);
+  \path (c) edge (tau.north east);
+
+  \path (c) edge (map);
+  \path (c) edge (K);
+  \path (c) edge (Ct);
+
+  % === Edges: State -> Stability ===
+  \path (map) edge (Gtilde);
+  \path (K) edge (Gtilde);
+  \path (Ct) edge (Gtilde);
+
+  % === Edges: Threshold -> Membership ===
+  \path (Gtilde) edge (Gt);
+  \path (tau) edge (Gt);
+
+  % === Edges: Ratings ===
+  \path (Gtilde) edge (ratings);
+  \path (proc) edge (ratings);
+  \path (ideo) edge (ratings);
+
+  % === Edges: Indicators ===
+  \path (Ct) edge (prod);
+  \path (Ct) edge (corpus.south west);
+  \path (Ct) edge (repair);
+
+\end{tikzpicture}
+\caption{The full conditioned architecture. Shows how the conditioning state $c$ is constituted by situation ($S$), ascription ($A$), and identification ($I$) anchors, and how it drives the state variables. Stakes drive the threshold $\tau(c)$ independently of $c$'s content.}
+\label{fig:full}
+\end{figure}
 
 What are the right objects of repertoire membership? The theory treats $u$ as an utterance type, but in practice the granularity of $u$ matters. Is \mention{gave the dog a bone} in-repertoire as a specific string, as an instance of the ditransitive construction, or as part of a broader caused-possession family? A moving-forward programme has to articulate principled criteria for individuating $u$ in a way that makes the repertoire term empirically meaningful rather than vacuous.
 
