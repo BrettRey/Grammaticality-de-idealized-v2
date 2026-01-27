@@ -4,10 +4,22 @@ This file provides guidance to Claude Code when working with this project.
 
 ## Project Overview
 
-**Title:** Grammaticality De-idealized: The MVMG Model
+**Title:** Grammaticality De-idealized: The OVMG Model
 **Author:** Brett Reynolds
 
-This paper develops the Morphosyntactic-Value Model of Grammaticality (MVMG), formalizing the distinction between objective grammaticality G(u) and subjective feeling of grammaticality F(u).
+This paper develops the Operator-Value Model of Grammaticality (OVMG), formalizing the distinction between objective grammaticality G(u) and subjective feeling of grammaticality F(u).
+
+## Terminology Evolution
+
+The model name has evolved as the theory sharpened:
+
+| Version | Name | Why Changed |
+|---------|------|-------------|
+| MMMG | Multi-Modal Morphosyntactic Model of Grammaticality | Original |
+| MVMG | Morphosyntactic-Value Model of Grammaticality | "Meaning" too narrow – value captures phonological/distributional regularities, is relational and contrastive (Saussure) |
+| **OVMG** | Operator-Value Model of Grammaticality | "Morphosyntax" too narrow – other languages use tone, particles, word order; "operator" is channel-agnostic |
+
+The **operator-stratum** subproject defines what operators are. The main paper uses operators as the unit of grammatical signaling.
 
 Key equations:
 - G(u) = C^t(u) · K(u) · map (objective: situational licensing × speaker knowledge × mapping)
@@ -33,7 +45,7 @@ xelatex LingbuzzPreprint.tex && biber LingbuzzPreprint && xelatex LingbuzzPrepri
 
 ## Cross-Project Connections
 
-- **Grammar_and_emergence**: The MVMG's F(u)/G(u) distinction maps to emergence paper's commutativity question
+- **Grammar_and_emergence**: The OVMG's F(u)/G(u) distinction maps to emergence paper's commutativity question
 - **Grammaticality_as_Kind_Miller**: Companion paper (metaphysics vs methodology framing)
 - **Transparent_free_relatives**: TFRs as empirical test case for gradient grammaticality
 
