@@ -2,6 +2,30 @@
 
 ---
 
+## ⚠️ PRIORITY: Rachell Powell Connection ⚠️
+
+**Status:** NOT STARTED (Jan 26, 2026)
+
+Rachell Powell (BU Philosophy) - *Contingency and Convergence* (MIT Press 2020)
+
+**Why this matters:**
+- Powell's contingency/convergence framework maps onto the OVMG project
+- Operators as *convergent* solutions to coordination problems (like eyes, wings)
+- Morphosyntactic realization as *contingent* (language-specific implementation)
+- Her "deep vs shallow replay" distinction: grammatical categories contingent at origin but convergent given cognitive/social constraints
+
+**Questions Powell would ask:**
+1. What *mechanism* drives convergence toward closed-paradigm operators?
+2. Does OVMG tell us about evolution of linguistic cognition, not just structure?
+
+**Sub-project connections:** Grammar_and_emergence, Labels_to_Stabilisers, TFRs
+
+**Profile:** https://www.bu.edu/philo/profile/rachell-powell/
+
+**Delete this section once explored.**
+
+---
+
 ## ⚠️ PRIORITY: Integrate Operator Stratum Paper ⚠️
 
 **Status:** NOT STARTED (Jan 25, 2026)
