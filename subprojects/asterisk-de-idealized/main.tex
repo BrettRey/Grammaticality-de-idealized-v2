@@ -486,9 +486,6 @@ A \enquote{moving forward} programme has to specify what would count as evidence
   \path (c3) ++(\Col,0) coordinate (c4);
 
   % === Nodes ===
-  % Row 1/2: Indicators for K and Ct
-  \node[observed] (dispersion) at (c3 |- r2) {\shortstack{construal\\variability}};
-  
   % Row 3: State layer
   \node[observed] (tau) at (c1 |- r3) {$\tau(c)$};
   \node[latent] (map) at (c2 |- r3) {$\mathsf{map}$};
@@ -527,13 +524,12 @@ A \enquote{moving forward} programme has to specify what would count as evidence
   \path (ideo) edge (ratings);
 
   % Indicator channels (generative: Latent -> Observed)
-  \path (K) edge (dispersion);
   \path (Ct) edge (prod);
   \path (Ct) edge (corpus.south west);
   \path (Ct) edge (repair);
 
 \end{tikzpicture}
-\caption{The medium-resolution architecture. Adds observable indicators for $K$ and $C_t$, and ideological filtering on ratings. Arrows represent generative influence; inference runs in the opposite direction.}
+\caption{The medium-resolution architecture. Adds observable indicators for $C_t$ and ideological filtering on ratings. Arrows represent generative influence; inference runs in the opposite direction.}
 \label{fig:medium}
 \end{figure}
 
@@ -543,7 +539,7 @@ For coherence, evidence comes from interpretive stability under controlled manip
 
 For repertoire status, $C_t$ is latent and can't be inferred from ratings alone. It has to be estimated from converging indicators: production probability in elicitation, corpus frequency normalized by opportunity sets, repair behaviour, recognition latency, and social evaluation under explicit norm-centre manipulations. The state theory motivates an explicit measurement model for $C_t$ in which acceptability ratings are treated primarily as observations of the ungrammaticality signal, not of repertoire status.
 
-One central challenge involves operationalizing \term{opportunity}. Preemption-based accounts require not only token counts but niche counts: how often the communicative job arises in the relevant $c$. A key empirical task for the moving-forward agenda is to develop operational definitions of niches for different constructions and to measure non-occurrence relative to those opportunities.
+One central challenge involves operationalizing \term{opportunity}. Preemption-based accounts require not only token counts but niche counts: how often the communicative job arises in the relevant $c$. A key empirical task for the moving-forward agenda is to develop operational definitions of niches for different constructions and to measure non-occurrence relative to those opportunities. For one worked example, \textcite{reynolds2026lbe} defines construction-specific opportunity sets for English determiner--head packaging (e.g.\ fronted-determiner arcs in interrogatives and relatives) and estimates rates of workaround use and LBE-like discontinuity under Bayesian partial pooling; the result is a niche-relative measurement of non-occurrence that grounds preemption claims in corpus data.
 
 \subsection{A worked opportunity proxy: independent relative genitives}\label{sec:opportunity-worked}
 
