@@ -48,14 +48,17 @@ xelatex LingbuzzPreprint.tex && biber LingbuzzPreprint && xelatex LingbuzzPrepri
 - **Grammar_and_emergence**: The OVMG's F(u)/G(u) distinction maps to emergence paper's commutativity question
 - **Grammaticality_as_Kind_Miller**: Companion paper (metaphysics vs methodology framing)
 - **Transparent_free_relatives**: TFRs as empirical test case for gradient grammaticality
+- **HPC book ch 5** ("Discrete from continuous"): Provides philosophical foundation for the G_t vs feeling-of-ungrammaticality distinction. The two-layer model (discrete grammaticality filtered through noise → gradient acceptability) is developed there with hyperreal formalization. Key claim: "The uncertainty is epistemic, not semantic: there is a fact of the matter about where the boundary falls; we just can't determine what it is." Satiation effects are evidence that the mapping is plastic, not that grammar rewrites during an experiment.
 
 ## House Style
 
 See portfolio-level `.house-style/` for LaTeX conventions and writing style.
 
-## Editorial Approach (Lesson Learned)
+## Editorial Approach (Lessons Learned)
 
 **Don't do superficial find/replace for terminology changes.** When asked to change terminology throughout the document (e.g., "meaning" → "value"), read sections holistically and rewrite editorially. Piecemeal substitutions create awkward or incoherent prose. Step back, understand what the section is trying to say, and rewrite it properly with the new terminology integrated naturally.
+
+**Engage with the conceptual network, not just individual sources.** Brett's work is building a framework — a network of interconnected ideas across multiple papers. When citing a related paper (e.g., HPC book ch 5), don't just grep for quotable lines. Read the chapter to understand how the ideas connect, what conceptual architecture is being built, and where the current paper sits in that network. Mining sources for quotes without understanding the framework is incurious and misses the point.
 
 ## Multi-Agent Dispatch (MANDATORY)
 
