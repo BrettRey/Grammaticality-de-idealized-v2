@@ -150,7 +150,7 @@ Every competent speaker of English can tell that \ungram{\mention{Can the have r
 \ex \ungram{\mention{Which did you buy car?}}\label{ex:lbe}
 \z\z
 
-These items share the folk verdict that \enquote{something's wrong}, but the wrong isn't the same. Example (\ref{ex:nonsense}) defeats structural analysis, while (\ref{ex:cgi}) is structurally impeccable but conceptually bizarre, even if a construal can be recovered. (\ref{ex:pp-yesterday}) is interpretively transparent but clashes in temporal value: tense and modifier pull in different directions. For many speakers, (\ref{ex:whose}) is not confidently rejected so much as held at arm's length~-- judged marginal, uncertain, or simply unfamiliar in the repertoire. (\ref{ex:center}) is often rejected in spontaneous use but becomes acceptable once a parse is stabilized, suggesting a processing-driven illusion. (\ref{ex:age}) is viable and interpretable but isn't in the repertoire of the relevant English norm-centres, despite being ordinary in French and Spanish. (\ref{ex:lbe}) is short and interpretable but treated as categorically excluded. Same verdict, different failure modes.
+These items share the folk verdict that \enquote{something's wrong}, but the wrong isn't the same. Example (\ref{ex:nonsense}) defeats structural analysis\footnote{Here \enquote{defeats} is meant in the restricted, behavioural sense made explicit in \S\ref{sec:quantities}: no well-typed analysis is available to ordinary comprehension mechanisms even under prosodic scaffolding, explicit bracketing, and metalinguistic coaching that supplies intended constituency. \enquote{Rescuing} the string by positing unlicensed ellipsis or by stipulating missing lexical material changes the utterance type $u$; the relevant claim is that $u$ itself lacks a viable mapping in the relevant conditioning state $c$.}, while (\ref{ex:cgi}) is structurally impeccable but conceptually bizarre, even if a construal can be recovered. (\ref{ex:pp-yesterday}) is interpretively transparent but clashes in temporal value: tense and modifier pull in different directions. For many speakers, (\ref{ex:whose}) is not confidently rejected so much as held at arm's length~-- judged marginal, uncertain, or simply unfamiliar in the repertoire. (\ref{ex:center}) is often rejected in spontaneous use but becomes acceptable once a parse is stabilized, suggesting a processing-driven illusion. (\ref{ex:age}) is viable and interpretable but isn't in the repertoire of the relevant English norm-centres, despite being ordinary in French and Spanish. (\ref{ex:lbe}) is short and interpretable but treated as categorically excluded. Same verdict, different failure modes.
 
 
 In short, the asterisk has been doing at least four jobs, and it has been doing them under a single typographic hood: it marks structural crash (\ref{ex:nonsense}); it marks interpretive incoherence (\ref{ex:pp-yesterday}); it marks repertoire exclusion (\ref{ex:age}), (\ref{ex:lbe}); and it marks the feeling of anomaly driven by processing or ideology (\ref{ex:center}). The asterisk is the dashboard light, not the mechanic. One glyph, multiple logics. That heterogeneity is the phenomenon.
@@ -206,7 +206,7 @@ The remainder of the paper proposes a minimal state theory that makes these dist
 
 \section[Moving forward: conditioned stability]{Moving forward: grammaticality as conditioned stability of form--value relations}\label{sec:movingforward}
 
-The state theory commits to just three things: analyzability, stability of construal, and repertoire status~-- each relativized to a construed situation. The notation that follows is bookkeeping, not a new philosophical burden: it's there so the asterisk can stop doing everyone's paperwork.
+The state theory commits to just three things: analyzability, stability of construal, and repertoire status~-- each relativized to a construed situation. The notation that follows is bookkeeping, not a new philosophical burden: it's there to make the distinctions explicit.
 
 \subsection{Conditioning states and communicative situations}
 
@@ -234,9 +234,9 @@ True $\mathsf{map}=0$ cases are rare. Most strings that linguists mark with an a
 
 The second quantity is interpretive coherence. Let $K(u,c)\in[0,1]$\footnote{The curly braces $\{0,1\}$ denote a two-member set (exactly 0 or 1); the square brackets $[0,1]$ denote the continuous interval from 0 to 1 inclusive.} represent the stability of interpretation: the degree to which the utterance yields a dominant, non-contradictory construal under the constraints live in $c$ (ranging from 0, complete instability, to 1, perfect coherence). Formally, $K$ can be modelled as concentration of a distribution over candidate construals; for present purposes, the important point is that $K$ is distinct from $\mathsf{map}$. Structural viability doesn't guarantee coherence.
 
-One concrete operationalisation: present a target utterance in a supporting scenario and elicit forced-choice paraphrases from $N$ participants. Compute the entropy of the paraphrase-choice distribution. High entropy (participants scatter across competing construals) diagnoses low $K$; low entropy (participants converge on a single reading) diagnoses high $K$. This distinguishes genuine instability from stable ambiguity: an ambiguous string can have high $K$ if, once a construal is selected, it stabilises without contradiction. An incoherent string doesn't stabilise under any selection.
+One concrete operationalisation separates \term{construal multiplicity} from \term{construal stability}. Present a target utterance in a supporting scenario, elicit a best-interpretation choice (or a paraphrase that is then clustered into a small set of readings), and then probe coherence \emph{conditional on the selected construal} using inference questions or consistency checks. Low $K$ is diagnosed when participants who have selected the same construal still show high rates of contradiction, revision, or dispersion in downstream inferences; stable ambiguity, by contrast, may yield multiple construal clusters at the population level while remaining high-$K$ within each cluster. Population-level entropy over construal choices therefore diagnoses ambiguity or norm-centre mixture, while within-construal instability diagnoses low coherence. To decouple coherence from legitimacy policing, paraphrase tasks should be run under a \enquote{treat as legitimate dialect resource} framing, so that $K$ measures stability of interpretation rather than willingness to engage with a stigmatised form.
 
-The third quantity is repertoire status. Let $C_t(u,c)\in[0,1]$ be the population-level posterior probability that the form--value relation $u$ is in the community's repertoire for $c$: the probability that an individual drawn from the relevant norm-centred population treats $u$ as a legitimate resource rather than as an error, performance slip, or alien form (where 1 represents universal acceptance and 0 indicates total exclusion). This quantity is related to what usage-based work calls entrenchment, but it's explicitly conditioned on $c$ and includes normative dimensions that pure entrenchment doesn't capture. While $C_t$ is informed by frequency, it represents inferred repertoire membership rather than a simple tally of token occurrences.
+The third quantity is repertoire status. Let $C_t(u,c)\in[0,1]$ track whether the form--value relation $u$ is a stabilised coordinative resource in the norm-centred repertoire relevant for $c$: whether there's a stable population-level practice in which producers use $u$ for its conventional job and consumers treat it as an ordinary option (rather than as a slip, transfer artefact, or alien code) under the conditions that normally obtain for that repertoire. As an epistemic model of our access to this state, we represent uncertainty about repertoire membership by a population-level posterior probability: the probability that an individual drawn from the relevant norm-centred population treats $u$ as a legitimate resource in $c$ (where 1 represents universal acceptance and 0 indicates total exclusion). Corpus counts and task responses are evidence about $C_t$; they aren't what $C_t$ consists in. This quantity is related to what usage-based work calls entrenchment, but it's explicitly conditioned on $c$ and includes normative dimensions that pure entrenchment doesn't capture.
 
 $C_t$ is where norms live. It's also where many apparently categorical exclusions can be located without positing hard representational bans: a form can be structurally viable and interpretable while being near-universally excluded from the repertoire in a given situation.
 
@@ -249,7 +249,7 @@ The $S$/$A$/$I$ decomposition of $c$ introduced above clarifies what fixes \enqu
 \toprule
 \textbf{Symbol} & \textbf{What it tracks} & \textbf{Diagnostic evidence} \\
 \midrule
-$\mathsf{map}$ & Structural analyzability (0/1) & Parse failure, no stable category assignment \\
+$\mathsf{map}$ & Structural analyzability (0/1) & Persistent parse failure under scaffolding; no stable category assignment \\
 $K$ & Interpretive coherence (0--1) & Paraphrase dispersion, construal instability \\
 $C_t$ & Repertoire status (0--1) & Production rates, \enquote{would you say this?}, corpus frequency normalized by opportunity \\
 \bottomrule
@@ -346,7 +346,7 @@ This formalizes an intuition that's often stated informally but rarely built int
 
 (If you accept the decomposition, the point of this subsection is just to show that the multiplication yields discriminable interaction predictions. Skim if pressed.)
 
-The three-way decomposition is the theoretical commitment; the choice of a specific combination operator is a modelling decision. But the operator should be constrained by desiderata that make it empirically non-trivial.
+The three-way decomposition is the theoretical commitment; the choice of a specific combination operator is a modelling decision. Substantively, the product approximates what successful coordination looks like when it depends on three independently failing gates: the form has to be recognisable ($\mathsf{map}$), its values have to cohere ($K$), and the community has to treat the relation as available ($C_t$). If any gate fails, coordination fails. The operator should be further constrained by desiderata that make it empirically non-trivial.
 
 First, the core is non-compensatory: mapping failure, catastrophic incoherence, or categorical repertoire exclusion should each be sufficient to drive grammatical status to zero in the relevant $c$. This excludes simple weighted sums as a model of grammatical status, since they permit a high value on one dimension to compensate for near-zero on another. Second, the graded score should reflect compounding instability: two moderate deficits should typically be worse than either deficit alone. Third, the operator should be monotone in each argument, and it should allow a transparent generalization to relative weighting if later work justifies it.
 
@@ -399,6 +399,8 @@ Repair-heavy, effortful interpretation & Readily interpretable \\
 
 These diagnostics cut across the tempting verbal contrast between \enquote{values can't be reconciled} and \enquote{the community doesn't accept the reconciliation}. In practice, the decisive question is whether the source of degradation is interpretive dispersion or repertoire exclusion.
 
+Two additional signatures don't reduce to paraphrase comparison. First, a \term{treat-as-code} manipulation: explicitly instruct participants that the form is a legitimate resource of the target norm-centre, then test whether coherence stabilises. If coherence remains unstable under this framing, that's evidence for low $K$; if coherence stabilises but production and \enquote{would you say this?} responses remain near-zero, that supports low $C_t$. Second, repair profiles (\S\ref{sec:profiles}): mismatches targeting operator-like dimensions are predicted to elicit open-class repair initiation and explicit rejection, while payload mismatches elicit stance negotiation. A form that triggers \enquote{what does that even mean?} is failing on $K$; a form that triggers \enquote{you can't say that} is failing on $C_t$.
+
 This is why (\ref{ex:pp-yesterday}) is a useful but non-trivial diagnostic. Many speakers can recover the intended meaning of \mention{I've finished it yesterday} with little difficulty, which pushes it toward a low-$C_t$ profile (repertoire exclusion of a specific tense--adverb pairing) rather than a pure low-$K$ profile. On the other hand, if an experimental design reveals systematic competition between two construals (a present-perfect reading vs a coerced simple-past reading), then the same item will show low $K$ by exhibiting dispersion in paraphrase and inference tasks even when participants are instructed to treat the form as a legitimate dialectal resource. The framework is falsifiable here: it predicts that the $K$-diagnosis and the $C$-diagnosis diverge in their measurement signatures.
 
 \subsection{Grammaticality versus the feeling of ungrammaticality}
@@ -426,7 +428,7 @@ Beyond being definitional, the value of a state theory lies in the diagnostic pr
 \toprule
 Profile & Canonical signature\\
 \midrule
-$\mathsf{map}=0$ & Structural crash; categorical rejection; no amount of context stabilizes meaning (\ref{ex:nonsense}).\\[4pt]
+$\mathsf{map}=0$ & Persistent parse failure under scaffolding; categorical rejection; no amount of context stabilizes meaning (\ref{ex:nonsense}).\\[4pt]
 $\mathsf{map}=1$, $K\approx 0$ & Value incompatibility; intended meaning might be guessable, but conventional form--value constraints in $c$ block stabilization (\ref{ex:pp-yesterday}).\\[4pt]
 $\mathsf{map}=1$, $K$ high, $C_t\approx 0$ & Repertoire exclusion; interpretable but treated as not in the repertoire; often cross-linguistically variable (\ref{ex:age}, \ref{ex:lbe}).\\[4pt]
 $\mathsf{map}=1$, $K$ high, $C_t$ low/uncertain & Rarity/indeterminacy; weak consensus; high variance across speakers (\ref{ex:whose}).\\[4pt]
@@ -482,6 +484,7 @@ A \enquote{moving forward} programme has to specify what would count as evidence
     line width=0.6pt, minimum height=\BoxH, minimum width=1.9cm,
     font=\small, inner sep=6pt, align=center},
   every edge/.style={draw, line width=0.5pt, -{Stealth[length=4pt, width=3pt]}},
+  etiol/.style={draw, dashed, line width=0.5pt, -{Stealth[length=4pt, width=3pt]}},
 ]
 
   % === Rows/Cols ===
@@ -534,13 +537,16 @@ A \enquote{moving forward} programme has to specify what would count as evidence
   \path (proc) edge (ratings);
   \path (ideo) edge (ratings);
 
+  % Etiological: ideology shapes C_t trajectories over time
+  \path[etiol] (ideo) edge[bend right=20] (Ct);
+
   % Indicator channels (generative: Latent -> Observed)
   \path (Ct) edge (prod);
   \path (Ct) edge (corpus.south west);
   \path (Ct) edge (repair);
 
 \end{tikzpicture}
-\caption{The medium-resolution architecture. Adds observable indicators for $C_t$ and ideological filtering on ratings. Arrows represent generative influence; inference runs in the opposite direction.}
+\caption{The medium-resolution architecture. Adds observable indicators for $C_t$ and ideological filtering on ratings. Solid arrows represent synchronic generative influence; the dashed arrow indicates a diachronic etiological pathway (policing reshapes $C_t$ trajectories over time). Inference runs opposite to arrow direction.}
 \label{fig:medium}
 \end{figure}
 
@@ -548,7 +554,7 @@ For mapping viability, evidence comes from analyzability: whether speakers can a
 
 For coherence, evidence comes from interpretive stability under controlled manipulations of the relevant constraints (temporal alignment, argument structure, information structure, indexical consistency). Here experimental pragmatics and semantics supply tools for isolating which constraints are doing the work, while corpus work can reveal conventional distributional restrictions that track those constraints.
 
-For repertoire status, $C_t$ is latent and can't be inferred from ratings alone: not from ratings in isolation, not from a single corpus count, not from any one task. It has to be estimated from converging indicators: production probability in elicitation, corpus frequency normalized by opportunity sets, repair behaviour, recognition latency, and social evaluation under explicit norm-centre manipulations. The state theory motivates an explicit measurement model for $C_t$ in which acceptability ratings are treated primarily as observations of the ungrammaticality signal, not of repertoire status.
+For repertoire status, $C_t$ is latent and can't be inferred from ratings alone: not from ratings in isolation, not from a single corpus count, not from any one task. It has to be estimated from converging indicators: production probability in elicitation, corpus frequency normalized by opportunity sets, repair behaviour, recognition latency, and social evaluation under explicit norm-centre manipulations.\footnote{A natural statistical commitment: model $C_t$ via a hierarchical Beta--Binomial, treating production and acceptance responses as Bernoulli draws and entering opportunity-normalised corpus counts as exposure. Partial pooling across speakers and constructions accommodates the clustering structure. The point isn't to prescribe a single implementation but to commit to a recognisable class of estimator.} The state theory motivates an explicit measurement model for $C_t$ in which acceptability ratings are treated primarily as observations of the ungrammaticality signal, not of repertoire status.
 
 One central challenge involves operationalizing \term{opportunity}. Preemption-based accounts require not only token counts but niche counts: how often the communicative job arises in the relevant $c$. A key empirical task for the moving-forward agenda is to develop operational definitions of niches for different constructions and to measure non-occurrence relative to those opportunities \autocite[for a corpus-based implementation using Bayesian partial pooling over construction-specific opportunity sets, see][]{reynolds2026lbe}. The next subsection sketches the logic with a simpler case.
 
@@ -562,9 +568,11 @@ Consider (\ref{ex:age}), \ungram{\mention{I have 25 years}}, a construction with
 (iii) \mention{I'm 25 years of age}.
 Each token of (i)--(iii) witnesses an opportunity: a speaker needed to state an age and chose one of these forms.
 
-Let $N^{\ast}$ be the competitor count in a corpus slice approximating the relevant $c$. Age-stating is common: a conversational corpus will contain thousands of tokens of (i)--(iii). If the \mention{have}-construction were in the English repertoire~-- even as a rare option~-- we'd expect to find some tokens among those thousands. We find none; here, the silence is noisy. That zero matters precisely because $N^{\ast}$ is large. Compare a rarer niche: if the competitor count is 50, finding zero tokens of a target variant tells us almost nothing~-- the form might simply be uncommon. The evidential force of absence scales with opportunity.
+Let $N^{\ast}$ be the competitor count in a corpus slice approximating the relevant $c$. Age-stating is common: a conversational corpus will contain thousands of tokens of (i)--(iii). If the \mention{have}-construction were in the English repertoire~-- even as a rare option~-- we'd expect to find some tokens among those thousands. We find none, and that zero matters precisely because $N^{\ast}$ is large. Compare a rarer niche: if the competitor count is 50, finding zero tokens of a target variant tells us almost nothing~-- the form might simply be uncommon. The evidential force of absence scales with opportunity.
 
 The \mention{have}-construction is entirely absent from L1 English data, despite being the productive pattern in French, Spanish, and other languages. The mapping is transparent ($\mathsf{map}$ and $K$ pose no obstacle: hearers readily interpret \mention{I have 25 years}), but $C_t \approx 0$~-- the \mention{have}-construction simply isn't part of the L1 English repertoire for this niche. Occasional tokens from L1 French speakers are predicted rather than problematic: $C_t$ is conditioned on $c$, and the speaker's linguistic identification ($I$) is part of $c$. For the L1 English community, $C_t \approx 0$; for French-L1 speakers of English, it may be substantially higher. An L1 English hearer understands the utterance without difficulty~-- $\mathsf{map}$ and $K$ are intact~-- but recognises it as outside the community repertoire. That recognition \emph{is} the low-$C_t$ judgment. The asterisk on (\ref{ex:age}) is then not a brute intuition but a consequence of low $C_t$ in a well-mapped, coherent construction~-- exactly the kind of diagnosis the model is designed to deliver.
+
+A second illustration uses left-branch extraction (\ref{ex:lbe}). The niche is: form a \mention{which}-question targeting an NP object. Competitor realisations are abundant: \mention{Which $\langle N\rangle$ did you $\langle V\rangle$?} and related wh-NP frames. Let $N^{\ast}_{\textsc{lbe}}$ be the count of such competitor tokens in a corpus slice approximating $c$. If (\ref{ex:lbe}) were merely rare, we'd expect at least occasional tokens once $N^{\ast}_{\textsc{lbe}}$ is large. Instead, the target variant remains absent or vanishingly close to absent in the relevant norm-centres, despite massive opportunity and an easily available competitor (\mention{Which car did you buy?}). This is the signature of a stable gap rather than low-opportunity rarity: high $N^{\ast}$, near-zero target rate. Corpus detectability matters here: the point is methodological (define a competitor set whose recall you can audit), not that any single corpus search is dispositive.
 
 This proxy operationalization is deliberately coarse, but it's already discriminating: it separates cases where \enquote{no tokens} is probative (large $N^{\ast}$) from cases where it isn't (small $N^{\ast}$). More generally, this is what a \enquote{moving forward} corpus programme has to provide: explicit definitions of competitor sets for niches and principled choices of corpus slices approximating $c$.
 
@@ -594,6 +602,7 @@ What are the right objects of repertoire membership? The theory treats $u$ as an
   cond/.style={diamond, draw, line width=0.6pt, minimum size=\BoxH,
     font=\normalsize, inner sep=3pt, align=center},
   every edge/.style={draw, line width=0.5pt, -{Stealth[length=4pt, width=3pt]}},
+  etiol/.style={draw, dashed, line width=0.5pt, -{Stealth[length=4pt, width=3pt]}},
 ]
 
   % === Rows/Cols ===
@@ -664,13 +673,16 @@ What are the right objects of repertoire membership? The theory treats $u$ as an
   \path (proc) edge (ratings);
   \path (ideo) edge (ratings);
 
+  % Etiological: ideology shapes C_t trajectories over time
+  \path[etiol] (ideo) edge[bend right=20] (Ct);
+
   % === Edges: Indicators ===
   \path (Ct) edge (prod);
   \path (Ct) edge (corpus.south west);
   \path (Ct) edge (repair);
 
 \end{tikzpicture}
-\caption{The full conditioned architecture. Shows how the conditioning state $c$ is constituted by situation ($S$), ascription ($A$), and identification ($I$) anchors, and how it drives the state variables. Stakes drive the threshold $\tau(c)$ independently of $c$'s content.}
+\caption{The full conditioned architecture. Shows how the conditioning state $c$ is constituted by situation ($S$), ascription ($A$), and identification ($I$) anchors, and how it drives the state variables. Stakes drive the threshold $\tau(c)$ independently of $c$'s content. The dashed arrow indicates ideology's etiological influence on $C_t$ trajectories (cf.\ Figure~\ref{fig:medium}).}
 \label{fig:full}
 \end{figure}
 

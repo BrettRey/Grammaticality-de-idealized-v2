@@ -1,8 +1,8 @@
 # STATUS.md - The Asterisk De-idealized
 
 **Created:** 2026-01-24
-**Last updated:** 2026-01-26
-**Status:** Complete draft (18 pages)
+**Last updated:** 2026-01-28
+**Status:** Complete draft (22 pages)
 **Parent project:** Grammaticality_de_idealized (MVMG)
 **Target:** Journal of Linguistics "Looking Back, Moving Forward" section
 
@@ -95,3 +95,24 @@ Imported insights from polished operator-stratum paper while maintaining distinc
 - HPC book ch 5 provides philosophical foundation for G_t vs feeling distinction
 - Two-layer model: discrete grammaticality filtered through noise = gradient acceptability
 - Satiation as evidence the mapping is plastic (not grammar rewriting)
+
+### 2026-01-28
+
+**Title and structural fixes:**
+- New title: "De-idealizing the asterisk: Grammaticality as conditioned stability"
+- Fixed section cross-refs (§4.4.2–4.3 → §§4.2–4.3)
+- Removed `\numberwithin{equation}{section}` to fix example counter resets (langsci-gb4e shares equation counter)
+
+**Review-driven revisions (10 items):**
+1. map=0 footnote fence — behavioural criterion, blocks "but I can imagine" objections
+2. Thinned metaphors — removed "noisy silence", replaced "paperwork", kept "dashboard light"
+3. C_t epistemic flip — stabilised resource first, posterior as epistemic bookkeeping
+4. K two-stage operationalisation — separates construal multiplicity from construal stability
+5. Table updates — map=0 entries now say "persistent parse failure under scaffolding"
+6. Three-gate sentence — product rule framed as coordination under independently failing gates
+7. K-C_t additional signatures — treat-as-code manipulation + repair-profile asymmetry
+8. Ideology dashed arrows — both figures now show etiological pathway to C_t
+9. LBE worked example — second opportunity-normalisation case in §6.1
+10. C_t estimator footnote — commits to hierarchical Beta-Binomial class
+
+**Error caught:** Sloppy join from metaphor removal ("We find none; That" → "We find none, and that")
