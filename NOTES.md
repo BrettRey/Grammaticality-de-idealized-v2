@@ -26,6 +26,29 @@ Rachell Powell (BU Philosophy) - *Contingency and Convergence* (MIT Press 2020)
 
 ---
 
+## Powell: Bottom-Up Norm Enforcement in Social Insects
+
+**Added:** 2026-01-27
+**Source:** Rachell Powell (BU), *Contingency and Convergence* (MIT 2020)
+
+Powell observes that social insects enforce norms bottom-up, not via central authority. Every local policing interaction aggregates into colony-level norms.
+
+**Connection to OVMG:** This is structurally identical to C_t. Community licensing isn't a decree; it emerges from distributed speakers reacting to each other's usage. Even what looks like a "structural crash" (*Can the have running*) is ultimately a region where bottom-up convergence is so total it appears categorical.
+
+**Implications:**
+1. C_t isn't a sociological add-on — bottom-up norm enforcement is widespread in biology
+2. Counters the "grammar police" caricature: enforcement is distributed, not top-down
+3. Strengthens the convergence story for operators (convergent solutions maintained by distributed mechanisms)
+
+**Assessment for asterisk paper:** Does NOT belong there. The paper is tight and self-contained; adding biological analogies opens doors it can't close. JoL readers would ask "how far does the insect analogy extend?" and there's no space to answer. The formal model already implies bottom-up enforcement — C_t is community licensing, not authority licensing.
+
+**Where it belongs:**
+- **HPC book** (best fit): HPC kinds maintained by distributed mechanisms, not top-down definitions. Chapter-level point.
+- **Parent OVMG paper**: More room for foundational framing of C_t's nature.
+- **Grammar_and_emergence** (Nefdt): Bottom-up emergence of grammatical norms. (But NO LLMs on that project.)
+
+---
+
 ## ⚠️ PRIORITY: Integrate Operator Stratum Paper ⚠️
 
 **Status:** NOT STARTED (Jan 25, 2026)

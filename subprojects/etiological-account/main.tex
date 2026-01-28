@@ -1,0 +1,229 @@
+% !TEX TS-program = xelatex
+\documentclass[12pt,letterpaper]{article}
+
+% ===========================
+% BASIC PACKAGES
+% ===========================
+\usepackage[british]{babel}
+\usepackage[final]{microtype}
+\usepackage{amsmath,amssymb}
+\numberwithin{equation}{section}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{float}
+\usepackage{xspace}
+\usepackage{tikz}
+\usetikzlibrary{calc,positioning,arrows.meta,fit,backgrounds,shapes.geometric}
+\usepackage{fontspec}
+\setmainfont{EB Garamond}[Numbers=OldStyle,Ligatures=TeX]
+\newfontfamily\ipafont{Charis SIL}
+\newcommand{\ipa}[1]{{\ipafont #1}}
+\providecommand{\liningnums}[1]{{\addfontfeatures{Numbers=Lining}#1}}
+\setmonofont{Inconsolata}[Scale=MatchLowercase]
+
+% ===========================
+% PAGE LAYOUT
+% ===========================
+\usepackage[
+  letterpaper,
+  inner=1.25in,
+  outer=1in,
+  top=1in,
+  bottom=1.25in,
+  marginparwidth=0.6in,
+]{geometry}
+
+% ===========================
+% HEADINGS
+% ===========================
+\usepackage{titlesec}
+\titleformat{\section}{\normalfont\scshape}{\llap{\thesection\quad}}{0pt}{}
+\titleformat{\subsection}{\normalfont\scshape}{\thesubsection\quad}{0pt}{}
+\titleformat{\subsubsection}{\normalfont}{\thesubsubsection\quad}{0pt}{}
+\titleformat{\paragraph}[runin]{\normalfont\scshape}{\theparagraph}{1em}{}
+\titlespacing*{\section}{0pt}{2ex plus 1ex minus .2ex}{1ex plus .2ex}
+\titlespacing*{\subsection}{0pt}{1.5ex plus 1ex minus .2ex}{0.5ex plus .2ex}
+\titlespacing*{\subsubsection}{0pt}{1ex plus 0.5ex minus .1ex}{0.3ex plus .1ex}
+\titlespacing*{\paragraph}{0pt}{1ex plus 0.5ex minus .1ex}{1em}
+
+% ===========================
+% RUNNING HEADS
+% ===========================
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\scshape\leftmark}
+\fancyhead[R]{\small\thepage}
+\setlength{\headheight}{26pt}
+\addtolength{\topmargin}{-12.4pt}
+\renewcommand{\headrulewidth}{0pt}
+
+% ===========================
+% COLOURS & HYPERLINKS
+% ===========================
+\usepackage{xcolor}
+\definecolor{linkmaroon}{RGB}{128,0,32}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=linkmaroon,
+  citecolor=linkmaroon,
+  urlcolor=linkmaroon,
+  pdftitle={Grammaticality de-idealized: An etiological account},
+  pdfauthor={Brett Reynolds},
+}
+
+% ===========================
+% QUOTATIONS
+% ===========================
+\usepackage[style=american]{csquotes}
+
+% ===========================
+% SEMANTIC MACROS
+% ===========================
+\newcommand{\term}[1]{\textsc{#1}}
+\newcommand{\mention}[1]{\textit{#1}}
+\newcommand{\mentionh}[1]{⟨#1⟩}
+\newcommand{\olang}[1]{\textit{#1}}
+\newcommand{\abbr}[1]{\textsc{#1}}
+\newcommand{\eg}{e.g.\,\xspace}
+\newcommand{\ie}{i.e.\,\xspace}
+
+% ===========================
+% JUDGEMENT MARKERS (TEXT-MODE SAFE)
+% ===========================
+\newcommand{\judgesep}{\kern-0.15em}
+\newcommand{\ungram}[1]{*\judgesep#1}
+\newcommand{\marg}[1]{?\judgesep#1}
+\newcommand{\odd}[1]{\#\judgesep#1}
+
+% ===========================
+% LINGUISTIC EXAMPLES
+% ===========================
+\usepackage{langsci-gb4e}
+\makeatletter
+\@ifundefined{noautomath}{}{\noautomath}
+\makeatother
+
+% ===========================
+% BIBLIOGRAPHY
+% ===========================
+\usepackage[backend=biber,style=apa,natbib=true,doi=true,isbn=false,url=true]{biblatex}
+\addbibresource{refs.bib}
+\newcommand{\posscite}[1]{\citeauthor{#1}'s (\citeyear{#1})}
+\usepackage{orcidlink}
+
+% ===========================
+% TITLE
+% ===========================
+\title{Grammaticality de-idealized:\\An etiological account of stable repertoire exclusion}
+\author{Brett Reynolds \orcidlink{0000-0003-0073-7195}\\Humber Polytechnic \& University of Toronto\\\href{mailto:brett.reynolds@humber.ca}{brett.reynolds@humber.ca}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+% TODO: Draft abstract once structure stabilizes.
+% Core pitch: The constitutive account of grammaticality (what it IS) has been
+% developed elsewhere. This companion paper asks the etiological question:
+% why do C_t(u,c) trajectories settle where they do? Two complementary modules:
+% (1) opportunity-sensitive preemption (niche-varying strength),
+% (2) coordination equilibria (game-theoretic self-sustaining exclusion).
+% Together they explain why some gaps are stable and others drift, without
+% treating categorical constraints as primitives.
+\end{abstract}
+
+\noindent Keywords: grammaticality; repertoire exclusion; preemption; coordination equilibrium; conditioned stability; etiology
+
+\section{Introduction}
+
+% The constitutive question (what grammaticality IS) and the etiological
+% question (why C_t trajectories settle where they do) are separable.
+% The asterisk paper and the OVMG main paper handle the constitutive side.
+% This paper develops the etiological module announced there.
+%
+% Key opening move: classic "categorical constraints" are not primitives
+% but stable outcomes of ongoing dynamics. The question is what sustains
+% them.
+
+\section{The constitutive--etiological distinction}
+
+% Brief recap of OVMG state theory:
+%   G_t(u,c) = map(u,c) · K(u,c) · C_t(u,c)
+% This paper focuses entirely on C_t: repertoire status.
+% Why does C_t(u,c) ≈ 0 for some structurally viable, interpretable forms?
+% That's the etiological question.
+
+\section{Module 1: Opportunity-sensitive preemption}
+
+% Preemption redescribed in OVMG terms.
+% Not "does preemption exist?" but "what is its effective strength
+% across niches, and how does it interact with processing difficulty
+% and social evaluation?"
+%
+% Key formalization: preemption strength as a function of opportunity
+% set robustness. High-frequency alternatives in robust opportunity
+% sets sustain exclusion; niche-specific or low-frequency alternatives
+% allow drift.
+%
+% Test case: classic "categorical" constraints as stable repertoire
+% exclusion under strong preemption.
+
+\subsection{Opportunity sets and preemption strength}
+
+\subsection{Niche variation}
+
+\subsection{Interaction with processing difficulty}
+
+\section{Module 2: Coordination equilibria}
+
+% Game-theoretic account (O'Connor 2019 and related).
+% Communicative situations as payoff structures.
+% Repertoire boundaries stabilize because they solve coordination
+% problems.
+%
+% Why C_t ≈ 0 can persist for viable, interpretable forms:
+% the coordination equilibrium excludes them. Unilateral deviation
+% is penalized.
+%
+% The threshold τ(c) fits naturally: high-stakes = high coordination
+% cost = sharper policing. Institutions encode equilibria as
+% explicit gatekeeping.
+
+\subsection{Communicative situations as payoff structures}
+
+\subsection{Self-sustaining exclusion}
+
+\subsection{The threshold as coordination cost}
+
+\section{Integration: Why some gaps are stable and others drift}
+
+% Bringing the two modules together.
+% Preemption provides the proximate mechanism (what blocks the form).
+% Coordination equilibria explain why the blocking persists
+% (self-sustaining under deviation penalties).
+%
+% Predictions:
+% - Gaps sustained by both modules are maximally stable
+% - Gaps sustained by preemption alone drift when opportunity sets
+%   shift (genre change, register mixing)
+% - Gaps sustained by coordination alone weaken when coordination
+%   payoffs diminish (informal contexts, in-group speech)
+
+\section{Empirical predictions and disconfirmation conditions}
+
+% Concrete, falsifiable predictions.
+% What would have to be true for each module to fail?
+
+\section{Conclusion}
+
+\section*{Acknowledgements}
+
+The large language models Claude Opus 4.5, ChatGPT 5.2 Pro, and Gemini 3 served as drafting and editing aids throughout the preparation of this paper. I am responsible for all theoretical claims, arguments, errors, and interpretive choices.
+
+\newpage
+\printbibliography
+
+\end{document}
