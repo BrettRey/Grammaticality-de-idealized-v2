@@ -545,18 +545,18 @@ One central challenge involves operationalizing \term{opportunity}. Preemption-b
 
 Opportunity-normalisation is the hinge between mere corpus rarity and evidence of systematic exclusion. The general problem is that niches aren't directly annotated in corpora: we rarely observe \enquote{the speaker needed to express X} as an explicit variable. A workable starting point is to use competitor forms as a lower-bound proxy for opportunities. If speakers reliably realise a niche using an established competitor, then each observed competitor token witnesses an opportunity in which the target variant could, in principle, have been selected.
 
-For the independent relative genitive in (\ref{ex:whose}) \autocite[see][for the pragmatic constraints on this construction]{reynolds2024whose}, a plausible niche is: \enquote{predicate something of an associate of a discourse-salient possessor while packaging the possessor relation in a relative dependency}. Directly counting such niches is difficult. But we can approximate an opportunity lower bound by counting competitor realizations in the same discourse environments, such as:
-(i) \mention{I saw Joan; a friend of hers was visiting};
-(ii) \mention{I saw Joan; one of her friends was visiting};
-(iii) \mention{I saw Joan, whose friend was visiting};
-(iv) \mention{I saw Joan; Joan's friend was visiting}.
-Each token of (i)--(iv) is evidence that the niche occurred and was realized by a competitor.
+Consider (\ref{ex:whose}), the independent relative genitive \mention{a friend of whose}.\footnote{See \textcite{reynolds2024whose} for a detailed account of the pragmatic constraints on this construction.} The example is marked marginal in this paper's own inventory, and a central question is whether that marginality reflects low $C_t$ or merely low opportunity. A plausible niche is: `express, inside a relative clause, that an associate of the antecedent has some property'. Directly counting such niches is difficult, but we can approximate an opportunity lower bound by counting alternative realisations of the same communicative job, regardless of packaging:
+(i) \mention{I saw Joan, whose friend was visiting} (dependent relative genitive);
+(ii) \mention{I saw Joan, one of whose friends was visiting} (partitive relative genitive);
+(iii) \mention{I saw Joan; a friend of hers was visiting} (independent non-relative genitive);
+(iv) \mention{I saw Joan; one of her friends was visiting} (no genitive).
+Each token of (i)--(iv) witnesses an opportunity: a speaker needed to express the relevant content and chose a competitor form.
 
 Let $N^{\ast}$ be the competitor count in a corpus slice intended to approximate the relevant $c$ (genre, register, period). Then $N^{\ast}$ provides a conservative lower bound on the opportunity set $N_t(n,c)$. The question \enquote{does zero attestation matter?} becomes \enquote{is zero attestation surprising given $N^{\ast}$ and a plausible counterfactual choice probability?}. If a target variant would have been chosen with probability $\rho$ among in-repertoire competitors, then the expected number of tokens is $N^{\ast}\rho$. Even small values of $\rho$ yield strong expectations when $N^{\ast}$ is large; conversely, when $N^{\ast}$ is small, absence is weak evidence and should predict uncertainty rather than categorical exclusion.
 
 A toy illustration: suppose $N^{\ast}=10{,}000$ competitor tokens and $\rho=0.005$ (the target form would be chosen one time in 200 if in-repertoire). Expected tokens: 50. Observing zero is then striking~-- strong evidence the form isn't in-repertoire. But if $N^{\ast}=50$ and $\rho=0.005$, expected tokens are 0.25; observing zero tells us almost nothing.
 
-This proxy operationalization is deliberately coarse, but it's already discriminating: it separates cases where \enquote{no tokens} is probative (large $N^{\ast}$) from cases where it isn't (small $N^{\ast}$). It also makes clear what a \enquote{moving forward} corpus programme has to provide: explicit definitions of competitor sets for niches and principled choices of corpus slices approximating $c$.
+This proxy operationalization is deliberately coarse, but it's already discriminating: it separates cases where \enquote{no tokens} is probative (large $N^{\ast}$) from cases where it isn't (small $N^{\ast}$). For the independent relative genitive, the prediction is clear: if $N^{\ast}$ is large and the target form is near-absent, $C_t$ is near zero~-- the form isn't in the community's active repertoire, regardless of whether it's structurally well-formed ($\mathsf{map} \cdot K > 0$). The example's marginal status is then not a brute intuition but a consequence of low $C_t$ in a well-mapped, coherent construction. More generally, this is what a \enquote{moving forward} corpus programme has to provide: explicit definitions of competitor sets for niches and principled choices of corpus slices approximating $c$.
 
 \section[Questions for future research]{Key questions for future theoretical research}\label{sec:future}
 
