@@ -284,7 +284,7 @@ $C_t$ & Repertoire status (0--1) & Production rates, \enquote{would you say this
 
 \subsection{A stability score and a membership predicate}\label{sec:stability}
 
-The three quantities now need to be combined. The intuition is simple: if any one of them fails~-- if the form can't be parsed, if the values don't cohere, or if the community doesn't treat it as a legitimate resource~-- the whole relation is ungrammatical. Partial success on one dimension can't rescue total failure on another.
+The three quantities (summarized in Table~\ref{tab:symbols}) now need to be combined. The intuition is simple: if any one of them fails~-- if the form can't be parsed, if the values don't cohere, or if the community doesn't treat it as a legitimate resource~-- the whole relation is ungrammatical. Partial success on one dimension can't rescue total failure on another.
 
 Define a graded stability score:
 \begin{equation}\label{eq:stability}
@@ -304,7 +304,7 @@ where $\tau(c)$ is a situation-specific decision criterion. The point is that $\
 
 To illustrate: in a classroom presentation, using a stigmatized dialectal form risks being marked down; the threshold for \enquote{grammatical enough} rises. At lunch with friends, the same form may index solidarity; the threshold drops. Same form, same $\widetilde{G}$, different verdicts.
 
-A concern is that $\tau(c)$ might immunize the theory if it can vary freely. Two constraints matter. First, $\tau(c)$ isn't construction-specific: it's fixed for a conditioning state and therefore shifts the boundary for \emph{all} utterance types evaluated in that state. Adjusting $\tau$ to rescue a single problematic case entails collateral predictions for a broad set of anchor items. Second, $\tau(c)$ can be motivated by a standard decision-theoretic rationale in which classification losses differ by situation. Let $L_{\textsc{fa}}(c)$ be the loss of treating an item as in-repertoire when it is not, and $L_{\textsc{fr}}(c)$ the loss of treating an item as not-in-repertoire when it is. A natural constraint is
+A concern is that $\tau(c)$ might immunize the theory if it can vary freely. Two constraints matter. First, $\tau(c)$ isn't construction-specific: it's fixed for a conditioning state and therefore shifts the boundary for \emph{all} utterance types evaluated in that state. Adjusting $\tau$ to rescue a single problematic case entails collateral predictions for a broad set of anchor items. Second, $\tau(c)$ can be motivated by a standard decision-theoretic rationale in which classification losses differ by situation \autocite{greenswets1966}. Let $L_{\textsc{fa}}(c)$ be the loss of treating an item as in-repertoire when it is not, and $L_{\textsc{fr}}(c)$ the loss of treating an item as not-in-repertoire when it is. A natural constraint is
 \[
 \tau(c)=\frac{L_{\textsc{fa}}(c)}{L_{\textsc{fa}}(c)+L_{\textsc{fr}}(c)}.
 \]
@@ -363,7 +363,7 @@ This formalizes an intuition that's often stated informally but rarely built int
 
   \path (Gtilde) edge (ratings);
   \path (ideo) edge (ratings);
-  \path (proc) edge (ratings);
+  \path (proc) edge (ratings.south east);
 
 \end{tikzpicture}
 \caption{The minimal state architecture. Grammatical status $\widetilde{G}_t$ combines mapping, coherence, and repertoire status. The feeling of ungrammaticality reflects $\widetilde{G}_t$ filtered through processing costs and ideological filtering, while categorical membership $G_t$ involves a situation-specific threshold $\tau(c)$.}
@@ -398,15 +398,15 @@ The choice among $\min$ and $\times$ is empirically discriminable. Consider a fa
 
 An information-theoretic perspective clarifies why this matters. The multiplicative structure has a natural interpretation in terms of how linguistic contrasts contribute to interpretation. Some form--value relations occupy small, closed paradigms but cause large downstream consequences: clause type constrains which responses are relevant; polarity flips entailment relations; case and agreement constrain role assignment. These relations function as control settings~-- protocol headers rather than payload content~-- carrying few bits in themselves but causing large entropy reduction in the space of licit interpretations \autocite{shannon1948,coverthomas2006}. A wrong value doesn't merely produce a surprising concept combination; it disrupts the mapping from form to publicly recognizable update. This is why a short, interpretable utterance like (\ref{ex:pp-yesterday}) can trigger categorical rejection: the violation targets infrastructure, not content. The product rule captures this asymmetry: degradation in control-like dimensions ($\mathsf{map}$, $K$ for operator-relevant constraints, $C_t$ for high-opportunity paradigms) compounds rapidly, while payload-level infelicities remain negotiable.
 
-\textit{Empirical upshot:} $K \times C_t$ manipulations should compound under the product rule; if they don't, the operator is wrong even if the decomposition stands.
+In short, $K \times C_t$ manipulations should compound under the product rule; if they don't, the operator is wrong even if the decomposition stands.
 
 A concrete design sketch makes this testable. Take a 2$\times$2 factorial with $K$ (high vs degraded) crossed with $C_t$ (in-repertoire vs marginal). The $K$ manipulation introduces a mild temporal or aspectual clash (e.g., present perfect with a definite past adverb vs simple past with the same adverb); the $C_t$ manipulation shifts norm-centre framing (in-group vs formal/institutional). Measure acceptability ratings and production probability. The minimum rule predicts a ceiling effect: once either $K$ or $C_t$ is the bottleneck, the second manipulation shouldn't further reduce ratings. The product rule predicts an interaction: the high-$K$, marginal-$C_t$ cell and the degraded-$K$, in-repertoire cell should both show moderate degradation, but the degraded-$K$, marginal-$C_t$ cell should show superadditive degradation beyond what either deficit alone produces. If ratings in the double-deficit cell match the single-deficit cells (no interaction), the minimum rule is favoured; if ratings in the double-deficit cell are reliably worse than the worst single-deficit cell, the product rule is favoured. This is a realizable experiment, not a thought experiment.
 
-A clarification about scope: the product rule is a constitutive description of the stability score at a fixed time~-- a snapshot. The three components are plausibly entangled in their dynamics: low $K$ can depress production, which reduces evidence and can lower $C_t$ over time; processing costs (outside $\widetilde{G}_t$) can feed back into $C_t$ by discouraging use. These causal couplings belong to the etiological module (how states arise), not to the combination rule (what the state is at evaluation time). The product can be the right constitutive operator even if the components are dynamically correlated.
+The product rule is a constitutive description of the stability score at a fixed time~-- a snapshot. The three components are plausibly entangled in their dynamics: low $K$ can depress production, which reduces evidence and can lower $C_t$ over time; processing costs (outside $\widetilde{G}_t$) can feed back into $C_t$ by discouraging use. These causal couplings belong to the etiological module (how states arise), not to the combination rule (what the state is at evaluation time). The product can be the right constitutive operator even if the components are dynamically correlated.
 
 \subsection{Separating coherence from repertoire status: operational criteria}\label{sec:KvsC}
 
-A recurring worry is that coherence failure $K\approx 0$ and repertoire exclusion $C_t\approx 0$ may collapse into one another, since both yield low stability. The separation requires distinct signatures, not just distinct labels.
+A recurring worry is that coherence failure $K\approx 0$ and repertoire exclusion $C_t\approx 0$ may collapse into one another, since both yield low stability. The separation requires distinct signatures, not just distinct labels (Table~\ref{tab:KvsC}).
 
 \begin{table}[H]
 \centering
@@ -435,7 +435,7 @@ This is why (\ref{ex:pp-yesterday}) is a useful but non-trivial diagnostic. Many
 
 The expected correlation and what counts as dissociation deserve explicit statement. Low $C_t$ and low $K$ will often co-occur: unfamiliar forms can induce interpretive uncertainty, and forms that resist stable construal may fail to enter the repertoire. But the correlation isn't identity. A genuine dissociation is diagnosed when the two signatures diverge under controlled manipulation. Specifically: under a treat-as-legitimate framing, low-$C_t$ items should show stable downstream inferences once a construal is selected (participants agree on what it means and draw consistent conclusions), whereas low-$K$ items should continue to show within-construal instability (participants who select the same reading still contradict themselves on inference probes). If both signatures pattern together across all manipulations, the separation is empirically empty; if they diverge, the decomposition is supported.
 
-A non-transfer L1 contrast illustrates the distinction. Consider the stigmatized double-modal construction \mention{I might could do that}, common in some Southern US varieties but categorically rejected by speakers of other varieties. For speakers who lack the construction, $C_t\approx 0$: it isn't in their repertoire. But $K$ is high: the intended meaning (epistemic possibility of ability) is transparent, and speakers readily paraphrase it as \mention{I might be able to do that}. Contrast this with a genuinely incoherent sequence like \mention{The meeting starts before it begins}, which resists stable interpretation: the temporal predicates contradict each other, producing construal instability ($K$ low) that persists even when participants are explicitly instructed to find a coherent reading. The prediction is that \mention{might could} under a treat-as-legitimate framing will yield high paraphrase agreement and consistent inference patterns (high $K$), while \mention{The meeting starts before it begins} will yield paraphrase dispersion and inference inconsistency (low $K$), even when participants try to accommodate it. Both may be rejected, but the source of rejection differs: repertoire exclusion vs coherence failure. This is a within-L1 test of the separation, independent of transfer.
+A non-transfer L1 contrast illustrates the distinction. Consider the stigmatized double-modal construction \mention{I might could do that}, common in some Southern US varieties but categorically rejected by speakers of other varieties. The structural reason is straightforward: in Standard English, modals select plain-form VP complements, but modals are defective and lack plain forms~-- there is no plain \mention{could} to serve as complement to \mention{might}. Southern varieties have resolved this gap; Standard English hasn't. For speakers who lack the construction, $C_t\approx 0$: it isn't in their repertoire. But $K$ is high: the intended meaning (epistemic possibility of ability) is transparent, and speakers readily paraphrase it as \mention{I might be able to do that}. The prediction is that \mention{might could} under a treat-as-legitimate framing will yield high paraphrase agreement and consistent inference patterns (high $K$), supporting a low-$C_t$ rather than low-$K$ diagnosis. This is a within-L1 test of the separation, independent of transfer.
 
 \subsection{Grammaticality versus the feeling of ungrammaticality}
 
@@ -573,7 +573,7 @@ A \enquote{moving forward} programme has to specify what would count as evidence
   % Ratings channel
   \path (Gtilde) edge (ratings);
   \path (ideo) edge (ratings);
-  \path (proc) edge (ratings);
+  \path (proc) edge (ratings.south east);
 
   % Etiological: ideology shapes C_t trajectories over time
   \path[etiol] (ideo) edge[bend right=20] (Ct);
@@ -709,7 +709,7 @@ What are the right objects of repertoire membership? The theory treats $u$ as an
   % === Edges: Ratings ===
   \path (Gtilde) edge (ratings);
   \path (ideo) edge (ratings);
-  \path (proc) edge (ratings);
+  \path (proc) edge (ratings.south east);
 
   % Etiological: ideology shapes C_t trajectories over time
   \path[etiol] (ideo) edge[bend right=20] (Ct);
