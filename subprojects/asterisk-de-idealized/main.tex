@@ -7,7 +7,10 @@
 \usepackage[british]{babel}
 \usepackage[final]{microtype}
 \usepackage{amsmath,amssymb}
-\numberwithin{equation}{section}
+% Examples (langsci-gb4e) share the equation counter, so per-section
+% resets would restart example numbering in each section.
+% With only two equations, continuous numbering is cleaner.
+%\numberwithin{equation}{section}
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{array}
@@ -70,7 +73,7 @@
   linkcolor=linkmaroon,
   citecolor=linkmaroon,
   urlcolor=linkmaroon,
-  pdftitle={The asterisk de-idealized},
+  pdftitle={De-idealizing the asterisk: Grammaticality as conditioned stability},
   pdfauthor={Brett Reynolds},
 }
 
@@ -118,7 +121,7 @@
 % ===========================
 % TITLE
 % ===========================
-\title{The asterisk de-idealized:\\Looking back at grammaticality, moving forward with conditioned stability}
+\title{De-idealizing the asterisk:\\Grammaticality as conditioned stability}
 \author{Brett Reynolds \orcidlink{0000-0003-0073-7195}\\Humber Polytechnic \& University of Toronto\\\href{mailto:brett.reynolds@humber.ca}{brett.reynolds@humber.ca}}
 \date{}
 
@@ -135,7 +138,7 @@ Moving forward, I propose a minimal state theory that reconceptualizes grammatic
 
 \section{Introduction}
 
-Every competent speaker of English knows that \ungram{\mention{Can the have running}} is impossible; what remains unsettled is what that impossibility consists in. When an utterance is labelled \term{ungrammatical}, are we diagnosing a failure of analysis, a failure of value, a failure of repertoire, or only a failure of comfort? The cluster in (\ref{ex:cluster}) puts the ambiguity on the page.
+Every competent speaker of English can tell that \ungram{\mention{Can the have running}} is impossible. What is that impossibility a judgement of: structure, value, repertoire, or discomfort? The asterisk answers as if these were one. The cluster in (\ref{ex:cluster}) suggests otherwise.
 
 \ea \label{ex:cluster}
 \ea \ungram{\mention{Can the have running?}}\label{ex:nonsense}
@@ -147,7 +150,7 @@ Every competent speaker of English knows that \ungram{\mention{Can the have runn
 \ex \ungram{\mention{Which did you buy car?}}\label{ex:lbe}
 \z\z
 
-These items share the folk verdict that \enquote{something's wrong}; they don't share a single type of failure. Example (\ref{ex:nonsense}) defeats structural analysis, while (\ref{ex:cgi}) is structurally impeccable but conceptually bizarre, even if a construal can be recovered. (\ref{ex:pp-yesterday}) is interpretively transparent but clashes in temporal value: tense and modifier pull in different directions. For many speakers, (\ref{ex:whose}) is not confidently rejected so much as held at arm's length~-- judged marginal, uncertain, or simply unfamiliar in the repertoire. (\ref{ex:center}) is often rejected in spontaneous use but becomes acceptable once a parse is stabilized, suggesting a processing-driven illusion. (\ref{ex:age}) is viable and interpretable but isn't in the repertoire of the relevant English norm-centres, despite being ordinary in French and Spanish. (\ref{ex:lbe}) is short and interpretable but treated as categorically excluded. Same verdict, different failure modes.
+These items share the folk verdict that \enquote{something's wrong}, but the wrong isn't the same. Example (\ref{ex:nonsense}) defeats structural analysis, while (\ref{ex:cgi}) is structurally impeccable but conceptually bizarre, even if a construal can be recovered. (\ref{ex:pp-yesterday}) is interpretively transparent but clashes in temporal value: tense and modifier pull in different directions. For many speakers, (\ref{ex:whose}) is not confidently rejected so much as held at arm's length~-- judged marginal, uncertain, or simply unfamiliar in the repertoire. (\ref{ex:center}) is often rejected in spontaneous use but becomes acceptable once a parse is stabilized, suggesting a processing-driven illusion. (\ref{ex:age}) is viable and interpretable but isn't in the repertoire of the relevant English norm-centres, despite being ordinary in French and Spanish. (\ref{ex:lbe}) is short and interpretable but treated as categorically excluded. Same verdict, different failure modes.
 
 
 In short, the asterisk has been doing at least four jobs, and it has been doing them under a single typographic hood: it marks structural crash (\ref{ex:nonsense}); it marks interpretive incoherence (\ref{ex:pp-yesterday}); it marks repertoire exclusion (\ref{ex:age}), (\ref{ex:lbe}); and it marks the feeling of anomaly driven by processing or ideology (\ref{ex:center}). The asterisk is the dashboard light, not the mechanic. One glyph, multiple logics. That heterogeneity is the phenomenon.
@@ -156,7 +159,7 @@ The history of grammaticality theory can be read as a sequence of attempts to co
 
 This article is a contribution to the \textit{Journal of Linguistics} section \enquote{Looking Back, Moving Forward}. Looking back, I argue that the impasse persists because grammaticality has been asked to do the work of multiple distinct questions at once. Moving forward, I propose a minimal state theory that separates those questions---not to proliferate labels, but to make disagreement diagnosable. The core proposal is that grammaticality is \term{conditioned stability} of form--value relations\footnote{I use \term{value} for what a form conventionally contributes~-- primarily meaning, but extending to phonological and distributional regularities. Value is relational and contrastive: defined by opposition within a system, not by speaker intention \autocite{saussure1916}.} within a communicative situation: grammatical status depends on (i)~mapping viability (whether an expression-shape admits a well-typed structural analysis), (ii)~interpretive coherence (whether the values encoded stabilize under the constraints live in the situation), and (iii)~repertoire status (whether the form--value relation~-- especially at the operator stratum~-- is treated as a legitimate option in the relevant norm-centre). Parse, construe, belong: the asterisk has been made to answer all three. The same decomposition also clarifies how the \term{feeling of ungrammaticality} arises as a metacognitive signal whose sources include, but aren't exhausted by, grammatical status; this distinction explains why some constructions feel ungrammatical while being licit, and why some illicit constructions escape detection \autocite{Fanselow2021}.
 
-The structure is as follows. Section~\ref{sec:lookingback} diagnoses the impasse by reviewing what the asterisk has been made to mean. Section~\ref{sec:impasse} isolates the multiple questions that have been collapsed into one label. Section~\ref{sec:movingforward} introduces the state theory: conditioning states, the three constitutive quantities, and the stability score. Section~\ref{sec:profiles} works through diagnostic profiles that the model predicts. Section~\ref{sec:evidence} addresses evidence and measurement, including a worked opportunity proxy. Section~\ref{sec:future} frames key questions for future research. Section~\ref{sec:falsify} states what would count against the framework. Readers who want the core model quickly can focus on \S\ref{sec:movingforward}.\ref{sec:quantities}--\ref{sec:stability}, Table~\ref{tab:profiles}, and \S\ref{sec:falsify}.
+The structure is as follows. Section~\ref{sec:lookingback} diagnoses the impasse by reviewing what the asterisk has been made to mean. Section~\ref{sec:impasse} isolates the multiple questions that have been collapsed into one label. Section~\ref{sec:movingforward} introduces the state theory: conditioning states, the three constitutive quantities, and the stability score. Section~\ref{sec:profiles} works through diagnostic profiles that the model predicts. Section~\ref{sec:evidence} addresses evidence and measurement, including a worked opportunity proxy. Section~\ref{sec:future} frames key questions for future research. Section~\ref{sec:falsify} states what would count against the framework. Readers who want the core model quickly can focus on \S\S\ref{sec:quantities}--\ref{sec:stability}, Table~\ref{tab:profiles}, and \S\ref{sec:falsify}.
 
 \section[Looking back]{Looking back: what the asterisk has been made to mean}\label{sec:lookingback}
 
@@ -685,7 +688,7 @@ What role should language models play? Language models are now unavoidable instr
 
 A framework that decomposes grammatical status into multiple components risks appearing too flexible unless each component is tied to independent evidence. The present proposal is disconfirmed, or at least seriously pressured, by any of the following patterns.
 
-Each condition targets a specific earlier commitment: (1) targets the $K$/$C_t$ separation (\S\ref{sec:KvsC}); (2) targets the opportunity methodology (\S\ref{sec:opportunity-worked}); (3) targets conditioning and thresholds (\S\ref{sec:movingforward}.\ref{sec:stability}); (4) targets the combination rule (\S\ref{sec:combination}); (5) targets the decomposition as a whole.
+Each condition targets a specific earlier commitment: (1) targets the $K$/$C_t$ separation (\S\ref{sec:KvsC}); (2) targets the opportunity methodology (\S\ref{sec:opportunity-worked}); (3) targets conditioning and thresholds (\S\ref{sec:stability}); (4) targets the combination rule (\S\ref{sec:combination}); (5) targets the decomposition as a whole.
 
 \begin{enumerate}
 \item If there's no measurable dissociation between coherence and repertoire status~-- if constructions diagnosed as low-$C_t$ (repertoire exclusion) systematically exhibit the same interpretive-dispersion profile as constructions diagnosed as low-$K$, and if tasks designed to separate these signatures fail across a range of phenomena~-- then the K/C distinction isn't empirically supported.
@@ -717,7 +720,7 @@ If grammaticality is to remain a useful concept for theoretical linguistics, it 
 
 \section*{Acknowledgements}
 
-Thanks to Peter Evans, Geoff Pullum, Muhammad Ali Khalidi, Ryan Nefdt, Irene Kosmas, Mostafa Hasrati, and Henri Kauhanen for comments and suggestions. The large language models Claude 3.5 \& 4.5; ChatGPT o1 pro \& 5.2 pro; Gemini 3; and DeepSeek V3 served as drafting and editing aids throughout the preparation of this paper. Their role was analogous to that of producers on a film: they generated material, proposed structures, and refined prose under my direction. I am responsible for all theoretical claims, arguments, errors, and interpretive choices.
+Thanks to Peter Evans, Geoff Pullum, Muhammad Ali Khalidi, Ryan Nefdt, Irene Kosmas, Mostafa Hasrati, and Henri Kauhanen for comments and suggestions. The large language models Claude 3.5 \& 4.5; ChatGPT o1 pro \& 5.2 pro; Gemini 3; and DeepSeek V3 served as drafting and editing aids throughout the preparation of this paper. I am responsible for all theoretical claims, arguments, errors, and interpretive choices.
 
 \newpage
 \begin{sloppypar}
