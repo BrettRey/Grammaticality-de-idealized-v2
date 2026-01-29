@@ -77,7 +77,7 @@
 % ===========================
 % QUOTATIONS
 % ===========================
-\usepackage[style=american]{csquotes}
+\usepackage[style=british]{csquotes}
 
 % ===========================
 % SEMANTIC MACROS
@@ -125,99 +125,440 @@
 \maketitle
 
 \begin{abstract}
-% TODO: Draft abstract once structure stabilizes.
-% Core pitch: The constitutive account of grammaticality (what it IS) has been
-% developed elsewhere. This companion paper asks the etiological question:
-% why do C_t(u,c) trajectories settle where they do? Two complementary modules:
-% (1) opportunity-sensitive preemption (niche-varying strength),
-% (2) coordination equilibria (game-theoretic self-sustaining exclusion).
-% Together they explain why some gaps are stable and others drift, without
-% treating categorical constraints as primitives.
+The constitutive account of grammaticality explains what grammatical status \emph{is}; this companion paper asks the etiological question: why do repertoire-status trajectories settle where they do? Two complementary modules are developed. \emph{Opportunity-sensitive preemption} explains how learners infer exclusion from systematic absence in niches where competitors succeed; the evidential strength of absence scales with opportunity-set size. \emph{Coordination equilibria} explain why exclusions persist: once an equilibrium excludes a form, deviation is penalized and expectations crystallize. These modules interact with \emph{stochastic drift}, which can move rare forms in either direction independently of systematic pressures. Entry into the repertoire faces higher thresholds than exit~-- a principled asymmetry grounded in evidence, coordination, learning, and social-norm considerations. The modules yield a typology of stability profiles: doubly sustained gaps are maximally stable; singly sustained gaps drift under appropriate manipulations; drift-vulnerable gaps may exit by chance. Domain-specific equilibria explain stable variation: competing forms persist when different registers occupy different coordination equilibria. The framework makes testable predictions, specifies fragility conditions for destabilization, and explains categorical behavior without treating categoriality as a primitive.
 \end{abstract}
 
 \noindent Keywords: grammaticality; repertoire exclusion; preemption; coordination equilibrium; conditioned stability; etiology
 
 \section{Introduction}
 
-% The constitutive question (what grammaticality IS) and the etiological
-% question (why C_t trajectories settle where they do) are separable.
-% The asterisk paper and the OVMG main paper handle the constitutive side.
-% This paper develops the etiological module announced there.
-%
-% Key opening move: classic "categorical constraints" are not primitives
-% but stable outcomes of ongoing dynamics. The question is what sustains
-% them.
+Some grammatical exclusions feel utterly categorical. \mention{*Which did you buy car?} isn't marginal or awkward; it's \emph{out}~-- categorically excluded from the English repertoire, impervious to context, register, or goodwill. Other exclusions drift: split infinitives were once policed sharply and are now unremarkable in many contexts. Still others never stabilize: gradient, variable, speaker-dependent.
 
-\section{The constitutive--etiological distinction}
+What explains these differences? A constitutive account of grammaticality~-- what grammatical status \emph{is}~-- doesn't automatically answer this question. Knowing that repertoire status $C_t(u,c)$ is one of the components determining grammaticality (Reynolds, in prep.) doesn't tell us \emph{why} $C_t$ settles where it does for particular forms in particular communities.
 
-% Brief recap of OVMG state theory:
-%   G_t(u,c) = map(u,c) · K(u,c) · C_t(u,c)
-% This paper focuses entirely on C_t: repertoire status.
-% Why does C_t(u,c) ≈ 0 for some structurally viable, interpretable forms?
-% That's the etiological question.
+This paper develops an \term{etiological account}: an explanation of why $C_t$ trajectories settle where they do. The account has two modules:
 
-\section{Module 1: Opportunity-sensitive preemption}
+\begin{enumerate}
+  \item \textbf{Opportunity-sensitive preemption.} Learners infer that a form is excluded from the repertoire when it systematically fails to appear in niches where competitors reliably succeed. The evidential strength of absence depends on the size and robustness of the opportunity set: zero tokens out of five opportunities tells us little; zero tokens out of five thousand is decisive.
+  \item \textbf{Coordination equilibria.} Once $C_t$ is near zero, the exclusion is maintained by the self-reinforcing logic of coordination games. Speakers expect the form to be excluded; hearers interpret deviation as error; deviant speakers bear the cost. Even if preemption pressure were somehow removed, the coordination equilibrium would maintain exclusion.
+\end{enumerate}
 
-% Preemption redescribed in OVMG terms.
-% Not "does preemption exist?" but "what is its effective strength
-% across niches, and how does it interact with processing difficulty
-% and social evaluation?"
-%
-% Key formalization: preemption strength as a function of opportunity
-% set robustness. High-frequency alternatives in robust opportunity
-% sets sustain exclusion; niche-specific or low-frequency alternatives
-% allow drift.
-%
-% Test case: classic "categorical" constraints as stable repertoire
-% exclusion under strong preemption.
+The two modules are complementary, not competing. Preemption explains how $C_t$ gets \emph{driven} toward zero; coordination explains why it \emph{stays} there. A form can be excluded by strong preemption alone, by strong coordination alone, or by both. The combination determines the stability profile: doubly sustained gaps are maximally stable; singly sustained gaps drift under the right conditions; gaps sustained by neither never fully categoricalize.
 
-\subsection{Opportunity sets and preemption strength}
+This approach has three payoffs. First, it explains categorical behavior without treating categoriality as a primitive. Categorical constraints emerge from the dynamics of preemption and coordination, not from built-in structural bans. Second, it yields testable predictions about how exclusions behave under manipulation~-- predictions that distinguish doubly sustained gaps from singly sustained ones. Third, it connects grammatical structure to broader theories of convention, norm enforcement, and cultural evolution, positioning grammar within the ecology of socially sustained regularities.
 
-\subsection{Niche variation}
+\S\ref{sec:distinction} introduces the constitutive-etiological distinction and reviews the framework this paper presupposes. \S\ref{sec:preemption} develops Module~1 (preemption). \S\ref{sec:coordination} develops Module~2 (coordination equilibria). \S\ref{sec:integration} integrates the two modules and derives stability profiles. \S\ref{sec:predictions} states empirical predictions and disconfirmation conditions. \S\ref{sec:conclusion} concludes.
 
-\subsection{Interaction with processing difficulty}
+\section{The constitutive--etiological distinction}\label{sec:distinction}
 
-\section{Module 2: Coordination equilibria}
+A constitutive account says what a thing \emph{is}. An etiological account says why it came to be and why it stays that way. The two are logically independent: knowing that water is H$_2$O tells us nothing about why this lake has water in it. Knowing that grammatical status supervenes on mapping, coherence, and repertoire status~-- the thesis of the constitutive account developed in Reynolds (in prep.)~-- tells us nothing about why particular trajectories settle where they do.
 
-% Game-theoretic account (O'Connor 2019 and related).
-% Communicative situations as payoff structures.
-% Repertoire boundaries stabilize because they solve coordination
-% problems.
-%
-% Why C_t ≈ 0 can persist for viable, interpretable forms:
-% the coordination equilibrium excludes them. Unilateral deviation
-% is penalized.
-%
-% The threshold τ(c) fits naturally: high-stakes = high coordination
-% cost = sharper policing. Institutions encode equilibria as
-% explicit gatekeeping.
+This paper develops the etiological module that the constitutive account leaves open. Its target is a single question: given that a form $u$ in conditioning state $c$ is structurally parseable and semantically coherent, why does the community sometimes treat it as categorically excluded from the repertoire?
 
-\subsection{Communicative situations as payoff structures}
+\subsection{The constitutive framework in brief}
 
-\subsection{Self-sustaining exclusion}
+The constitutive account decomposes grammatical status into three quantities:
+\begin{enumerate}
+  \item $\mathsf{map}(u,c)$: \term{mapping viability}. Does the form support a systematic pairing of structure and value? If parsing fails or no coherent structure-value mapping exists, $\mathsf{map}$ is zero.
+  \item $K(u,c)$: \term{interpretive coherence}. Do the values carried by the form cohere with one another and with the conditioning state? Semantic anomaly, pragmatic incongruity, and logical incoherence lower $K$.
+  \item $C_t(u,c)$: \term{repertoire status}. Is the form part of the community's grammatical repertoire for conditioning state $c$ at time $t$? This is the socially contingent component: it can vary across dialects, registers, and eras without any change in $\mathsf{map}$ or $K$.
+\end{enumerate}
 
-\subsection{The threshold as coordination cost}
+These combine multiplicatively into a stability score:
+\begin{equation}\label{eq:stability}
+\widetilde{G}_t(u,c) = \mathsf{map}(u,c) \cdot K(u,c) \cdot C_t(u,c).
+\end{equation}
+If any component is zero, the product is zero: mapping failure can't be rescued by repertoire status, and repertoire exclusion can't be rescued by perfect coherence.
 
-\section{Integration: Why some gaps are stable and others drift}
+Categorical membership is modeled by thresholding:
+\begin{equation}\label{eq:membership}
+G_t(u,c) = \mathbb{I}\!\left[\widetilde{G}_t(u,c) \ge \tau(c)\right],
+\end{equation}
+where $\tau(c)$ is a situation-sensitive threshold reflecting coordination stakes. High-stakes communicative situations raise $\tau$; informal, in-group contexts lower it.
 
-% Bringing the two modules together.
-% Preemption provides the proximate mechanism (what blocks the form).
-% Coordination equilibria explain why the blocking persists
-% (self-sustaining under deviation penalties).
-%
-% Predictions:
-% - Gaps sustained by both modules are maximally stable
-% - Gaps sustained by preemption alone drift when opportunity sets
-%   shift (genre change, register mixing)
-% - Gaps sustained by coordination alone weaken when coordination
-%   payoffs diminish (informal contexts, in-group speech)
+\subsection{This paper's focus: $C_t$ trajectories}
 
-\section{Empirical predictions and disconfirmation conditions}
+Everything above is \emph{constitutive}. It specifies what grammatical status is, not what produces it. This paper is concerned entirely with $C_t$~-- the repertoire-status component~-- and with three etiological questions about it.
 
-% Concrete, falsifiable predictions.
-% What would have to be true for each module to fail?
+\paragraph{What $C_t$ is.} $C_t(u,c)$ is a community-level variable: the probability that a randomly sampled competent community member will treat $u$ as licensed in conditioning state $c$, or equivalently, the equilibrium mass the community assigns to $u$ in that niche. Individual learners maintain beliefs about licensing~-- call these $\theta_{u,i}$ for speaker $i$~-- and $C_t$ is the population distribution of those beliefs together with the publicly enforced reaction norms that make those beliefs mutually visible. Module~1 below provides a microfoundation for how individual posteriors collapse toward zero under preemption. Module~2 provides a microfoundation for how reaction norms (correction, repair, social penalty) make those posteriors stable and mutually reinforcing. The two modules target different levels of analysis but converge on the same community-level outcome.
 
-\section{Conclusion}
+\paragraph{The role of the feeling of ungrammaticality.} Both modules operate through their effects on the \term{feeling of ungrammaticality} $F$~-- the subjective signal that a form is anomalous. Preemption accumulates because forms lacking positive evidence feel increasingly odd; the negative affect associated with producing or encountering them drives avoidance, which feeds back into the opportunity sets. Coordination equilibria are maintained because deviation triggers negative affect that prompts correction, repair initiation, or social sanction. $F$ is the proximate mechanism; $C_t$ is the state it tracks imperfectly. The constitutive account correctly insists that $F \ne \widetilde{G}$ (the feeling isn't identical to the objective status), but the etiological account shows that $F$ is nonetheless central to the causal pathway: it's the signal through which both learning and coordination dynamics operate.
+
+\paragraph{Question 1: How does $C_t$ get driven toward zero?} Consider the utterance \mention{I have 25~years} intended to state the speaker's age. English speakers reject this form: $C_t$ is near zero for this conditioning state (age-stating in English). Yet the form is parseable ($\mathsf{map} > 0$) and coherent ($K > 0$)~-- Spanish, French, and many other languages use an analogous construction without difficulty. What mechanism drives $C_t$ toward zero for structurally viable, semantically coherent forms?
+
+\paragraph{Question 2: Why does $C_t$ stay near zero?} Once $C_t$ has crashed, why does it stay low? Individual speakers encounter new usage constantly; communities change. Yet many exclusions persist for centuries. What sustains them?
+
+\paragraph{Question 3: What predicts drift versus stability?} Some exclusions are maximally stable: left-branch extraction in English (\ungram{Which did you buy car?}) has been categorically excluded for as long as the construction has been documentable. Others drift: split infinitives were once sharply policed and are now unremarkable in many registers. What distinguishes stable gaps from drifting ones?
+
+\subsection{Two complementary modules}
+
+The remainder of this paper develops two explanatory modules, each targeting a different aspect of the etiological question.
+
+\term{Module~1: Opportunity-sensitive preemption} (\S\ref{sec:preemption}) explains how $C_t$ gets driven toward zero. The mechanism is Bayesian learning under informative opportunity sets. When a form faces strong competitors that reliably win in well-attested niches, the learner accumulates strong negative evidence; $C_t$ crashes. When the opportunity set is sparse or the competitors are weak, $C_t$ drifts slowly and may never reach categorical exclusion.
+
+\term{Module~2: Coordination equilibria} (\S\ref{sec:coordination}) explains why $C_t$ stays near zero once it gets there. The mechanism is game-theoretic: communicative situations are coordination games with multiple equilibria, and once an equilibrium excludes a form, unilateral deviation is penalized. Even if preemption pressure were somehow removed, the coordination equilibrium would maintain exclusion because mutual expectations have crystallized.
+
+The two modules make independent predictions. A form can be excluded by strong preemption alone, by coordination pressure alone, or by both. The integration (\S\ref{sec:integration}) shows how the combination predicts which gaps are maximally stable (both modules), which drift when conditions shift (one module), and which never fully stabilize (neither module dominant).
+
+\section{Module 1: Opportunity-sensitive preemption}\label{sec:preemption}
+
+The first module addresses Question~1: how does $C_t$ get driven toward zero for forms that are structurally viable and semantically coherent? The answer invokes \term{statistical preemption}~-- the mechanism by which learners infer that a form is excluded from the repertoire on the basis of its systematic absence where competitors succeed \citep{goldberg2019, Goldberg2011}. But preemption strength isn't uniform across constructions. It depends critically on \emph{how much opportunity} the form has had to appear.
+
+\subsection{Niches, competitors, and opportunity sets}\label{sec:niches}
+
+Define a \term{constructional niche} $n$ as a communicative job: a recurrent communicative intention that speakers routinely encode grammatically. \enquote{State a person's age}, \enquote{question a proposition}, \enquote{request information about a location}, and \enquote{express completed action} are all niches. A niche is specified independently of the forms that realize it~-- it's the slot in communicative ecology that forms compete to fill.
+
+For any niche $n$ in conditioning state $c$, define the \term{competitor set} $V_{n,c}$ as the set of grammatical variants that can realize $n$ in $c$. The conditioning state matters: competitors available in casual speech may differ from those available in formal writing. The age-stating niche in colloquial English has competitors including \mention{I'm 25}, \mention{I'm 25 years old}, and \mention{I'm 25 years of age}. The wh-question niche has competitors including fronted wh-phrases (\mention{What did you buy?}) and in-situ wh-phrases (\mention{You bought what?}), though the latter is pragmatically restricted.
+
+\paragraph{Opportunity as counterfactual suitability.} A competitor token counts as an opportunity for the target form only when the target would have achieved equal niche-satisfaction at comparable cost in that same conditioning state. Not every use of a competitor is a context where the target was in the choice set: information-structural requirements, register constraints, or pragmatic preconditions may rule it out. A raw count of competitor tokens therefore overstates the opportunity mass.
+
+The cleanest formalization treats opportunity as \emph{weighted}. Let $w_i \in [0,1]$ be the counterfactual suitability of the target $u$ in the $i$th competitor-token context~-- the degree to which $u$ would have served equally well. The \term{effective opportunity count} is then:
+\begin{equation}\label{eq:opportunity}
+N^{\ast}_t(n,c) = \sum_{i=1}^{|\text{competitor tokens}|} w_i.
+\end{equation}
+When $w_i = 1$ for all tokens (full substitutability), this reduces to the raw count. In practice, the weights are rarely known precisely, but the conceptual move is important: it makes explicit that absence is evidential only relative to \emph{effective} opportunity, not raw frequency.
+
+\paragraph{Absence is evidential only relative to effective opportunity.} Zero tokens of a form tells us almost nothing in isolation. Zero tokens out of five effective opportunities leaves massive uncertainty~-- the form might simply not have been needed. Zero tokens out of five thousand effective opportunities, where competitors have won every time, provides strong evidence that the form is excluded.
+
+This is the key insight: \emph{categorical exclusion} ($C_t \approx 0$) requires not just absence of positive evidence but presence of \emph{informative} negative evidence. The informativeness of absence is determined by the effective opportunity count, not by raw competitor frequency.
+
+\paragraph{Worked example: age-stating.} Reynolds (in prep.) develops this example in detail. The niche is \enquote{state a person's age in response to direct or indirect enquiry}. In spoken British English corpora, the copular competitors rack up thousands of tokens per million words~-- $N^{\ast}$ is large. The have-construction (\mention{I have 25 years}) has zero tokens. Given the massive opportunity set, that zero is probative: it licenses the inference that the construction is categorically excluded for English speakers, even though it's perfectly grammatical in French (\mention{J'ai 25 ans}) and Spanish (\mention{Tengo 25 años}).
+
+\subsection{Preemption strength as a function of opportunity-set robustness}\label{sec:preemption-strength}
+
+The intuition above can be formalized in a Bayesian learning framework. Let $\theta_u$ be the latent probability that form $u$ is licensed for niche $n$ in conditioning state $c$. The learner starts with a prior $\theta_u \sim \text{Beta}(\alpha_0, \beta_0)$~-- agnostic, perhaps, with $\alpha_0 = \beta_0 = 1$.
+
+Evidence updates the posterior. Positive evidence (hearing $u$ in niche $n$) increments $\alpha$. Negative evidence~-- hearing a competitor $v \ne u$ when $u$ could have served~-- increments $\beta$. After observing $s_t$ successes (tokens of $u$) and $f_t$ failures (tokens of competitors) in niche $n$, the posterior is:
+\begin{equation}\label{eq:beta-update}
+\theta_u \mid \text{data} \sim \text{Beta}(\alpha_0 + s_t, \beta_0 + f_t).
+\end{equation}
+The posterior mean $\hat{\theta}_u = (\alpha_0 + s_t)/(\alpha_0 + \beta_0 + s_t + f_t)$ serves as an estimate of licensing status. If $s_t = 0$ and $f_t$ is large, the posterior crashes toward zero. This is the Bayesian reconstruction of preemption: the absence of $u$ combined with the presence of competitors provides evidence for exclusion, and the strength of that evidence scales with $f_t$~-- the effective opportunity count.
+
+\paragraph{A note on what learners observe.} Learners don't observe literal Bernoulli trials where the target is attempted and fails; they observe production choices generated by speakers with their own grammars, pragmatic constraints, and processing limitations. The inference from \enquote{competitors won} to \enquote{target is unlicensed} is justified only under assumptions about niche equivalence (the competitor and target could have served the same communicative function) and speaker rationality (speakers don't systematically avoid licensed forms). These assumptions are implicit in all preemption-based accounts \citep[cf.][]{Goldberg2011, goldberg2019}; making them explicit clarifies why high-opportunity niches are special. In high-opportunity niches, stable production preferences generate sharper inferences because pragmatic and processing noise averages out across many observations.
+
+\paragraph{Preemption mass.} Define the \term{effective preemption mass} $p_t(u,c)$ as the weighted cumulative competitor evidence:
+\begin{equation}\label{eq:preemption-mass}
+p_t(u,c) = \sum_{i=1}^{|\text{competitor tokens}|} w_i,
+\end{equation}
+where $w_i$ is the counterfactual suitability weight from \eqref{eq:opportunity}. When all competitor tokens are fully substitutable ($w_i = 1$), this reduces to the raw count. Large $p_t$ means strong preemption pressure: many effective opportunities where $u$ could have appeared but a competitor won instead. Small $p_t$ means weak pressure: not enough competitor evidence to drive the posterior toward zero decisively.
+
+\paragraph{Two trajectories.} Consider two forms, both with zero positive tokens ($s_t = 0$):
+
+\begin{itemize}
+  \item \textbf{High-opportunity niche:} The form faces thousands of competitor tokens per year. $p_t$ is massive, the posterior crashes to near-zero early in acquisition, and $C_t$ stabilizes near zero. This is the profile of categorical exclusion.
+  \item \textbf{Low-opportunity niche:} The form faces only a handful of competitor tokens. $p_t$ remains small, the posterior drifts slowly, and $C_t$ may settle at an intermediate value~-- uncertain, gradient, variable across speakers. This is the profile of a rare construction, not a categorical gap.
+\end{itemize}
+
+The distinction matters empirically. Constructions treated as \enquote{categorical} by linguists should show large $N^{\ast}$ via high competitor counts; constructions treated as \enquote{rare} or \enquote{uncertain} should show small $N^{\ast}$. If the correlation fails~-- if constructions widely judged as categorical lack robust opportunity proxies~-- then the preemption mechanism is not the explanation for their status.
+
+\paragraph{Connection to operator contrasts.} The operator-stratum paper (Reynolds, in prep.) distinguishes three levels of grammatical relation: expression-shape, operator, and payload. Operator contrasts~-- those that configure public update, allocate participant roles, and constrain uptake~-- tend to inhabit high-frequency niches. Clause-typing (declarative vs.\ interrogative vs.\ imperative) and argument linking (subject vs.\ object) are needed in every clause. This predicts that operator violations face maximal preemption pressure: the opportunity sets are enormous, competitors win reliably, and $C_t$ crashes to near-zero for any form that doesn't conform to the operator paradigm.
+
+\subsection{Niche variation and register effects}\label{sec:niche-variation}
+
+Because $C_t$ is conditioned on $c$, the same form can face different preemption pressure across conditioning states. A form excluded in one register may survive in another simply because the opportunity set differs.
+
+\paragraph{Dialectal forms.} Consider \mention{I might could help you}~-- the double-modal construction found in some Southern US and Scottish dialects. For speakers of these dialects, the construction is in the repertoire; $C_t > 0$ for the relevant conditioning states (tentative offers, hedged permissions). For speakers outside these dialects, it's excluded: $C_t \approx 0$. The difference isn't structural~-- both groups parse the utterance~-- but social: the two speech communities have different coordination equilibria (Module~2), and for the excluding community, competitor realizations (single modals, epistemic adverbs) have won reliably enough that preemption has crashed $C_t$.
+
+\paragraph{Register-sensitivity.} Some gaps appear categorical in formal registers but relax in informal ones. The explanation may involve both modules: (i) formal registers have higher $\tau(c)$ thresholds, so even moderate $C_t$ doesn't clear the bar, and (ii) the opportunity sets differ~-- certain competitors dominate in formal writing but are absent in casual speech, weakening preemption pressure.
+
+\subsection{Interaction with processing difficulty}\label{sec:processing}
+
+Preemption isn't the whole story. Some forms are excluded not (or not only) because competitors have won, but because processing them is difficult. Processing costs can compound preemption, pushing $C_t$ even lower, but the two mechanisms are separable.
+
+\paragraph{Processing costs without exclusion.} Centre-embedded relative clauses (\mention{The rat the cat the dog chased bit died}) are notoriously difficult to process. Yet they're not categorically excluded from the repertoire: speakers judge them grammatical once they work through the parse, and careful speakers occasionally produce them in registers that tolerate complexity. High processing cost slows acquisition and reduces frequency, but it doesn't zero out $C_t$.
+
+\paragraph{Preemption without processing costs.} The age-stating example (\mention{I have 25 years}) involves no processing difficulty~-- the structure is trivial and the meaning is transparent. What excludes it is pure preemption: copular competitors have won every opportunity, and the posterior has crashed.
+
+\paragraph{Double exclusion.} Left-branch extraction (\ungram{Which did you buy car?}) faces both pressures. The form is difficult to parse~-- bare wh-phrases are systematically parsed as fused relatives or free relatives, so \mention{which} without a following noun triggers reanalysis costs. But it also faces massive preemption: the wh-fronting competitor (\mention{Which car did you buy?}) wins reliably in an enormous opportunity set. The combination produces maximally sharp exclusion~-- the phenomenon feels \enquote{more ungrammatical} than either processing difficulty or preemption alone would predict.
+
+\paragraph{Where processing costs live.} The constitutive account must make an explicit commitment about how processing costs enter the stability score. Two options are defensible:
+
+\begin{enumerate}
+  \item Processing costs lower $\mathsf{map}(u,c)$, on the grounds that reliable real-time parsing is part of mapping viability in actual use. A form that systematically triggers garden-path reanalysis has degraded mapping viability even if an offline parse is available.
+  \item Processing costs constitute an independent multiplicative factor $P(u,c)$, yielding $\widetilde{G} = \mathsf{map} \cdot K \cdot C_t \cdot P$. This separates structural well-formedness from real-time feasibility.
+\end{enumerate}
+
+For present purposes, I adopt option (i): processing costs lower $\mathsf{map}$. This keeps the constitutive architecture minimal (three factors, not four) and captures the intuition that a form which can't be reliably parsed in real time doesn't fully \enquote{map} in the relevant sense. The product rule then predicts that forms with low $\mathsf{map}$ (processing difficulty) and low $C_t$ (preemption) compound multiplicatively: LBE lands in the \enquote{doubly sustained} quadrant not because processing is a bolt-on but because it degrades one of the constitutive factors.
+
+\subsection{The arise side: Entry, drift, and asymmetry}\label{sec:arise}
+
+The preemption mechanism explains how $C_t$ gets \emph{driven toward zero}. But what about the reverse direction? How does $C_t$ rise~-- how do forms \emph{enter} the repertoire? And why does the framework so far focus on exclusion rather than entry?
+
+\paragraph{Supply vs.\ invasion.} It helps to distinguish two components of the \enquote{arise} question \citep[cf.][on convention emergence]{skyrms2010}. \term{Supply} concerns how tokens of a novel form get produced at all: innovation, contact injection, analogical extension, reanalysis, performance variation, stylistic play. \term{Invasion} concerns when a supply stream turns into a self-sustaining convention~-- when $C_t$ begins to climb endogenously rather than depending on continued external injection.
+
+Preemption operates on the exit side: it explains how systematic absence drives $C_t$ down. The coordination module (\S\ref{sec:coordination}) explains what happens after invasion~-- once a form is above threshold and mutually expected, it persists. What's missing is an explicit \term{threshold-crossing} mechanism: how does a novel form clear the basin boundary that separates \enquote{excluded} from \enquote{licensed}?
+
+\paragraph{Entry is hard.} In coordination-game terms, a rare variant is typically a bad best response. When almost nobody uses it, producing it is costly~-- misunderstanding, social penalty, processing penalty for hearers~-- so rational speakers avoid it, which keeps it rare. This is the familiar \enquote{new convention can't invade} problem in evolutionary game theory \citep{young1993}. Entry requires escape hatches:
+
+\begin{itemize}
+  \item \textbf{Mutation pressure.} Speakers produce the rare form anyway~-- through analogy, contact, or creative extension~-- at rates high enough that it accumulates despite coordination penalties.
+  \item \textbf{Payoff advantage when rare.} The innovation fills an empty niche, reduces ambiguity, or enables a social-indexical stance that existing forms can't provide. This converts \enquote{entry is impossible} into \enquote{entry requires the advantage to outweigh rarity costs}.
+  \item \textbf{Peripheral entry.} Network position matters. Innovations don't need to cross the coordination barrier everywhere at once; they can enter through \term{weak ties}~-- peripheral network positions where deviation penalties are weaker~-- and spread once they've gained a local foothold \citep[cf.][on weak ties and diffusion]{granovetter1973}.
+  \item \textbf{Iterated learning.} Acquisition bottlenecks amplify small biases across generations; structure and regularities can emerge even if not selected for in adult interaction \citep{kirby2014}.
+\end{itemize}
+
+The dual of \enquote{effective opportunity mass} for the exit side is something like \term{effective niche gap mass} for the entry side: contexts where existing repertoire options are counterfactually less suitable~-- ambiguous, costly, expressively mismatched~-- weighted by the magnitude of mismatch. High niche gap mass predicts higher innovation supply and higher invasion probability when coordination penalties are locally weakened.
+
+\paragraph{Asymmetry is expected.} Four considerations predict that entry should be harder than exit, explaining why the framework focuses on exclusion:
+
+\begin{enumerate}
+  \item \textbf{Evidence asymmetry.} Absence can be strong evidence: if a form never appears where it could have, learners infer exclusion. But presence requires supply~-- tokens must be produced. \enquote{Exit can be triggered by structured absence; entry cannot.}
+  \item \textbf{Coordination asymmetry.} Established conventions have basin-of-attraction protection; invaders face uphill coordination costs. The stochastic stability literature shows how conventions resist invasion precisely because the coordination equilibrium is self-reinforcing \citep{young1993}.
+  \item \textbf{Learning asymmetry.} Learners regularize unpredictable variation \citep{hudsonkam2005}~-- they collapse variants toward fewer forms. This is exit-friendly (pruning competitors) but not entry-friendly (creating new alternations).
+  \item \textbf{Social-norm asymmetry.} Sanctions make deviation costly, but only after a norm exists \citep{bicchieri2006}. Before a norm is widespread, sanctions are weak; once widespread, sanctions become stable and deviation is punished. This yields hysteresis: entry thresholds are higher than exit thresholds.
+\end{enumerate}
+
+These asymmetries justify the focus on exclusion in Module~1. But they also generate a prediction: forms should exit the repertoire faster than they enter it, and entry should require either strong niche-gap pressure or locally weakened coordination penalties (in-group contexts, peripheral network positions, contact situations).
+
+\paragraph{Drift.} Neither preemption nor coordination captures \term{drift}: stochastic fluctuation in finite populations that can move $C_t$ in either direction independently of systematic pressures. Low-frequency forms are drift-vulnerable: they can exit the repertoire by chance even without active preemption, simply through bad luck in a finite population~-- no tokens in a generation, followed by learners who infer exclusion from the silence.
+
+Drift matters for the stability typology. A form might be:
+\begin{itemize}
+  \item \textbf{Preemption-vulnerable:} strong competitor, high opportunity mass~-- actively pushed out.
+  \item \textbf{Drift-vulnerable:} no strong competitor, but low frequency~-- stochastically wandering, could exit by chance.
+  \item \textbf{Coordination-protected:} high frequency, mutual expectations~-- resists both preemption and drift.
+\end{itemize}
+
+The \enquote{unstable} cell in the 2×2 typology (\S\ref{sec:integration}) isn't just \enquote{weakly sustained}~-- it's drift-vulnerable. And the prediction for entry: drift can occasionally push a rare form above threshold, where coordination dynamics can then lock it in.
+
+\section{Module 2: Coordination equilibria}\label{sec:coordination}
+
+Module~1 explains how $C_t$ gets \emph{driven} toward zero: preemption under informative opportunity sets. But that mechanism operates during acquisition. Once a speaker's posterior has crashed, what keeps $C_t$ low? Why doesn't the exclusion erode over time as speakers encounter novel usage, as communities shift, as the opportunity sets change?
+
+The answer lies in coordination. Communicative situations are coordination games, and once an equilibrium excludes a form, unilateral deviation is penalized. The exclusion becomes self-sustaining.
+
+\subsection{Communicative situations as payoff structures}\label{sec:payoff}
+
+\citet{lewis1969} introduced the game-theoretic analysis of convention. A \term{coordination problem} arises when two or more agents must choose actions such that the outcome depends on all their choices, and they share a common interest in matching. The defining feature: multiple equilibria are possible, and nothing in the payoff structure alone determines which one prevails.
+
+\paragraph{Language as coordination.} Communication is the paradigm case. A speaker chooses a form; a hearer interprets it. Success requires that both parties converge on the same form-value mapping. If the speaker uses \mention{I'm 25} and the hearer interprets it as an age statement, coordination succeeds. If the speaker uses \mention{I have 25 years} and the hearer interprets it as an error (or a learner's interference from L1), coordination partially fails~-- repair is needed, processing costs are incurred, and communicative payoff is reduced.
+
+\paragraph{Convention as equilibrium.} A \term{convention} is a regularity in behavior that is customary, expected, and self-enforcing \citep{lewis1969, young1993}. \citet{oconnor2019unfairness} develops this framework to explain how arbitrary conventions can become stable and resistant to change. The key insight: once a convention is established, \emph{unilateral deviation is penalized}. If everyone expects form $v$ in niche $n$, and one speaker uses $u$ instead, the hearer will likely misunderstand, request repair, or interpret the deviation as an error. The deviant speaker bears the cost.
+
+\paragraph{Multiple equilibria.} Nothing in the structure of English forces copular age-statements (\mention{I'm 25}) over possessive ones (\mention{I have 25 years}). French, Spanish, and many other languages use the possessive construction without difficulty~-- different coordination equilibria for the same niche. The difference isn't grammatical architecture; it's which equilibrium the community has converged on.
+
+This is why $C_t$ is conditioned on community and era: different speech communities can occupy different equilibria for the same niche, and the same community can shift equilibria over time. The form doesn't change; what changes is which equilibrium is in force.
+
+\subsection{Self-sustaining exclusion}\label{sec:self-sustaining}
+
+Once $C_t$ is near zero~-- whether driven there by preemption, by processing difficulty, or by historical accident~-- the coordination equilibrium \emph{maintains} the exclusion. Three mechanisms interlock.
+
+\paragraph{Expectation crystallization.} Speakers form expectations about what forms are licensed. Hearers who encounter an excluded form treat it as deviant~-- an error, an L2 transfer, a dialectal intrusion, or a deliberate violation for stylistic effect. The form is interpreted \emph{as excluded}, not as a legitimate alternative.
+
+\paragraph{Deviation penalties.} \citet{oconnor2019unfairness} emphasizes that deviation from coordination equilibria attracts penalties: confusion, repair costs, social marking, and in some contexts explicit correction. \citet{richersonboyd2005} call this \term{moralistic punishment}: if a norm is established, deviants are penalized, and the penalty is distributed~-- not decreed by a central authority but enacted by whoever encounters the deviation.
+
+This is the mechanism behind \enquote{grammar policing}. Teachers correct students; copy editors fix manuscripts; interlocutors signal confusion or amusement when a non-standard form is used. None of this requires a central language authority. It emerges bottom-up from distributed reactions, each small penalty contributing to the aggregate cost of deviation.
+
+\paragraph{Feedback stabilization.} Penalties for deviation reinforce the equilibrium. Speakers who deviate learn that deviation is costly; hearers who encounter deviation have their expectation of exclusion confirmed. The system is stable under small perturbations: a few deviant tokens don't shift the equilibrium, because the equilibrium's self-reinforcing nature absorbs them.
+
+\paragraph{Counterfactual stability.} This is the key prediction of Module~2: even if preemption pressure were removed, the coordination equilibrium would maintain exclusion. Imagine a scenario where the competitor forms for age-stating suddenly disappeared from English~-- no more \mention{I'm 25}. Would \mention{I have 25 years} immediately become acceptable? Module~2 predicts no: the mutual expectations of exclusion would persist, and speakers who tried the possessive construction would be corrected. The exclusion would erode only slowly, as the equilibrium gradually shifted under the pressure of unfilled communicative need.
+
+\paragraph{Domain-specific equilibria.} Coordination equilibria needn't be monolithic. The same speech community can occupy different equilibria for different conditioning states~-- different registers, contexts, or interactional frames. A form excluded in formal, gatekeeping contexts may be licensed in informal, in-group contexts, sustained by what sociolinguists call \term{covert prestige}: social value attached to non-standard forms that index solidarity, local identity, or group membership \citep[cf.][]{labov1972}.
+
+This has two consequences. First, \term{stable variation} becomes explicable. If different subcommunities or registers occupy different equilibria, competing forms can persist indefinitely without resolution~-- the coordination game has multiple stable states, and the community occupies more than one. The form \mention{I might could help you} is excluded in Standard English gatekeeping contexts but stable in Southern US in-group contexts; the two equilibria coexist because coordination penalties are applied differently across domains.
+
+Second, the framework predicts that coordination-dominated exclusions should be \emph{register-sensitive}. Lower the coordination stakes (informal context, in-group framing), and the coordination equilibrium shifts~-- not because preemption has weakened, but because a different equilibrium governs that domain. This is distinct from preemption-dominated exclusions, which should show less register sensitivity.
+
+\subsection{The threshold as coordination cost}\label{sec:threshold-cost}
+
+The constitutive account includes a threshold $\tau(c)$: a form is in the repertoire only if $\widetilde{G}_t(u,c) \ge \tau(c)$. What determines $\tau$?
+
+\paragraph{Coordination stakes.} The threshold reflects the \emph{cost of coordination failure} in conditioning state $c$. In high-stakes communicative situations~-- formal presentations, institutional gatekeeping, contexts where misunderstanding has serious consequences~-- the cost of failure is high, and so is $\tau$. Speakers police their own output more carefully; hearers are less tolerant of deviation. In low-stakes situations~-- casual in-group conversation, play, contexts where repair is cheap~-- $\tau$ drops. The same form with the same $\widetilde{G}$ may clear the threshold in one context and fail in another.
+
+\paragraph{Institutional encoding.} Institutions often function as \term{focal-point mechanisms} for coordination equilibria. Style guides, grammar handbooks, standardized tests, and editorial policies specify which forms are acceptable in high-stakes contexts. Sometimes these codify what is already the dominant equilibrium, reducing coordination costs by making expectations explicit. But institutions can also \emph{reshape} equilibria: by selecting a minority variant, amplifying it via gatekeeping, and penalizing alternatives, they shift the payoff structure rather than merely reflecting it \citep[cf.][on standard language ideology]{milroy1999}. The present framework accommodates both roles: institutions change deviation penalties and thresholds ($\tau$), which in turn affects which equilibrium is stable.
+
+This explains why some grammatical controversies are so persistent. Split infinitives, singular \mention{they}, and sentence-final prepositions are all forms where the equilibrium is contested: different subcommunities occupy different equilibria, and gatekeeping institutions are caught between them~-- sometimes codifying majority practice, sometimes privileging prestige variants. The controversy isn't about grammar in the structural sense; it's about which coordination equilibrium should be enforced in high-stakes contexts, and who bears the cost of deviation.
+
+\paragraph{Operator contrasts and coordination cost.} The operator-stratum paper (Reynolds, in prep.) distinguishes three levels of grammatical relation: expression-shape violations (\enquote{not a word}), operator violations (\enquote{can't say that}), and payload negotiations (semantic/pragmatic mismatch). Operator contrasts~-- those that configure public update, allocate participant roles, and constrain uptake~-- carry the highest coordination costs. If a speaker produces a declarative when an interrogative is expected, or marks the wrong argument as subject, the coordination failure propagates through the discourse. The hearer's commitments are updated incorrectly; subsequent moves misfire.
+
+This predicts that operator violations attract sharper enforcement: higher $\tau(c)$ in all contexts, less tolerance for deviation, more rapid correction. The prediction is testable: acceptability judgments for operator violations should be less sensitive to register manipulation than judgments for payload mismatches.
+
+\subsection{The two modules distinguished}\label{sec:modules-distinguished}
+
+Module~1 and Module~2 target different questions and make different predictions.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lll}
+\toprule
+ & \textbf{Module 1: Preemption} & \textbf{Module 2: Coordination} \\
+\midrule
+Question & How does $C_t$ get driven toward zero? & Why does $C_t$ stay near zero? \\
+Mechanism & Bayesian learning under opportunity & Game-theoretic equilibrium maintenance \\
+Operates & During acquisition & Throughout the lifespan \\
+Evidence & Competitor frequency, opportunity counts & Deviation penalties, repair behavior \\
+Counterfactual & Remove competitors → $C_t$ rises & Remove competitors → $C_t$ stays low \\
+\bottomrule
+\end{tabular}
+\caption{Distinguishing the two etiological modules.}
+\label{tab:modules}
+\end{table}
+
+The modules are complementary, not competing. A form can be excluded by strong preemption alone (Module~1 dominant), by coordination pressure alone (Module~2 dominant), or by both. The integration (\S\ref{sec:integration}) explores what happens when the modules make different predictions.
+
+\section{Integration: Why some gaps are stable and others drift}\label{sec:integration}
+
+The two modules make independent contributions. Preemption (Module~1) explains how $C_t$ gets driven toward zero; coordination (Module~2) explains why it stays there. But the modules don't always align. A form can face strong preemption and weak coordination, or weak preemption and strong coordination, or both strong, or both weak. These combinations yield different stability profiles~-- and different predictions about how exclusions will behave under manipulation.
+
+\subsection{Four stability profiles}
+
+The independence of the two modules generates a 2×2 space of stability profiles:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lp{6cm}p{5.5cm}}
+\toprule
+\textbf{Profile} & \textbf{Characteristics} & \textbf{Example} \\
+\midrule
+\textbf{Doubly sustained} & Strong preemption (large $N^{\ast}$, reliable competitors) + strong coordination (firm equilibrium, high $\tau$). & Left-branch extraction in English \\
+\addlinespace
+\textbf{Preemption-dominated} & Strong preemption + weak coordination. Stable where preemption operates; drifts when opportunity sets shift. & Age-stating \mention{I have N years} in English (excluded by preemption; no strong coordination enforcement beyond general \enquote{sounds foreign}) \\
+\addlinespace
+\textbf{Coordination-dominated} & Weak preemption + strong coordination. Stable in high-stakes contexts; relaxes when coordination cost drops. & Dialectal forms excluded from gatekeeping contexts but stable in-group \\
+\addlinespace
+\textbf{Unstable} & Weak preemption + weak coordination. Variable, gradient, speaker-dependent. Never fully stabilizes as categorical. & Rare constructions, stylistic variants, emerging forms \\
+\bottomrule
+\end{tabular}
+\caption{Four stability profiles generated by the two-module framework. The axes are continuous; the 2×2 is a schematic partition for exposition.}
+\label{tab:profiles}
+\end{table}
+
+\paragraph{Continuous axes, not discrete bins.} The table presents a schematic partition, but both axes are continuous. \enquote{Strong} and \enquote{weak} are matters of degree, and many forms will occupy intermediate positions. What operational proxies might anchor these axes?
+
+\begin{itemize}
+  \item \textbf{Preemption strength:} Effective opportunity mass $p_t$ (possibly weighted), or the posterior mean/credible interval of $\theta_u$ under a specified prior. High $p_t$ with narrow credible interval around zero indicates strong preemption.
+  \item \textbf{Coordination strength:} Measured deviation penalty~-- repair initiation rate, explicit correction rate, social evaluation drop, editorial intervention frequency~-- and/or the sensitivity of judgments to stake manipulation (forms that show large $\tau(c)$ effects have strong coordination pressure).
+\end{itemize}
+
+These proxies are crude but make the typology an empirical programme rather than a classificatory metaphor.
+
+\paragraph{Doubly sustained gaps.} These are the maximally stable exclusions: the ones that feel most \enquote{categorical}, resist satiation, persist across registers, and show little variation across speakers. The prediction is strong: doubly sustained gaps should be the hardest to manipulate experimentally and the most resistant to diachronic change.
+
+\paragraph{Preemption-dominated gaps.} These are stable as long as the opportunity set holds. If the register shifts, if the genre changes, if the community's communicative ecology reorganizes, the opportunity set may shift with it~-- and preemption pressure may weaken. The coordination equilibrium isn't strong enough to maintain exclusion on its own. These gaps should be more sensitive to corpus genre and register than doubly sustained gaps.
+
+\paragraph{Coordination-dominated gaps.} These are stable in high-stakes contexts where coordination policing is active. But in low-stakes, in-group contexts~-- where $\tau(c)$ drops and deviation penalties are relaxed~-- the exclusion may soften. The form may be produced and accepted without penalty, not because preemption has weakened but because the coordination equilibrium is context-sensitive. Multiple-modal constructions in bidialectal speakers may follow this pattern: excluded in gatekeeping contexts, fully acceptable in-group.
+
+\paragraph{Unstable gaps.} When neither module is dominant, $C_t$ doesn't stabilize near zero. Speakers show gradient, variable judgments. Some produce the form; others don't. The construction is neither categorically excluded nor fully licensed~-- it occupies an intermediate zone where the repertoire boundary is fuzzy. Resumptive pronouns in English relative clauses (\mention{the man that I saw him yesterday}) may exemplify this pattern: variable across speakers and constructions, sometimes produced, sometimes corrected, with no clear categorical boundary.
+
+\subsection{Test cases}
+
+\paragraph{Left-branch extraction.} The construction \ungram{Which did you buy car?} is excluded from English by both modules. Module~1: the wh-fronting competitor (\mention{Which car did you buy?}) wins reliably in an enormous opportunity set~-- every constituent question is an opportunity. The preemption mass is massive. Module~2: the coordination equilibrium firmly excludes the construction. Hearers who encounter it interpret it as an error, not as a legitimate variant. The construction faces both maximal preemption pressure and maximal coordination enforcement.
+
+Prediction: LBE should be maximally resistant to satiation, context manipulation, and register effects. Experimental evidence is consistent with this \citep[for related discussion]{sprouse2012assessing}.
+
+\paragraph{Age-stating with \mention{have}.} The construction \mention{I have 25 years} is excluded from English by preemption: copular competitors win every opportunity. But the coordination equilibrium is weaker~-- English speakers don't strongly police age-stating forms in the way they police operator violations. The construction is marked as \enquote{foreign} or \enquote{transfer}, but it doesn't attract the sharp correction that operator violations do.
+
+This predicts that age-stating exclusion is preemption-dominated. If English speakers were exposed to a community that used the possessive construction~-- if the opportunity set shifted~-- the exclusion might drift. The coordination equilibrium isn't strong enough to maintain exclusion without preemption support.
+
+Cross-linguistic comparison supports this. French (\mention{J'ai 25 ans}), Spanish (\mention{Tengo 25 años}), and English occupy different coordination equilibria for the same niche. The difference isn't in grammatical architecture; it's in which equilibrium prevailed historically and which competitors dominated the opportunity set.
+
+\paragraph{Multiple modals.} The construction \mention{I might could help you} exists in some dialects but is excluded from others. For excluding speakers, preemption pressure is moderate~-- single-modal competitors exist but don't dominate as completely as in the age-stating case. The exclusion is coordination-dominated: what keeps the construction out of standard English is the coordination equilibrium, not overwhelming preemption.
+
+A clarification is needed here: for Standard English speakers, what's being excluded in gatekeeping contexts may be \enquote{standard register membership} rather than \enquote{English parsing}. The construction is strongly socially indexed (dialectal), and its exclusion functions as a social penalty~-- precisely the Module~2 mechanism. This is consistent with the coordination-dominated profile: deviation attracts social sanction, not parsing failure.
+
+This predicts that multiple-modal exclusion should be sensitive to $\tau(c)$ manipulation. Lower the coordination stakes (informal context, in-group framing), and the exclusion may soften~-- speakers may accept the form even if they wouldn't produce it in formal contexts. Bidialectal speakers may code-switch, using multiple modals in-group and single modals in gatekeeping contexts.
+
+\subsection{Dynamic predictions}
+
+The two-module framework makes predictions about how exclusions change over time.
+
+\paragraph{Opportunity-set shifts.} If a competitor weakens~-- if a register shift reduces its frequency, if a competing construction emerges~-- preemption pressure may relax. For preemption-dominated gaps, this predicts drift: $C_t$ may rise as the opportunity set shrinks. For doubly sustained gaps, the coordination equilibrium should buffer against drift.
+
+\paragraph{Coordination-stake shifts.} If $\tau(c)$ drops across contexts~-- if a form becomes acceptable in informal registers, if a gatekeeping institution relaxes its norms~-- coordination-dominated exclusions may weaken. Preemption-dominated exclusions should be less affected, since their stability comes from the learning mechanism, not the social one.
+
+\paragraph{Satiation asymmetry.} Satiation experiments expose participants to repeated tokens of an excluded form. The prediction: doubly sustained gaps should be most resistant to satiation (both modules buffer); preemption-dominated gaps may show transient satiation effects that revert post-experiment; coordination-dominated gaps may show lasting satiation effects if repeated exposure shifts the perceived equilibrium.
+
+\paragraph{Fragility conditions.} Even \enquote{stable} exclusions can destabilize. The framework predicts specific fragility conditions:
+
+\begin{itemize}
+  \item \textbf{Preemption fragility:} A preemption-dominated gap destabilizes when the opportunity set shrinks~-- when competitors become less frequent, when new registers emerge where competitors don't dominate, or when contact introduces the excluded form at rates high enough to shift the posterior.
+  \item \textbf{Coordination fragility:} A coordination-dominated gap destabilizes when deviation penalties weaken~-- when gatekeeping institutions relax their norms, when the form acquires covert prestige in influential subgroups, or when a prestige shift revalues the excluded variant.
+  \item \textbf{Doubly sustained fragility:} Gaps sustained by both modules should require simultaneous weakening of both to destabilize. A shock that reduces only preemption pressure (opportunity-set shift) or only coordination pressure (stake reduction) shouldn't suffice; both must weaken together.
+\end{itemize}
+
+This connects to the \term{adaptive cycle} framework in ecology: systems cycle through growth, conservation, release, and reorganization. Linguistic exclusions in the \enquote{conservation} phase can undergo \enquote{release} (rapid destabilization) when fragility conditions align~-- a prediction that historical linguists could test against documented cases of grammatical change.
+
+\section{Empirical predictions and disconfirmation conditions}\label{sec:predictions}
+
+Each module yields independent predictions, and the framework as a whole makes predictions that go beyond either module alone. Here I state the predictions in falsifiable form and specify the disconfirmation conditions.
+
+\subsection{Predictions from Module 1 (preemption)}
+
+\paragraph{P1: Opportunity-stability correlation.} Among forms where $\mathsf{map}(u,c)$ and $K(u,c)$ are independently high (structurally viable, semantically coherent), stable categorical gaps should correlate with high opportunity mass~-- large $N^{\ast}$ via high competitor counts. Constructions widely judged as categorical \emph{repertoire exclusions} should show larger opportunity proxies than constructions judged as variable or rare.
+
+\emph{Scope restriction:} P1 applies to stable repertoire exclusions, not to any phenomenon linguists label \enquote{ungrammatical}. If someone tests P1 on semantic anomalies or parsing failures, those fall outside the scope~-- they're $K$ or $\mathsf{map}$ failures, not $C_t$ failures.
+
+\emph{Disconfirmation:} If categorical repertoire exclusions (with high $\mathsf{map}$ and $K$) don't show systematically higher $N^{\ast}$ than variable gaps~-- if the opportunity proxy fails to discriminate within this class~-- then the preemption mechanism isn't the explanation for stability.
+
+\paragraph{P2: Opportunity manipulation.} Reducing opportunity mass (by manipulating register, genre, or corpus slice) should weaken preemption and allow $C_t$ to rise for preemption-dominated gaps. Doubly sustained gaps should be buffered by coordination and show less sensitivity.
+
+\emph{Disconfirmation:} If register/genre manipulation doesn't differentially affect preemption-dominated vs.\ doubly sustained gaps, then either the profile categorization is wrong or the modules aren't independent.
+
+\paragraph{P3: Corpus measurability.} Preemption strength should be measurable via competitor frequency in corpus data, using the opportunity-proxy method. The method should yield consistent estimates across corpora representing similar conditioning states.
+
+\emph{Disconfirmation:} If opportunity proxies can't be reliably measured~-- if reasonable operationalizations of competitor sets yield wildly different $N^{\ast}$~-- then the method isn't viable.
+
+\subsection{Predictions from Module 2 (coordination)}
+
+\paragraph{P4: Satiation resistance.} Forms excluded primarily by coordination equilibria should resist satiation more than forms excluded primarily by preemption. A crucial distinction: \emph{laboratory satiation without social embedding} (repeated tokens in an experimental paradigm) mostly affects familiarity and processing fluency, and may shift individual posteriors, but shouldn't shift coordination expectations. \emph{Socially framed exposure} (encountering the form as legitimate usage by in-group members) can shift perceived equilibrium and hence coordination expectations.
+
+This predicts that coordination-dominated gaps will resist laboratory satiation but may show effects under socially embedded exposure; preemption-dominated gaps may show transient laboratory satiation that reverts post-experiment.
+
+\emph{Disconfirmation:} If coordination-dominated gaps satiate as readily as preemption-dominated gaps under laboratory exposure~-- or if the social-framing manipulation doesn't differentially affect coordination-dominated gaps~-- then either the profile categorization is wrong or the lab/social distinction doesn't track the relevant mechanisms.
+
+\paragraph{P5: Coordination-stake manipulation.} Lowering coordination stakes (informal context, in-group framing) should weaken exclusion for coordination-dominated gaps but not for preemption-dominated ones.
+
+\emph{Disconfirmation:} If stake manipulations don't differentially affect coordination-dominated vs.\ preemption-dominated gaps, then the modules aren't independent or don't interact with $\tau(c)$ as predicted.
+
+\paragraph{P6: Operator clustering.} Institutional gatekeeping should cluster around operator contrasts, because operator failure has the highest coordination cost. Style guides and prescriptive norms should disproportionately target operator violations over payload mismatches.
+
+\emph{Disconfirmation:} If prescriptive norms are distributed uniformly across stratum levels~-- if payload mismatches attract as much institutional policing as operator violations~-- then the operator/payload distinction doesn't track coordination cost as predicted.
+
+\subsection{Predictions from the integration}
+
+\paragraph{P7: Doubly sustained stability.} Gaps sustained by both modules should be maximally resistant to change, satiation, and context manipulation. They should show the sharpest exclusion, the least speaker variation, and the most persistence over time.
+
+\emph{Disconfirmation:} If doubly sustained gaps satiate, drift, or show sensitivity to context manipulation at rates similar to singly sustained gaps, then the modules don't combine as predicted.
+
+\paragraph{P8: Cross-linguistic equilibrium differences.} Cross-linguistic differences in \enquote{categorical} constraints should track differences in coordination equilibria and opportunity sets, not differences in innate structure. If French allows possessive age-stating and English doesn't, the explanation should be equilibrium history, not grammatical architecture.
+
+\emph{Disconfirmation:} If cross-linguistic variation in categoriality can't be explained by equilibrium and opportunity differences~-- if it requires positing structural differences in underlying grammar~-- then the framework is incomplete.
+
+\subsection{What would falsify the framework?}
+
+The framework is falsified if \emph{both} modules fail for the same phenomenon. Specifically:
+
+\begin{enumerate}
+  \item If a categorical gap shows neither high opportunity mass nor strong coordination enforcement, then neither module explains it. Either a third mechanism is needed, or the constitutive account's $C_t$ component doesn't track what we thought it tracked.
+  \item If the two modules make contradictory predictions and both predictions fail~-- for example, if a gap predicted to be preemption-dominated behaves like a coordination-dominated gap under both opportunity manipulation and stake manipulation~-- then the profile categorization is unreliable or the modules aren't independent.
+  \item If stable exclusions don't decompose into preemption and coordination components under any reasonable operationalization~-- if attempts to measure $N^{\ast}$ and equilibrium strength yield no systematic patterns~-- then the framework is unfalsifiable in practice, which is a different kind of failure.
+\end{enumerate}
+
+The virtue of the two-module approach is that it makes more predictions than either module alone. Each module can be tested independently, and the integration makes predictions that go beyond the components. This testability is what distinguishes the present account from accounts that treat categorical constraints as explanatory primitives.
+
+\section{Conclusion}\label{sec:conclusion}
+
+The constitutive account of grammaticality (Reynolds, in prep.) specifies what grammatical status \emph{is}: a stability score combining mapping viability, interpretive coherence, and repertoire status, thresholded by situation-specific coordination stakes. But constitutive accounts leave open the etiological question: why do $C_t$ trajectories settle where they do?
+
+This paper has developed two complementary modules that answer that question. Module~1 (\emph{opportunity-sensitive preemption}) explains how $C_t$ gets driven toward zero: Bayesian learning under informative opportunity sets allows learners to infer exclusion from the systematic absence of a form where competitors reliably succeed. Module~2 (\emph{coordination equilibria}) explains why $C_t$ stays near zero: once an equilibrium excludes a form, deviation is penalized, expectations crystallize, and the exclusion becomes self-sustaining. These modules interact with \emph{stochastic drift}, which can push rare forms out of the repertoire by chance, independently of systematic pressures.
+
+The paper also addresses the \enquote{arise} side~-- how forms enter the repertoire~-- and argues for principled asymmetry between entry and exit. Entry is hard: a rare variant is a bad best response in a coordination game, and crossing the threshold requires escape hatches (niche gaps, peripheral network entry, covert prestige). Exit is comparatively easy: structured absence provides strong evidence for exclusion, and coordination penalties reinforce it. This asymmetry justifies the framework's focus on exclusion while making predictions about entry conditions.
+
+The integration of these elements yields a typology of stability profiles. Doubly sustained gaps (strong preemption + strong coordination) are maximally stable. Preemption-dominated gaps drift when opportunity sets shift. Coordination-dominated gaps relax when coordination stakes drop; they may also show stable variation when different registers occupy different equilibria. Drift-vulnerable gaps may exit by chance. The framework specifies fragility conditions: what would destabilize each type, and what historical or experimental manipulations would test these predictions.
+
+Four contributions are worth highlighting:
+
+First, the framework explains \emph{why} categorical constraints behave categorically without treating categoriality as a primitive. Categorical exclusion is an emergent outcome of preemption, coordination, and drift, not a built-in architectural feature. The sharpness of the boundary reflects the strength of multiple mechanisms, not the presence of a structural ban.
+
+Second, the framework makes testable predictions that go beyond either module alone. Each module can be probed independently (opportunity manipulation for preemption, stake manipulation for coordination), and the integration predicts interaction effects that distinguish doubly sustained gaps from singly sustained ones.
+
+Third, the framework explains stable variation~-- competing forms that persist indefinitely~-- through domain-specific equilibria. When different conditioning states (registers, communities, interactional frames) occupy different coordination equilibria, coexistence is stable rather than anomalous.
+
+Fourth, the framework connects grammatical structure to broader theories of convention, norm enforcement, and cultural evolution. The resources deployed here~-- Lewis on coordination, O'Connor on conventions, Richerson and Boyd on moralistic punishment, Young on stochastic stability~-- are domain-general. The etiological account positions grammar within the broader ecology of socially sustained regularities, where normed systems produce categorical boundaries through ongoing dynamics.
+
+Several issues remain unaddressed. First, the framework predicts stable states and monotonic transitions but doesn't explain \term{oscillating trajectories}~-- forms that rise and fall cyclically, as in fashion-driven variation or competing prestige reversals. Modeling oscillation would require incorporating time-varying payoff structures or multiple competing prestige sources. Second, the paper treats coordination equilibria as the primary source of stability, but \term{cultural attractors}~-- stable points in form space arising from shared cognitive biases \citep[cf.][]{sperber1996}~-- may provide an independent or complementary stabilizing force. Forms with high $\mathsf{map}$ (cognitively favored) might be attractor-sustained rather than coordination-sustained, with different empirical signatures: attractor-sustained forms should be stable across social contexts, while coordination-sustained forms should be context-sensitive. Distinguishing these empirically is future work. Third, the framework sketches the dynamics qualitatively but doesn't provide full \term{replicator-mutator formalizations} of the sort developed in evolutionary game theory \citep[e.g.,][]{nowak2006}. Such formalizations would yield sharper quantitative predictions about threshold-crossing, invasion rates, and equilibrium selection~-- but at the cost of parameter estimation challenges that may exceed current data availability.
+
+What remains is empirical: operationalizing competitor sets, measuring opportunity mass, manipulating coordination stakes, and testing whether the predicted correlations hold. The constitutive account and the operator-stratum account provide the conceptual architecture; this paper provides the etiological module; the research programme now needs the data.
 
 \section*{Acknowledgements}
 
