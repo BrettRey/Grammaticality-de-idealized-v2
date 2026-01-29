@@ -450,50 +450,58 @@ The two modules make independent contributions. Preemption (Module~1) explains h
   constit/.style={draw, dotted, line width=0.5pt, -{Stealth[length=4pt, width=3pt]}},
 ]
 
-  % === MODULE 1 (left side) ===
-  \node[observed] (opp) at (-1.5,0) {\shortstack{opportunity\\set $N^{\ast}$}};
-  \node[observed] (comp) at (-1.5,-1.5) {\shortstack{competitor\\tokens}};
-  \node[latent] (ft) at (-1.5,-3) {$f_t$};
-  \node[observed] (supply) at (1.5,0) {supply};
+  % === MODULE 1 (left side, stacked) ===
+  \node[latent]   (supply) at (-0.5,0.5) {supply};
+  \node[observed] (st)   at (-0.5,-1) {$s_t$\\\scriptsize(tokens of $u$)};
+  \node[latent]   (ft)   at (-0.5,-2.5) {$f_t$\\\scriptsize($=N^{\ast}$)};
+  \node[observed] (comp) at (-0.5,-4) {\shortstack{competitor\\tokens}};
 
   % === CENTRAL: posterior, C_t, and constitutive ===
-  \node[latent] (theta) at (3.5,0) {$\theta_u$};
-  \node[latent] (Ct) at (3.5,-1.5) {$C_t$};
-  \node[latent] (Gtilde) at (3.5,-3) {$\widetilde{G}_t$};
-  \node[observed] (map) at (1.5,-2.4) {$\mathsf{map}$};
-  \node[observed] (K) at (1.5,-3.4) {$K$};
+  \node[latent] (theta)  at (4.5,-1.5) {$\theta_u$};
+  \node[latent] (Ct)     at (4.5,-3) {$C$};
+  \node[latent] (Gtilde) at (4.5,-4.5) {$\widetilde{G}$};
+
+  \node[observed] (proc) at (2,-3) {\shortstack{processing\\costs}};
+  \node[observed] (map) at (2,-4.5) {$\mathsf{map}$};
+  \node[observed] (K)   at (2,-6) {$K$};
+  \node[latent]   (Fu)   at (7,-6) {$F_u$};
 
   % === MODULE 2 (right side) ===
-  \node[observed] (equil) at (5.5,0) {\shortstack{coordination\\equilibrium}};
-  \node[observed] (dev) at (5.5,-1.5) {\shortstack{deviation\\penalties}};
-  \node[observed] (expect) at (5.5,-3) {\shortstack{crystallized\\expectations}};
+  \node[latent]   (equil)  at (7,0) {\shortstack{coordination\\regime}};
+  \node[observed] (dev)    at (7,-2) {\shortstack{deviation\\penalties}};
+  \node[latent]   (expect) at (7,-4) {\shortstack{crystallized\\expectations}};
 
   % === Module 1 edges ===
-  \path (opp) edge (comp);
-  \path (comp) edge (ft);
-  \path (ft) edge (theta);
-  \path (supply) edge (theta);
-  \path (theta) edge (Ct);
+  \path (comp)   edge (ft);
+  \path (ft)     edge (theta);
+  \path (supply) edge (st);
+  \path (st)     edge (theta);
+  \path (theta)  edge (Ct);
 
   % === Module 2 edges ===
-  \path (equil) edge (dev);
-  \path (dev) edge (expect);
-  \path (expect) edge (Ct);
+  \path (equil)  edge (dev);
+  \path (dev)    edge (expect);
+  \path (expect) edge node[midway, above, font=\scriptsize, sloped] {$t{\to}t{+}1$} (Ct);
 
-  % === Feedback: C_t reinforces equilibrium ===
-  \path (Ct) edge (equil);
+  % === Processing costs (option i: processing lowers map) ===
+  \path (Ct) edge (proc);
+  \path[constit] (proc) edge (map);
 
   % === Constitutive edges (dotted) ===
-  \path[constit] (Ct) edge (Gtilde);
+  \path[constit] (Ct)  edge (Gtilde);
   \path[constit] (map) edge (Gtilde);
-  \path[constit] (K) edge (Gtilde);
+  \path[constit] (K)   edge (Gtilde);
+  \path[constit] (Gtilde) edge node[midway, above, font=\scriptsize] {$t$} (Fu);
+
+  % === Feedback: F_u triggers penalties (proximate channel) ===
+  \path (Fu) edge[out=0, in=0] (dev);
 
   % === Module labels ===
-  \node[above=0.2cm of opp, font=\small\scshape] {Module 1};
+  \node[above=0.2cm of supply, font=\small\scshape] {Module 1};
   \node[above=0.2cm of equil, font=\small\scshape] {Module 2};
 
 \end{tikzpicture}
-\caption{The two-module architecture. Module~1 (left): opportunity sets generate competitor evidence ($f_t$), which updates the posterior $\theta_u$; supply provides positive evidence. Module~2 (right): coordination equilibria generate deviation penalties and crystallized expectations that maintain $C_t$ near zero; the feedback arrow shows that low $C_t$ reinforces the equilibrium. Dotted arrows connect to the constitutive framework: $C_t$ combines with $\mathsf{map}$ and $K$ to yield stability score $\widetilde{G}_t$.}
+\caption{The two-module architecture as a DAG. Module~1 (left): competitor tokens yield effective failures $f_t$ (= $N^{\ast}$), which update the posterior $\theta_u$; the latent supply mechanism generates observed tokens $s_t$ that provide positive evidence. Module~2 (right): the coordination regime (payoff structure, norm system) is exogenous~-- historically and institutionally set~-- and generates deviation penalties that shape crystallized expectations, which update $C$; the regime's maintenance is via this dev $\to$ expect $\to$ $C$ pathway across episodes. Processing costs (influenced by $C$) lower $\mathsf{map}$, implementing option~(i). Dotted arrows show constitutive relations: $C$, $\mathsf{map}$, and $K$ yield $\widetilde{G}$, which determines $F_u$ (label $t$ indicates synchronic). The feedback arrow shows $F_u$ triggering deviation penalties. The $t{\to}t{+}1$ label on the expectations $\to$ $C$ arrow indicates this effect operates across learning episodes.}
 \label{fig:modules}
 \end{figure}
 
@@ -669,9 +677,9 @@ Second, the framework makes testable predictions that go beyond either module al
 
 Third, the framework explains stable variation~-- competing forms in stable coexistence~-- through domain-specific equilibria. When different conditioning states (registers, communities, interactional frames) occupy different coordination equilibria, coexistence is stable rather than anomalous.
 
-Fourth, the framework connects grammatical structure to broader theories of convention, norm enforcement, and cultural evolution. The resources drawn upon~-- Lewis on coordination, O'Connor on conventions, Richerson and Boyd on distributed enforcement, Young on stochastic stability~-- are domain-general. The etiological account positions grammar within the broader ecology of socially sustained regularities, where normed systems produce categorical boundaries through ongoing dynamics.
+Fourth, the framework connects grammatical structure to broader theories of convention, norm enforcement, and cultural evolution. The resources drawn upon~-- Lewis on coordination, O'Connor on conventions, Richerson and Boyd on distributed enforcement, Young on stochastic stability~-- are domain-general. The etiological account positions grammar within the broader ecology of socially sustained regularities, where normed systems produce categorical boundaries through ongoing dynamics. In this respect, the paper aligns with the view that language is a complex adaptive system \citep{beckner2009}, shaped by iterated interactions among heterogeneous agents under cognitive, social, and communicative constraints.
 
-Several issues remain unaddressed. First, the framework predicts stable states and monotonic transitions but doesn't explain \term{oscillating trajectories}~-- forms that rise and fall cyclically, as in fashion-driven variation or competing prestige reversals. Modeling oscillation would require incorporating time-varying payoff structures or multiple competing prestige sources. Second, the paper treats coordination equilibria as the primary source of stability, but \term{cultural attractors}~-- stable points in form space arising from shared cognitive biases \citep[cf.][]{sperber1996}~-- may provide an independent or complementary stabilizing force. Forms with high $\mathsf{map}$ (cognitively favored) might be attractor-sustained rather than coordination-sustained, with different empirical signatures: attractor-sustained forms should be stable across social contexts, while coordination-sustained forms should be context-sensitive. Distinguishing these empirically is future work. Third, the framework sketches the dynamics qualitatively but doesn't provide full \term{replicator-mutator formalizations} of the sort developed in evolutionary game theory \citep[e.g.,][]{nowak2006}. Such formalizations would yield sharper quantitative predictions about threshold-crossing, invasion rates, and equilibrium selection~-- but at the cost of parameter estimation challenges that may exceed current data availability.
+Several issues remain unaddressed. First, the framework predicts stable states and monotonic transitions but doesn't explain \term{oscillating trajectories}~-- forms that rise and fall cyclically, as in fashion-driven variation or competing prestige reversals. Modeling oscillation would require incorporating time-varying payoff structures or multiple competing prestige sources. Second, the paper treats coordination equilibria as the primary source of stability, but \term{cultural attractors}~-- stable points in form space arising from shared cognitive biases \citep[cf.][]{sperber1996}~-- may provide an independent or complementary stabilizing force. Forms with high $\mathsf{map}$ (cognitively favored) might be attractor-sustained rather than coordination-sustained, with different empirical signatures: attractor-sustained forms should be stable across social contexts, while coordination-sustained forms should be context-sensitive. Distinguishing these empirically is future work. Third, the framework sketches the dynamics qualitatively but doesn't provide full \term{replicator-mutator formalizations} of the sort developed in evolutionary game theory \citep[e.g.,][]{nowak2006}. Such formalizations would yield sharper quantitative predictions about threshold-crossing, invasion rates, and equilibrium selection~-- but at the cost of parameter estimation challenges that may exceed current data availability. \term{Agent-based modeling} offers a complementary approach: simulating populations of heterogeneous learners under the constraints specified here could reveal emergent stability properties that analytic models miss, and increasing computational resources make such simulations increasingly feasible \citep[cf.][]{kirby2014}.
 
 What remains is empirical: operationalizing competitor sets, measuring opportunity mass, manipulating coordination stakes, and testing whether the predicted correlations hold. The constitutive framework provides the conceptual architecture; this paper provides the etiological module; the research programme now needs the data.
 

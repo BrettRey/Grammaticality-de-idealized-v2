@@ -2,7 +2,19 @@
 
 **Current state:** Draft complete, 26 pages, clean build
 
-## 2026-01-29 Session Notes
+## 2026-01-29 Session Notes (continued)
+
+- Extensive revision of Figure 1 (TikZ DAG):
+  - Added s_t node (observed tokens of u) between supply and θ_u
+  - Reversed Module 1 arrows: competitor tokens → f_t (=N*), not the reverse
+  - Added time-indexing: "t" on G̃→F_u (synchronic), "t→t+1" on expect→C (diachronic)
+  - Renamed "coordination equilibrium" → "coordination regime" (payoff structure is exogenous)
+  - Added processing costs wired through map (option i)
+  - F_u feedback goes through deviation penalties (enforcement channel)
+- Added complex adaptive systems alignment to conclusion (cite beckner2009 Five Graces Group)
+- Added ABM as promising methodology for future work (cite kirby2014)
+
+## 2026-01-29 Session Notes (earlier)
 
 - Unified entry/exit under two-module architecture (§3.5 rewritten)
   - Supply is positive-evidence channel, not third module
