@@ -26,26 +26,29 @@ Rachell Powell (BU Philosophy) - *Contingency and Convergence* (MIT Press 2020)
 
 ---
 
-## Powell: Bottom-Up Norm Enforcement in Social Insects
+## Bottom-Up Norm Enforcement (Corrected Attribution)
 
 **Added:** 2026-01-27
-**Source:** Rachell Powell (BU), *Contingency and Convergence* (MIT 2020)
+**Corrected:** 2026-01-28
+**Actual source:** Richerson & Boyd (2005) *Not by Genes Alone*, ch. 6; O'Connor (2019) *Origins of Unfairness*, ch. 4
 
-Powell observes that social insects enforce norms bottom-up, not via central authority. Every local policing interaction aggregates into colony-level norms.
+~~Powell observes that social insects enforce norms bottom-up~~ **Correction:** Powell's *Contingency and Convergence* does not discuss social insects or norm enforcement. The book is about biological evolution (eyes, brains, body plans).
 
-**Connection to OVMG:** This is structurally identical to C_t. Community licensing isn't a decree; it emerges from distributed speakers reacting to each other's usage. Even what looks like a "structural crash" (*Can the have running*) is ultimately a region where bottom-up convergence is so total it appears categorical.
+**What the sources actually say:**
+- **Richerson & Boyd (2005):** Human cooperation in large groups is maintained by *moralistic punishment* -- "If everyone punishes deviants, *any* norm can become stable." This is distributed, not top-down. Ants/bees are mentioned as a CONTRAST: they cooperate via kin selection (siblings), not cultural norms.
+- **O'Connor (2019):** Deviation from conventions is penalized via "gossip, ostracism, open criticism, and sometimes more serious forms of punishment" (p. 67).
 
-**Implications:**
-1. C_t isn't a sociological add-on — bottom-up norm enforcement is widespread in biology
+**The valid connection to OVMG:** C_t (community licensing) emerges from distributed speaker interactions, not central decree. Every local reaction to usage aggregates into community-level norms. This parallels Richerson & Boyd's moralistic punishment mechanism. The insect comparison would be an *analogy* one could draw (emergent colony-level behavior from local interactions), not a direct claim from the sources.
+
+**Implications (still valid):**
+1. C_t isn't a sociological add-on -- bottom-up norm enforcement is the mechanism
 2. Counters the "grammar police" caricature: enforcement is distributed, not top-down
-3. Strengthens the convergence story for operators (convergent solutions maintained by distributed mechanisms)
-
-**Assessment for asterisk paper:** Does NOT belong there. The paper is tight and self-contained; adding biological analogies opens doors it can't close. JoL readers would ask "how far does the insect analogy extend?" and there's no space to answer. The formal model already implies bottom-up enforcement — C_t is community licensing, not authority licensing.
+3. Supported by cultural evolution literature (Boyd & Richerson, O'Connor)
 
 **Where it belongs:**
-- **HPC book** (best fit): HPC kinds maintained by distributed mechanisms, not top-down definitions. Chapter-level point.
-- **Parent OVMG paper**: More room for foundational framing of C_t's nature.
-- **Grammar_and_emergence** (Nefdt): Bottom-up emergence of grammatical norms. (But NO LLMs on that project.)
+- **Etiological account paper** (Module 2): Coordination equilibria sustained by distributed moralistic punishment
+- **HPC book**: HPC kinds maintained by distributed mechanisms
+- **Grammar_and_emergence** (Nefdt): Bottom-up emergence. (But NO LLMs on that project.)
 
 ---
 

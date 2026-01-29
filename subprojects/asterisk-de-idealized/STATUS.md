@@ -2,7 +2,7 @@
 
 **Created:** 2026-01-24
 **Last updated:** 2026-01-28
-**Status:** Complete draft (22 pages)
+**Status:** Submitted to lingbuzz (lingbuzz/009713)
 **Parent project:** Grammaticality_de_idealized (MVMG)
 **Target:** Journal of Linguistics "Looking Back, Moving Forward" section
 
@@ -116,3 +116,10 @@ Imported insights from polished operator-stratum paper while maintaining distinc
 10. C_t estimator footnote — commits to hierarchical Beta-Binomial class
 
 **Error caught:** Sloppy join from metaphor removal ("We find none; That" → "We find none, and that")
+
+### 2026-01-28 (submission)
+
+- Updated acknowledgements: "on a previous version of this paper"
+- Trimmed AI disclosure
+- Renamed PDF for lingbuzz: `Reynolds_Asterisk_De-idealized.pdf`
+- **Submitted to lingbuzz as lingbuzz/009713**

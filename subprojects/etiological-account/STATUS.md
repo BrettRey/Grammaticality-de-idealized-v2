@@ -1,7 +1,5 @@
-# STATUS - Etiological Account
-
 ## Current state
-Skeleton with section outline and detailed comments. No prose yet.
+Full draft complete. Pending review and refinement.
 
 ## Created
 2026-01-27
@@ -17,7 +15,7 @@ Skeleton with section outline and detailed comments. No prose yet.
 - Powell (2020) *Contingency and Convergence* -- convergent solutions under constraint
 
 ## Next steps
-- [ ] Draft Section 2 (constitutive--etiological distinction): brief OVMG recap
-- [ ] Formalize preemption strength as function of opportunity set robustness
-- [ ] Work out game-theoretic payoff structure for communicative situations
-- [ ] Identify concrete test cases for predictions
+- [ ] Compile and verify PDF
+- [ ] Review for flow and argument tightness
+- [ ] Check bibliography for missing entries
+- [ ] Final polish
