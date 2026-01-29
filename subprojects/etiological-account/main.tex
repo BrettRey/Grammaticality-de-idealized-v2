@@ -451,24 +451,22 @@ The two modules make independent contributions. Preemption (Module~1) explains h
 ]
 
   % === MODULE 1 (left side) ===
-  \node[observed] (opp) at (0,0) {\shortstack{opportunity\\set $N^{\ast}$}};
-  \node[observed] (comp) at (0,-1.5) {\shortstack{competitor\\tokens}};
-  \node[latent] (ft) at (0,-3) {$f_t$};
-  \node[observed] (supply) at (-2,-3) {supply};
+  \node[observed] (opp) at (-1.5,0) {\shortstack{opportunity\\set $N^{\ast}$}};
+  \node[observed] (comp) at (-1.5,-1.5) {\shortstack{competitor\\tokens}};
+  \node[latent] (ft) at (-1.5,-3) {$f_t$};
+  \node[observed] (supply) at (1.5,0) {supply};
 
-  % === CENTRAL: posterior and C_t ===
-  \node[latent] (theta) at (2.8,-3) {$\theta_u$};
-  \node[latent] (Ct) at (2.8,-4.5) {$C_t$};
+  % === CENTRAL: posterior, C_t, and constitutive ===
+  \node[latent] (theta) at (3.5,0) {$\theta_u$};
+  \node[latent] (Ct) at (3.5,-1.5) {$C_t$};
+  \node[latent] (Gtilde) at (3.5,-3) {$\widetilde{G}_t$};
+  \node[observed] (map) at (1.5,-2.4) {$\mathsf{map}$};
+  \node[observed] (K) at (1.5,-3.4) {$K$};
 
   % === MODULE 2 (right side) ===
-  \node[observed] (equil) at (7,0) {\shortstack{coordination\\equilibrium}};
-  \node[observed] (dev) at (7,-1.5) {\shortstack{deviation\\penalties}};
-  \node[observed] (expect) at (7,-3) {\shortstack{crystallized\\expectations}};
-
-  % === Constitutive connection ===
-  \node[latent] (Gtilde) at (5.5,-4.5) {$\widetilde{G}_t$};
-  \node[observed] (map) at (4.7,-3) {$\mathsf{map}$};
-  \node[observed] (K) at (6.3,-3) {$K$};
+  \node[observed] (equil) at (5.5,0) {\shortstack{coordination\\equilibrium}};
+  \node[observed] (dev) at (5.5,-1.5) {\shortstack{deviation\\penalties}};
+  \node[observed] (expect) at (5.5,-3) {\shortstack{crystallized\\expectations}};
 
   % === Module 1 edges ===
   \path (opp) edge (comp);
@@ -480,10 +478,10 @@ The two modules make independent contributions. Preemption (Module~1) explains h
   % === Module 2 edges ===
   \path (equil) edge (dev);
   \path (dev) edge (expect);
-  \path (expect) edge[bend left=15] (Ct);
+  \path (expect) edge (Ct);
 
   % === Feedback: C_t reinforces equilibrium ===
-  \path (Ct) edge[bend left=30] (equil);
+  \path (Ct) edge (equil);
 
   % === Constitutive edges (dotted) ===
   \path[constit] (Ct) edge (Gtilde);
