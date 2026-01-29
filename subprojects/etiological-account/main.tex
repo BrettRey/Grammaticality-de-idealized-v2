@@ -438,6 +438,67 @@ The modules are complementary, not competing. A form can be excluded by strong p
 
 The two modules make independent contributions. Preemption (Module~1) explains how $C_t$ gets driven toward zero; coordination (Module~2) explains why it stays there. But the modules don't always align. A form can face strong preemption and weak coordination, or weak preemption and strong coordination, or both strong, or both weak. These combinations yield different stability profiles~-- and different predictions about how exclusions will behave under manipulation.
 
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[
+  latent/.style={circle, draw, line width=0.6pt,
+    minimum size=1.1cm, font=\small, inner sep=0pt},
+  observed/.style={rectangle, rounded corners=5pt, draw,
+    line width=0.6pt, minimum height=0.9cm, minimum width=1.8cm,
+    font=\small, inner sep=5pt, align=center},
+  every edge/.style={draw, line width=0.5pt, -{Stealth[length=4pt, width=3pt]}},
+  constit/.style={draw, dotted, line width=0.5pt, -{Stealth[length=4pt, width=3pt]}},
+]
+
+  % === MODULE 1 (left side) ===
+  \node[observed] (opp) at (0,0) {\shortstack{opportunity\\set $N^{\ast}$}};
+  \node[observed] (comp) at (0,-1.5) {\shortstack{competitor\\tokens}};
+  \node[latent] (ft) at (0,-3) {$f_t$};
+  \node[observed] (supply) at (-2,-3) {supply};
+
+  % === CENTRAL: posterior and C_t ===
+  \node[latent] (theta) at (2.8,-3) {$\theta_u$};
+  \node[latent] (Ct) at (2.8,-4.5) {$C_t$};
+
+  % === MODULE 2 (right side) ===
+  \node[observed] (equil) at (7,0) {\shortstack{coordination\\equilibrium}};
+  \node[observed] (dev) at (7,-1.5) {\shortstack{deviation\\penalties}};
+  \node[observed] (expect) at (7,-3) {\shortstack{crystallized\\expectations}};
+
+  % === Constitutive connection ===
+  \node[latent] (Gtilde) at (5.5,-4.5) {$\widetilde{G}_t$};
+  \node[observed] (map) at (4.7,-3) {$\mathsf{map}$};
+  \node[observed] (K) at (6.3,-3) {$K$};
+
+  % === Module 1 edges ===
+  \path (opp) edge (comp);
+  \path (comp) edge (ft);
+  \path (ft) edge (theta);
+  \path (supply) edge (theta);
+  \path (theta) edge (Ct);
+
+  % === Module 2 edges ===
+  \path (equil) edge (dev);
+  \path (dev) edge (expect);
+  \path (expect) edge[bend left=15] (Ct);
+
+  % === Feedback: C_t reinforces equilibrium ===
+  \path (Ct) edge[bend left=30] (equil);
+
+  % === Constitutive edges (dotted) ===
+  \path[constit] (Ct) edge (Gtilde);
+  \path[constit] (map) edge (Gtilde);
+  \path[constit] (K) edge (Gtilde);
+
+  % === Module labels ===
+  \node[above=0.2cm of opp, font=\small\scshape] {Module 1};
+  \node[above=0.2cm of equil, font=\small\scshape] {Module 2};
+
+\end{tikzpicture}
+\caption{The two-module architecture. Module~1 (left): opportunity sets generate competitor evidence ($f_t$), which updates the posterior $\theta_u$; supply provides positive evidence. Module~2 (right): coordination equilibria generate deviation penalties and crystallized expectations that maintain $C_t$ near zero; the feedback arrow shows that low $C_t$ reinforces the equilibrium. Dotted arrows connect to the constitutive framework: $C_t$ combines with $\mathsf{map}$ and $K$ to yield stability score $\widetilde{G}_t$.}
+\label{fig:modules}
+\end{figure}
+
 \subsection{Four stability profiles}
 
 The independence of the two modules generates a 2×2 space of stability profiles:
