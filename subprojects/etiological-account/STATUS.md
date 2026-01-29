@@ -11,8 +11,13 @@
   - Renamed "coordination equilibrium" → "coordination regime" (payoff structure is exogenous)
   - Added processing costs wired through map (option i)
   - F_u feedback goes through deviation penalties (enforcement channel)
-- Added complex adaptive systems alignment to conclusion (cite beckner2009 Five Graces Group)
-- Added ABM as promising methodology for future work (cite kirby2014)
+  - Caption shortened to ~70 words (Option B)
+- Rewrote CAS acknowledgment (conclusion) for honesty:
+  - Two-module framework is a deliberate simplification
+  - Explicit connection to Powell's contingency/convergence: modules explain stability, not which gaps exist (that's historically contingent)
+  - ABM framed as potentially essential (not merely complementary), citing HPC book ch. 16
+- Added "Regime vs. equilibrium" paragraph in §4.1: regime (exogenous payoff structure) vs equilibrium (emergent outcome)
+- Processing costs: added sentence clarifying two sources (structural + expectation-based from low C), justifying C → proc arrow
 
 ## 2026-01-29 Session Notes (earlier)
 
