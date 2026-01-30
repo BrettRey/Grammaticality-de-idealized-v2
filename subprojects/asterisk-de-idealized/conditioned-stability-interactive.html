@@ -1,0 +1,1155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Conditioned stability — interactive illustration</title>
+  <style>
+    :root{
+      --bg:#ffffff;
+      --fg:#111111;
+      --muted:#555;
+      --panel:#f5f5f5;
+      --stroke:#111;
+      --thin:#666;
+      --accent:#111;
+      --radius:10px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      --serif: ui-serif, "Georgia", "Times New Roman", Times, serif;
+    }
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--fg);
+      font-family:var(--serif);
+      line-height:1.25;
+    }
+    header{
+      padding:16px 18px 8px;
+      border-bottom:1px solid #ddd;
+    }
+    header h1{
+      font-size:18px;
+      margin:0 0 6px 0;
+      font-weight:600;
+      letter-spacing:0.2px;
+    }
+    header p{
+      margin:0;
+      color:var(--muted);
+      font-size:14px;
+      max-width: 1100px;
+    }
+
+    .wrap{
+      display:flex;
+      gap:14px;
+      padding:14px 14px 18px;
+      flex-wrap:wrap;
+      align-items:flex-start;
+    }
+    .left{
+      flex: 1 1 720px;
+      min-width: 520px;
+    }
+    .right{
+      flex: 0 0 380px;
+      min-width: 320px;
+      max-width: 420px;
+    }
+
+    .card{
+      background:var(--panel);
+      border:1px solid #ddd;
+      border-radius: var(--radius);
+      padding:12px 12px 12px;
+      margin-bottom:12px;
+    }
+    .card h2{
+      font-size:14px;
+      margin:0 0 10px 0;
+      font-weight:600;
+      font-family:var(--sans);
+    }
+    .row{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      margin:10px 0;
+    }
+    .row label{
+      font-size:13px;
+      color:var(--fg);
+      font-family:var(--sans);
+    }
+    .row .val{
+      font-family:var(--mono);
+      font-size:12px;
+      color:var(--muted);
+      min-width: 74px;
+      text-align:right;
+    }
+    input[type="range"]{
+      width: 100%;
+      accent-color: var(--accent);
+    }
+    input[type="range"]:disabled{
+      opacity:0.55;
+      cursor:not-allowed;
+    }
+    input[type="checkbox"]:disabled{
+      opacity:0.55;
+      cursor:not-allowed;
+    }
+    .rangegrid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:6px;
+    }
+    .small{
+      font-size:12px;
+      color:var(--muted);
+      font-family:var(--sans);
+    }
+    .btns{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+    }
+    button{
+      font-family:var(--sans);
+      font-size:12px;
+      padding:6px 9px;
+      border:1px solid #999;
+      background:#fff;
+      border-radius:8px;
+      cursor:pointer;
+    }
+    button.active{
+      background:#111;
+      color:#fff;
+      border-color:#111;
+    }
+    button:focus{
+      outline:2px solid #333;
+      outline-offset:2px;
+    }
+    select{
+      width:100%;
+      font-family:var(--sans);
+      font-size:12px;
+      padding:6px 8px;
+      border:1px solid #999;
+      border-radius:8px;
+      background:#fff;
+    }
+    .bar{
+      height:10px;
+      background:#e5e5e5;
+      border:1px solid #cfcfcf;
+      border-radius:999px;
+      overflow:hidden;
+    }
+    .fill{
+      height:100%;
+      width:0%;
+      background:#111;
+    }
+    .metric{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:8px;
+    }
+    .metric .mrow{
+      display:grid;
+      grid-template-columns: 160px 1fr 80px;
+      gap:10px;
+      align-items:center;
+    }
+    .metric .mrow .name{
+      font-family:var(--sans);
+      font-size:12px;
+    }
+    .metric .mrow .num{
+      font-family:var(--mono);
+      font-size:12px;
+      text-align:right;
+      color:var(--muted);
+    }
+
+    .diagramWrap{
+      background:#fff;
+      border:1px solid #ddd;
+      border-radius: var(--radius);
+      padding:10px;
+    }
+    svg{
+      width:100%;
+      height:auto;
+      display:block;
+    }
+    .node text{
+      font-family: var(--sans);
+      fill:#111;
+    }
+    .node .label{
+      font-size:14px;
+      font-weight:600;
+    }
+    .node .value{
+      font-family: var(--mono);
+      font-size:12px;
+      fill:#333;
+    }
+    .node .subtitle{
+      font-size:12px;
+      fill:#333;
+      font-weight:500;
+    }
+    .edge{
+      stroke:#111;
+      stroke-width:1.2;
+      fill:none;
+    }
+    .edge.dashed{
+      stroke-dasharray: 5 4;
+      stroke:#333;
+    }
+    .edgeLabel{
+      font-family: var(--sans);
+      font-size:11px;
+      fill:#333;
+    }
+    .legend{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      margin-top:10px;
+      color:#444;
+      font-family:var(--sans);
+      font-size:12px;
+    }
+    .key{
+      display:flex;
+      align-items:center;
+      gap:8px;
+    }
+    .swatch{
+      width:14px; height:14px; border:1px solid #111; border-radius: 4px; background:#fff;
+    }
+    .swatch.circle{ border-radius:999px; }
+    .swatch.diamond{
+      transform: rotate(45deg);
+      border-radius:2px;
+    }
+
+    .hidden{ display:none; }
+    .muted{ color:var(--muted) !important; }
+
+    .sr-only{
+      position:absolute !important;
+      width:1px !important;
+      height:1px !important;
+      padding:0 !important;
+      margin:-1px !important;
+      overflow:hidden !important;
+      clip:rect(0,0,0,0) !important;
+      white-space:nowrap !important;
+      border:0 !important;
+    }
+
+    /* ---- Mobile layout + legibility tweaks ---- */
+    @media (max-width: 820px){
+      .left{ min-width: 0; }
+    }
+    @media (max-width: 720px){
+      header{ padding:14px 14px 8px; }
+      .wrap{
+        flex-direction:column;
+        padding:12px;
+      }
+      .left, .right{
+        flex: 1 1 auto;
+        min-width: 0;
+        max-width: none;
+      }
+      .diagramWrap{ padding:8px; }
+      .diagramWrap svg{
+        height: 60vh;
+        min-height: 380px;
+      }
+      .node .label{ font-size:16px; }
+      .node .subtitle{ font-size:13px; }
+      .node .value{ font-size:13px; }
+      .edgeLabel{ font-size:12px; }
+    }
+    @media (max-width: 420px){
+      .metric .mrow{
+        grid-template-columns: 1fr;
+        gap:6px;
+      }
+      .metric .mrow .num{ text-align:left; }
+      .row{ flex-direction:column; align-items:flex-start; }
+      .row .val{ text-align:left; min-width: 0; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Conditioned stability of form–value relations — interactive illustration</h1>
+    <p>
+      Interactive SVG companion for the decomposition: mapping viability (map), interpretive coherence (K), and repertoire status (Cₜ),
+      combined into a stability score G̃ₜ and thresholded by τ(c) to yield categorical membership Gₜ. Processing and ideological filtering
+      feed a demonstrative “feeling of ungrammaticality” channel.
+    </p>
+  </header>
+
+  <div class="wrap">
+    <div class="left">
+      <div class="card">
+        <h2>Architecture</h2>
+        <div class="btns" id="modeButtons">
+          <button data-mode="minimal" class="active">Minimal</button>
+          <button data-mode="medium">Medium</button>
+          <button data-mode="full">Full</button>
+        </div>
+        <div class="small" style="margin-top:8px;">
+          Minimal: τ, map, K, Cₜ → G̃ₜ → Gₜ plus ratings channel with processing + ideology.
+          Medium: adds observable indicators for Cₜ and a dashed etiological pathway.
+          Full: adds conditioning anchors (S/A/I) and stakes.
+        </div>
+      </div>
+
+      <div class="diagramWrap">
+        <svg id="diagram" viewBox="0 0 1000 520" role="img" aria-label="Interactive diagram of the conditioned-stability architecture"></svg>
+
+        <div class="legend" aria-hidden="true">
+          <div class="key"><span class="swatch circle"></span><span>latent state</span></div>
+          <div class="key"><span class="swatch"></span><span>observed / measured</span></div>
+          <div class="key"><span class="swatch diamond"></span><span>conditioning anchor</span></div>
+          <div class="key"><span style="font-family:var(--mono);">dashed</span><span>etiological (diachronic) influence</span></div>
+        </div>
+
+        <div id="diagramSummary" class="small" style="margin-top:10px;"></div>
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="card">
+        <h2>Core state variables</h2>
+
+        <div class="row">
+          <label for="map">map(u,c) ∈ {0,1}</label>
+          <div class="val" id="mapVal"></div>
+        </div>
+        <div class="row">
+          <input type="checkbox" id="map" />
+          <label for="map" class="small">checked = 1 (viable); unchecked = 0 (crash)</label>
+        </div>
+
+        <div class="rangegrid">
+          <div class="row">
+            <label for="K">K(u,c) (coherence)</label>
+            <div class="val" id="KVal"></div>
+          </div>
+          <input type="range" id="K" min="0" max="1" step="0.01" />
+        </div>
+
+        <div class="rangegrid" style="margin-top:8px;">
+          <div class="row">
+            <label for="Ct">Cₜ(u,c) (repertoire status)</label>
+            <div class="val" id="CtVal"></div>
+          </div>
+          <input type="range" id="Ct" min="0" max="1" step="0.01" />
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Decision regime and ratings channel</h2>
+
+        <div class="rangegrid">
+          <div class="row">
+            <label for="stakes">stakes (illustrative)</label>
+            <div class="val" id="stakesVal"></div>
+          </div>
+          <input type="range" id="stakes" min="0" max="1" step="0.01" />
+        </div>
+
+        <div class="row" style="margin-top:10px;">
+          <input type="checkbox" id="linkTau" checked />
+          <label for="linkTau" class="small">link τ(c) to stakes</label>
+        </div>
+
+        <div class="rangegrid" style="margin-top:8px;">
+          <div class="row">
+            <label for="tau" id="tauLabel">
+              τ(c)
+              <span id="tauLinkedHint" class="small"></span>
+            </label>
+            <div class="val" id="tauVal"></div>
+          </div>
+          <input type="range" id="tau" min="0" max="1" step="0.01" />
+          <div class="small" id="tauLinkText" style="margin-top:6px;"></div>
+        </div>
+
+        <div class="rangegrid" style="margin-top:10px;">
+          <div class="row">
+            <label for="proc">processing costs (0–1)</label>
+            <div class="val" id="procVal"></div>
+          </div>
+          <input type="range" id="proc" min="0" max="1" step="0.01" />
+        </div>
+
+        <div class="rangegrid" style="margin-top:10px;">
+          <div class="row">
+            <label for="ideo">ideological filtering (0–1)</label>
+            <div class="val" id="ideoVal"></div>
+          </div>
+          <input type="range" id="ideo" min="0" max="1" step="0.01" />
+        </div>
+
+        <div class="small" style="margin-top:10px;">
+          The “feeling” metric is a demonstrative channel:
+          feeling = (1 − G̃ₜ) + (1 − (1 − G̃ₜ))·(0.5·proc + 0.5·ideo), clipped to [0,1].
+          It’s meant to visualise dissociations, not to claim a fixed psychometric model.
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Combination rule</h2>
+        <div class="row">
+          <label for="op">operator for G̃ₜ</label>
+        </div>
+        <select id="op">
+          <option value="product">product: map × K × Cₜ</option>
+          <option value="min">minimum: min(map, K, Cₜ)</option>
+          <option value="sum">weighted sum (compensatory)</option>
+        </select>
+
+        <div class="row" style="margin-top:10px;">
+          <input type="checkbox" id="gateMap" checked />
+          <label for="gateMap" id="gateMapLabel" class="small">map gates weighted sum (if map=0 ⇒ G̃ₜ=0)</label>
+        </div>
+        <div class="small muted hidden" id="gateMapNote" style="margin-top:6px;"></div>
+
+        <div id="weightsBox" class="hidden" style="margin-top:10px;">
+          <div class="small">Weights for weighted sum (normalised internally):</div>
+          <div class="rangegrid" style="margin-top:8px;">
+            <div class="row"><label for="wMap">w_map</label><div class="val" id="wMapVal"></div></div>
+            <input type="range" id="wMap" min="0" max="1" step="0.01" />
+          </div>
+          <div class="rangegrid" style="margin-top:8px;">
+            <div class="row"><label for="wK">w_K</label><div class="val" id="wKVal"></div></div>
+            <input type="range" id="wK" min="0" max="1" step="0.01" />
+          </div>
+          <div class="rangegrid" style="margin-top:8px;">
+            <div class="row"><label for="wCt">w_C</label><div class="val" id="wCtVal"></div></div>
+            <input type="range" id="wCt" min="0" max="1" step="0.01" />
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Presets</h2>
+        <div class="btns" id="presetButtons">
+          <button data-preset="crash">Crash (map=0)</button>
+          <button data-preset="clash">Clash (low K)</button>
+          <button data-preset="exclusion">Exclusion (low Cₜ)</button>
+          <button data-preset="unease">Unease (high proc)</button>
+          <button data-preset="stigma">In-repertoire, stigmatised (high ideo)</button>
+          <button data-preset="reset">Reset</button>
+        </div>
+        <div class="small" style="margin-top:8px;">
+          Presets set illustrative values only; tweak afterwards to match the concrete case you want to discuss.
+        </div>
+      </div>
+
+      <div class="card" id="liveOutputsCard">
+        <h2>Live outputs</h2>
+        <div class="metric" aria-hidden="false">
+          <div class="mrow">
+            <div class="name">G̃ₜ (stability)</div>
+            <div class="bar"><div class="fill" id="barGtilde"></div></div>
+            <div class="num" id="GtildeNum"></div>
+          </div>
+          <div class="mrow">
+            <div class="name">τ(c) (threshold)</div>
+            <div class="bar"><div class="fill" id="barTau"></div></div>
+            <div class="num" id="tauNum"></div>
+          </div>
+          <div class="mrow">
+            <div class="name">Gₜ (membership)</div>
+            <div class="bar"><div class="fill" id="barGt"></div></div>
+            <div class="num" id="GtNum"></div>
+          </div>
+          <div class="mrow">
+            <div class="name">feeling (0–1)</div>
+            <div class="bar"><div class="fill" id="barFeel"></div></div>
+            <div class="num" id="feelNum"></div>
+          </div>
+        </div>
+
+        <div id="outputsSummary" class="small" aria-live="polite" aria-atomic="true" style="margin-top:10px;"></div>
+
+        <div class="small" style="margin-top:8px;">
+          Convention here: higher “feeling” = stronger subjective anomaly signal.
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+<script>
+(function(){
+  // ---------- helpers ----------
+  const clamp = (x, a=0, b=1) => Math.max(a, Math.min(b, x));
+  const fmt2 = (x) => (Math.round(x*100)/100).toFixed(2);
+
+  function opLabel(op){
+    if(op === "product") return "product (map×K×Cₜ)";
+    if(op === "min") return "minimum";
+    return "weighted sum";
+  }
+
+  // ---------- state ----------
+  const state = {
+    mode: "minimal",
+    map: 1,
+    K: 0.90,
+    Ct: 0.80,
+    stakes: 0.50,
+    linkTau: true,
+    tau: 0.50,
+    proc: 0.10,
+    ideo: 0.10,
+    op: "product",
+    gateMap: true,
+    wMap: 0.33,
+    wK: 0.33,
+    wCt: 0.34
+  };
+
+  // ---------- architecture definitions ----------
+  // Global node sizes (px in viewBox coordinates)
+  const SIZES = {
+    circleR: 44,
+    rectW: 190,
+    rectH: 66,
+    diamondD: 74
+  };
+
+  function offsetToBorder(node, ux, uy){
+    // Returns (dx,dy) offset from centre to shape boundary along (ux,uy).
+    if(node.shape === "circle"){
+      return {dx: ux*SIZES.circleR, dy: uy*SIZES.circleR};
+    }
+    if(node.shape === "rect"){
+      const hw = SIZES.rectW/2, hh = SIZES.rectH/2;
+      const ax = Math.abs(ux) < 1e-9 ? 1e9 : hw/Math.abs(ux);
+      const ay = Math.abs(uy) < 1e-9 ? 1e9 : hh/Math.abs(uy);
+      const t = Math.min(ax, ay);
+      return {dx: ux*t, dy: uy*t};
+    }
+    if(node.shape === "diamond"){
+      const d = SIZES.diamondD/2;
+      const denom = (Math.abs(ux) + Math.abs(uy)) || 1e-9;
+      const t = d/denom;
+      return {dx: ux*t, dy: uy*t};
+    }
+    return {dx: ux*40, dy: uy*40};
+  }
+
+  function makeNode(id, x, y, shape, labelLines, valueKey, tooltip, extra={}){
+    return Object.assign({ id, x, y, shape, labelLines, valueKey, tooltip }, extra);
+  }
+
+  function makeEdge(from, to, style="solid", label=null){
+    return { from, to, style, label };
+  }
+
+  const MODES = {
+    minimal: {
+      viewBox: "0 0 1000 520",
+      nodes: [
+        makeNode("tau", 140, 95, "rect", ["τ(c)"], "tau", "Decision criterion (threshold)"),
+        makeNode("map", 360, 95, "circle", ["map"], "map", "Mapping viability"),
+        makeNode("K", 560, 95, "circle", ["K"], "K", "Interpretive coherence"),
+        makeNode("Ct", 760, 95, "circle", ["Cₜ"], "Ct", "Repertoire status"),
+        makeNode("Gtilde", 560, 250, "circle", ["G̃ₜ"], "Gtilde", "Stability score"),
+        makeNode("ratings", 760, 250, "rect", ["feeling of", "ungrammaticality"], "feeling", "Subjective anomaly signal"),
+        makeNode("ideo", 900, 180, "rect", ["ideological", "filtering"], "ideo", "Filter on ratings"),
+        makeNode("proc", 900, 320, "rect", ["processing", "costs"], "proc", "Filter on ratings"),
+        makeNode("Gt", 560, 410, "circle", ["Gₜ"], "Gt", "Categorical membership")
+      ],
+      edges: [
+        makeEdge("map","Gtilde"),
+        makeEdge("K","Gtilde"),
+        makeEdge("Ct","Gtilde"),
+        makeEdge("Gtilde","Gt"),
+        makeEdge("tau","Gt"),
+        makeEdge("Gtilde","ratings"),
+        makeEdge("ideo","ratings"),
+        makeEdge("proc","ratings")
+      ]
+    },
+
+    medium: {
+      viewBox: "0 0 1500 560",
+      nodes: [
+        makeNode("tau", 170, 110, "rect", ["τ(c)"], "tau", "Decision criterion (threshold)"),
+        makeNode("map", 430, 110, "circle", ["map"], "map", "Mapping viability"),
+        makeNode("K", 690, 110, "circle", ["K"], "K", "Interpretive coherence"),
+        makeNode("Ct", 950, 110, "circle", ["Cₜ"], "Ct", "Repertoire status"),
+        makeNode("Gtilde", 690, 280, "circle", ["G̃ₜ"], "Gtilde", "Stability score"),
+        makeNode("Gt", 690, 450, "circle", ["Gₜ"], "Gt", "Categorical membership"),
+
+        makeNode("corpus", 1220, 80, "rect", ["corpus freq./", "opportunity"], null, "Indicator for Cₜ"),
+        makeNode("prod",   1220, 160, "rect", ["production", "probability"], null, "Indicator for Cₜ"),
+        makeNode("repair", 1220, 240, "rect", ["repair", "behaviour"], null, "Indicator for Cₜ"),
+
+        makeNode("ratings", 1220, 340, "rect", ["feeling of", "ungrammaticality"], "feeling", "Subjective anomaly signal"),
+        makeNode("ideo", 1400, 340, "rect", ["ideological", "filtering"], "ideo", "Filter on ratings"),
+        makeNode("proc", 1400, 450, "rect", ["processing", "costs"], "proc", "Filter on ratings")
+      ],
+      edges: [
+        makeEdge("map","Gtilde"),
+        makeEdge("K","Gtilde"),
+        makeEdge("Ct","Gtilde"),
+        makeEdge("Gtilde","Gt"),
+        makeEdge("tau","Gt"),
+
+        makeEdge("Ct","corpus"),
+        makeEdge("Ct","prod"),
+        makeEdge("Ct","repair"),
+
+        makeEdge("Gtilde","ratings"),
+        makeEdge("ideo","ratings"),
+        makeEdge("proc","ratings"),
+
+        makeEdge("ideo","Ct","dashed","etiology")
+      ]
+    },
+
+    full: {
+      viewBox: "0 0 1500 680",
+      nodes: [
+        makeNode("stakes", 170, 80, "rect", ["stakes"], "stakes", "Decision stakes (illustrative)"),
+        makeNode("S", 430, 80, "diamond", ["S"], null, "Situation anchor"),
+        makeNode("A", 690, 80, "diamond", ["A"], null, "Ascription anchor"),
+        makeNode("I", 950, 80, "diamond", ["I"], null, "Identification anchor"),
+
+        makeNode("c", 690, 185, "circle", ["c"], null, "Conditioning state (constructed)"),
+
+        makeNode("tau", 170, 290, "rect", ["τ(c)"], "tau", "Decision criterion (threshold)"),
+        makeNode("map", 430, 290, "circle", ["map"], "map", "Mapping viability"),
+        makeNode("K", 690, 290, "circle", ["K"], "K", "Interpretive coherence"),
+        makeNode("Ct", 950, 290, "circle", ["Cₜ"], "Ct", "Repertoire status"),
+
+        makeNode("Gtilde", 690, 450, "circle", ["G̃ₜ"], "Gtilde", "Stability score"),
+        makeNode("Gt", 690, 610, "circle", ["Gₜ"], "Gt", "Categorical membership"),
+
+        makeNode("corpus", 1220, 250, "rect", ["corpus freq./", "opportunity"], null, "Indicator for Cₜ"),
+        makeNode("prod",   1220, 330, "rect", ["production", "probability"], null, "Indicator for Cₜ"),
+        makeNode("repair", 1220, 410, "rect", ["repair", "behaviour"], null, "Indicator for Cₜ"),
+
+        makeNode("ratings", 1220, 520, "rect", ["feeling of", "ungrammaticality"], "feeling", "Subjective anomaly signal"),
+        makeNode("ideo", 1400, 520, "rect", ["ideological", "filtering"], "ideo", "Filter on ratings"),
+        makeNode("proc", 1400, 620, "rect", ["processing", "costs"], "proc", "Filter on ratings")
+      ],
+      edges: [
+        makeEdge("S","c"),
+        makeEdge("A","c"),
+        makeEdge("I","c"),
+
+        makeEdge("stakes","tau"),
+        makeEdge("c","tau"),
+        makeEdge("c","map"),
+        makeEdge("c","K"),
+        makeEdge("c","Ct"),
+
+        makeEdge("map","Gtilde"),
+        makeEdge("K","Gtilde"),
+        makeEdge("Ct","Gtilde"),
+        makeEdge("Gtilde","Gt"),
+        makeEdge("tau","Gt"),
+
+        makeEdge("Ct","corpus"),
+        makeEdge("Ct","prod"),
+        makeEdge("Ct","repair"),
+
+        makeEdge("Gtilde","ratings"),
+        makeEdge("ideo","ratings"),
+        makeEdge("proc","ratings"),
+
+        makeEdge("ideo","Ct","dashed","etiology")
+      ]
+    }
+  };
+
+  // ---------- compute ----------
+  function effectiveTau(){
+    if(state.linkTau){
+      return clamp(0.20 + 0.60*state.stakes, 0, 1);
+    }
+    return clamp(state.tau, 0, 1);
+  }
+
+  function combine(map, K, Ct){
+    const op = state.op;
+    if(op === "product"){
+      return map * K * Ct;
+    }
+    if(op === "min"){
+      return Math.min(map, K, Ct);
+    }
+    // weighted sum (compensatory)
+    const wSum = state.wMap + state.wK + state.wCt;
+    const wm = (wSum === 0) ? 1/3 : state.wMap / wSum;
+    const wk = (wSum === 0) ? 1/3 : state.wK   / wSum;
+    const wc = (wSum === 0) ? 1/3 : state.wCt  / wSum;
+    return clamp(wm*map + wk*K + wc*Ct, 0, 1);
+  }
+
+  function compute(){
+    const tau = effectiveTau();
+    const map = state.map ? 1 : 0;
+    const K = clamp(state.K);
+    const Ct = clamp(state.Ct);
+
+    const raw = clamp(combine(map, K, Ct), 0, 1);
+    const gateActive = (state.op === "sum") && state.gateMap;
+    const Gtilde = clamp(gateActive ? (map * raw) : raw, 0, 1);
+    const Gt = (Gtilde >= tau) ? 1 : 0;
+
+    // Demonstrative ratings channel.
+    const base = 1 - Gtilde;
+    const feel = clamp(base + (1 - base) * (0.5*clamp(state.proc) + 0.5*clamp(state.ideo)), 0, 1);
+
+    return { tau, map, K, Ct, Gtilde, Gt, feel };
+  }
+
+  // ---------- render diagram ----------
+  const svg = document.getElementById("diagram");
+
+  function clearSVG(){
+    while(svg.firstChild) svg.removeChild(svg.firstChild);
+  }
+
+  function addDefs(){
+    const defs = document.createElementNS("http://www.w3.org/2000/svg","defs");
+
+    const marker = document.createElementNS("http://www.w3.org/2000/svg","marker");
+    marker.setAttribute("id","arrow");
+    marker.setAttribute("viewBox","0 0 10 10");
+    marker.setAttribute("refX","10");
+    marker.setAttribute("refY","5");
+    marker.setAttribute("markerWidth","7");
+    marker.setAttribute("markerHeight","7");
+    marker.setAttribute("orient","auto-start-reverse");
+
+    const path = document.createElementNS("http://www.w3.org/2000/svg","path");
+    path.setAttribute("d","M 0 0 L 10 5 L 0 10 z");
+    path.setAttribute("fill","#111");
+    marker.appendChild(path);
+    defs.appendChild(marker);
+
+    svg.appendChild(defs);
+  }
+
+  function drawNode(node){
+    const g = document.createElementNS("http://www.w3.org/2000/svg","g");
+    g.setAttribute("class","node");
+    g.setAttribute("data-node-id", node.id);
+
+    // shape
+    if(node.shape === "circle"){
+      const c = document.createElementNS("http://www.w3.org/2000/svg","circle");
+      c.setAttribute("cx", node.x);
+      c.setAttribute("cy", node.y);
+      c.setAttribute("r", SIZES.circleR);
+      c.setAttribute("fill", "#fff");
+      c.setAttribute("stroke", "#111");
+      c.setAttribute("stroke-width","1.4");
+      g.appendChild(c);
+    } else if(node.shape === "rect"){
+      const r = document.createElementNS("http://www.w3.org/2000/svg","rect");
+      r.setAttribute("x", node.x - SIZES.rectW/2);
+      r.setAttribute("y", node.y - SIZES.rectH/2);
+      r.setAttribute("width", SIZES.rectW);
+      r.setAttribute("height", SIZES.rectH);
+      r.setAttribute("rx", 12);
+      r.setAttribute("ry", 12);
+      r.setAttribute("fill", "#fff");
+      r.setAttribute("stroke", "#111");
+      r.setAttribute("stroke-width","1.4");
+      g.appendChild(r);
+    } else if(node.shape === "diamond"){
+      const d = SIZES.diamondD/2;
+      const p = document.createElementNS("http://www.w3.org/2000/svg","polygon");
+      const pts = [
+        [node.x, node.y - d],
+        [node.x + d, node.y],
+        [node.x, node.y + d],
+        [node.x - d, node.y]
+      ].map(([x,y]) => `${x},${y}`).join(" ");
+      p.setAttribute("points", pts);
+      p.setAttribute("fill", "#fff");
+      p.setAttribute("stroke", "#111");
+      p.setAttribute("stroke-width","1.4");
+      g.appendChild(p);
+    }
+
+    // labels (multi-line)
+    const text = document.createElementNS("http://www.w3.org/2000/svg","text");
+    text.setAttribute("x", node.x);
+    text.setAttribute("y", node.y);
+    text.setAttribute("text-anchor","middle");
+    text.setAttribute("dominant-baseline","middle");
+
+    const lines = node.labelLines || [node.id];
+    const startY = node.y - (lines.length === 2 ? 10 : (lines.length === 1 ? 6 : 14));
+    lines.forEach((ln, i) => {
+      const tspan = document.createElementNS("http://www.w3.org/2000/svg","tspan");
+      tspan.setAttribute("x", node.x);
+      tspan.setAttribute("y", startY + i*16);
+      tspan.setAttribute("class", lines.length > 1 ? "subtitle" : "label");
+      tspan.textContent = ln;
+      text.appendChild(tspan);
+    });
+    g.appendChild(text);
+
+    // value line (if any)
+    const v = document.createElementNS("http://www.w3.org/2000/svg","text");
+    v.setAttribute("x", node.x);
+    v.setAttribute("y", node.y + 26);
+    v.setAttribute("text-anchor","middle");
+    v.setAttribute("class","value");
+    v.setAttribute("data-value-for", node.id);
+    v.textContent = ""; // populated later
+    g.appendChild(v);
+
+    // tooltip
+    if(node.tooltip){
+      const title = document.createElementNS("http://www.w3.org/2000/svg","title");
+      title.textContent = node.tooltip;
+      g.appendChild(title);
+    }
+
+    svg.appendChild(g);
+  }
+
+  function drawEdge(edge, nodeById){
+    const from = nodeById[edge.from];
+    const to = nodeById[edge.to];
+    if(!from || !to) return;
+
+    const dx = to.x - from.x;
+    const dy = to.y - from.y;
+    const len = Math.hypot(dx,dy) || 1;
+    const ux = dx/len;
+    const uy = dy/len;
+
+    const offFrom = offsetToBorder(from, ux, uy);
+    const offTo = offsetToBorder(to, -ux, -uy);
+
+    const x1 = from.x + offFrom.dx;
+    const y1 = from.y + offFrom.dy;
+    const x2 = to.x + offTo.dx;
+    const y2 = to.y + offTo.dy;
+
+    const p = document.createElementNS("http://www.w3.org/2000/svg","path");
+    p.setAttribute("class", edge.style === "dashed" ? "edge dashed" : "edge");
+    p.setAttribute("d", `M ${x1} ${y1} L ${x2} ${y2}`);
+    p.setAttribute("marker-end","url(#arrow)");
+    svg.appendChild(p);
+
+    if(edge.label){
+      const mx = (x1+x2)/2;
+      const my = (y1+y2)/2;
+      const t = document.createElementNS("http://www.w3.org/2000/svg","text");
+      t.setAttribute("x", mx + 6);
+      t.setAttribute("y", my - 6);
+      t.setAttribute("class","edgeLabel");
+      t.textContent = edge.label;
+      svg.appendChild(t);
+    }
+  }
+
+  function renderDiagram(){
+    clearSVG();
+    addDefs();
+
+    const def = MODES[state.mode];
+    svg.setAttribute("viewBox", def.viewBox);
+
+    const nodeById = {};
+    def.nodes.forEach(n => nodeById[n.id] = n);
+
+    // draw edges behind nodes
+    def.edges.forEach(e => drawEdge(e, nodeById));
+    def.nodes.forEach(n => drawNode(n));
+  }
+
+  function updateNodeValues(values){
+    const def = MODES[state.mode];
+    const nodeMap = {};
+    def.nodes.forEach(n => nodeMap[n.id] = n);
+
+    const texts = svg.querySelectorAll("text[data-value-for]");
+    texts.forEach(t => {
+      const id = t.getAttribute("data-value-for");
+      const node = nodeMap[id];
+      if(!node || !node.valueKey){
+        t.textContent = "";
+        return;
+      }
+      const key = node.valueKey;
+      let out = "";
+      if(key === "map") out = String(values.map);
+      else if(key === "K") out = fmt2(values.K);
+      else if(key === "Ct") out = fmt2(values.Ct);
+      else if(key === "tau") out = fmt2(values.tau);
+      else if(key === "Gtilde") out = fmt2(values.Gtilde);
+      else if(key === "Gt") out = values.Gt ? "IN" : "OUT";
+      else if(key === "feeling") out = fmt2(values.feel);
+      else if(key === "proc") out = fmt2(state.proc);
+      else if(key === "ideo") out = fmt2(state.ideo);
+      else if(key === "stakes") out = fmt2(state.stakes);
+      t.textContent = out;
+    });
+  }
+
+  // ---------- render UI ----------
+  function setText(id, txt){ document.getElementById(id).textContent = txt; }
+  function setBar(id, v){
+    const el = document.getElementById(id);
+    el.style.width = `${Math.round(clamp(v)*100)}%`;
+  }
+
+  function renderAll(){
+    const values = compute();
+
+    // Sync tau if linked
+    if(state.linkTau){
+      state.tau = values.tau;
+    }
+
+    // UI readouts
+    setText("mapVal", state.map ? "1" : "0");
+    setText("KVal", fmt2(state.K));
+    setText("CtVal", fmt2(state.Ct));
+    setText("stakesVal", fmt2(state.stakes));
+    setText("tauVal", fmt2(values.tau));
+    setText("procVal", fmt2(state.proc));
+    setText("ideoVal", fmt2(state.ideo));
+
+    setText("GtildeNum", fmt2(values.Gtilde));
+    setText("tauNum", fmt2(values.tau));
+    setText("GtNum", values.Gt ? "IN" : "OUT");
+    setText("feelNum", fmt2(values.feel));
+
+    setBar("barGtilde", values.Gtilde);
+    setBar("barTau", values.tau);
+    setBar("barGt", values.Gt ? 1 : 0);
+    setBar("barFeel", values.feel);
+
+    // enable/disable tau slider
+    document.getElementById("tau").disabled = state.linkTau;
+
+    // tau coupling cue
+    const tauLabel = document.getElementById("tauLabel");
+    const tauLinkedHint = document.getElementById("tauLinkedHint");
+    const tauLinkText = document.getElementById("tauLinkText");
+
+    tauLabel.classList.toggle("muted", state.linkTau);
+    tauLinkedHint.textContent = state.linkTau ? " (linked)" : "";
+    tauLinkText.textContent = state.linkTau ? "τ = 0.20 + 0.60·stakes (edit stakes to move τ; toggle linkage to edit τ directly)" : "";
+
+    // combination weights UI
+    const weightsBox = document.getElementById("weightsBox");
+    weightsBox.classList.toggle("hidden", state.op !== "sum");
+    setText("wMapVal", fmt2(state.wMap));
+    setText("wKVal", fmt2(state.wK));
+    setText("wCtVal", fmt2(state.wCt));
+
+    // gate map UI
+    const gateMap = document.getElementById("gateMap");
+    const gateMapLabel = document.getElementById("gateMapLabel");
+    const gateMapNote = document.getElementById("gateMapNote");
+    const gateActive = (state.op === "sum");
+    gateMap.disabled = !gateActive;
+    gateMapLabel.classList.toggle("muted", !gateActive);
+    gateMapNote.textContent = gateActive ? "" : "For product/min this is already enforced.";
+    gateMapNote.classList.toggle("hidden", gateActive);
+
+    // diagram values
+    updateNodeValues(values);
+
+    // live summaries
+    const gateNote = (state.op === "sum") ? (state.gateMap ? "; map-gated" : "; not map-gated") : "";
+    const summary =
+      `Mode ${state.mode}; operator ${opLabel(state.op)}${gateNote}. ` +
+      `map=${values.map}, K=${fmt2(values.K)}, Cₜ=${fmt2(values.Ct)}, τ=${fmt2(values.tau)} ⇒ ` +
+      `G̃ₜ=${fmt2(values.Gtilde)}, Gₜ=${values.Gt ? "IN" : "OUT"}, feeling=${fmt2(values.feel)}.`;
+
+    setText("diagramSummary", summary);
+    setText("outputsSummary", summary);
+  }
+
+  // ---------- events ----------
+  function bindInputs(){
+    const elMap = document.getElementById("map");
+    const elK = document.getElementById("K");
+    const elCt = document.getElementById("Ct");
+    const elStakes = document.getElementById("stakes");
+    const elLinkTau = document.getElementById("linkTau");
+    const elTau = document.getElementById("tau");
+    const elProc = document.getElementById("proc");
+    const elIdeo = document.getElementById("ideo");
+    const elOp = document.getElementById("op");
+    const elGateMap = document.getElementById("gateMap");
+    const elWm = document.getElementById("wMap");
+    const elWk = document.getElementById("wK");
+    const elWc = document.getElementById("wCt");
+
+    // initial widget positions
+    elMap.checked = !!state.map;
+    elK.value = state.K;
+    elCt.value = state.Ct;
+    elStakes.value = state.stakes;
+    elLinkTau.checked = state.linkTau;
+    elTau.value = state.tau;
+    elProc.value = state.proc;
+    elIdeo.value = state.ideo;
+    elOp.value = state.op;
+    elGateMap.checked = state.gateMap;
+    elWm.value = state.wMap;
+    elWk.value = state.wK;
+    elWc.value = state.wCt;
+
+    elMap.addEventListener("change", () => { state.map = elMap.checked ? 1 : 0; renderAll(); });
+    elK.addEventListener("input", () => { state.K = parseFloat(elK.value); renderAll(); });
+    elCt.addEventListener("input", () => { state.Ct = parseFloat(elCt.value); renderAll(); });
+    elStakes.addEventListener("input", () => { state.stakes = parseFloat(elStakes.value); renderAll(); });
+    elLinkTau.addEventListener("change", () => { state.linkTau = elLinkTau.checked; renderAll(); });
+    elTau.addEventListener("input", () => { state.tau = parseFloat(elTau.value); renderAll(); });
+    elProc.addEventListener("input", () => { state.proc = parseFloat(elProc.value); renderAll(); });
+    elIdeo.addEventListener("input", () => { state.ideo = parseFloat(elIdeo.value); renderAll(); });
+    elOp.addEventListener("change", () => { state.op = elOp.value; renderAll(); });
+    elGateMap.addEventListener("change", () => { state.gateMap = elGateMap.checked; renderAll(); });
+    elWm.addEventListener("input", () => { state.wMap = parseFloat(elWm.value); renderAll(); });
+    elWk.addEventListener("input", () => { state.wK = parseFloat(elWk.value); renderAll(); });
+    elWc.addEventListener("input", () => { state.wCt = parseFloat(elWc.value); renderAll(); });
+  }
+
+  function bindModeButtons(){
+    const box = document.getElementById("modeButtons");
+    box.addEventListener("click", (e) => {
+      const btn = e.target.closest("button[data-mode]");
+      if(!btn) return;
+      state.mode = btn.getAttribute("data-mode");
+      [...box.querySelectorAll("button")].forEach(b => b.classList.toggle("active", b===btn));
+      renderDiagram();
+      renderAll();
+    });
+  }
+
+  function bindPresets(){
+    const box = document.getElementById("presetButtons");
+    box.addEventListener("click", (e) => {
+      const btn = e.target.closest("button[data-preset]");
+      if(!btn) return;
+      const p = btn.getAttribute("data-preset");
+      if(p === "crash"){
+        state.map = 0;
+        state.K = 0.70;
+        state.Ct = 0.70;
+        state.proc = 0.20;
+        state.ideo = 0.10;
+        state.stakes = 0.50;
+        state.linkTau = true;
+        state.gateMap = true;
+      } else if(p === "clash"){
+        state.map = 1;
+        state.K = 0.20;
+        state.Ct = 0.90;
+        state.proc = 0.15;
+        state.ideo = 0.05;
+        state.stakes = 0.55;
+        state.linkTau = true;
+        state.gateMap = true;
+      } else if(p === "exclusion"){
+        state.map = 1;
+        state.K = 0.90;
+        state.Ct = 0.05;
+        state.proc = 0.10;
+        state.ideo = 0.10;
+        state.stakes = 0.55;
+        state.linkTau = true;
+        state.gateMap = true;
+      } else if(p === "unease"){
+        state.map = 1;
+        state.K = 0.90;
+        state.Ct = 0.90;
+        state.proc = 0.85;
+        state.ideo = 0.05;
+        state.stakes = 0.40;
+        state.linkTau = true;
+        state.gateMap = true;
+      } else if(p === "stigma"){
+        state.map = 1;
+        state.K = 0.90;
+        state.Ct = 0.80;
+        state.proc = 0.10;
+        state.ideo = 0.90;
+        state.stakes = 0.60;
+        state.linkTau = true;
+        state.gateMap = true;
+      } else if(p === "reset"){
+        state.map = 1;
+        state.K = 0.90;
+        state.Ct = 0.80;
+        state.proc = 0.10;
+        state.ideo = 0.10;
+        state.stakes = 0.50;
+        state.linkTau = true;
+        state.tau = 0.50;
+        state.op = "product";
+        state.gateMap = true;
+        state.wMap = 0.33;
+        state.wK = 0.33;
+        state.wCt = 0.34;
+        document.getElementById("op").value = "product";
+      }
+
+      // push values into controls
+      document.getElementById("map").checked = !!state.map;
+      document.getElementById("K").value = state.K;
+      document.getElementById("Ct").value = state.Ct;
+      document.getElementById("proc").value = state.proc;
+      document.getElementById("ideo").value = state.ideo;
+      document.getElementById("stakes").value = state.stakes;
+      document.getElementById("linkTau").checked = state.linkTau;
+      document.getElementById("tau").value = state.tau;
+      document.getElementById("op").value = state.op;
+      document.getElementById("gateMap").checked = state.gateMap;
+      document.getElementById("wMap").value = state.wMap;
+      document.getElementById("wK").value = state.wK;
+      document.getElementById("wCt").value = state.wCt;
+
+      renderAll();
+    });
+  }
+
+  // ---------- init ----------
+  bindInputs();
+  bindModeButtons();
+  bindPresets();
+  renderDiagram();
+  renderAll();
+})();
+</script>
+</body>
+</html>
