@@ -19,6 +19,15 @@ The model name has evolved as the theory sharpened:
 | MVMG | Morphosyntactic-Value Model of Grammaticality | "Meaning" too narrow – value captures phonological/distributional regularities, is relational and contrastive (Saussure) |
 | **OVMG** | Operator-Value Model of Grammaticality | "Morphosyntax" too narrow – other languages use tone, particles, word order; "operator" is channel-agnostic |
 
+## Subprojects
+
+| Subproject | Question | Status |
+|------------|----------|--------|
+| `operator-stratum/` | What operators ARE | LingBuzz (Jan 25) |
+| `asterisk-de-idealized/` | What grammaticality IS | LingBuzz (Jan 28) |
+| `etiological-account/` | WHY gaps emerge and persist | Draft |
+| `feeling-of-ungrammaticality/` | What the FEELING is | Seed |
+
 The **operator-stratum** subproject defines what operators are. The main paper uses operators as the unit of grammatical signaling.
 
 Key equations:

@@ -158,46 +158,25 @@ A constitutive account says what a thing \emph{is}. An etiological account says 
 
 This paper develops an etiological account of repertoire exclusion. Its target is a single question: given that a form is structurally parseable and semantically coherent, why does the community sometimes treat it as categorically excluded from the repertoire?
 
-\subsection{The constitutive framework in brief}
+\subsection{Premises of the constitutive framework}
 
-Why do some utterances strike us as ungrammatical? A constitutive account starts from the observation that utterances can fail at different levels~-- and the level of failure matters for explanation.
-
-\paragraph{Three sources of failure.} Consider three utterances:
-\begin{exe}
-  \ex\label{ex:map-fail} \ungram{The of into slept.}
-  \ex\label{ex:k-fail} \odd{Colourless green ideas sleep furiously.}
-  \ex\label{ex:ct-fail} \ungram{I have 25 years.} (intended: stating one's age in English)
-\end{exe}
-
-Example~(\ref{ex:map-fail}) fails because no parse assigns it a coherent structure-value pairing: it doesn't \emph{map}. Example~(\ref{ex:k-fail}) parses fine but fails because the values clash: colourless things aren't green, abstract entities don't sleep. It lacks \term{interpretive coherence}. Example~(\ref{ex:ct-fail}) is different: the structure is trivial, the meaning is transparent, and yet English speakers reject it. What's wrong isn't the form itself but its \term{repertoire status}: this isn't how English speakers express age, even though French and Spanish speakers use an analogous construction without difficulty.
-
-A constitutive account captures these distinctions by decomposing grammatical status into three quantities:
+The etiological argument developed here presupposes the \term{constitutive framework} \citep{ReynoldsKind_inprep}. In that framework, grammatical status is not an architectural primitive but a derived property. The account rests on three specific premises which must be granted for the present argument:
 
 \begin{enumerate}
-  \item $\mathsf{map}(u,c)$: \term{mapping viability}. Does the form support a systematic pairing of structure and value? This includes successful parsing, morphological well-formedness, and the availability of a compositional interpretation. It reflects the biophysical constraints of the processor: working memory limits, motor planning bottlenecks, and parser throughput. If parsing fails outright or no coherent structure-value mapping exists, $\mathsf{map}$ is zero or near-zero. Example~(\ref{ex:map-fail}) fails here.
+  \item \textbf{Decomposition.} Grammatical status decomposes into three multiplicative components:
+  \begin{itemize}
+    \item $\mathsf{map}(u,c)$ (\term{mapping viability}): Does the form support a coherent structure-value pairing given the biophysical constraints of the processor? (Fails for \ungram{The of into slept}.)
+    \item $K(u,c)$ (\term{interpretive coherence}): Do the values cohere with one another and the conditioning state? (Fails for \odd{Colourless green ideas sleep furiously}.)
+    \item $C_t(u,c)$ (\term{repertoire status}): Is the form part of the community's repertoire for conditioning state $c$? (Fails for \ungram{I have 25 years} in English.)
+  \end{itemize}
+  The stability score is their product: $\widetilde{G}_t(u,c) = \mathsf{map} \cdot K \cdot C_t$.
 
-  \item $K(u,c)$: \term{interpretive coherence}. Do the values carried by the form cohere with one another and with the conditioning state? Semantic anomaly, Example~(\ref{ex:k-fail}), pragmatic incongruity (answering a yes/no question with an existential claim), and logical incoherence (presupposition failure) all lower $K$. A form can map perfectly but fail to cohere.
+  \item \textbf{Externalism about status.} The component $C_t$ is a community-level variable, not an internal mental state. It tracks the distribution of licensing in the population. While individual competence contributes to this distribution, the variable $C_t$ itself describes the specific communicative environment the learner navigates.
 
-  \item $C_t(u,c)$: \term{repertoire status}. Is the form part of the community's grammatical repertoire for conditioning state $c$ at time $t$? This is the socially contingent component: it can vary across dialects, registers, and eras without any change in $\mathsf{map}$ or $K$. Example~(\ref{ex:ct-fail}) fails here: the form maps, it coheres, but English speakers don't use it for this purpose.
+  \item \textbf{Continuity and Thresholding.} Status is fundamentally continuous ($\widetilde{G} \in [0,1]$) but is treated categorically in high-stakes coordination. Categoricality arises when the stability score clears a situation-specific threshold $\tau(c)$, fixed by the cost of coordination failure: $G_t = \mathbb{I}\!\left[\widetilde{G}_t \ge \tau(c)\right]$.
 \end{enumerate}
 
-\paragraph{Conditioning states.} The subscript $c$ in these quantities denotes the \term{conditioning state}: the full context that determines what counts as grammatical \emph{here and now}. This includes the register (formal vs.\ casual), the speech community (which dialect?), the genre (academic prose vs.\ text message), the discourse context (what's been said so far), and the communicative intentions in play. The same form can have different status across conditioning states: a contraction acceptable in casual speech may be excluded from formal writing; a dialectal construction in-repertoire for one community may be excluded for another. Grammaticality is always \emph{conditioned}.
-
-\paragraph{Why multiplication?} The three quantities combine multiplicatively:
-\begin{equation}\label{eq:stability}
-\widetilde{G}_t(u,c) = \mathsf{map}(u,c) \cdot K(u,c) \cdot C_t(u,c).
-\end{equation}
-The product structure captures the intuition that any zero kills the result. A form that doesn't parse ($\mathsf{map} = 0$) can't be rescued by being in the repertoire. A form that's categorically excluded ($C_t = 0$) can't be rescued by perfect coherence. The quantities are individually necessary: failure at any level is sufficient for ungrammaticality.
-
-This gives us a continuous \term{stability score} $\widetilde{G}_t(u,c)$ that ranges from zero (any component is zero) to values approaching one (all components are high). But grammaticality judgments are often categorical: speakers say \enquote{yes} or \enquote{no}, not \enquote{0.73}. How does a continuous score yield categorical judgments?
-
-\paragraph{The threshold.} Categorical membership emerges by thresholding:
-\begin{equation}\label{eq:membership}
-G_t(u,c) = \mathbb{I}\!\left[\widetilde{G}_t(u,c) \ge \tau(c)\right],
-\end{equation}
-where $\mathbb{I}[\cdot]$ is the indicator function (1 if the condition holds, 0 otherwise) and $\tau(c)$ is a situation-sensitive \term{threshold}. When the stability score clears the threshold, the form counts as grammatical in that conditioning state; when it falls short, it counts as ungrammatical.
-
-What determines $\tau(c)$? The threshold reflects coordination stakes. In high-stakes communicative situations~-- formal presentations, institutional gatekeeping, contexts where misunderstanding has serious consequences~-- the cost of coordination failure is high, and so is $\tau$. Speakers police their output more carefully; hearers are less tolerant of deviation. In low-stakes situations~-- casual in-group conversation, play, contexts where repair is cheap~-- $\tau$ drops. The same form with the same $\widetilde{G}$ may clear the threshold in one context and fail in another. This is why register matters: it shifts the threshold, not (necessarily) the underlying stability score.
+These premises are taken as axioms for the remainder of this paper, which focuses exclusively on the etiology of $C_t$.
 
 \subsection{This paper's focus: $C_t$ trajectories}
 
