@@ -1,10 +1,18 @@
 # STATUS.md - The Operator Stratum
 
 **Created:** 2026-01-24
-**Last updated:** 2026-01-26
-**Status:** Published preprint (revised)
-**LingBuzz:** Uploaded 2026-01-25; revision ready for re-upload
+**Last updated:** 2026-06-02
+**Status:** Under initial editorial evaluation at *Functions of Language*
+**LingBuzz:** Uploaded 2026-01-25
+**Journal submission:** Submitted to *Functions of Language* 2026-06-02; acknowledgement received, now with editorial team for initial evaluation.
 **Parent project:** Grammaticality_de_idealized (MVMG)
+
+### 2026-06-02 Submission Notes
+- Submitted as: "Why clause structure is judged like tense and agreement: public-update operators and grammaticality"
+- Target journal: *Functions of Language*
+- Anonymous package prepared in `submission/fol-anonymous/`
+- Copy-paste submission metadata retained in `submission/fol-submission-copy-paste.md`
+- Next action: wait for initial editorial evaluation.
 
 ### 2026-01-26 Session Notes
 - Revised per Geoff Pullum feedback on title/abstract opacity
