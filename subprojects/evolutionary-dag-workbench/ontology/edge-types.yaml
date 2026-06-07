@@ -1,0 +1,42 @@
+# Edge types for conceptual DAGs.
+
+edge_types:
+  causal:
+    definition: Intervention on the source would change the target, holding relevant background fixed.
+    examples:
+      - schooling_instructional_exposure -> reported_acceptability
+      - processing_cost -> felt_naturalness_context
+
+  mediating:
+    definition: The source transmits part of another relation's effect to the target.
+    examples:
+      - entrenchment mediates usage_frequency -> production_probability
+
+  measurement:
+    definition: The target is an observed indicator, proxy, or task output for the source.
+    examples:
+      - community_licensing -> reported_acceptability
+      - processing_cost -> response_latency
+
+  constitutive:
+    definition: The source is a component or partial realizer of the target under a theory.
+    examples:
+      - operator_value -> grammaticality_attribution
+
+  evidential:
+    definition: The source is evidence for the target but not necessarily a cause, mediator, or component.
+    examples:
+      - metalinguistic_condemnation -> standard_language_ideology
+
+  time_lagged:
+    definition: The source at time t affects the target at a later time slice.
+    examples:
+      - production_probability_t -> usage_frequency_t1
+      - reported_acceptability_t -> production_probability_t1
+
+constraints:
+  - Non-time-indexed graphs must be acyclic.
+  - Feedback has to be represented with time-indexed variables or time_lagged edges.
+  - Measurement proxies cannot be used as direct synonyms for constructs.
+  - A graph cannot use grammaticality_attribution as both the explanandum and its own cause.
+  - Edge rationales should state why the edge is causal, measurement, constitutive, evidential, or time-lagged.

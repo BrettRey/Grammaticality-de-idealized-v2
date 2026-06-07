@@ -1,0 +1,57 @@
+{
+  "id": "usage-heavy-seed",
+  "title": "Usage-heavy seed graph",
+  "family": "usage-heavy",
+  "status": "seed",
+  "nodes": [
+    "usage_frequency",
+    "opportunity_mass",
+    "entrenchment",
+    "constructional_analogy",
+    "production_probability",
+    "reported_acceptability"
+  ],
+  "edges": [
+    {
+      "source": "opportunity_mass",
+      "target": "usage_frequency",
+      "type": "causal",
+      "rationale": "Observed frequency depends on how many contexts could have hosted the form."
+    },
+    {
+      "source": "usage_frequency",
+      "target": "entrenchment",
+      "type": "causal",
+      "rationale": "Repeated exposure can change learned accessibility."
+    },
+    {
+      "source": "constructional_analogy",
+      "target": "production_probability",
+      "type": "causal",
+      "rationale": "Analogical support can increase production probability."
+    },
+    {
+      "source": "entrenchment",
+      "target": "production_probability",
+      "type": "causal",
+      "rationale": "Entrenched forms are easier to produce."
+    },
+    {
+      "source": "entrenchment",
+      "target": "reported_acceptability",
+      "type": "causal",
+      "rationale": "Entrenchment can increase felt familiarity and acceptance."
+    }
+  ],
+  "scores": {
+    "empirical_coverage": 0,
+    "counterexample_resilience": 0,
+    "measurement_clarity": 0,
+    "explanatory_payoff": 0,
+    "cross_domain_stability": 0,
+    "complexity_penalty": 0,
+    "circularity_penalty": 0,
+    "construct_confusion_penalty": 0
+  },
+  "notes": "Likely strong on frequency-sensitive cases; should be attacked with rare licensed forms and frequent condemned forms."
+}

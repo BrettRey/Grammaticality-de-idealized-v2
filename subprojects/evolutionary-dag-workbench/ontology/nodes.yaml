@@ -1,0 +1,316 @@
+# Controlled vocabulary for conceptual DAGs.
+# Keep node IDs stable. Add aliases instead of renaming when possible.
+
+outcome_like:
+  - id: reported_acceptability
+    label: Reported acceptability
+    definition: Overt binary, scalar, or comparative judgment elicited by a task.
+    proxies:
+      - magnitude-estimation score
+      - Likert acceptability rating
+      - forced-choice response
+    forbidden_conflations:
+      - grammaticality
+      - community licensing
+      - felt naturalness
+
+  - id: grammaticality_attribution
+    label: Grammaticality attribution
+    definition: Speaker or analyst classification of a form as grammatical, ungrammatical, marginal, or otherwise grammar-relevant.
+    proxies:
+      - asterisk use
+      - explicit metalinguistic classification
+      - reviewer or teacher correction label
+    forbidden_conflations:
+      - underlying grammar
+      - reported acceptability
+      - theoretical grammaticality
+
+  - id: production_probability
+    label: Production probability
+    definition: Probability that a speaker or community produces a form in a specified context.
+    proxies:
+      - corpus frequency under opportunity normalization
+      - elicited production frequency
+      - conversational production rate
+    forbidden_conflations:
+      - usage frequency without opportunity normalization
+      - acceptability
+      - entrenchment
+
+  - id: editorial_correction_probability
+    label: Editorial or pedagogical correction probability
+    definition: Probability that a form is corrected, marked, rejected, or reformulated by an institutional or pedagogical actor.
+    proxies:
+      - teacher correction rates
+      - copy-editing changes
+      - grammar-checker flags
+    forbidden_conflations:
+      - communicative failure
+      - community licensing
+      - grammatical impossibility
+
+  - id: felt_naturalness_context
+    label: Felt naturalness in context
+    definition: Speaker's context-sensitive sense that a form feels ordinary, smooth, or usable.
+    proxies:
+      - naturalness ratings
+      - response latencies
+      - self-reported oddness
+    forbidden_conflations:
+      - grammaticality
+      - reported acceptability
+      - processing cost
+
+  - id: community_licensing
+    label: Community licensing
+    definition: Degree to which a form is licensed in a specified speech community, register, situation, or genre.
+    proxies:
+      - opportunity-normalized attestation
+      - community-specific judgments
+      - repair and correction patterns
+    forbidden_conflations:
+      - standard-language ideology
+      - raw frequency
+      - individual preference
+
+  - id: register_genre_appropriateness
+    label: Register or genre appropriateness
+    definition: Fit between a form and the situated register, genre, medium, or activity type.
+    proxies:
+      - framing-conditional judgment shift
+      - genre-conditioned corpus distribution
+      - style-guide treatment
+    forbidden_conflations:
+      - grammaticality
+      - standardness
+      - community licensing
+
+  - id: repair_reformulation_pressure
+    label: Repair or reformulation pressure
+    definition: Pressure toward repair, repetition, clarification, correction, or alternative formulation.
+    proxies:
+      - conversational repair
+      - editor rewrite
+      - classroom correction
+      - self-repair
+    forbidden_conflations:
+      - processing cost alone
+      - grammaticality attribution
+      - communicative failure alone
+
+  - id: metalinguistic_condemnation
+    label: Metalinguistic condemnation
+    definition: Explicit rejection, stigma, or rule-based condemnation of a form.
+    proxies:
+      - usage-guide condemnation
+      - social-media correction
+      - teacher or editor comment
+    forbidden_conflations:
+      - unacceptability
+      - impossibility
+      - low frequency
+
+upstream_or_mediating:
+  - id: usage_frequency
+    label: Usage frequency
+    definition: Observed rate of a form in a domain before opportunity normalization.
+    proxies:
+      - corpus count
+      - document frequency
+      - token rate
+    forbidden_conflations:
+      - entrenchment
+      - community licensing
+      - conventionalization
+
+  - id: opportunity_mass
+    label: Opportunity mass
+    definition: Quantity of contexts where a form could have appeared if licensed.
+    proxies:
+      - competitor contexts
+      - paraphrase opportunity sets
+      - syntactic environment counts
+    forbidden_conflations:
+      - raw frequency
+      - production probability
+
+  - id: entrenchment
+    label: Entrenchment
+    definition: Learned strength or accessibility of a form or construction from exposure and use.
+    proxies:
+      - priming effect
+      - reaction-time facilitation
+      - learning curve
+      - persistence under exposure
+    forbidden_conflations:
+      - frequency
+      - conventionalization
+      - acceptability
+
+  - id: processing_cost
+    label: Processing cost
+    definition: Cognitive difficulty of parsing, integrating, or repairing a form in context.
+    proxies:
+      - reading time
+      - ERP profile
+      - garden-path effect
+      - memory-load manipulation
+    forbidden_conflations:
+      - ungrammaticality
+      - semantic incoherence
+      - low frequency
+
+  - id: semantic_pragmatic_recoverability
+    label: Semantic-pragmatic recoverability
+    definition: Degree to which an intended meaning or discourse move can be recovered despite formal anomaly, rarity, or mismatch.
+    proxies:
+      - paraphrase success
+      - comprehension accuracy
+      - repair outcome
+    forbidden_conflations:
+      - grammaticality
+      - acceptability
+      - processing ease
+
+  - id: constructional_analogy
+    label: Constructional analogy
+    definition: Support from similar constructions, patterns, schemas, or distributional neighborhoods.
+    proxies:
+      - type frequency
+      - analogical neighborhood density
+      - productivity diagnostics
+    forbidden_conflations:
+      - token frequency
+      - community licensing
+
+  - id: operator_value
+    label: Operator value
+    definition: Public-update value involving commitments, roles, scope, reference, dependency, repair, or discourse configuration.
+    proxies:
+      - clause typing
+      - tense or agreement contrast
+      - dependency licensing
+      - repair asymmetry
+    forbidden_conflations:
+      - any form-meaning relation
+      - payload semantics
+      - indexical value
+
+  - id: social_indexical_value
+    label: Social-indexical value
+    definition: Value by which a form indexes personae, groups, stances, identities, or social positions.
+    proxies:
+      - matched-guise effect
+      - persona association
+      - indexical-field mapping
+    forbidden_conflations:
+      - standard-language ideology
+      - register fit
+      - operator value
+
+  - id: standard_language_ideology
+    label: Standard-language ideology
+    definition: Institutionalized belief that some forms are intrinsically correct, educated, logical, or proper.
+    proxies:
+      - usage-guide rule
+      - school correction
+      - editor preference
+      - correctness framing effect
+    forbidden_conflations:
+      - community licensing
+      - grammatical impossibility
+      - communicative success
+
+  - id: schooling_instructional_exposure
+    label: Schooling or instructional exposure
+    definition: Exposure to explicit instruction, correction, tests, editing norms, or standardized language ideology.
+    proxies:
+      - education history
+      - editorial training
+      - grammar-test exposure
+    forbidden_conflations:
+      - linguistic competence
+      - community membership
+
+  - id: genre
+    label: Genre
+    definition: Recognized text or interaction type with expectations for form, function, and stance.
+    proxies:
+      - register label
+      - publication type
+      - classroom or workplace task
+    forbidden_conflations:
+      - medium
+      - standardness
+
+  - id: medium
+    label: Medium
+    definition: Channel of production or reception, such as speech, writing, messaging, editing, or test response.
+    proxies:
+      - spoken transcript
+      - edited prose
+      - chat message
+      - survey item
+    forbidden_conflations:
+      - genre
+      - register
+
+  - id: speaker_identity
+    label: Speaker identity
+    definition: Socially interpreted identity of the speaker or writer as cued or inferred in context.
+    proxies:
+      - matched-guise cue
+      - dialect label
+      - demographic cue
+    forbidden_conflations:
+      - competence
+      - variety
+      - authority
+
+  - id: audience_design
+    label: Audience design
+    definition: Adaptation of form to anticipated audience, evaluator, interlocutor, or institution.
+    proxies:
+      - addressee manipulation
+      - formal/informal audience cue
+      - edit-for-reader task
+    forbidden_conflations:
+      - genre
+      - standard-language ideology
+
+  - id: diachronic_stabilization
+    label: Diachronic stabilization
+    definition: Historical process by which a form, gap, correction pattern, or evaluative association becomes stable over time.
+    proxies:
+      - time-series corpus trend
+      - cohort difference
+      - historical usage-guide trajectory
+    forbidden_conflations:
+      - synchronic acceptability
+      - raw frequency trend
+
+measurement:
+  - id: measurement_task
+    label: Measurement task
+    definition: The elicitation procedure through which a response is collected.
+    proxies:
+      - acceptability survey
+      - forced choice
+      - magnitude estimation
+      - production task
+    forbidden_conflations:
+      - target construct
+      - channel
+
+  - id: task_framing
+    label: Task framing
+    definition: Explicit or implicit cue about what kind of response is being requested.
+    proxies:
+      - correctness wording
+      - naturalness wording
+      - register cue
+      - speaker-cue manipulation
+    forbidden_conflations:
+      - standard-language ideology
+      - genre

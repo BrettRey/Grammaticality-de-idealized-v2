@@ -1,0 +1,190 @@
+#!/usr/bin/env python3
+"""Lint graph JSON files against the local ontology and scoring conventions."""
+
+from __future__ import annotations
+
+import json
+import re
+import sys
+from pathlib import Path
+
+import validate_graph
+
+
+ROOT = Path(__file__).resolve().parents[1]
+NODES_PATH = ROOT / "ontology" / "nodes.yaml"
+
+STATUSES = {"seed", "candidate", "archived", "rejected", "superseded"}
+SCORE_KEYS = [
+    "empirical_coverage",
+    "counterexample_resilience",
+    "measurement_clarity",
+    "explanatory_payoff",
+    "cross_domain_stability",
+    "complexity_penalty",
+    "circularity_penalty",
+    "construct_confusion_penalty",
+]
+
+FAMILY_PATTERN = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
+NODE_ID_PATTERN = re.compile(r"^\s*-\s+id:\s+([A-Za-z][A-Za-z0-9_]*)\s*$")
+TIME_SLICE_PATTERN = re.compile(r"^(?P<base>.+)_t(?P<index>[0-9]*)$")
+
+
+def load_controlled_nodes(path: Path = NODES_PATH) -> set[str]:
+    node_ids: set[str] = set()
+    with path.open(encoding="utf-8") as handle:
+        for line in handle:
+            match = NODE_ID_PATTERN.match(line)
+            if match:
+                node_ids.add(match.group(1))
+    if not node_ids:
+        raise ValueError(f"{path}: no controlled node ids found")
+    return node_ids
+
+
+def load_json(path: Path) -> dict | None:
+    try:
+        with path.open(encoding="utf-8") as handle:
+            data = json.load(handle)
+    except Exception:
+        return None
+    return data if isinstance(data, dict) else None
+
+
+def known_node(node: str, controlled_nodes: set[str]) -> bool:
+    if node in controlled_nodes:
+        return True
+    match = TIME_SLICE_PATTERN.match(node)
+    if not match:
+        return False
+    return match.group("base") in controlled_nodes
+
+
+def score_value(scores: dict, key: str) -> float | None:
+    value = scores.get(key)
+    if isinstance(value, bool) or not isinstance(value, (int, float)):
+        return None
+    return float(value)
+
+
+def lint_family_and_status(graph: dict, path: Path) -> list[str]:
+    errors: list[str] = []
+
+    family = graph.get("family")
+    if not isinstance(family, str) or not family:
+        errors.append(f"{path}: missing non-empty string field 'family'")
+    elif not FAMILY_PATTERN.fullmatch(family):
+        errors.append(f"{path}: family {family!r} must be a lowercase hyphenated slug")
+
+    status = graph.get("status")
+    if not isinstance(status, str) or not status:
+        errors.append(f"{path}: missing non-empty string field 'status'")
+    elif status not in STATUSES:
+        allowed = ", ".join(sorted(STATUSES))
+        errors.append(f"{path}: status {status!r} is not allowed; expected one of {allowed}")
+
+    return errors
+
+
+def lint_nodes(graph: dict, path: Path, controlled_nodes: set[str]) -> list[str]:
+    errors: list[str] = []
+    seen: set[str] = set()
+
+    for index, node in enumerate(graph.get("nodes", []), start=1):
+        try:
+            node = validate_graph.node_id(node)
+        except ValueError as exc:
+            errors.append(f"{path}: {exc}")
+            continue
+
+        if node in seen:
+            errors.append(f"{path}: duplicate node id {node!r}")
+        seen.add(node)
+
+        if not known_node(node, controlled_nodes):
+            errors.append(
+                f"{path}: node {index} id {node!r} is not in ontology/nodes.yaml "
+                "or a time-sliced extension of a controlled node"
+            )
+
+    return errors
+
+
+def lint_scores(graph: dict, path: Path) -> list[str]:
+    errors: list[str] = []
+    scores = graph.get("scores")
+    status = graph.get("status")
+
+    if scores is None:
+        if status == "seed":
+            errors.append(f"{path}: seed graphs must include an all-zero scores block")
+        return errors
+
+    if not isinstance(scores, dict):
+        return [f"{path}: scores must be an object"]
+
+    missing = [key for key in SCORE_KEYS if key not in scores]
+    extra = [key for key in scores if key not in SCORE_KEYS]
+    for key in missing:
+        errors.append(f"{path}: scores missing dimension {key!r}")
+    for key in extra:
+        errors.append(f"{path}: scores has unknown dimension {key!r}")
+
+    values: dict[str, float] = {}
+    for key in SCORE_KEYS:
+        value = score_value(scores, key)
+        if value is None:
+            errors.append(f"{path}: score {key!r} must be numeric and not boolean")
+        else:
+            values[key] = value
+
+    if status == "seed":
+        nonzero = [key for key, value in values.items() if value != 0]
+        for key in nonzero:
+            errors.append(f"{path}: seed score {key!r} must remain zero pending critique")
+
+    return errors
+
+
+def lint(path: Path, controlled_nodes: set[str]) -> list[str]:
+    errors = validate_graph.validate(path)
+    graph = load_json(path)
+    if graph is None:
+        return errors
+
+    errors.extend(lint_family_and_status(graph, path))
+    errors.extend(lint_nodes(graph, path, controlled_nodes))
+    errors.extend(lint_scores(graph, path))
+    return errors
+
+
+def main(argv: list[str]) -> int:
+    if not argv:
+        print("usage: lint_graph.py GRAPH.json [GRAPH.json ...]", file=sys.stderr)
+        return 2
+
+    try:
+        controlled_nodes = load_controlled_nodes()
+    except Exception as exc:  # noqa: BLE001 - CLI should report any ontology load error.
+        print(exc, file=sys.stderr)
+        return 1
+
+    all_errors: list[str] = []
+    for raw_path in argv:
+        path = Path(raw_path)
+        errors = lint(path, controlled_nodes)
+        if errors:
+            all_errors.extend(errors)
+        else:
+            print(f"ok: {path}")
+
+    if all_errors:
+        for error in all_errors:
+            print(error, file=sys.stderr)
+        return 1
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main(sys.argv[1:]))

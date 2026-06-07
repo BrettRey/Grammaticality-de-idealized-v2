@@ -1,0 +1,57 @@
+{
+  "id": "detector-seed",
+  "title": "Judgment-as-detector seed graph",
+  "family": "detector",
+  "status": "seed",
+  "nodes": [
+    "community_licensing",
+    "processing_cost",
+    "standard_language_ideology",
+    "task_framing",
+    "reported_acceptability",
+    "grammaticality_attribution"
+  ],
+  "edges": [
+    {
+      "source": "community_licensing",
+      "target": "reported_acceptability",
+      "type": "measurement",
+      "rationale": "Reported acceptability is evidence for licensing only through a fallible detector."
+    },
+    {
+      "source": "processing_cost",
+      "target": "reported_acceptability",
+      "type": "causal",
+      "rationale": "Processing load can shift the detector output."
+    },
+    {
+      "source": "standard_language_ideology",
+      "target": "reported_acceptability",
+      "type": "causal",
+      "rationale": "Prescriptive ideology can shift the response under judgment tasks."
+    },
+    {
+      "source": "task_framing",
+      "target": "reported_acceptability",
+      "type": "causal",
+      "rationale": "Correctness, naturalness, and register cues change the response criterion."
+    },
+    {
+      "source": "reported_acceptability",
+      "target": "grammaticality_attribution",
+      "type": "evidential",
+      "rationale": "Judgment reports are evidence used in attribution, not transparent access to the target."
+    }
+  ],
+  "scores": {
+    "empirical_coverage": 0,
+    "counterexample_resilience": 0,
+    "measurement_clarity": 0,
+    "explanatory_payoff": 0,
+    "cross_domain_stability": 0,
+    "complexity_penalty": 0,
+    "circularity_penalty": 0,
+    "construct_confusion_penalty": 0
+  },
+  "notes": "Seed imported from the judgments-as-detectors project. It may underweight production-side and diachronic dynamics. Scores remain zero pending adversarial critique."
+}
