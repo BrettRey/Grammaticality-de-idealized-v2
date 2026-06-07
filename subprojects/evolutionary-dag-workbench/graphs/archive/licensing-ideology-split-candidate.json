@@ -1,0 +1,98 @@
+{
+  "id": "licensing-ideology-split-candidate",
+  "title": "Licensing-ideology split candidate",
+  "family": "licensing-ideology-split",
+  "status": "candidate",
+  "notes": "Candidate representation generated after the first adversarial pass. It is not scored as strong; it is meant to test whether community licensing can be kept distinct from standard-language ideology, correction pressure, and reported acceptability.",
+  "nodes": [
+    "community_licensing",
+    "standard_language_ideology",
+    "metalinguistic_condemnation",
+    "editorial_correction_probability",
+    "production_probability",
+    "speaker_identity",
+    "genre",
+    "register_genre_appropriateness",
+    "task_framing",
+    "reported_acceptability",
+    "grammaticality_attribution"
+  ],
+  "edges": [
+    {
+      "source": "speaker_identity",
+      "target": "reported_acceptability",
+      "type": "causal",
+      "rationale": "Speaker cues can shift judgment responses, especially where a form is socially indexed or dialectally marked."
+    },
+    {
+      "source": "genre",
+      "target": "register_genre_appropriateness",
+      "type": "causal",
+      "rationale": "Genre conditions which forms count as contextually appropriate without by itself deciding grammatical status."
+    },
+    {
+      "source": "register_genre_appropriateness",
+      "target": "reported_acceptability",
+      "type": "causal",
+      "rationale": "Register mismatch can lower reported acceptability even when a form remains licensed in its community."
+    },
+    {
+      "source": "task_framing",
+      "target": "reported_acceptability",
+      "type": "causal",
+      "rationale": "Judgment instructions can cue school-grammar, dialect-tolerance, or communicative-success criteria."
+    },
+    {
+      "source": "standard_language_ideology",
+      "target": "metalinguistic_condemnation",
+      "type": "causal",
+      "rationale": "Ideological norm-centres can generate explicit condemnation of forms independently of community licensing."
+    },
+    {
+      "source": "standard_language_ideology",
+      "target": "reported_acceptability",
+      "type": "causal",
+      "rationale": "Prestige norms can depress acceptability reports for stigmatized but licensed forms."
+    },
+    {
+      "source": "metalinguistic_condemnation",
+      "target": "editorial_correction_probability",
+      "type": "causal",
+      "rationale": "Explicit condemnation predicts correction in edited or pedagogical contexts."
+    },
+    {
+      "source": "community_licensing",
+      "target": "production_probability",
+      "type": "causal",
+      "rationale": "Forms licensed by a community should be available for production within the relevant contexts."
+    },
+    {
+      "source": "community_licensing",
+      "target": "grammaticality_attribution",
+      "type": "evidential",
+      "rationale": "Community licensing is evidence for grammaticality attribution, but the candidate does not identify it with the attribution itself."
+    },
+    {
+      "source": "editorial_correction_probability",
+      "target": "grammaticality_attribution",
+      "type": "evidential",
+      "rationale": "Correction behaviour can inform attribution, while remaining separable from licensing because correction can be ideological."
+    },
+    {
+      "source": "reported_acceptability",
+      "target": "grammaticality_attribution",
+      "type": "evidential",
+      "rationale": "Acceptability reports are evidence about grammaticality attribution, not a direct measurement of grammaticality."
+    }
+  ],
+  "scores": {
+    "empirical_coverage": 0,
+    "counterexample_resilience": 0,
+    "measurement_clarity": 0,
+    "explanatory_payoff": 0,
+    "cross_domain_stability": 0,
+    "complexity_penalty": 0,
+    "circularity_penalty": 0,
+    "construct_confusion_penalty": 0
+  }
+}

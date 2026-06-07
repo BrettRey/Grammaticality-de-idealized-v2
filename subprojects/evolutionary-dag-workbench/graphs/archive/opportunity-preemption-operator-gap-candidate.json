@@ -1,0 +1,104 @@
+{
+  "id": "opportunity-preemption-operator-gap-candidate",
+  "title": "Opportunity-preemption operator gap candidate",
+  "family": "opportunity-preemption-operator-gap",
+  "status": "candidate",
+  "notes": "Candidate representation generated after the first adversarial pass. It tests whether opportunity-normalized absence, preemption, recoverability, and operator-value structure can jointly model gaps without letting frequency or OVMG win by definition.",
+  "nodes": [
+    "operator_value",
+    "opportunity_mass",
+    "usage_frequency",
+    "community_licensing",
+    "semantic_pragmatic_recoverability",
+    "constructional_analogy",
+    "repair_reformulation_pressure",
+    "processing_cost",
+    "reported_acceptability",
+    "production_probability",
+    "grammaticality_attribution"
+  ],
+  "edges": [
+    {
+      "source": "opportunity_mass",
+      "target": "usage_frequency",
+      "type": "causal",
+      "rationale": "Observed frequency must be interpreted against the number of contexts in which the candidate form could have occurred."
+    },
+    {
+      "source": "opportunity_mass",
+      "target": "community_licensing",
+      "type": "evidential",
+      "rationale": "Persistent absence across high-opportunity environments is evidence against licensing, while low opportunity leaves absence underdetermined."
+    },
+    {
+      "source": "usage_frequency",
+      "target": "community_licensing",
+      "type": "evidential",
+      "rationale": "Frequency is evidence for licensing only after opportunity mass is considered; it is not licensing itself."
+    },
+    {
+      "source": "operator_value",
+      "target": "community_licensing",
+      "type": "constitutive",
+      "rationale": "In this candidate, some licensing failures involve missing or mis-set operator values in a restricted public-update repertoire."
+    },
+    {
+      "source": "semantic_pragmatic_recoverability",
+      "target": "reported_acceptability",
+      "type": "causal",
+      "rationale": "Recoverable intended meanings can improve reported acceptability even when licensing remains doubtful."
+    },
+    {
+      "source": "processing_cost",
+      "target": "reported_acceptability",
+      "type": "causal",
+      "rationale": "Processing burden can lower reported acceptability and must be separated from licensing."
+    },
+    {
+      "source": "constructional_analogy",
+      "target": "production_probability",
+      "type": "causal",
+      "rationale": "Analogical support can make a candidate form producible or tempting even before it is broadly licensed."
+    },
+    {
+      "source": "community_licensing",
+      "target": "production_probability",
+      "type": "causal",
+      "rationale": "Community licensing predicts ordinary production availability in the relevant context."
+    },
+    {
+      "source": "community_licensing",
+      "target": "repair_reformulation_pressure",
+      "type": "causal",
+      "rationale": "Licensing state predicts whether speakers or editors are pressured to reformulate the expression."
+    },
+    {
+      "source": "repair_reformulation_pressure",
+      "target": "grammaticality_attribution",
+      "type": "evidential",
+      "rationale": "Repair pressure is evidence about perceived licensing failure, while also being shaped by ideology and genre in fuller models."
+    },
+    {
+      "source": "reported_acceptability",
+      "target": "grammaticality_attribution",
+      "type": "evidential",
+      "rationale": "Acceptability is retained as a judgment proxy rather than collapsed into the grammaticality target."
+    },
+    {
+      "source": "community_licensing",
+      "target": "grammaticality_attribution",
+      "type": "evidential",
+      "rationale": "Licensing is a central source of evidence for attribution but still needs adversarial testing against non-operator explanations."
+    }
+  ],
+  "scores": {
+    "empirical_coverage": 0,
+    "counterexample_resilience": 0,
+    "measurement_clarity": 0,
+    "explanatory_payoff": 0,
+    "cross_domain_stability": 0,
+    "complexity_penalty": 0,
+    "circularity_penalty": 0,
+    "construct_confusion_penalty": 0
+  }
+}
