@@ -8,12 +8,22 @@
 *.log
 *.out
 *.run.xml
+*.xdv
 *.synctex.gz
 *.toc
 *.lof
 *.lot
 *.nav
 *.snm
+biber_debug.txt
+biber_err.txt
+biber_out.txt
+
+# Generated PDFs are ignored by default. Use `git add -f` for explicit releases.
+*.pdf
+
+# Generated script outputs
+simulation_data.dat
 
 # Python
 __pycache__/

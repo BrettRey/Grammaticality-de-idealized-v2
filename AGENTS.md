@@ -6,8 +6,8 @@
 - Analytical prototype lives in `validate_entrenchment_measurement.py` for factor-analysis simulations; no package layout is used.
 
 ## Build, Test, and Development Commands
-- Build primary paper PDF: `latexmk -pdf main.tex` (reruns as needed; stops on errors). Clean aux files: `latexmk -c`.
-- One-off compilation: `pdflatex main.tex` (use twice if bibliography not needed).
+- Build primary paper PDF: `latexmk main.tex` (uses XeLaTeX via `.latexmkrc` and reruns as needed). Clean aux files: `latexmk -c`.
+- One-off compilation, if needed for diagnosis: `xelatex main.tex && biber main && xelatex main.tex && xelatex main.tex`.
 - Run the simulation script: `python3 validate_entrenchment_measurement.py` (requires NumPy, pandas, scikit-learn, SciPy, matplotlib).
 
 ## Coding Style & Naming Conventions
@@ -17,7 +17,7 @@
 - Python: PEP 8 defaults; meaningful variable names; keep scripts executable via `python3 file.py`.
 
 ## Testing Guidelines
-- For LaTeX, ensure `latexmk -pdf main.tex` completes without errors; scan the log for undefined references or missing figures.
+- For LaTeX, ensure `latexmk main.tex` completes without errors; scan the log for undefined references or missing figures.
 - For the simulation, confirm `python3 validate_entrenchment_measurement.py` runs cleanly and reports RMSE/Correlation; update dependencies in comments if you add imports.
 - No formal unit tests exist; if you add analysis code, include a minimal reproducible example or sanity checks in the script.
 
