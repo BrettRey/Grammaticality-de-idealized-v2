@@ -81,6 +81,8 @@ score discipline.
 ## Dynamic Feedback
 
 If a graph needs feedback, use explicit time slices or `time_lagged` edges. The validator excludes `time_lagged` edges from synchronic cycle checks.
+`time_lagged` edges must point forward in time: `_t` counts as time 0, `_t1` as time 1,
+`_t2` as time 2, and so on. Backward or same-slice `time_lagged` edges are invalid.
 
 Same-slice mutual dependence is not represented as reciprocal directed edges. If a graph claims
 co-constitution within a single timescale, it should either explain the acyclic constitutive
@@ -104,8 +106,8 @@ Allowed axes:
 Each axis value must be a non-empty string explaining how that condition should be specified before
 the graph is interpreted. Context-indexed graphs must include all six axes.
 
-Declared axes must also be represented by graph nodes. Time-sliced node IDs count by their base
-node. The linter checks:
+Declared axes must also be represented by graph nodes with a directed path to an outcome-like node.
+Time-sliced node IDs count by their base node. The linter checks:
 
 - `community` -> `community_licensing`
 - `norm_centre` -> `standard_language_ideology`, `metalinguistic_condemnation`, or
@@ -129,5 +131,6 @@ Allowed `score_status.kind` values:
 - `general_account`
 
 Non-zero scores require `score_status.kind` to be `scoped_module` or `general_account`, and
-`score_status.evaluation` must point to an existing protocol-bound evaluation or equivalent review
-file. A scoped-module score must not be read as a general-account score.
+`score_status.evaluation` must point to an existing protocol-bound evaluation whose `target_graph`
+matches the scored graph. A scoped-module label or score must not be read as a general-account
+score.

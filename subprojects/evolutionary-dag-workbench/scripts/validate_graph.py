@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import json
+import re
 import sys
 from collections import defaultdict, deque
 from pathlib import Path
@@ -17,6 +18,7 @@ EDGE_TYPES = {
     "evidential",
     "time_lagged",
 }
+TIME_SLICE_PATTERN = re.compile(r"^(?P<base>.+)_t(?P<index>[0-9]*)$")
 
 
 def load_graph(path: Path) -> dict:
@@ -30,6 +32,16 @@ def node_id(node: str | dict) -> str:
     if isinstance(node, dict) and isinstance(node.get("id"), str):
         return node["id"]
     raise ValueError(f"Invalid node entry: {node!r}")
+
+
+def time_index(node: str) -> int | None:
+    match = TIME_SLICE_PATTERN.match(node)
+    if not match:
+        return None
+    index = match.group("index")
+    if not index:
+        return 0
+    return int(index)
 
 
 def check_required(graph: dict, path: Path) -> list[str]:
@@ -68,6 +80,18 @@ def check_edges(graph: dict, path: Path) -> tuple[list[str], list[tuple[str, str
             errors.append(f"{path}: edge {index} is a self-loop")
         if not edge.get("rationale"):
             errors.append(f"{path}: edge {index} lacks a rationale")
+        if edge_type == "time_lagged" and isinstance(source, str) and isinstance(target, str):
+            source_time = time_index(source)
+            target_time = time_index(target)
+            if source_time is None or target_time is None:
+                errors.append(
+                    f"{path}: edge {index} time_lagged endpoints must both be time-sliced"
+                )
+            elif target_time <= source_time:
+                errors.append(
+                    f"{path}: edge {index} time_lagged edge must point forward in time "
+                    f"({source!r} -> {target!r})"
+                )
 
         if edge_type != "time_lagged" and source in nodes and target in nodes:
             edges_for_dag.append((source, target, edge_type))

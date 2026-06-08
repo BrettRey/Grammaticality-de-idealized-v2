@@ -12,9 +12,8 @@ representations about grammaticality. The existing OVMG, detector, operator-stra
 processing-based, and normativity-based models are treated as seed graph families, not as
 conclusions.
 
-Five adversarial passes have been run. Seeds and non-surviving candidates remain all-zero. Two
-current modules have conservative scoped-module scores tied to protocol-bound evaluations. No graph
-has a `general_account` score.
+Five adversarial passes have been run. All numeric scores remain zero. Two current modules have
+`scoped_module` labels tied to protocol-bound evaluations. No graph has a `general_account` score.
 
 ## Current Candidate Stack
 
@@ -32,8 +31,8 @@ The current strongest modules are scoped, not general winners:
 - `context-aware-operator-gap-candidate` for operator-gap, opportunity, recoverability, analogy, and
   repair-pressure cases.
 
-Both have protocol-bound exploratory evaluations and conservative `scoped_module` scores. Neither
-has earned a `general_account` score.
+Both have protocol-bound exploratory evaluations and `scoped_module` labels. Neither has earned a
+non-zero numeric score or a `general_account` score.
 
 ## Live Boundary Rule
 
@@ -74,9 +73,18 @@ The linter now checks:
 - complete score blocks where present;
 - all-zero seed score discipline;
 - `score_status` metadata for non-zero scores;
-- existing evaluation references for non-zero scores;
+- existing evaluation references for scoped/general labels;
+- evaluation references whose `target_graph` matches the labelled graph;
 - `conditioning_axes` metadata for context-indexed graph families;
-- declared conditioning axes against corresponding graph nodes.
+- declared conditioning axes against corresponding graph nodes;
+- directed paths from conditioning-axis nodes to outcome-like nodes.
+
+The graph validator checks:
+
+- allowed edge types;
+- edge endpoint membership;
+- acyclicity of non-`time_lagged` edges;
+- forward direction for `time_lagged` edges.
 
 The evaluation validator checks:
 
@@ -88,10 +96,12 @@ validation.
 
 ## Next Actions
 
-1. Add held-out protocol evaluations before any further score movement.
+1. Add held-out protocol evaluations before any numeric score movement.
 2. Add a processing-specific context module or keep processing as a perturbation layer only.
-3. Calibrate scoped-module score magnitudes after at least one held-out evaluation pass.
-4. Expand `phenomena/cards/` toward 40-100 cards only after the current representation classes stop
+3. Add a projectibility rubric hook so held-out prediction is not treated as mere coverage.
+4. Calibrate scoped-module score magnitudes after at least one held-out or parameterized evaluation
+   pass.
+5. Expand `phenomena/cards/` toward 40-100 cards only after the current representation classes stop
    shifting every pass.
-5. Only after the construct inventory stabilizes, consider whether `pgmpy`, NOTEARS-style methods,
+6. Only after the construct inventory stabilizes, consider whether `pgmpy`, NOTEARS-style methods,
    or empirical causal discovery are useful.

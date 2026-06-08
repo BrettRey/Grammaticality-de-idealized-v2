@@ -1,0 +1,28 @@
+{
+  "id": "backward-time-lag-fixture",
+  "title": "Backward time-lag fixture",
+  "family": "backward-time-lag",
+  "status": "candidate",
+  "nodes": [
+    "production_probability_t2",
+    "usage_frequency_t1"
+  ],
+  "edges": [
+    {
+      "source": "production_probability_t2",
+      "target": "usage_frequency_t1",
+      "type": "time_lagged",
+      "rationale": "Fixture edge that incorrectly points backward in time."
+    }
+  ],
+  "scores": {
+    "empirical_coverage": 0,
+    "counterexample_resilience": 0,
+    "measurement_clarity": 0,
+    "explanatory_payoff": 0,
+    "cross_domain_stability": 0,
+    "complexity_penalty": 0,
+    "circularity_penalty": 0,
+    "construct_confusion_penalty": 0
+  }
+}

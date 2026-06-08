@@ -87,6 +87,24 @@ TESTS = [
         expected_output="id 'invented_construct' is not in ontology",
     ),
     FixtureTest(
+        name="graph rejects backward time-lag edge",
+        command=[
+            "scripts/lint_graph.py",
+            rel("tests/fixtures/graphs/invalid/backward-time-lag.json"),
+        ],
+        expected_returncode=1,
+        expected_output="time_lagged edge must point forward in time",
+    ),
+    FixtureTest(
+        name="graph rejects disconnected conditioning axis",
+        command=[
+            "scripts/lint_graph.py",
+            rel("tests/fixtures/graphs/invalid/disconnected-conditioning-axis.json"),
+        ],
+        expected_returncode=1,
+        expected_output="has no directed path from its corresponding node to an outcome-like node",
+    ),
+    FixtureTest(
         name="graph rejects nonzero score without status",
         command=[
             "scripts/lint_graph.py",
@@ -112,6 +130,15 @@ TESTS = [
         ],
         expected_returncode=1,
         expected_output="score_status.kind 'winner' is not allowed",
+    ),
+    FixtureTest(
+        name="graph rejects mismatched score evaluation",
+        command=[
+            "scripts/lint_graph.py",
+            rel("tests/fixtures/graphs/invalid/mismatched-score-evaluation.json"),
+        ],
+        expected_returncode=1,
+        expected_output="does not match this graph",
     ),
     FixtureTest(
         name="evaluation valid minimal fixture",

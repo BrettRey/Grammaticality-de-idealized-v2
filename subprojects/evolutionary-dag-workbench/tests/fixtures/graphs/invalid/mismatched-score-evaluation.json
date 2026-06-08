@@ -1,7 +1,7 @@
 {
-  "id": "scoped-score-valid-fixture",
-  "title": "Scoped score valid fixture",
-  "family": "scoped-score-valid",
+  "id": "mismatched-score-evaluation-fixture",
+  "title": "Mismatched score evaluation fixture",
+  "family": "mismatched-score-evaluation",
   "status": "candidate",
   "nodes": [
     "reported_acceptability"
@@ -19,7 +19,7 @@
   },
   "score_status": {
     "kind": "scoped_module",
-    "evaluation": "tests/fixtures/evaluations/valid/scoped-score-valid-evaluation.json",
-    "scope": "Fixture scoped score."
+    "evaluation": "evaluations/protocol-tests/context-aware-operator-gap-2026-06-07.json",
+    "scope": "Fixture should fail because the evaluation targets a different graph."
   }
 }

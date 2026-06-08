@@ -4,12 +4,15 @@ Keep dimensions separate. A total score is useful only as a triage device.
 
 ## Score Scope
 
-Scores are scoped. A graph can be scored as a `scoped_module` without being scored as a
+Scores are scoped. A graph can be labelled as a `scoped_module` without being scored as a
 `general_account`.
 
-Non-zero scores require `score_status.kind` and `score_status.evaluation` in the graph JSON. No
-graph should receive a `general_account` score unless it has survived protocol-bound tests across
-the workbench's phenomenon space.
+Non-zero scores require `score_status.kind` and `score_status.evaluation` in the graph JSON, and
+the referenced evaluation must target the scored graph. No graph should receive a `general_account`
+score unless it has survived protocol-bound held-out tests across the workbench's phenomenon space.
+
+Current numeric scores are placeholders. Treat scoped-module labels and evaluation links as the
+auditable result until held-out or parameterized tests make numeric comparison meaningful.
 
 ## Positive Dimensions
 

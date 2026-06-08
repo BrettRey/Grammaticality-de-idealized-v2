@@ -1,14 +1,18 @@
 {
-  "id": "scoped-score-valid-fixture",
-  "title": "Scoped score valid fixture",
-  "family": "scoped-score-valid",
+  "id": "disconnected-conditioning-axis-fixture",
+  "title": "Disconnected conditioning axis fixture",
+  "family": "disconnected-conditioning-axis",
   "status": "candidate",
+  "conditioning_axes": {
+    "speaker_identity": "Declared speaker axis with a corresponding but disconnected node."
+  },
   "nodes": [
+    "speaker_identity",
     "reported_acceptability"
   ],
   "edges": [],
   "scores": {
-    "empirical_coverage": 1,
+    "empirical_coverage": 0,
     "counterexample_resilience": 0,
     "measurement_clarity": 0,
     "explanatory_payoff": 0,
@@ -16,10 +20,5 @@
     "complexity_penalty": 0,
     "circularity_penalty": 0,
     "construct_confusion_penalty": 0
-  },
-  "score_status": {
-    "kind": "scoped_module",
-    "evaluation": "tests/fixtures/evaluations/valid/scoped-score-valid-evaluation.json",
-    "scope": "Fixture scoped score."
   }
 }

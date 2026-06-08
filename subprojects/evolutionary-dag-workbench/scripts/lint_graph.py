@@ -47,6 +47,17 @@ CONDITIONING_AXIS_NODE_REQUIREMENTS = {
     "task_framing": {"task_framing"},
     "speaker_identity": {"speaker_identity", "social_indexical_value"},
 }
+OUTCOME_NODE_BASES = {
+    "reported_acceptability",
+    "grammaticality_attribution",
+    "production_probability",
+    "editorial_correction_probability",
+    "felt_naturalness_context",
+    "community_licensing",
+    "register_genre_appropriateness",
+    "repair_reformulation_pressure",
+    "metalinguistic_condemnation",
+}
 CONTEXT_INDEXED_REQUIRED_AXES = {
     "community",
     "norm_centre",
@@ -218,6 +229,8 @@ def lint_score_status(graph: dict, path: Path) -> list[str]:
             errors.append(f"{path}: score_status.evaluation must be a non-empty string")
         elif not (ROOT / evaluation).exists():
             errors.append(f"{path}: score_status.evaluation path does not exist: {evaluation!r}")
+        else:
+            errors.extend(lint_score_evaluation_target(path, evaluation))
 
     if has_nonzero_scores:
         if kind not in SCORABLE_STATUS_KINDS:
@@ -229,6 +242,26 @@ def lint_score_status(graph: dict, path: Path) -> list[str]:
             errors.append(f"{path}: non-zero scores require score_status.evaluation")
 
     return errors
+
+
+def lint_score_evaluation_target(graph_path: Path, evaluation: str) -> list[str]:
+    evaluation_path = ROOT / evaluation
+    evaluation_data = load_json(evaluation_path)
+    if evaluation_data is None:
+        return [f"{graph_path}: score_status.evaluation must point to a JSON evaluation file"]
+
+    target_graph = evaluation_data.get("target_graph")
+    if not isinstance(target_graph, str) or not target_graph.strip():
+        return [f"{graph_path}: score_status.evaluation file lacks target_graph"]
+
+    expected = graph_path.resolve()
+    actual = (ROOT / target_graph).resolve()
+    if actual != expected:
+        return [
+            f"{graph_path}: score_status.evaluation target_graph {target_graph!r} "
+            "does not match this graph"
+        ]
+    return []
 
 
 def lint_conditioning_axes(graph: dict, path: Path) -> list[str]:
@@ -261,13 +294,37 @@ def lint_conditioning_axes(graph: dict, path: Path) -> list[str]:
         except ValueError:
             continue
 
+    outgoing: dict[str, list[str]] = {}
+    for edge in graph.get("edges", []):
+        if not isinstance(edge, dict):
+            continue
+        source = edge.get("source")
+        target = edge.get("target")
+        if isinstance(source, str) and isinstance(target, str):
+            outgoing.setdefault(source, []).append(target)
+
     for key in axes:
         expected_nodes = CONDITIONING_AXIS_NODE_REQUIREMENTS.get(key)
-        if expected_nodes and node_bases.isdisjoint(expected_nodes):
-            expected = ", ".join(sorted(expected_nodes))
+        if not expected_nodes:
+            continue
+        expected = ", ".join(sorted(expected_nodes))
+        matching_nodes: list[str] = []
+        for node in graph.get("nodes", []):
+            try:
+                node_id = validate_graph.node_id(node)
+            except ValueError:
+                continue
+            if base_node_id(node_id) in expected_nodes:
+                matching_nodes.append(node_id)
+        if not matching_nodes:
             errors.append(
                 f"{path}: conditioning axis {key!r} has no corresponding node; "
                 f"expected at least one of {expected}"
+            )
+        elif not any(has_directed_path_to_outcome(node, outgoing) for node in matching_nodes):
+            errors.append(
+                f"{path}: conditioning axis {key!r} has no directed path from "
+                f"its corresponding node to an outcome-like node"
             )
 
     if is_context_indexed:
@@ -276,6 +333,22 @@ def lint_conditioning_axes(graph: dict, path: Path) -> list[str]:
             errors.append(f"{path}: context-indexed graph missing conditioning axis {key!r}")
 
     return errors
+
+
+def has_directed_path_to_outcome(start: str, outgoing: dict[str, list[str]]) -> bool:
+    queue = list(outgoing.get(start, []))
+    seen: set[str] = set()
+
+    while queue:
+        node = queue.pop(0)
+        if node in seen:
+            continue
+        seen.add(node)
+        if base_node_id(node) in OUTCOME_NODE_BASES:
+            return True
+        queue.extend(outgoing.get(node, []))
+
+    return False
 
 
 def lint(path: Path, controlled_nodes: set[str]) -> list[str]:
