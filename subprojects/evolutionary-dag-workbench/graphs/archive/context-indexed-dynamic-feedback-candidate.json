@@ -223,13 +223,18 @@
     }
   ],
   "scores": {
-    "empirical_coverage": 0,
-    "counterexample_resilience": 0,
-    "measurement_clarity": 0,
-    "explanatory_payoff": 0,
-    "cross_domain_stability": 0,
-    "complexity_penalty": 0,
+    "empirical_coverage": 3,
+    "counterexample_resilience": 2,
+    "measurement_clarity": 3,
+    "explanatory_payoff": 2,
+    "cross_domain_stability": 2,
+    "complexity_penalty": 2,
     "circularity_penalty": 0,
     "construct_confusion_penalty": 0
+  },
+  "score_status": {
+    "kind": "scoped_module",
+    "evaluation": "evaluations/protocol-tests/context-indexed-dynamic-feedback-2026-06-07.json",
+    "scope": "Diachronic and context-conditioned licensing, ideology, correction, production, acceptability, and attribution module; not a general account."
   }
 }

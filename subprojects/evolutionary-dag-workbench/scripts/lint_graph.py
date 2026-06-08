@@ -15,6 +15,8 @@ ROOT = Path(__file__).resolve().parents[1]
 NODES_PATH = ROOT / "ontology" / "nodes.yaml"
 
 STATUSES = {"seed", "candidate", "archived", "rejected", "superseded"}
+SCORE_STATUS_KINDS = {"unscored", "scoped_module", "general_account"}
+SCORABLE_STATUS_KINDS = {"scoped_module", "general_account"}
 SCORE_KEYS = [
     "empirical_coverage",
     "counterexample_resilience",
@@ -180,6 +182,55 @@ def lint_scores(graph: dict, path: Path) -> list[str]:
     return errors
 
 
+def nonzero_scores(graph: dict) -> bool:
+    scores = graph.get("scores")
+    if not isinstance(scores, dict):
+        return False
+
+    for key in SCORE_KEYS:
+        value = score_value(scores, key)
+        if value is not None and value != 0:
+            return True
+    return False
+
+
+def lint_score_status(graph: dict, path: Path) -> list[str]:
+    errors: list[str] = []
+    score_status = graph.get("score_status")
+    has_nonzero_scores = nonzero_scores(graph)
+
+    if score_status is None:
+        if has_nonzero_scores:
+            errors.append(f"{path}: non-zero scores require a score_status object")
+        return errors
+
+    if not isinstance(score_status, dict):
+        return [f"{path}: score_status must be an object"]
+
+    kind = score_status.get("kind")
+    if kind not in SCORE_STATUS_KINDS:
+        allowed = ", ".join(sorted(SCORE_STATUS_KINDS))
+        errors.append(f"{path}: score_status.kind {kind!r} is not allowed; expected one of {allowed}")
+
+    evaluation = score_status.get("evaluation")
+    if evaluation is not None:
+        if not isinstance(evaluation, str) or not evaluation.strip():
+            errors.append(f"{path}: score_status.evaluation must be a non-empty string")
+        elif not (ROOT / evaluation).exists():
+            errors.append(f"{path}: score_status.evaluation path does not exist: {evaluation!r}")
+
+    if has_nonzero_scores:
+        if kind not in SCORABLE_STATUS_KINDS:
+            allowed = ", ".join(sorted(SCORABLE_STATUS_KINDS))
+            errors.append(
+                f"{path}: non-zero scores require score_status.kind to be one of {allowed}"
+            )
+        if evaluation is None:
+            errors.append(f"{path}: non-zero scores require score_status.evaluation")
+
+    return errors
+
+
 def lint_conditioning_axes(graph: dict, path: Path) -> list[str]:
     errors: list[str] = []
     family = graph.get("family")
@@ -236,6 +287,7 @@ def lint(path: Path, controlled_nodes: set[str]) -> list[str]:
     errors.extend(lint_family_and_status(graph, path))
     errors.extend(lint_nodes(graph, path, controlled_nodes))
     errors.extend(lint_scores(graph, path))
+    errors.extend(lint_score_status(graph, path))
     errors.extend(lint_conditioning_axes(graph, path))
     return errors
 

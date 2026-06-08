@@ -12,7 +12,9 @@ representations about grammaticality. The existing OVMG, detector, operator-stra
 processing-based, and normativity-based models are treated as seed graph families, not as
 conclusions.
 
-Five adversarial passes have been run. Scores remain all-zero across seeds and candidates.
+Five adversarial passes have been run. Seeds and non-surviving candidates remain all-zero. Two
+current modules have conservative scoped-module scores tied to protocol-bound evaluations. No graph
+has a `general_account` score.
 
 ## Current Candidate Stack
 
@@ -30,7 +32,8 @@ The current strongest modules are scoped, not general winners:
 - `context-aware-operator-gap-candidate` for operator-gap, opportunity, recoverability, analogy, and
   repair-pressure cases.
 
-Both have protocol-bound exploratory evaluations. Neither has earned non-zero scores.
+Both have protocol-bound exploratory evaluations and conservative `scoped_module` scores. Neither
+has earned a `general_account` score.
 
 ## Live Boundary Rule
 
@@ -48,6 +51,7 @@ Earlier models are allowed to seed, constrain, and challenge the search. They ar
 - stdlib validation, linting, and scoring scripts in `scripts/`
 - source map and pressure test in `notes/`
 - conditioning protocol in `notes/conditioning-operationalization-protocol-2026-06-07.md`
+- scoped scoring policy in `notes/scoped-scoring-policy-2026-06-07.md`
 - protocol-bound evaluation schema and exploratory evaluations in `evaluations/`
 - positive and negative validator fixtures in `tests/fixtures/`
 
@@ -69,6 +73,8 @@ The linter now checks:
 - family/status conventions;
 - complete score blocks where present;
 - all-zero seed score discipline;
+- `score_status` metadata for non-zero scores;
+- existing evaluation references for non-zero scores;
 - `conditioning_axes` metadata for context-indexed graph families;
 - declared conditioning axes against corresponding graph nodes.
 
@@ -82,9 +88,10 @@ validation.
 
 ## Next Actions
 
-1. Decide whether scoped module scores should be possible, separate from general-account scores.
+1. Add held-out protocol evaluations before any further score movement.
 2. Add a processing-specific context module or keep processing as a perturbation layer only.
-3. Expand `phenomena/cards/` toward 40-100 cards only after the current representation classes stop
+3. Calibrate scoped-module score magnitudes after at least one held-out evaluation pass.
+4. Expand `phenomena/cards/` toward 40-100 cards only after the current representation classes stop
    shifting every pass.
-4. Only after the construct inventory stabilizes, consider whether `pgmpy`, NOTEARS-style methods,
+5. Only after the construct inventory stabilizes, consider whether `pgmpy`, NOTEARS-style methods,
    or empirical causal discovery are useful.

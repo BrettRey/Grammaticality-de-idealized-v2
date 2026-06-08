@@ -1,0 +1,20 @@
+{
+  "id": "nonzero-without-score-status-fixture",
+  "title": "Nonzero without score status fixture",
+  "family": "nonzero-without-score-status",
+  "status": "candidate",
+  "nodes": [
+    "reported_acceptability"
+  ],
+  "edges": [],
+  "scores": {
+    "empirical_coverage": 1,
+    "counterexample_resilience": 0,
+    "measurement_clarity": 0,
+    "explanatory_payoff": 0,
+    "cross_domain_stability": 0,
+    "complexity_penalty": 0,
+    "circularity_penalty": 0,
+    "construct_confusion_penalty": 0
+  }
+}

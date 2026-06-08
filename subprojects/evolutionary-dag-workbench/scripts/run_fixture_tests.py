@@ -34,6 +34,14 @@ TESTS = [
         expected_returncode=0,
     ),
     FixtureTest(
+        name="graph valid scoped score fixture",
+        command=[
+            "scripts/lint_graph.py",
+            rel("tests/fixtures/graphs/valid/scoped-score-valid.json"),
+        ],
+        expected_returncode=0,
+    ),
+    FixtureTest(
         name="graph rejects conditioning axis without node",
         command=[
             "scripts/lint_graph.py",
@@ -77,6 +85,33 @@ TESTS = [
         ],
         expected_returncode=1,
         expected_output="id 'invented_construct' is not in ontology",
+    ),
+    FixtureTest(
+        name="graph rejects nonzero score without status",
+        command=[
+            "scripts/lint_graph.py",
+            rel("tests/fixtures/graphs/invalid/nonzero-without-score-status.json"),
+        ],
+        expected_returncode=1,
+        expected_output="non-zero scores require a score_status object",
+    ),
+    FixtureTest(
+        name="graph rejects nonzero score without evaluation",
+        command=[
+            "scripts/lint_graph.py",
+            rel("tests/fixtures/graphs/invalid/nonzero-missing-evaluation.json"),
+        ],
+        expected_returncode=1,
+        expected_output="non-zero scores require score_status.evaluation",
+    ),
+    FixtureTest(
+        name="graph rejects invalid score status kind",
+        command=[
+            "scripts/lint_graph.py",
+            rel("tests/fixtures/graphs/invalid/invalid-score-kind.json"),
+        ],
+        expected_returncode=1,
+        expected_output="score_status.kind 'winner' is not allowed",
     ),
     FixtureTest(
         name="evaluation valid minimal fixture",

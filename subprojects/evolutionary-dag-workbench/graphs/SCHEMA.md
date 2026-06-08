@@ -41,6 +41,11 @@ score discipline.
     "circularity_penalty": 0,
     "construct_confusion_penalty": 0
   },
+  "score_status": {
+    "kind": "unscored",
+    "evaluation": "evaluations/protocol-tests/example.json",
+    "scope": "Free text describing whether the score is scoped or general."
+  },
   "notes": "Free text."
 }
 ```
@@ -114,3 +119,15 @@ node. The linter checks:
 
 Seed graphs carry complete all-zero `scores` blocks. Non-zero scores should be added only after an
 adversarial critique exists in `graphs/critiques/` or an equivalent review note is linked.
+
+Graphs with non-zero scores must include `score_status`.
+
+Allowed `score_status.kind` values:
+
+- `unscored`
+- `scoped_module`
+- `general_account`
+
+Non-zero scores require `score_status.kind` to be `scoped_module` or `general_account`, and
+`score_status.evaluation` must point to an existing protocol-bound evaluation or equivalent review
+file. A scoped-module score must not be read as a general-account score.
