@@ -123,6 +123,22 @@ def check_card(card: object, path: Path, index: int) -> list[str]:
     return errors
 
 
+def check_held_out_from(data: dict, path: Path) -> list[str]:
+    status = data.get("status")
+    if status != "held-out":
+        return []
+
+    held_out_from = data.get("held_out_from")
+    if not isinstance(held_out_from, list) or not held_out_from:
+        return [f"{path}: held-out evaluations require non-empty list field 'held_out_from'"]
+
+    errors: list[str] = []
+    for index, item in enumerate(held_out_from, start=1):
+        if not isinstance(item, str) or not item.strip():
+            errors.append(f"{path}: held_out_from item {index} must be a non-empty string")
+    return errors
+
+
 def validate(path: Path) -> list[str]:
     data = load_json(path)
     if data is None:
@@ -138,6 +154,7 @@ def validate(path: Path) -> list[str]:
     if status not in STATUSES:
         allowed = ", ".join(sorted(STATUSES))
         errors.append(f"{path}: status {status!r} is not allowed; expected one of {allowed}")
+    errors.extend(check_held_out_from(data, path))
 
     score_decision = data.get("score_decision")
     if score_decision not in SCORE_DECISIONS:

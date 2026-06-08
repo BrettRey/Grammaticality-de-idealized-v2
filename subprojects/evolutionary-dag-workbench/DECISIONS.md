@@ -8,3 +8,14 @@ Append non-trivial structural, methodological, and scope decisions here.
 - **Use a non-commitment boundary.** Existing OVMG equations, detector architecture, operator-value claims, and grammaticality-as-kind claims are seed graphs, constraints, and counterexample sources, not conclusions.
 - **Do not place inside submitted or paper-shaped projects.** `Grammaticality_judgments_as_detectors` and `Grammaticality_as_Kind_Miller` can feed the workbench, but the workbench should not become local drift inside those paper projects.
 - **Start with conceptual graph ecology, not automatic causal discovery.** The first bottleneck is node ontology and construct separation, not edge search over measured variables.
+
+## 2026-06-08
+
+- **Make graph discovery the target.** The workbench is not an alignment or justification layer for
+  the operator-stratum paper, OVMG, detector models, usage-based accounts, processing accounts, or
+  normative accounts. Existing theories remain seed material only.
+- **Cards drive mutations.** New graph constructs and families should originate in phenomenon-card
+  failures, contrast-cell discriminators, or held-out predictions.
+- **Score projectibility and penalize theory preservation.** Add `projective_power` and
+  `theory_preservation_penalty` to the rubric so held-out forecasts count separately from coverage
+  and theory-saving moves are visible.

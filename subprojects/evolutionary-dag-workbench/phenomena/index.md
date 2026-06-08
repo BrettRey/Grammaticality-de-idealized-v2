@@ -10,6 +10,22 @@ Phenomenon cards stress-test graph families. Each card should include:
 - candidate nodes;
 - predicted discriminators.
 
+## Discovery Use
+
+Cards are the primary input to graph mutation. A new construct, edge, or graph family should be
+introduced because a card or contrast cell forces a distinction, not because a source theory expects
+the distinction.
+
+For each serious graph mutation, identify:
+
+- cards used to build the mutation;
+- cards held out for projection;
+- the contrast cell the mutation predicts before evaluation;
+- the nearest rival graph and the discriminator between them.
+
+Do not expand the card inventory only to increase coverage. Enrich the current cards first with
+examples, data sources, minimum contrast cells, and expected graph-family failures.
+
 ## Seed Cards
 
 | Card | Stress-test role | Current state |

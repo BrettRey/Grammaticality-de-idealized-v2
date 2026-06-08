@@ -9,6 +9,7 @@
   "edges": [],
   "scores": {
     "empirical_coverage": 0,
+    "projective_power": 0,
     "counterexample_resilience": 0,
     "measurement_clarity": 0,
     "explanatory_payoff": 0,

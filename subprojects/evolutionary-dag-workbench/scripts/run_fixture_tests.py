@@ -221,6 +221,15 @@ TESTS = [
         expected_output="does not match this graph",
     ),
     FixtureTest(
+        name="graph rejects held-out evaluation missing provenance",
+        command=[
+            "scripts/lint_graph.py",
+            rel("tests/fixtures/graphs/invalid/held-out-missing-provenance-reference.json"),
+        ],
+        expected_returncode=1,
+        expected_output="held-out score_status.evaluation requires non-empty held_out_from",
+    ),
+    FixtureTest(
         name="graph rejects exploratory score evaluation",
         command=[
             "scripts/lint_graph.py",
@@ -256,6 +265,14 @@ TESTS = [
         expected_returncode=0,
     ),
     FixtureTest(
+        name="evaluation valid held-out fixture",
+        command=[
+            "scripts/validate_evaluation.py",
+            rel("tests/fixtures/evaluations/valid/held-out-valid.json"),
+        ],
+        expected_returncode=0,
+    ),
+    FixtureTest(
         name="evaluation rejects empty contrast cells",
         command=[
             "scripts/validate_evaluation.py",
@@ -281,6 +298,15 @@ TESTS = [
         ],
         expected_returncode=1,
         expected_output="missing required axis 'genre'",
+    ),
+    FixtureTest(
+        name="evaluation rejects held-out missing provenance",
+        command=[
+            "scripts/validate_evaluation.py",
+            rel("tests/fixtures/evaluations/invalid/held-out-missing-source.json"),
+        ],
+        expected_returncode=1,
+        expected_output="held-out evaluations require non-empty list field 'held_out_from'",
     ),
     FixtureTest(
         name="evaluation rejects invalid phenomenon",

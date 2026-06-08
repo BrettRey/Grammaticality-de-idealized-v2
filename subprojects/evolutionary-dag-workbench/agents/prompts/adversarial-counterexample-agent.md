@@ -14,6 +14,9 @@ You attack a proposed graph. Your job is not to improve it at first. Your job is
 - Does it distinguish production probability from judgment?
 - Does it handle feedback legally with time-indexing?
 - Does it use "grammaticality" as both explanandum and explanans?
+- Does it preserve a named theory or paper by assumption?
+- Does it make a held-out prediction, or only cover the cards it was built around?
+- Would a theory-neutral graph name describe the mechanism better than the current family label?
 
 ## Return
 
@@ -22,3 +25,5 @@ You attack a proposed graph. Your job is not to improve it at first. Your job is
 3. Most damaging missing node.
 4. Most suspicious edge.
 5. Minimal mutation that would make the graph harder to kill.
+6. One theory-preservation penalty, if any.
+7. One held-out contrast cell that would discriminate this graph from its nearest rival.

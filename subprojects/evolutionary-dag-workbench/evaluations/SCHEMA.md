@@ -8,6 +8,9 @@ Protocol-bound tests are stored as JSON so critique results are not only prose n
   "target_graph": "graphs/archive/context-indexed-dynamic-feedback-candidate.json",
   "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
   "status": "exploratory",
+  "held_out_from": [
+    "Required when status is held-out; describes cards, evaluations, or passes used to build the graph."
+  ],
   "score_decision": "no-score-change",
   "cards": [
     {
@@ -48,6 +51,10 @@ Protocol-bound tests are stored as JSON so critique results are not only prose n
 - `protocol-bound`
 - `held-out`
 - `archived`
+
+Evaluations with `status` `held-out` must include a non-empty `held_out_from` list. Each item should
+name the cards, evaluations, or graph-building passes from which the evaluated cards were withheld.
+This does not prove projectibility, but it prevents the held-out label from being pure ceremony.
 
 ## Score Decisions
 

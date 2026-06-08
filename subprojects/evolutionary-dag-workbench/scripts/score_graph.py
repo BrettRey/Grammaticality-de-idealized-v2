@@ -10,6 +10,7 @@ from pathlib import Path
 
 POSITIVE = [
     "empirical_coverage",
+    "projective_power",
     "counterexample_resilience",
     "measurement_clarity",
     "explanatory_payoff",
@@ -20,6 +21,7 @@ PENALTIES = [
     "complexity_penalty",
     "circularity_penalty",
     "construct_confusion_penalty",
+    "theory_preservation_penalty",
 ]
 
 

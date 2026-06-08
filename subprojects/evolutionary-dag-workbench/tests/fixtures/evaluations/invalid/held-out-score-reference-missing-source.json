@@ -1,0 +1,27 @@
+{
+  "id": "held-out-score-reference-missing-source",
+  "target_graph": "tests/fixtures/graphs/invalid/held-out-missing-provenance-reference.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "held-out",
+  "score_decision": "scope-only",
+  "cards": [
+    {
+      "phenomenon": "rare-uncontroversial-form",
+      "result": "survives_as_module",
+      "expected_survival_pattern": "Fixture expected pattern for held-out projection.",
+      "contrast_cells": [
+        {
+          "id": "fixture-held-out-cell",
+          "axes": {
+            "community": "Fixture community.",
+            "norm_centre": "Fixture norm centre.",
+            "genre": "Fixture genre.",
+            "medium": "Fixture medium.",
+            "task_framing": "Fixture task frame.",
+            "speaker_identity": "Fixture speaker identity."
+          }
+        }
+      ]
+    }
+  ]
+}

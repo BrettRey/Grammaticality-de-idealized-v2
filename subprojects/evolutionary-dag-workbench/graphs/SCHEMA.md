@@ -36,13 +36,15 @@ against filenames, `family`, `status`, and score discipline.
   },
   "scores": {
     "empirical_coverage": 0,
+    "projective_power": 0,
     "counterexample_resilience": 0,
     "measurement_clarity": 0,
     "explanatory_payoff": 0,
     "cross_domain_stability": 0,
     "complexity_penalty": 0,
     "circularity_penalty": 0,
-    "construct_confusion_penalty": 0
+    "construct_confusion_penalty": 0,
+    "theory_preservation_penalty": 0
   },
   "score_status": {
     "kind": "unscored",
@@ -157,6 +159,12 @@ Seed graphs carry complete all-zero `scores` blocks. Non-zero scores should be a
 adversarial critique exists in `graphs/critiques/` or an equivalent review note is linked.
 
 Each score dimension must be numeric, not boolean, and must be between 0 and 5 inclusive.
+
+The discovery-specific dimensions are:
+
+- `projective_power`: positive credit for held-out prediction and discriminating forecasts.
+- `theory_preservation_penalty`: penalty for preserving a named theory, paper, or familiar account
+  without improving contrast-cell prediction or construct separation.
 
 Graphs with non-zero scores must include `score_status`.
 

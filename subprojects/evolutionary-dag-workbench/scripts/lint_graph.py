@@ -27,6 +27,7 @@ SCORE_MAX = 5
 EDGE_SEMANTICS_LEVELS = {"topology_only", "profiled"}
 SCORE_KEYS = [
     "empirical_coverage",
+    "projective_power",
     "counterexample_resilience",
     "measurement_clarity",
     "explanatory_payoff",
@@ -34,6 +35,7 @@ SCORE_KEYS = [
     "complexity_penalty",
     "circularity_penalty",
     "construct_confusion_penalty",
+    "theory_preservation_penalty",
 ]
 CONDITIONING_AXIS_KEYS = {
     "community",
@@ -378,6 +380,21 @@ def lint_score_evaluation_target(
         ]
 
     errors: list[str] = []
+    if evaluation_data.get("status") == "held-out":
+        held_out_from = evaluation_data.get("held_out_from")
+        if not isinstance(held_out_from, list) or not held_out_from:
+            errors.append(
+                f"{graph_path}: held-out score_status.evaluation requires non-empty "
+                "held_out_from"
+            )
+        else:
+            for index, item in enumerate(held_out_from, start=1):
+                if not isinstance(item, str) or not item.strip():
+                    errors.append(
+                        f"{graph_path}: held-out score_status.evaluation "
+                        f"held_out_from item {index} must be a non-empty string"
+                    )
+
     if require_label_authorized:
         status = evaluation_data.get("status")
         if status not in LABEL_EVALUATION_STATUSES:

@@ -13,12 +13,14 @@
   "edges": [],
   "scores": {
     "empirical_coverage": 0,
+    "projective_power": 0,
     "counterexample_resilience": 0,
     "measurement_clarity": 0,
     "explanatory_payoff": 0,
     "cross_domain_stability": 0,
     "complexity_penalty": 0,
     "circularity_penalty": 0,
-    "construct_confusion_penalty": 0
+    "construct_confusion_penalty": 0,
+    "theory_preservation_penalty": 0
   }
 }

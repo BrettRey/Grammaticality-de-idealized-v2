@@ -7,14 +7,15 @@
 
 ## Current State
 
-The subproject is now active as a non-commitment workbench for exploring rival conceptual
+The subproject is now active as a discovery-first workbench for exploring rival conceptual
 representations about grammaticality. The existing OVMG, detector, operator-stratum, usage-based,
 processing-based, and normativity-based models are treated as seed graph families, not as
-conclusions.
+conclusions or targets to vindicate.
 
 Five adversarial passes and one synthesis pass have been run. All numeric scores remain zero. Two
 current modules have `scoped_module` labels tied to protocol-bound evaluations. No graph has a
-`general_account` score.
+`general_account` score. The current scoring schema now includes `projective_power` and
+`theory_preservation_penalty` so held-out prediction and anti-alignment discipline are visible.
 
 ## Current Candidate Stack
 
@@ -38,7 +39,9 @@ non-zero numeric score or a `general_account` score.
 
 ## Live Boundary Rule
 
-Earlier models are allowed to seed, constrain, and challenge the search. They are not the ontology the search is required to vindicate.
+Earlier models are allowed to seed, constrain, and challenge the search. They are not the ontology
+the search is required to vindicate. A graph earns standing by improving contrast-cell prediction,
+construct separation, or held-out projectibility, not by fitting a prior paper.
 
 ## Scaffolded Components
 
@@ -47,6 +50,7 @@ Earlier models are allowed to seed, constrain, and challenge the search. They ar
 - `ontology/relation-profiles.yaml`
 - `ontology/forbidden-conflations.md`
 - `phenomena/index.md`
+- `DISCOVERY_RULES.md`
 - initial phenomenon cards in `phenomena/cards/`
 - graph schema and seed graphs in `graphs/`
 - graph-agent template and scoring rubric in `agents/`
@@ -78,12 +82,14 @@ The linter now checks:
 - family/status conventions;
 - complete score blocks where present;
 - score values in the 0-5 range;
+- discovery-specific score dimensions for held-out projectibility and theory-preservation penalty;
 - all-zero seed score discipline;
 - `score_status` metadata for non-zero scores;
 - required evaluation references for scoped/general labels;
 - evaluation references whose `target_graph` matches the labelled graph;
 - scoped/general labels only when the referenced evaluation authorizes scope recognition;
 - non-zero scores only when the referenced evaluation authorizes score movement;
+- held-out evaluation references declare what cards, evaluations, or passes they were held out from;
 - non-zero scores only on graphs with `edge_semantics_level: profiled`;
 - `conditioning_axes` metadata for context-indexed graph families;
 - declared conditioning axes against corresponding graph nodes;
@@ -102,23 +108,24 @@ The evaluation validator checks:
 
 - protocol-bound evaluations against target graph paths, protocol paths, phenomenon card IDs,
   allowed result labels, and complete six-axis contrast cells.
+- held-out evaluations include non-empty `held_out_from` provenance.
 
 The fixture runner checks positive and negative cases for both graph linting and evaluation
 validation.
 
 ## Next Actions
 
-1. Add held-out protocol evaluations before any numeric score movement.
-2. Add a processing-specific context module or keep processing as a perturbation layer only.
-3. Profile `context-indexed-dynamic-feedback-candidate` only after deciding which dynamic paths are
+1. Enrich the current twelve phenomenon cards before adding more cards.
+2. Add held-out protocol evaluations before any numeric score movement.
+3. Start the next graph mutation from a card failure or held-out discriminator, not from a named
+   theory family.
+4. Add a processing-specific context module or keep processing as a perturbation layer only.
+5. Profile `context-indexed-dynamic-feedback-candidate` only after deciding which dynamic paths are
    prediction commitments.
-4. Add evaluation-level activated paths so score movement can require profiles on the traversed
+6. Add evaluation-level activated paths so score movement can require profiles on the traversed
    prediction paths, not merely a profiled graph.
-5. Add a projectibility rubric hook so held-out prediction is not treated as mere coverage.
-6. Calibrate scoped-module score magnitudes after at least one held-out or parameterized evaluation
+7. Calibrate scoped-module score magnitudes after at least one held-out or parameterized evaluation
    pass.
-7. Enrich the existing phenomenon cards with examples, data sources, contrast cells, and expected
-   discriminators before expanding the card inventory.
 8. Expand `phenomena/cards/` toward 40-100 cards only after the current representation classes stop
    shifting every pass.
 9. Only after the construct inventory stabilizes, consider whether `pgmpy`, NOTEARS-style methods,

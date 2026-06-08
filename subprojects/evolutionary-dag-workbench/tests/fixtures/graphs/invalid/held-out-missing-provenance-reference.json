@@ -1,7 +1,7 @@
 {
-  "id": "context-indexed-missing-axes",
-  "title": "Context-indexed missing axes fixture",
-  "family": "context-indexed-missing-axes",
+  "id": "held-out-missing-provenance-reference",
+  "title": "Held-out missing provenance reference fixture",
+  "family": "fixture",
   "status": "candidate",
   "nodes": [
     "community_licensing",
@@ -26,5 +26,10 @@
     "circularity_penalty": 0,
     "construct_confusion_penalty": 0,
     "theory_preservation_penalty": 0
+  },
+  "score_status": {
+    "kind": "scoped_module",
+    "evaluation": "tests/fixtures/evaluations/invalid/held-out-score-reference-missing-source.json",
+    "scope": "Fixture scope."
   }
 }
