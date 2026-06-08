@@ -50,20 +50,20 @@ notes/           Source map, pressure test, and planning notes.
 
 ## Minimal Local Commands
 
-Validate the seed graphs:
+Validate the seed and archive graphs:
 
 ```bash
-python3 scripts/validate_graph.py graphs/seeds/*.json
+python3 scripts/validate_graph.py graphs/seeds/*.json graphs/archive/*.json
 ```
 
-Lint the seed graphs against the ontology and seed-scoring convention:
+Lint the graphs against the ontology, scoring conventions, and conditioning metadata rules:
 
 ```bash
-python3 scripts/lint_graph.py graphs/seeds/*.json
+python3 scripts/lint_graph.py graphs/seeds/*.json graphs/archive/*.json
 ```
 
 Score graphs after they have a `scores` block:
 
 ```bash
-python3 scripts/score_graph.py graphs/seeds/*.json
+python3 scripts/score_graph.py graphs/seeds/*.json graphs/archive/*.json
 ```

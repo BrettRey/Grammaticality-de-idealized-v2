@@ -2,12 +2,29 @@
 
 **Parent:** `Grammaticality_de_idealized`
 **Created:** 2026-06-07
-**Stage:** Scaffolded workbench
+**Stage:** Active adversarial iteration
 **Public state:** Private working subproject; no public claims or submission state.
 
 ## Current State
 
-The subproject has been created as a non-commitment workbench for exploring rival conceptual DAGs about grammaticality. The existing OVMG, detector, operator-stratum, usage-based, processing-based, and normativity-based models are treated as seed graph families, not as conclusions.
+The subproject is now active as a non-commitment workbench for exploring rival conceptual
+representations about grammaticality. The existing OVMG, detector, operator-stratum, usage-based,
+processing-based, and normativity-based models are treated as seed graph families, not as
+conclusions.
+
+Five adversarial passes have been run. Scores remain all-zero across seeds and candidates.
+
+## Current Candidate Stack
+
+- `licensing-ideology-split-candidate`
+- `opportunity-preemption-operator-gap-candidate`
+- `stratified-licensing-measurement-candidate`
+- `dynamic-stratified-feedback-candidate`
+- `context-indexed-dynamic-feedback-candidate`
+
+The current strongest module is `context-indexed-dynamic-feedback-candidate`, but it is explicitly
+not a general winner. It needs protocol-bound testing and later reintegration with operator-gap,
+recoverability, constructional-analogy, and processing modules.
 
 ## Live Boundary Rule
 
@@ -22,13 +39,36 @@ Earlier models are allowed to seed, constrain, and challenge the search. They ar
 - initial phenomenon cards in `phenomena/cards/`
 - graph schema and seed graphs in `graphs/`
 - graph-agent template and scoring rubric in `agents/`
-- stdlib validation and scoring scripts in `scripts/`
+- stdlib validation, linting, and scoring scripts in `scripts/`
 - source map and pressure test in `notes/`
+- conditioning protocol in `notes/conditioning-operationalization-protocol-2026-06-07.md`
+
+## Current Tooling Gates
+
+Run these over seeds plus archive candidates:
+
+```bash
+python3 scripts/validate_graph.py graphs/seeds/*.json graphs/archive/*.json
+python3 scripts/lint_graph.py graphs/seeds/*.json graphs/archive/*.json
+python3 scripts/score_graph.py graphs/seeds/*.json graphs/archive/*.json
+```
+
+The linter now checks:
+
+- controlled node IDs, including time-sliced extensions;
+- family/status conventions;
+- complete score blocks where present;
+- all-zero seed score discipline;
+- `conditioning_axes` metadata for context-indexed graph families;
+- declared conditioning axes against corresponding graph nodes.
 
 ## Next Actions
 
-1. Expand `phenomena/cards/` toward 40-100 cards.
-2. Add richer seed graphs for the existing OVMG, detector, and operator-stratum models.
-3. Run the first adversarial critique pass on all seed graphs.
-4. Decide whether the first archive bins should be usage-heavy, processing-heavy, normativity-heavy, operator-heavy, measurement-explicit, and time-indexed.
-5. Only after the construct inventory stabilizes, consider whether `pgmpy`, NOTEARS-style methods, or empirical causal discovery are useful.
+1. Attack `context-indexed-dynamic-feedback-candidate` with protocol-bound contrast cells.
+2. Build a context-aware operator-gap module rather than folding operator value into the dynamic
+   context graph by default.
+3. Add tests or fixtures for negative linter cases, especially malformed `conditioning_axes`.
+4. Expand `phenomena/cards/` toward 40-100 cards only after the current representation classes stop
+   shifting every pass.
+5. Only after the construct inventory stabilizes, consider whether `pgmpy`, NOTEARS-style methods,
+   or empirical causal discovery are useful.
