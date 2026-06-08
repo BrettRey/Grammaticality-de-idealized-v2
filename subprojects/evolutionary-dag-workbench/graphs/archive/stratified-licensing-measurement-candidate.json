@@ -1,0 +1,185 @@
+{
+  "id": "stratified-licensing-measurement-candidate",
+  "title": "Stratified licensing-measurement candidate",
+  "family": "stratified-licensing-measurement",
+  "status": "candidate",
+  "notes": "Second-round candidate generated after critiques of the licensing-ideology and opportunity-preemption candidates. It is a typed assembly for testing construct hygiene across evidence, licensing, production, ideology, and measurement channels. It is not a preferred theory and carries zero scores pending critique.",
+  "nodes": [
+    "opportunity_mass",
+    "usage_frequency",
+    "constructional_analogy",
+    "operator_value",
+    "semantic_pragmatic_recoverability",
+    "processing_cost",
+    "community_licensing",
+    "production_probability",
+    "repair_reformulation_pressure",
+    "standard_language_ideology",
+    "schooling_instructional_exposure",
+    "metalinguistic_condemnation",
+    "editorial_correction_probability",
+    "genre",
+    "register_genre_appropriateness",
+    "speaker_identity",
+    "social_indexical_value",
+    "task_framing",
+    "reported_acceptability",
+    "grammaticality_attribution"
+  ],
+  "edges": [
+    {
+      "source": "opportunity_mass",
+      "target": "usage_frequency",
+      "type": "causal",
+      "rationale": "Observed frequency depends on how many contexts could have hosted the form."
+    },
+    {
+      "source": "opportunity_mass",
+      "target": "community_licensing",
+      "type": "evidential",
+      "rationale": "Opportunity mass controls how strongly absence, rarity, or presence bears on licensing."
+    },
+    {
+      "source": "usage_frequency",
+      "target": "community_licensing",
+      "type": "evidential",
+      "rationale": "Usage frequency is evidence for licensing only after opportunity structure is considered."
+    },
+    {
+      "source": "constructional_analogy",
+      "target": "community_licensing",
+      "type": "evidential",
+      "rationale": "Analogical support can be evidence that a form belongs near a licensed constructional neighborhood without equaling licensing."
+    },
+    {
+      "source": "operator_value",
+      "target": "community_licensing",
+      "type": "constitutive",
+      "rationale": "For operator-rich cases only, a missing or mis-set operator value may be a component of licensing failure; this is a scoped theoretical wager, not a definition of licensing in general."
+    },
+    {
+      "source": "constructional_analogy",
+      "target": "production_probability",
+      "type": "causal",
+      "rationale": "Analogical pressure can make innovative or marginal forms producible before their licensing is settled."
+    },
+    {
+      "source": "community_licensing",
+      "target": "production_probability",
+      "type": "causal",
+      "rationale": "Forms licensed by a community are more available for ordinary production in relevant contexts."
+    },
+    {
+      "source": "community_licensing",
+      "target": "repair_reformulation_pressure",
+      "type": "causal",
+      "rationale": "Licensing state predicts pressure toward repair, reformulation, or substitution."
+    },
+    {
+      "source": "community_licensing",
+      "target": "reported_acceptability",
+      "type": "measurement",
+      "rationale": "Acceptability reports can serve as noisy measurements of licensing when task, ideology, processing, and context effects are modeled separately."
+    },
+    {
+      "source": "semantic_pragmatic_recoverability",
+      "target": "reported_acceptability",
+      "type": "causal",
+      "rationale": "Recoverable intended meanings can raise acceptability reports without licensing the form."
+    },
+    {
+      "source": "processing_cost",
+      "target": "reported_acceptability",
+      "type": "causal",
+      "rationale": "Processing difficulty can depress acceptability reports independently of licensing."
+    },
+    {
+      "source": "schooling_instructional_exposure",
+      "target": "standard_language_ideology",
+      "type": "causal",
+      "rationale": "Instructional exposure can strengthen or activate standard-language ideology."
+    },
+    {
+      "source": "standard_language_ideology",
+      "target": "metalinguistic_condemnation",
+      "type": "causal",
+      "rationale": "Standard-language ideology can generate explicit rule-based condemnation."
+    },
+    {
+      "source": "metalinguistic_condemnation",
+      "target": "editorial_correction_probability",
+      "type": "causal",
+      "rationale": "Explicit condemnation predicts institutional or pedagogical correction."
+    },
+    {
+      "source": "genre",
+      "target": "register_genre_appropriateness",
+      "type": "causal",
+      "rationale": "Genre conditions which forms are appropriate in the activity type."
+    },
+    {
+      "source": "register_genre_appropriateness",
+      "target": "reported_acceptability",
+      "type": "causal",
+      "rationale": "Register or genre mismatch can lower acceptability reports without changing licensing."
+    },
+    {
+      "source": "speaker_identity",
+      "target": "reported_acceptability",
+      "type": "causal",
+      "rationale": "Speaker cues can shift judgment responses for socially indexed or dialectally marked forms."
+    },
+    {
+      "source": "social_indexical_value",
+      "target": "reported_acceptability",
+      "type": "causal",
+      "rationale": "Indexical associations can affect acceptability reports while remaining distinct from operator value and licensing."
+    },
+    {
+      "source": "standard_language_ideology",
+      "target": "reported_acceptability",
+      "type": "causal",
+      "rationale": "Correctness ideology can depress acceptability reports for licensed but stigmatized or condemned forms."
+    },
+    {
+      "source": "task_framing",
+      "target": "reported_acceptability",
+      "type": "causal",
+      "rationale": "Task framing can cue correctness, naturalness, register fit, or community-membership criteria."
+    },
+    {
+      "source": "community_licensing",
+      "target": "grammaticality_attribution",
+      "type": "evidential",
+      "rationale": "Community licensing is evidence for grammaticality attribution, but not identical to the attribution."
+    },
+    {
+      "source": "reported_acceptability",
+      "target": "grammaticality_attribution",
+      "type": "evidential",
+      "rationale": "Acceptability reports inform attribution only as noisy evidence."
+    },
+    {
+      "source": "editorial_correction_probability",
+      "target": "grammaticality_attribution",
+      "type": "evidential",
+      "rationale": "Correction probability is evidence about attributed status, but remains separable from licensing because correction can be ideological."
+    },
+    {
+      "source": "repair_reformulation_pressure",
+      "target": "grammaticality_attribution",
+      "type": "evidential",
+      "rationale": "Repair pressure is evidence about perceived licensing trouble without being the same as grammaticality attribution."
+    }
+  ],
+  "scores": {
+    "empirical_coverage": 0,
+    "counterexample_resilience": 0,
+    "measurement_clarity": 0,
+    "explanatory_payoff": 0,
+    "cross_domain_stability": 0,
+    "complexity_penalty": 0,
+    "circularity_penalty": 0,
+    "construct_confusion_penalty": 0
+  }
+}
