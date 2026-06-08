@@ -99,6 +99,17 @@ Allowed axes:
 Each axis value must be a non-empty string explaining how that condition should be specified before
 the graph is interpreted. Context-indexed graphs must include all six axes.
 
+Declared axes must also be represented by graph nodes. Time-sliced node IDs count by their base
+node. The linter checks:
+
+- `community` -> `community_licensing`
+- `norm_centre` -> `standard_language_ideology`, `metalinguistic_condemnation`, or
+  `editorial_correction_probability`
+- `genre` -> `genre` or `register_genre_appropriateness`
+- `medium` -> `medium`
+- `task_framing` -> `task_framing`
+- `speaker_identity` -> `speaker_identity` or `social_indexical_value`
+
 ## Scoring
 
 Seed graphs carry complete all-zero `scores` blocks. Non-zero scores should be added only after an

@@ -33,6 +33,18 @@ CONDITIONING_AXIS_KEYS = {
     "task_framing",
     "speaker_identity",
 }
+CONDITIONING_AXIS_NODE_REQUIREMENTS = {
+    "community": {"community_licensing"},
+    "norm_centre": {
+        "standard_language_ideology",
+        "metalinguistic_condemnation",
+        "editorial_correction_probability",
+    },
+    "genre": {"genre", "register_genre_appropriateness"},
+    "medium": {"medium"},
+    "task_framing": {"task_framing"},
+    "speaker_identity": {"speaker_identity", "social_indexical_value"},
+}
 CONTEXT_INDEXED_REQUIRED_AXES = {
     "community",
     "norm_centre",
@@ -69,12 +81,17 @@ def load_json(path: Path) -> dict | None:
 
 
 def known_node(node: str, controlled_nodes: set[str]) -> bool:
-    if node in controlled_nodes:
+    base = base_node_id(node)
+    if base in controlled_nodes:
         return True
+    return False
+
+
+def base_node_id(node: str) -> str:
     match = TIME_SLICE_PATTERN.match(node)
     if not match:
-        return False
-    return match.group("base") in controlled_nodes
+        return node
+    return match.group("base")
 
 
 def score_value(scores: dict, key: str) -> float | None:
@@ -185,6 +202,22 @@ def lint_conditioning_axes(graph: dict, path: Path) -> list[str]:
     for key, value in axes.items():
         if not isinstance(value, str) or not value.strip():
             errors.append(f"{path}: conditioning_axes[{key!r}] must be a non-empty string")
+
+    node_bases: set[str] = set()
+    for node in graph.get("nodes", []):
+        try:
+            node_bases.add(base_node_id(validate_graph.node_id(node)))
+        except ValueError:
+            continue
+
+    for key in axes:
+        expected_nodes = CONDITIONING_AXIS_NODE_REQUIREMENTS.get(key)
+        if expected_nodes and node_bases.isdisjoint(expected_nodes):
+            expected = ", ".join(sorted(expected_nodes))
+            errors.append(
+                f"{path}: conditioning axis {key!r} has no corresponding node; "
+                f"expected at least one of {expected}"
+            )
 
     if is_context_indexed:
         missing = sorted(CONTEXT_INDEXED_REQUIRED_AXES - set(axes))
