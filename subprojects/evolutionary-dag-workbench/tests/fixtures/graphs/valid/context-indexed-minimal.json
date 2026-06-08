@@ -1,0 +1,71 @@
+{
+  "id": "context-indexed-minimal-fixture",
+  "title": "Context-indexed minimal fixture",
+  "family": "context-indexed-fixture",
+  "status": "candidate",
+  "conditioning_axes": {
+    "community": "Fixture community axis.",
+    "norm_centre": "Fixture norm-centre axis.",
+    "genre": "Fixture genre axis.",
+    "medium": "Fixture medium axis.",
+    "task_framing": "Fixture task-framing axis.",
+    "speaker_identity": "Fixture speaker-identity axis."
+  },
+  "nodes": [
+    "community_licensing_t1",
+    "standard_language_ideology_t1",
+    "genre_t1",
+    "medium_t1",
+    "task_framing_t1",
+    "speaker_identity_t1",
+    "reported_acceptability_t1"
+  ],
+  "edges": [
+    {
+      "source": "community_licensing_t1",
+      "target": "reported_acceptability_t1",
+      "type": "measurement",
+      "rationale": "Fixture edge showing a noisy measurement relation."
+    },
+    {
+      "source": "standard_language_ideology_t1",
+      "target": "reported_acceptability_t1",
+      "type": "causal",
+      "rationale": "Fixture edge showing ideology as a response perturbation."
+    },
+    {
+      "source": "genre_t1",
+      "target": "reported_acceptability_t1",
+      "type": "causal",
+      "rationale": "Fixture edge showing genre as a response perturbation."
+    },
+    {
+      "source": "medium_t1",
+      "target": "reported_acceptability_t1",
+      "type": "causal",
+      "rationale": "Fixture edge showing medium as a response perturbation."
+    },
+    {
+      "source": "task_framing_t1",
+      "target": "reported_acceptability_t1",
+      "type": "causal",
+      "rationale": "Fixture edge showing task framing as a response perturbation."
+    },
+    {
+      "source": "speaker_identity_t1",
+      "target": "reported_acceptability_t1",
+      "type": "causal",
+      "rationale": "Fixture edge showing speaker cues as a response perturbation."
+    }
+  ],
+  "scores": {
+    "empirical_coverage": 0,
+    "counterexample_resilience": 0,
+    "measurement_clarity": 0,
+    "explanatory_payoff": 0,
+    "cross_domain_stability": 0,
+    "complexity_penalty": 0,
+    "circularity_penalty": 0,
+    "construct_confusion_penalty": 0
+  }
+}

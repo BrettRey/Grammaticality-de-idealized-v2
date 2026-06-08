@@ -37,6 +37,7 @@ agents/          Prompt templates and scoring rubrics.
 scripts/         Local validation and scoring helpers.
 notes/           Source map, pressure test, and planning notes.
 evaluations/     Protocol-bound graph tests with machine-checkable contrast cells.
+tests/           Positive and negative fixtures for validator behavior.
 ```
 
 ## Method Commitments
@@ -73,4 +74,10 @@ Validate protocol-bound evaluations:
 
 ```bash
 python3 scripts/validate_evaluation.py evaluations/protocol-tests/*.json
+```
+
+Run positive and negative validator fixture tests:
+
+```bash
+python3 scripts/run_fixture_tests.py
 ```

@@ -1,0 +1,22 @@
+{
+  "id": "missing-target-path-fixture",
+  "target_graph": "graphs/archive/no-such-graph.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "exploratory",
+  "score_decision": "no-score-change",
+  "cards": [
+    {
+      "phenomenon": "left-branch-extraction",
+      "result": "partly_survives",
+      "expected_survival_pattern": "Fixture expected pattern.",
+      "contrast_cells": [
+        {
+          "id": "fixture-cell",
+          "axes": {
+            "community": "Fixture community."
+          }
+        }
+      ]
+    }
+  ]
+}

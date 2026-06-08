@@ -1,0 +1,23 @@
+{
+  "id": "invalid-axis-fixture",
+  "title": "Invalid axis fixture",
+  "family": "invalid-axis",
+  "status": "candidate",
+  "conditioning_axes": {
+    "register": "Register is not an allowed conditioning axis."
+  },
+  "nodes": [
+    "register_genre_appropriateness"
+  ],
+  "edges": [],
+  "scores": {
+    "empirical_coverage": 0,
+    "counterexample_resilience": 0,
+    "measurement_clarity": 0,
+    "explanatory_payoff": 0,
+    "cross_domain_stability": 0,
+    "complexity_penalty": 0,
+    "circularity_penalty": 0,
+    "construct_confusion_penalty": 0
+  }
+}

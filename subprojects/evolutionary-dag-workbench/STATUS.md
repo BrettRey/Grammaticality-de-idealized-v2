@@ -49,6 +49,7 @@ Earlier models are allowed to seed, constrain, and challenge the search. They ar
 - source map and pressure test in `notes/`
 - conditioning protocol in `notes/conditioning-operationalization-protocol-2026-06-07.md`
 - protocol-bound evaluation schema and exploratory evaluations in `evaluations/`
+- positive and negative validator fixtures in `tests/fixtures/`
 
 ## Current Tooling Gates
 
@@ -59,6 +60,7 @@ python3 scripts/validate_graph.py graphs/seeds/*.json graphs/archive/*.json
 python3 scripts/lint_graph.py graphs/seeds/*.json graphs/archive/*.json
 python3 scripts/score_graph.py graphs/seeds/*.json graphs/archive/*.json
 python3 scripts/validate_evaluation.py evaluations/protocol-tests/*.json
+python3 scripts/run_fixture_tests.py
 ```
 
 The linter now checks:
@@ -69,16 +71,20 @@ The linter now checks:
 - all-zero seed score discipline;
 - `conditioning_axes` metadata for context-indexed graph families;
 - declared conditioning axes against corresponding graph nodes.
+
+The evaluation validator checks:
+
 - protocol-bound evaluations against target graph paths, protocol paths, phenomenon card IDs,
   allowed result labels, and contrast-cell axes.
 
+The fixture runner checks positive and negative cases for both graph linting and evaluation
+validation.
+
 ## Next Actions
 
-1. Add tests or fixtures for negative linter/evaluation cases, especially malformed
-   `conditioning_axes` and invalid contrast-cell axes.
-2. Decide whether scoped module scores should be possible, separate from general-account scores.
-3. Add a processing-specific context module or keep processing as a perturbation layer only.
-4. Expand `phenomena/cards/` toward 40-100 cards only after the current representation classes stop
+1. Decide whether scoped module scores should be possible, separate from general-account scores.
+2. Add a processing-specific context module or keep processing as a perturbation layer only.
+3. Expand `phenomena/cards/` toward 40-100 cards only after the current representation classes stop
    shifting every pass.
-5. Only after the construct inventory stabilizes, consider whether `pgmpy`, NOTEARS-style methods,
+4. Only after the construct inventory stabilizes, consider whether `pgmpy`, NOTEARS-style methods,
    or empirical causal discovery are useful.

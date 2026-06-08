@@ -1,0 +1,22 @@
+{
+  "id": "invalid-phenomenon-fixture",
+  "target_graph": "graphs/archive/context-aware-operator-gap-candidate.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "exploratory",
+  "score_decision": "no-score-change",
+  "cards": [
+    {
+      "phenomenon": "missing-card",
+      "result": "partly_survives",
+      "expected_survival_pattern": "Fixture expected pattern.",
+      "contrast_cells": [
+        {
+          "id": "fixture-cell",
+          "axes": {
+            "community": "Fixture community."
+          }
+        }
+      ]
+    }
+  ]
+}

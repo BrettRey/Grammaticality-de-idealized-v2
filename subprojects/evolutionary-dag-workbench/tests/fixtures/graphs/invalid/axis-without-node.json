@@ -1,0 +1,23 @@
+{
+  "id": "axis-without-node-fixture",
+  "title": "Axis without node fixture",
+  "family": "axis-without-node",
+  "status": "candidate",
+  "conditioning_axes": {
+    "speaker_identity": "Declared speaker axis with no corresponding node."
+  },
+  "nodes": [
+    "reported_acceptability"
+  ],
+  "edges": [],
+  "scores": {
+    "empirical_coverage": 0,
+    "counterexample_resilience": 0,
+    "measurement_clarity": 0,
+    "explanatory_payoff": 0,
+    "cross_domain_stability": 0,
+    "complexity_penalty": 0,
+    "circularity_penalty": 0,
+    "construct_confusion_penalty": 0
+  }
+}
