@@ -32,7 +32,7 @@ The current strongest modules are scoped, not general winners:
 - `context-aware-operator-gap-candidate` for operator-gap, opportunity, recoverability, analogy, and
   repair-pressure cases.
 
-Both have protocol-bound exploratory evaluations and `scoped_module` labels. Neither has earned a
+Both have protocol-bound `scope-only` evaluations and `scoped_module` labels. Neither has earned a
 non-zero numeric score or a `general_account` score.
 
 ## Live Boundary Rule
@@ -76,12 +76,13 @@ The linter now checks:
 - score values in the 0-5 range;
 - all-zero seed score discipline;
 - `score_status` metadata for non-zero scores;
-- existing evaluation references for scoped/general labels;
+- required evaluation references for scoped/general labels;
 - evaluation references whose `target_graph` matches the labelled graph;
+- scoped/general labels only when the referenced evaluation authorizes scope recognition;
 - non-zero scores only when the referenced evaluation authorizes score movement;
 - `conditioning_axes` metadata for context-indexed graph families;
 - declared conditioning axes against corresponding graph nodes;
-- directed paths from conditioning-axis nodes to outcome-like nodes.
+- conditioning-axis nodes that are outcome-like or have directed paths to outcome-like nodes.
 
 The graph validator checks:
 
@@ -89,7 +90,8 @@ The graph validator checks:
 - edge endpoint membership;
 - duplicate typed edges;
 - acyclicity of non-`time_lagged` edges;
-- forward direction for `time_lagged` edges.
+- forward direction for `time_lagged` edges;
+- no backward cross-time edges and no forward cross-time effects except `time_lagged`.
 
 The evaluation validator checks:
 

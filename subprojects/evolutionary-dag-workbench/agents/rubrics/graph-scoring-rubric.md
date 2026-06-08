@@ -7,10 +7,13 @@ Keep dimensions separate. A total score is useful only as a triage device.
 Scores are scoped. A graph can be labelled as a `scoped_module` without being scored as a
 `general_account`.
 
-Non-zero scores require `score_status.kind` and `score_status.evaluation` in the graph JSON. The
-referenced evaluation must target the scored graph, use `status` `protocol-bound` or `held-out`,
-and use `score_decision` `score-change-proposed`. No graph should receive a `general_account` score
-unless it has survived protocol-bound held-out tests across the workbench's phenomenon space.
+Scoped and general labels require `score_status.kind` and `score_status.evaluation` in the graph
+JSON. The referenced evaluation must target the labelled graph, use `status` `protocol-bound` or
+`held-out`, and use `score_decision` `scope-only` or `score-change-proposed`.
+
+Non-zero scores additionally require `score_decision` `score-change-proposed`. No graph should
+receive a `general_account` score unless it has survived protocol-bound held-out tests across the
+workbench's phenomenon space.
 
 Each dimension is scored from 0 to 5 inclusive. Do not treat a one-point difference as meaningful
 until held-out or parameterized evaluations make the scale comparable across graphs.

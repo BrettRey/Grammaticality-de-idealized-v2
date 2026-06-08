@@ -2,8 +2,8 @@
   "id": "context-aware-operator-gap-2026-06-07",
   "target_graph": "graphs/archive/context-aware-operator-gap-candidate.json",
   "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
-  "status": "exploratory",
-  "score_decision": "no-score-change",
+  "status": "protocol-bound",
+  "score_decision": "scope-only",
   "cards": [
     {
       "phenomenon": "left-branch-extraction",

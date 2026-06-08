@@ -91,6 +91,10 @@ If a graph needs feedback, use explicit time slices or `time_lagged` edges. The 
 `time_lagged` edges must point forward in time: `_t` counts as time 0, `_t1` as time 1,
 `_t2` as time 2, and so on. Backward or same-slice `time_lagged` edges are invalid.
 
+For all typed edges, if both endpoints are time-sliced, the target time must not precede the source
+time. Forward cross-time effects must use `time_lagged`; same-slice typed edges may use the other
+edge types.
+
 Same-slice mutual dependence is not represented as reciprocal directed edges. If a graph claims
 co-constitution within a single timescale, it should either explain the acyclic constitutive
 direction it chooses or mark the move as a theoretical wager.
@@ -113,8 +117,9 @@ Allowed axes:
 Each axis value must be a non-empty string explaining how that condition should be specified before
 the graph is interpreted. Context-indexed graphs must include all six axes.
 
-Declared axes must also be represented by graph nodes with a directed path to an outcome-like node.
-Time-sliced node IDs count by their base node. The linter checks:
+Declared axes must also be represented by graph nodes that are themselves outcome-like or have a
+directed path to an outcome-like node. Time-sliced node IDs count by their base node. The linter
+checks:
 
 - `community` -> `community_licensing`
 - `norm_centre` -> `standard_language_ideology`, `metalinguistic_condemnation`, or
@@ -139,8 +144,10 @@ Allowed `score_status.kind` values:
 - `scoped_module`
 - `general_account`
 
-Non-zero scores require `score_status.kind` to be `scoped_module` or `general_account`.
-`score_status.evaluation` must point to an existing evaluation whose `target_graph` matches the
-scored graph. The referenced evaluation must have `status` set to `protocol-bound` or `held-out`
-and `score_decision` set to `score-change-proposed`. A scoped-module label or score must not be
-read as a general-account score.
+`scoped_module` and `general_account` labels require `score_status.evaluation`. The evaluation must
+target the labelled graph, have `status` set to `protocol-bound` or `held-out`, and have
+`score_decision` set to `scope-only` or `score-change-proposed`.
+
+Non-zero scores require `score_status.kind` to be `scoped_module` or `general_account`. They also
+require the referenced evaluation to have `score_decision` set to `score-change-proposed`. A
+scoped-module label or score must not be read as a general-account score.

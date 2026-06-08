@@ -17,6 +17,8 @@ NODES_PATH = ROOT / "ontology" / "nodes.yaml"
 STATUSES = {"seed", "candidate", "archived", "rejected", "superseded"}
 SCORE_STATUS_KINDS = {"unscored", "scoped_module", "general_account"}
 SCORABLE_STATUS_KINDS = {"scoped_module", "general_account"}
+LABEL_EVALUATION_STATUSES = {"protocol-bound", "held-out"}
+LABEL_EVALUATION_DECISIONS = {"scope-only", "score-change-proposed"}
 SCORING_EVALUATION_STATUSES = {"protocol-bound", "held-out"}
 SCORING_EVALUATION_DECISION = "score-change-proposed"
 SCORE_MIN = 0
@@ -242,7 +244,17 @@ def lint_score_status(graph: dict, path: Path) -> list[str]:
         elif not (ROOT / evaluation).exists():
             errors.append(f"{path}: score_status.evaluation path does not exist: {evaluation!r}")
         else:
-            errors.extend(lint_score_evaluation_target(path, evaluation, require_score_authorized=has_nonzero_scores))
+            errors.extend(
+                lint_score_evaluation_target(
+                    path,
+                    evaluation,
+                    require_label_authorized=kind in SCORABLE_STATUS_KINDS,
+                    require_score_authorized=has_nonzero_scores,
+                )
+            )
+
+    if kind in SCORABLE_STATUS_KINDS and evaluation is None:
+        errors.append(f"{path}: {kind} labels require score_status.evaluation")
 
     if has_nonzero_scores:
         if kind not in SCORABLE_STATUS_KINDS:
@@ -260,6 +272,7 @@ def lint_score_evaluation_target(
     graph_path: Path,
     evaluation: str,
     *,
+    require_label_authorized: bool,
     require_score_authorized: bool,
 ) -> list[str]:
     evaluation_path = ROOT / evaluation
@@ -280,6 +293,23 @@ def lint_score_evaluation_target(
         ]
 
     errors: list[str] = []
+    if require_label_authorized:
+        status = evaluation_data.get("status")
+        if status not in LABEL_EVALUATION_STATUSES:
+            allowed = ", ".join(sorted(LABEL_EVALUATION_STATUSES))
+            errors.append(
+                f"{graph_path}: scoped/general labels require evaluation.status "
+                f"to be one of {allowed}"
+            )
+
+        score_decision = evaluation_data.get("score_decision")
+        if score_decision not in LABEL_EVALUATION_DECISIONS:
+            allowed = ", ".join(sorted(LABEL_EVALUATION_DECISIONS))
+            errors.append(
+                f"{graph_path}: scoped/general labels require evaluation.score_decision "
+                f"to be one of {allowed}"
+            )
+
     if require_score_authorized:
         status = evaluation_data.get("status")
         if status not in SCORING_EVALUATION_STATUSES:
@@ -369,6 +399,9 @@ def lint_conditioning_axes(graph: dict, path: Path) -> list[str]:
 
 
 def has_directed_path_to_outcome(start: str, outgoing: dict[str, list[str]]) -> bool:
+    if base_node_id(start) in OUTCOME_NODE_BASES:
+        return True
+
     queue = list(outgoing.get(start, []))
     seen: set[str] = set()
 

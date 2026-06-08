@@ -89,18 +89,31 @@ def check_edges(graph: dict, path: Path) -> tuple[list[str], list[tuple[str, str
                     f"{source!r} -> {target!r} ({edge_type})"
                 )
             seen_edges.add(edge_key)
-        if edge_type == "time_lagged" and isinstance(source, str) and isinstance(target, str):
+
+        if isinstance(source, str) and isinstance(target, str):
             source_time = time_index(source)
             target_time = time_index(target)
-            if source_time is None or target_time is None:
-                errors.append(
-                    f"{path}: edge {index} time_lagged endpoints must both be time-sliced"
-                )
-            elif target_time <= source_time:
-                errors.append(
-                    f"{path}: edge {index} time_lagged edge must point forward in time "
-                    f"({source!r} -> {target!r})"
-                )
+            if edge_type == "time_lagged":
+                if source_time is None or target_time is None:
+                    errors.append(
+                        f"{path}: edge {index} time_lagged endpoints must both be time-sliced"
+                    )
+                elif target_time <= source_time:
+                    errors.append(
+                        f"{path}: edge {index} time_lagged edge must point forward in time "
+                        f"({source!r} -> {target!r})"
+                    )
+            elif source_time is not None and target_time is not None:
+                if target_time < source_time:
+                    errors.append(
+                        f"{path}: edge {index} cross-time edge must not point backward in time "
+                        f"({source!r} -> {target!r})"
+                    )
+                elif target_time > source_time:
+                    errors.append(
+                        f"{path}: edge {index} cross-time forward edge must use "
+                        f"type 'time_lagged' ({source!r} -> {target!r})"
+                    )
 
         if edge_type != "time_lagged" and source in nodes and target in nodes:
             edges_for_dag.append((source, target, edge_type))

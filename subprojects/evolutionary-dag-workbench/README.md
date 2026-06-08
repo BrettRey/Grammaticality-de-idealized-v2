@@ -51,7 +51,7 @@ tests/           Positive and negative fixtures for validator behavior.
 - Represent feedback with time-indexed variables or `time_lagged` edges.
 - Keep seed scores at zero until an adversarial critique is recorded.
 - Require `score_status`, a target-matched evaluation reference, and an authorizing evaluation
-  status/decision before any graph receives non-zero scores.
+  status/decision before any graph receives a scoped/general label or non-zero score.
 - Treat scoped-module labels as scoped evidence, not as general-account scores.
 - Keep multiple scores visible instead of collapsing everything into one winner too early.
 - Treat LLM agents as graph generators and critics, not as scholarly adjudicators.

@@ -1,0 +1,31 @@
+{
+  "id": "sink-outcome-axis",
+  "title": "Sink outcome axis fixture",
+  "family": "sink-outcome-axis",
+  "status": "candidate",
+  "nodes": [
+    "reported_acceptability",
+    "community_licensing"
+  ],
+  "edges": [
+    {
+      "source": "reported_acceptability",
+      "target": "community_licensing",
+      "type": "evidential",
+      "rationale": "Fixture models licensing as the inferred target, not as a downstream cause."
+    }
+  ],
+  "conditioning_axes": {
+    "community": "Fixture community condition."
+  },
+  "scores": {
+    "empirical_coverage": 0,
+    "counterexample_resilience": 0,
+    "measurement_clarity": 0,
+    "explanatory_payoff": 0,
+    "cross_domain_stability": 0,
+    "complexity_penalty": 0,
+    "circularity_penalty": 0,
+    "construct_confusion_penalty": 0
+  }
+}

@@ -42,6 +42,14 @@ TESTS = [
         expected_returncode=0,
     ),
     FixtureTest(
+        name="graph valid sink outcome axis fixture",
+        command=[
+            "scripts/lint_graph.py",
+            rel("tests/fixtures/graphs/valid/sink-outcome-axis.json"),
+        ],
+        expected_returncode=0,
+    ),
+    FixtureTest(
         name="graph rejects conditioning axis without node",
         command=[
             "scripts/lint_graph.py",
@@ -114,6 +122,24 @@ TESTS = [
         expected_output="time_lagged edge must point forward in time",
     ),
     FixtureTest(
+        name="graph rejects backward non-lag cross-time edge",
+        command=[
+            "scripts/lint_graph.py",
+            rel("tests/fixtures/graphs/invalid/backward-cross-time-causal.json"),
+        ],
+        expected_returncode=1,
+        expected_output="cross-time edge must not point backward in time",
+    ),
+    FixtureTest(
+        name="graph rejects forward non-lag cross-time edge",
+        command=[
+            "scripts/lint_graph.py",
+            rel("tests/fixtures/graphs/invalid/forward-cross-time-causal.json"),
+        ],
+        expected_returncode=1,
+        expected_output="cross-time forward edge must use type 'time_lagged'",
+    ),
+    FixtureTest(
         name="graph rejects disconnected conditioning axis",
         command=[
             "scripts/lint_graph.py",
@@ -166,6 +192,15 @@ TESTS = [
         ],
         expected_returncode=1,
         expected_output="non-zero scores require evaluation.status",
+    ),
+    FixtureTest(
+        name="graph rejects exploratory scoped label evaluation",
+        command=[
+            "scripts/lint_graph.py",
+            rel("tests/fixtures/graphs/invalid/scoped-exploratory-evaluation.json"),
+        ],
+        expected_returncode=1,
+        expected_output="scoped/general labels require evaluation.status",
     ),
     FixtureTest(
         name="graph rejects score out of range",
