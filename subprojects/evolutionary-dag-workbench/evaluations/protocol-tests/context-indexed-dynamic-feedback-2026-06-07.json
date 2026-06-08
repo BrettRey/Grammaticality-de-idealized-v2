@@ -1,0 +1,189 @@
+{
+  "id": "context-indexed-dynamic-feedback-2026-06-07",
+  "target_graph": "graphs/archive/context-indexed-dynamic-feedback-candidate.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "exploratory",
+  "score_decision": "no-score-change",
+  "cards": [
+    {
+      "phenomenon": "needs-washed",
+      "result": "survives_as_module",
+      "expected_survival_pattern": "Stable production and licensing in a regional community can coexist with standard-norm condemnation, correction, lower reported acceptability, or hostile attribution.",
+      "notes": "Survives as a module. The JSON graph still does not instantiate cells internally; this evaluation file records them.",
+      "contrast_cells": [
+        {
+          "id": "regional-naturalness",
+          "axes": {
+            "community": "Regional vernacular community where the form is robust.",
+            "norm_centre": "Local community norm rather than standard edited norm.",
+            "genre": "Informal local interaction.",
+            "medium": "Speech or informal writing.",
+            "task_framing": "Naturalness or ordinary-use framing.",
+            "speaker_identity": "Local or in-group speaker cue."
+          }
+        },
+        {
+          "id": "standard-correctness",
+          "axes": {
+            "community": "Standard-language evaluator context.",
+            "norm_centre": "School, editing, or usage-guide norm centre.",
+            "genre": "Edited prose or classroom task.",
+            "medium": "Edited writing or test response.",
+            "task_framing": "Correctness framing.",
+            "speaker_identity": "Unmarked standard-evaluator cue."
+          }
+        }
+      ]
+    },
+    {
+      "phenomenon": "stigmatized-robust-vernacular",
+      "result": "survives_as_module",
+      "expected_survival_pattern": "Speaker cues and social-indexical value can change reported acceptability without directly changing community licensing.",
+      "notes": "Survives as a module. Evaluator identity is not separately represented yet.",
+      "contrast_cells": [
+        {
+          "id": "ingroup-naturalness",
+          "axes": {
+            "community": "Community where the vernacular form is licensed.",
+            "norm_centre": "Local usage norm.",
+            "genre": "Everyday interaction.",
+            "medium": "Speech.",
+            "task_framing": "Naturalness framing.",
+            "speaker_identity": "In-group or locally recognized speaker cue."
+          }
+        },
+        {
+          "id": "standard-evaluator-correctness",
+          "axes": {
+            "community": "Standard-language judgment setting.",
+            "norm_centre": "Prestige or school norm centre.",
+            "genre": "Judgment task or edited prose.",
+            "medium": "Survey item, classroom response, or edited writing.",
+            "task_framing": "Correctness framing.",
+            "speaker_identity": "Out-group or stigmatized speaker cue."
+          }
+        }
+      ]
+    },
+    {
+      "phenomenon": "register-bound-fragments",
+      "result": "survives_as_module",
+      "expected_survival_pattern": "Genre and medium should route through register/genre appropriateness and affect reported acceptability without globally marking fragments as unlicensed.",
+      "notes": "Survives as a module. It still needs sharper treatment of explicit grammaticality condemnation under full-sentence task framing.",
+      "contrast_cells": [
+        {
+          "id": "fragment-licensed-genre",
+          "axes": {
+            "community": "Readers or speakers familiar with fragment-licensed genres.",
+            "norm_centre": "Genre-local norm centre.",
+            "genre": "Headline, sign, message, conversation, or answer fragment.",
+            "medium": "Speech, signage, messaging, or headline writing.",
+            "task_framing": "Genre-fit or naturalness framing.",
+            "speaker_identity": "Ordinary participant in the genre."
+          }
+        },
+        {
+          "id": "formal-full-sentence",
+          "axes": {
+            "community": "Formal edited prose evaluators.",
+            "norm_centre": "School or style-guide norm centre.",
+            "genre": "Formal edited prose or grammar exercise.",
+            "medium": "Edited writing or test response.",
+            "task_framing": "Full-sentence correctness framing.",
+            "speaker_identity": "Unmarked standard writer cue."
+          }
+        }
+      ]
+    },
+    {
+      "phenomenon": "singular-they",
+      "result": "partly_survives",
+      "expected_survival_pattern": "Earlier production and usage should feed later usage, licensing, stabilization, ideology, and production without treating later institutional acceptance as creation from nothing.",
+      "notes": "Partly survives. Multiple norm centres, cohort effects, and institutional-adoption dynamics are still underrepresented.",
+      "contrast_cells": [
+        {
+          "id": "earlier-hostile-norm-centre",
+          "axes": {
+            "community": "Speakers with attested singular-they use in an earlier slice.",
+            "norm_centre": "Usage-guide or school norm centre hostile to the form.",
+            "genre": "General prose or speech with generic/indefinite reference.",
+            "medium": "Historical corpus, usage guide, or school text.",
+            "task_framing": "Correctness or rule citation.",
+            "speaker_identity": "Historically situated unmarked speaker or writer."
+          }
+        },
+        {
+          "id": "later-institutional-acceptance",
+          "axes": {
+            "community": "Later public and institutional communities with broader acceptance.",
+            "norm_centre": "Institutional norm centre increasingly accepting the form.",
+            "genre": "Public prose, institutional guidance, or ordinary speech.",
+            "medium": "Edited prose, guidance documents, speech, or digital writing.",
+            "task_framing": "Naturalness, inclusivity, or updated correctness framing.",
+            "speaker_identity": "Unmarked contemporary speaker or writer."
+          }
+        }
+      ]
+    },
+    {
+      "phenomenon": "between-you-and-I",
+      "result": "partly_survives",
+      "expected_survival_pattern": "Production probability and reported acceptability should diverge under correctness framing, standard-language ideology, and correction pressure.",
+      "notes": "Partly survives. The candidate lacks schooling_instructional_exposure and does not explicitly distinguish production task from judgment task.",
+      "contrast_cells": [
+        {
+          "id": "unmonitored-production",
+          "axes": {
+            "community": "Speakers producing the form outside explicit correction.",
+            "norm_centre": "Local or conversational norm centre.",
+            "genre": "Conversation or informal writing.",
+            "medium": "Speech or messaging.",
+            "task_framing": "No explicit correctness framing.",
+            "speaker_identity": "Ordinary speaker cue."
+          }
+        },
+        {
+          "id": "school-correctness-judgment",
+          "axes": {
+            "community": "School or editing judgment context.",
+            "norm_centre": "Instructional grammar norm centre.",
+            "genre": "Grammar test, editing task, or usage discussion.",
+            "medium": "Written test or edited prose.",
+            "task_framing": "Correctness framing.",
+            "speaker_identity": "Student, editor, or standard-writer cue."
+          }
+        }
+      ]
+    },
+    {
+      "phenomenon": "left-branch-extraction",
+      "result": "fails_general_out_of_scope",
+      "expected_survival_pattern": "The candidate should fail as a general account or mark the case out of scope because it lacks operator-gap and recoverability modules.",
+      "notes": "Useful failure. A separate context-aware operator-gap candidate is needed.",
+      "contrast_cells": [
+        {
+          "id": "recoverable-extraction",
+          "axes": {
+            "community": "English judgment community for extraction cases.",
+            "norm_centre": "Theoretical or explicit-judgment norm centre.",
+            "genre": "Elicited sentence judgment.",
+            "medium": "Written example or controlled prompt.",
+            "task_framing": "Acceptability or grammaticality judgment.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "available-paraphrase",
+          "axes": {
+            "community": "English judgment community for paraphrase comparison.",
+            "norm_centre": "Theoretical or explicit-judgment norm centre.",
+            "genre": "Elicited sentence judgment.",
+            "medium": "Written example or controlled prompt.",
+            "task_framing": "Comparison with available paraphrase.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    }
+  ]
+}
