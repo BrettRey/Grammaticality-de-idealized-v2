@@ -135,6 +135,41 @@ upstream_or_mediating:
       - raw frequency
       - production probability
 
+  - id: opportunity_normalized_attestation
+    label: Opportunity-normalized attestation
+    definition: Attestation interpreted against the quantity and type of contexts where the form could have appeared.
+    proxies:
+      - corpus count divided by opportunity set
+      - attestation rate in eligible environments
+      - contrast between observed uses and available contexts
+    forbidden_conflations:
+      - raw frequency
+      - opportunity mass alone
+      - community licensing
+
+  - id: competitor_availability
+    label: Competitor availability
+    definition: Availability of established alternative forms, repairs, paraphrases, or constructions in the same functional slot.
+    proxies:
+      - paraphrase availability
+      - competing construction frequency
+      - repair option count
+    forbidden_conflations:
+      - repair pressure
+      - community licensing
+
+  - id: preemption_strength
+    label: Preemption strength
+    definition: Degree to which available alternatives and high opportunity mass make absence or rarity probative against licensing.
+    proxies:
+      - opportunity-normalized absence with competitors present
+      - competitor dominance in eligible contexts
+      - repeated repair to a competitor construction
+    forbidden_conflations:
+      - raw absence
+      - low frequency
+      - ungrammaticality
+
   - id: entrenchment
     label: Entrenchment
     definition: Learned strength or accessibility of a form or construction from exposure and use.

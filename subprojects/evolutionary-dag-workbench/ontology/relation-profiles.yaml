@@ -1,0 +1,56 @@
+# Controlled relation profiles for optional edge semantics.
+# Edge type says what kind of relation is claimed; relation_profile says how that
+# relation should be read when a graph is used for prediction.
+
+relation_profiles:
+  positive_monotone:
+    applies_to: [causal, time_lagged, mediating]
+    reading: Higher source tends to increase the target, holding the declared context fixed.
+
+  negative_monotone:
+    applies_to: [causal, time_lagged, mediating]
+    reading: Higher source tends to decrease the target, holding the declared context fixed.
+
+  mixed_contextual:
+    applies_to: [causal, time_lagged, mediating]
+    reading: Direction or strength depends on declared conditioning axes.
+
+  threshold_or_nonlinear:
+    applies_to: [causal, time_lagged, mediating]
+    reading: The source affects the target only beyond a threshold, within a range, or non-monotonically.
+
+  noisy_positive_indicator:
+    applies_to: [measurement]
+    reading: The target is a noisy observed indicator that tends to rise with the source.
+
+  noisy_negative_indicator:
+    applies_to: [measurement]
+    reading: The target is a noisy observed indicator that tends to fall as the source rises.
+
+  task_biased_indicator:
+    applies_to: [measurement]
+    reading: The target is an observed indicator whose relation to the source is task-biased or frame-dependent.
+
+  evidential_warrant:
+    applies_to: [evidential]
+    reading: The source increases warrant for some value or state of the target.
+
+  evidential_undercut:
+    applies_to: [evidential]
+    reading: The source weakens warrant for some value or state of the target.
+
+  contextual_warrant:
+    applies_to: [evidential]
+    reading: The evidential force depends on community, norm centre, genre, medium, task framing, or speaker identity.
+
+  partial_component:
+    applies_to: [constitutive]
+    reading: The source is a partial component of the target under the graph's theory.
+
+  necessary_component:
+    applies_to: [constitutive]
+    reading: The source is required for the target under the graph's theory, but may not be sufficient.
+
+  definitional_component:
+    applies_to: [constitutive]
+    reading: The source is part of the definition of the target in this graph.

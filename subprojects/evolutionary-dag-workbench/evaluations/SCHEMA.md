@@ -51,9 +51,10 @@ Protocol-bound tests are stored as JSON so critique results are not only prose n
 
 ## Score Decisions
 
-- `no-score-change`
-- `score-change-proposed`
-- `scope-only`
+- `no-score-change`: records an evaluation without authorizing label or score movement.
+- `scope-only`: authorizes a scoped/general label but no numeric score movement.
+- `score-change-proposed`: authorizes numeric score movement; the target graph must be profiled by
+  `edge_semantics_level`.
 
 ## Card Results
 

@@ -3,6 +3,7 @@
   "title": "Context-aware operator-gap candidate",
   "family": "context-aware-operator-gap",
   "status": "candidate",
+  "edge_semantics_level": "profiled",
   "notes": "Candidate generated after the protocol-bound context test showed that the dynamic/context module should not absorb operator-gap cases. This graph tests operator value, opportunity, recoverability, analogy, repair, and context channels as a scoped operator-gap module. It is not scored pending critique.",
   "conditioning_axes": {
     "community": "Specify the speech or judgment community before interpreting licensing, production, usage, or repair evidence.",
@@ -16,6 +17,9 @@
     "operator_value",
     "opportunity_mass",
     "usage_frequency",
+    "opportunity_normalized_attestation",
+    "competitor_availability",
+    "preemption_strength",
     "community_licensing",
     "semantic_pragmatic_recoverability",
     "constructional_analogy",
@@ -42,56 +46,100 @@
     },
     {
       "source": "opportunity_mass",
-      "target": "community_licensing",
-      "type": "evidential",
-      "rationale": "Opportunity mass calibrates how strongly absence or rarity bears on licensing in the specified community and construction type."
+      "target": "opportunity_normalized_attestation",
+      "type": "constitutive",
+      "relation_profile": "partial_component",
+      "rationale": "Opportunity mass is part of the denominator for interpreting attestation."
     },
     {
       "source": "usage_frequency",
+      "target": "opportunity_normalized_attestation",
+      "type": "constitutive",
+      "relation_profile": "partial_component",
+      "rationale": "Observed frequency is part of the numerator for opportunity-normalized attestation."
+    },
+    {
+      "source": "opportunity_normalized_attestation",
       "target": "community_licensing",
       "type": "evidential",
-      "rationale": "Usage frequency is evidence for licensing only after opportunity and competitor structure are considered."
+      "relation_profile": "evidential_warrant",
+      "rationale": "Opportunity-normalized attestation is warrant for licensing in the specified community and constructional context."
+    },
+    {
+      "source": "opportunity_mass",
+      "target": "preemption_strength",
+      "type": "constitutive",
+      "relation_profile": "partial_component",
+      "rationale": "Opportunity mass is part of what makes absence or rarity probative."
+    },
+    {
+      "source": "usage_frequency",
+      "target": "preemption_strength",
+      "type": "constitutive",
+      "relation_profile": "partial_component",
+      "rationale": "Observed frequency contributes to whether a high-opportunity pattern is an attestation gap."
+    },
+    {
+      "source": "competitor_availability",
+      "target": "preemption_strength",
+      "type": "constitutive",
+      "relation_profile": "partial_component",
+      "rationale": "Available competitors are part of what makes absence or rarity count as preemption rather than mere low opportunity."
+    },
+    {
+      "source": "preemption_strength",
+      "target": "community_licensing",
+      "type": "evidential",
+      "relation_profile": "evidential_undercut",
+      "rationale": "Strong preemption weakens warrant for licensing in the specified opportunity and competitor context."
     },
     {
       "source": "constructional_analogy",
       "target": "community_licensing",
       "type": "evidential",
+      "relation_profile": "evidential_warrant",
       "rationale": "Analogical support can be evidence that the form belongs near a licensed constructional neighborhood without equaling licensing."
     },
     {
       "source": "operator_value",
       "target": "community_licensing",
       "type": "constitutive",
+      "relation_profile": "necessary_component",
       "rationale": "For operator-gap cases only, a missing or mis-set public-update value may be a component of licensing failure; this remains a scoped theoretical wager."
     },
     {
       "source": "constructional_analogy",
       "target": "production_probability",
       "type": "causal",
+      "relation_profile": "positive_monotone",
       "rationale": "Analogical support can make a form producible or tempting even when licensing remains unsettled."
     },
     {
       "source": "community_licensing",
       "target": "production_probability",
       "type": "causal",
+      "relation_profile": "positive_monotone",
       "rationale": "Community licensing predicts production availability in the specified constructional context."
     },
     {
       "source": "community_licensing",
       "target": "repair_reformulation_pressure",
       "type": "causal",
-      "rationale": "Licensing trouble predicts pressure toward repair, reformulation, or available paraphrase."
+      "relation_profile": "negative_monotone",
+      "rationale": "Lower community licensing predicts greater pressure toward repair, reformulation, or available paraphrase."
     },
     {
       "source": "semantic_pragmatic_recoverability",
       "target": "reported_acceptability",
       "type": "causal",
+      "relation_profile": "positive_monotone",
       "rationale": "Recoverable meaning can raise reported acceptability without licensing the operator configuration."
     },
     {
       "source": "processing_cost",
       "target": "reported_acceptability",
       "type": "causal",
+      "relation_profile": "negative_monotone",
       "rationale": "Processing burden can lower reported acceptability independently of operator licensing."
     },
     {
@@ -110,18 +158,21 @@
       "source": "register_genre_appropriateness",
       "target": "reported_acceptability",
       "type": "causal",
+      "relation_profile": "mixed_contextual",
       "rationale": "Register or genre mismatch can affect reported acceptability without deciding operator licensing."
     },
     {
       "source": "task_framing",
       "target": "reported_acceptability",
       "type": "causal",
+      "relation_profile": "mixed_contextual",
       "rationale": "Task framing can foreground acceptability, grammaticality, paraphrase availability, naturalness, or repair."
     },
     {
       "source": "task_framing",
       "target": "grammaticality_attribution",
       "type": "causal",
+      "relation_profile": "mixed_contextual",
       "rationale": "Task framing can change explicit attribution by cueing which evidential channel the participant should treat as relevant."
     },
     {
@@ -140,36 +191,42 @@
       "source": "standard_language_ideology",
       "target": "metalinguistic_condemnation",
       "type": "causal",
+      "relation_profile": "positive_monotone",
       "rationale": "A specified norm centre can generate explicit condemnation independently of operator licensing."
     },
     {
       "source": "standard_language_ideology",
       "target": "reported_acceptability",
       "type": "causal",
+      "relation_profile": "mixed_contextual",
       "rationale": "Correctness ideology can perturb reported acceptability in explicit judgment contexts."
     },
     {
       "source": "metalinguistic_condemnation",
       "target": "grammaticality_attribution",
       "type": "evidential",
+      "relation_profile": "contextual_warrant",
       "rationale": "Condemnation can influence attribution while remaining separable from licensing."
     },
     {
       "source": "community_licensing",
       "target": "grammaticality_attribution",
       "type": "evidential",
+      "relation_profile": "evidential_warrant",
       "rationale": "Community licensing is evidence for attribution, not identical to attribution."
     },
     {
       "source": "repair_reformulation_pressure",
       "target": "grammaticality_attribution",
       "type": "evidential",
+      "relation_profile": "contextual_warrant",
       "rationale": "Repair or paraphrase pressure is evidence about licensing trouble without being the target itself."
     },
     {
       "source": "reported_acceptability",
       "target": "grammaticality_attribution",
       "type": "evidential",
+      "relation_profile": "contextual_warrant",
       "rationale": "Acceptability reports provide noisy evidence for grammaticality attribution."
     }
   ],

@@ -2,7 +2,8 @@
 
 Seed and archive graphs are stored as JSON. The local validator checks simple graph structure,
 duplicate edges, edge types, and time-lag discipline. The linter also checks node IDs against
-`ontology/nodes.yaml`, graph IDs against filenames, `family`, `status`, and score discipline.
+`ontology/nodes.yaml`, relation profiles against `ontology/relation-profiles.yaml`, graph IDs
+against filenames, `family`, `status`, and score discipline.
 
 ```json
 {
@@ -10,6 +11,7 @@ duplicate edges, edge types, and time-lag discipline. The linter also checks nod
   "title": "Usage-heavy seed graph",
   "family": "usage-heavy",
   "status": "seed",
+  "edge_semantics_level": "topology_only",
   "nodes": [
     "usage_frequency",
     "entrenchment",
@@ -20,6 +22,7 @@ duplicate edges, edge types, and time-lag discipline. The linter also checks nod
       "source": "usage_frequency",
       "target": "entrenchment",
       "type": "causal",
+      "relation_profile": "positive_monotone",
       "rationale": "Repeated exposure can change learned accessibility."
     }
   ],
@@ -85,6 +88,25 @@ duplicate edges, edge types, and time-lag discipline. The linter also checks nod
 Edges are unique by `source`, `target`, and `type`. Repeating the same typed edge is invalid; if two
 rationales seem necessary, merge them or introduce a distinct construct.
 
+## Optional Relation Profiles
+
+`relation_profile` is optional. When absent, the edge is an uncommitted topology claim: it says that
+a relation is worth representing, not that the graph has pre-registered a sign or inference reading
+for prediction.
+
+Allowed profiles are defined in `ontology/relation-profiles.yaml`. If a profile is present, it must
+be compatible with the edge's `type`.
+
+Graph-level `edge_semantics_level` values:
+
+- `topology_only`: default when the field is absent; profiles may be absent.
+- `profiled`: the graph contains explicit relation profiles for the edges it is using as
+  prediction commitments.
+
+Profiled graphs must include at least one `relation_profile`. They do not need every edge profiled:
+profiles accrete where protocol-bound evaluation needs an interpretable path. Evidential and
+constitutive profiles express warrant or component relations, not signed causal propagation.
+
 ## Dynamic Feedback
 
 If a graph needs feedback, use explicit time slices or `time_lagged` edges. The validator excludes `time_lagged` edges from synchronic cycle checks.
@@ -149,5 +171,6 @@ target the labelled graph, have `status` set to `protocol-bound` or `held-out`, 
 `score_decision` set to `scope-only` or `score-change-proposed`.
 
 Non-zero scores require `score_status.kind` to be `scoped_module` or `general_account`. They also
-require the referenced evaluation to have `score_decision` set to `score-change-proposed`. A
-scoped-module label or score must not be read as a general-account score.
+require `edge_semantics_level` set to `profiled` and the referenced evaluation to have
+`score_decision` set to `score-change-proposed`. A scoped-module label or score must not be read as
+a general-account score.

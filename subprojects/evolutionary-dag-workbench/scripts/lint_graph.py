@@ -13,6 +13,7 @@ import validate_graph
 
 ROOT = Path(__file__).resolve().parents[1]
 NODES_PATH = ROOT / "ontology" / "nodes.yaml"
+RELATION_PROFILES_PATH = ROOT / "ontology" / "relation-profiles.yaml"
 
 STATUSES = {"seed", "candidate", "archived", "rejected", "superseded"}
 SCORE_STATUS_KINDS = {"unscored", "scoped_module", "general_account"}
@@ -23,6 +24,7 @@ SCORING_EVALUATION_STATUSES = {"protocol-bound", "held-out"}
 SCORING_EVALUATION_DECISION = "score-change-proposed"
 SCORE_MIN = 0
 SCORE_MAX = 5
+EDGE_SEMANTICS_LEVELS = {"topology_only", "profiled"}
 SCORE_KEYS = [
     "empirical_coverage",
     "counterexample_resilience",
@@ -76,6 +78,8 @@ CONTEXT_INDEXED_REQUIRED_AXES = {
 FAMILY_PATTERN = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 NODE_ID_PATTERN = re.compile(r"^\s*-\s+id:\s+([A-Za-z][A-Za-z0-9_]*)\s*$")
 TIME_SLICE_PATTERN = re.compile(r"^(?P<base>.+)_t(?P<index>[0-9]*)$")
+RELATION_PROFILE_PATTERN = re.compile(r"^\s{2}([A-Za-z][A-Za-z0-9_]*):\s*$")
+APPLIES_TO_PATTERN = re.compile(r"^\s+applies_to:\s*\[(?P<edge_types>[^\]]*)\]\s*$")
 
 
 def load_controlled_nodes(path: Path = NODES_PATH) -> set[str]:
@@ -88,6 +92,35 @@ def load_controlled_nodes(path: Path = NODES_PATH) -> set[str]:
     if not node_ids:
         raise ValueError(f"{path}: no controlled node ids found")
     return node_ids
+
+
+def load_relation_profiles(path: Path = RELATION_PROFILES_PATH) -> dict[str, set[str]]:
+    profiles: dict[str, set[str]] = {}
+    current: str | None = None
+
+    with path.open(encoding="utf-8") as handle:
+        for line in handle:
+            profile_match = RELATION_PROFILE_PATTERN.match(line)
+            if profile_match:
+                current = profile_match.group(1)
+                profiles[current] = set()
+                continue
+
+            applies_match = APPLIES_TO_PATTERN.match(line)
+            if applies_match and current:
+                profiles[current] = {
+                    edge_type.strip()
+                    for edge_type in applies_match.group("edge_types").split(",")
+                    if edge_type.strip()
+                }
+
+    if not profiles:
+        raise ValueError(f"{path}: no relation profiles found")
+    missing = [profile for profile, edge_types in profiles.items() if not edge_types]
+    if missing:
+        names = ", ".join(sorted(missing))
+        raise ValueError(f"{path}: relation profiles missing applies_to: {names}")
+    return profiles
 
 
 def load_json(path: Path) -> dict | None:
@@ -257,6 +290,8 @@ def lint_score_status(graph: dict, path: Path) -> list[str]:
         errors.append(f"{path}: {kind} labels require score_status.evaluation")
 
     if has_nonzero_scores:
+        if graph.get("edge_semantics_level", "topology_only") != "profiled":
+            errors.append(f"{path}: non-zero scores require edge_semantics_level 'profiled'")
         if kind not in SCORABLE_STATUS_KINDS:
             allowed = ", ".join(sorted(SCORABLE_STATUS_KINDS))
             errors.append(
@@ -264,6 +299,56 @@ def lint_score_status(graph: dict, path: Path) -> list[str]:
             )
         if evaluation is None:
             errors.append(f"{path}: non-zero scores require score_status.evaluation")
+
+    return errors
+
+
+def lint_edge_semantics(
+    graph: dict,
+    path: Path,
+    relation_profiles: dict[str, set[str]],
+) -> list[str]:
+    errors: list[str] = []
+    level = graph.get("edge_semantics_level", "topology_only")
+    if level not in EDGE_SEMANTICS_LEVELS:
+        allowed = ", ".join(sorted(EDGE_SEMANTICS_LEVELS))
+        errors.append(
+            f"{path}: edge_semantics_level {level!r} is not allowed; expected one of {allowed}"
+        )
+
+    profiled_edges = 0
+    for index, edge in enumerate(graph.get("edges", []), start=1):
+        if not isinstance(edge, dict):
+            continue
+
+        profile = edge.get("relation_profile")
+        if profile is None:
+            continue
+        profiled_edges += 1
+
+        if not isinstance(profile, str) or not profile.strip():
+            errors.append(f"{path}: edge {index} relation_profile must be a non-empty string")
+            continue
+
+        allowed_edge_types = relation_profiles.get(profile)
+        if allowed_edge_types is None:
+            allowed = ", ".join(sorted(relation_profiles))
+            errors.append(
+                f"{path}: edge {index} relation_profile {profile!r} is not allowed; "
+                f"expected one of {allowed}"
+            )
+            continue
+
+        edge_type = edge.get("type")
+        if edge_type not in allowed_edge_types:
+            allowed_types = ", ".join(sorted(allowed_edge_types))
+            errors.append(
+                f"{path}: edge {index} relation_profile {profile!r} does not apply to "
+                f"edge type {edge_type!r}; expected one of {allowed_types}"
+            )
+
+    if level == "profiled" and profiled_edges == 0:
+        errors.append(f"{path}: profiled graphs must include at least one relation_profile")
 
     return errors
 
@@ -417,7 +502,7 @@ def has_directed_path_to_outcome(start: str, outgoing: dict[str, list[str]]) -> 
     return False
 
 
-def lint(path: Path, controlled_nodes: set[str]) -> list[str]:
+def lint(path: Path, controlled_nodes: set[str], relation_profiles: dict[str, set[str]]) -> list[str]:
     errors = validate_graph.validate(path)
     graph = load_json(path)
     if graph is None:
@@ -427,6 +512,7 @@ def lint(path: Path, controlled_nodes: set[str]) -> list[str]:
     errors.extend(lint_nodes(graph, path, controlled_nodes))
     errors.extend(lint_scores(graph, path))
     errors.extend(lint_score_status(graph, path))
+    errors.extend(lint_edge_semantics(graph, path, relation_profiles))
     errors.extend(lint_conditioning_axes(graph, path))
     return errors
 
@@ -438,6 +524,7 @@ def main(argv: list[str]) -> int:
 
     try:
         controlled_nodes = load_controlled_nodes()
+        relation_profiles = load_relation_profiles()
     except Exception as exc:  # noqa: BLE001 - CLI should report any ontology load error.
         print(exc, file=sys.stderr)
         return 1
@@ -445,7 +532,7 @@ def main(argv: list[str]) -> int:
     all_errors: list[str] = []
     for raw_path in argv:
         path = Path(raw_path)
-        errors = lint(path, controlled_nodes)
+        errors = lint(path, controlled_nodes, relation_profiles)
         if errors:
             all_errors.extend(errors)
         else:

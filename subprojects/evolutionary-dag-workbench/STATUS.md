@@ -30,7 +30,8 @@ The current strongest modules are scoped, not general winners:
 - `context-indexed-dynamic-feedback-candidate` for diachronic/context-conditioned licensing,
   production, ideology, correction, and judgment.
 - `context-aware-operator-gap-candidate` for operator-gap, opportunity, recoverability, analogy, and
-  repair-pressure cases.
+  repair-pressure cases. This is the first profiled graph and uses derived evidential constructs for
+  opportunity-normalized attestation and preemption strength.
 
 Both have protocol-bound `scope-only` evaluations and `scoped_module` labels. Neither has earned a
 non-zero numeric score or a `general_account` score.
@@ -43,6 +44,7 @@ Earlier models are allowed to seed, constrain, and challenge the search. They ar
 
 - `ontology/nodes.yaml`
 - `ontology/edge-types.yaml`
+- `ontology/relation-profiles.yaml`
 - `ontology/forbidden-conflations.md`
 - `phenomena/index.md`
 - initial phenomenon cards in `phenomena/cards/`
@@ -70,6 +72,8 @@ python3 scripts/run_fixture_tests.py
 The linter now checks:
 
 - controlled node IDs, including time-sliced extensions;
+- relation profiles against the controlled registry and edge-type compatibility;
+- profiled graphs have at least one profiled edge;
 - graph IDs against filename stems;
 - family/status conventions;
 - complete score blocks where present;
@@ -80,6 +84,7 @@ The linter now checks:
 - evaluation references whose `target_graph` matches the labelled graph;
 - scoped/general labels only when the referenced evaluation authorizes scope recognition;
 - non-zero scores only when the referenced evaluation authorizes score movement;
+- non-zero scores only on graphs with `edge_semantics_level: profiled`;
 - `conditioning_axes` metadata for context-indexed graph families;
 - declared conditioning axes against corresponding graph nodes;
 - conditioning-axis nodes that are outcome-like or have directed paths to outcome-like nodes.
@@ -105,13 +110,16 @@ validation.
 
 1. Add held-out protocol evaluations before any numeric score movement.
 2. Add a processing-specific context module or keep processing as a perturbation layer only.
-3. Add edge polarity/effect semantics before interpreting any dynamic edge as directional support.
-4. Add a projectibility rubric hook so held-out prediction is not treated as mere coverage.
-5. Calibrate scoped-module score magnitudes after at least one held-out or parameterized evaluation
+3. Profile `context-indexed-dynamic-feedback-candidate` only after deciding which dynamic paths are
+   prediction commitments.
+4. Add evaluation-level activated paths so score movement can require profiles on the traversed
+   prediction paths, not merely a profiled graph.
+5. Add a projectibility rubric hook so held-out prediction is not treated as mere coverage.
+6. Calibrate scoped-module score magnitudes after at least one held-out or parameterized evaluation
    pass.
-6. Enrich the existing phenomenon cards with examples, data sources, contrast cells, and expected
+7. Enrich the existing phenomenon cards with examples, data sources, contrast cells, and expected
    discriminators before expanding the card inventory.
-7. Expand `phenomena/cards/` toward 40-100 cards only after the current representation classes stop
+8. Expand `phenomena/cards/` toward 40-100 cards only after the current representation classes stop
    shifting every pass.
-8. Only after the construct inventory stabilizes, consider whether `pgmpy`, NOTEARS-style methods,
+9. Only after the construct inventory stabilizes, consider whether `pgmpy`, NOTEARS-style methods,
    or empirical causal discovery are useful.

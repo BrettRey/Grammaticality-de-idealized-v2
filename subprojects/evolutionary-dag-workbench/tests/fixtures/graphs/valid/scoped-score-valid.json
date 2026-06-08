@@ -3,10 +3,20 @@
   "title": "Scoped score valid fixture",
   "family": "scoped-score-valid",
   "status": "candidate",
+  "edge_semantics_level": "profiled",
   "nodes": [
+    "community_licensing",
     "reported_acceptability"
   ],
-  "edges": [],
+  "edges": [
+    {
+      "source": "community_licensing",
+      "target": "reported_acceptability",
+      "type": "measurement",
+      "relation_profile": "task_biased_indicator",
+      "rationale": "Fixture score movement uses a profiled measurement edge."
+    }
+  ],
   "scores": {
     "empirical_coverage": 1,
     "counterexample_resilience": 0,

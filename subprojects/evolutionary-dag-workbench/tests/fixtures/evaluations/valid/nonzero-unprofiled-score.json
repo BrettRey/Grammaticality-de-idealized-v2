@@ -1,0 +1,27 @@
+{
+  "id": "nonzero-unprofiled-score",
+  "target_graph": "tests/fixtures/graphs/invalid/nonzero-unprofiled-score.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "protocol-bound",
+  "score_decision": "score-change-proposed",
+  "cards": [
+    {
+      "phenomenon": "left-branch-extraction",
+      "result": "partly_survives",
+      "expected_survival_pattern": "Fixture expected pattern.",
+      "contrast_cells": [
+        {
+          "id": "fixture-cell",
+          "axes": {
+            "community": "Fixture community.",
+            "norm_centre": "Fixture norm centre.",
+            "genre": "Fixture genre.",
+            "medium": "Fixture medium.",
+            "task_framing": "Fixture task frame.",
+            "speaker_identity": "Fixture speaker identity."
+          }
+        }
+      ]
+    }
+  ]
+}

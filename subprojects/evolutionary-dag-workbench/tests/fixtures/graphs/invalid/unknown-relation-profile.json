@@ -1,0 +1,30 @@
+{
+  "id": "unknown-relation-profile",
+  "title": "Unknown relation profile fixture",
+  "family": "unknown-relation-profile",
+  "status": "candidate",
+  "edge_semantics_level": "profiled",
+  "nodes": [
+    "processing_cost",
+    "reported_acceptability"
+  ],
+  "edges": [
+    {
+      "source": "processing_cost",
+      "target": "reported_acceptability",
+      "type": "causal",
+      "relation_profile": "negative-ish",
+      "rationale": "Fixture should fail because the relation profile is not controlled."
+    }
+  ],
+  "scores": {
+    "empirical_coverage": 0,
+    "counterexample_resilience": 0,
+    "measurement_clarity": 0,
+    "explanatory_payoff": 0,
+    "cross_domain_stability": 0,
+    "complexity_penalty": 0,
+    "circularity_penalty": 0,
+    "construct_confusion_penalty": 0
+  }
+}

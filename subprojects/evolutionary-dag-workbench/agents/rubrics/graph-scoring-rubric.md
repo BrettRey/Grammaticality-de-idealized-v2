@@ -15,6 +15,9 @@ Non-zero scores additionally require `score_decision` `score-change-proposed`. N
 receive a `general_account` score unless it has survived protocol-bound held-out tests across the
 workbench's phenomenon space.
 
+Score movement also requires `edge_semantics_level` `profiled`. Absent edge profiles mean the graph
+has not committed an interpretable prediction path for numeric comparison.
+
 Each dimension is scored from 0 to 5 inclusive. Do not treat a one-point difference as meaningful
 until held-out or parameterized evaluations make the scale comparable across graphs.
 

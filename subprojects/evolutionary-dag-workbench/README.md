@@ -49,6 +49,7 @@ tests/           Positive and negative fixtures for validator behavior.
 - Keep constructs separate from measurement proxies.
 - Reject non-time-indexed cycles.
 - Represent feedback with time-indexed variables or `time_lagged` edges.
+- Treat edge profiles as optional prediction commitments; absent profile means uncommitted.
 - Keep seed scores at zero until an adversarial critique is recorded.
 - Require `score_status`, a target-matched evaluation reference, and an authorizing evaluation
   status/decision before any graph receives a scoped/general label or non-zero score.
@@ -64,7 +65,8 @@ Validate the seed and archive graphs:
 python3 scripts/validate_graph.py graphs/seeds/*.json graphs/archive/*.json
 ```
 
-Lint the graphs against the ontology, scoring conventions, and conditioning metadata rules:
+Lint the graphs against the ontology, relation-profile registry, scoring conventions, and
+conditioning metadata rules:
 
 ```bash
 python3 scripts/lint_graph.py graphs/seeds/*.json graphs/archive/*.json

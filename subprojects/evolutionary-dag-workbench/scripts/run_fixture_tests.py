@@ -95,6 +95,33 @@ TESTS = [
         expected_output="id 'invented_construct' is not in ontology",
     ),
     FixtureTest(
+        name="graph rejects unknown relation profile",
+        command=[
+            "scripts/lint_graph.py",
+            rel("tests/fixtures/graphs/invalid/unknown-relation-profile.json"),
+        ],
+        expected_returncode=1,
+        expected_output="relation_profile 'negative-ish' is not allowed",
+    ),
+    FixtureTest(
+        name="graph rejects incompatible relation profile",
+        command=[
+            "scripts/lint_graph.py",
+            rel("tests/fixtures/graphs/invalid/incompatible-relation-profile.json"),
+        ],
+        expected_returncode=1,
+        expected_output="does not apply to edge type 'causal'",
+    ),
+    FixtureTest(
+        name="graph rejects profiled graph without profiles",
+        command=[
+            "scripts/lint_graph.py",
+            rel("tests/fixtures/graphs/invalid/profiled-without-profiles.json"),
+        ],
+        expected_returncode=1,
+        expected_output="profiled graphs must include at least one relation_profile",
+    ),
+    FixtureTest(
         name="graph rejects duplicate edge",
         command=[
             "scripts/lint_graph.py",
@@ -165,6 +192,15 @@ TESTS = [
         ],
         expected_returncode=1,
         expected_output="non-zero scores require score_status.evaluation",
+    ),
+    FixtureTest(
+        name="graph rejects nonzero unprofiled score",
+        command=[
+            "scripts/lint_graph.py",
+            rel("tests/fixtures/graphs/invalid/nonzero-unprofiled-score.json"),
+        ],
+        expected_returncode=1,
+        expected_output="non-zero scores require edge_semantics_level 'profiled'",
     ),
     FixtureTest(
         name="graph rejects invalid score status kind",
