@@ -1,0 +1,186 @@
+{
+  "id": "context-aware-operator-gap-candidate",
+  "title": "Context-aware operator-gap candidate",
+  "family": "context-aware-operator-gap",
+  "status": "candidate",
+  "notes": "Candidate generated after the protocol-bound context test showed that the dynamic/context module should not absorb operator-gap cases. This graph tests operator value, opportunity, recoverability, analogy, repair, and context channels as a scoped operator-gap module. It is not scored pending critique.",
+  "conditioning_axes": {
+    "community": "Specify the speech or judgment community before interpreting licensing, production, usage, or repair evidence.",
+    "norm_centre": "Specify whether the relevant norm centre is theoretical, standard-institutional, local-community, or task-specific.",
+    "genre": "Specify the construction's genre or activity context before interpreting acceptability or repair.",
+    "medium": "Specify whether evidence comes from speech, edited prose, elicited written examples, or another medium.",
+    "task_framing": "Specify whether the task asks for acceptability, grammaticality, paraphrase availability, naturalness, or repair.",
+    "speaker_identity": "Specify speaker or writer cues when social indexing could perturb judgment or attribution."
+  },
+  "nodes": [
+    "operator_value",
+    "opportunity_mass",
+    "usage_frequency",
+    "community_licensing",
+    "semantic_pragmatic_recoverability",
+    "constructional_analogy",
+    "repair_reformulation_pressure",
+    "processing_cost",
+    "production_probability",
+    "standard_language_ideology",
+    "metalinguistic_condemnation",
+    "genre",
+    "medium",
+    "register_genre_appropriateness",
+    "task_framing",
+    "speaker_identity",
+    "social_indexical_value",
+    "reported_acceptability",
+    "grammaticality_attribution"
+  ],
+  "edges": [
+    {
+      "source": "opportunity_mass",
+      "target": "usage_frequency",
+      "type": "causal",
+      "rationale": "Observed usage depends on the number of relevant contexts where the operator-gap form or competitor could have appeared."
+    },
+    {
+      "source": "opportunity_mass",
+      "target": "community_licensing",
+      "type": "evidential",
+      "rationale": "Opportunity mass calibrates how strongly absence or rarity bears on licensing in the specified community and construction type."
+    },
+    {
+      "source": "usage_frequency",
+      "target": "community_licensing",
+      "type": "evidential",
+      "rationale": "Usage frequency is evidence for licensing only after opportunity and competitor structure are considered."
+    },
+    {
+      "source": "constructional_analogy",
+      "target": "community_licensing",
+      "type": "evidential",
+      "rationale": "Analogical support can be evidence that the form belongs near a licensed constructional neighborhood without equaling licensing."
+    },
+    {
+      "source": "operator_value",
+      "target": "community_licensing",
+      "type": "constitutive",
+      "rationale": "For operator-gap cases only, a missing or mis-set public-update value may be a component of licensing failure; this remains a scoped theoretical wager."
+    },
+    {
+      "source": "constructional_analogy",
+      "target": "production_probability",
+      "type": "causal",
+      "rationale": "Analogical support can make a form producible or tempting even when licensing remains unsettled."
+    },
+    {
+      "source": "community_licensing",
+      "target": "production_probability",
+      "type": "causal",
+      "rationale": "Community licensing predicts production availability in the specified constructional context."
+    },
+    {
+      "source": "community_licensing",
+      "target": "repair_reformulation_pressure",
+      "type": "causal",
+      "rationale": "Licensing trouble predicts pressure toward repair, reformulation, or available paraphrase."
+    },
+    {
+      "source": "semantic_pragmatic_recoverability",
+      "target": "reported_acceptability",
+      "type": "causal",
+      "rationale": "Recoverable meaning can raise reported acceptability without licensing the operator configuration."
+    },
+    {
+      "source": "processing_cost",
+      "target": "reported_acceptability",
+      "type": "causal",
+      "rationale": "Processing burden can lower reported acceptability independently of operator licensing."
+    },
+    {
+      "source": "genre",
+      "target": "register_genre_appropriateness",
+      "type": "causal",
+      "rationale": "Genre conditions whether the form or its repair is appropriate in the task context."
+    },
+    {
+      "source": "medium",
+      "target": "register_genre_appropriateness",
+      "type": "causal",
+      "rationale": "Medium affects how examples, repairs, and judgments are interpreted."
+    },
+    {
+      "source": "register_genre_appropriateness",
+      "target": "reported_acceptability",
+      "type": "causal",
+      "rationale": "Register or genre mismatch can affect reported acceptability without deciding operator licensing."
+    },
+    {
+      "source": "task_framing",
+      "target": "reported_acceptability",
+      "type": "causal",
+      "rationale": "Task framing can foreground acceptability, grammaticality, paraphrase availability, naturalness, or repair."
+    },
+    {
+      "source": "task_framing",
+      "target": "grammaticality_attribution",
+      "type": "causal",
+      "rationale": "Task framing can change explicit attribution by cueing which evidential channel the participant should treat as relevant."
+    },
+    {
+      "source": "speaker_identity",
+      "target": "social_indexical_value",
+      "type": "causal",
+      "rationale": "Speaker or writer cues can change the social interpretation of an example."
+    },
+    {
+      "source": "social_indexical_value",
+      "target": "reported_acceptability",
+      "type": "causal",
+      "rationale": "Social-indexical associations can perturb reported acceptability without changing the operator-gap analysis."
+    },
+    {
+      "source": "standard_language_ideology",
+      "target": "metalinguistic_condemnation",
+      "type": "causal",
+      "rationale": "A specified norm centre can generate explicit condemnation independently of operator licensing."
+    },
+    {
+      "source": "standard_language_ideology",
+      "target": "reported_acceptability",
+      "type": "causal",
+      "rationale": "Correctness ideology can perturb reported acceptability in explicit judgment contexts."
+    },
+    {
+      "source": "metalinguistic_condemnation",
+      "target": "grammaticality_attribution",
+      "type": "evidential",
+      "rationale": "Condemnation can influence attribution while remaining separable from licensing."
+    },
+    {
+      "source": "community_licensing",
+      "target": "grammaticality_attribution",
+      "type": "evidential",
+      "rationale": "Community licensing is evidence for attribution, not identical to attribution."
+    },
+    {
+      "source": "repair_reformulation_pressure",
+      "target": "grammaticality_attribution",
+      "type": "evidential",
+      "rationale": "Repair or paraphrase pressure is evidence about licensing trouble without being the target itself."
+    },
+    {
+      "source": "reported_acceptability",
+      "target": "grammaticality_attribution",
+      "type": "evidential",
+      "rationale": "Acceptability reports provide noisy evidence for grammaticality attribution."
+    }
+  ],
+  "scores": {
+    "empirical_coverage": 0,
+    "counterexample_resilience": 0,
+    "measurement_clarity": 0,
+    "explanatory_payoff": 0,
+    "cross_domain_stability": 0,
+    "complexity_penalty": 0,
+    "circularity_penalty": 0,
+    "construct_confusion_penalty": 0
+  }
+}
