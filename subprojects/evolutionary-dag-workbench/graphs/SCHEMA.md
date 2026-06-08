@@ -23,6 +23,14 @@ score discipline.
       "rationale": "Repeated exposure can change learned accessibility."
     }
   ],
+  "conditioning_axes": {
+    "community": "Required for context-indexed graphs.",
+    "norm_centre": "Required for context-indexed graphs.",
+    "genre": "Required for context-indexed graphs.",
+    "medium": "Required for context-indexed graphs.",
+    "task_framing": "Required for context-indexed graphs.",
+    "speaker_identity": "Required for context-indexed graphs."
+  },
   "scores": {
     "empirical_coverage": 0,
     "counterexample_resilience": 0,
@@ -72,6 +80,24 @@ If a graph needs feedback, use explicit time slices or `time_lagged` edges. The 
 Same-slice mutual dependence is not represented as reciprocal directed edges. If a graph claims
 co-constitution within a single timescale, it should either explain the acyclic constitutive
 direction it chooses or mark the move as a theoretical wager.
+
+## Conditioning Metadata
+
+Graphs may include `conditioning_axes` when their claims depend on community, norm centre, genre,
+medium, task framing, or speaker identity. This is required for graph families whose slug contains
+`context-indexed`.
+
+Allowed axes:
+
+- `community`
+- `norm_centre`
+- `genre`
+- `medium`
+- `task_framing`
+- `speaker_identity`
+
+Each axis value must be a non-empty string explaining how that condition should be specified before
+the graph is interpreted. Context-indexed graphs must include all six axes.
 
 ## Scoring
 

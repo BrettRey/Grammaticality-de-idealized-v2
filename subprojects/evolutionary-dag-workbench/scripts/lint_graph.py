@@ -25,6 +25,22 @@ SCORE_KEYS = [
     "circularity_penalty",
     "construct_confusion_penalty",
 ]
+CONDITIONING_AXIS_KEYS = {
+    "community",
+    "norm_centre",
+    "genre",
+    "medium",
+    "task_framing",
+    "speaker_identity",
+}
+CONTEXT_INDEXED_REQUIRED_AXES = {
+    "community",
+    "norm_centre",
+    "genre",
+    "medium",
+    "task_framing",
+    "speaker_identity",
+}
 
 FAMILY_PATTERN = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 NODE_ID_PATTERN = re.compile(r"^\s*-\s+id:\s+([A-Za-z][A-Za-z0-9_]*)\s*$")
@@ -147,6 +163,37 @@ def lint_scores(graph: dict, path: Path) -> list[str]:
     return errors
 
 
+def lint_conditioning_axes(graph: dict, path: Path) -> list[str]:
+    errors: list[str] = []
+    family = graph.get("family")
+    axes = graph.get("conditioning_axes")
+    is_context_indexed = isinstance(family, str) and "context-indexed" in family
+
+    if axes is None:
+        if is_context_indexed:
+            errors.append(f"{path}: context-indexed graphs must include conditioning_axes")
+        return errors
+
+    if not isinstance(axes, dict) or not axes:
+        return [f"{path}: conditioning_axes must be a non-empty object"]
+
+    unknown = [key for key in axes if key not in CONDITIONING_AXIS_KEYS]
+    for key in unknown:
+        allowed = ", ".join(sorted(CONDITIONING_AXIS_KEYS))
+        errors.append(f"{path}: conditioning_axes has unknown axis {key!r}; expected one of {allowed}")
+
+    for key, value in axes.items():
+        if not isinstance(value, str) or not value.strip():
+            errors.append(f"{path}: conditioning_axes[{key!r}] must be a non-empty string")
+
+    if is_context_indexed:
+        missing = sorted(CONTEXT_INDEXED_REQUIRED_AXES - set(axes))
+        for key in missing:
+            errors.append(f"{path}: context-indexed graph missing conditioning axis {key!r}")
+
+    return errors
+
+
 def lint(path: Path, controlled_nodes: set[str]) -> list[str]:
     errors = validate_graph.validate(path)
     graph = load_json(path)
@@ -156,6 +203,7 @@ def lint(path: Path, controlled_nodes: set[str]) -> list[str]:
     errors.extend(lint_family_and_status(graph, path))
     errors.extend(lint_nodes(graph, path, controlled_nodes))
     errors.extend(lint_scores(graph, path))
+    errors.extend(lint_conditioning_axes(graph, path))
     return errors
 
 
