@@ -1,14 +1,14 @@
 {
-  "id": "invalid-score-kind",
-  "title": "Invalid score kind fixture",
-  "family": "invalid-score-kind",
+  "id": "score-out-of-range",
+  "title": "Score out of range fixture",
+  "family": "score-out-of-range",
   "status": "candidate",
   "nodes": [
     "reported_acceptability"
   ],
   "edges": [],
   "scores": {
-    "empirical_coverage": 1,
+    "empirical_coverage": 6,
     "counterexample_resilience": 0,
     "measurement_clarity": 0,
     "explanatory_payoff": 0,
@@ -18,7 +18,8 @@
     "construct_confusion_penalty": 0
   },
   "score_status": {
-    "kind": "winner",
-    "evaluation": "evaluations/protocol-tests/context-aware-operator-gap-2026-06-07.json"
+    "kind": "scoped_module",
+    "evaluation": "tests/fixtures/evaluations/valid/score-out-of-range.json",
+    "scope": "Fixture should fail because the score is out of range."
   }
 }

@@ -12,8 +12,9 @@ representations about grammaticality. The existing OVMG, detector, operator-stra
 processing-based, and normativity-based models are treated as seed graph families, not as
 conclusions.
 
-Five adversarial passes have been run. All numeric scores remain zero. Two current modules have
-`scoped_module` labels tied to protocol-bound evaluations. No graph has a `general_account` score.
+Five adversarial passes and one synthesis pass have been run. All numeric scores remain zero. Two
+current modules have `scoped_module` labels tied to protocol-bound evaluations. No graph has a
+`general_account` score.
 
 ## Current Candidate Stack
 
@@ -69,12 +70,15 @@ python3 scripts/run_fixture_tests.py
 The linter now checks:
 
 - controlled node IDs, including time-sliced extensions;
+- graph IDs against filename stems;
 - family/status conventions;
 - complete score blocks where present;
+- score values in the 0-5 range;
 - all-zero seed score discipline;
 - `score_status` metadata for non-zero scores;
 - existing evaluation references for scoped/general labels;
 - evaluation references whose `target_graph` matches the labelled graph;
+- non-zero scores only when the referenced evaluation authorizes score movement;
 - `conditioning_axes` metadata for context-indexed graph families;
 - declared conditioning axes against corresponding graph nodes;
 - directed paths from conditioning-axis nodes to outcome-like nodes.
@@ -83,13 +87,14 @@ The graph validator checks:
 
 - allowed edge types;
 - edge endpoint membership;
+- duplicate typed edges;
 - acyclicity of non-`time_lagged` edges;
 - forward direction for `time_lagged` edges.
 
 The evaluation validator checks:
 
 - protocol-bound evaluations against target graph paths, protocol paths, phenomenon card IDs,
-  allowed result labels, and contrast-cell axes.
+  allowed result labels, and complete six-axis contrast cells.
 
 The fixture runner checks positive and negative cases for both graph linting and evaluation
 validation.
@@ -98,10 +103,13 @@ validation.
 
 1. Add held-out protocol evaluations before any numeric score movement.
 2. Add a processing-specific context module or keep processing as a perturbation layer only.
-3. Add a projectibility rubric hook so held-out prediction is not treated as mere coverage.
-4. Calibrate scoped-module score magnitudes after at least one held-out or parameterized evaluation
+3. Add edge polarity/effect semantics before interpreting any dynamic edge as directional support.
+4. Add a projectibility rubric hook so held-out prediction is not treated as mere coverage.
+5. Calibrate scoped-module score magnitudes after at least one held-out or parameterized evaluation
    pass.
-5. Expand `phenomena/cards/` toward 40-100 cards only after the current representation classes stop
+6. Enrich the existing phenomenon cards with examples, data sources, contrast cells, and expected
+   discriminators before expanding the card inventory.
+7. Expand `phenomena/cards/` toward 40-100 cards only after the current representation classes stop
    shifting every pass.
-6. Only after the construct inventory stabilizes, consider whether `pgmpy`, NOTEARS-style methods,
+8. Only after the construct inventory stabilizes, consider whether `pgmpy`, NOTEARS-style methods,
    or empirical causal discovery are useful.

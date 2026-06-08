@@ -2,7 +2,10 @@
 
 This subproject maps rival hypotheses about the property cluster behind grammaticality. It uses the existing grammaticality ecology as material without treating any existing model as settled.
 
-The workbench generates, mutates, attacks, scores, and archives conceptual DAGs. The goal is not to find "the DAG of grammaticality." The goal is to map the hypothesis space and preserve strong but different graph families.
+The workbench generates, mutates, attacks, scores, and archives typed acyclic construct graphs.
+These are conceptual DAGs in the weak graph-theoretic sense, not causal DAGs licensed for
+d-separation or intervention claims. The goal is not to find "the DAG of grammaticality." The goal
+is to map the hypothesis space and preserve strong but different graph families.
 
 ## Boundary
 
@@ -42,13 +45,13 @@ tests/           Positive and negative fixtures for validator behavior.
 
 ## Method Commitments
 
-- Start with conceptual DAGs, not automatic causal discovery.
+- Start with typed acyclic construct graphs, not automatic causal discovery.
 - Keep constructs separate from measurement proxies.
 - Reject non-time-indexed cycles.
 - Represent feedback with time-indexed variables or `time_lagged` edges.
 - Keep seed scores at zero until an adversarial critique is recorded.
-- Require `score_status` and a target-matched evaluation reference before any graph receives
-  non-zero scores.
+- Require `score_status`, a target-matched evaluation reference, and an authorizing evaluation
+  status/decision before any graph receives non-zero scores.
 - Treat scoped-module labels as scoped evidence, not as general-account scores.
 - Keep multiple scores visible instead of collapsing everything into one winner too early.
 - Treat LLM agents as graph generators and critics, not as scholarly adjudicators.

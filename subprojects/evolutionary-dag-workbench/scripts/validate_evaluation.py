@@ -18,6 +18,7 @@ AXES = {
     "task_framing",
     "speaker_identity",
 }
+REQUIRED_CONTRAST_CELL_AXES = AXES
 RESULTS = {
     "survives_as_module",
     "partly_survives",
@@ -84,6 +85,10 @@ def check_contrast_cell(cell: object, path: Path, card_index: int, cell_index: i
             errors.append(f"{prefix}: unknown axis {axis!r}; expected one of {allowed}")
         if not isinstance(value, str) or not value.strip():
             errors.append(f"{prefix}: axis {axis!r} must have a non-empty string value")
+
+    missing_axes = sorted(REQUIRED_CONTRAST_CELL_AXES - set(axes))
+    for axis in missing_axes:
+        errors.append(f"{prefix}: missing required axis {axis!r}")
 
     return errors
 

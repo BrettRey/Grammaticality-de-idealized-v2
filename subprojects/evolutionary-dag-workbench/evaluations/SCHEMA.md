@@ -72,5 +72,6 @@ Protocol-bound tests are stored as JSON so critique results are not only prose n
 - `task_framing`
 - `speaker_identity`
 
-Each contrast cell must include a non-empty `axes` object. Each axis value must be a non-empty
-string. The validator checks that `target_graph`, `protocol`, and each phenomenon card path exist.
+Each contrast cell must include a non-empty `axes` object with all six axes listed above. Each axis
+value must be a non-empty string. The validator checks that `target_graph`, `protocol`, and each
+phenomenon card path exist.

@@ -1,6 +1,6 @@
 {
-  "id": "missing-target-path",
-  "target_graph": "graphs/archive/no-such-graph.json",
+  "id": "nonzero-exploratory-evaluation",
+  "target_graph": "tests/fixtures/graphs/invalid/nonzero-exploratory-evaluation.json",
   "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
   "status": "exploratory",
   "score_decision": "no-score-change",
@@ -13,7 +13,12 @@
         {
           "id": "fixture-cell",
           "axes": {
-            "community": "Fixture community."
+            "community": "Fixture community.",
+            "norm_centre": "Fixture norm centre.",
+            "genre": "Fixture genre.",
+            "medium": "Fixture medium.",
+            "task_framing": "Fixture task frame.",
+            "speaker_identity": "Fixture speaker identity."
           }
         }
       ]

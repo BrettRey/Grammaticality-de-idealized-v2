@@ -17,6 +17,10 @@ NODES_PATH = ROOT / "ontology" / "nodes.yaml"
 STATUSES = {"seed", "candidate", "archived", "rejected", "superseded"}
 SCORE_STATUS_KINDS = {"unscored", "scoped_module", "general_account"}
 SCORABLE_STATUS_KINDS = {"scoped_module", "general_account"}
+SCORING_EVALUATION_STATUSES = {"protocol-bound", "held-out"}
+SCORING_EVALUATION_DECISION = "score-change-proposed"
+SCORE_MIN = 0
+SCORE_MAX = 5
 SCORE_KEYS = [
     "empirical_coverage",
     "counterexample_resilience",
@@ -117,6 +121,12 @@ def score_value(scores: dict, key: str) -> float | None:
 def lint_family_and_status(graph: dict, path: Path) -> list[str]:
     errors: list[str] = []
 
+    graph_id = graph.get("id")
+    if not isinstance(graph_id, str) or not graph_id:
+        errors.append(f"{path}: missing non-empty string field 'id'")
+    elif graph_id != path.stem:
+        errors.append(f"{path}: id {graph_id!r} must match filename stem {path.stem!r}")
+
     family = graph.get("family")
     if not isinstance(family, str) or not family:
         errors.append(f"{path}: missing non-empty string field 'family'")
@@ -183,6 +193,8 @@ def lint_scores(graph: dict, path: Path) -> list[str]:
         if value is None:
             errors.append(f"{path}: score {key!r} must be numeric and not boolean")
         else:
+            if value < SCORE_MIN or value > SCORE_MAX:
+                errors.append(f"{path}: score {key!r} must be between {SCORE_MIN} and {SCORE_MAX}")
             values[key] = value
 
     if status == "seed":
@@ -230,7 +242,7 @@ def lint_score_status(graph: dict, path: Path) -> list[str]:
         elif not (ROOT / evaluation).exists():
             errors.append(f"{path}: score_status.evaluation path does not exist: {evaluation!r}")
         else:
-            errors.extend(lint_score_evaluation_target(path, evaluation))
+            errors.extend(lint_score_evaluation_target(path, evaluation, require_score_authorized=has_nonzero_scores))
 
     if has_nonzero_scores:
         if kind not in SCORABLE_STATUS_KINDS:
@@ -244,7 +256,12 @@ def lint_score_status(graph: dict, path: Path) -> list[str]:
     return errors
 
 
-def lint_score_evaluation_target(graph_path: Path, evaluation: str) -> list[str]:
+def lint_score_evaluation_target(
+    graph_path: Path,
+    evaluation: str,
+    *,
+    require_score_authorized: bool,
+) -> list[str]:
     evaluation_path = ROOT / evaluation
     evaluation_data = load_json(evaluation_path)
     if evaluation_data is None:
@@ -261,7 +278,23 @@ def lint_score_evaluation_target(graph_path: Path, evaluation: str) -> list[str]
             f"{graph_path}: score_status.evaluation target_graph {target_graph!r} "
             "does not match this graph"
         ]
-    return []
+
+    errors: list[str] = []
+    if require_score_authorized:
+        status = evaluation_data.get("status")
+        if status not in SCORING_EVALUATION_STATUSES:
+            allowed = ", ".join(sorted(SCORING_EVALUATION_STATUSES))
+            errors.append(
+                f"{graph_path}: non-zero scores require evaluation.status to be one of {allowed}"
+            )
+
+        score_decision = evaluation_data.get("score_decision")
+        if score_decision != SCORING_EVALUATION_DECISION:
+            errors.append(
+                f"{graph_path}: non-zero scores require evaluation.score_decision "
+                f"{SCORING_EVALUATION_DECISION!r}"
+            )
+    return errors
 
 
 def lint_conditioning_axes(graph: dict, path: Path) -> list[str]:

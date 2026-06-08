@@ -87,6 +87,24 @@ TESTS = [
         expected_output="id 'invented_construct' is not in ontology",
     ),
     FixtureTest(
+        name="graph rejects duplicate edge",
+        command=[
+            "scripts/lint_graph.py",
+            rel("tests/fixtures/graphs/invalid/duplicate-edge.json"),
+        ],
+        expected_returncode=1,
+        expected_output="duplicates source/target/type",
+    ),
+    FixtureTest(
+        name="graph rejects id filename mismatch",
+        command=[
+            "scripts/lint_graph.py",
+            rel("tests/fixtures/graphs/invalid/id-mismatch.json"),
+        ],
+        expected_returncode=1,
+        expected_output="must match filename stem",
+    ),
+    FixtureTest(
         name="graph rejects backward time-lag edge",
         command=[
             "scripts/lint_graph.py",
@@ -141,6 +159,24 @@ TESTS = [
         expected_output="does not match this graph",
     ),
     FixtureTest(
+        name="graph rejects exploratory score evaluation",
+        command=[
+            "scripts/lint_graph.py",
+            rel("tests/fixtures/graphs/invalid/nonzero-exploratory-evaluation.json"),
+        ],
+        expected_returncode=1,
+        expected_output="non-zero scores require evaluation.status",
+    ),
+    FixtureTest(
+        name="graph rejects score out of range",
+        command=[
+            "scripts/lint_graph.py",
+            rel("tests/fixtures/graphs/invalid/score-out-of-range.json"),
+        ],
+        expected_returncode=1,
+        expected_output="must be between 0 and 5",
+    ),
+    FixtureTest(
         name="evaluation valid minimal fixture",
         command=[
             "scripts/validate_evaluation.py",
@@ -165,6 +201,15 @@ TESTS = [
         ],
         expected_returncode=1,
         expected_output="unknown axis 'register'",
+    ),
+    FixtureTest(
+        name="evaluation rejects incomplete axes",
+        command=[
+            "scripts/validate_evaluation.py",
+            rel("tests/fixtures/evaluations/invalid/incomplete-axes.json"),
+        ],
+        expected_returncode=1,
+        expected_output="missing required axis 'genre'",
     ),
     FixtureTest(
         name="evaluation rejects invalid phenomenon",
@@ -204,6 +249,7 @@ def run_test(test: FixtureTest) -> str | None:
         text=True,
         capture_output=True,
         check=False,
+        timeout=10,
     )
     output = f"{completed.stdout}\n{completed.stderr}"
 

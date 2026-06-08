@@ -1,6 +1,6 @@
 {
-  "id": "scoped-score-valid-evaluation-fixture",
-  "target_graph": "tests/fixtures/graphs/valid/scoped-score-valid.json",
+  "id": "score-out-of-range",
+  "target_graph": "tests/fixtures/graphs/invalid/score-out-of-range.json",
   "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
   "status": "protocol-bound",
   "score_decision": "score-change-proposed",
@@ -8,7 +8,7 @@
     {
       "phenomenon": "left-branch-extraction",
       "result": "partly_survives",
-      "expected_survival_pattern": "Fixture expected pattern for a valid scoped score.",
+      "expected_survival_pattern": "Fixture expected pattern.",
       "contrast_cells": [
         {
           "id": "fixture-cell",

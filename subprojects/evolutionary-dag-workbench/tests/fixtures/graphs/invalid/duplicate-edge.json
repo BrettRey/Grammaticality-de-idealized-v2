@@ -1,7 +1,7 @@
 {
-  "id": "context-indexed-missing-axes",
-  "title": "Context-indexed missing axes fixture",
-  "family": "context-indexed-missing-axes",
+  "id": "duplicate-edge",
+  "title": "Duplicate edge fixture",
+  "family": "duplicate-edge",
   "status": "candidate",
   "nodes": [
     "community_licensing",
@@ -12,7 +12,13 @@
       "source": "community_licensing",
       "target": "reported_acceptability",
       "type": "measurement",
-      "rationale": "Fixture edge."
+      "rationale": "First fixture edge."
+    },
+    {
+      "source": "community_licensing",
+      "target": "reported_acceptability",
+      "type": "measurement",
+      "rationale": "Duplicate fixture edge."
     }
   ],
   "scores": {

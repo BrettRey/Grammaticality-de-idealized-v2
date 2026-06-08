@@ -60,6 +60,7 @@ def check_edges(graph: dict, path: Path) -> tuple[list[str], list[tuple[str, str
     errors: list[str] = []
     nodes = {node_id(node) for node in graph.get("nodes", [])}
     edges_for_dag: list[tuple[str, str, str]] = []
+    seen_edges: set[tuple[str, str, str]] = set()
 
     for index, edge in enumerate(graph.get("edges", []), start=1):
         if not isinstance(edge, dict):
@@ -80,6 +81,14 @@ def check_edges(graph: dict, path: Path) -> tuple[list[str], list[tuple[str, str
             errors.append(f"{path}: edge {index} is a self-loop")
         if not edge.get("rationale"):
             errors.append(f"{path}: edge {index} lacks a rationale")
+        if isinstance(source, str) and isinstance(target, str) and isinstance(edge_type, str):
+            edge_key = (source, target, edge_type)
+            if edge_key in seen_edges:
+                errors.append(
+                    f"{path}: edge {index} duplicates source/target/type "
+                    f"{source!r} -> {target!r} ({edge_type})"
+                )
+            seen_edges.add(edge_key)
         if edge_type == "time_lagged" and isinstance(source, str) and isinstance(target, str):
             source_time = time_index(source)
             target_time = time_index(target)

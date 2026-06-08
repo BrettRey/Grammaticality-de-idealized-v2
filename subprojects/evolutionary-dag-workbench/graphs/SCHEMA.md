@@ -1,8 +1,8 @@
 # Graph JSON Schema
 
-Seed and archive graphs are stored as JSON. The local validator checks simple graph structure.
-The linter also checks node IDs against `ontology/nodes.yaml`, `family`, `status`, and seed
-score discipline.
+Seed and archive graphs are stored as JSON. The local validator checks simple graph structure,
+duplicate edges, edge types, and time-lag discipline. The linter also checks node IDs against
+`ontology/nodes.yaml`, graph IDs against filenames, `family`, `status`, and score discipline.
 
 ```json
 {
@@ -59,6 +59,10 @@ score discipline.
 - `nodes`
 - `edges`
 
+`id` must match the JSON filename stem. For example,
+`graphs/archive/context-aware-operator-gap-candidate.json` must use
+`"id": "context-aware-operator-gap-candidate"`.
+
 ## Status Values
 
 - `seed`
@@ -77,6 +81,9 @@ score discipline.
 - `constitutive`
 - `evidential`
 - `time_lagged`
+
+Edges are unique by `source`, `target`, and `type`. Repeating the same typed edge is invalid; if two
+rationales seem necessary, merge them or introduce a distinct construct.
 
 ## Dynamic Feedback
 
@@ -122,6 +129,8 @@ Time-sliced node IDs count by their base node. The linter checks:
 Seed graphs carry complete all-zero `scores` blocks. Non-zero scores should be added only after an
 adversarial critique exists in `graphs/critiques/` or an equivalent review note is linked.
 
+Each score dimension must be numeric, not boolean, and must be between 0 and 5 inclusive.
+
 Graphs with non-zero scores must include `score_status`.
 
 Allowed `score_status.kind` values:
@@ -130,7 +139,8 @@ Allowed `score_status.kind` values:
 - `scoped_module`
 - `general_account`
 
-Non-zero scores require `score_status.kind` to be `scoped_module` or `general_account`, and
-`score_status.evaluation` must point to an existing protocol-bound evaluation whose `target_graph`
-matches the scored graph. A scoped-module label or score must not be read as a general-account
-score.
+Non-zero scores require `score_status.kind` to be `scoped_module` or `general_account`.
+`score_status.evaluation` must point to an existing evaluation whose `target_graph` matches the
+scored graph. The referenced evaluation must have `status` set to `protocol-bound` or `held-out`
+and `score_decision` set to `score-change-proposed`. A scoped-module label or score must not be
+read as a general-account score.

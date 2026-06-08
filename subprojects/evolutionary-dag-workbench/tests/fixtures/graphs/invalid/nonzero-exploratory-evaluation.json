@@ -1,7 +1,7 @@
 {
-  "id": "invalid-score-kind",
-  "title": "Invalid score kind fixture",
-  "family": "invalid-score-kind",
+  "id": "nonzero-exploratory-evaluation",
+  "title": "Nonzero exploratory evaluation fixture",
+  "family": "nonzero-exploratory-evaluation",
   "status": "candidate",
   "nodes": [
     "reported_acceptability"
@@ -18,7 +18,8 @@
     "construct_confusion_penalty": 0
   },
   "score_status": {
-    "kind": "winner",
-    "evaluation": "evaluations/protocol-tests/context-aware-operator-gap-2026-06-07.json"
+    "kind": "scoped_module",
+    "evaluation": "tests/fixtures/evaluations/valid/nonzero-exploratory-evaluation.json",
+    "scope": "Fixture should fail because evaluation is exploratory/no-score-change."
   }
 }
