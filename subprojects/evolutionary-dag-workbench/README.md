@@ -36,6 +36,7 @@ graphs/          Graph schema, seed graphs, archive, and critique outputs.
 agents/          Prompt templates and scoring rubrics.
 scripts/         Local validation and scoring helpers.
 notes/           Source map, pressure test, and planning notes.
+evaluations/     Protocol-bound graph tests with machine-checkable contrast cells.
 ```
 
 ## Method Commitments
@@ -66,4 +67,10 @@ Score graphs after they have a `scores` block:
 
 ```bash
 python3 scripts/score_graph.py graphs/seeds/*.json graphs/archive/*.json
+```
+
+Validate protocol-bound evaluations:
+
+```bash
+python3 scripts/validate_evaluation.py evaluations/protocol-tests/*.json
 ```

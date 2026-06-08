@@ -42,6 +42,7 @@ Earlier models are allowed to seed, constrain, and challenge the search. They ar
 - stdlib validation, linting, and scoring scripts in `scripts/`
 - source map and pressure test in `notes/`
 - conditioning protocol in `notes/conditioning-operationalization-protocol-2026-06-07.md`
+- protocol-bound evaluation schema and first evaluation in `evaluations/`
 
 ## Current Tooling Gates
 
@@ -51,6 +52,7 @@ Run these over seeds plus archive candidates:
 python3 scripts/validate_graph.py graphs/seeds/*.json graphs/archive/*.json
 python3 scripts/lint_graph.py graphs/seeds/*.json graphs/archive/*.json
 python3 scripts/score_graph.py graphs/seeds/*.json graphs/archive/*.json
+python3 scripts/validate_evaluation.py evaluations/protocol-tests/*.json
 ```
 
 The linter now checks:
@@ -61,13 +63,16 @@ The linter now checks:
 - all-zero seed score discipline;
 - `conditioning_axes` metadata for context-indexed graph families;
 - declared conditioning axes against corresponding graph nodes.
+- protocol-bound evaluations against target graph paths, protocol paths, phenomenon card IDs,
+  allowed result labels, and contrast-cell axes.
 
 ## Next Actions
 
-1. Attack `context-indexed-dynamic-feedback-candidate` with protocol-bound contrast cells.
-2. Build a context-aware operator-gap module rather than folding operator value into the dynamic
+1. Build a context-aware operator-gap module rather than folding operator value into the dynamic
    context graph by default.
-3. Add tests or fixtures for negative linter cases, especially malformed `conditioning_axes`.
+2. Add more protocol-bound evaluations, including one for operator-gap/recoverability cases.
+3. Add tests or fixtures for negative linter/evaluation cases, especially malformed
+   `conditioning_axes` and invalid contrast-cell axes.
 4. Expand `phenomena/cards/` toward 40-100 cards only after the current representation classes stop
    shifting every pass.
 5. Only after the construct inventory stabilizes, consider whether `pgmpy`, NOTEARS-style methods,
