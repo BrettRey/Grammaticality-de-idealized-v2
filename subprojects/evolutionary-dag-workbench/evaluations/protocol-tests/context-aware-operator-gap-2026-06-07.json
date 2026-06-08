@@ -1,0 +1,129 @@
+{
+  "id": "context-aware-operator-gap-2026-06-07",
+  "target_graph": "graphs/archive/context-aware-operator-gap-candidate.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "exploratory",
+  "score_decision": "no-score-change",
+  "cards": [
+    {
+      "phenomenon": "left-branch-extraction",
+      "result": "partly_survives",
+      "expected_survival_pattern": "Recoverable meaning should raise reported acceptability without licensing the operator configuration; opportunity and repair pressure should make the gap visible.",
+      "notes": "Partly survives. The graph has operator value, recoverability, opportunity mass, and repair pressure, but it still treats the operator-value relation as a scoped constitutive wager rather than an independently tested mechanism.",
+      "contrast_cells": [
+        {
+          "id": "recoverable-extraction",
+          "axes": {
+            "community": "English judgment community for extraction examples.",
+            "norm_centre": "Theoretical or explicit-judgment norm centre for extraction licensing.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Acceptability or grammaticality judgment with meaning recoverable.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "available-repair",
+          "axes": {
+            "community": "English judgment community for paraphrase comparison.",
+            "norm_centre": "Theoretical or explicit-judgment norm centre for extraction licensing.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Repair or paraphrase availability comparison.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    },
+    {
+      "phenomenon": "transparent-free-relatives",
+      "result": "partly_survives",
+      "expected_survival_pattern": "Low frequency should not automatically count as ungrammaticality; recoverability and constructional analogy should affect judgment without collapsing into licensing.",
+      "notes": "Partly survives. The graph has the relevant nodes, but it has no signed or thresholded way to distinguish weak evidence, gradient licensing, and clear failure.",
+      "contrast_cells": [
+        {
+          "id": "low-opportunity-attestation",
+          "axes": {
+            "community": "English speakers familiar with transparent free relatives.",
+            "norm_centre": "Descriptive judgment context rather than school-correction context.",
+            "genre": "Elicited sentence judgment or corpus comparison.",
+            "medium": "Written example or corpus text.",
+            "task_framing": "Naturalness or acceptability judgment.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "recoverable-but-rare",
+          "axes": {
+            "community": "English speakers judging rare but interpretable forms.",
+            "norm_centre": "Descriptive judgment context.",
+            "genre": "Controlled example with paraphrase available.",
+            "medium": "Written example.",
+            "task_framing": "Meaning recovery and acceptability separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    },
+    {
+      "phenomenon": "rare-uncontroversial-form",
+      "result": "survives_as_module",
+      "expected_survival_pattern": "Low usage frequency should be interpreted against opportunity mass and constructional analogy before licensing is inferred.",
+      "notes": "Survives as a module. This is one of the candidate's cleanest uses, provided the opportunity set is specified before interpreting rarity.",
+      "contrast_cells": [
+        {
+          "id": "low-opportunity-licensed",
+          "axes": {
+            "community": "Community where the rare form is accepted when occasion arises.",
+            "norm_centre": "Descriptive or community-local norm centre.",
+            "genre": "Context where the relevant form could naturally occur.",
+            "medium": "Corpus, elicited production, or judgment example.",
+            "task_framing": "Acceptability separated from frequency estimation.",
+            "speaker_identity": "Unmarked community-member cue."
+          }
+        },
+        {
+          "id": "high-opportunity-absence",
+          "axes": {
+            "community": "Comparable community where opportunities are frequent.",
+            "norm_centre": "Descriptive or community-local norm centre.",
+            "genre": "Competitor-rich context.",
+            "medium": "Corpus or elicited production.",
+            "task_framing": "Opportunity-normalized absence check.",
+            "speaker_identity": "Unmarked community-member cue."
+          }
+        }
+      ]
+    },
+    {
+      "phenomenon": "grammatical-but-hard",
+      "result": "partly_survives",
+      "expected_survival_pattern": "Processing cost should lower reported acceptability without licensing failure.",
+      "notes": "Partly survives. The graph has processing_cost, but no dedicated measurement_task or felt_naturalness_context path, so it remains a shallow processing module.",
+      "contrast_cells": [
+        {
+          "id": "hard-but-licensed",
+          "axes": {
+            "community": "Speakers for whom the construction is licensed.",
+            "norm_centre": "Descriptive grammar or controlled judgment norm centre.",
+            "genre": "Complex sentence judgment.",
+            "medium": "Written or timed-reading example.",
+            "task_framing": "Acceptability judgment under processing load.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "scaffolded-comprehension",
+          "axes": {
+            "community": "Speakers for whom the construction is licensed.",
+            "norm_centre": "Descriptive grammar or controlled judgment norm centre.",
+            "genre": "Complex sentence with support or paraphrase.",
+            "medium": "Written example with rereading or context.",
+            "task_framing": "Comprehension and acceptability separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    }
+  ]
+}
