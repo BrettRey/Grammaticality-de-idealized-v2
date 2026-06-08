@@ -38,3 +38,10 @@ Potential method lines:
 - Bayesian-network structure learning only after constructs and proxies are separated;
 - quality-diversity search for preserving rival graph families;
 - LLM agents as biased graph generators and adversaries, not judges.
+
+## Phenomenon Feeders
+
+`notes/cgel-source-registry.md`
+
+Use CGEL and Brett's correction projects as source-backed phenomenon feeders. They should generate
+cards, contrast cells, and held-out tests, not conclusions the graph search is obligated to recover.

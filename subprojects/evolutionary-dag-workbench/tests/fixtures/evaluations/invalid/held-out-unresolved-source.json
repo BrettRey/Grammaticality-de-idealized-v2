@@ -1,11 +1,10 @@
 {
-  "id": "held-out-valid",
+  "id": "held-out-unresolved-source",
   "target_graph": "graphs/archive/context-aware-operator-gap-candidate.json",
   "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
   "status": "held-out",
   "held_out_from": [
-    "left-branch-extraction",
-    "transparent-free-relatives"
+    "card-that-does-not-exist"
   ],
   "score_decision": "no-score-change",
   "cards": [

@@ -43,6 +43,28 @@ examples, data sources, minimum contrast cells, and expected graph-family failur
 | [grammatical-but-hard](cards/grammatical-but-hard.md) | Competence/performance split under stress | Seeded |
 | [frequent-condemned-form](cards/frequent-condemned-form.md) | Frequency vs metalinguistic condemnation | Seeded |
 
+## CGEL-Backed First Tranche
+
+These cards draw from CGEL and local correction projects as source pools. They are not a
+commitment to reproduce CGEL categories or Brett's correction-paper analyses. Their role is to add
+source-backed contrast cells for graph discovery and held-out projection.
+
+| Card | Stress-test role | Current state |
+|---|---|---|
+| [case-in-coordination-cgel](cards/case-in-coordination-cgel.md) | Case, coordination, hypercorrection, and standard ideology | Source-backed |
+| [subject-verb-agreement-cgel](cards/subject-verb-agreement-cgel.md) | Agreement, notional agreement, and processing attraction | Source-backed |
+| [fused-head-nps-cgel](cards/fused-head-nps-cgel.md) | Recoverability vs constructional licensing | Source-backed |
+| [fused-relative-constructions-cgel](cards/fused-relative-constructions-cgel.md) | Low opportunity and transparent-relative uncertainty | Source-backed |
+| [unbounded-dependency-licensing-cgel](cards/unbounded-dependency-licensing-cgel.md) | Dependency licensing, recoverability, and preemption | Source-backed |
+| [comparative-more-less-category](cards/comparative-more-less-category.md) | Category analysis vs grammatical licensing | Source-backed |
+| [preposition-category-selection-cgel](cards/preposition-category-selection-cgel.md) | Lexical choice vs argument-linking selection | Source-backed |
+| [clause-type-force-cgel](cards/clause-type-force-cgel.md) | Clause type, force, and minor-clause boundaries | Source-backed |
+| [negation-polarity-items-cgel](cards/negation-polarity-items-cgel.md) | Polarity licensing, semantic transparency, and norm pressure | Source-backed |
+| [pronoun-personhood-proform-gender](cards/pronoun-personhood-proform-gender.md) | Reference tracking, personhood, and social-indexical value | Source-backed |
+| [interjection-boundary-source-card](cards/interjection-boundary-source-card.md) | Uptake configuration without automatic operator membership | Source-backed |
+| [numerative-category-pressure](cards/numerative-category-pressure.md) | Numerative category, function, and licensing | Source-backed |
+| [nonfinite-verbless-clause-boundaries-cgel](cards/nonfinite-verbless-clause-boundaries-cgel.md) | Clause recognition, fragment licensing, genre, and medium | Source-backed |
+
 ## Expansion Targets
 
 - island effects;

@@ -1,0 +1,296 @@
+{
+  "id": "context-aware-operator-gap-heldout-cgel-2026-06-08",
+  "target_graph": "graphs/archive/context-aware-operator-gap-candidate.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "held-out",
+  "held_out_from": [
+    "left-branch-extraction",
+    "transparent-free-relatives",
+    "rare-uncontroversial-form",
+    "grammatical-but-hard",
+    "context-aware-operator-gap-2026-06-07"
+  ],
+  "score_decision": "no-score-change",
+  "activated_paths": [
+    {
+      "id": "recoverability-to-attribution",
+      "phenomenon": "unbounded-dependency-licensing-cgel",
+      "contrast_cell": "recoverable-unlicensed-gap",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Recoverability can increase reported acceptability while attribution remains dependent on contextual evidence rather than recoverability alone.",
+      "edges": [
+        {
+          "source": "semantic_pragmatic_recoverability",
+          "target": "reported_acceptability",
+          "type": "causal"
+        },
+        {
+          "source": "reported_acceptability",
+          "target": "grammaticality_attribution",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "competitor-preemption-repair",
+      "phenomenon": "unbounded-dependency-licensing-cgel",
+      "contrast_cell": "recoverable-unlicensed-gap",
+      "expected_path_reading": "non_sign_propagating",
+      "prediction": "Competitor availability can contribute to preemption, undercut licensing warrant, and increase repair or reformulation pressure.",
+      "edges": [
+        {
+          "source": "competitor_availability",
+          "target": "preemption_strength",
+          "type": "constitutive"
+        },
+        {
+          "source": "preemption_strength",
+          "target": "community_licensing",
+          "type": "evidential"
+        },
+        {
+          "source": "community_licensing",
+          "target": "repair_reformulation_pressure",
+          "type": "causal"
+        }
+      ]
+    },
+    {
+      "id": "attestation-licensing-production",
+      "phenomenon": "fused-relative-constructions-cgel",
+      "contrast_cell": "transparent-rare-relative",
+      "expected_path_reading": "non_sign_propagating",
+      "prediction": "Opportunity-normalized attestation can warrant licensing, and licensing can support production, but the card remains only partly resolved until thresholds are specified.",
+      "edges": [
+        {
+          "source": "usage_frequency",
+          "target": "opportunity_normalized_attestation",
+          "type": "constitutive"
+        },
+        {
+          "source": "opportunity_normalized_attestation",
+          "target": "community_licensing",
+          "type": "evidential"
+        },
+        {
+          "source": "community_licensing",
+          "target": "production_probability",
+          "type": "causal"
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "phenomenon": "unbounded-dependency-licensing-cgel",
+      "result": "survives_as_module",
+      "expected_survival_pattern": "Recoverability should raise reported acceptability without licensing the dependency configuration; high opportunity mass and available competitors should increase preemption strength and repair pressure.",
+      "notes": "Held-out survival as a scoped operator-gap module. The candidate has recoverability, opportunity mass, competitor availability, preemption strength, community licensing, and repair pressure. This still does not authorize numeric score movement because activated prediction paths are not yet machine-checked.",
+      "requirements": {
+        "required_nodes": [
+          "semantic_pragmatic_recoverability",
+          "competitor_availability",
+          "preemption_strength",
+          "community_licensing",
+          "repair_reformulation_pressure"
+        ],
+        "required_edges": [
+          {
+            "source": "competitor_availability",
+            "target": "preemption_strength",
+            "type": "constitutive"
+          },
+          {
+            "source": "preemption_strength",
+            "target": "community_licensing",
+            "type": "evidential"
+          },
+          {
+            "source": "community_licensing",
+            "target": "repair_reformulation_pressure",
+            "type": "causal"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "licensed-gap",
+          "axes": {
+            "community": "English speakers judging ordinary dependency examples.",
+            "norm_centre": "Descriptive judgment norm centre for dependency licensing.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Acceptability and meaning recovery separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "recoverable-unlicensed-gap",
+          "axes": {
+            "community": "English speakers judging recoverable dependency anomalies.",
+            "norm_centre": "Descriptive judgment norm centre for dependency licensing.",
+            "genre": "Controlled sentence judgment with paraphrase available.",
+            "medium": "Written example.",
+            "task_framing": "Meaning recovery foregrounded before grammaticality attribution.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    },
+    {
+      "phenomenon": "fused-relative-constructions-cgel",
+      "result": "partly_survives",
+      "expected_survival_pattern": "Low opportunity and transparent recoverability should produce uncertainty rather than immediate failure; competitor-rich contexts should make absence or repair more probative.",
+      "notes": "Partly survives. The graph has opportunity-normalized attestation, preemption strength, constructional analogy, and recoverability, but it still lacks explicit low-opportunity thresholds or activated paths for transparent-relative diagnostics.",
+      "requirements": {
+        "required_nodes": [
+          "opportunity_normalized_attestation",
+          "constructional_analogy",
+          "community_licensing",
+          "semantic_pragmatic_recoverability"
+        ],
+        "required_edges": [
+          {
+            "source": "usage_frequency",
+            "target": "opportunity_normalized_attestation",
+            "type": "constitutive"
+          },
+          {
+            "source": "opportunity_normalized_attestation",
+            "target": "community_licensing",
+            "type": "evidential"
+          },
+          {
+            "source": "constructional_analogy",
+            "target": "community_licensing",
+            "type": "evidential"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "usage_frequency",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "ordinary-fused-relative",
+          "axes": {
+            "community": "English speakers familiar with ordinary fused relatives.",
+            "norm_centre": "Descriptive judgment norm centre.",
+            "genre": "Controlled sentence judgment or corpus comparison.",
+            "medium": "Written example or corpus text.",
+            "task_framing": "Acceptability judgment with construction label withheld.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "transparent-rare-relative",
+          "axes": {
+            "community": "English speakers judging rare but interpretable relative constructions.",
+            "norm_centre": "Descriptive judgment norm centre.",
+            "genre": "Literary, formal, or elicited example.",
+            "medium": "Written example.",
+            "task_framing": "Meaning recovery and licensing confidence separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    },
+    {
+      "phenomenon": "preposition-category-selection-cgel",
+      "result": "partly_survives",
+      "expected_survival_pattern": "Head-selected or grammaticized preposition choices should show stronger repair and preemption than open payload preposition choices, but not every fixed preposition should be treated as operator value.",
+      "notes": "Partly survives. The candidate can represent competitors, preemption, and operator value, but it has no separate construct for collocational rigidity versus argument-linking selection. This is a useful pressure point for the next graph mutation.",
+      "requirements": {
+        "required_nodes": [
+          "operator_value",
+          "competitor_availability",
+          "preemption_strength",
+          "community_licensing"
+        ],
+        "required_edges": [
+          {
+            "source": "competitor_availability",
+            "target": "preemption_strength",
+            "type": "constitutive"
+          },
+          {
+            "source": "operator_value",
+            "target": "community_licensing",
+            "type": "constitutive"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "open-payload-pp-choice",
+          "axes": {
+            "community": "English speakers interpreting spatial or conceptual PP choices.",
+            "norm_centre": "Descriptive usage norm centre.",
+            "genre": "Ordinary prose or speech.",
+            "medium": "Speech or written example.",
+            "task_framing": "Paraphrase and interpretation task.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "selected-pp-complement",
+          "axes": {
+            "community": "English speakers judging selected PP complements.",
+            "norm_centre": "Descriptive and editorial norm centres compared.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Acceptability, correction, and paraphrase-availability compared.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    },
+    {
+      "phenomenon": "comparative-more-less-category",
+      "result": "fails_general_out_of_scope",
+      "expected_survival_pattern": "A graph built for operator gaps should not treat analyst category assignment as a licensing target; category tasks and acceptability tasks should diverge.",
+      "notes": "Useful out-of-scope failure. The candidate lacks measurement_task and has no explicit category/function distinction. This should not count against the scoped operator-gap module unless the module claims category-analysis coverage.",
+      "requirements": {
+        "forbidden_nodes": [
+          "analyst_category_assignment",
+          "distributional_category_evidence"
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "speaker-acceptability-task",
+          "axes": {
+            "community": "English speakers judging comparative examples without category terminology.",
+            "norm_centre": "Descriptive usage norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Acceptability or naturalness framing.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "analyst-category-task",
+          "axes": {
+            "community": "Analysts or trained respondents classifying categories.",
+            "norm_centre": "Descriptive grammar analysis norm centre.",
+            "genre": "Metalinguistic classification task.",
+            "medium": "Written example.",
+            "task_framing": "Category/function classification rather than acceptability.",
+            "speaker_identity": "Analyst or instructed respondent cue."
+          }
+        }
+      ]
+    }
+  ]
+}

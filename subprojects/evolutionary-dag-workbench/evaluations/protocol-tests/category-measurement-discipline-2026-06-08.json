@@ -1,0 +1,183 @@
+{
+  "id": "category-measurement-discipline-2026-06-08",
+  "target_graph": "graphs/archive/category-measurement-discipline-candidate.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "protocol-bound",
+  "score_decision": "no-score-change",
+  "activated_paths": [
+    {
+      "id": "category-task-to-attribution",
+      "phenomenon": "comparative-more-less-category",
+      "contrast_cell": "analyst-category-task",
+      "expected_path_reading": "indeterminate",
+      "prediction": "A category-classification task can elicit analyst category assignment, which may then influence grammaticality attribution without being identical to it.",
+      "edges": [
+        {
+          "source": "measurement_task",
+          "target": "analyst_category_assignment",
+          "type": "causal"
+        },
+        {
+          "source": "analyst_category_assignment",
+          "target": "grammaticality_attribution",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "distributional-evidence-to-category",
+      "phenomenon": "comparative-more-less-category",
+      "contrast_cell": "analyst-category-task",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Distributional evidence can warrant a category assignment without directly deciding speaker acceptability or community licensing.",
+      "edges": [
+        {
+          "source": "distributional_category_evidence",
+          "target": "analyst_category_assignment",
+          "type": "evidential"
+        },
+        {
+          "source": "analyst_category_assignment",
+          "target": "grammaticality_attribution",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "function-licensing-acceptability",
+      "phenomenon": "numerative-category-pressure",
+      "contrast_cell": "constructional-function",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Constructional function can contribute to community licensing, and licensing can be measured through task-biased acceptability reports without settling the category assignment.",
+      "edges": [
+        {
+          "source": "constructional_function",
+          "target": "community_licensing",
+          "type": "constitutive"
+        },
+        {
+          "source": "community_licensing",
+          "target": "reported_acceptability",
+          "type": "measurement"
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "phenomenon": "comparative-more-less-category",
+      "result": "survives_as_module",
+      "expected_survival_pattern": "Category tasks and acceptability tasks should produce different outputs; distributional evidence should warrant category assignment without directly licensing or delicensing the form.",
+      "notes": "Survives as a narrow category-measurement module. The graph explicitly separates measurement task, task framing, distributional evidence, analyst category assignment, reported acceptability, and grammaticality attribution.",
+      "requirements": {
+        "required_nodes": [
+          "measurement_task",
+          "task_framing",
+          "distributional_category_evidence",
+          "analyst_category_assignment",
+          "reported_acceptability",
+          "grammaticality_attribution"
+        ],
+        "required_edges": [
+          {
+            "source": "measurement_task",
+            "target": "analyst_category_assignment",
+            "type": "causal"
+          },
+          {
+            "source": "distributional_category_evidence",
+            "target": "analyst_category_assignment",
+            "type": "evidential"
+          },
+          {
+            "source": "analyst_category_assignment",
+            "target": "grammaticality_attribution",
+            "type": "evidential"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "analyst_category_assignment",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "speaker-acceptability-task",
+          "axes": {
+            "community": "English speakers judging comparative examples without category terminology.",
+            "norm_centre": "Descriptive usage norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Acceptability or naturalness framing.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "analyst-category-task",
+          "axes": {
+            "community": "Analysts or trained respondents classifying categories.",
+            "norm_centre": "Descriptive grammar analysis norm centre.",
+            "genre": "Metalinguistic classification task.",
+            "medium": "Written example.",
+            "task_framing": "Category/function classification rather than acceptability.",
+            "speaker_identity": "Analyst or instructed respondent cue."
+          }
+        }
+      ]
+    },
+    {
+      "phenomenon": "numerative-category-pressure",
+      "result": "partly_survives",
+      "expected_survival_pattern": "Numerative category pressure should be handled as divergence among constructional function, category assignment, licensing, and acceptability, not as a direct grammaticality fact.",
+      "notes": "Partly survives. The graph separates function, category assignment, licensing, and acceptability, but it does not yet represent countability, quantity scale, or determiner-specific diagnostics.",
+      "requirements": {
+        "required_nodes": [
+          "constructional_function",
+          "constructional_analogy",
+          "analyst_category_assignment",
+          "community_licensing",
+          "reported_acceptability"
+        ],
+        "required_edges": [
+          {
+            "source": "constructional_function",
+            "target": "community_licensing",
+            "type": "constitutive"
+          },
+          {
+            "source": "community_licensing",
+            "target": "reported_acceptability",
+            "type": "measurement"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "constructional-function",
+          "axes": {
+            "community": "English speakers or analysts considering numeral/numerative constructional roles.",
+            "norm_centre": "Descriptive grammar analysis norm centre.",
+            "genre": "Metalinguistic classification or controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Constructional function and category assignment separated.",
+            "speaker_identity": "Analyst, instructed respondent, or unmarked speaker cue."
+          }
+        },
+        {
+          "id": "acceptability-without-category",
+          "axes": {
+            "community": "English speakers judging numerative examples without category terminology.",
+            "norm_centre": "Descriptive usage norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Acceptability or naturalness framing.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    }
+  ]
+}

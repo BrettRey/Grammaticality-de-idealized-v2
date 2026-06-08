@@ -273,6 +273,14 @@ TESTS = [
         expected_returncode=0,
     ),
     FixtureTest(
+        name="evaluation valid score-change activated path fixture",
+        command=[
+            "scripts/validate_evaluation.py",
+            rel("tests/fixtures/evaluations/valid/scoped-score-valid-evaluation.json"),
+        ],
+        expected_returncode=0,
+    ),
+    FixtureTest(
         name="evaluation rejects empty contrast cells",
         command=[
             "scripts/validate_evaluation.py",
@@ -307,6 +315,96 @@ TESTS = [
         ],
         expected_returncode=1,
         expected_output="held-out evaluations require non-empty list field 'held_out_from'",
+    ),
+    FixtureTest(
+        name="evaluation rejects held-out unresolved source",
+        command=[
+            "scripts/validate_evaluation.py",
+            rel("tests/fixtures/evaluations/invalid/held-out-unresolved-source.json"),
+        ],
+        expected_returncode=1,
+        expected_output="does not resolve to a phenomenon card ID or evaluation ID",
+    ),
+    FixtureTest(
+        name="evaluation rejects activated path missing edge",
+        command=[
+            "scripts/validate_evaluation.py",
+            rel("tests/fixtures/evaluations/invalid/activated-path-missing-edge.json"),
+        ],
+        expected_returncode=1,
+        expected_output="does not exist in target_graph",
+    ),
+    FixtureTest(
+        name="evaluation rejects missing required node",
+        command=[
+            "scripts/validate_evaluation.py",
+            rel("tests/fixtures/evaluations/invalid/requirements-missing-node.json"),
+        ],
+        expected_returncode=1,
+        expected_output="required node 'operator_value' does not exist in target_graph",
+    ),
+    FixtureTest(
+        name="evaluation rejects missing required edge",
+        command=[
+            "scripts/validate_evaluation.py",
+            rel("tests/fixtures/evaluations/invalid/requirements-missing-edge.json"),
+        ],
+        expected_returncode=1,
+        expected_output="required edge 'reported_acceptability' -> 'community_licensing'",
+    ),
+    FixtureTest(
+        name="evaluation rejects present forbidden edge",
+        command=[
+            "scripts/validate_evaluation.py",
+            rel("tests/fixtures/evaluations/invalid/requirements-forbidden-edge-present.json"),
+        ],
+        expected_returncode=1,
+        expected_output="forbidden edge 'community_licensing' -> 'reported_acceptability'",
+    ),
+    FixtureTest(
+        name="evaluation rejects unknown requirement key",
+        command=[
+            "scripts/validate_evaluation.py",
+            rel("tests/fixtures/evaluations/invalid/requirements-unknown-key.json"),
+        ],
+        expected_returncode=1,
+        expected_output="requirements: unknown key 'maybe_nodes'",
+    ),
+    FixtureTest(
+        name="evaluation rejects activated path reading mismatch",
+        command=[
+            "scripts/validate_evaluation.py",
+            rel("tests/fixtures/evaluations/invalid/activated-path-reading-mismatch.json"),
+        ],
+        expected_returncode=1,
+        expected_output="does not match computed path reading",
+    ),
+    FixtureTest(
+        name="evaluation rejects score-change without activated paths",
+        command=[
+            "scripts/validate_evaluation.py",
+            rel("tests/fixtures/evaluations/invalid/score-change-missing-activated-paths.json"),
+        ],
+        expected_returncode=1,
+        expected_output="score-change-proposed evaluations require activated_paths",
+    ),
+    FixtureTest(
+        name="evaluation rejects score-change missing path reading",
+        command=[
+            "scripts/validate_evaluation.py",
+            rel("tests/fixtures/evaluations/invalid/score-change-missing-path-reading.json"),
+        ],
+        expected_returncode=1,
+        expected_output="score-change-proposed activated paths require expected_path_reading",
+    ),
+    FixtureTest(
+        name="evaluation rejects score-change unprofiled activated edge",
+        command=[
+            "scripts/validate_evaluation.py",
+            rel("tests/fixtures/evaluations/invalid/score-change-unprofiled-activated-edge.json"),
+        ],
+        expected_returncode=1,
+        expected_output="score-change-proposed activated edges require relation_profile",
     ),
     FixtureTest(
         name="evaluation rejects invalid phenomenon",

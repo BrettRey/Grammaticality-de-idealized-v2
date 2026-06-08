@@ -26,6 +26,18 @@ outcome_like:
       - reported acceptability
       - theoretical grammaticality
 
+  - id: analyst_category_assignment
+    label: Analyst category assignment
+    definition: Analyst, annotator, or trained-respondent classification of a form's category or constructional function.
+    proxies:
+      - grammar category label
+      - annotation category
+      - explicit category-classification response
+    forbidden_conflations:
+      - grammaticality attribution
+      - community licensing
+      - distributional category evidence
+
   - id: production_probability
     label: Production probability
     definition: Probability that a speaker or community produces a form in a specified context.
@@ -217,6 +229,31 @@ upstream_or_mediating:
       - productivity diagnostics
     forbidden_conflations:
       - token frequency
+      - community licensing
+
+  - id: distributional_category_evidence
+    label: Distributional category evidence
+    definition: Distributional facts used as evidence for a category or function analysis.
+    proxies:
+      - substitution class
+      - complementation pattern
+      - modifier or determiner distribution
+      - positional diagnostics
+    forbidden_conflations:
+      - analyst category assignment
+      - community licensing
+      - grammaticality attribution
+
+  - id: constructional_function
+    label: Constructional function
+    definition: Role a form fills inside a particular construction, such as modifier, complement, determiner-like role, fused head, or operator exponent.
+    proxies:
+      - local syntactic role
+      - construction-specific distribution
+      - dependency role
+    forbidden_conflations:
+      - lexical category
+      - analyst category assignment
       - community licensing
 
   - id: operator_value

@@ -1,0 +1,262 @@
+{
+  "id": "context-indexed-dynamic-feedback-heldout-cgel-2026-06-08",
+  "target_graph": "graphs/archive/context-indexed-dynamic-feedback-candidate.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "held-out",
+  "held_out_from": [
+    "needs-washed",
+    "stigmatized-robust-vernacular",
+    "register-bound-fragments",
+    "singular-they",
+    "between-you-and-I",
+    "context-indexed-dynamic-feedback-2026-06-07"
+  ],
+  "score_decision": "no-score-change",
+  "cards": [
+    {
+      "phenomenon": "case-in-coordination-cgel",
+      "result": "partly_survives",
+      "expected_survival_pattern": "Unmonitored production should diverge from correctness-framed judgment when standard ideology and correction pressure are active; the graph should avoid treating school correction as community licensing.",
+      "notes": "Partly survives. The candidate has ideology, correction, production, acceptability, task framing, and community licensing, but it still lacks schooling_instructional_exposure and a production-task versus judgment-task distinction.",
+      "requirements": {
+        "required_nodes": [
+          "production_probability_t",
+          "standard_language_ideology_t1",
+          "metalinguistic_condemnation_t1",
+          "editorial_correction_probability_t1",
+          "task_framing_t1",
+          "reported_acceptability_t1",
+          "grammaticality_attribution_t1"
+        ],
+        "required_edges": [
+          {
+            "source": "standard_language_ideology_t1",
+            "target": "metalinguistic_condemnation_t1",
+            "type": "causal"
+          },
+          {
+            "source": "metalinguistic_condemnation_t1",
+            "target": "editorial_correction_probability_t1",
+            "type": "causal"
+          },
+          {
+            "source": "task_framing_t1",
+            "target": "grammaticality_attribution_t1",
+            "type": "causal"
+          },
+          {
+            "source": "reported_acceptability_t1",
+            "target": "grammaticality_attribution_t1",
+            "type": "evidential"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "standard_language_ideology_t1",
+            "target": "community_licensing_t1",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "informal-production",
+          "axes": {
+            "community": "English speakers producing coordinated pronouns outside explicit correction.",
+            "norm_centre": "Local conversational norm centre.",
+            "genre": "Informal conversation or messaging.",
+            "medium": "Speech or informal digital writing.",
+            "task_framing": "No explicit correctness framing.",
+            "speaker_identity": "Ordinary speaker cue."
+          }
+        },
+        {
+          "id": "formal-correction",
+          "axes": {
+            "community": "School or editing judgment context.",
+            "norm_centre": "Instructional or editorial norm centre.",
+            "genre": "Grammar test, editing task, or usage discussion.",
+            "medium": "Written example.",
+            "task_framing": "Correctness and case-rule framing.",
+            "speaker_identity": "Student, editor, or standard-writer cue."
+          }
+        }
+      ]
+    },
+    {
+      "phenomenon": "pronoun-personhood-proform-gender",
+      "result": "partly_survives",
+      "expected_survival_pattern": "Pronoun judgments should shift with reference task, personhood/social-indexical framing, audience design, and norm centre without collapsing reference success into grammatical licensing.",
+      "notes": "Partly survives. The candidate has speaker identity, social-indexical value, community licensing, ideology, and reported acceptability, but it lacks audience_design and explicit reference-tracking/operator nodes.",
+      "requirements": {
+        "required_nodes": [
+          "speaker_identity_t1",
+          "social_indexical_value_t1",
+          "community_licensing_t1",
+          "reported_acceptability_t1",
+          "grammaticality_attribution_t1"
+        ],
+        "required_edges": [
+          {
+            "source": "speaker_identity_t1",
+            "target": "social_indexical_value_t1",
+            "type": "causal"
+          },
+          {
+            "source": "social_indexical_value_t1",
+            "target": "reported_acceptability_t1",
+            "type": "causal"
+          },
+          {
+            "source": "community_licensing_t1",
+            "target": "grammaticality_attribution_t1",
+            "type": "evidential"
+          }
+        ],
+        "forbidden_nodes": [
+          "audience_design_t1"
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "low-stakes-reference",
+          "axes": {
+            "community": "English speakers resolving ordinary pronoun reference.",
+            "norm_centre": "Descriptive usage norm centre.",
+            "genre": "Controlled reference task.",
+            "medium": "Written or spoken example.",
+            "task_framing": "Reference resolution and acceptability separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "policy-or-identity-framing",
+          "axes": {
+            "community": "English speakers judging pronoun use under social or institutional framing.",
+            "norm_centre": "Institutional, community-local, or ideological norm centre.",
+            "genre": "Policy, workplace, classroom, or public-discourse context.",
+            "medium": "Written guidance, survey item, or spoken interaction.",
+            "task_framing": "Correctness, respect, identity, or policy framing.",
+            "speaker_identity": "Speaker or referent identity explicitly cued."
+          }
+        }
+      ]
+    },
+    {
+      "phenomenon": "nonfinite-verbless-clause-boundaries-cgel",
+      "result": "survives_as_module",
+      "expected_survival_pattern": "Genre and medium should condition whether a non-finite or verbless form is treated as locally licensed, while formal full-sentence tasks should raise grammaticality-attribution or correction pressure.",
+      "notes": "Survives as a context-indexed module. This is a strong fit because the graph explicitly routes genre, medium, task framing, register/genre appropriateness, acceptability, and attribution.",
+      "requirements": {
+        "required_nodes": [
+          "genre_t1",
+          "medium_t1",
+          "register_genre_appropriateness_t1",
+          "task_framing_t1",
+          "reported_acceptability_t1",
+          "grammaticality_attribution_t1"
+        ],
+        "required_edges": [
+          {
+            "source": "genre_t1",
+            "target": "register_genre_appropriateness_t1",
+            "type": "causal"
+          },
+          {
+            "source": "medium_t1",
+            "target": "register_genre_appropriateness_t1",
+            "type": "causal"
+          },
+          {
+            "source": "register_genre_appropriateness_t1",
+            "target": "reported_acceptability_t1",
+            "type": "causal"
+          },
+          {
+            "source": "task_framing_t1",
+            "target": "grammaticality_attribution_t1",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "licensed-fragment-genre",
+          "axes": {
+            "community": "Participants familiar with the relevant fragment-licensed genre.",
+            "norm_centre": "Genre-local norm centre.",
+            "genre": "Headline, sign, list item, message, answer fragment, or supplement.",
+            "medium": "Speech, signage, messaging, headline writing, or notes.",
+            "task_framing": "Genre fit, naturalness, or situated-utterance framing.",
+            "speaker_identity": "Ordinary participant in the genre."
+          }
+        },
+        {
+          "id": "formal-sentence-task",
+          "axes": {
+            "community": "Formal edited-prose or school-evaluation context.",
+            "norm_centre": "School, editor, or full-sentence norm centre.",
+            "genre": "Grammar exercise or formal edited prose.",
+            "medium": "Written test or edited prose.",
+            "task_framing": "Full-sentence correctness framing.",
+            "speaker_identity": "Student or standard-writer cue."
+          }
+        }
+      ]
+    },
+    {
+      "phenomenon": "negation-polarity-items-cgel",
+      "result": "fails_general_out_of_scope",
+      "expected_survival_pattern": "The graph should handle standard condemnation and community/norm-centre divergence for dialectal negative patterns, but it should fail as a general polarity-licensing account because it lacks operator_value.",
+      "notes": "Useful out-of-scope failure. The candidate can handle norm pressure and judgment channels, but not the polarity-licensing environment itself. This is exactly the boundary between context dynamics and operator-gap structure.",
+      "requirements": {
+        "required_nodes": [
+          "community_licensing_t1",
+          "standard_language_ideology_t1",
+          "metalinguistic_condemnation_t1",
+          "reported_acceptability_t1",
+          "grammaticality_attribution_t1"
+        ],
+        "required_edges": [
+          {
+            "source": "standard_language_ideology_t1",
+            "target": "metalinguistic_condemnation_t1",
+            "type": "causal"
+          },
+          {
+            "source": "community_licensing_t1",
+            "target": "grammaticality_attribution_t1",
+            "type": "evidential"
+          }
+        ],
+        "forbidden_nodes": [
+          "operator_value_t1"
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "licensed-polarity-environment",
+          "axes": {
+            "community": "English speakers judging polarity-item environments.",
+            "norm_centre": "Descriptive grammar norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Licensing and meaning recovery separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "standard-correction-of-dialectal-negative",
+          "axes": {
+            "community": "Dialect community and standard-evaluator context compared.",
+            "norm_centre": "Local community norm centre versus standard-language norm centre.",
+            "genre": "Conversation, classroom, or editing task.",
+            "medium": "Speech transcript or written test example.",
+            "task_framing": "Correctness, dialect, and meaning-recovery framing compared.",
+            "speaker_identity": "Dialect speaker or standard-writer cue."
+          }
+        }
+      ]
+    }
+  ]
+}

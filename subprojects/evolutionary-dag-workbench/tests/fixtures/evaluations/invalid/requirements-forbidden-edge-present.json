@@ -1,36 +1,16 @@
 {
-  "id": "scoped-score-valid-evaluation-fixture",
+  "id": "requirements-forbidden-edge-present",
   "target_graph": "tests/fixtures/graphs/valid/scoped-score-valid.json",
   "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
   "status": "protocol-bound",
-  "score_decision": "score-change-proposed",
-  "activated_paths": [
-    {
-      "id": "fixture-measurement-path",
-      "phenomenon": "left-branch-extraction",
-      "contrast_cell": "fixture-cell",
-      "expected_path_reading": "indeterminate",
-      "prediction": "Fixture score movement commits to the profiled measurement edge.",
-      "edges": [
-        {
-          "source": "community_licensing",
-          "target": "reported_acceptability",
-          "type": "measurement"
-        }
-      ]
-    }
-  ],
+  "score_decision": "no-score-change",
   "cards": [
     {
       "phenomenon": "left-branch-extraction",
       "result": "partly_survives",
-      "expected_survival_pattern": "Fixture expected pattern for a valid scoped score.",
+      "expected_survival_pattern": "Fixture expected pattern.",
       "requirements": {
-        "required_nodes": [
-          "community_licensing",
-          "reported_acceptability"
-        ],
-        "required_edges": [
+        "forbidden_edges": [
           {
             "source": "community_licensing",
             "target": "reported_acceptability",

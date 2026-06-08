@@ -13,8 +13,9 @@ processing-based, and normativity-based models are treated as seed graph familie
 conclusions or targets to vindicate.
 
 Five adversarial passes and one synthesis pass have been run. All numeric scores remain zero. Two
-current modules have `scoped_module` labels tied to protocol-bound evaluations. No graph has a
-`general_account` score. The current scoring schema now includes `projective_power` and
+current modules have `scoped_module` labels tied to protocol-bound evaluations. Two held-out CGEL
+evaluations now probe those modules without authorizing score movement. No graph has a
+`general_account` score. The current scoring schema includes `projective_power` and
 `theory_preservation_penalty` so held-out prediction and anti-alignment discipline are visible.
 
 ## Current Candidate Stack
@@ -25,6 +26,7 @@ current modules have `scoped_module` labels tied to protocol-bound evaluations. 
 - `dynamic-stratified-feedback-candidate`
 - `context-indexed-dynamic-feedback-candidate`
 - `context-aware-operator-gap-candidate`
+- `category-measurement-discipline-candidate`
 
 The current strongest modules are scoped, not general winners:
 
@@ -33,6 +35,8 @@ The current strongest modules are scoped, not general winners:
 - `context-aware-operator-gap-candidate` for operator-gap, opportunity, recoverability, analogy, and
   repair-pressure cases. This is the first profiled graph and uses derived evidential constructs for
   opportunity-normalized attestation and preemption strength.
+- `category-measurement-discipline-candidate` for category-analysis and measurement-task
+  divergence. It is unscored and has no scoped-module label.
 
 Both have protocol-bound `scope-only` evaluations and `scoped_module` labels. Neither has earned a
 non-zero numeric score or a `general_account` score.
@@ -50,15 +54,19 @@ construct separation, or held-out projectibility, not by fitting a prior paper.
 - `ontology/relation-profiles.yaml`
 - `ontology/forbidden-conflations.md`
 - `phenomena/index.md`
+- source-backed CGEL/local-correction card tranche in `phenomena/cards/`
 - `DISCOVERY_RULES.md`
 - initial phenomenon cards in `phenomena/cards/`
 - graph schema and seed graphs in `graphs/`
 - graph-agent template and scoring rubric in `agents/`
 - stdlib validation, linting, and scoring scripts in `scripts/`
+- evaluation summary utility in `scripts/summarize_evaluations.py`
 - source map and pressure test in `notes/`
+- CGEL/local correction source registry in `notes/cgel-source-registry.md`
 - conditioning protocol in `notes/conditioning-operationalization-protocol-2026-06-07.md`
 - scoped scoring policy in `notes/scoped-scoring-policy-2026-06-07.md`
 - protocol-bound evaluation schema and exploratory evaluations in `evaluations/`
+- held-out CGEL/local-correction evaluations in `evaluations/protocol-tests/`
 - positive and negative validator fixtures in `tests/fixtures/`
 
 ## Current Tooling Gates
@@ -71,6 +79,12 @@ python3 scripts/lint_graph.py graphs/seeds/*.json graphs/archive/*.json
 python3 scripts/score_graph.py graphs/seeds/*.json graphs/archive/*.json
 python3 scripts/validate_evaluation.py evaluations/protocol-tests/*.json
 python3 scripts/run_fixture_tests.py
+```
+
+For a compact view of evaluation state:
+
+```bash
+python3 scripts/summarize_evaluations.py evaluations/protocol-tests/*.json
 ```
 
 The linter now checks:
@@ -89,7 +103,7 @@ The linter now checks:
 - evaluation references whose `target_graph` matches the labelled graph;
 - scoped/general labels only when the referenced evaluation authorizes scope recognition;
 - non-zero scores only when the referenced evaluation authorizes score movement;
-- held-out evaluation references declare what cards, evaluations, or passes they were held out from;
+- held-out evaluation references resolve `held_out_from` items to cards or evaluations;
 - non-zero scores only on graphs with `edge_semantics_level: profiled`;
 - `conditioning_axes` metadata for context-indexed graph families;
 - declared conditioning axes against corresponding graph nodes;
@@ -108,25 +122,29 @@ The evaluation validator checks:
 
 - protocol-bound evaluations against target graph paths, protocol paths, phenomenon card IDs,
   allowed result labels, and complete six-axis contrast cells.
-- held-out evaluations include non-empty `held_out_from` provenance.
+- card-level requirements for required/forbidden target-graph nodes and edges.
+- held-out evaluations include non-empty `held_out_from` provenance resolved to cards or
+  evaluations.
+- activated paths, when present, resolve to target-graph edges and continue as directed paths.
+- `score-change-proposed` evaluations include activated paths whose edges have relation profiles.
+- activated paths with `expected_path_reading` match the path reading computed from relation
+  profiles; score-change paths require an expected reading.
 
 The fixture runner checks positive and negative cases for both graph linting and evaluation
 validation.
 
 ## Next Actions
 
-1. Enrich the current twelve phenomenon cards before adding more cards.
-2. Add held-out protocol evaluations before any numeric score movement.
-3. Start the next graph mutation from a card failure or held-out discriminator, not from a named
+1. Enrich the source-backed cards with concrete contrast-cell examples and data pointers.
+2. Start the next graph mutation from a held-out card failure or discriminator, not from a named
    theory family.
-4. Add a processing-specific context module or keep processing as a perturbation layer only.
-5. Profile `context-indexed-dynamic-feedback-candidate` only after deciding which dynamic paths are
+3. Add a processing-specific context module or keep processing as a perturbation layer only.
+4. Profile `context-indexed-dynamic-feedback-candidate` only after deciding which dynamic paths are
    prediction commitments.
-6. Add evaluation-level activated paths so score movement can require profiles on the traversed
-   prediction paths, not merely a profiled graph.
-7. Calibrate scoped-module score magnitudes after at least one held-out or parameterized evaluation
+5. Use activated-path readings to define explicit pass/fail predictions for held-out contrast cells.
+6. Calibrate scoped-module score magnitudes after at least one held-out or parameterized evaluation
    pass.
-8. Expand `phenomena/cards/` toward 40-100 cards only after the current representation classes stop
+7. Expand `phenomena/cards/` toward 40-100 cards only after the current representation classes stop
    shifting every pass.
-9. Only after the construct inventory stabilizes, consider whether `pgmpy`, NOTEARS-style methods,
+8. Only after the construct inventory stabilizes, consider whether `pgmpy`, NOTEARS-style methods,
    or empirical causal discovery are useful.

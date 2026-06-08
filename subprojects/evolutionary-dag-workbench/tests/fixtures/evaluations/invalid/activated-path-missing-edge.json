@@ -1,20 +1,19 @@
 {
-  "id": "scoped-score-valid-evaluation-fixture",
+  "id": "activated-path-missing-edge",
   "target_graph": "tests/fixtures/graphs/valid/scoped-score-valid.json",
   "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
   "status": "protocol-bound",
-  "score_decision": "score-change-proposed",
+  "score_decision": "no-score-change",
   "activated_paths": [
     {
-      "id": "fixture-measurement-path",
+      "id": "missing-edge-path",
       "phenomenon": "left-branch-extraction",
       "contrast_cell": "fixture-cell",
-      "expected_path_reading": "indeterminate",
-      "prediction": "Fixture score movement commits to the profiled measurement edge.",
+      "prediction": "Fixture should fail because the activated edge is absent.",
       "edges": [
         {
-          "source": "community_licensing",
-          "target": "reported_acceptability",
+          "source": "reported_acceptability",
+          "target": "community_licensing",
           "type": "measurement"
         }
       ]
@@ -24,20 +23,7 @@
     {
       "phenomenon": "left-branch-extraction",
       "result": "partly_survives",
-      "expected_survival_pattern": "Fixture expected pattern for a valid scoped score.",
-      "requirements": {
-        "required_nodes": [
-          "community_licensing",
-          "reported_acceptability"
-        ],
-        "required_edges": [
-          {
-            "source": "community_licensing",
-            "target": "reported_acceptability",
-            "type": "measurement"
-          }
-        ]
-      },
+      "expected_survival_pattern": "Fixture expected pattern.",
       "contrast_cells": [
         {
           "id": "fixture-cell",

@@ -14,6 +14,9 @@ These are lint targets for graph agents and human review. A graph may violate th
 - Do not use `operator_value` as a synonym for every form-meaning relation.
 - Do not use `social_indexical_value` as a synonym for register fit.
 - Do not use `measurement_task` as a synonym for the target construct.
+- Do not use `analyst_category_assignment` as a synonym for grammaticality attribution.
+- Do not use `distributional_category_evidence` as a synonym for community licensing.
+- Do not use `constructional_function` as a synonym for lexical category.
 
 ## DAG-Specific Checks
 

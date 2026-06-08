@@ -8,6 +8,7 @@ import re
 import sys
 from pathlib import Path
 
+import validate_evaluation
 import validate_graph
 
 
@@ -132,6 +133,16 @@ def load_json(path: Path) -> dict | None:
     except Exception:
         return None
     return data if isinstance(data, dict) else None
+
+
+def known_held_out_source_ids() -> set[str]:
+    ids = {path.stem for path in (ROOT / "phenomena" / "cards").glob("*.md")}
+    for path in (ROOT / "evaluations" / "protocol-tests").glob("*.json"):
+        ids.add(path.stem)
+        data = load_json(path)
+        if data and isinstance(data.get("id"), str) and data["id"].strip():
+            ids.add(data["id"])
+    return ids
 
 
 def known_node(node: str, controlled_nodes: set[str]) -> bool:
@@ -367,19 +378,25 @@ def lint_score_evaluation_target(
     if evaluation_data is None:
         return [f"{graph_path}: score_status.evaluation must point to a JSON evaluation file"]
 
+    evaluation_errors = validate_evaluation.validate(evaluation_path)
+    errors: list[str] = [
+        f"{graph_path}: referenced evaluation invalid: {error}" for error in evaluation_errors
+    ]
+
     target_graph = evaluation_data.get("target_graph")
     if not isinstance(target_graph, str) or not target_graph.strip():
-        return [f"{graph_path}: score_status.evaluation file lacks target_graph"]
+        errors.append(f"{graph_path}: score_status.evaluation file lacks target_graph")
+        return errors
 
     expected = graph_path.resolve()
     actual = (ROOT / target_graph).resolve()
     if actual != expected:
-        return [
+        errors.append(
             f"{graph_path}: score_status.evaluation target_graph {target_graph!r} "
             "does not match this graph"
-        ]
+        )
+        return errors
 
-    errors: list[str] = []
     if evaluation_data.get("status") == "held-out":
         held_out_from = evaluation_data.get("held_out_from")
         if not isinstance(held_out_from, list) or not held_out_from:
@@ -388,11 +405,18 @@ def lint_score_evaluation_target(
                 "held_out_from"
             )
         else:
+            allowed_sources = known_held_out_source_ids()
             for index, item in enumerate(held_out_from, start=1):
                 if not isinstance(item, str) or not item.strip():
                     errors.append(
                         f"{graph_path}: held-out score_status.evaluation "
                         f"held_out_from item {index} must be a non-empty string"
+                    )
+                elif item not in allowed_sources:
+                    errors.append(
+                        f"{graph_path}: held-out score_status.evaluation "
+                        f"held_out_from item {index} {item!r} does not resolve to a "
+                        "phenomenon card ID or evaluation ID"
                     )
 
     if require_label_authorized:

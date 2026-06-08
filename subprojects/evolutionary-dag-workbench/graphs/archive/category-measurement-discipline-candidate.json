@@ -1,0 +1,122 @@
+{
+  "id": "category-measurement-discipline-candidate",
+  "title": "Category-measurement discipline candidate",
+  "family": "category-measurement-discipline",
+  "status": "candidate",
+  "edge_semantics_level": "profiled",
+  "notes": "Candidate generated from source-backed category-pressure cards. It tests whether category analysis, constructional function, distributional evidence, acceptability, licensing, and grammaticality attribution can be kept apart. It is not a general grammaticality account and is not scored.",
+  "nodes": [
+    "distributional_category_evidence",
+    "constructional_function",
+    "analyst_category_assignment",
+    "measurement_task",
+    "task_framing",
+    "constructional_analogy",
+    "semantic_pragmatic_recoverability",
+    "community_licensing",
+    "standard_language_ideology",
+    "reported_acceptability",
+    "grammaticality_attribution"
+  ],
+  "edges": [
+    {
+      "source": "distributional_category_evidence",
+      "target": "analyst_category_assignment",
+      "type": "evidential",
+      "relation_profile": "evidential_warrant",
+      "rationale": "Distributional facts provide warrant for an analyst category or function assignment without making that assignment the grammatical target."
+    },
+    {
+      "source": "constructional_function",
+      "target": "analyst_category_assignment",
+      "type": "evidential",
+      "relation_profile": "contextual_warrant",
+      "rationale": "Construction-specific function can support a category analysis, but the evidential force depends on the diagnostic and theory being used."
+    },
+    {
+      "source": "measurement_task",
+      "target": "analyst_category_assignment",
+      "type": "causal",
+      "relation_profile": "mixed_contextual",
+      "rationale": "Category-classification tasks can elicit analyst-style assignments that ordinary acceptability tasks do not."
+    },
+    {
+      "source": "task_framing",
+      "target": "analyst_category_assignment",
+      "type": "causal",
+      "relation_profile": "mixed_contextual",
+      "rationale": "Task wording can cue respondents to classify a category or function rather than report acceptability."
+    },
+    {
+      "source": "constructional_function",
+      "target": "community_licensing",
+      "type": "constitutive",
+      "relation_profile": "partial_component",
+      "rationale": "In category-pressure cases, fitting the constructional role can be part of licensing without settling the lexical-category analysis."
+    },
+    {
+      "source": "constructional_analogy",
+      "target": "community_licensing",
+      "type": "evidential",
+      "relation_profile": "evidential_warrant",
+      "rationale": "Analogical support can provide warrant for licensing in a constructional neighborhood."
+    },
+    {
+      "source": "semantic_pragmatic_recoverability",
+      "target": "reported_acceptability",
+      "type": "causal",
+      "relation_profile": "positive_monotone",
+      "rationale": "Recoverable meaning can raise reported acceptability independently of category analysis."
+    },
+    {
+      "source": "community_licensing",
+      "target": "reported_acceptability",
+      "type": "measurement",
+      "relation_profile": "task_biased_indicator",
+      "rationale": "Acceptability reports can measure licensing only through task-biased judgment channels."
+    },
+    {
+      "source": "task_framing",
+      "target": "reported_acceptability",
+      "type": "causal",
+      "relation_profile": "mixed_contextual",
+      "rationale": "Task framing can separate category classification, naturalness, correctness, and acceptability outputs."
+    },
+    {
+      "source": "standard_language_ideology",
+      "target": "grammaticality_attribution",
+      "type": "causal",
+      "relation_profile": "mixed_contextual",
+      "rationale": "Correctness ideology can shape explicit attribution without settling category analysis or community licensing."
+    },
+    {
+      "source": "analyst_category_assignment",
+      "target": "grammaticality_attribution",
+      "type": "evidential",
+      "relation_profile": "contextual_warrant",
+      "rationale": "Analyst category assignments can influence grammaticality attribution in metalinguistic contexts, but are not identical to attribution."
+    },
+    {
+      "source": "reported_acceptability",
+      "target": "grammaticality_attribution",
+      "type": "evidential",
+      "relation_profile": "contextual_warrant",
+      "rationale": "Reported acceptability provides noisy evidence for grammaticality attribution, especially outside category-classification tasks."
+    }
+  ],
+  "scores": {
+    "empirical_coverage": 0,
+    "projective_power": 0,
+    "counterexample_resilience": 0,
+    "measurement_clarity": 0,
+    "explanatory_payoff": 0,
+    "cross_domain_stability": 0,
+    "complexity_penalty": 0,
+    "circularity_penalty": 0,
+    "construct_confusion_penalty": 0,
+    "theory_preservation_penalty": 0
+  },
+  "score_status": {
+    "kind": "unscored"
+  }
+}

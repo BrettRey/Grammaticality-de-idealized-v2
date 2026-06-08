@@ -1,21 +1,17 @@
 {
-  "id": "held-out-valid",
-  "target_graph": "graphs/archive/context-aware-operator-gap-candidate.json",
+  "id": "score-change-missing-activated-paths",
+  "target_graph": "tests/fixtures/graphs/valid/scoped-score-valid.json",
   "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
-  "status": "held-out",
-  "held_out_from": [
-    "left-branch-extraction",
-    "transparent-free-relatives"
-  ],
-  "score_decision": "no-score-change",
+  "status": "protocol-bound",
+  "score_decision": "score-change-proposed",
   "cards": [
     {
-      "phenomenon": "rare-uncontroversial-form",
-      "result": "survives_as_module",
-      "expected_survival_pattern": "Fixture expected pattern for held-out projection.",
+      "phenomenon": "left-branch-extraction",
+      "result": "partly_survives",
+      "expected_survival_pattern": "Fixture expected pattern.",
       "contrast_cells": [
         {
-          "id": "fixture-held-out-cell",
+          "id": "fixture-cell",
           "axes": {
             "community": "Fixture community.",
             "norm_centre": "Fixture norm centre.",
