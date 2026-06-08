@@ -21,10 +21,16 @@ Five adversarial passes have been run. Scores remain all-zero across seeds and c
 - `stratified-licensing-measurement-candidate`
 - `dynamic-stratified-feedback-candidate`
 - `context-indexed-dynamic-feedback-candidate`
+- `context-aware-operator-gap-candidate`
 
-The current strongest module is `context-indexed-dynamic-feedback-candidate`, but it is explicitly
-not a general winner. It needs protocol-bound testing and later reintegration with operator-gap,
-recoverability, constructional-analogy, and processing modules.
+The current strongest modules are scoped, not general winners:
+
+- `context-indexed-dynamic-feedback-candidate` for diachronic/context-conditioned licensing,
+  production, ideology, correction, and judgment.
+- `context-aware-operator-gap-candidate` for operator-gap, opportunity, recoverability, analogy, and
+  repair-pressure cases.
+
+Both have protocol-bound exploratory evaluations. Neither has earned non-zero scores.
 
 ## Live Boundary Rule
 
@@ -42,7 +48,7 @@ Earlier models are allowed to seed, constrain, and challenge the search. They ar
 - stdlib validation, linting, and scoring scripts in `scripts/`
 - source map and pressure test in `notes/`
 - conditioning protocol in `notes/conditioning-operationalization-protocol-2026-06-07.md`
-- protocol-bound evaluation schema and first evaluation in `evaluations/`
+- protocol-bound evaluation schema and exploratory evaluations in `evaluations/`
 
 ## Current Tooling Gates
 
@@ -68,11 +74,10 @@ The linter now checks:
 
 ## Next Actions
 
-1. Build a context-aware operator-gap module rather than folding operator value into the dynamic
-   context graph by default.
-2. Add more protocol-bound evaluations, including one for operator-gap/recoverability cases.
-3. Add tests or fixtures for negative linter/evaluation cases, especially malformed
+1. Add tests or fixtures for negative linter/evaluation cases, especially malformed
    `conditioning_axes` and invalid contrast-cell axes.
+2. Decide whether scoped module scores should be possible, separate from general-account scores.
+3. Add a processing-specific context module or keep processing as a perturbation layer only.
 4. Expand `phenomena/cards/` toward 40-100 cards only after the current representation classes stop
    shifting every pass.
 5. Only after the construct inventory stabilizes, consider whether `pgmpy`, NOTEARS-style methods,
