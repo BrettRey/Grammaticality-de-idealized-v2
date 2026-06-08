@@ -1,0 +1,179 @@
+{
+  "id": "dynamic-stratified-feedback-candidate",
+  "title": "Dynamic stratified feedback candidate",
+  "family": "dynamic-stratified-feedback",
+  "status": "candidate",
+  "notes": "Third-round candidate generated after critique of the stratified licensing-measurement candidate. It tests whether usage, entrenchment, licensing, ideology, correction, acceptability, attribution, and production can interact over time without illegal synchronic cycles or construct collapse. It is not scored pending critique.",
+  "nodes": [
+    "production_probability_t",
+    "opportunity_mass_t1",
+    "usage_frequency_t1",
+    "entrenchment_t1",
+    "community_licensing_t1",
+    "standard_language_ideology_t1",
+    "metalinguistic_condemnation_t1",
+    "editorial_correction_probability_t1",
+    "reported_acceptability_t1",
+    "grammaticality_attribution_t1",
+    "diachronic_stabilization_t2",
+    "community_licensing_t2",
+    "standard_language_ideology_t2",
+    "production_probability_t2"
+  ],
+  "edges": [
+    {
+      "source": "production_probability_t",
+      "target": "usage_frequency_t1",
+      "type": "time_lagged",
+      "rationale": "Production at one slice contributes to observed usage at the next slice."
+    },
+    {
+      "source": "opportunity_mass_t1",
+      "target": "usage_frequency_t1",
+      "type": "causal",
+      "rationale": "Observed usage at t1 depends on the number of contexts in which the form could have appeared."
+    },
+    {
+      "source": "opportunity_mass_t1",
+      "target": "community_licensing_t1",
+      "type": "evidential",
+      "rationale": "Opportunity mass calibrates how strongly attestation or absence at t1 bears on licensing."
+    },
+    {
+      "source": "usage_frequency_t1",
+      "target": "entrenchment_t1",
+      "type": "causal",
+      "rationale": "Repeated exposure at t1 can increase learned accessibility within that slice."
+    },
+    {
+      "source": "usage_frequency_t1",
+      "target": "community_licensing_t1",
+      "type": "evidential",
+      "rationale": "Usage at t1 is evidence for licensing only after opportunity structure is considered."
+    },
+    {
+      "source": "entrenchment_t1",
+      "target": "reported_acceptability_t1",
+      "type": "causal",
+      "rationale": "Entrenchment can shift familiarity and reported acceptability without being identical to licensing."
+    },
+    {
+      "source": "community_licensing_t1",
+      "target": "reported_acceptability_t1",
+      "type": "measurement",
+      "rationale": "Acceptability at t1 can be a noisy measurement of licensing when ideology and entrenchment are modeled separately."
+    },
+    {
+      "source": "standard_language_ideology_t1",
+      "target": "metalinguistic_condemnation_t1",
+      "type": "causal",
+      "rationale": "Standard-language ideology at t1 can generate explicit condemnation in that slice."
+    },
+    {
+      "source": "metalinguistic_condemnation_t1",
+      "target": "editorial_correction_probability_t1",
+      "type": "causal",
+      "rationale": "Condemnation at t1 predicts institutional or pedagogical correction at t1."
+    },
+    {
+      "source": "standard_language_ideology_t1",
+      "target": "reported_acceptability_t1",
+      "type": "causal",
+      "rationale": "Correctness ideology can depress reported acceptability at t1 independently of licensing."
+    },
+    {
+      "source": "community_licensing_t1",
+      "target": "grammaticality_attribution_t1",
+      "type": "evidential",
+      "rationale": "Licensing at t1 is evidence for attribution at t1, not identical to attribution."
+    },
+    {
+      "source": "reported_acceptability_t1",
+      "target": "grammaticality_attribution_t1",
+      "type": "evidential",
+      "rationale": "Acceptability reports at t1 provide noisy evidence for grammaticality attribution."
+    },
+    {
+      "source": "editorial_correction_probability_t1",
+      "target": "grammaticality_attribution_t1",
+      "type": "evidential",
+      "rationale": "Correction at t1 can influence attribution while remaining separable from licensing."
+    },
+    {
+      "source": "community_licensing_t1",
+      "target": "production_probability_t2",
+      "type": "time_lagged",
+      "rationale": "Licensing at t1 can increase later production availability."
+    },
+    {
+      "source": "entrenchment_t1",
+      "target": "production_probability_t2",
+      "type": "time_lagged",
+      "rationale": "Entrenchment at t1 can increase later production probability."
+    },
+    {
+      "source": "editorial_correction_probability_t1",
+      "target": "production_probability_t2",
+      "type": "time_lagged",
+      "rationale": "Correction at t1 can suppress, redirect, or reshape later production."
+    },
+    {
+      "source": "reported_acceptability_t1",
+      "target": "production_probability_t2",
+      "type": "time_lagged",
+      "rationale": "Public or elicited acceptance at t1 can affect later production choices."
+    },
+    {
+      "source": "usage_frequency_t1",
+      "target": "diachronic_stabilization_t2",
+      "type": "time_lagged",
+      "rationale": "Sustained usage at t1 contributes to later stabilization."
+    },
+    {
+      "source": "community_licensing_t1",
+      "target": "diachronic_stabilization_t2",
+      "type": "time_lagged",
+      "rationale": "Community licensing at t1 contributes to later stabilization."
+    },
+    {
+      "source": "editorial_correction_probability_t1",
+      "target": "diachronic_stabilization_t2",
+      "type": "time_lagged",
+      "rationale": "Correction pressure at t1 can shape the path and timing of later stabilization."
+    },
+    {
+      "source": "diachronic_stabilization_t2",
+      "target": "community_licensing_t2",
+      "type": "evidential",
+      "rationale": "Stabilization by t2 is evidence about licensing at t2 without being identical to it."
+    },
+    {
+      "source": "diachronic_stabilization_t2",
+      "target": "standard_language_ideology_t2",
+      "type": "causal",
+      "rationale": "Stabilization can shift or weaken later standard-language ideology."
+    },
+    {
+      "source": "community_licensing_t2",
+      "target": "production_probability_t2",
+      "type": "causal",
+      "rationale": "Licensing at t2 affects production availability at t2."
+    },
+    {
+      "source": "standard_language_ideology_t2",
+      "target": "production_probability_t2",
+      "type": "causal",
+      "rationale": "Standard-language ideology at t2 can shape production choices in monitored settings."
+    }
+  ],
+  "scores": {
+    "empirical_coverage": 0,
+    "counterexample_resilience": 0,
+    "measurement_clarity": 0,
+    "explanatory_payoff": 0,
+    "cross_domain_stability": 0,
+    "complexity_penalty": 0,
+    "circularity_penalty": 0,
+    "construct_confusion_penalty": 0
+  }
+}
