@@ -89,6 +89,9 @@ the cards used to build the graph.
 - The repeated pressure points are no longer vague: temporal anchoring, catenative complement
   subtypes, agreement-controller overrides, repair-neighbour distance, meaning priors, and
   audience/reference channels are separate pressures.
+- Comparative illusions now reinforce complementarity rather than mutation: category-analysis
+  leakage belongs with `CAT`, repair distance with `RNR`/`INR`, and intended-meaning plausibility
+  with `MPR`.
 
 ## Empirical Lanes
 

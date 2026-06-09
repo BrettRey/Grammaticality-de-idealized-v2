@@ -313,6 +313,16 @@ The independent-relative-`whose` lane has been recorded as a design/simulation l
 
 No graph mutation follows.
 
+## Thirty-Eighth-Pass Addendum
+
+`CAT` has now been evaluated against the comparative-illusion noisy-channel card:
+
+- `comparative-illusion-noisy-channel-gibson`: `CAT` = `P`; it represents category-analysis and
+  measurement-task leakage, but intentionally leaves repair-neighbour distance, normalized repair,
+  and intended-meaning priors to the noisy-channel modules.
+
+No graph mutation or score movement follows.
+
 ## Discriminators Already Doing Work
 
 - `left-branch-extraction`: separates `DYN` from `OPG`.
@@ -386,6 +396,8 @@ No graph mutation follows.
   mixed prediction cell is deliberately unchanged until channel-specific data exist.
 - `fused-relative-constructions-cgel`: now has both Lane A checked opportunity evidence and Lane B
   experiment-ready independent-relative-`whose` materials, with only Lane A counting as evidence.
+- `comparative-illusion-noisy-channel-gibson`: now keeps `CAT`, `INR`, and `MPR` complementary
+  rather than forcing a fused category/noisy-channel graph.
 
 ## Untested Cards
 
@@ -408,7 +420,8 @@ Newly exposed untested pairings remain:
    scoped label but no numeric score.
 3. Use held-out contrast cells to test whether `OPG`, `CAT`, and `SEL` remain complementary or
    require a fused-construction split.
-4. Test comparative-illusion cards against `CAT`, `INR`, and `MPR` as complementary modules.
+4. Test comparative-illusion cards against a combined category/noisy-channel interpretation only if
+   a future card forces the interaction.
 5. Add richer island and dependency cards against `FRAME` before any numeric movement or broader
    dependency claim.
 
@@ -467,3 +480,5 @@ The thirty-sixth pass resolves the pronoun/audience bookkeeping gap into a runna
 keeps the evidence status `mixed` until data exist.
 The thirty-seventh pass records the independent-relative-`whose` materials as a design/simulation
 lane, preserving the distinction between measurement readiness and human evidence.
+The thirty-eighth pass keeps comparative illusions split across complementary modules: category
+analysis belongs with `CAT`, repair distance with `INR`/`RNR`, and intended meaning with `MPR`.

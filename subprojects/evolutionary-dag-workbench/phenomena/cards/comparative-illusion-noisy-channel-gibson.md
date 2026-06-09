@@ -54,3 +54,10 @@ for testing category-analysis leakage.
 - `RNR` should partly survive by modelling the repair-neighbour channel.
 - `CAT` should be needed when the task is category/function analysis.
 - A graph that conflates acceptability, category, and licensing should fail.
+
+## Evaluation Notes
+
+- `CAT` partly survives in
+  [category-measurement-discipline-comparative-illusion-2026-06-09](../../evaluations/protocol-tests/category-measurement-discipline-comparative-illusion-2026-06-09.json)
+  because it handles category-analysis and measurement-task leakage without absorbing the
+  repair-distance or intended-meaning-prior channels.

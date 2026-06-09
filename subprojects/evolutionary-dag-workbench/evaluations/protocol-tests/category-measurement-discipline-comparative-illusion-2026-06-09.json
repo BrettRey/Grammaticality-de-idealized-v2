@@ -1,0 +1,165 @@
+{
+  "id": "category-measurement-discipline-comparative-illusion-2026-06-09",
+  "target_graph": "graphs/archive/category-measurement-discipline-candidate.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "protocol-bound",
+  "score_decision": "no-score-change",
+  "activated_paths": [
+    {
+      "id": "comparative-recoverability-to-acceptability",
+      "phenomenon": "comparative-illusion-noisy-channel-gibson",
+      "contrast_cell": "plausible-comparative-repair",
+      "expected_path_reading": "positive",
+      "prediction": "Recoverable intended comparative meaning can raise reported acceptability, but this path does not decide literal category analysis or community licensing.",
+      "edges": [
+        {
+          "source": "semantic_pragmatic_recoverability",
+          "target": "reported_acceptability",
+          "type": "causal"
+        }
+      ]
+    },
+    {
+      "id": "comparative-category-task-to-attribution",
+      "phenomenon": "comparative-illusion-noisy-channel-gibson",
+      "contrast_cell": "literal-category-analysis",
+      "expected_path_reading": "indeterminate",
+      "prediction": "A category-analysis task can elicit analyst category assignment, which can influence attribution without becoming the licensing state.",
+      "edges": [
+        {
+          "source": "measurement_task",
+          "target": "analyst_category_assignment",
+          "type": "causal"
+        },
+        {
+          "source": "analyst_category_assignment",
+          "target": "grammaticality_attribution",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "comparative-distributional-evidence-to-category",
+      "phenomenon": "comparative-illusion-noisy-channel-gibson",
+      "contrast_cell": "literal-category-analysis",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Distributional evidence can warrant an analyst category assignment without directly licensing or rejecting the presented string.",
+      "edges": [
+        {
+          "source": "distributional_category_evidence",
+          "target": "analyst_category_assignment",
+          "type": "evidential"
+        },
+        {
+          "source": "analyst_category_assignment",
+          "target": "grammaticality_attribution",
+          "type": "evidential"
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "phenomenon": "comparative-illusion-noisy-channel-gibson",
+      "result": "partly_survives",
+      "expected_survival_pattern": "The graph should preserve the category-analysis and measurement-task distinction while leaving repair-neighbour distance, information-normalized repair, and meaning-prior reconstruction to other modules.",
+      "notes": "Partly survives. CAT is needed for the literal category/function-analysis side of comparative illusions, but it intentionally lacks the repair-distance and intended-meaning-prior machinery that INR and MPR supply.",
+      "requirements": {
+        "required_nodes": [
+          "measurement_task",
+          "task_framing",
+          "distributional_category_evidence",
+          "analyst_category_assignment",
+          "semantic_pragmatic_recoverability",
+          "reported_acceptability",
+          "grammaticality_attribution",
+          "community_licensing"
+        ],
+        "required_edges": [
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "reported_acceptability",
+            "type": "causal"
+          },
+          {
+            "source": "measurement_task",
+            "target": "analyst_category_assignment",
+            "type": "causal"
+          },
+          {
+            "source": "distributional_category_evidence",
+            "target": "analyst_category_assignment",
+            "type": "evidential"
+          },
+          {
+            "source": "analyst_category_assignment",
+            "target": "grammaticality_attribution",
+            "type": "evidential"
+          },
+          {
+            "source": "reported_acceptability",
+            "target": "grammaticality_attribution",
+            "type": "evidential"
+          }
+        ],
+        "forbidden_nodes": [
+          "repair_neighbour_distance",
+          "information_normalized_repair_distance",
+          "intended_meaning_plausibility"
+        ],
+        "forbidden_edges": [
+          {
+            "source": "reported_acceptability",
+            "target": "community_licensing",
+            "type": "causal"
+          },
+          {
+            "source": "analyst_category_assignment",
+            "target": "community_licensing",
+            "type": "causal"
+          },
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "plausible-comparative-repair",
+          "axes": {
+            "community": "English speakers reading a comparative illusion with a plausible intended comparative.",
+            "norm_centre": "Descriptive grammar norm centre.",
+            "genre": "Judgment or comprehension item.",
+            "medium": "Written sentence.",
+            "task_framing": "First-pass acceptability or interpretation judgment.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "literal-category-analysis",
+          "axes": {
+            "community": "Analysts or trained respondents classifying the literal comparative construction.",
+            "norm_centre": "Category-analysis norm centre.",
+            "genre": "Grammar analysis task.",
+            "medium": "Written sentence.",
+            "task_framing": "Category/function classification.",
+            "speaker_identity": "Analyst or trained respondent cue."
+          }
+        },
+        {
+          "id": "ordinary-comparative-control",
+          "axes": {
+            "community": "English speakers judging ordinary comparative constructions.",
+            "norm_centre": "Descriptive usage norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written sentence.",
+            "task_framing": "Acceptability and literal interpretation aligned.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    }
+  ]
+}

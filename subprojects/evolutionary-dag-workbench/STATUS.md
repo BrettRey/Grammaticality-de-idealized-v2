@@ -12,7 +12,7 @@ representations about grammaticality. The existing OVMG, detector, operator-stra
 processing-based, and normativity-based models are treated as seed graph families, not as
 conclusions or targets to vindicate.
 
-Thirty-seven adversarial passes/synthesis steps have been run. All numeric scores remain zero. Seven
+Thirty-eight adversarial passes/synthesis steps have been run. All numeric scores remain zero. Seven
 current modules have `scoped_module` labels tied to protocol-bound evaluations. The original
 scope-only evaluations now include card-level requirements and activated paths. Both held-out CGEL
 evaluations also include card-level requirements and activated paths without authorizing score
@@ -120,6 +120,10 @@ The thirty-seventh pass reviewed the independent-relative-`whose` lane. It recor
 experiment-ready low-opportunity design, power-analysis summary, and LLM/simulation outputs, but
 keeps the lane distinct from human or corpus evidence. No graph mutation, score movement, or new
 passed human-evidence cell follows.
+The thirty-eighth pass tested the comparative-illusion noisy-channel card against `CAT`. `CAT`
+partly survives: it handles category-analysis and measurement-task leakage while leaving repair
+distance and intended-meaning-prior machinery to `INR`/`RNR` and `MPR`. No graph mutation or score
+movement follows.
 An internal state-of-search report now summarizes the current scoped-module partition, evaluation
 ladder, the completed transparent-relative Lane A pass, and remaining empirical lanes without
 authorizing score movement.
@@ -278,6 +282,10 @@ construct separation, or held-out projectibility, not by fitting a prior paper.
   `notes/independent-relative-whose-opportunity-lane-2026-06-09.md`
 - independent-relative-`whose` lane synthesis in
   `notes/thirty-seventh-adversarial-pass-synthesis-2026-06-09.md`
+- comparative-illusion/category evaluation in
+  `evaluations/protocol-tests/category-measurement-discipline-comparative-illusion-2026-06-09.json`
+- comparative-illusion/category synthesis in
+  `notes/thirty-eighth-adversarial-pass-synthesis-2026-06-09.md`
 - state-of-search report with module/evaluation visual maps in
   `notes/state-of-search-report-2026-06-09.md`
 - static state visualization in
@@ -371,8 +379,8 @@ validation.
    continuative perfect readings.
 4. Add one more catenative card only if it distinguishes catenative subtype from cohort-conditioned
    production.
-5. Test comparative-illusion cards against `CAT` and the noisy-channel candidates to keep category
-   analysis separate from reconstruction.
+5. Test comparative-illusion cards against combined `CAT` plus noisy-channel interpretations only
+   if a future card forces an interaction rather than complementarity.
 6. Test whether `OPG`, `CAT`, and `SEL` stay complementary on richer fused-construction cards before
    adding any fused-head-specific graph.
 7. Calibrate scoped-module score magnitudes after at least one held-out or parameterized evaluation
