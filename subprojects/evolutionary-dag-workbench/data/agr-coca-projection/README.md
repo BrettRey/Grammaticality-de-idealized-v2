@@ -85,8 +85,10 @@ does not code agreement because the registered strings do not include finite ver
 
 The partitive agreement follow-up adds present-tense finite agreement strings for the usable people
 frames. Raw counts are plural-dominant (`lots/plenty/rest of people are` totals 367) with only one
-non-zero singular counter-cell (`lots of people is`, 5). These are raw list counts only; the small
-counter-cell and moderate positive cells need KWIC filtering before target-row claims.
+non-zero singular counter-cell (`lots of people is`, 5). Targeted KWIC filtering has been completed
+for `lots of people is`, `plenty of people are`, and `the rest of the people are`: the filtered
+subset has 77 target plural rows and 0 licensed target singular rows. The high-count
+`lots of people are` cell remains raw-unfiltered.
 
 Do not treat raw COCA frequency as licensing. The lane measures production/attestation over
 opportunity sets and uses KWIC filtering to distinguish genuine agreement realizations from query

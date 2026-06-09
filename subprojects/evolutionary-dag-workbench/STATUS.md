@@ -213,6 +213,12 @@ and `the rest of the people are` 15, versus only `lots of people is` 5 and zero 
 singular cells. This is still raw unfiltered evidence. The next data step is KWIC filtering the five
 `lots of people is` rows plus the moderate positive `plenty` and `rest` cells, and deciding whether
 to sample or fully filter the 287-row `lots of people are` cell.
+The targeted KWIC follow-up is recorded in
+`notes/agr-coca-partitive-agreement-targeted-kwic-pass-2026-06-09.md`. The five
+`lots of people is` rows yield 0 licensed target singular rows after filtering; the filtered
+positive subset yields 63 target `plenty of people are` rows and 14 target
+`the rest of the people are` rows. The high-count `lots of people are` cell remains raw-unfiltered,
+so the tranche is partially filtered rather than complete.
 An internal state-of-search report now summarizes the current scoped-module partition, evaluation
 ladder, the completed transparent-relative Lane A pass, and remaining empirical lanes without
 authorizing score movement.

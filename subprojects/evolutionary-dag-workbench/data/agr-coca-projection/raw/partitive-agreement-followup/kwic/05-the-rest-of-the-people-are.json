@@ -1,0 +1,710 @@
+{
+  "query": "the rest of the people are",
+  "corpus": "coca",
+  "retrieved_at": "2026-06-09T16:50:57.407Z",
+  "method": "list-result-click",
+  "list": {
+    "url": "https://www.english-corpora.org/coca/x2.asp",
+    "text": "ON CLICK: \t    \t     ( EN )\t \t   \t    \t    \t    \t    \t (?)   \t   AI:   CATEGORIZE  *\n\nHELP\t\t\t  ALL FORMS\n15\tFREQ\n1\t\t\t  THE REST OF THE PEOPLE ARE\t15\n\t0.816 seconds",
+    "tables": [
+      [
+        [
+          "SAVE LIST",
+          "NAME OF LIST",
+          "",
+          ""
+        ],
+        [
+          "Select entries below to add these to a \"customized word list\", and then later use this list as part of a search. For example, if you add 4 or 5 entries\nbelow to the list myList, then you could use this as part of a search, like large @myList. More information:"
+        ]
+      ],
+      [
+        [
+          "ON CLICK: \t    \t     ( EN )\t \t   \t    \t    \t    \t    \t (?)   \t   AI:   CATEGORIZE  *",
+          ""
+        ],
+        [
+          "Click on  below, and then click on any word in the highlighted entry, to see detailed information on the word.\nTo come back to this page, click on  on the \"word page\".\n [Close]"
+        ],
+        [
+          "Click on\nbelow to \"save\" this word or phrase. Then click on\nat the top of the corpus to access this list at any point in the future.\n\n [Close]"
+        ],
+        [
+          "By default, when you click on one of the words/phrases below, you will see the \"Keyword in Context\" view in the tab to the right.\nBut you can also now access \"external\" resources for any of the words/phrases that you see below. To do so, click on one of the types of resources above\n(e.g. images or translation) and then click on the word/phrase below.\nNote: To change the language for translation, click on the two letter code after\nTRANSLATE above. This code will be saved for future access to the corpus as well. If it shows [??], you haven't yet selected a language.\n\n  [Close]"
+        ]
+      ],
+      [
+        [
+          "ON CLICK:",
+          "",
+          "( EN )",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "(?)",
+          "AI:   CATEGORIZE  *"
+        ]
+      ],
+      [
+        [
+          "In addition to the frequency of a word or phrase, you can also now see the number of texts in which it occurs. This can help you to eliminate words and phrases that\noccur in just a few texts. To enable this feature, click on OPTIONS / SHOW # TEXTS in the search form (show me how).\nMore information"
+        ]
+      ],
+      [
+        [
+          "HELP",
+          "",
+          "",
+          "",
+          "ALL FORMS\n15",
+          "FREQ",
+          ""
+        ],
+        [
+          "1",
+          "",
+          "",
+          "",
+          "THE REST OF THE PEOPLE ARE",
+          "15",
+          ""
+        ]
+      ],
+      [
+        [
+          "",
+          "0.816 seconds"
+        ]
+      ]
+    ]
+  },
+  "kwic": {
+    "url": "https://www.english-corpora.org/coca/x3.asp?x2w=y&xx=1&w10=the&w11=rest&w12=of&w13=the&w14=people&w15=are&r=",
+    "text": "(SHUFFLE)     \t ENTRIES: 14 TEXTS\n     LIMITS: NONE\nSORTING: YEAR , GENRE\n     CLICK FOR MORE CONTEXT\t    SAVE  \t TRANSLATE  \t ANALYZE   \t  HELP     \t    AI: patterns\n1\t2018\tSPOK\tFox_Carlson\t\t\t\t  criminals. They are acting like criminals. So, what do you expect the rest of the people are going to do? Then, you have the mayor of\n2\t2018\tNEWS\tThe Detroit News\t\t\t\t  only have about six positions in each department that are not civil service. The rest of the people are already there. \" # Muchmore said what each position that\n3\t2017\tFIC\tAnalog\t\t\t\t  wbite, according as how they are paid. To this society, all the rest of the people are slaves. \" My disquisition that day on the subject had\n4\t2012\tWEB\tbuildfreedom.com\t\t\t\t  black is white, accordingly as they are paid. To this society all the rest of the people are slaves. \" # \" Government \" is Kept In Place\n5\t2012\tWEB\tcolumbiatribune.com\t\t\t\t  vs. conservative or Democrat vs. Republican name calling exercises in futility. Except the rest of the people are starting to wake up to these divide and conquer tactics,\n7\t2012\tWEB\tjihadwatch.org (1)\t\t\t\t  good things about that piece of real-estate - except the few separatists morons the rest of the people are suppose to be A OK. # The separatists are funded\n8\t2012\tWEB\tglassdoor.com\t\t\t\t  full time people. They now have one or two full time people and the rest of the people are temporaries. # There is a lot of prejudice against people\n9\t2012\tBLOG\t...documentaryfilms.com\t\t\t\t  , are revealed only to those who have been initiated into its secrets(Priesthood). The rest of the people are told something different. This is kind of how the Vatican\n10\t2012\tBLOG\tsocialrebirth.org\t\t\t\t  that they won't do anything to change it. Then they said that the rest of the people aren't even aware of how the system works, so they\n11\t2012\tBLOG\tthebigquestions.com\t\t\t\t  the broader upper class- and have a bigger share of total personal income. The rest of the people are doomed to be poor in all respects. Of course many\n12\t2004\tSPOK\tCNN_Presents\t\t\t\t  happy. They don't have TVs, but they're happy. And the rest of the people are miserable. And we just don't think that's the\n13\t2004\tFIC\tMov:Hellboy\t\t\t\t  engulfs the courtyard. Her mother's body burns like flash paper. Then the rest of the people are -- THE ENTIRE TENEMENT COURTYARD -- devoured by an explosion of\n14\t1997\tNEWS\tNYTimes\t\t\t\t  one group that was immediately on my side, \" he said. \" The rest of the people are waiting to see if I'm the devil. \" #\n15\t1991\tMOV\tGrand Canyon\t\t\t\t  people I know feel that way. The lucky one's feel that way. The rest of the people are hysterical 24 hours a day. [Claire], I'm here",
+    "tables": [
+      [
+        [
+          "(SHUFFLE)",
+          "ENTRIES: 14 TEXTS\n     LIMITS: NONE\nSORTING: YEAR , GENRE"
+        ]
+      ],
+      [
+        [
+          "",
+          "SORT",
+          "LIMIT",
+          "Examples / notes"
+        ],
+        [
+          "Genre",
+          "--",
+          "-----\n\n\t\t\tSpoken\n\t\t\tFiction\n\t\t\tMagazine\n\t\t\tNewspaper\n\t\t\tAcademic\n\t\t\tWeb\n\t\t\tBlog\n\t\t\tTV/Movies\n-----\n\nSPOK:ABC\n\nSPOK:NBC\n\nSPOK:CBS\n\nSPOK:CNN\n\nSPOK:FOX\n\nSPOK:MSNBC\n\nSPOK:PBS\n\nSPOK:NPR\n\nSPOK:Indep\n\nFIC:Gen (Book)\n\nFIC:Gen (Jrnl)\n\nFIC:SciFi/Fant\n\nFIC:Juvenile\n\nFIC:Movies\n\nFIC:Fan Fiction\n\nMAG:News/Opin\n\nMAG:Financial\n\nMAG:Sci/Tech\n\nMAG:Soc/Arts\n\nMAG:Religion\n\nMAG:Sports\n\nMAG:Entertain\n\nMAG:Home/Health\n\nMAG:Afric-Amer\n\nMAG:Children\n\nMAG:Women/Men\n\nNEWS:Misc\n\nNEWS:News_Intl\n\nNEWS:News_Natl\n\nNEWS:News_Local\n\nNEWS:Money\n\nNEWS:Life\n\nNEWS:Sports\n\nNEWS:Editorial\n\nACAD:History\n\nACAD:Education\n\nACAD:Geog/SocSci\n\nACAD:Law/PolSci\n\nACAD:Humanities\n\nACAD:Phil/Rel\n\nACAD:Sci/Tech\n\nACAD:Medicine\n\nACAD:Misc\n\nACAD:Business\n\nWeb:Acad\n\nWeb:Arg\n\nWeb:Fic\n\nWeb:Info\n\nWeb:Instr\n\nWeb:Legal\n\nWeb:News\n\nWeb:Pers\n\nWeb:Revw\n\nWeb:Misc\n\nBlog:Acad\n\nBlog:Arg\n\nBlog:Fic\n\nBlog:Info\n\nBlog:Instr\n\nBlog:Legal\n\nBlog:News\n\nBlog:Pers\n\nBlog:Prom\n\nBlog:Revw\n\nBlog:Misc\n\nMov:Action\n\nMov:Adult\n\nMov:Adv\n\nMov:Anim\n\nMov:Biog\n\nMov:Comedy\n\nMov:Crime\n\nMov:Docum\n\nMov:Drama\n\nMov:Fam\n\nMov:Fantasy\n\nMov:Horror\n\nMov:Music\n\nMov:Myst\n\nMov:Romance\n\nMov:Sci-Fi\n\nMov:Short\n\nMov:Thril\n\nMov:N/A\n\nTV:Action\n\nTV:Adv\n\nTV:Anim\n\nTV:Comedy\n\nTV:Crime\n\nTV:Docum\n\nTV:Drama\n\nTV:Game\n\nTV:Horror\n\nTV:Reality\n\nTV:Sci-Fi\n\nTV:Misc"
+        ],
+        [
+          "Year",
+          "--",
+          "to",
+          "1992 to 1997"
+        ],
+        [
+          "Source",
+          "--",
+          "",
+          "New York Times or bbc.co.uk"
+        ]
+      ],
+      [
+        [
+          "Because both the node word and the collocate occur more than 400,000 times in the corpus, the entries below come from a smaller subset\nof the entire corpus, which represents about 5-10% of the complete corpus."
+        ]
+      ],
+      [
+        [
+          "CLICK FOR MORE CONTEXT",
+          "Click on audio icon at translation site to hear text.",
+          "Translate to EN\n(Change and then reload this page)",
+          "Select entries below | ADD TO\n\n\t----------\n\na\n\nplace that\n\n NEW\n\n [?]\n  SEE LISTS\n\nEN:\n\nAfrikaans\nAlbanian\nAmharic\nArabic\nArmenian\nAzerbaijani\nBasque\nBelarusian\nBengali\nBosnian\nBulgarian\nBurmese\nCatalan\nCebuano\nChichewa\nChinese (S)\nChinese (T)\nCorsican\nCroatian\nCzech\nDanish\nDutch\nEnglish\nEsperanto\nEstonian\nFilipino\nFinnish\nFrench\nFrisian\nGalician\nGeorgian\nGerman\nGreek\nGujarati\nHaitian C\nHausa\nHawaiian\nHebrew\nHindi\nHmong\nHungarian\nIcelandic\nIgbo\nIndonesian\nIrish\nItalian\nJapanese\nJavanese\nKannada\nKazakh\nKhmer\nKorean\nKurdish\nKyrgyz\nLao\nLatin\nLatvian\nLithuanian\nLuxembourgish\nMacedonian\nMalagasy\nMalay\nMalayalam\nMaltese\nMaori\nMarathi\nMongolian\nNepali\nNorwegian\nPashto\nPersian\nPolish\nPortuguese\nPunjabi\nRomanian\nRussian\nSamoan\nScots Gaelic\nSerbian\nSesotho\nShona\nSindhi\nSinhala\nSlovak\nSlovenian\nSomali\nSpanish\nSundanese\nSwahili\nSwedish\nTajik\nTamil\nTelugu\nThai\nTurkish\nUkrainian\nUrdu\nUzbek\nVietnamese\nWelsh\nXhosa\nYiddish\nYoruba\nZulu\n\nSelect entries below to translate |\nFor one line below:\n\n<< Change language\n\n Select entries below |\nThen click button to analyze text; see word definitions; find related phrases",
+          "",
+          "WORD PAGE:\nCOCA\niWeb",
+          "DIC:\n\nD\nM\nO\nC\nG\nE",
+          "TR\n WEB\n IMG\n VID",
+          "SAVE",
+          "TRANSLATE",
+          "ANALYZE",
+          "HELP",
+          "AI: patterns"
+        ]
+      ],
+      [
+        [
+          "SINGLE ENTRY / LINE\n\n(CLOSE HELP)"
+        ],
+        [
+          "",
+          "Listen to the text (click on\n\t\t at the translation website)"
+        ],
+        [
+          "",
+          "Translate the text (after the first translation, you can change the language in the\n\t\tblue section above)"
+        ],
+        [
+          "",
+          "Select individual words, and then see info on words (see next\n\t\tsection). Click again to deselect."
+        ],
+        [
+          "SINGLE WORD (choose from words, after clicking\n\t\t on a given line).\n\t\t(See example)"
+        ],
+        [
+          "{ WORD }",
+          "Search for the word in the corpus (from main search page: list,\n\t\tchart, collocates, etc)"
+        ],
+        [
+          "WORD PAGE",
+          "(From COCA or iWeb) Collocates, related topics, related words,\n\t\tsynonyms, clusters, KWIC, and more"
+        ],
+        [
+          "DICTIONARY",
+          "Links to entries from several online dictionaries (Oxford,\n\t\tMerriam-Webster, etymology, etc)"
+        ],
+        [
+          "",
+          "Translation, web search, image search, video/pronunciation"
+        ],
+        [
+          "MULTIPLE ENTRIES (see links in gray above; click on text entries below to add\n\t\tto group)"
+        ],
+        [
+          "SAVE",
+          "",
+          "Save entries for later use. Can also move, delete, and\n\t\texpand entries. Categorize entries by clicking on A|B|C in entry."
+        ],
+        [
+          "TRANSLATE",
+          "",
+          "See translation for multiple lines, with original lines in English\n\t\tand their translations grouped together; you can choose from 100+ languages."
+        ],
+        [
+          "ANALYZE",
+          "",
+          "Create \"text\" composed of selected lines, and then see keywords,\n\t\tfind related phrases for words in the text, and see detailed \"word\"\n\t\tpages for any word in the \"text\"."
+        ]
+      ],
+      [
+        [
+          "Please consider supporting the corpora by getting an (individual)\npremium license or a (university-wide)\nacademic license.\nIf you have a license, you won't see these messages anymore."
+        ]
+      ],
+      [
+        [
+          "1",
+          "5000243",
+          "2018",
+          "SPOK",
+          "Fox_Carlson",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "criminals. They are acting like criminals. So, what do you expect the rest of the people are going to do? Then, you have the mayor of"
+        ],
+        [
+          "2",
+          "5023241",
+          "2018",
+          "NEWS",
+          "The Detroit News",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "only have about six positions in each department that are not civil service. The rest of the people are already there. \" # Muchmore said what each position that"
+        ],
+        [
+          "3",
+          "4199195",
+          "2017",
+          "FIC",
+          "Analog",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "wbite, according as how they are paid. To this society, all the rest of the people are slaves. \" My disquisition that day on the subject had"
+        ],
+        [
+          "4",
+          "5037115",
+          "2012",
+          "WEB",
+          "buildfreedom.com",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "black is white, accordingly as they are paid. To this society all the rest of the people are slaves. \" # \" Government \" is Kept In Place"
+        ],
+        [
+          "5",
+          "5059663",
+          "2012",
+          "WEB",
+          "columbiatribune.com",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "vs. conservative or Democrat vs. Republican name calling exercises in futility. Except the rest of the people are starting to wake up to these divide and conquer tactics,"
+        ],
+        [
+          "7",
+          "5093131",
+          "2012",
+          "WEB",
+          "jihadwatch.org (1)",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "good things about that piece of real-estate - except the few separatists morons the rest of the people are suppose to be A OK. # The separatists are funded"
+        ],
+        [
+          "8",
+          "5254761",
+          "2012",
+          "WEB",
+          "glassdoor.com",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "full time people. They now have one or two full time people and the rest of the people are temporaries. # There is a lot of prejudice against people"
+        ],
+        [
+          "9",
+          "5109750",
+          "2012",
+          "BLOG",
+          "...documentaryfilms.com",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          ", are revealed only to those who have been initiated into its secrets(Priesthood). The rest of the people are told something different. This is kind of how the Vatican"
+        ],
+        [
+          "10",
+          "5117317",
+          "2012",
+          "BLOG",
+          "socialrebirth.org",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "that they won't do anything to change it. Then they said that the rest of the people aren't even aware of how the system works, so they"
+        ],
+        [
+          "11",
+          "5188078",
+          "2012",
+          "BLOG",
+          "thebigquestions.com",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "the broader upper class- and have a bigger share of total personal income. The rest of the people are doomed to be poor in all respects. Of course many"
+        ],
+        [
+          "12",
+          "174889",
+          "2004",
+          "SPOK",
+          "CNN_Presents",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "happy. They don't have TVs, but they're happy. And the rest of the people are miserable. And we just don't think that's the"
+        ],
+        [
+          "13",
+          "1050905",
+          "2004",
+          "FIC",
+          "Mov:Hellboy",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "engulfs the courtyard. Her mother's body burns like flash paper. Then the rest of the people are -- THE ENTIRE TENEMENT COURTYARD -- devoured by an explosion of"
+        ],
+        [
+          "14",
+          "3001421",
+          "1997",
+          "NEWS",
+          "NYTimes",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "one group that was immediately on my side, \" he said. \" The rest of the people are waiting to see if I'm the devil. \" #"
+        ],
+        [
+          "15",
+          "5214799",
+          "1991",
+          "MOV",
+          "Grand Canyon",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "people I know feel that way. The lucky one's feel that way. The rest of the people are hysterical 24 hours a day. [Claire], I'm here"
+        ]
+      ]
+    ],
+    "rows": [
+      {
+        "index": 1,
+        "text_id": "5000243",
+        "year": "2018",
+        "genre": "SPOK",
+        "source": "Fox_Carlson",
+        "text": "criminals. They are acting like criminals. So, what do you expect the rest of the people are going to do? Then, you have the mayor of",
+        "cells": [
+          "1",
+          "5000243",
+          "2018",
+          "SPOK",
+          "Fox_Carlson",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "criminals. They are acting like criminals. So, what do you expect the rest of the people are going to do? Then, you have the mayor of"
+        ]
+      },
+      {
+        "index": 2,
+        "text_id": "5023241",
+        "year": "2018",
+        "genre": "NEWS",
+        "source": "The Detroit News",
+        "text": "only have about six positions in each department that are not civil service. The rest of the people are already there. \" # Muchmore said what each position that",
+        "cells": [
+          "2",
+          "5023241",
+          "2018",
+          "NEWS",
+          "The Detroit News",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "only have about six positions in each department that are not civil service. The rest of the people are already there. \" # Muchmore said what each position that"
+        ]
+      },
+      {
+        "index": 3,
+        "text_id": "4199195",
+        "year": "2017",
+        "genre": "FIC",
+        "source": "Analog",
+        "text": "wbite, according as how they are paid. To this society, all the rest of the people are slaves. \" My disquisition that day on the subject had",
+        "cells": [
+          "3",
+          "4199195",
+          "2017",
+          "FIC",
+          "Analog",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "wbite, according as how they are paid. To this society, all the rest of the people are slaves. \" My disquisition that day on the subject had"
+        ]
+      },
+      {
+        "index": 4,
+        "text_id": "5037115",
+        "year": "2012",
+        "genre": "WEB",
+        "source": "buildfreedom.com",
+        "text": "black is white, accordingly as they are paid. To this society all the rest of the people are slaves. \" # \" Government \" is Kept In Place",
+        "cells": [
+          "4",
+          "5037115",
+          "2012",
+          "WEB",
+          "buildfreedom.com",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "black is white, accordingly as they are paid. To this society all the rest of the people are slaves. \" # \" Government \" is Kept In Place"
+        ]
+      },
+      {
+        "index": 5,
+        "text_id": "5059663",
+        "year": "2012",
+        "genre": "WEB",
+        "source": "columbiatribune.com",
+        "text": "vs. conservative or Democrat vs. Republican name calling exercises in futility. Except the rest of the people are starting to wake up to these divide and conquer tactics,",
+        "cells": [
+          "5",
+          "5059663",
+          "2012",
+          "WEB",
+          "columbiatribune.com",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "vs. conservative or Democrat vs. Republican name calling exercises in futility. Except the rest of the people are starting to wake up to these divide and conquer tactics,"
+        ]
+      },
+      {
+        "index": 7,
+        "text_id": "5093131",
+        "year": "2012",
+        "genre": "WEB",
+        "source": "jihadwatch.org (1)",
+        "text": "good things about that piece of real-estate - except the few separatists morons the rest of the people are suppose to be A OK. # The separatists are funded",
+        "cells": [
+          "7",
+          "5093131",
+          "2012",
+          "WEB",
+          "jihadwatch.org (1)",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "good things about that piece of real-estate - except the few separatists morons the rest of the people are suppose to be A OK. # The separatists are funded"
+        ]
+      },
+      {
+        "index": 8,
+        "text_id": "5254761",
+        "year": "2012",
+        "genre": "WEB",
+        "source": "glassdoor.com",
+        "text": "full time people. They now have one or two full time people and the rest of the people are temporaries. # There is a lot of prejudice against people",
+        "cells": [
+          "8",
+          "5254761",
+          "2012",
+          "WEB",
+          "glassdoor.com",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "full time people. They now have one or two full time people and the rest of the people are temporaries. # There is a lot of prejudice against people"
+        ]
+      },
+      {
+        "index": 9,
+        "text_id": "5109750",
+        "year": "2012",
+        "genre": "BLOG",
+        "source": "...documentaryfilms.com",
+        "text": ", are revealed only to those who have been initiated into its secrets(Priesthood). The rest of the people are told something different. This is kind of how the Vatican",
+        "cells": [
+          "9",
+          "5109750",
+          "2012",
+          "BLOG",
+          "...documentaryfilms.com",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          ", are revealed only to those who have been initiated into its secrets(Priesthood). The rest of the people are told something different. This is kind of how the Vatican"
+        ]
+      },
+      {
+        "index": 10,
+        "text_id": "5117317",
+        "year": "2012",
+        "genre": "BLOG",
+        "source": "socialrebirth.org",
+        "text": "that they won't do anything to change it. Then they said that the rest of the people aren't even aware of how the system works, so they",
+        "cells": [
+          "10",
+          "5117317",
+          "2012",
+          "BLOG",
+          "socialrebirth.org",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "that they won't do anything to change it. Then they said that the rest of the people aren't even aware of how the system works, so they"
+        ]
+      },
+      {
+        "index": 11,
+        "text_id": "5188078",
+        "year": "2012",
+        "genre": "BLOG",
+        "source": "thebigquestions.com",
+        "text": "the broader upper class- and have a bigger share of total personal income. The rest of the people are doomed to be poor in all respects. Of course many",
+        "cells": [
+          "11",
+          "5188078",
+          "2012",
+          "BLOG",
+          "thebigquestions.com",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "the broader upper class- and have a bigger share of total personal income. The rest of the people are doomed to be poor in all respects. Of course many"
+        ]
+      },
+      {
+        "index": 12,
+        "text_id": "174889",
+        "year": "2004",
+        "genre": "SPOK",
+        "source": "CNN_Presents",
+        "text": "happy. They don't have TVs, but they're happy. And the rest of the people are miserable. And we just don't think that's the",
+        "cells": [
+          "12",
+          "174889",
+          "2004",
+          "SPOK",
+          "CNN_Presents",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "happy. They don't have TVs, but they're happy. And the rest of the people are miserable. And we just don't think that's the"
+        ]
+      },
+      {
+        "index": 13,
+        "text_id": "1050905",
+        "year": "2004",
+        "genre": "FIC",
+        "source": "Mov:Hellboy",
+        "text": "engulfs the courtyard. Her mother's body burns like flash paper. Then the rest of the people are -- THE ENTIRE TENEMENT COURTYARD -- devoured by an explosion of",
+        "cells": [
+          "13",
+          "1050905",
+          "2004",
+          "FIC",
+          "Mov:Hellboy",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "engulfs the courtyard. Her mother's body burns like flash paper. Then the rest of the people are -- THE ENTIRE TENEMENT COURTYARD -- devoured by an explosion of"
+        ]
+      },
+      {
+        "index": 14,
+        "text_id": "3001421",
+        "year": "1997",
+        "genre": "NEWS",
+        "source": "NYTimes",
+        "text": "one group that was immediately on my side, \" he said. \" The rest of the people are waiting to see if I'm the devil. \" #",
+        "cells": [
+          "14",
+          "3001421",
+          "1997",
+          "NEWS",
+          "NYTimes",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "one group that was immediately on my side, \" he said. \" The rest of the people are waiting to see if I'm the devil. \" #"
+        ]
+      },
+      {
+        "index": 15,
+        "text_id": "5214799",
+        "year": "1991",
+        "genre": "MOV",
+        "source": "Grand Canyon",
+        "text": "people I know feel that way. The lucky one's feel that way. The rest of the people are hysterical 24 hours a day. [Claire], I'm here",
+        "cells": [
+          "15",
+          "5214799",
+          "1991",
+          "MOV",
+          "Grand Canyon",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "people I know feel that way. The lucky one's feel that way. The rest of the people are hysterical 24 hours a day. [Claire], I'm here"
+        ]
+      }
+    ]
+  }
+}
