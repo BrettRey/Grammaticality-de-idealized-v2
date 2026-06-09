@@ -39,6 +39,7 @@ Module abbreviations:
 | `center-embedding` | O | P | . | O | . | . | S | . |
 | `clause-type-force-cgel` | . | P | . | . | . | . | . | S |
 | `interjection-boundary-source-card` | . | O | . | . | . | . | . | S |
+| `frequent-condemned-form` | S | . | O | S | . | . | . | . |
 | `left-branch-extraction` | O | P | . | . | . | . | . | . |
 | `case-in-coordination-cgel` | P | . | . | S | . | . | . | . |
 | `pronoun-personhood-proform-gender` | P | . | . | P | S | . | . | . |
@@ -46,6 +47,7 @@ Module abbreviations:
 | `negation-polarity-items-cgel` | O | . | . | . | . | . | . | . |
 | `unbounded-dependency-licensing-cgel` | . | S | . | . | . | O | . | . |
 | `fused-relative-constructions-cgel` | . | P | . | . | . | . | . | . |
+| `fused-head-nps-cgel` | . | S | P | . | . | P | . | . |
 | `preposition-category-selection-cgel` | . | P | . | . | . | S | . | . |
 | `comparative-more-less-category` | . | O | S | . | . | P | . | . |
 | `numerative-category-pressure` | . | . | P | . | . | . | . | . |
@@ -105,24 +107,29 @@ attribution. It is not a general operator-gap or social-indexical module.
   membership and justifies `UPT` as a scoped module.
 - `clause-type-force-cgel`: shows that `OPG` can represent operator value but needs `UPT` for
   update-role/repertoire-boundary discipline.
+- `frequent-condemned-form`: confirms that `DYN` and `TASK` already cover the
+  frequency/condemnation split, while `CAT` is out of scope.
+- `fused-head-nps-cgel`: confirms that `OPG` covers constructional analogy plus recoverability,
+  while `CAT` and `SEL` cover only category/function and selection-adjacent pieces.
 
 ## Untested Cards
 
-These cards exist but do not yet appear in a protocol-test evaluation:
-
-- `frequent-condemned-form`
-- `fused-head-nps-cgel`
+No phenomenon cards are completely untested in protocol-test evaluations.
 
 ## Next Evaluation Moves
 
-1. Test `frequent-condemned-form` against `DYN`, `TASK`, and `CAT`. This should sharpen the
-   correction/production/attribution split.
-2. Test `fused-head-nps-cgel` against `CAT`, `OPG`, and `SEL`. This should clarify whether
-   constructional function is enough, or whether another fused-head-specific construct is needed.
+1. Enrich thin source-backed cards with concrete examples, source pointers, and contrast cells.
+2. Convert the strongest existing protocol-bound evaluations into explicit pass/fail prediction
+   statements before any score movement.
+3. Use held-out contrast cells to test whether `OPG`, `CAT`, and `SEL` remain complementary or
+   require a fused-construction split.
 
 ## Working Decision
 
 `clause-type-force-cgel` and `interjection-boundary-source-card` now show that broad operator-gap
 machinery is not enough for uptake boundary cases. `uptake-operator-boundary-candidate` has been
-added as a scoped module. The next natural move is `frequent-condemned-form`, because it should
-stress the correction/production/attribution split without adding another operator-like construct.
+added as a scoped module. `frequent-condemned-form` showed no new graph was needed: `DYN` and
+`TASK` cover the production/condemnation split, while `CAT` remains out of scope.
+`fused-head-nps-cgel` also does not justify a new graph yet: `OPG` covers the core
+recoverability/constructional-support split, while `CAT` and `SEL` partly survive only on their
+own narrower dimensions.

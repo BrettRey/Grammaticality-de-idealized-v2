@@ -1,0 +1,174 @@
+{
+  "id": "selection-collocation-split-fused-head-nps-2026-06-08",
+  "target_graph": "graphs/archive/selection-collocation-split-candidate.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "protocol-bound",
+  "score_decision": "no-score-change",
+  "activated_paths": [
+    {
+      "id": "function-to-licensing",
+      "phenomenon": "fused-head-nps-cgel",
+      "contrast_cell": "conventional-fused-head",
+      "expected_path_reading": "non_sign_propagating",
+      "prediction": "Constructional function can warrant an argument-linking-selection analysis, which can feed operator value and licensing, but this is too selection-specific for fused heads by itself.",
+      "edges": [
+        {
+          "source": "constructional_function",
+          "target": "argument_linking_selection",
+          "type": "evidential"
+        },
+        {
+          "source": "argument_linking_selection",
+          "target": "operator_value",
+          "type": "constitutive"
+        },
+        {
+          "source": "operator_value",
+          "target": "community_licensing",
+          "type": "constitutive"
+        }
+      ]
+    },
+    {
+      "id": "analogy-to-licensing",
+      "phenomenon": "fused-head-nps-cgel",
+      "contrast_cell": "conventional-fused-head",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Constructional analogy can support an argument-linking-selection analysis, but the path is contextual and not enough to represent recoverable missing-head contrasts.",
+      "edges": [
+        {
+          "source": "constructional_analogy",
+          "target": "argument_linking_selection",
+          "type": "evidential"
+        },
+        {
+          "source": "argument_linking_selection",
+          "target": "operator_value",
+          "type": "constitutive"
+        },
+        {
+          "source": "operator_value",
+          "target": "community_licensing",
+          "type": "constitutive"
+        }
+      ]
+    },
+    {
+      "id": "genre-fit-to-acceptability",
+      "phenomenon": "fused-head-nps-cgel",
+      "contrast_cell": "genre-bound-abbreviation",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Genre fit can increase reported acceptability for compressed nominal expressions without making SEL a general fused-head module.",
+      "edges": [
+        {
+          "source": "genre",
+          "target": "register_genre_appropriateness",
+          "type": "causal"
+        },
+        {
+          "source": "register_genre_appropriateness",
+          "target": "reported_acceptability",
+          "type": "causal"
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "phenomenon": "fused-head-nps-cgel",
+      "result": "partly_survives",
+      "expected_survival_pattern": "The graph should explain constructional-function and genre-fit pieces, but it should fail to cover recoverability-vs-licensing unless semantic-pragmatic recoverability is represented separately.",
+      "notes": "Partly survives. SEL usefully represents constructional function, analogy, licensing, register/genre fit, and acceptability, but it routes function through argument-linking selection and lacks semantic-pragmatic recoverability. Fused-head NPs are not just selected-complement or collocation cases.",
+      "requirements": {
+        "required_nodes": [
+          "constructional_function",
+          "constructional_analogy",
+          "argument_linking_selection",
+          "operator_value",
+          "community_licensing",
+          "register_genre_appropriateness",
+          "reported_acceptability",
+          "grammaticality_attribution"
+        ],
+        "forbidden_nodes": [
+          "semantic_pragmatic_recoverability",
+          "analyst_category_assignment"
+        ],
+        "required_edges": [
+          {
+            "source": "constructional_function",
+            "target": "argument_linking_selection",
+            "type": "evidential"
+          },
+          {
+            "source": "argument_linking_selection",
+            "target": "operator_value",
+            "type": "constitutive"
+          },
+          {
+            "source": "operator_value",
+            "target": "community_licensing",
+            "type": "constitutive"
+          },
+          {
+            "source": "genre",
+            "target": "register_genre_appropriateness",
+            "type": "causal"
+          },
+          {
+            "source": "register_genre_appropriateness",
+            "target": "reported_acceptability",
+            "type": "causal"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "community_licensing",
+            "type": "causal"
+          },
+          {
+            "source": "constructional_function",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "conventional-fused-head",
+          "axes": {
+            "community": "English speakers familiar with conventional fused-head NP patterns.",
+            "norm_centre": "Descriptive grammar and ordinary usage norm centres compared.",
+            "genre": "Controlled NP judgment or grammar example.",
+            "medium": "Written example.",
+            "task_framing": "Acceptability with category terminology withheld.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "unsupported-missing-head",
+          "axes": {
+            "community": "English speakers judging recoverable but constructionally unsupported missing-head examples.",
+            "norm_centre": "Descriptive judgment norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Recoverability foregrounded before grammaticality attribution.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "genre-bound-abbreviation",
+          "axes": {
+            "community": "English readers interpreting abbreviated nominal expressions.",
+            "norm_centre": "Headline, label, note, or inventory norm centre.",
+            "genre": "Headline, label, note, or other compressed register.",
+            "medium": "Written abbreviated expression.",
+            "task_framing": "Genre fit and general licensing separated.",
+            "speaker_identity": "Writer or editor cue."
+          }
+        }
+      ]
+    }
+  ]
+}

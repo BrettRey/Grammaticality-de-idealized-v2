@@ -12,7 +12,7 @@ representations about grammaticality. The existing OVMG, detector, operator-stra
 processing-based, and normativity-based models are treated as seed graph families, not as
 conclusions or targets to vindicate.
 
-Eleven adversarial passes/synthesis steps have been run. All numeric scores remain zero. Four
+Thirteen adversarial passes/synthesis steps have been run. All numeric scores remain zero. Four
 current modules have `scoped_module` labels tied to protocol-bound evaluations. The original
 scope-only evaluations now include card-level requirements and activated paths. Both held-out CGEL
 evaluations also include card-level requirements and activated paths without authorizing score
@@ -21,6 +21,11 @@ evaluations against the operator-gap, dynamic/context, and task-separated module
 processing/naturalness gap justified a scoped `processing-naturalness-perturbation-candidate`.
 The clause-type/interjection pair has now exposed a distinct uptake/operator boundary gap, which
 justified a scoped `uptake-operator-boundary-candidate`.
+The frequent-condemned-form pass did not justify a new graph: `DYN` and `TASK` cover the relevant
+production/condemnation/attribution split, while `CAT` is out of scope.
+The fused-head NP pass also did not justify a new graph: `OPG` covers the core constructional
+support/recoverability split, while `CAT` and `SEL` partly cover category/function and
+selection-adjacent dimensions only.
 No graph has a `general_account` score. The current scoring schema includes `projective_power` and
 `theory_preservation_penalty` so held-out prediction and anti-alignment discipline are visible.
 
@@ -100,10 +105,12 @@ construct separation, or held-out projectibility, not by fitting a prior paper.
 - selection/collocation synthesis in `notes/ninth-adversarial-pass-synthesis-2026-06-08.md`
 - processing/naturalness synthesis in `notes/tenth-adversarial-pass-synthesis-2026-06-08.md`
 - uptake/operator boundary synthesis in `notes/eleventh-adversarial-pass-synthesis-2026-06-08.md`
+- frequent-condemned-form synthesis in `notes/twelfth-adversarial-pass-synthesis-2026-06-08.md`
+- fused-head NP synthesis in `notes/thirteenth-adversarial-pass-synthesis-2026-06-08.md`
 - coverage/discriminator matrix in `notes/coverage-discriminator-matrix-2026-06-08.md`
 - protocol-bound evaluation schema and exploratory evaluations in `evaluations/`
 - held-out CGEL/local-correction evaluations in `evaluations/protocol-tests/`
-- agreement, center-embedding, and uptake-boundary protocol-bound evaluations in
+- agreement, center-embedding, uptake-boundary, frequent-condemned-form, and fused-head evaluations in
   `evaluations/protocol-tests/`
 - positive and negative validator fixtures in `tests/fixtures/`
 
@@ -177,15 +184,13 @@ validation.
 ## Next Actions
 
 1. Enrich the source-backed cards with concrete contrast-cell examples and data pointers.
-2. Convert `frequent-condemned-form` into protocol-bound evaluations against `DYN`, `TASK`, and
-   `CAT` before adding another graph.
-3. Use that evaluation to decide whether correction/production/attribution divergence is already
-   covered by `DYN` and `TASK`, or whether a condemnation-specific module is warranted.
-4. Convert activated-path readings into explicit pass/fail predictions for held-out contrast
+2. Convert activated-path readings into explicit pass/fail predictions for held-out contrast
    cells.
-5. Calibrate scoped-module score magnitudes after at least one held-out or parameterized evaluation
+3. Test whether `OPG`, `CAT`, and `SEL` stay complementary on richer fused-construction cards before
+   adding any fused-head-specific graph.
+4. Calibrate scoped-module score magnitudes after at least one held-out or parameterized evaluation
    pass.
-6. Expand `phenomena/cards/` toward 40-100 cards only after the current representation classes stop
+5. Expand `phenomena/cards/` toward 40-100 cards only after the current representation classes stop
    shifting every pass.
-7. Only after the construct inventory stabilizes, consider whether `pgmpy`, NOTEARS-style methods,
+6. Only after the construct inventory stabilizes, consider whether `pgmpy`, NOTEARS-style methods,
    or empirical causal discovery are useful.

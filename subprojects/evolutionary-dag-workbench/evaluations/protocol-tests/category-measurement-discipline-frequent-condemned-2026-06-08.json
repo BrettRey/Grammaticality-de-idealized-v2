@@ -1,0 +1,130 @@
+{
+  "id": "category-measurement-discipline-frequent-condemned-2026-06-08",
+  "target_graph": "graphs/archive/category-measurement-discipline-candidate.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "protocol-bound",
+  "score_decision": "no-score-change",
+  "activated_paths": [
+    {
+      "id": "task-framing-to-attribution",
+      "phenomenon": "frequent-condemned-form",
+      "contrast_cell": "explicit-correction-attribution",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Task framing can route reported acceptability into attribution, but the graph lacks correction and production machinery.",
+      "edges": [
+        {
+          "source": "task_framing",
+          "target": "reported_acceptability",
+          "type": "causal"
+        },
+        {
+          "source": "reported_acceptability",
+          "target": "grammaticality_attribution",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "ideology-to-attribution",
+      "phenomenon": "frequent-condemned-form",
+      "contrast_cell": "standard-condemnation",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Standard ideology can shape attribution, but this graph cannot represent condemnation, correction, or production divergence.",
+      "edges": [
+        {
+          "source": "standard_language_ideology",
+          "target": "grammaticality_attribution",
+          "type": "causal"
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "phenomenon": "frequent-condemned-form",
+      "result": "fails_general_out_of_scope",
+      "expected_survival_pattern": "A graph for frequent condemned forms needs production probability, usage frequency, metalinguistic condemnation, correction probability, and task-separated judgment channels. Category-measurement discipline alone is insufficient.",
+      "notes": "Fails as a general account. CAT can keep category assignment and attribution apart, and it has task framing and standard ideology, but it lacks the production/correction split the card requires.",
+      "requirements": {
+        "required_nodes": [
+          "task_framing",
+          "standard_language_ideology",
+          "reported_acceptability",
+          "grammaticality_attribution"
+        ],
+        "forbidden_nodes": [
+          "production_probability",
+          "usage_frequency",
+          "metalinguistic_condemnation",
+          "editorial_correction_probability",
+          "production_task_setting",
+          "judgment_task_setting"
+        ],
+        "required_edges": [
+          {
+            "source": "task_framing",
+            "target": "reported_acceptability",
+            "type": "causal"
+          },
+          {
+            "source": "reported_acceptability",
+            "target": "grammaticality_attribution",
+            "type": "evidential"
+          },
+          {
+            "source": "standard_language_ideology",
+            "target": "grammaticality_attribution",
+            "type": "causal"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "standard_language_ideology",
+            "target": "community_licensing",
+            "type": "causal"
+          },
+          {
+            "source": "reported_acceptability",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "informal-high-production",
+          "axes": {
+            "community": "Speakers in a community where the condemned form is common in ordinary production.",
+            "norm_centre": "Local production norm rather than school or editing norm.",
+            "genre": "Informal conversation or messaging.",
+            "medium": "Speech or informal writing.",
+            "task_framing": "Unmonitored production or corpus observation.",
+            "speaker_identity": "Ordinary in-group speaker cue."
+          }
+        },
+        {
+          "id": "standard-condemnation",
+          "axes": {
+            "community": "Standard-language judgment or usage-guide context.",
+            "norm_centre": "School, editing, or usage-guide norm centre.",
+            "genre": "Usage advice, classroom correction, or editing task.",
+            "medium": "Written example or edited prose.",
+            "task_framing": "Correctness judgment.",
+            "speaker_identity": "Student, editor, or standard-writer cue."
+          }
+        },
+        {
+          "id": "explicit-correction-attribution",
+          "axes": {
+            "community": "Evaluators exposed to explicit correction or rule talk.",
+            "norm_centre": "Instructional or editorial norm centre.",
+            "genre": "Grammar discussion, usage guide, or classroom feedback.",
+            "medium": "Written example.",
+            "task_framing": "Grammaticality attribution after correction cue.",
+            "speaker_identity": "Learner, student, or edited-writer cue."
+          }
+        }
+      ]
+    }
+  ]
+}

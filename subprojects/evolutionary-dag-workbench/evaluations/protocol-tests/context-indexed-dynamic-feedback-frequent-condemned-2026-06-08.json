@@ -1,0 +1,175 @@
+{
+  "id": "context-indexed-dynamic-feedback-frequent-condemned-2026-06-08",
+  "target_graph": "graphs/archive/context-indexed-dynamic-feedback-candidate.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "protocol-bound",
+  "score_decision": "no-score-change",
+  "activated_paths": [
+    {
+      "id": "production-to-usage",
+      "phenomenon": "frequent-condemned-form",
+      "contrast_cell": "informal-high-production",
+      "expected_path_reading": "unprofiled",
+      "prediction": "High production in the relevant community can feed observed usage without requiring standard-norm acceptance.",
+      "edges": [
+        {
+          "source": "production_probability_t",
+          "target": "usage_frequency_t1",
+          "type": "time_lagged"
+        }
+      ]
+    },
+    {
+      "id": "standard-ideology-to-correction",
+      "phenomenon": "frequent-condemned-form",
+      "contrast_cell": "standard-condemnation",
+      "expected_path_reading": "positive",
+      "prediction": "Standard-language ideology should raise condemnation and correction probability in correctness-oriented settings.",
+      "edges": [
+        {
+          "source": "standard_language_ideology_t1",
+          "target": "metalinguistic_condemnation_t1",
+          "type": "causal"
+        },
+        {
+          "source": "metalinguistic_condemnation_t1",
+          "target": "editorial_correction_probability_t1",
+          "type": "causal"
+        }
+      ]
+    },
+    {
+      "id": "correction-to-attribution",
+      "phenomenon": "frequent-condemned-form",
+      "contrast_cell": "explicit-correction-attribution",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Correction can influence grammaticality attribution while remaining separable from production frequency and licensing.",
+      "edges": [
+        {
+          "source": "editorial_correction_probability_t1",
+          "target": "grammaticality_attribution_t1",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "correction-to-later-production",
+      "phenomenon": "frequent-condemned-form",
+      "contrast_cell": "monitored-production",
+      "expected_path_reading": "unprofiled",
+      "prediction": "Correction pressure can reshape later monitored production without implying zero unmonitored production.",
+      "edges": [
+        {
+          "source": "editorial_correction_probability_t1",
+          "target": "production_probability_t2",
+          "type": "time_lagged"
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "phenomenon": "frequent-condemned-form",
+      "result": "survives_as_module",
+      "expected_survival_pattern": "Production probability, usage frequency, standard-language ideology, condemnation, correction, reported acceptability, and attribution can move on separate context-indexed tracks. A form can be frequent and condemned at the same time.",
+      "notes": "Survives as the dynamic/context module. It does not by itself separate production task from judgment task as sharply as TASK does.",
+      "requirements": {
+        "required_nodes": [
+          "production_probability_t",
+          "usage_frequency_t1",
+          "standard_language_ideology_t1",
+          "metalinguistic_condemnation_t1",
+          "editorial_correction_probability_t1",
+          "reported_acceptability_t1",
+          "grammaticality_attribution_t1",
+          "production_probability_t2"
+        ],
+        "required_edges": [
+          {
+            "source": "production_probability_t",
+            "target": "usage_frequency_t1",
+            "type": "time_lagged"
+          },
+          {
+            "source": "standard_language_ideology_t1",
+            "target": "metalinguistic_condemnation_t1",
+            "type": "causal"
+          },
+          {
+            "source": "metalinguistic_condemnation_t1",
+            "target": "editorial_correction_probability_t1",
+            "type": "causal"
+          },
+          {
+            "source": "editorial_correction_probability_t1",
+            "target": "grammaticality_attribution_t1",
+            "type": "evidential"
+          },
+          {
+            "source": "editorial_correction_probability_t1",
+            "target": "production_probability_t2",
+            "type": "time_lagged"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "usage_frequency_t1",
+            "target": "reported_acceptability_t1",
+            "type": "causal"
+          },
+          {
+            "source": "standard_language_ideology_t1",
+            "target": "community_licensing_t1",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "informal-high-production",
+          "axes": {
+            "community": "Speakers in a community where the condemned form is common in ordinary production.",
+            "norm_centre": "Local production norm rather than school or editing norm.",
+            "genre": "Informal conversation or messaging.",
+            "medium": "Speech or informal writing.",
+            "task_framing": "Unmonitored production or corpus observation.",
+            "speaker_identity": "Ordinary in-group speaker cue."
+          }
+        },
+        {
+          "id": "standard-condemnation",
+          "axes": {
+            "community": "Standard-language judgment or usage-guide context.",
+            "norm_centre": "School, editing, or usage-guide norm centre.",
+            "genre": "Usage advice, classroom correction, or editing task.",
+            "medium": "Written example or edited prose.",
+            "task_framing": "Correctness judgment.",
+            "speaker_identity": "Student, editor, or standard-writer cue."
+          }
+        },
+        {
+          "id": "explicit-correction-attribution",
+          "axes": {
+            "community": "Evaluators exposed to explicit correction or rule talk.",
+            "norm_centre": "Instructional or editorial norm centre.",
+            "genre": "Grammar discussion, usage guide, or classroom feedback.",
+            "medium": "Written example.",
+            "task_framing": "Grammaticality attribution after correction cue.",
+            "speaker_identity": "Learner, student, or edited-writer cue."
+          }
+        },
+        {
+          "id": "monitored-production",
+          "axes": {
+            "community": "Speakers producing under monitoring or editing pressure.",
+            "norm_centre": "Standard or institutional norm centre.",
+            "genre": "Test response, edited prose, or formal writing.",
+            "medium": "Written production.",
+            "task_framing": "Monitored production after correction exposure.",
+            "speaker_identity": "Standard-oriented writer cue."
+          }
+        }
+      ]
+    }
+  ]
+}

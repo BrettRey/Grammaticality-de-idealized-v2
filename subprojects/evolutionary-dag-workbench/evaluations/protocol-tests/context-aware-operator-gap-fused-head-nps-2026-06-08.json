@@ -1,0 +1,196 @@
+{
+  "id": "context-aware-operator-gap-fused-head-nps-2026-06-08",
+  "target_graph": "graphs/archive/context-aware-operator-gap-candidate.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "protocol-bound",
+  "score_decision": "no-score-change",
+  "activated_paths": [
+    {
+      "id": "constructional-analogy-to-licensing",
+      "phenomenon": "fused-head-nps-cgel",
+      "contrast_cell": "conventional-fused-head",
+      "expected_path_reading": "warranting",
+      "prediction": "Constructional analogy can provide warrant for licensing in conventional fused-head patterns without equating recoverability with licensing.",
+      "edges": [
+        {
+          "source": "constructional_analogy",
+          "target": "community_licensing",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "recoverability-to-attribution",
+      "phenomenon": "fused-head-nps-cgel",
+      "contrast_cell": "unsupported-missing-head",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Recoverability can raise reported acceptability for an unsupported missing-head example while attribution remains a contextual evidential matter.",
+      "edges": [
+        {
+          "source": "semantic_pragmatic_recoverability",
+          "target": "reported_acceptability",
+          "type": "causal"
+        },
+        {
+          "source": "reported_acceptability",
+          "target": "grammaticality_attribution",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "preemption-to-repair",
+      "phenomenon": "fused-head-nps-cgel",
+      "contrast_cell": "unsupported-missing-head",
+      "expected_path_reading": "non_sign_propagating",
+      "prediction": "Competitor availability can contribute to preemption, undercut licensing warrant, and route the unsupported form toward repair or reformulation.",
+      "edges": [
+        {
+          "source": "competitor_availability",
+          "target": "preemption_strength",
+          "type": "constitutive"
+        },
+        {
+          "source": "preemption_strength",
+          "target": "community_licensing",
+          "type": "evidential"
+        },
+        {
+          "source": "community_licensing",
+          "target": "repair_reformulation_pressure",
+          "type": "causal"
+        }
+      ]
+    },
+    {
+      "id": "genre-to-acceptability",
+      "phenomenon": "fused-head-nps-cgel",
+      "contrast_cell": "genre-bound-abbreviation",
+      "expected_path_reading": "unprofiled",
+      "prediction": "Genre can route through register appropriateness to reported acceptability, but the path remains unscored because the context-setting edge is not profiled.",
+      "edges": [
+        {
+          "source": "genre",
+          "target": "register_genre_appropriateness",
+          "type": "causal"
+        },
+        {
+          "source": "register_genre_appropriateness",
+          "target": "reported_acceptability",
+          "type": "causal"
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "phenomenon": "fused-head-nps-cgel",
+      "result": "survives_as_module",
+      "expected_survival_pattern": "The graph should separate constructional support from semantic-pragmatic recoverability, allow genre-bound acceptability shifts, and reject any direct recoverability-to-licensing route.",
+      "notes": "Survives as a scoped operator-gap/recoverability module. OPG already has constructional analogy, recoverability, opportunity/preemption machinery, community licensing, repair pressure, register/genre appropriateness, reported acceptability, and attribution. No fused-head-specific graph is justified by this card alone.",
+      "requirements": {
+        "required_nodes": [
+          "constructional_analogy",
+          "semantic_pragmatic_recoverability",
+          "competitor_availability",
+          "preemption_strength",
+          "community_licensing",
+          "register_genre_appropriateness",
+          "repair_reformulation_pressure",
+          "reported_acceptability",
+          "grammaticality_attribution"
+        ],
+        "required_edges": [
+          {
+            "source": "constructional_analogy",
+            "target": "community_licensing",
+            "type": "evidential"
+          },
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "reported_acceptability",
+            "type": "causal"
+          },
+          {
+            "source": "competitor_availability",
+            "target": "preemption_strength",
+            "type": "constitutive"
+          },
+          {
+            "source": "preemption_strength",
+            "target": "community_licensing",
+            "type": "evidential"
+          },
+          {
+            "source": "community_licensing",
+            "target": "repair_reformulation_pressure",
+            "type": "causal"
+          },
+          {
+            "source": "register_genre_appropriateness",
+            "target": "reported_acceptability",
+            "type": "causal"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "community_licensing",
+            "type": "causal"
+          },
+          {
+            "source": "reported_acceptability",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "conventional-fused-head",
+          "axes": {
+            "community": "English speakers familiar with conventional fused-head NP patterns.",
+            "norm_centre": "Descriptive grammar and ordinary usage norm centres compared.",
+            "genre": "Controlled NP judgment or grammar example.",
+            "medium": "Written example.",
+            "task_framing": "Acceptability with category terminology withheld.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "ordinary-discourse-ellipsis",
+          "axes": {
+            "community": "English speakers interpreting local discourse ellipsis.",
+            "norm_centre": "Ordinary discourse norm centre.",
+            "genre": "Dialogue with a local antecedent.",
+            "medium": "Speech-like written example.",
+            "task_framing": "Meaning recovery and acceptability separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "unsupported-missing-head",
+          "axes": {
+            "community": "English speakers judging recoverable but constructionally unsupported missing-head examples.",
+            "norm_centre": "Descriptive judgment norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Recoverability foregrounded before grammaticality attribution.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "genre-bound-abbreviation",
+          "axes": {
+            "community": "English readers interpreting abbreviated nominal expressions.",
+            "norm_centre": "Headline, label, note, or inventory norm centre.",
+            "genre": "Headline, label, note, or other compressed register.",
+            "medium": "Written abbreviated expression.",
+            "task_framing": "Genre fit and general licensing separated.",
+            "speaker_identity": "Writer or editor cue."
+          }
+        }
+      ]
+    }
+  ]
+}
