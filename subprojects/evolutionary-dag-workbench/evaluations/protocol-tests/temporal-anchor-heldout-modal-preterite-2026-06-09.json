@@ -1,0 +1,176 @@
+{
+  "id": "temporal-anchor-heldout-modal-preterite-2026-06-09",
+  "target_graph": "graphs/archive/temporal-anchor-alignment-candidate.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "held-out",
+  "held_out_from": [
+    "temporal-anchor-alignment-2026-06-09",
+    "perfect-definite-past-time",
+    "continuative-perfect-since-cgel",
+    "perfect-already-yesterday-cgel",
+    "narrative-present-past-time-frame",
+    "modal-perfect-by-now-inference"
+  ],
+  "score_decision": "no-score-change",
+  "activated_paths": [
+    {
+      "id": "anchor-fit-to-licensing",
+      "phenomenon": "modal-preterite-remoteness-cgel",
+      "contrast_cell": "present-time-modal-preterite",
+      "expected_path_reading": "warranting",
+      "prediction": "Temporal-anchor fit should contribute warrant for licensing, but the graph needs a modal-remoteness frame to predict why preterite form fits a present-time situation.",
+      "edges": [
+        {
+          "source": "temporal_anchor_fit",
+          "target": "community_licensing",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "recoverability-to-acceptability",
+      "phenomenon": "modal-preterite-remoteness-cgel",
+      "contrast_cell": "future-time-modal-preterite",
+      "expected_path_reading": "positive",
+      "prediction": "Recoverability can raise reported acceptability for the intended present or future situation without itself licensing modal preterite.",
+      "edges": [
+        {
+          "source": "semantic_pragmatic_recoverability",
+          "target": "reported_acceptability",
+          "type": "causal"
+        }
+      ]
+    },
+    {
+      "id": "licensing-to-repair",
+      "phenomenon": "modal-preterite-remoteness-cgel",
+      "contrast_cell": "open-conditional-present",
+      "expected_path_reading": "negative",
+      "prediction": "Higher licensing for an open conditional should lower repair pressure relative to an incorrectly selected remote/open frame.",
+      "edges": [
+        {
+          "source": "community_licensing",
+          "target": "repair_reformulation_pressure",
+          "type": "causal"
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "phenomenon": "modal-preterite-remoteness-cgel",
+      "result": "partly_survives",
+      "expected_survival_pattern": "The graph should avoid treating preterite morphology as simple past-time anchoring, but should expose its missing modal-remoteness frame.",
+      "notes": "Partly survives. TEMP separates tense/aspect value, temporal anchor expression, temporal-anchor fit, and recoverability, so it avoids the worst event-time conflation. It does not yet represent modal remoteness or remote conditional frame structure, so it cannot earn a scoped temporal/modal label.",
+      "requirements": {
+        "required_nodes": [
+          "tense_aspect_value",
+          "temporal_anchor_expression",
+          "temporal_anchor_fit",
+          "constructional_frame_fit",
+          "semantic_pragmatic_recoverability",
+          "community_licensing",
+          "reported_acceptability",
+          "repair_reformulation_pressure",
+          "grammaticality_attribution"
+        ],
+        "required_edges": [
+          {
+            "source": "tense_aspect_value",
+            "target": "temporal_anchor_fit",
+            "type": "constitutive"
+          },
+          {
+            "source": "temporal_anchor_fit",
+            "target": "constructional_frame_fit",
+            "type": "constitutive"
+          },
+          {
+            "source": "temporal_anchor_fit",
+            "target": "community_licensing",
+            "type": "evidential"
+          },
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "reported_acceptability",
+            "type": "causal"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "tense_aspect_value",
+            "target": "community_licensing",
+            "type": "causal"
+          },
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "community_licensing",
+            "type": "causal"
+          },
+          {
+            "source": "reported_acceptability",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "present-time-modal-preterite",
+          "axes": {
+            "community": "English speakers judging present-time modal preterite under a wish or remote conditional frame.",
+            "norm_centre": "Descriptive English tense, mood, and conditional norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Situation time, preterite form, and modal remoteness separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "present-time-present-nonremote",
+          "axes": {
+            "community": "English speakers judging present tense in a non-remote present-time frame such as glad.",
+            "norm_centre": "Descriptive English tense and mood norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Present-time anchoring baseline.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "future-time-modal-preterite",
+          "axes": {
+            "community": "English speakers judging future-time modal preterite under preference or remote conditional framing.",
+            "norm_centre": "Descriptive English tense, mood, and conditional norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Future situation time and preterite modal remoteness separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "open-conditional-present",
+          "axes": {
+            "community": "English speakers judging present tense in an open conditional.",
+            "norm_centre": "Descriptive English conditional norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Open possibility and remote possibility contrasted.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "past-time-remote-preterite-perfect",
+          "axes": {
+            "community": "English speakers judging preterite perfect in a past-time remote conditional.",
+            "norm_centre": "Descriptive English tense, perfect, and conditional norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Past-time anteriority and modal remoteness separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    }
+  ]
+}

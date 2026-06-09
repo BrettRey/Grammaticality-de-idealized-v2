@@ -367,6 +367,16 @@ No mutation follows. The current `AGR` graph already has the needed separation a
 basis, controller identification, override pattern, feature alignment, and retrieval-attractor
 salience.
 
+## Forty-First-Pass Addendum
+
+`TEMP` has now been tested against a held-out modal-preterite card:
+
+- `modal-preterite-remoteness-cgel`: `TEMP` = `P`; it avoids treating preterite form as simple
+  past-time anchoring, but it lacks a modal-remoteness or remote-conditional frame construct.
+
+This blocks a `scoped_module` label for `TEMP`. A second held-out modal/conditional card is needed
+before mutating the graph.
+
 ## Discriminators Already Doing Work
 
 - `left-branch-extraction`: separates `DYN` from `OPG`.
@@ -429,6 +439,8 @@ salience.
   morphology with past-time expressions.
 - `modal-perfect-by-now-inference`: prevents `TEMP` from treating English `will` as future tense
   and forces a modal temporal inference frame.
+- `modal-preterite-remoteness-cgel`: first held-out pressure on `TEMP`; it separates preterite form
+  from past-time anchoring and exposes the missing modal-remoteness frame.
 - `allow-prevent-complement-selection-cgel`: separates catenative class structure from local
   cohort-conditioned `allowed doing` production.
 - `coordination-agreement-resolution-cgel`: forces agreement-controller and override constructs,
@@ -466,7 +478,8 @@ Newly exposed untested pairings remain:
    collection is available.
 2. Pause agreement growth unless a genuinely different source domain is available; the consolidated
    number-construal pass did not force mutation.
-3. Test `TEMP` against a held-out temporal/modal card before any scoped label.
+3. Add a second held-out modal/conditional temporal card before mutating `TEMP`; the current
+   pressure is modal remoteness, not future tense.
 4. Use held-out contrast cells to test whether `OPG`, `CAT`, and `SEL` remain complementary or
    require a fused-construction split.
 5. Test comparative-illusion cards against a combined category/noisy-channel interpretation only if
@@ -538,3 +551,6 @@ tests whether the anchor-fit machinery projects.
 The fortieth pass consolidates number construal/realization under `AGR` without mutation:
 notional basis, controller identification, override pattern, feature alignment, and attractor
 salience remain sufficient for the current agreement bundle.
+The forty-first pass gives `TEMP` its first held-out test. It partly survives
+`modal-preterite-remoteness-cgel`, but the missing modal-remoteness frame blocks scoped-module
+promotion and leaves mutation pending a second modal/conditional card.

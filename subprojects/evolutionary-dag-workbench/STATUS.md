@@ -12,7 +12,7 @@ representations about grammaticality. The existing OVMG, detector, operator-stra
 processing-based, and normativity-based models are treated as seed graph families, not as
 conclusions or targets to vindicate.
 
-Forty adversarial passes/synthesis steps have been run. All numeric scores remain zero. Seven
+Forty-one adversarial passes/synthesis steps have been run. All numeric scores remain zero. Seven
 current modules have `scoped_module` labels tied to protocol-bound evaluations. The original
 scope-only evaluations now include card-level requirements and activated paths. Both held-out CGEL
 evaluations also include card-level requirements and activated paths without authorizing score
@@ -136,6 +136,11 @@ The fortieth pass consolidated number construal/realization against
 fused determiner-head, and proximity-error cards without mutation: notional basis, controller
 identification, override pattern, feature alignment, and retrieval-attractor salience are enough for
 the current number-realization bundle. No score movement follows.
+The forty-first pass added `modal-preterite-remoteness-cgel` as a held-out test for
+`temporal-anchor-alignment-candidate`. `TEMP` partly survives because it avoids treating preterite
+form as simple past-time anchoring, but it lacks a modal-remoteness or remote-conditional frame
+construct. The held-out result blocks any scoped label for `TEMP` and does not justify mutation from
+one card alone.
 An internal state-of-search report now summarizes the current scoped-module partition, evaluation
 ladder, the completed transparent-relative Lane A pass, and remaining empirical lanes without
 authorizing score movement.
@@ -234,6 +239,7 @@ construct separation, or held-out projectibility, not by fitting a prior paper.
 - temporal-anchor alignment candidate and evaluation in `graphs/archive/` and
   `evaluations/protocol-tests/`
 - number-construal/realization consolidation evaluation in `evaluations/protocol-tests/`
+- held-out temporal/modal evaluation in `evaluations/protocol-tests/`
 - `DISCOVERY_RULES.md`
 - initial phenomenon cards in `phenomena/cards/`
 - graph schema and seed graphs in `graphs/`
@@ -394,8 +400,8 @@ validation.
    collection is available.
 2. Pause agreement growth unless a genuinely different source domain is available; the
    number-construal consolidation pass did not force mutation.
-3. Test `temporal-anchor-alignment-candidate` against a held-out temporal/modal card before any
-   scoped label; keep English `will` out of the tense inventory.
+3. Add a second held-out modal/conditional temporal card before mutating `TEMP`; current pressure is
+   modal remoteness, not English future tense.
 4. Add one more catenative card only if it distinguishes catenative subtype from cohort-conditioned
    production.
 5. Test comparative-illusion cards against combined `CAT` plus noisy-channel interpretations only
