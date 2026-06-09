@@ -12,7 +12,7 @@ representations about grammaticality. The existing OVMG, detector, operator-stra
 processing-based, and normativity-based models are treated as seed graph families, not as
 conclusions or targets to vindicate.
 
-Eighteen adversarial passes/synthesis steps have been run. All numeric scores remain zero. Five
+Nineteen adversarial passes/synthesis steps have been run. All numeric scores remain zero. Six
 current modules have `scoped_module` labels tied to protocol-bound evaluations. The original
 scope-only evaluations now include card-level requirements and activated paths. Both held-out CGEL
 evaluations also include card-level requirements and activated paths without authorizing score
@@ -42,6 +42,11 @@ and garden-path cards and partly survives noisy-channel overacceptance. `UPT` su
 frame minimal pair while `OPG` only partly survives it. `OPG` and `UPT` both partly survive island
 construction variation. `DYN` and `TASK` partly survive legalese, but both lack direct processing
 or comprehension-cost machinery.
+The nineteenth pass added controlled constructs for repair-neighbour distance, constructional frame
+fit, and construction-specific dependency licensing. The resulting
+`frame-specific-dependency-licensing-candidate` is a scoped module for the `I have five years`
+minimal pair and Gibson's island construction-variation card. It does not replace `OPG`'s
+opportunity/preemption machinery or `UPT`'s broader uptake/repertoire boundary machinery.
 
 ## Current Candidate Stack
 
@@ -57,6 +62,7 @@ or comprehension-cost machinery.
 - `selection-collocation-split-candidate`
 - `processing-naturalness-perturbation-candidate`
 - `uptake-operator-boundary-candidate`
+- `frame-specific-dependency-licensing-candidate`
 
 The current strongest modules are scoped, not general winners:
 
@@ -83,11 +89,15 @@ The current strongest modules are scoped, not general winners:
 - `uptake-operator-boundary-candidate` for update-role configuration, repertoire closedness, token
   innovability, operator-repertoire membership, stance, genre fit, repair, and attribution. It is a
   scoped module for clause-type/interjection boundaries, not a general operator-gap account.
+- `frame-specific-dependency-licensing-candidate` for question-answer frame fit and
+  construction-specific dependency licensing. It is a scoped module for frame-conditioned duration
+  answers and construction-specific island variation, not a general dependency or operator-gap
+  account.
 
 `context-indexed-dynamic-feedback-candidate`, `context-aware-operator-gap-candidate`, and
 `audience-reference-tracking-candidate`, `processing-naturalness-perturbation-candidate`, and
-`uptake-operator-boundary-candidate` currently have protocol-bound `scope-only` evaluations and
-`scoped_module` labels. No graph has earned a
+`uptake-operator-boundary-candidate`, and `frame-specific-dependency-licensing-candidate` currently
+have protocol-bound `scope-only` evaluations and `scoped_module` labels. No graph has earned a
 non-zero numeric score or a
 `general_account` label.
 
@@ -130,11 +140,14 @@ construct separation, or held-out projectibility, not by fitting a prior paper.
 - unresolved evidence-lane update in `notes/sixteenth-adversarial-pass-synthesis-2026-06-08.md`
 - Gibson card-pass synthesis in `notes/seventeenth-adversarial-pass-synthesis-2026-06-09.md`
 - Gibson/local-card evaluation synthesis in `notes/eighteenth-adversarial-pass-synthesis-2026-06-09.md`
+- frame-specific dependency synthesis in
+  `notes/nineteenth-adversarial-pass-synthesis-2026-06-09.md`
 - coverage/discriminator matrix in `notes/coverage-discriminator-matrix-2026-06-08.md`
 - protocol-bound evaluation schema and exploratory evaluations in `evaluations/`
 - held-out CGEL/local-correction evaluations in `evaluations/protocol-tests/`
 - agreement, center-embedding, uptake-boundary, frequent-condemned-form, fused-head,
-  Gibson-backed, and local minimal-pair evaluations in `evaluations/protocol-tests/`
+  Gibson-backed, local minimal-pair, and frame-specific dependency evaluations in
+  `evaluations/protocol-tests/`
 - positive and negative validator fixtures in `tests/fixtures/`
 
 ## Current Tooling Gates
@@ -213,14 +226,12 @@ validation.
    design and rare transparent-relative opportunity thresholds.
 2. Decide whether noisy-channel overacceptance needs an `intended_form_distance` or
    `repair_neighbour_distance` construct.
-3. Test whether island construction variation requires a construction-specific dependency-licensing
-   module or can remain split between `OPG` and `UPT`.
-4. Run legalese against `PROC` before adding any genre-processing hybrid graph.
-5. Test whether `OPG`, `CAT`, and `SEL` stay complementary on richer fused-construction cards before
+3. Run legalese against `PROC` before adding any genre-processing hybrid graph.
+4. Test whether `OPG`, `CAT`, and `SEL` stay complementary on richer fused-construction cards before
    adding any fused-head-specific graph.
-6. Calibrate scoped-module score magnitudes after at least one held-out or parameterized evaluation
+5. Calibrate scoped-module score magnitudes after at least one held-out or parameterized evaluation
    pass.
-7. Expand `phenomena/cards/` toward 40-100 cards only after the current representation classes stop
+6. Expand `phenomena/cards/` toward 40-100 cards only after the current representation classes stop
    shifting every pass.
-8. Only after the construct inventory stabilizes, consider whether `pgmpy`, NOTEARS-style methods,
+7. Only after the construct inventory stabilizes, consider whether `pgmpy`, NOTEARS-style methods,
    or empirical causal discovery are useful.

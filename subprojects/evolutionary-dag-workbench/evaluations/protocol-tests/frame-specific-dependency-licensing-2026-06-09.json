@@ -1,0 +1,275 @@
+{
+  "id": "frame-specific-dependency-licensing-2026-06-09",
+  "target_graph": "graphs/archive/frame-specific-dependency-licensing-candidate.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "protocol-bound",
+  "score_decision": "scope-only",
+  "activated_paths": [
+    {
+      "id": "frame-fit-to-attribution",
+      "phenomenon": "frame-conditioned-duration-have",
+      "contrast_cell": "age-answer-have-duration",
+      "expected_path_reading": "warranting",
+      "prediction": "A failed age-answer frame should provide warrant for grammar-relevant attribution through operator-repertoire membership, without using recoverability as licensing.",
+      "edges": [
+        {
+          "source": "constructional_frame_fit",
+          "target": "operator_repertoire_membership",
+          "type": "evidential"
+        },
+        {
+          "source": "operator_repertoire_membership",
+          "target": "grammaticality_attribution",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "recoverability-to-attribution",
+      "phenomenon": "frame-conditioned-duration-have",
+      "contrast_cell": "age-answer-have-duration",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Recoverability can raise reported acceptability for a transparent intended meaning, but this path remains indeterminate for licensing or grammar attribution.",
+      "edges": [
+        {
+          "source": "semantic_pragmatic_recoverability",
+          "target": "reported_acceptability",
+          "type": "causal"
+        },
+        {
+          "source": "reported_acceptability",
+          "target": "grammaticality_attribution",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "frame-fit-to-repair",
+      "phenomenon": "frame-conditioned-duration-have",
+      "contrast_cell": "remaining-duration-have",
+      "expected_path_reading": "non_sign_propagating",
+      "prediction": "A licensed remaining-duration frame can route through community licensing to lower repair pressure, but the mixed relation types make this a non-sign-propagating path.",
+      "edges": [
+        {
+          "source": "constructional_frame_fit",
+          "target": "community_licensing",
+          "type": "evidential"
+        },
+        {
+          "source": "community_licensing",
+          "target": "repair_reformulation_pressure",
+          "type": "causal"
+        }
+      ]
+    },
+    {
+      "id": "dependency-licensing-to-repair",
+      "phenomenon": "island-construction-variation-gibson",
+      "contrast_cell": "wh-question-subject-island",
+      "expected_path_reading": "non_sign_propagating",
+      "prediction": "Construction-specific dependency licensing should distinguish dependency contexts before repair pressure is interpreted as licensing trouble.",
+      "edges": [
+        {
+          "source": "construction_specific_dependency_licensing",
+          "target": "community_licensing",
+          "type": "constitutive"
+        },
+        {
+          "source": "community_licensing",
+          "target": "repair_reformulation_pressure",
+          "type": "causal"
+        }
+      ]
+    },
+    {
+      "id": "construction-function-to-dependency-licensing",
+      "phenomenon": "island-construction-variation-gibson",
+      "contrast_cell": "relative-clause-subject-extraction",
+      "expected_path_reading": "non_sign_propagating",
+      "prediction": "Constructional function should provide warrant for construction-specific dependency licensing before licensing and repair are assessed.",
+      "edges": [
+        {
+          "source": "constructional_function",
+          "target": "construction_specific_dependency_licensing",
+          "type": "evidential"
+        },
+        {
+          "source": "construction_specific_dependency_licensing",
+          "target": "community_licensing",
+          "type": "constitutive"
+        },
+        {
+          "source": "community_licensing",
+          "target": "repair_reformulation_pressure",
+          "type": "causal"
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "phenomenon": "frame-conditioned-duration-have",
+      "result": "survives_as_module",
+      "expected_survival_pattern": "The graph should distinguish question-answer frame fit from recoverability: `I have five years` remains transparent in both cells, but only the remaining-duration frame licenses the have-duration answer.",
+      "notes": "Survives as a frame-fit module. It improves on OPG's broad operator-value node and UPT's broad update-role node by adding `constructional_frame_fit` as the contrast-bearing construct.",
+      "requirements": {
+        "required_nodes": [
+          "constructional_frame_fit",
+          "constructional_function",
+          "update_role_configuration",
+          "operator_repertoire_membership",
+          "semantic_pragmatic_recoverability",
+          "community_licensing",
+          "reported_acceptability",
+          "repair_reformulation_pressure",
+          "grammaticality_attribution"
+        ],
+        "required_edges": [
+          {
+            "source": "constructional_frame_fit",
+            "target": "operator_repertoire_membership",
+            "type": "evidential"
+          },
+          {
+            "source": "constructional_frame_fit",
+            "target": "community_licensing",
+            "type": "evidential"
+          },
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "reported_acceptability",
+            "type": "causal"
+          },
+          {
+            "source": "community_licensing",
+            "target": "repair_reformulation_pressure",
+            "type": "causal"
+          },
+          {
+            "source": "reported_acceptability",
+            "target": "grammaticality_attribution",
+            "type": "evidential"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "community_licensing",
+            "type": "causal"
+          },
+          {
+            "source": "reported_acceptability",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "age-answer-have-duration",
+          "axes": {
+            "community": "Ordinary English speakers interpreting an age question.",
+            "norm_centre": "Ordinary English age-ascription norm centre.",
+            "genre": "Dialogue answer.",
+            "medium": "Speech or written dialogue.",
+            "task_framing": "Question-answer fit and grammaticality attribution.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "remaining-duration-have",
+          "axes": {
+            "community": "Ordinary English speakers interpreting a remaining-duration question.",
+            "norm_centre": "Ordinary English duration-expression norm centre.",
+            "genre": "Dialogue answer.",
+            "medium": "Speech or written dialogue.",
+            "task_framing": "Question-answer fit and naturalness judgment.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    },
+    {
+      "phenomenon": "island-construction-variation-gibson",
+      "result": "survives_as_module",
+      "expected_survival_pattern": "The graph should treat island effects as construction-specific dependency-licensing contrasts, not as global extraction bans or pure recoverability effects.",
+      "notes": "Survives as a construction-specific dependency module. It does not replace OPG's opportunity/preemption machinery; it adds the missing construction-conditioned licensing node exposed by Gibson's island variation examples.",
+      "requirements": {
+        "required_nodes": [
+          "construction_specific_dependency_licensing",
+          "constructional_function",
+          "constructional_frame_fit",
+          "update_role_configuration",
+          "semantic_pragmatic_recoverability",
+          "community_licensing",
+          "reported_acceptability",
+          "repair_reformulation_pressure",
+          "grammaticality_attribution"
+        ],
+        "required_edges": [
+          {
+            "source": "constructional_function",
+            "target": "construction_specific_dependency_licensing",
+            "type": "evidential"
+          },
+          {
+            "source": "update_role_configuration",
+            "target": "construction_specific_dependency_licensing",
+            "type": "evidential"
+          },
+          {
+            "source": "construction_specific_dependency_licensing",
+            "target": "community_licensing",
+            "type": "constitutive"
+          },
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "reported_acceptability",
+            "type": "causal"
+          },
+          {
+            "source": "community_licensing",
+            "target": "repair_reformulation_pressure",
+            "type": "causal"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "construction_specific_dependency_licensing",
+            "type": "causal"
+          },
+          {
+            "source": "processing_cost",
+            "target": "construction_specific_dependency_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "wh-question-subject-island",
+          "axes": {
+            "community": "English speakers judging wh-question extractions from subject configurations.",
+            "norm_centre": "Experimental syntax or descriptive judgment norm centre.",
+            "genre": "Controlled island judgment.",
+            "medium": "Written sentence.",
+            "task_framing": "Acceptability with no-extraction controls.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "relative-clause-subject-extraction",
+          "axes": {
+            "community": "English speakers judging relative-clause extractions from comparable subject configurations.",
+            "norm_centre": "Experimental syntax or descriptive judgment norm centre.",
+            "genre": "Controlled island judgment.",
+            "medium": "Written sentence.",
+            "task_framing": "Acceptability with no-extraction controls.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    }
+  ]
+}

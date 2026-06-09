@@ -24,6 +24,7 @@ Module abbreviations:
 - `SEL`: `selection-collocation-split-candidate`
 - `PROC`: `processing-naturalness-perturbation-candidate`
 - `UPT`: `uptake-operator-boundary-candidate`
+- `FRAME`: `frame-specific-dependency-licensing-candidate`
 
 ## Matrix
 
@@ -61,6 +62,15 @@ Module abbreviations:
 | `legalese-center-embedding-gibson` | P | . | . | P | . | . | . | . |
 | `frame-conditioned-duration-have` | . | P | . | . | . | . | . | S |
 
+## Nineteenth-Pass Addendum
+
+`FRAME` has been evaluated after the table above was created. It survives as a scoped module for:
+
+- `frame-conditioned-duration-have`: `S`; it separates constructional/question-answer frame fit
+  from recoverability and reported acceptability.
+- `island-construction-variation-gibson`: `S`; it represents construction-specific dependency
+  licensing without converting island effects into a global extraction ban.
+
 ## Current Module Boundaries
 
 `DYN` is the best module for context-indexed licensing, ideology, correction, production, reported
@@ -96,6 +106,10 @@ not a licensing, agreement-feature, or diachronic module.
 closedness, token innovability, operator-repertoire membership, stance, genre fit, repair, and
 attribution. It is not a general operator-gap or social-indexical module.
 
+`FRAME` is the frame-specific dependency-licensing module. It handles question-answer frame fit and
+construction-specific dependency licensing. It is not a general operator-gap, opportunity/preemption,
+or processing account.
+
 ## Discriminators Already Doing Work
 
 - `left-branch-extraction`: separates `DYN` from `OPG`.
@@ -129,6 +143,9 @@ attribution. It is not a general operator-gap or social-indexical module.
   the missing processing/comprehension mechanism.
 - `frame-conditioned-duration-have`: separates `UPT`'s question-answer frame fit from `OPG`'s
   broader recoverability/licensing separation.
+- `frame-conditioned-duration-have` and `island-construction-variation-gibson`: justify `FRAME` as
+  a scoped module when the needed contrast is finer than broad update-role configuration or broad
+  operator value.
 
 ## Untested Cards
 
@@ -140,8 +157,8 @@ Newly exposed untested pairings remain:
   without genre persistence.
 - `noisy-channel-overacceptance-gibson` against `CAT`, for comparative-illusion/category-analysis
   cases.
-- `island-construction-variation-gibson` against a possible future construction-specific
-  dependency-licensing module, if `OPG` + `UPT` remain insufficient.
+- richer island and dependency cards against `FRAME`, to test whether the new module stays scoped
+  or overfits the first Gibson island card.
 
 ## Next Evaluation Moves
 
@@ -167,3 +184,6 @@ own narrower dimensions.
 The Gibson/local-card pass does not justify a new graph yet. It strengthens `PROC` and `UPT`, and
 it exposes three named pressure points: intended-form distance, construction-specific dependency
 licensing, and legalese as a genre-processing hybrid.
+The nineteenth pass resolves one of those pressure points by adding
+`frame-specific-dependency-licensing-candidate`. It leaves intended-form distance and
+legalese/processing interaction as live pressure points.

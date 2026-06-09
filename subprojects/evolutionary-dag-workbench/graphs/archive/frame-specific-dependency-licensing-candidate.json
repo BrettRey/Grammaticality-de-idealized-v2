@@ -1,0 +1,146 @@
+{
+  "id": "frame-specific-dependency-licensing-candidate",
+  "title": "Frame-specific dependency licensing candidate",
+  "family": "frame-specific-dependency-licensing",
+  "status": "candidate",
+  "edge_semantics_level": "profiled",
+  "notes": "Nineteenth-round mutation generated from the duration-have minimal pair and Gibson island-construction variation. It tests whether constructional frame fit and construction-specific dependency licensing explain contrasts that are too fine for broad operator value or recoverability alone. It is a scoped candidate, not a general grammaticality account.",
+  "nodes": [
+    "update_role_configuration",
+    "constructional_function",
+    "constructional_frame_fit",
+    "operator_value",
+    "operator_repertoire_membership",
+    "construction_specific_dependency_licensing",
+    "semantic_pragmatic_recoverability",
+    "community_licensing",
+    "reported_acceptability",
+    "repair_reformulation_pressure",
+    "grammaticality_attribution",
+    "task_framing"
+  ],
+  "edges": [
+    {
+      "source": "constructional_function",
+      "target": "constructional_frame_fit",
+      "type": "constitutive",
+      "relation_profile": "partial_component",
+      "rationale": "The constructional role a form fills is part of whether it fits the active response or dependency frame."
+    },
+    {
+      "source": "operator_value",
+      "target": "constructional_frame_fit",
+      "type": "constitutive",
+      "relation_profile": "partial_component",
+      "rationale": "Operator value can be part of frame fit when the frame requires a public-update, role-tracking, or dependency-licensing value."
+    },
+    {
+      "source": "update_role_configuration",
+      "target": "constructional_frame_fit",
+      "type": "evidential",
+      "relation_profile": "contextual_warrant",
+      "rationale": "The update role configured by the surrounding discourse provides contextual warrant for whether a form fits the active frame."
+    },
+    {
+      "source": "constructional_frame_fit",
+      "target": "operator_repertoire_membership",
+      "type": "evidential",
+      "relation_profile": "evidential_warrant",
+      "rationale": "Fit with a recurrent constructional frame is evidence that the relation belongs to an accountable operator-like repertoire."
+    },
+    {
+      "source": "constructional_frame_fit",
+      "target": "community_licensing",
+      "type": "evidential",
+      "relation_profile": "evidential_warrant",
+      "rationale": "Frame fit warrants community licensing when the relevant community treats that frame as a licensed response or dependency environment."
+    },
+    {
+      "source": "constructional_function",
+      "target": "construction_specific_dependency_licensing",
+      "type": "evidential",
+      "relation_profile": "evidential_warrant",
+      "rationale": "Constructional function provides evidence about whether a dependency configuration is licensed in that construction."
+    },
+    {
+      "source": "update_role_configuration",
+      "target": "construction_specific_dependency_licensing",
+      "type": "evidential",
+      "relation_profile": "contextual_warrant",
+      "rationale": "The construction's discourse role can condition whether a dependency configuration is licensed."
+    },
+    {
+      "source": "construction_specific_dependency_licensing",
+      "target": "community_licensing",
+      "type": "constitutive",
+      "relation_profile": "necessary_component",
+      "rationale": "For extraction and dependency cards, construction-specific dependency licensing is a necessary component of community licensing."
+    },
+    {
+      "source": "semantic_pragmatic_recoverability",
+      "target": "reported_acceptability",
+      "type": "causal",
+      "relation_profile": "positive_monotone",
+      "rationale": "Recoverable meaning can raise reported acceptability even when frame fit or dependency licensing is absent."
+    },
+    {
+      "source": "community_licensing",
+      "target": "repair_reformulation_pressure",
+      "type": "causal",
+      "relation_profile": "negative_monotone",
+      "rationale": "Lower licensing in the active frame predicts higher repair or reformulation pressure."
+    },
+    {
+      "source": "operator_repertoire_membership",
+      "target": "grammaticality_attribution",
+      "type": "evidential",
+      "relation_profile": "evidential_warrant",
+      "rationale": "Membership in an accountable operator-like repertoire warrants grammar-relevant attribution."
+    },
+    {
+      "source": "community_licensing",
+      "target": "grammaticality_attribution",
+      "type": "evidential",
+      "relation_profile": "contextual_warrant",
+      "rationale": "Community licensing is contextual warrant for grammaticality attribution, not the attribution itself."
+    },
+    {
+      "source": "repair_reformulation_pressure",
+      "target": "grammaticality_attribution",
+      "type": "evidential",
+      "relation_profile": "contextual_warrant",
+      "rationale": "Repair pressure can provide contextual warrant for a grammar-relevant attribution."
+    },
+    {
+      "source": "reported_acceptability",
+      "target": "grammaticality_attribution",
+      "type": "evidential",
+      "relation_profile": "contextual_warrant",
+      "rationale": "Reported acceptability provides contextual evidence for attribution but is not identical to licensing."
+    },
+    {
+      "source": "task_framing",
+      "target": "grammaticality_attribution",
+      "type": "causal",
+      "relation_profile": "mixed_contextual",
+      "rationale": "Task framing changes whether respondents treat a frame mismatch as grammar, meaning, register, or repair trouble."
+    }
+  ],
+  "scores": {
+    "empirical_coverage": 0,
+    "projective_power": 0,
+    "counterexample_resilience": 0,
+    "measurement_clarity": 0,
+    "explanatory_payoff": 0,
+    "cross_domain_stability": 0,
+    "complexity_penalty": 0,
+    "circularity_penalty": 0,
+    "construct_confusion_penalty": 0,
+    "theory_preservation_penalty": 0
+  },
+  "score_status": {
+    "kind": "scoped_module",
+    "evaluation": "evaluations/protocol-tests/frame-specific-dependency-licensing-2026-06-09.json",
+    "scope": "Question-answer frame fit and construction-specific dependency licensing module; not a general grammaticality account."
+  }
+}

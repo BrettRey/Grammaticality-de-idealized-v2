@@ -233,6 +233,19 @@ upstream_or_mediating:
       - acceptability
       - processing ease
 
+  - id: repair_neighbour_distance
+    label: Repair-neighbour distance
+    definition: Distance or cost between the presented form and a plausible intended licensed form, repair, or nearby paraphrase.
+    proxies:
+      - minimal edit distance to repair
+      - omitted or duplicated function word
+      - nearby licensed paraphrase
+      - noisy-channel reconstruction probability
+    forbidden_conflations:
+      - semantic recoverability
+      - community licensing
+      - reported acceptability
+
   - id: constructional_analogy
     label: Constructional analogy
     definition: Support from similar constructions, patterns, schemas, or distributional neighborhoods.
@@ -268,6 +281,19 @@ upstream_or_mediating:
       - lexical category
       - analyst category assignment
       - community licensing
+
+  - id: constructional_frame_fit
+    label: Constructional frame fit
+    definition: Fit between a form-value relation and the active constructional, discourse, question-answer, or response-slot frame.
+    proxies:
+      - question-answer frame contrast
+      - licensed paraphrase within same frame
+      - response-slot substitution test
+      - construction-specific repair pattern
+    forbidden_conflations:
+      - semantic recoverability
+      - genre appropriateness
+      - operator repertoire membership
 
   - id: payload_preposition_choice
     label: Payload preposition choice
@@ -305,6 +331,19 @@ upstream_or_mediating:
       - collocational rigidity
       - payload preposition choice
       - raw frequency
+
+  - id: construction_specific_dependency_licensing
+    label: Construction-specific dependency licensing
+    definition: Licensing of a dependency configuration relative to a particular construction, discourse role, or update frame rather than as a global extraction rule.
+    proxies:
+      - wh-question vs relative-clause extraction contrast
+      - no-extraction control interaction
+      - construction-specific gap function
+      - dependency repair pattern
+    forbidden_conflations:
+      - semantic recoverability
+      - processing cost
+      - global island ban
 
   - id: operator_value
     label: Operator value
