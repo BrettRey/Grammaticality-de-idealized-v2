@@ -1,0 +1,8 @@
+item_type,id,expected,runs,unique_labels,majority_label,majority_count,matches_expected,label_counts
+prediction_test,bunch-animate-coca-projection,passed,3,1,passed,3,3,passed:3
+prediction_test,bunch-inanimate-coca-contrast,mixed,3,2,mixed,2,2,mixed:2;passed:1
+prediction_test,majority-coca-portability,passed,3,1,passed,3,3,passed:3
+prediction_test,majority-denominator-omission-audit,passed,3,1,passed,3,3,passed:3
+prediction_test,minority-coca-uninformative,inconclusive,3,2,inconclusive,2,2,failed:1;inconclusive:2
+prediction_test,partitive-qn-coca-targeted-kwic,mixed,3,2,mixed,2,2,mixed:2;passed:1
+card_result,collective-number-transparent-agreement-cgel,survives_as_module,3,2,survives_as_module,2,2,partly_survives:1;survives_as_module:2

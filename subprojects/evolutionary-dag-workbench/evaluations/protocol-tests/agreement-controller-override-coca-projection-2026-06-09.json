@@ -199,8 +199,8 @@
       "prediction": "Partitive/QN people frames should show plural agreement dominance after KWIC filtering, with counter-direction singular raw hits disappearing or being coded as non-target/nonstandard rows.",
       "pass_condition": "The test passes only when the registered positive and counter-direction cells are KWIC-filtered enough to show target plural dominance over licensed target singular agreement.",
       "fail_condition": "The portability claim fails if the singular cells yield licensed target rows at comparable density, or if plural dominance is only a raw-query artifact.",
-      "evidence_status": "passed",
-      "evidence_note": "Targeted KWIC/sample evidence from `data/agr-coca-projection/summary.csv`: `lots of people is` has 0 licensed target singular rows; `lots of people are` has a pre-declared 100-row bounded KWIC sample with 100 target plural rows; the additional filtered positive subset has 63 `plenty of people are` rows and 14 `the rest of the people are` rows. The `lots` positive cell is sample-coded rather than fully filtered, so this remains evidence-trail movement only, not score movement."
+      "evidence_status": "mixed",
+      "evidence_note": "Targeted KWIC/sample evidence from `data/agr-coca-projection/summary.csv`: `lots of people is` has 0 licensed target singular rows; `lots of people are` has a pre-declared 100-row bounded KWIC sample with 100 target plural rows; the additional filtered positive subset has 63 `plenty of people are` rows and 14 `the rest of the people are` rows. The direction is supportive, but critic-verdict variance in `data/critic-variance/summaries/agr-coca-projection-variance-summary.csv` flags the sample-coded high-count `lots` cell as too weak for a clean `passed` label."
     },
     {
       "id": "minority-coca-uninformative",

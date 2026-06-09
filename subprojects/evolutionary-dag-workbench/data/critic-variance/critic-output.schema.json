@@ -1,0 +1,96 @@
+{
+  "type": "object",
+  "required": [
+    "critic_id",
+    "target_evaluation",
+    "overall_score_decision",
+    "overall_stability",
+    "prediction_test_verdicts",
+    "card_result_verdicts",
+    "strongest_instability",
+    "score_movement_allowed",
+    "minimal_change"
+  ],
+  "properties": {
+    "critic_id": {
+      "type": "string"
+    },
+    "target_evaluation": {
+      "type": "string"
+    },
+    "overall_score_decision": {
+      "type": "string",
+      "enum": ["no-score-change", "scope-only", "score-change-proposed"]
+    },
+    "overall_stability": {
+      "type": "string",
+      "enum": ["stable", "unstable", "underdetermined"]
+    },
+    "prediction_test_verdicts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "evidence_status", "confidence", "reason"],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "evidence_status": {
+            "type": "string",
+            "enum": ["passed", "failed", "mixed", "inconclusive", "not-run"]
+          },
+          "confidence": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "reason": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "card_result_verdicts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["phenomenon", "result", "confidence", "reason"],
+        "properties": {
+          "phenomenon": {
+            "type": "string"
+          },
+          "result": {
+            "type": "string",
+            "enum": [
+              "survives_as_module",
+              "partly_survives",
+              "fails",
+              "fails_general_out_of_scope",
+              "exploratory"
+            ]
+          },
+          "confidence": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "reason": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "strongest_instability": {
+      "type": "string"
+    },
+    "score_movement_allowed": {
+      "type": "boolean"
+    },
+    "minimal_change": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

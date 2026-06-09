@@ -129,3 +129,12 @@ Run the scoped-module distinctive-node load-bearing audit with:
 ```bash
 python3 scripts/audit_authorizing_load_bearing.py --output data/module-compression/authorizing-load-bearing.csv
 ```
+
+Run the critic-verdict variance summary for the AGR projection lane with:
+
+```bash
+python3 scripts/summarize_critic_variance.py \
+  evaluations/protocol-tests/agreement-controller-override-coca-projection-2026-06-09.json \
+  data/critic-variance/runs/*.json \
+  --output data/critic-variance/summaries/agr-coca-projection-variance-summary.csv
+```

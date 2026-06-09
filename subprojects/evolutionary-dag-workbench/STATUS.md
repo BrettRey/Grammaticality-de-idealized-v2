@@ -12,7 +12,7 @@ representations about grammaticality. The existing OVMG, detector, operator-stra
 processing-based, and normativity-based models are treated as seed graph families, not as
 conclusions or targets to vindicate.
 
-Fifty-one adversarial passes/synthesis steps have been run. All numeric scores remain zero. Seven
+Fifty-two adversarial passes/synthesis steps have been run. All numeric scores remain zero. Seven
 current modules have `scoped_module` labels tied to protocol-bound or held-out `scope-only`
 evaluations. The original scope-only evaluations now include card-level requirements and activated
 paths. The held-out CGEL evaluations also include card-level requirements and activated paths
@@ -30,7 +30,7 @@ selection-adjacent dimensions only.
 The held-out CGEL evaluations now include machine-readable `prediction_tests` with pass/fail
 conditions; score-change evaluations now require prediction tests.
 Eight held-out CGEL cards have source-checked contrast examples, and the prediction-test inventory
-now records checked evidence statuses: twelve `passed` and one `mixed`.
+now records checked evidence statuses: thirteen `passed`, four `mixed`, and one `inconclusive`.
 No graph has a `general_account` score. The current scoring schema includes `projective_power` and
 `theory_preservation_penalty` so held-out prediction and anti-alignment discipline are visible.
 The Gibson source pass added five processing/dependency cards without changing graph machinery:
@@ -221,13 +221,13 @@ positive subset yields 63 target `plenty of people are` rows and 14 target
 The forty-fourth pass is recorded in
 `notes/agr-coca-lots-people-are-sample-kwic-pass-2026-06-09.md`. A pre-declared 100-row bounded
 KWIC sample from the high-count `lots of people are` cell yielded 100 target plural-agreement rows.
-The partitive/QN people-frame prediction therefore moves from `mixed` to `passed`: the sample/
-filtered evidence is 177 plural target rows versus 0 licensed target singular rows. This is evidence
-movement only, not numeric score movement, because the largest cell is sample-coded rather than
-fully filtered.
+The partitive/QN people-frame prediction therefore moved provisionally from `mixed` to `passed`:
+the sample/filtered evidence was 177 plural target rows versus 0 licensed target singular rows.
+This was evidence movement only, not numeric score movement, because the largest cell was
+sample-coded rather than fully filtered.
 `evaluations/protocol-tests/agreement-controller-override-coca-projection-2026-06-09.json` now
-records the partitive/QN people-frame result as a `passed` prediction test under the pre-declared
-bounded-sample rule.
+records the partitive/QN people-frame result as `mixed` after the later critic-verdict variance
+check.
 The forty-fifth pass is recorded in
 `notes/agr-coca-surface-head-baseline-discriminator-2026-06-09.md` and
 `data/agr-coca-projection/baseline-discriminator.csv`. It makes the baseline comparison explicit:
@@ -276,6 +276,14 @@ The fifty-first pass is recorded in `notes/provisional-node-trim-2026-06-09.md`.
 `context-indexed-dynamic-feedback-candidate` because neither node was used by the module's
 authorizing evaluation or scoped label. The regenerated load-bearing audit now has no
 `not_authorized` distinctive nodes. No score movement follows.
+The fifty-second pass is recorded in
+`notes/critic-verdict-variance-agr-coca-2026-06-09.md`, supported by
+`data/critic-variance/` and `scripts/summarize_critic_variance.py`. Three independent read-only
+Codex critic runs preserved the strongest AGR COCA labels (`bunch` animate, `majority`, and the
+majority denominator audit), but two of three critics downgraded the partitive/QN people-frame test
+from `passed` to `mixed` because the largest positive cell is sample-coded rather than fully
+filtered. The evaluation now records that test as `mixed`. The card-level `survives_as_module`
+label remains, and no graph mutation or score movement follows.
 An internal state-of-search report now summarizes the current scoped-module partition, evaluation
 ladder, the completed transparent-relative Lane A pass, and remaining empirical lanes without
 authorizing score movement.
@@ -385,6 +393,11 @@ construct separation, or held-out projectibility, not by fitting a prior paper.
 - provisional-node trim note in `notes/provisional-node-trim-2026-06-09.md`
 - compression audit data and runner in `data/module-compression/` and
   `scripts/audit_authorizing_load_bearing.py`
+- critic-verdict variance protocol and AGR result note in
+  `notes/critic-verdict-variance-protocol-2026-06-09.md` and
+  `notes/critic-verdict-variance-agr-coca-2026-06-09.md`
+- critic-verdict variance data and scripts in `data/critic-variance/`,
+  `scripts/build_critic_variance_packet.py`, and `scripts/summarize_critic_variance.py`
 - held-out temporal/modal evaluation in `evaluations/protocol-tests/`
 - second held-out temporal-orientation evaluation in `evaluations/protocol-tests/`
 - `DISCOVERY_RULES.md`
@@ -543,8 +556,8 @@ validation.
 
 ## Next Actions
 
-1. Run one critic-verdict variance check by evaluating the same card/protocol several times and
-   logging whether survival labels flip.
+1. If continuing the AGR COCA lane toward score movement, fully filter the high-count
+   `lots of people are` cell or replace it with fully filtered registered partitive/QN cells.
 2. Run the audience/policy pronoun task or independent-relative-`whose` human judgment task if data
    collection is available.
 3. Mutate `TEMP` with a temporal-orientation frame if continuing the temporal lane; keep it distinct
