@@ -15,6 +15,7 @@ This directory is reserved for a confirmatory COCA run testing the `AGR` module.
 - `baseline-discriminator.csv`: compact comparison of the AGR prediction against a simple
   surface-head-number baseline.
 - `false-positive-audit.csv`: false-positive pressure summary over existing coded exact-query rows.
+- `uncertainty-summary.csv`: Wilson-interval summary for the clean AGR discriminator cells.
 - `coded/bunch-animate-kwic-coding.csv`: row-level coding for the animate `bunch` tranche.
 - `coded/bunch-inanimate-kwic-coding.csv`: row-level coding for the inanimate `bunch` tranche.
 - `coded/majority-minority-kwic-coding.csv`: row-level coding for the majority/minority tranche.
@@ -110,6 +111,11 @@ False-positive pressure is low in the animate `bunch`, `majority`, and selected 
 rows. A bounded 98-row denominator sample for `the majority of people` shows that the direct
 `are/is` strings miss additional agreement-bearing opportunities, but the omitted opportunities are
 plural rather than singular: 37 omitted plural rows and 0 omitted singular rows.
+
+`uncertainty-summary.csv` reports 95% Wilson intervals for plural share among target agreement rows.
+The tightest current discriminator is `majority` (105:0 exact rows; 142:0 when augmented by the
+bounded omission audit). Animate `bunch` is also strong (71:1), while `the rest of the people` is
+directionally clean but wide because it has only 14 target rows.
 
 Do not treat raw COCA frequency as licensing. The lane measures production/attestation over
 opportunity sets and uses KWIC filtering to distinguish genuine agreement realizations from query

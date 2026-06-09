@@ -12,7 +12,7 @@ representations about grammaticality. The existing OVMG, detector, operator-stra
 processing-based, and normativity-based models are treated as seed graph families, not as
 conclusions or targets to vindicate.
 
-Forty-six adversarial passes/synthesis steps have been run. All numeric scores remain zero. Seven
+Forty-seven adversarial passes/synthesis steps have been run. All numeric scores remain zero. Seven
 current modules have `scoped_module` labels tied to protocol-bound or held-out `scope-only`
 evaluations. The original scope-only evaluations now include card-level requirements and activated
 paths. The held-out CGEL evaluations also include card-level requirements and activated paths
@@ -243,6 +243,13 @@ for `the majority of people` found 37 omitted plural-agreement opportunities and
 opportunities, so the direct `are/is` query undercounts the plural direction but does not reverse it.
 The COCA projection evaluation now includes this as a passed measurement-audit prediction test. No
 score movement follows.
+The forty-seventh pass is recorded in `notes/agr-coca-uncertainty-summary-2026-06-09.md` and
+`data/agr-coca-projection/uncertainty-summary.csv`. It reports 95% Wilson intervals for plural share
+among target agreement rows in the clean discriminator cells. `Majority` is now the strongest
+non-`bunch` discriminator: 105:0 exact target rows with a lower Wilson bound of 0.965, and 142:0
+when augmented by the omission audit. Animate `bunch` remains strong at 71:1 with lower bound 0.925.
+`The rest of the people` is directionally clean at 14:0 but wide, with lower bound 0.785. No score
+movement follows.
 An internal state-of-search report now summarizes the current scoped-module partition, evaluation
 ladder, the completed transparent-relative Lane A pass, and remaining empirical lanes without
 authorizing score movement.

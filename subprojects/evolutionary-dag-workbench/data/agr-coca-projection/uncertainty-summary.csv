@@ -1,0 +1,5 @@
+summary_id,cell_family,scope,plural_target_rows,singular_target_rows,total_target_rows,plural_share,wilson_95_low,wilson_95_high,interpretation,notes
+animate_bunch_exact,bunch-animate-confirmatory,full exact-query KWIC coding,71,1,72,0.986,0.925,0.998,strong_directional_result,Surface-head singular baseline is strongly pressured; lower interval bound remains well above parity.
+majority_exact,majority-minority-confirmatory,full exact-query KWIC coding,105,0,105,1.000,0.965,1.000,tight_directional_result,Best exact-query non-bunch discriminator.
+majority_audit_augmented,majority-minority-confirmatory,exact rows plus 37 omitted plural opportunities from bounded denominator sample,142,0,142,1.000,0.974,1.000,tight_audit_augmented_result,Direct are/is strings undercount plural opportunities but do not reveal omitted singular competitors.
+rest_people_exact,partitive-agreement-followup,full exact-query KWIC coding for the small rest people cell,14,0,14,1.000,0.785,1.000,clean_but_wide_small_cell,Direction is clean but the interval is wide; useful as a small supporting discriminator rather than a main estimate.
