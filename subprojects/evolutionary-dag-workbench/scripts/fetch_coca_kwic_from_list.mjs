@@ -23,6 +23,7 @@ Options:
   --hits N              List result rows, default 100
   --allow-partial       Save a bounded KWIC sample when the frame exposes fewer than ENTRIES
   --min-rows N          Minimum rows required with --allow-partial, default 1
+  --all-pages           Follow KWIC page links and combine all visible result pages
   --headed              Show browser
 `);
   process.exit(exitCode);
@@ -33,7 +34,7 @@ function parseArgs(argv) {
   for (let i = 0; i < argv.length; i += 1) {
     const arg = argv[i];
     if (arg === "--help") usage(0);
-    if (arg === "--headed" || arg === "--allow-partial") {
+    if (arg === "--headed" || arg === "--allow-partial" || arg === "--all-pages") {
       out[arg.slice(2)] = true;
       continue;
     }
@@ -237,6 +238,84 @@ async function waitForKwicData(frame, timeoutMs = 45000, { allowPartial = false,
   throw new Error(`Timed out waiting for complete KWIC rows: got ${last.rows.length}, expected ${expected}.`);
 }
 
+async function waitForKwicPageData(frame, timeoutMs = 45000) {
+  const started = Date.now();
+  let last = null;
+  while (Date.now() - started < timeoutMs) {
+    const data = await extractFrame(frame);
+    const rows = rowsFromKwicTables(data.tables);
+    const expected = expectedEntries(data.text);
+    last = { ...data, rows, expected };
+    assertUsable(data.text);
+    if (rows.length > 0 || /Sorry, there are no matching records/i.test(data.text)) {
+      return last;
+    }
+    await frame.page().waitForTimeout(1000);
+  }
+  if (!last) throw new Error("Timed out waiting for KWIC page data.");
+  throw new Error("Timed out waiting for KWIC page rows.");
+}
+
+function kwicPageLinks(data) {
+  const links = [];
+  for (const anchor of data.anchors || []) {
+    let url;
+    try {
+      url = new URL(anchor.href);
+    } catch {
+      continue;
+    }
+    if (!/\/x3\.asp$/i.test(url.pathname)) continue;
+    const page = url.searchParams.get("p");
+    if (page == null || !/^\d+$/.test(page)) continue;
+    links.push({ page: Number(page), href: anchor.href });
+  }
+  links.sort((left, right) => left.page - right.page || left.href.localeCompare(right.href));
+  const seen = new Set();
+  return links.filter((link) => {
+    if (seen.has(link.href)) return false;
+    seen.add(link.href);
+    return true;
+  });
+}
+
+function combineKwicPages(pages) {
+  const rows = [];
+  const seen = new Set();
+  for (const page of pages) {
+    for (const row of page.rows || []) {
+      const key = [
+        row.index,
+        row.text_id,
+        row.year,
+        row.genre,
+        row.source,
+        row.text
+      ].join("\u001f");
+      if (seen.has(key)) continue;
+      seen.add(key);
+      rows.push(row);
+    }
+  }
+  rows.sort((left, right) => Number(left.index) - Number(right.index));
+  const expected = pages.find((page) => Number.isFinite(page.expected))?.expected ?? null;
+  return {
+    url: pages[0]?.url || "",
+    text: pages[0]?.text || "",
+    tables: pages.flatMap((page) => page.tables || []),
+    rows,
+    partial: expected != null ? rows.length < expected : false,
+    expected,
+    pages: pages.map((page) => ({
+      url: page.url,
+      text: page.text,
+      tables: page.tables,
+      rows: page.rows,
+      expected: page.expected
+    }))
+  };
+}
+
 function assertUsable(text) {
   if (/You need to be registered to use the corpus/i.test(text)) {
     throw new Error("English-Corpora.org session is not authenticated.");
@@ -252,7 +331,7 @@ function assertUsable(text) {
   }
 }
 
-async function fetchKwic({ corpus, query, output, hits, headed, allowPartial, minRows }) {
+async function fetchKwic({ corpus, query, output, hits, headed, allowPartial, minRows, allPages }) {
   await loadEnvFiles();
   const context = await chromium.launchPersistentContext(profileDir(), {
     headless: !headed,
@@ -297,7 +376,18 @@ async function fetchKwic({ corpus, query, output, hits, headed, allowPartial, mi
     await resultLink.click({ timeout: 10000 });
 
     const x3 = await waitForResultFrame(page, "x3");
-    const kwic = await waitForKwicData(x3, 45000, { allowPartial, minRows });
+    let kwic;
+    if (allPages) {
+      const firstPage = await waitForKwicPageData(x3, 45000);
+      const pages = [firstPage];
+      for (const link of kwicPageLinks(firstPage)) {
+        await x3.goto(link.href, { waitUntil: "domcontentloaded", timeout: 30000 });
+        pages.push(await waitForKwicPageData(x3, 45000));
+      }
+      kwic = combineKwicPages(pages);
+    } else {
+      kwic = await waitForKwicData(x3, 45000, { allowPartial, minRows });
+    }
     assertUsable(kwic.text);
 
     const result = {
@@ -344,7 +434,8 @@ async function main() {
     hits,
     headed: Boolean(args.headed),
     allowPartial: Boolean(args["allow-partial"]),
-    minRows
+    minRows,
+    allPages: Boolean(args["all-pages"])
   });
 }
 

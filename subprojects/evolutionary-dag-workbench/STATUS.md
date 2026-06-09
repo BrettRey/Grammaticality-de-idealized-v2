@@ -12,7 +12,7 @@ representations about grammaticality. The existing OVMG, detector, operator-stra
 processing-based, and normativity-based models are treated as seed graph families, not as
 conclusions or targets to vindicate.
 
-Fifty-two adversarial passes/synthesis steps have been run. All numeric scores remain zero. Seven
+Fifty-three adversarial passes/synthesis steps have been run. All numeric scores remain zero. Seven
 current modules have `scoped_module` labels tied to protocol-bound or held-out `scope-only`
 evaluations. The original scope-only evaluations now include card-level requirements and activated
 paths. The held-out CGEL evaluations also include card-level requirements and activated paths
@@ -284,6 +284,12 @@ majority denominator audit), but two of three critics downgraded the partitive/Q
 from `passed` to `mixed` because the largest positive cell is sample-coded rather than fully
 filtered. The evaluation now records that test as `mixed`. The card-level `survives_as_module`
 label remains, and no graph mutation or score movement follows.
+The fifty-third pass is recorded in
+`notes/agr-coca-lots-full-filter-attempt-2026-06-09.md`. It adds `--all-pages` support to
+`scripts/fetch_coca_kwic_from_list.mjs` so COCA KWIC page links can be followed and combined when
+the site exposes paginated result pages. A live full-filter attempt for `lots of people are` did not
+complete because COCA returned server-error/timeout states. No all-page artifact, evidence-label
+upgrade, graph mutation, or score movement follows.
 An internal state-of-search report now summarizes the current scoped-module partition, evaluation
 ladder, the completed transparent-relative Lane A pass, and remaining empirical lanes without
 authorizing score movement.
@@ -388,6 +394,8 @@ construct separation, or held-out projectibility, not by fitting a prior paper.
   `notes/agr-coca-vertical-slice-report-2026-06-09.md` and
   `notes/agr-coca-ablation-test-2026-06-09.md`
 - `AGR` ablation runner in `scripts/run_agr_ablation.py`
+- `AGR` `lots of people are` full-filter attempt note in
+  `notes/agr-coca-lots-full-filter-attempt-2026-06-09.md`
 - scoped-module load-bearing compression audit in
   `notes/scoped-module-load-bearing-audit-2026-06-09.md`
 - provisional-node trim note in `notes/provisional-node-trim-2026-06-09.md`
@@ -556,8 +564,8 @@ validation.
 
 ## Next Actions
 
-1. If continuing the AGR COCA lane toward score movement, fully filter the high-count
-   `lots of people are` cell or replace it with fully filtered registered partitive/QN cells.
+1. Retry the `lots of people are` all-page KWIC fetch after the COCA session/rate state clears; if
+   it remains blocked, replace the disputed partitive/QN cell with fully filtered registered cells.
 2. Run the audience/policy pronoun task or independent-relative-`whose` human judgment task if data
    collection is available.
 3. Mutate `TEMP` with a temporal-orientation frame if continuing the temporal lane; keep it distinct

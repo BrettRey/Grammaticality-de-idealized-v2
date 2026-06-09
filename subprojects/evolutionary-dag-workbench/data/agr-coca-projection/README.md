@@ -60,6 +60,20 @@ The runner defaults to a delay between searches to respect English-Corpora.org's
 otherwise `ecorg query` will use configured private credentials and fail if authentication is not
 available.
 
+For paginated KWIC cells exposed through a clicked list-result frame, the list-click fetcher can
+combine visible result pages:
+
+```bash
+node scripts/fetch_coca_kwic_from_list.mjs \
+  --query 'lots of people are' \
+  --all-pages \
+  --output data/agr-coca-projection/raw/partitive-agreement-followup/kwic/01-lots-of-people-are-all-pages.json
+```
+
+The first live `lots of people are` full-filter attempt is recorded in
+`notes/agr-coca-lots-full-filter-attempt-2026-06-09.md`. COCA returned server-error/timeout states,
+so no all-page artifact or evidence-label upgrade is recorded yet.
+
 Current completed tranche:
 
 - `bunch-animate-confirmatory`, list-result counts plus KWIC filtering via result-row clicks.
