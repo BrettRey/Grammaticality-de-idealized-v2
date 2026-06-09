@@ -26,6 +26,25 @@ ideology, and community licensing without letting a correction norm define the t
 - coordinated pronoun in formal correctness judgment;
 - explicit school-rule or editor framing.
 
+## Source-Checked Contrast Examples
+
+- Non-coordinate baseline: a single pronoun in subject position contrasts with a single pronoun in
+  object or prepositional-complement position.
+- Coordination-sensitive standard pattern: a coordinated pronoun follows the case that would be
+  expected if one pronoun replaced the whole coordination.
+- Stigmatized production pattern: accusative pronouns appear in subject coordinations in informal
+  or non-standard varieties.
+- Frequent condemned pattern: final-coordinate nominatives appear in object or prepositional
+  environments, with `between you and I` as the familiar usage-advice case.
+- Formal correction frame: school or usage-manual framing treats some coordination patterns as
+  errors even where CGEL treats the final-coordinate `I` pattern as broadly established.
+
+## Source-Checked Evidence
+
+Checked against `cgel-case`, especially the coordination subsection. The source supports the
+prediction that coordination creates a production/correction split and that prescriptive correction
+should not be treated as direct evidence of global non-licensing.
+
 ## Candidate Nodes
 
 - standard_language_ideology

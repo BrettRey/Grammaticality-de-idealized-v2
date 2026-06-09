@@ -28,6 +28,18 @@ Protocol-bound tests are stored as JSON so critique results are not only prose n
       ]
     }
   ],
+  "prediction_tests": [
+    {
+      "id": "regional-naturalness-prediction",
+      "phenomenon": "needs-washed",
+      "contrast_cell": "regional-naturalness",
+      "activated_paths": ["ideology-to-acceptability"],
+      "prediction": "Free text naming the pre-registered contrast-level forecast.",
+      "pass_condition": "Free text naming what would count as a pass.",
+      "fail_condition": "Free text naming what would count as a failure.",
+      "evidence_status": "not-run"
+    }
+  ],
   "cards": [
     {
       "phenomenon": "needs-washed",
@@ -85,6 +97,7 @@ Protocol-bound tests are stored as JSON so critique results are not only prose n
 - `cards`
 
 `activated_paths` is optional unless `score_decision` is `score-change-proposed`.
+`prediction_tests` is optional unless `score_decision` is `score-change-proposed`.
 
 ## Status Values
 
@@ -138,6 +151,39 @@ Allowed path readings:
 
 If `expected_path_reading` is present, the validator compares it with the reading computed from the
 target graph's `relation_profile` values.
+
+## Prediction Tests
+
+Prediction tests make contrast-level pass/fail commitments explicit. Each prediction test must
+include:
+
+- `id`
+- `phenomenon`
+- `contrast_cell`
+- `activated_paths`
+- `prediction`
+- `pass_condition`
+- `fail_condition`
+- `evidence_status`
+
+The `phenomenon` must be one of the evaluation's cards. The `contrast_cell` must be present in that
+card. Each `activated_paths` item must resolve to an activated path in the same evaluation, and the
+referenced path must belong to the same phenomenon and contrast cell as the prediction test.
+
+Allowed `evidence_status` values:
+
+- `not-run`
+- `passed`
+- `failed`
+- `mixed`
+- `inconclusive`
+
+An optional `evidence_note` may record what source, card, corpus slice, or elicitation result was
+checked. Use `evidence_status: not-run` until some evidence has actually been inspected.
+
+`score-change-proposed` evaluations require `prediction_tests`. This ensures that numeric score
+movement depends on explicit held-out or protocol-bound pass/fail commitments, not just on
+activated-path scaffolding.
 
 ## Card Requirements
 

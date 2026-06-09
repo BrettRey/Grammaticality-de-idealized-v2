@@ -110,6 +110,60 @@
       ]
     }
   ],
+  "prediction_tests": [
+    {
+      "id": "case-formal-correction-prediction",
+      "phenomenon": "case-in-coordination-cgel",
+      "contrast_cell": "formal-correction",
+      "activated_paths": [
+        "case-correction-to-attribution"
+      ],
+      "prediction": "In a formal correction frame, standard ideology should increase condemnation, correction probability, and grammaticality attribution without itself proving low community licensing.",
+      "pass_condition": "Formal-correction evidence shows stronger correction or attribution than informal production, while the analysis keeps correction distinct from community licensing.",
+      "fail_condition": "The graph must fail if school/editorial correction is treated as direct evidence of global non-licensing, or if no task/norm-centre contrast is predicted.",
+      "evidence_status": "passed",
+      "evidence_note": "Checked against the enriched case-in-coordination card and cgel-case. The source supports coordination-sensitive production/correction splits and the need to keep correction distinct from licensing."
+    },
+    {
+      "id": "pronoun-policy-framing-prediction",
+      "phenomenon": "pronoun-personhood-proform-gender",
+      "contrast_cell": "policy-or-identity-framing",
+      "activated_paths": [
+        "pronoun-social-framing-to-attribution"
+      ],
+      "prediction": "Identity or policy framing should perturb reported acceptability and attribution through social-indexical value, while leaving audience design and reference tracking under-specified.",
+      "pass_condition": "The graph passes only as a partial module if social framing shifts acceptability or attribution without claiming to model reference-tracking success.",
+      "fail_condition": "The graph fails if it predicts pronoun reference success, audience accommodation, or feature alignment despite lacking those constructs.",
+      "evidence_status": "mixed",
+      "evidence_note": "Checked against enriched pronoun/personhood card and CGEL pronoun/gender sections. CGEL supports personhood and social-value contrasts, but the policy/audience-design cell still needs local paper or task evidence."
+    },
+    {
+      "id": "fragment-genre-prediction",
+      "phenomenon": "nonfinite-verbless-clause-boundaries-cgel",
+      "contrast_cell": "licensed-fragment-genre",
+      "activated_paths": [
+        "fragment-genre-to-attribution"
+      ],
+      "prediction": "A fragment-licensed genre should raise register/genre appropriateness, reported acceptability, and attribution relative to full-sentence correctness framing.",
+      "pass_condition": "Genre-local contexts improve acceptability or attribution without forcing a general full-sentence licensing claim.",
+      "fail_condition": "The graph fails if it predicts identical status for genre-licensed fragments and formal full-sentence tasks.",
+      "evidence_status": "passed",
+      "evidence_note": "Checked against enriched nonfinite/verbless card and cgel-nonfinite-verbless. The source supports nonfinite and verbless clause licensing outside canonical finite-sentence framing."
+    },
+    {
+      "id": "negation-standard-correction-prediction",
+      "phenomenon": "negation-polarity-items-cgel",
+      "contrast_cell": "standard-correction-of-dialectal-negative",
+      "activated_paths": [
+        "negation-standard-correction-to-attribution"
+      ],
+      "prediction": "Standard correction of dialectal negative patterns should be captured as ideology/correction pressure, while polarity licensing remains outside the graph's scope.",
+      "pass_condition": "The graph passes as out-of-scope if it predicts correction-driven attribution while refusing to model polarity licensing itself.",
+      "fail_condition": "The graph fails if it treats standard condemnation as a polarity-licensing diagnosis or claims coverage for the licensed polarity environment.",
+      "evidence_status": "mixed",
+      "evidence_note": "Checked against enriched negation/polarity card and cgel-negation-polarity. CGEL supports polarity licensing and recoverability splits; dialect-standard correction needs an additional variety/source check."
+    }
+  ],
   "cards": [
     {
       "phenomenon": "case-in-coordination-cgel",

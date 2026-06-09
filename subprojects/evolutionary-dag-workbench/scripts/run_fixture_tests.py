@@ -389,6 +389,15 @@ TESTS = [
         expected_output="does not match computed path reading",
     ),
     FixtureTest(
+        name="evaluation rejects prediction test missing activated path",
+        command=[
+            "scripts/validate_evaluation.py",
+            rel("tests/fixtures/evaluations/invalid/prediction-test-missing-path.json"),
+        ],
+        expected_returncode=1,
+        expected_output="activated path reference 'no-such-path' does not exist",
+    ),
+    FixtureTest(
         name="evaluation rejects score-change without activated paths",
         command=[
             "scripts/validate_evaluation.py",
@@ -396,6 +405,15 @@ TESTS = [
         ],
         expected_returncode=1,
         expected_output="score-change-proposed evaluations require activated_paths",
+    ),
+    FixtureTest(
+        name="evaluation rejects score-change without prediction tests",
+        command=[
+            "scripts/validate_evaluation.py",
+            rel("tests/fixtures/evaluations/invalid/score-change-missing-prediction-tests.json"),
+        ],
+        expected_returncode=1,
+        expected_output="score-change-proposed evaluations require prediction_tests",
     ),
     FixtureTest(
         name="evaluation rejects score-change unprofiled target graph",

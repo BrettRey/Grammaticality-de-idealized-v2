@@ -38,6 +38,13 @@ STATUSES = {
     "archived",
 }
 SCORE_CHANGE_DECISION = "score-change-proposed"
+PREDICTION_EVIDENCE_STATUSES = {
+    "not-run",
+    "passed",
+    "failed",
+    "mixed",
+    "inconclusive",
+}
 PATH_READINGS = {
     "positive",
     "negative",
@@ -313,6 +320,29 @@ def contrast_cell_index(cards: object) -> dict[str, set[str]]:
     return index
 
 
+def activated_path_index(paths: object) -> dict[str, tuple[str, str]]:
+    index: dict[str, tuple[str, str]] = {}
+    if not isinstance(paths, list):
+        return index
+
+    for activated_path in paths:
+        if not isinstance(activated_path, dict):
+            continue
+        path_id = activated_path.get("id")
+        phenomenon = activated_path.get("phenomenon")
+        contrast_cell = activated_path.get("contrast_cell")
+        if (
+            isinstance(path_id, str)
+            and path_id.strip()
+            and isinstance(phenomenon, str)
+            and phenomenon.strip()
+            and isinstance(contrast_cell, str)
+            and contrast_cell.strip()
+        ):
+            index[path_id] = (phenomenon, contrast_cell)
+    return index
+
+
 def check_activated_path_edge(
     edge: object,
     path: Path,
@@ -482,6 +512,97 @@ def check_activated_paths(data: dict, path: Path, target_graph: dict | None) -> 
     return errors
 
 
+def check_prediction_tests(data: dict, path: Path) -> list[str]:
+    prediction_tests = data.get("prediction_tests")
+    requires_tests = data.get("score_decision") == SCORE_CHANGE_DECISION
+
+    if prediction_tests is None:
+        if requires_tests:
+            return [f"{path}: score-change-proposed evaluations require prediction_tests"]
+        return []
+
+    if not isinstance(prediction_tests, list) or not prediction_tests:
+        return [f"{path}: prediction_tests must be a non-empty list when present"]
+
+    errors: list[str] = []
+    cells_by_phenomenon = contrast_cell_index(data.get("cards"))
+    paths_by_id = activated_path_index(data.get("activated_paths"))
+
+    for test_index, prediction_test in enumerate(prediction_tests, start=1):
+        prefix = f"{path}: prediction test {test_index}"
+        if not isinstance(prediction_test, dict):
+            errors.append(f"{prefix} must be an object")
+            continue
+
+        for key in (
+            "id",
+            "phenomenon",
+            "contrast_cell",
+            "prediction",
+            "pass_condition",
+            "fail_condition",
+            "evidence_status",
+        ):
+            value = prediction_test.get(key)
+            if not isinstance(value, str) or not value.strip():
+                errors.append(f"{prefix}: missing non-empty string field {key!r}")
+
+        evidence_status = prediction_test.get("evidence_status")
+        if isinstance(evidence_status, str) and evidence_status.strip():
+            if evidence_status not in PREDICTION_EVIDENCE_STATUSES:
+                allowed = ", ".join(sorted(PREDICTION_EVIDENCE_STATUSES))
+                errors.append(
+                    f"{prefix}: evidence_status {evidence_status!r} is not allowed; "
+                    f"expected one of {allowed}"
+                )
+
+        phenomenon = prediction_test.get("phenomenon")
+        contrast_cell = prediction_test.get("contrast_cell")
+        valid_cell_reference = False
+        if isinstance(phenomenon, str) and phenomenon.strip():
+            if phenomenon not in cells_by_phenomenon:
+                errors.append(
+                    f"{prefix}: phenomenon {phenomenon!r} is not present in evaluation cards"
+                )
+            elif isinstance(contrast_cell, str) and contrast_cell.strip():
+                if contrast_cell not in cells_by_phenomenon[phenomenon]:
+                    errors.append(
+                        f"{prefix}: contrast_cell {contrast_cell!r} is not present "
+                        f"for phenomenon {phenomenon!r}"
+                    )
+                else:
+                    valid_cell_reference = True
+
+        activated_path_refs = prediction_test.get("activated_paths")
+        if not isinstance(activated_path_refs, list) or not activated_path_refs:
+            errors.append(f"{prefix}: activated_paths must be a non-empty list")
+            continue
+
+        for ref_index, path_ref in enumerate(activated_path_refs, start=1):
+            if not isinstance(path_ref, str) or not path_ref.strip():
+                errors.append(
+                    f"{prefix}: activated_paths item {ref_index} must be a non-empty string"
+                )
+                continue
+
+            path_context = paths_by_id.get(path_ref)
+            if path_context is None:
+                errors.append(
+                    f"{prefix}: activated path reference {path_ref!r} does not exist "
+                    "in activated_paths"
+                )
+                continue
+
+            if valid_cell_reference and path_context != (phenomenon, contrast_cell):
+                errors.append(
+                    f"{prefix}: activated path reference {path_ref!r} belongs to "
+                    f"{path_context[0]!r}/{path_context[1]!r}, not "
+                    f"{phenomenon!r}/{contrast_cell!r}"
+                )
+
+    return errors
+
+
 def check_held_out_from(data: dict, path: Path) -> list[str]:
     status = data.get("status")
     if status != "held-out":
@@ -550,6 +671,7 @@ def validate(path: Path) -> list[str]:
             errors.extend(check_card(card, path, index, target_graph))
 
     errors.extend(check_activated_paths(data, path, target_graph))
+    errors.extend(check_prediction_tests(data, path))
 
     return errors
 

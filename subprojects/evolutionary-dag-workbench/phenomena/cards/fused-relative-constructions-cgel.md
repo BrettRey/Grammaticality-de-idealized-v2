@@ -25,6 +25,24 @@ than converted directly into ungrammaticality.
 - low-frequency literary or formal case;
 - paraphrase/reformulation competitor available in the same slot.
 
+## Source-Checked Contrast Examples
+
+- Ordinary fused-relative baseline: fused relatives function as phrases rather than clauses in the
+  relevant diagnostics.
+- Relative/interrogative contrast: similar surface forms can be fused relatives or open
+  interrogatives depending on constructional function.
+- Preposition contrast: a fused relative can differ from an integrated relative in whether a
+  preposition can be fronted.
+- Reduction contrast: open interrogatives can reduce in ways fused relatives cannot.
+- Restricted-word contrast: several wh forms occur in fused relatives only under special
+  restrictions, while `-ever` forms are freer in fused relatives.
+
+## Source-Checked Evidence
+
+Checked against `cgel-fused-relatives`. The source supports constructional-function and
+competitor/paraphrase contrasts. It does not by itself settle low-frequency thresholds, so rarity
+and transparent-relative projectibility remain inconclusive until opportunity evidence is added.
+
 ## Candidate Nodes
 
 - constructional_analogy

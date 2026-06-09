@@ -24,6 +24,25 @@ negative meaning, polarity form, dialect licensing, and standard condemnation to
 - negative concord or related dialectal pattern;
 - standard-language correction of a dialect-licensed negative pattern.
 
+## Source-Checked Contrast Examples
+
+- Licensed NPI baseline: items such as negative-oriented `any` occur in negative, interrogative, or
+  other non-affirmative contexts.
+- Unlicensed-environment contrast: the same item can be unacceptable in a plain affirmative context
+  even when a hearer can recover the intended meaning.
+- Sense split: forms such as `any` can have a free-choice sense that is not the same polarity item,
+  so form identity alone is not licensing.
+- Idiom contrast: a phrase can retain negative meaning as an idiom even when the original polarity
+  environment has changed.
+- Standardness contrast: CGEL's polarity section supports the licensing-environment distinction; a
+  separate dialect or usage source is still needed for a strong negative-concord correction cell.
+
+## Source-Checked Evidence
+
+Checked against `cgel-negation-polarity`. The source strongly supports polarity licensing and the
+recoverability/licensing split. The dialect-standard correction cell remains partly source-backed
+rather than fully checked by CGEL alone.
+
 ## Candidate Nodes
 
 - operator_value

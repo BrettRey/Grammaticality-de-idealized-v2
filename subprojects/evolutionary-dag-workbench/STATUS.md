@@ -12,7 +12,7 @@ representations about grammaticality. The existing OVMG, detector, operator-stra
 processing-based, and normativity-based models are treated as seed graph families, not as
 conclusions or targets to vindicate.
 
-Thirteen adversarial passes/synthesis steps have been run. All numeric scores remain zero. Four
+Fifteen adversarial passes/synthesis steps have been run. All numeric scores remain zero. Four
 current modules have `scoped_module` labels tied to protocol-bound evaluations. The original
 scope-only evaluations now include card-level requirements and activated paths. Both held-out CGEL
 evaluations also include card-level requirements and activated paths without authorizing score
@@ -26,6 +26,10 @@ production/condemnation/attribution split, while `CAT` is out of scope.
 The fused-head NP pass also did not justify a new graph: `OPG` covers the core constructional
 support/recoverability split, while `CAT` and `SEL` partly cover category/function and
 selection-adjacent dimensions only.
+The held-out CGEL evaluations now include machine-readable `prediction_tests` with pass/fail
+conditions; score-change evaluations now require prediction tests.
+Six held-out CGEL cards have source-checked contrast examples, and the held-out prediction tests
+now record checked evidence statuses: three `passed`, two `mixed`, and one `inconclusive`.
 No graph has a `general_account` score. The current scoring schema includes `projective_power` and
 `theory_preservation_penalty` so held-out prediction and anti-alignment discipline are visible.
 
@@ -107,6 +111,9 @@ construct separation, or held-out projectibility, not by fitting a prior paper.
 - uptake/operator boundary synthesis in `notes/eleventh-adversarial-pass-synthesis-2026-06-08.md`
 - frequent-condemned-form synthesis in `notes/twelfth-adversarial-pass-synthesis-2026-06-08.md`
 - fused-head NP synthesis in `notes/thirteenth-adversarial-pass-synthesis-2026-06-08.md`
+- prediction-test synthesis in `notes/fourteenth-adversarial-pass-synthesis-2026-06-08.md`
+- source-backed prediction evidence synthesis in
+  `notes/fifteenth-adversarial-pass-synthesis-2026-06-08.md`
 - coverage/discriminator matrix in `notes/coverage-discriminator-matrix-2026-06-08.md`
 - protocol-bound evaluation schema and exploratory evaluations in `evaluations/`
 - held-out CGEL/local-correction evaluations in `evaluations/protocol-tests/`
@@ -177,20 +184,22 @@ The evaluation validator checks:
 - `score-change-proposed` evaluations include activated paths whose edges have relation profiles.
 - activated paths with `expected_path_reading` match the path reading computed from relation
   profiles; score-change paths require an expected reading.
+- prediction tests, when present, resolve to a phenomenon card, contrast cell, and activated path
+  or paths from the same evaluation.
+- `score-change-proposed` evaluations include prediction tests with explicit pass/fail conditions.
 
 The fixture runner checks positive and negative cases for both graph linting and evaluation
 validation.
 
 ## Next Actions
 
-1. Enrich the source-backed cards with concrete contrast-cell examples and data pointers.
-2. Convert activated-path readings into explicit pass/fail predictions for held-out contrast
-   cells.
-3. Test whether `OPG`, `CAT`, and `SEL` stay complementary on richer fused-construction cards before
+1. Add data pointers for the unresolved prediction-test cells: pronoun policy/audience design,
+   dialectal negative correction, and rare transparent-relative opportunity thresholds.
+2. Test whether `OPG`, `CAT`, and `SEL` stay complementary on richer fused-construction cards before
    adding any fused-head-specific graph.
-4. Calibrate scoped-module score magnitudes after at least one held-out or parameterized evaluation
+3. Calibrate scoped-module score magnitudes after at least one held-out or parameterized evaluation
    pass.
-5. Expand `phenomena/cards/` toward 40-100 cards only after the current representation classes stop
+4. Expand `phenomena/cards/` toward 40-100 cards only after the current representation classes stop
    shifting every pass.
-6. Only after the construct inventory stabilizes, consider whether `pgmpy`, NOTEARS-style methods,
+5. Only after the construct inventory stabilizes, consider whether `pgmpy`, NOTEARS-style methods,
    or empirical causal discovery are useful.

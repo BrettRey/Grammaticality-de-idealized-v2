@@ -25,6 +25,26 @@ social-indexical value and ideological correction, without denying that they can
 - personified or de-personified non-human referent;
 - policy- or ideology-framed pronoun judgment.
 
+## Source-Checked Contrast Examples
+
+- Pro-form baseline: a pronoun or other pro-form can stand in for an antecedent of a matching or
+  recoverable category, but the category match is not always simple.
+- Person-form distinction: a 3rd-person form can be used for speaker or addressee reference in
+  special contexts, showing that person feature and discourse reference are distinct.
+- Gender compatibility: a pronoun can encode a property not encoded by the antecedent, so agreement
+  is often compatibility rather than complete feature identity.
+- Personification contrast: non-human referents such as countries, ships, cars, and animals can
+  receive different pronouns depending on construal, empathy, or social stance.
+- De-personhood contrast: `it` with a human baby can be licensed in some contexts but can also carry
+  a dehumanizing or affectively marked value.
+
+## Source-Checked Evidence
+
+Checked against `cgel-pronouns` and the CGEL gender/agreement section. The source supports the
+separation among reference tracking, grammatical form, gender/personhood compatibility, and
+social-indexical value. The policy/audience-design part of the card still needs local paper or
+task-specific evidence before it can count as fully passed.
+
 ## Candidate Nodes
 
 - operator_value

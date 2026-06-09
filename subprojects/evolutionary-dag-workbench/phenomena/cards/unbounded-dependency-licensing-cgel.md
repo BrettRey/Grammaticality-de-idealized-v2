@@ -25,6 +25,24 @@ raw-frequency reduction.
 - high-opportunity environment with a stable competitor construction;
 - low-opportunity environment where absence is less probative.
 
+## Source-Checked Contrast Examples
+
+- Licensed wh-relative baseline: an unbounded dependency links a prenuclear wh element to an
+  anaphoric gap, with no fixed upper bound on embedding depth.
+- Licensed open-interrogative baseline: an interrogative phrase can similarly link to a gap and
+  supply the variable whose value the answer provides.
+- Required-gap contrast: in the relevant construction, the wh element requires the associated gap;
+  filling the gap with an ordinary NP breaks the construction.
+- Function-constraint contrast: some semantically recoverable gaps are not licensed because the
+  gap function is not among the permitted dependency functions.
+- Repair competitor contrast: CGEL gives repair forms that turn an unlicensed gap position into a
+  licensed dependency configuration.
+
+## Source-Checked Evidence
+
+Checked against `cgel-unbounded-dependencies`. The source supports the prediction that
+recoverability is not enough for licensing and that licensed competitor constructions matter.
+
 ## Candidate Nodes
 
 - operator_value

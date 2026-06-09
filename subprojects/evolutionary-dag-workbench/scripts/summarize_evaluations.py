@@ -75,6 +75,23 @@ def summarize(path: Path) -> list[str]:
                 f"reading={reading}"
             )
 
+    prediction_tests = data.get("prediction_tests")
+    if isinstance(prediction_tests, list) and prediction_tests:
+        lines.append(f"  prediction_tests: {len(prediction_tests)}")
+        for prediction_test in prediction_tests:
+            if not isinstance(prediction_test, dict):
+                continue
+            test_id = prediction_test.get("id", "<missing>")
+            phenomenon = prediction_test.get("phenomenon", "<missing>")
+            cell = prediction_test.get("contrast_cell", "<missing>")
+            status = prediction_test.get("evidence_status", "<missing>")
+            path_refs = prediction_test.get("activated_paths", [])
+            path_count = len(path_refs) if isinstance(path_refs, list) else 0
+            lines.append(
+                f"    - {test_id}: {phenomenon}/{cell}; paths={path_count}; "
+                f"evidence_status={status}"
+            )
+
     return lines
 
 

@@ -80,6 +80,35 @@
       ]
     }
   ],
+  "prediction_tests": [
+    {
+      "id": "recoverable-unlicensed-gap-prediction",
+      "phenomenon": "unbounded-dependency-licensing-cgel",
+      "contrast_cell": "recoverable-unlicensed-gap",
+      "activated_paths": [
+        "recoverability-to-attribution",
+        "competitor-preemption-repair"
+      ],
+      "prediction": "Recoverable unbounded-dependency anomalies should be interpretable enough to raise acceptability, but competitor availability and preemption should still route the form toward repair and licensing trouble.",
+      "pass_condition": "The graph passes if recoverability improves comprehension or acceptability while available competitors and preemption still predict repair or rejection.",
+      "fail_condition": "The graph fails if recoverability alone licenses the gap, or if competitor/preemption structure has no predicted effect on repair pressure.",
+      "evidence_status": "passed",
+      "evidence_note": "Checked against enriched unbounded-dependency card and cgel-unbounded-dependencies. The source supports required-gap and function-constraint contrasts where recoverability does not license the dependency."
+    },
+    {
+      "id": "transparent-rare-relative-prediction",
+      "phenomenon": "fused-relative-constructions-cgel",
+      "contrast_cell": "transparent-rare-relative",
+      "activated_paths": [
+        "attestation-licensing-production"
+      ],
+      "prediction": "Transparent rare relative constructions should remain partly resolved: opportunity-normalized attestation can warrant licensing, but low opportunity and missing thresholds should block categorical score movement.",
+      "pass_condition": "The graph passes partially if rare transparent cases are not rejected on raw frequency alone and licensing confidence depends on opportunity-normalized evidence.",
+      "fail_condition": "The graph fails if raw rarity by itself decides licensing, or if it predicts categorical survival without a threshold or contrast set.",
+      "evidence_status": "inconclusive",
+      "evidence_note": "Checked against enriched fused-relative card and cgel-fused-relatives. The source supports constructional-function contrasts but does not supply opportunity thresholds for rare transparent cases."
+    }
+  ],
   "cards": [
     {
       "phenomenon": "unbounded-dependency-licensing-cgel",

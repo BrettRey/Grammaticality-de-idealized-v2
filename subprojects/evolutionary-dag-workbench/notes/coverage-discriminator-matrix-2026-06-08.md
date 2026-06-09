@@ -118,10 +118,9 @@ No phenomenon cards are completely untested in protocol-test evaluations.
 
 ## Next Evaluation Moves
 
-1. Enrich thin source-backed cards with concrete examples, source pointers, and contrast cells.
-2. Convert the strongest existing protocol-bound evaluations into explicit pass/fail prediction
-   statements before any score movement.
-3. Use held-out contrast cells to test whether `OPG`, `CAT`, and `SEL` remain complementary or
+1. Add data pointers for unresolved prediction-test cells: pronoun policy/audience design,
+   dialectal negative correction, and rare transparent-relative opportunity thresholds.
+2. Use held-out contrast cells to test whether `OPG`, `CAT`, and `SEL` remain complementary or
    require a fused-construction split.
 
 ## Working Decision

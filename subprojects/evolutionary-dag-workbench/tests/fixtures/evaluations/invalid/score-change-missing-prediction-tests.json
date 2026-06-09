@@ -1,5 +1,5 @@
 {
-  "id": "scoped-score-valid-evaluation-fixture",
+  "id": "score-change-missing-prediction-tests",
   "target_graph": "tests/fixtures/graphs/valid/scoped-score-valid.json",
   "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
   "status": "protocol-bound",
@@ -10,7 +10,7 @@
       "phenomenon": "left-branch-extraction",
       "contrast_cell": "fixture-cell",
       "expected_path_reading": "indeterminate",
-      "prediction": "Fixture score movement commits to the profiled measurement edge.",
+      "prediction": "Fixture score movement path.",
       "edges": [
         {
           "source": "community_licensing",
@@ -20,38 +20,11 @@
       ]
     }
   ],
-  "prediction_tests": [
-    {
-      "id": "fixture-score-prediction",
-      "phenomenon": "left-branch-extraction",
-      "contrast_cell": "fixture-cell",
-      "activated_paths": [
-        "fixture-measurement-path"
-      ],
-      "prediction": "Fixture score movement has an explicit pass/fail prediction.",
-      "pass_condition": "The fixture graph passes when the measurement path remains present and profiled.",
-      "fail_condition": "The fixture graph fails if score movement lacks a prediction commitment.",
-      "evidence_status": "not-run"
-    }
-  ],
   "cards": [
     {
       "phenomenon": "left-branch-extraction",
       "result": "partly_survives",
-      "expected_survival_pattern": "Fixture expected pattern for a valid scoped score.",
-      "requirements": {
-        "required_nodes": [
-          "community_licensing",
-          "reported_acceptability"
-        ],
-        "required_edges": [
-          {
-            "source": "community_licensing",
-            "target": "reported_acceptability",
-            "type": "measurement"
-          }
-        ]
-      },
+      "expected_survival_pattern": "Fixture expected pattern.",
       "contrast_cells": [
         {
           "id": "fixture-cell",

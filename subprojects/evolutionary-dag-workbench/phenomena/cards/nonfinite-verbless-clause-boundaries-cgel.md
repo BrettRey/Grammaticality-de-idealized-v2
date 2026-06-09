@@ -25,6 +25,26 @@ finite full clauses as the only grammatical target.
 - headline, sign, list item, or message fragment;
 - formal sentence-correction task.
 
+## Source-Checked Contrast Examples
+
+- Embedded non-finite baseline: infinitival, gerund-participial, and past-participial clauses occur
+  as complements, modifiers, and supplements.
+- Subjectless non-finite contrast: a non-finite clause can lack an overt subject while still being a
+  clause, with interpretation recovered from matrix or discourse context.
+- Hollow-clause contrast: a missing non-subject can be recoverable from the matrix clause without
+  being an arbitrary ellipsis.
+- Verbless-clause contrast: dependent or supplement clauses can have subject-predicate structure
+  without a verbal predicate.
+- Formal sentence-task contrast: asking whether a string is a canonical finite sentence should
+  produce different judgments from asking whether it is licensed as a clause, supplement, heading,
+  answer fragment, or message.
+
+## Source-Checked Evidence
+
+Checked against `cgel-nonfinite-verbless`. The source supports the prediction that finite-sentence
+status is not a safe proxy for clause licensing, and that genre/task framing should affect
+acceptability and grammaticality attribution.
+
 ## Candidate Nodes
 
 - register_genre_appropriateness
