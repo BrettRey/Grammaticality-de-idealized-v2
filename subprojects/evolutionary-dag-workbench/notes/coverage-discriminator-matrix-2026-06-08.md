@@ -27,6 +27,7 @@ Module abbreviations:
 - `FRAME`: `frame-specific-dependency-licensing-candidate`
 - `RNR`: `repair-neighbour-reconstruction-candidate`
 - `INR`: `information-normalized-repair-candidate`
+- `MPR`: `meaning-prior-reconstruction-candidate`
 
 ## Matrix
 
@@ -140,6 +141,10 @@ module.
 repair distance must be interpreted against target sentence length or information mass. It is not
 yet a scoped module.
 
+`MPR` is the meaning-prior reconstruction candidate. It handles semantic noisy-channel cases where a
+plausible intended meaning diverges from literal compositional coherence. It is not yet a scoped
+module.
+
 ## Twenty-Third-Pass Addendum
 
 `INR` has been evaluated after the table above was created:
@@ -162,6 +167,17 @@ comparative-illusion cases.
   analysis remains a `CAT` problem.
 
 This blocks promotion of `INR`.
+
+## Twenty-Fifth-Pass Addendum
+
+`MPR` has been evaluated after the table above was created:
+
+- `depth-charge-semantic-illusion-gibson`: `MPR` = `S`; intended-meaning plausibility and literal
+  composition coherence are now separated.
+- `comparative-illusion-noisy-channel-gibson`: `MPR` = `P`; meaning-prior reconstruction helps, but
+  category/function analysis remains a `CAT` problem.
+
+`MPR` remains unscored and has no `scoped_module` label.
 
 ## Discriminators Already Doing Work
 
@@ -212,7 +228,8 @@ Newly exposed untested pairings remain:
 
 - comparative-illusion cards against `CAT`, to test whether category-analysis divergence remains
   separable from repair-neighbour reconstruction.
-- depth-charge cards against a possible meaning-prior or intended-meaning-plausibility candidate.
+- comparative-illusion cards against combined `CAT` plus noisy-channel candidates, to test whether
+  the category/reconstruction interaction can be represented without merging constructs.
 - richer island and dependency cards against `FRAME`, to test whether the new module stays scoped
   or overfits the first Gibson island card.
 
@@ -222,8 +239,7 @@ Newly exposed untested pairings remain:
    transparent-relative opportunity thresholds.
 2. Use held-out contrast cells to test whether `OPG`, `CAT`, and `SEL` remain complementary or
    require a fused-construction split.
-3. Decide whether depth-charge semantic illusions require a meaning-prior or
-   intended-meaning-plausibility construct.
+3. Test comparative-illusion cards against `CAT`, `INR`, and `MPR` as complementary modules.
 4. Add richer island and dependency cards against `FRAME` before any numeric movement or broader
    dependency claim.
 
@@ -254,3 +270,5 @@ edit-distance/length pressure while leaving meaning-prior and category-sensitive
 open.
 The twenty-fourth pass confirms that INR remains partial on depth-charge and comparative-illusion
 cards; those should not be folded into repair-distance normalization.
+The twenty-fifth pass adds `meaning-prior-reconstruction-candidate`, resolving the depth-charge
+pressure while leaving comparative category/reconstruction interaction open.

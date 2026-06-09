@@ -271,6 +271,31 @@ upstream_or_mediating:
       - processing cost
       - grammaticality attribution
 
+  - id: intended_meaning_plausibility
+    label: Intended-meaning plausibility
+    definition: Prior plausibility or contextual availability of a reconstructed intended meaning distinct from the literal compositional meaning.
+    proxies:
+      - plausible event or scenario prior
+      - context-supported intended interpretation
+      - semantic-neighbour plausibility
+      - noisy-channel meaning reconstruction
+    forbidden_conflations:
+      - literal compositional coherence
+      - community licensing
+      - reported acceptability
+
+  - id: literal_composition_coherence
+    label: Literal composition coherence
+    definition: Degree to which the literal compositional interpretation of the presented string is semantically coherent or plausible.
+    proxies:
+      - literal paraphrase success
+      - anomaly judgment under literal framing
+      - semantic plausibility rating
+    forbidden_conflations:
+      - intended meaning plausibility
+      - grammaticality attribution
+      - processing ease
+
   - id: constructional_analogy
     label: Constructional analogy
     definition: Support from similar constructions, patterns, schemas, or distributional neighborhoods.

@@ -1,0 +1,106 @@
+{
+  "id": "meaning-prior-reconstruction-candidate",
+  "title": "Meaning-prior reconstruction candidate",
+  "family": "meaning-prior-reconstruction",
+  "status": "candidate",
+  "edge_semantics_level": "profiled",
+  "notes": "Twenty-fifth-round mutation generated after depth-charge semantic illusions showed that normalized repair distance is still too surface-oriented. It tests whether intended-meaning plausibility and literal-composition coherence must be separated for semantic noisy-channel cases. It is unscored and not a scoped module.",
+  "nodes": [
+    "intended_meaning_plausibility",
+    "literal_composition_coherence",
+    "semantic_pragmatic_recoverability",
+    "felt_naturalness_context",
+    "measurement_task",
+    "task_framing",
+    "reported_acceptability",
+    "community_licensing",
+    "grammaticality_attribution"
+  ],
+  "edges": [
+    {
+      "source": "intended_meaning_plausibility",
+      "target": "semantic_pragmatic_recoverability",
+      "type": "causal",
+      "relation_profile": "positive_monotone",
+      "rationale": "A plausible reconstructed intended meaning increases recoverability even when the literal composition is incoherent."
+    },
+    {
+      "source": "intended_meaning_plausibility",
+      "target": "felt_naturalness_context",
+      "type": "causal",
+      "relation_profile": "positive_monotone",
+      "rationale": "A plausible intended meaning can make a defective or incoherent literal string feel more natural on first pass."
+    },
+    {
+      "source": "literal_composition_coherence",
+      "target": "felt_naturalness_context",
+      "type": "causal",
+      "relation_profile": "positive_monotone",
+      "rationale": "Higher literal compositional coherence tends to increase felt naturalness when respondents attend to the presented string."
+    },
+    {
+      "source": "literal_composition_coherence",
+      "target": "grammaticality_attribution",
+      "type": "evidential",
+      "relation_profile": "contextual_warrant",
+      "rationale": "Literal semantic coherence can provide contextual attribution evidence in literal-analysis tasks, without defining grammar."
+    },
+    {
+      "source": "semantic_pragmatic_recoverability",
+      "target": "felt_naturalness_context",
+      "type": "causal",
+      "relation_profile": "positive_monotone",
+      "rationale": "Recovering a plausible intended meaning raises felt naturalness."
+    },
+    {
+      "source": "felt_naturalness_context",
+      "target": "reported_acceptability",
+      "type": "measurement",
+      "relation_profile": "noisy_positive_indicator",
+      "rationale": "Felt naturalness can surface as reported acceptability in first-pass tasks."
+    },
+    {
+      "source": "measurement_task",
+      "target": "reported_acceptability",
+      "type": "causal",
+      "relation_profile": "mixed_contextual",
+      "rationale": "Task format changes whether respondents report the reconstructed intended meaning or the literal compositional status."
+    },
+    {
+      "source": "task_framing",
+      "target": "grammaticality_attribution",
+      "type": "causal",
+      "relation_profile": "mixed_contextual",
+      "rationale": "Task framing changes whether semantic anomaly, reconstructed meaning, or literal-string status is treated as grammar-relevant."
+    },
+    {
+      "source": "community_licensing",
+      "target": "grammaticality_attribution",
+      "type": "evidential",
+      "relation_profile": "contextual_warrant",
+      "rationale": "Community licensing remains attribution evidence, but semantic reconstruction is not licensing."
+    },
+    {
+      "source": "reported_acceptability",
+      "target": "grammaticality_attribution",
+      "type": "evidential",
+      "relation_profile": "contextual_warrant",
+      "rationale": "Reported acceptability is contextual attribution evidence and can be inflated by intended-meaning plausibility."
+    }
+  ],
+  "scores": {
+    "empirical_coverage": 0,
+    "projective_power": 0,
+    "counterexample_resilience": 0,
+    "measurement_clarity": 0,
+    "explanatory_payoff": 0,
+    "cross_domain_stability": 0,
+    "complexity_penalty": 0,
+    "circularity_penalty": 0,
+    "construct_confusion_penalty": 0,
+    "theory_preservation_penalty": 0
+  },
+  "score_status": {
+    "kind": "unscored"
+  }
+}

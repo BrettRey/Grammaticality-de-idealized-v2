@@ -1,0 +1,241 @@
+{
+  "id": "meaning-prior-reconstruction-2026-06-09",
+  "target_graph": "graphs/archive/meaning-prior-reconstruction-candidate.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "protocol-bound",
+  "score_decision": "no-score-change",
+  "activated_paths": [
+    {
+      "id": "intended-meaning-to-acceptability",
+      "phenomenon": "depth-charge-semantic-illusion-gibson",
+      "contrast_cell": "plausible-global-interpretation",
+      "expected_path_reading": "positive",
+      "prediction": "Higher intended-meaning plausibility should raise recoverability, felt naturalness, and reported acceptability despite literal incoherence.",
+      "edges": [
+        {
+          "source": "intended_meaning_plausibility",
+          "target": "semantic_pragmatic_recoverability",
+          "type": "causal"
+        },
+        {
+          "source": "semantic_pragmatic_recoverability",
+          "target": "felt_naturalness_context",
+          "type": "causal"
+        },
+        {
+          "source": "felt_naturalness_context",
+          "target": "reported_acceptability",
+          "type": "measurement"
+        }
+      ]
+    },
+    {
+      "id": "literal-coherence-to-naturalness",
+      "phenomenon": "depth-charge-semantic-illusion-gibson",
+      "contrast_cell": "literal-composition",
+      "expected_path_reading": "positive",
+      "prediction": "Higher literal composition coherence should raise felt naturalness and reported acceptability under literal-composition framing.",
+      "edges": [
+        {
+          "source": "literal_composition_coherence",
+          "target": "felt_naturalness_context",
+          "type": "causal"
+        },
+        {
+          "source": "felt_naturalness_context",
+          "target": "reported_acceptability",
+          "type": "measurement"
+        }
+      ]
+    },
+    {
+      "id": "literal-task-to-attribution",
+      "phenomenon": "depth-charge-semantic-illusion-gibson",
+      "contrast_cell": "literal-composition",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Literal-composition framing should shift attribution by foregrounding literal coherence rather than reconstructed meaning.",
+      "edges": [
+        {
+          "source": "task_framing",
+          "target": "grammaticality_attribution",
+          "type": "causal"
+        }
+      ]
+    },
+    {
+      "id": "comparative-intended-meaning-to-acceptability",
+      "phenomenon": "comparative-illusion-noisy-channel-gibson",
+      "contrast_cell": "plausible-comparative-repair",
+      "expected_path_reading": "positive",
+      "prediction": "Higher intended comparative plausibility can raise first-pass acceptability, but category analysis remains outside this graph.",
+      "edges": [
+        {
+          "source": "intended_meaning_plausibility",
+          "target": "semantic_pragmatic_recoverability",
+          "type": "causal"
+        },
+        {
+          "source": "semantic_pragmatic_recoverability",
+          "target": "felt_naturalness_context",
+          "type": "causal"
+        },
+        {
+          "source": "felt_naturalness_context",
+          "target": "reported_acceptability",
+          "type": "measurement"
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "phenomenon": "depth-charge-semantic-illusion-gibson",
+      "result": "survives_as_module",
+      "expected_survival_pattern": "The graph should separate intended meaning plausibility from literal composition coherence, and should explain why first-pass acceptability can rise without literal compositional success.",
+      "notes": "Survives as a semantic noisy-channel module. It should remain unscored until tested against more semantic illusion cards.",
+      "requirements": {
+        "required_nodes": [
+          "intended_meaning_plausibility",
+          "literal_composition_coherence",
+          "semantic_pragmatic_recoverability",
+          "felt_naturalness_context",
+          "reported_acceptability",
+          "task_framing",
+          "grammaticality_attribution"
+        ],
+        "required_edges": [
+          {
+            "source": "intended_meaning_plausibility",
+            "target": "semantic_pragmatic_recoverability",
+            "type": "causal"
+          },
+          {
+            "source": "literal_composition_coherence",
+            "target": "felt_naturalness_context",
+            "type": "causal"
+          },
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "felt_naturalness_context",
+            "type": "causal"
+          },
+          {
+            "source": "felt_naturalness_context",
+            "target": "reported_acceptability",
+            "type": "measurement"
+          },
+          {
+            "source": "task_framing",
+            "target": "grammaticality_attribution",
+            "type": "causal"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "intended_meaning_plausibility",
+            "target": "community_licensing",
+            "type": "causal"
+          },
+          {
+            "source": "reported_acceptability",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "plausible-global-interpretation",
+          "axes": {
+            "community": "English speakers reading a depth-charge or semantic-illusion item.",
+            "norm_centre": "Descriptive grammar and semantics norm centre.",
+            "genre": "Comprehension or acceptability item.",
+            "medium": "Written sentence.",
+            "task_framing": "First-pass meaning or acceptability judgment.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "literal-composition",
+          "axes": {
+            "community": "English speakers asked to evaluate the literal composition of the same item.",
+            "norm_centre": "Descriptive grammar and semantics norm centre.",
+            "genre": "Literal interpretation or teaching item.",
+            "medium": "Written sentence.",
+            "task_framing": "Literal semantic analysis.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    },
+    {
+      "phenomenon": "comparative-illusion-noisy-channel-gibson",
+      "result": "partly_survives",
+      "expected_survival_pattern": "The graph should capture intended comparative plausibility and recoverability, but should not handle category/function analysis.",
+      "notes": "Partly survives. Meaning-prior reconstruction helps, but CAT remains needed for category-analysis leakage.",
+      "requirements": {
+        "required_nodes": [
+          "intended_meaning_plausibility",
+          "semantic_pragmatic_recoverability",
+          "felt_naturalness_context",
+          "reported_acceptability",
+          "task_framing",
+          "grammaticality_attribution"
+        ],
+        "required_edges": [
+          {
+            "source": "intended_meaning_plausibility",
+            "target": "semantic_pragmatic_recoverability",
+            "type": "causal"
+          },
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "felt_naturalness_context",
+            "type": "causal"
+          },
+          {
+            "source": "felt_naturalness_context",
+            "target": "reported_acceptability",
+            "type": "measurement"
+          },
+          {
+            "source": "task_framing",
+            "target": "grammaticality_attribution",
+            "type": "causal"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "reported_acceptability",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "plausible-comparative-repair",
+          "axes": {
+            "community": "English speakers reading a comparative illusion with a plausible intended comparative.",
+            "norm_centre": "Descriptive grammar norm centre.",
+            "genre": "Judgment or comprehension item.",
+            "medium": "Written sentence.",
+            "task_framing": "First-pass acceptability or interpretation judgment.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "literal-category-analysis",
+          "axes": {
+            "community": "Analysts or trained respondents classifying the literal comparative construction.",
+            "norm_centre": "Category-analysis norm centre.",
+            "genre": "Grammar analysis task.",
+            "medium": "Written sentence.",
+            "task_framing": "Category/function classification.",
+            "speaker_identity": "Analyst or trained respondent cue."
+          }
+        }
+      ]
+    }
+  ]
+}

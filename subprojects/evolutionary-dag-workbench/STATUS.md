@@ -12,7 +12,7 @@ representations about grammaticality. The existing OVMG, detector, operator-stra
 processing-based, and normativity-based models are treated as seed graph families, not as
 conclusions or targets to vindicate.
 
-Twenty-four adversarial passes/synthesis steps have been run. All numeric scores remain zero. Six
+Twenty-five adversarial passes/synthesis steps have been run. All numeric scores remain zero. Six
 current modules have `scoped_module` labels tied to protocol-bound evaluations. The original
 scope-only evaluations now include card-level requirements and activated paths. Both held-out CGEL
 evaluations also include card-level requirements and activated paths without authorizing score
@@ -66,6 +66,9 @@ no `scoped_module` label.
 The twenty-fourth pass tested INR against depth-charge and comparative-illusion cards. It partly
 survives both, confirming that normalized repair distance should not absorb meaning-prior or
 category-analysis machinery.
+The twenty-fifth pass added `meaning-prior-reconstruction-candidate`, separating intended-meaning
+plausibility from literal-composition coherence. It survives the depth-charge card and partly
+survives comparative illusion, where category/function analysis remains outside the graph.
 
 ## Current Candidate Stack
 
@@ -84,6 +87,7 @@ category-analysis machinery.
 - `frame-specific-dependency-licensing-candidate`
 - `repair-neighbour-reconstruction-candidate`
 - `information-normalized-repair-candidate`
+- `meaning-prior-reconstruction-candidate`
 
 The current strongest modules are scoped, not general winners:
 
@@ -120,6 +124,9 @@ The current strongest modules are scoped, not general winners:
 - `information-normalized-repair-candidate` for noisy-channel acceptability cases where raw repair
   distance must be normalized by target sentence length or information mass. It is an unscored
   successor candidate, not a scoped module yet.
+- `meaning-prior-reconstruction-candidate` for semantic noisy-channel cases where a plausible
+  intended meaning diverges from literal compositional coherence. It is an unscored candidate, not a
+  scoped module yet.
 
 `context-indexed-dynamic-feedback-candidate`, `context-aware-operator-gap-candidate`, and
 `audience-reference-tracking-candidate`, `processing-naturalness-perturbation-candidate`, and
@@ -179,6 +186,8 @@ construct separation, or held-out projectibility, not by fitting a prior paper.
   `notes/twenty-third-adversarial-pass-synthesis-2026-06-09.md`
 - INR boundary-test synthesis in
   `notes/twenty-fourth-adversarial-pass-synthesis-2026-06-09.md`
+- meaning-prior reconstruction synthesis in
+  `notes/twenty-fifth-adversarial-pass-synthesis-2026-06-09.md`
 - coverage/discriminator matrix in `notes/coverage-discriminator-matrix-2026-06-08.md`
 - protocol-bound evaluation schema and exploratory evaluations in `evaluations/`
 - held-out CGEL/local-correction evaluations in `evaluations/protocol-tests/`
@@ -261,8 +270,8 @@ validation.
 
 1. Add data pointers for the remaining unresolved prediction-test cells: pronoun policy/audience
    design and rare transparent-relative opportunity thresholds.
-2. Decide whether depth-charge semantic illusions require a meaning-prior or
-   intended-meaning-plausibility construct.
+2. Test comparative-illusion cards against `CAT` and the noisy-channel candidates to keep category
+   analysis separate from reconstruction.
 3. Test whether `OPG`, `CAT`, and `SEL` stay complementary on richer fused-construction cards before
    adding any fused-head-specific graph.
 4. Calibrate scoped-module score magnitudes after at least one held-out or parameterized evaluation
