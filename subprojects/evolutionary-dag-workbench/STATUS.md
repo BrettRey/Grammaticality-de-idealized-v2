@@ -102,6 +102,8 @@ opportunity thresholds.
 The thirty-third pass converted the rare transparent-relative data-pointer lane into an explicit
 opportunity-denominator measurement design. It still does not run new corpus data or authorize score
 movement.
+An internal state-of-search report now summarizes the current scoped-module partition, evaluation
+ladder, and two live empirical lanes without authorizing score movement.
 
 ## Current Candidate Stack
 
@@ -244,6 +246,8 @@ construct separation, or held-out projectibility, not by fitting a prior paper.
   `notes/transparent-relative-opportunity-measurement-design-2026-06-09.md`
 - transparent-relative measurement-design synthesis in
   `notes/thirty-third-adversarial-pass-synthesis-2026-06-09.md`
+- state-of-search report with module/evaluation visual maps in
+  `notes/state-of-search-report-2026-06-09.md`
 - coverage/discriminator matrix in `notes/coverage-discriminator-matrix-2026-06-08.md`
 - protocol-bound evaluation schema and exploratory evaluations in `evaluations/`
 - held-out CGEL/local-correction evaluations in `evaluations/protocol-tests/`
