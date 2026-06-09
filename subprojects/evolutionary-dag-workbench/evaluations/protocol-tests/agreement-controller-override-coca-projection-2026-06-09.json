@@ -88,6 +88,30 @@
       ]
     },
     {
+      "id": "partitive-qn-controller-to-production",
+      "phenomenon": "collective-number-transparent-agreement-cgel",
+      "contrast_cell": "partitive-qn-people-plural-dominant",
+      "expected_path_reading": "non_sign_propagating",
+      "prediction": "For usable `lots/plenty/rest` people frames, controller identification and agreement alignment should route to plural production probability rather than singular surface-head agreement.",
+      "edges": [
+        {
+          "source": "agreement_controller_identification",
+          "target": "agreement_feature_alignment",
+          "type": "constitutive"
+        },
+        {
+          "source": "agreement_feature_alignment",
+          "target": "community_licensing",
+          "type": "constitutive"
+        },
+        {
+          "source": "community_licensing",
+          "target": "production_probability",
+          "type": "causal"
+        }
+      ]
+    },
+    {
       "id": "minority-controller-to-production",
       "phenomenon": "collective-number-transparent-agreement-cgel",
       "contrast_cell": "minority-zero-cell",
@@ -151,6 +175,19 @@
       "fail_condition": "The portability claim fails if majority cells require constructs absent from `AGR`, or if surface singular head number predicts the filtered data as well as the controller/alignment bundle.",
       "evidence_status": "passed",
       "evidence_note": "Filtered counts from `data/agr-coca-projection/summary.csv`: majority/minority tranche has 105 target plural rows and 0 target singular rows. Positive evidence comes from majority cells; both registered minority cells returned zero raw rows."
+    },
+    {
+      "id": "partitive-qn-coca-targeted-kwic",
+      "phenomenon": "collective-number-transparent-agreement-cgel",
+      "contrast_cell": "partitive-qn-people-plural-dominant",
+      "activated_paths": [
+        "partitive-qn-controller-to-production"
+      ],
+      "prediction": "Partitive/QN people frames should show plural agreement dominance after KWIC filtering, with counter-direction singular raw hits disappearing or being coded as non-target/nonstandard rows.",
+      "pass_condition": "The test passes only when the registered positive and counter-direction cells are KWIC-filtered enough to show target plural dominance over licensed target singular agreement.",
+      "fail_condition": "The portability claim fails if the singular cells yield licensed target rows at comparable density, or if plural dominance is only a raw-query artifact.",
+      "evidence_status": "mixed",
+      "evidence_note": "Targeted KWIC filtering from `data/agr-coca-projection/summary.csv`: `lots of people is` has 0 licensed target singular rows; filtered positive subset has 63 `plenty of people are` rows and 14 `the rest of the people are` rows. The largest positive cell, `lots of people are` (raw 287), remains unfiltered, so this is supportive but incomplete."
     },
     {
       "id": "minority-coca-uninformative",
@@ -236,21 +273,32 @@
             "speaker_identity": "Corpus speaker/writer identity as available only through COCA source metadata."
           }
         },
-        {
-          "id": "majority-plural-dominant",
-          "axes": {
-            "community": "COCA-attested English production in `a/the majority of people` contexts.",
-            "norm_centre": "Descriptive corpus-attestation frame, not prescriptive judgment.",
+                {
+                  "id": "majority-plural-dominant",
+                  "axes": {
+                    "community": "COCA-attested English production in `a/the majority of people` contexts.",
+                    "norm_centre": "Descriptive corpus-attestation frame, not prescriptive judgment.",
             "genre": "Mixed COCA registers with most positive rows from `the majority of people are`.",
             "medium": "Written corpus transcripts/texts from COCA KWIC rows.",
             "task_framing": "Corpus production measurement with KWIC filtering, not acceptability judgment.",
-            "speaker_identity": "Corpus speaker/writer identity as available only through COCA source metadata."
-          }
-        },
-        {
-          "id": "minority-zero-cell",
-          "axes": {
-            "community": "COCA-attested English production in registered `a minority of voters` direct-query contexts.",
+                    "speaker_identity": "Corpus speaker/writer identity as available only through COCA source metadata."
+                  }
+                },
+                {
+                  "id": "partitive-qn-people-plural-dominant",
+                  "axes": {
+                    "community": "COCA-attested English production in registered `lots/plenty/rest` people-frame contexts.",
+                    "norm_centre": "Descriptive corpus-attestation frame, not prescriptive judgment.",
+                    "genre": "Mixed COCA registers for the targeted KWIC subset, with the high-count `lots of people are` cell still raw-unfiltered.",
+                    "medium": "Written corpus transcripts/texts from COCA list and KWIC rows.",
+                    "task_framing": "Corpus production measurement with partial KWIC filtering and explicit raw-cell caution.",
+                    "speaker_identity": "Corpus speaker/writer identity as available only through COCA source metadata."
+                  }
+                },
+                {
+                  "id": "minority-zero-cell",
+                  "axes": {
+                    "community": "COCA-attested English production in registered `a minority of voters` direct-query contexts.",
             "norm_centre": "Descriptive corpus-attestation frame, not prescriptive judgment.",
             "genre": "No positive rows returned by the registered direct strings.",
             "medium": "COCA list-query output.",

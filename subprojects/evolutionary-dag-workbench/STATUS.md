@@ -219,6 +219,10 @@ The targeted KWIC follow-up is recorded in
 positive subset yields 63 target `plenty of people are` rows and 14 target
 `the rest of the people are` rows. The high-count `lots of people are` cell remains raw-unfiltered,
 so the tranche is partially filtered rather than complete.
+`evaluations/protocol-tests/agreement-controller-override-coca-projection-2026-06-09.json` now
+records the partitive/QN people-frame result as a `mixed` prediction test: supportive targeted KWIC
+evidence, but incomplete until the high-count `lots of people are` cell is sampled or fully
+filtered.
 An internal state-of-search report now summarizes the current scoped-module partition, evaluation
 ladder, the completed transparent-relative Lane A pass, and remaining empirical lanes without
 authorizing score movement.
