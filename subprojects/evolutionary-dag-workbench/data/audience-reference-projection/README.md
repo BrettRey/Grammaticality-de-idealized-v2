@@ -52,3 +52,12 @@ python3 scripts/build_audience_reference_pilot_packet.py \
 
 The packet is intentionally participant-facing: it omits hidden predictions and expected-reference
 metadata. Use `prediction-register.csv` separately when evaluating the collected rows.
+
+Validate a response file with:
+
+```bash
+python3 scripts/validate_audience_reference_responses.py \
+  data/audience-reference-projection/pilot-response-template.csv
+```
+
+Add `--require-responses` when checking a collected run rather than an empty template.

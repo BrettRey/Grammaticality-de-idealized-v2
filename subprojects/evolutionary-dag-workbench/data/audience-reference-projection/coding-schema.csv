@@ -10,6 +10,7 @@ audience_or_evaluator,ordinary_interlocutor|descriptive_linguist|teacher_editor|
 norm_centre,descriptive_usage|school_standard|institutional_policy|community_local_norm,Norm centre cued by the item.
 task_prompt,reference_resolution|feature_fit|naturalness|correctness|respect_social_sanction|policy_compliance|grammaticality_attribution,Prompt channel.
 speaker_identity,unmarked|learner|institutional_representative|ingroup_speaker|outgroup_speaker,Speaker or writer cue.
+raw_response,string_or_blank,Raw response text or compact response value before coding.
 reference_success,yes|no|ambiguous|not_applicable,Coded from reference-identification response.
 reference_confidence,1-7_or_blank,Confidence in reference identification.
 feature_fit_score,1-7_or_blank,Feature/personhood fit response.

@@ -12,7 +12,7 @@ representations about grammaticality. The existing OVMG, detector, operator-stra
 processing-based, and normativity-based models are treated as seed graph families, not as
 conclusions or targets to vindicate.
 
-Fifty-six adversarial passes/synthesis steps have been run. All numeric scores remain zero. Seven
+Fifty-seven adversarial passes/synthesis steps have been run. All numeric scores remain zero. Seven
 current modules have `scoped_module` labels tied to protocol-bound or held-out `scope-only`
 evaluations. The original scope-only evaluations now include card-level requirements and activated
 paths. The held-out CGEL evaluations also include card-level requirements and activated paths
@@ -309,6 +309,12 @@ The fifty-sixth pass operationalizes that scaffold with
 and expected-reference metadata; the response template expands 11 stimuli across 6 response
 channels into 66 coding rows. A CSV quoting bug in the response-channel schema was also fixed. No
 evidence-status change, graph mutation, or score movement follows.
+The fifty-seventh pass is recorded in
+`notes/pronoun-audience-response-validator-2026-06-09.md`. It adds
+`scripts/validate_audience_reference_responses.py` and extends the coding schema with
+`raw_response`, so future pilot or critic response files are checked against registered item/channel
+metadata, enum values, 1-7 scale bounds, expected rows, and duplicate rows before they can affect
+evidence labels. No evidence-status change, graph mutation, or score movement follows.
 An internal state-of-search report now summarizes the current scoped-module partition, evaluation
 ladder, the completed transparent-relative Lane A pass, and remaining empirical lanes without
 authorizing score movement.
@@ -420,6 +426,8 @@ construct separation, or held-out projectibility, not by fitting a prior paper.
 - audience/reference projection scaffold in `data/audience-reference-projection/` and
   `notes/pronoun-audience-projection-scaffold-2026-06-09.md`
 - audience/reference pilot-packet builder in `scripts/build_audience_reference_pilot_packet.py`
+- audience/reference response validator in
+  `scripts/validate_audience_reference_responses.py`
 - scoped-module load-bearing compression audit in
   `notes/scoped-module-load-bearing-audit-2026-06-09.md`
 - provisional-node trim note in `notes/provisional-node-trim-2026-06-09.md`
@@ -594,7 +602,8 @@ validation.
 2. Run a small pilot or structured critic pass using
    `data/audience-reference-projection/pilot-packet.md` and
    `data/audience-reference-projection/pilot-response-template.csv` if data collection is
-   available.
+   available, then validate the response CSV with
+   `scripts/validate_audience_reference_responses.py --require-responses` before evaluation.
 3. Mutate `TEMP` with a temporal-orientation frame if continuing the temporal lane; keep it distinct
    from modal temporal inference and from English future-tense analysis.
 4. Add one more catenative card only if it distinguishes catenative subtype from cohort-conditioned
