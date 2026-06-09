@@ -14,6 +14,7 @@ This directory is reserved for a confirmatory COCA run testing the `AGR` module.
 - `summary.csv`: raw and filtered summaries as they accumulate.
 - `baseline-discriminator.csv`: compact comparison of the AGR prediction against a simple
   surface-head-number baseline.
+- `false-positive-audit.csv`: false-positive pressure summary over existing coded exact-query rows.
 - `coded/bunch-animate-kwic-coding.csv`: row-level coding for the animate `bunch` tranche.
 - `coded/bunch-inanimate-kwic-coding.csv`: row-level coding for the inanimate `bunch` tranche.
 - `coded/majority-minority-kwic-coding.csv`: row-level coding for the majority/minority tranche.
@@ -21,6 +22,8 @@ This directory is reserved for a confirmatory COCA run testing the `AGR` module.
   calibration tranche.
 - `coded/lots-people-are-sample-kwic-coding.csv`: row-level coding for the pre-declared
   `lots of people are` bounded KWIC sample.
+- `coded/majority-denominator-omission-sample-coding.csv`: row-level coding for the
+  `the majority of people` denominator false-omission sample.
 
 Future run artifacts should use:
 
@@ -63,6 +66,8 @@ Current completed tranche:
 - `partitive-calibration`, raw phrase-count denominator probe only.
 - `partitive-agreement-followup`, raw finite-agreement list counts plus targeted KWIC filtering and
   a bounded positive-cell sample.
+- `false-positive-audit`, computed from existing coded exact-query rows.
+- `false-omission-audit`, bounded denominator sample for `the majority of people`.
 
 The filtered target counts for the animate tranche are 71 plural agreement rows and 1 singular
 agreement row across `a bunch of people/kids` with `are/were/is/was`. Five of six raw singular
@@ -99,6 +104,12 @@ people are` result is sample-coded only, not a full filtered count for all raw h
 `baseline-discriminator.csv` records which cells actually pressure a surface-head-number baseline.
 The clean discriminator cells are animate `bunch`, `majority`, and `the rest of the people`; `lots`
 and `plenty` are supportive portability evidence but less clean as surface-head diagnostics.
+
+The measurement audit confirms that the clean discriminator cells are not raw-query artifacts.
+False-positive pressure is low in the animate `bunch`, `majority`, and selected partitive/QN exact
+rows. A bounded 98-row denominator sample for `the majority of people` shows that the direct
+`are/is` strings miss additional agreement-bearing opportunities, but the omitted opportunities are
+plural rather than singular: 37 omitted plural rows and 0 omitted singular rows.
 
 Do not treat raw COCA frequency as licensing. The lane measures production/attestation over
 opportunity sets and uses KWIC filtering to distinguish genuine agreement realizations from query

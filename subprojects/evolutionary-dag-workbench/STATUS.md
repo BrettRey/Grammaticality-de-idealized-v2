@@ -12,7 +12,7 @@ representations about grammaticality. The existing OVMG, detector, operator-stra
 processing-based, and normativity-based models are treated as seed graph families, not as
 conclusions or targets to vindicate.
 
-Forty-four adversarial passes/synthesis steps have been run. All numeric scores remain zero. Seven
+Forty-six adversarial passes/synthesis steps have been run. All numeric scores remain zero. Seven
 current modules have `scoped_module` labels tied to protocol-bound or held-out `scope-only`
 evaluations. The original scope-only evaluations now include card-level requirements and activated
 paths. The held-out CGEL evaluations also include card-level requirements and activated paths
@@ -30,7 +30,7 @@ selection-adjacent dimensions only.
 The held-out CGEL evaluations now include machine-readable `prediction_tests` with pass/fail
 conditions; score-change evaluations now require prediction tests.
 Eight held-out CGEL cards have source-checked contrast examples, and the prediction-test inventory
-now records checked evidence statuses: eleven `passed` and one `mixed`.
+now records checked evidence statuses: twelve `passed` and one `mixed`.
 No graph has a `general_account` score. The current scoring schema includes `projective_power` and
 `theory_preservation_penalty` so held-out prediction and anti-alignment discipline are visible.
 The Gibson source pass added five processing/dependency cards without changing graph machinery:
@@ -234,6 +234,14 @@ The forty-fifth pass is recorded in
 animate `bunch`, `majority`, and `the rest of the people` are the clean cells where a simple
 surface-head-number account predicts the wrong dominant direction. `lots/plenty of people` remain
 supportive portability evidence rather than clean baseline-discriminator cells. No graph mutation or
+score movement follows.
+The forty-sixth pass is recorded in `notes/agr-coca-measurement-audit-2026-06-09.md`. It completes
+the first false-positive/false-omission audit for the AGR COCA lane. Existing coded exact-query rows
+show low false-positive pressure in the animate `bunch`, `majority`, and selected partitive/QN
+cells; the inanimate `bunch` contrast remains sparse/high-noise. A bounded 98-row denominator sample
+for `the majority of people` found 37 omitted plural-agreement opportunities and 0 omitted singular
+opportunities, so the direct `are/is` query undercounts the plural direction but does not reverse it.
+The COCA projection evaluation now includes this as a passed measurement-audit prediction test. No
 score movement follows.
 An internal state-of-search report now summarizes the current scoped-module partition, evaluation
 ladder, the completed transparent-relative Lane A pass, and remaining empirical lanes without

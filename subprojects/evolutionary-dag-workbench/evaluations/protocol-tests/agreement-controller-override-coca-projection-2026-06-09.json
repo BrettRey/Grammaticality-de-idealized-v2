@@ -177,6 +177,19 @@
       "evidence_note": "Filtered counts from `data/agr-coca-projection/summary.csv`: majority/minority tranche has 105 target plural rows and 0 target singular rows. Positive evidence comes from majority cells; both registered minority cells returned zero raw rows."
     },
     {
+      "id": "majority-denominator-omission-audit",
+      "phenomenon": "collective-number-transparent-agreement-cgel",
+      "contrast_cell": "majority-plural-dominant",
+      "activated_paths": [
+        "majority-controller-to-production"
+      ],
+      "prediction": "If the `majority` result is not a direct-string artifact, a denominator sample for `the majority of people` should not reveal omitted singular-agreement opportunities that reverse the plural-dominant direction.",
+      "pass_condition": "The audit passes if false-positive pressure is low in exact rows and omitted agreement-bearing opportunities in a bounded denominator sample are plural-dominant rather than singular-dominant.",
+      "fail_condition": "The audit fails if omitted singular-agreement opportunities are common enough to make the direct `are/is` result misleading.",
+      "evidence_status": "passed",
+      "evidence_note": "Measurement audit from `notes/agr-coca-measurement-audit-2026-06-09.md`: exact `majority` rows have 105 target rows, 1 denominator-only row, and 4 excluded false positives. A 98-row denominator sample for `the majority of people` found 37 omitted plural-agreement rows and 0 omitted singular-agreement rows."
+    },
+    {
       "id": "partitive-qn-coca-targeted-kwic",
       "phenomenon": "collective-number-transparent-agreement-cgel",
       "contrast_cell": "partitive-qn-people-plural-dominant",
