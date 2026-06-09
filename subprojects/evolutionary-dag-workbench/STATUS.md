@@ -206,6 +206,13 @@ contrast among direct strings: `lots of people` (3875) and `plenty of people` (1
 `lots/plenty of the people` are rare (5/1), and `the rest of the people` (272) greatly outnumbers
 `the rest of people` (12). This is phrase-count denominator design only; it does not code agreement
 or evaluate `AGR` outcome predictions.
+The partitive finite-agreement follow-up is recorded in
+`notes/agr-coca-partitive-agreement-raw-list-pass-2026-06-09.md`. Raw present-tense list counts are
+plural-dominant across usable people frames: `lots of people are` 287, `plenty of people are` 65,
+and `the rest of the people are` 15, versus only `lots of people is` 5 and zero rows for the other
+singular cells. This is still raw unfiltered evidence. The next data step is KWIC filtering the five
+`lots of people is` rows plus the moderate positive `plenty` and `rest` cells, and deciding whether
+to sample or fully filter the 287-row `lots of people are` cell.
 An internal state-of-search report now summarizes the current scoped-module partition, evaluation
 ladder, the completed transparent-relative Lane A pass, and remaining empirical lanes without
 authorizing score movement.
