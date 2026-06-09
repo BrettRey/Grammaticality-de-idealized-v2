@@ -395,6 +395,71 @@ upstream_or_mediating:
       - processing cost
       - global island ban
 
+  - id: agreement_controller_identification
+    label: Agreement controller identification
+    definition: Identification of the element, construal, or constructional unit whose features control agreement in a specified context.
+    proxies:
+      - subject-controller diagnostics
+      - coordination-as-unit construal
+      - notional agreement contrast
+      - number-transparent construction
+    forbidden_conflations:
+      - nearest noun salience
+      - reported acceptability
+      - simple head-noun agreement
+
+  - id: agreement_feature_alignment
+    label: Agreement feature alignment
+    definition: Fit between the selected agreement controller and the agreement value realized on the target.
+    proxies:
+      - subject-verb agreement match
+      - pronoun-antecedent agreement match
+      - number or person agreement contrast
+      - correction to an agreement target
+    forbidden_conflations:
+      - processing ease
+      - grammaticality attribution
+      - metalinguistic condemnation
+
+  - id: agreement_override_pattern
+    label: Agreement override pattern
+    definition: Conventionalized pattern in which agreement departs from simple head-feature matching because a construction licenses a different controller or feature construal.
+    proxies:
+      - collective-noun plural agreement
+      - number-transparent agreement
+      - unit-construal coordination
+      - distributive each/every coordination
+    forbidden_conflations:
+      - proximity agreement error
+      - hypercorrection
+      - raw variation
+
+  - id: notional_agreement_basis
+    label: Notional agreement basis
+    definition: Semantic or discourse construal that supports a singular, plural, collective, distributive, or identity-based agreement analysis.
+    proxies:
+      - unit versus separate-coordinate construal
+      - one-person versus two-person role reading
+      - collective versus individual-member interpretation
+      - distributive quantifier cue
+    forbidden_conflations:
+      - agreement feature alignment
+      - speaker preference
+      - processing attraction
+
+  - id: retrieval_attractor_salience
+    label: Retrieval-attractor salience
+    definition: Salience of a non-controller noun phrase, feature bundle, or local element that can perturb agreement production or judgment.
+    proxies:
+      - nearest-NP number manipulation
+      - attraction-error rate
+      - reading-time or production-error effect
+      - speeded judgment perturbation
+    forbidden_conflations:
+      - agreement controller identification
+      - community licensing
+      - notional agreement basis
+
   - id: operator_value
     label: Operator value
     definition: Public-update value involving commitments, roles, scope, reference, dependency, repair, or discourse configuration.

@@ -1,0 +1,362 @@
+{
+  "id": "agreement-controller-override-2026-06-09",
+  "target_graph": "graphs/archive/agreement-controller-override-candidate.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "protocol-bound",
+  "score_decision": "no-score-change",
+  "activated_paths": [
+    {
+      "id": "controller-to-licensing",
+      "phenomenon": "coordination-agreement-resolution-cgel",
+      "contrast_cell": "unit-and-singular",
+      "expected_path_reading": "component",
+      "prediction": "Correct controller identification should feed agreement alignment and licensing for unit-construal coordination.",
+      "edges": [
+        {
+          "source": "agreement_controller_identification",
+          "target": "agreement_feature_alignment",
+          "type": "constitutive"
+        },
+        {
+          "source": "agreement_feature_alignment",
+          "target": "community_licensing",
+          "type": "constitutive"
+        }
+      ]
+    },
+    {
+      "id": "override-to-licensing",
+      "phenomenon": "collective-number-transparent-agreement-cgel",
+      "contrast_cell": "number-transparent-plural-override",
+      "expected_path_reading": "component",
+      "prediction": "A licensed override pattern should feed agreement alignment and licensing in number-transparent constructions.",
+      "edges": [
+        {
+          "source": "agreement_override_pattern",
+          "target": "agreement_feature_alignment",
+          "type": "constitutive"
+        },
+        {
+          "source": "agreement_feature_alignment",
+          "target": "community_licensing",
+          "type": "constitutive"
+        }
+      ]
+    },
+    {
+      "id": "attractor-to-attribution",
+      "phenomenon": "proximity-agreement-error-cgel",
+      "contrast_cell": "proximity-error",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Retrieval-attractor salience should explain processing/report perturbation without converting the attraction error into licensing.",
+      "edges": [
+        {
+          "source": "retrieval_attractor_salience",
+          "target": "processing_cost",
+          "type": "causal"
+        },
+        {
+          "source": "processing_cost",
+          "target": "reported_acceptability",
+          "type": "causal"
+        },
+        {
+          "source": "reported_acceptability",
+          "target": "grammaticality_attribution",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "licensing-to-repair",
+      "phenomenon": "subject-verb-agreement-cgel",
+      "contrast_cell": "simple-feature-match",
+      "expected_path_reading": "negative",
+      "prediction": "Higher agreement licensing should lower repair pressure for ordinary subject-verb feature matching.",
+      "edges": [
+        {
+          "source": "community_licensing",
+          "target": "repair_reformulation_pressure",
+          "type": "causal"
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "phenomenon": "subject-verb-agreement-cgel",
+      "result": "survives_as_module",
+      "expected_survival_pattern": "The graph should represent simple feature matching while leaving room for controller and override contrasts.",
+      "notes": "Survives as a narrow agreement module, not as a general grammaticality account.",
+      "requirements": {
+        "required_nodes": [
+          "agreement_controller_identification",
+          "agreement_feature_alignment",
+          "community_licensing",
+          "repair_reformulation_pressure",
+          "reported_acceptability",
+          "grammaticality_attribution"
+        ],
+        "required_edges": [
+          {
+            "source": "agreement_controller_identification",
+            "target": "agreement_feature_alignment",
+            "type": "constitutive"
+          },
+          {
+            "source": "agreement_feature_alignment",
+            "target": "community_licensing",
+            "type": "constitutive"
+          },
+          {
+            "source": "community_licensing",
+            "target": "repair_reformulation_pressure",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "simple-feature-match",
+          "axes": {
+            "community": "Standard English speakers judging simple subject-verb agreement.",
+            "norm_centre": "Descriptive agreement norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Agreement feature match baseline.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "simple-feature-mismatch",
+          "axes": {
+            "community": "Standard English speakers judging simple subject-verb feature mismatch.",
+            "norm_centre": "Descriptive agreement norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Feature mismatch and repair pressure separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    },
+    {
+      "phenomenon": "proximity-agreement-error-cgel",
+      "result": "survives_as_module",
+      "expected_survival_pattern": "The graph should route proximity attraction through retrieval-attractor salience and processing/report perturbation rather than licensing.",
+      "notes": "Survives as an agreement-specific processing bridge because retrieval-attractor salience is separated from controller identification.",
+      "requirements": {
+        "required_nodes": [
+          "retrieval_attractor_salience",
+          "processing_cost",
+          "reported_acceptability",
+          "grammaticality_attribution",
+          "community_licensing"
+        ],
+        "required_edges": [
+          {
+            "source": "retrieval_attractor_salience",
+            "target": "processing_cost",
+            "type": "causal"
+          },
+          {
+            "source": "processing_cost",
+            "target": "reported_acceptability",
+            "type": "causal"
+          },
+          {
+            "source": "reported_acceptability",
+            "target": "grammaticality_attribution",
+            "type": "evidential"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "retrieval_attractor_salience",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "proximity-error",
+          "axes": {
+            "community": "English speakers or writers under processing or production pressure.",
+            "norm_centre": "Descriptive agreement norm centre.",
+            "genre": "Written production or timed judgment.",
+            "medium": "Written example.",
+            "task_framing": "Attraction error contrasted with licensed override.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "controller-match-control",
+          "axes": {
+            "community": "Standard English speakers judging unambiguous controller agreement.",
+            "norm_centre": "Descriptive agreement norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Controller match and attraction control.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    },
+    {
+      "phenomenon": "collective-number-transparent-agreement-cgel",
+      "result": "survives_as_module",
+      "expected_survival_pattern": "The graph should distinguish licensed override from proximity error and simple head-feature agreement.",
+      "notes": "Survives as a narrow agreement module; override-pattern licensing now does the work broad operator value could not do.",
+      "requirements": {
+        "required_nodes": [
+          "agreement_override_pattern",
+          "agreement_feature_alignment",
+          "notional_agreement_basis",
+          "community_licensing",
+          "reported_acceptability",
+          "grammaticality_attribution"
+        ],
+        "required_edges": [
+          {
+            "source": "agreement_override_pattern",
+            "target": "agreement_feature_alignment",
+            "type": "constitutive"
+          },
+          {
+            "source": "notional_agreement_basis",
+            "target": "agreement_controller_identification",
+            "type": "evidential"
+          },
+          {
+            "source": "agreement_feature_alignment",
+            "target": "community_licensing",
+            "type": "constitutive"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "collective-singular-simple",
+          "axes": {
+            "community": "Standard English speakers judging singular collective agreement.",
+            "norm_centre": "Descriptive agreement norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Simple collective agreement.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "collective-plural-override",
+          "axes": {
+            "community": "Standard English speakers judging plural collective agreement.",
+            "norm_centre": "British/American and formality-sensitive descriptive norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Licensed override and register sensitivity separated.",
+            "speaker_identity": "Variety-neutral speaker cue."
+          }
+        },
+        {
+          "id": "number-transparent-plural-override",
+          "axes": {
+            "community": "Standard English speakers judging number-transparent noun agreement.",
+            "norm_centre": "Descriptive agreement norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Required override and simple head agreement contrasted.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    },
+    {
+      "phenomenon": "coordination-agreement-resolution-cgel",
+      "result": "survives_as_module",
+      "expected_survival_pattern": "The graph should keep controller identification, notional basis, override pattern, and attractor pressure distinct across coordination agreement cases.",
+      "notes": "Survives as the first agreement-specific mutation. This is a built-on-card survival, not held-out projective evidence.",
+      "requirements": {
+        "required_nodes": [
+          "agreement_controller_identification",
+          "agreement_feature_alignment",
+          "agreement_override_pattern",
+          "notional_agreement_basis",
+          "retrieval_attractor_salience",
+          "community_licensing",
+          "repair_reformulation_pressure",
+          "reported_acceptability",
+          "grammaticality_attribution"
+        ],
+        "required_edges": [
+          {
+            "source": "notional_agreement_basis",
+            "target": "agreement_controller_identification",
+            "type": "evidential"
+          },
+          {
+            "source": "agreement_controller_identification",
+            "target": "agreement_feature_alignment",
+            "type": "constitutive"
+          },
+          {
+            "source": "agreement_override_pattern",
+            "target": "agreement_feature_alignment",
+            "type": "constitutive"
+          },
+          {
+            "source": "agreement_feature_alignment",
+            "target": "community_licensing",
+            "type": "constitutive"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "ordinary-and-plural",
+          "axes": {
+            "community": "Standard English speakers judging ordinary and-coordination.",
+            "norm_centre": "Descriptive agreement norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Ordinary plural agreement baseline.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "unit-and-singular",
+          "axes": {
+            "community": "Standard English speakers judging unit-construal and-coordination.",
+            "norm_centre": "Descriptive agreement norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Unit construal and agreement value separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "or-mixed-number",
+          "axes": {
+            "community": "Standard English speakers judging mixed-number or-coordination.",
+            "norm_centre": "Descriptive agreement norm centre with usage-advice proximity pressure noted.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Agreement choice, avoidance, and proximity advice separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "supplement-correction-control",
+          "axes": {
+            "community": "Standard English speakers judging supplement or correction-driven agreement.",
+            "norm_centre": "Descriptive agreement norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Correction phrase and agreement controller separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    }
+  ]
+}

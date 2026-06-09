@@ -1,0 +1,180 @@
+{
+  "id": "context-aware-operator-gap-coordination-agreement-2026-06-09",
+  "target_graph": "graphs/archive/context-aware-operator-gap-candidate.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "protocol-bound",
+  "score_decision": "no-score-change",
+  "activated_paths": [
+    {
+      "id": "operator-value-to-attribution",
+      "phenomenon": "coordination-agreement-resolution-cgel",
+      "contrast_cell": "unit-and-singular",
+      "expected_path_reading": "non_sign_propagating",
+      "prediction": "Broad operator value can route agreement into licensing and attribution, but cannot choose the controller for unit-construal coordination.",
+      "edges": [
+        {
+          "source": "operator_value",
+          "target": "community_licensing",
+          "type": "constitutive"
+        },
+        {
+          "source": "community_licensing",
+          "target": "grammaticality_attribution",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "processing-to-attribution",
+      "phenomenon": "coordination-agreement-resolution-cgel",
+      "contrast_cell": "or-mixed-number",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Processing and task effects can perturb mixed-number or-coordination judgments, but do not explain licensed unit or distributive agreement.",
+      "edges": [
+        {
+          "source": "processing_cost",
+          "target": "reported_acceptability",
+          "type": "causal"
+        },
+        {
+          "source": "reported_acceptability",
+          "target": "grammaticality_attribution",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "licensing-to-repair",
+      "phenomenon": "coordination-agreement-resolution-cgel",
+      "contrast_cell": "ordinary-and-plural",
+      "expected_path_reading": "negative",
+      "prediction": "Higher licensing for ordinary plural and-coordination should lower repair pressure.",
+      "edges": [
+        {
+          "source": "community_licensing",
+          "target": "repair_reformulation_pressure",
+          "type": "causal"
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "phenomenon": "coordination-agreement-resolution-cgel",
+      "result": "partly_survives",
+      "expected_survival_pattern": "The graph should recognize coordination agreement as grammar-relevant while failing to predict controller choice and licensed override subclasses.",
+      "notes": "Partly survives. OPG has broad operator and processing channels, but the coordination card makes agreement-controller identification and override-pattern licensing unavoidable.",
+      "requirements": {
+        "required_nodes": [
+          "operator_value",
+          "processing_cost",
+          "community_licensing",
+          "repair_reformulation_pressure",
+          "reported_acceptability",
+          "grammaticality_attribution",
+          "task_framing"
+        ],
+        "required_edges": [
+          {
+            "source": "operator_value",
+            "target": "community_licensing",
+            "type": "constitutive"
+          },
+          {
+            "source": "processing_cost",
+            "target": "reported_acceptability",
+            "type": "causal"
+          },
+          {
+            "source": "community_licensing",
+            "target": "repair_reformulation_pressure",
+            "type": "causal"
+          },
+          {
+            "source": "community_licensing",
+            "target": "grammaticality_attribution",
+            "type": "evidential"
+          },
+          {
+            "source": "reported_acceptability",
+            "target": "grammaticality_attribution",
+            "type": "evidential"
+          }
+        ],
+        "forbidden_nodes": [
+          "agreement_controller_identification",
+          "agreement_override_pattern",
+          "retrieval_attractor_salience"
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "ordinary-and-plural",
+          "axes": {
+            "community": "Standard English speakers judging ordinary and-coordination.",
+            "norm_centre": "Descriptive agreement norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Ordinary plural agreement baseline.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "unit-and-singular",
+          "axes": {
+            "community": "Standard English speakers judging unit-construal and-coordination.",
+            "norm_centre": "Descriptive agreement norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Unit construal and agreement value separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "role-identity-singular",
+          "axes": {
+            "community": "Standard English speakers judging role-coordination with one-participant interpretation.",
+            "norm_centre": "Descriptive agreement norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "One-person and two-person readings separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "each-every-singular",
+          "axes": {
+            "community": "Standard English speakers judging distributive each/every coordination.",
+            "norm_centre": "Descriptive agreement norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Distributive agreement value separated from plural coordination default.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "or-mixed-number",
+          "axes": {
+            "community": "Standard English speakers judging mixed-number or-coordination.",
+            "norm_centre": "Descriptive agreement norm centre with usage-advice proximity pressure noted.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Agreement choice, avoidance, and proximity advice separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "supplement-correction-control",
+          "axes": {
+            "community": "Standard English speakers judging supplement or correction-driven agreement.",
+            "norm_centre": "Descriptive agreement norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Correction phrase and agreement controller separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    }
+  ]
+}

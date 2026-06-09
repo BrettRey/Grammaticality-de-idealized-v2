@@ -12,7 +12,7 @@ representations about grammaticality. The existing OVMG, detector, operator-stra
 processing-based, and normativity-based models are treated as seed graph families, not as
 conclusions or targets to vindicate.
 
-Twenty-eight adversarial passes/synthesis steps have been run. All numeric scores remain zero. Six
+Twenty-nine adversarial passes/synthesis steps have been run. All numeric scores remain zero. Six
 current modules have `scoped_module` labels tied to protocol-bound evaluations. The original
 scope-only evaluations now include card-level requirements and activated paths. Both held-out CGEL
 evaluations also include card-level requirements and activated paths without authorizing score
@@ -83,6 +83,12 @@ with `since`, catenative complement-form selection, proximity agreement error, a
 number-transparent agreement overrides. All four partly survive their target modules. The repeated
 partial-survival pattern strengthens pressure for temporal-anchor, catenative-complement subtype,
 and agreement-controller/retrieval constructs, but still does not justify a new graph.
+The twenty-ninth pass added one more source-backed card in each repeated pressure zone:
+present-perfect `already` plus `yesterday`, allow/prevent complement selection, and coordination
+agreement resolution. The temporal and catenative cards remain pressure without mutation. The
+coordination agreement card crossed the mutation threshold, producing
+`agreement-controller-override-candidate`, a narrow unscored candidate with no `scoped_module`
+label because it was built from the current agreement cards rather than held-out evidence.
 
 ## Current Candidate Stack
 
@@ -102,6 +108,7 @@ and agreement-controller/retrieval constructs, but still does not justify a new 
 - `repair-neighbour-reconstruction-candidate`
 - `information-normalized-repair-candidate`
 - `meaning-prior-reconstruction-candidate`
+- `agreement-controller-override-candidate`
 
 The current strongest modules are scoped, not general winners:
 
@@ -141,6 +148,9 @@ The current strongest modules are scoped, not general winners:
 - `meaning-prior-reconstruction-candidate` for semantic noisy-channel cases where a plausible
   intended meaning diverges from literal compositional coherence. It is an unscored candidate, not a
   scoped module yet.
+- `agreement-controller-override-candidate` for subject-verb and coordination agreement cases where
+  controller identification, licensed override, notional basis, and retrieval-attractor salience
+  must be separated. It is an unscored built-on-card candidate, not a scoped module yet.
 
 `context-indexed-dynamic-feedback-candidate`, `context-aware-operator-gap-candidate`, and
 `audience-reference-tracking-candidate`, `processing-naturalness-perturbation-candidate`, and
@@ -208,6 +218,8 @@ construct separation, or held-out projectibility, not by fitting a prior paper.
   `notes/twenty-seventh-adversarial-pass-synthesis-2026-06-09.md`
 - CGEL discriminator-pack synthesis in
   `notes/twenty-eighth-adversarial-pass-synthesis-2026-06-09.md`
+- agreement-controller mutation synthesis in
+  `notes/twenty-ninth-adversarial-pass-synthesis-2026-06-09.md`
 - coverage/discriminator matrix in `notes/coverage-discriminator-matrix-2026-06-08.md`
 - protocol-bound evaluation schema and exploratory evaluations in `evaluations/`
 - held-out CGEL/local-correction evaluations in `evaluations/protocol-tests/`
@@ -290,15 +302,19 @@ validation.
 
 1. Add data pointers for the remaining unresolved prediction-test cells: pronoun policy/audience
    design and rare transparent-relative opportunity thresholds.
-2. Add one more targeted card in each repeated pressure zone before mutating: temporal-anchor,
-   catenative-complement subtype, and agreement-controller/retrieval structure.
-3. Test comparative-illusion cards against `CAT` and the noisy-channel candidates to keep category
+2. Run held-out agreement tests against `agreement-controller-override-candidate` before adding a
+   scoped label or numeric score.
+3. Add one more temporal-anchor card only if it distinguishes recent-past, experiential, and
+   continuative perfect readings.
+4. Add one more catenative card only if it distinguishes catenative subtype from cohort-conditioned
+   production.
+5. Test comparative-illusion cards against `CAT` and the noisy-channel candidates to keep category
    analysis separate from reconstruction.
-4. Test whether `OPG`, `CAT`, and `SEL` stay complementary on richer fused-construction cards before
+6. Test whether `OPG`, `CAT`, and `SEL` stay complementary on richer fused-construction cards before
    adding any fused-head-specific graph.
-5. Calibrate scoped-module score magnitudes after at least one held-out or parameterized evaluation
+7. Calibrate scoped-module score magnitudes after at least one held-out or parameterized evaluation
    pass.
-6. Expand `phenomena/cards/` toward 40-100 cards only after the current representation classes stop
+8. Expand `phenomena/cards/` toward 40-100 cards only after the current representation classes stop
    shifting every pass.
-7. Only after the construct inventory stabilizes, consider whether `pgmpy`, NOTEARS-style methods,
+9. Only after the construct inventory stabilizes, consider whether `pgmpy`, NOTEARS-style methods,
    or empirical causal discovery are useful.

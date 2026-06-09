@@ -1,0 +1,146 @@
+{
+  "id": "agreement-controller-override-candidate",
+  "title": "Agreement controller and override candidate",
+  "family": "agreement-controller-override",
+  "status": "candidate",
+  "edge_semantics_level": "profiled",
+  "notes": "Twenty-ninth-round mutation generated after agreement cards repeatedly split controller choice, licensed override, and attraction/error pressure. This graph is a narrow agreement module built from source-backed cards, not a general grammar account and not eligible for projective credit until held-out agreement cards are added.",
+  "nodes": [
+    "agreement_controller_identification",
+    "agreement_feature_alignment",
+    "agreement_override_pattern",
+    "notional_agreement_basis",
+    "retrieval_attractor_salience",
+    "processing_cost",
+    "community_licensing",
+    "repair_reformulation_pressure",
+    "reported_acceptability",
+    "grammaticality_attribution",
+    "task_framing",
+    "standard_language_ideology",
+    "metalinguistic_condemnation",
+    "production_probability"
+  ],
+  "edges": [
+    {
+      "source": "notional_agreement_basis",
+      "target": "agreement_controller_identification",
+      "type": "evidential",
+      "relation_profile": "contextual_warrant",
+      "rationale": "Unit construal, distributivity, or participant-identity readings provide contextual warrant for identifying the agreement controller."
+    },
+    {
+      "source": "agreement_controller_identification",
+      "target": "agreement_feature_alignment",
+      "type": "constitutive",
+      "relation_profile": "partial_component",
+      "rationale": "Agreement feature alignment depends on first identifying the relevant controller rather than simply choosing the nearest noun phrase."
+    },
+    {
+      "source": "agreement_override_pattern",
+      "target": "agreement_feature_alignment",
+      "type": "constitutive",
+      "relation_profile": "partial_component",
+      "rationale": "Licensed override patterns can satisfy agreement alignment even when they depart from simple head-feature matching."
+    },
+    {
+      "source": "agreement_feature_alignment",
+      "target": "community_licensing",
+      "type": "constitutive",
+      "relation_profile": "necessary_component",
+      "rationale": "For agreement cards, controller-feature alignment is a necessary component of licensing in the target repertoire."
+    },
+    {
+      "source": "community_licensing",
+      "target": "repair_reformulation_pressure",
+      "type": "causal",
+      "relation_profile": "negative_monotone",
+      "rationale": "Lower licensing of an agreement value predicts greater repair or reformulation pressure."
+    },
+    {
+      "source": "community_licensing",
+      "target": "grammaticality_attribution",
+      "type": "evidential",
+      "relation_profile": "evidential_warrant",
+      "rationale": "Community licensing provides warrant for agreement-related grammaticality attribution without being identical to the attribution."
+    },
+    {
+      "source": "repair_reformulation_pressure",
+      "target": "grammaticality_attribution",
+      "type": "evidential",
+      "relation_profile": "contextual_warrant",
+      "rationale": "Repair pressure is contextual evidence that an agreement value is being treated as problematic."
+    },
+    {
+      "source": "retrieval_attractor_salience",
+      "target": "processing_cost",
+      "type": "causal",
+      "relation_profile": "positive_monotone",
+      "rationale": "A salient non-controller feature source can increase processing or retrieval cost in agreement production and judgment."
+    },
+    {
+      "source": "retrieval_attractor_salience",
+      "target": "production_probability",
+      "type": "causal",
+      "relation_profile": "mixed_contextual",
+      "rationale": "A salient attractor can increase production of agreement errors in some tasks while having little effect in others."
+    },
+    {
+      "source": "processing_cost",
+      "target": "reported_acceptability",
+      "type": "causal",
+      "relation_profile": "negative_monotone",
+      "rationale": "Processing or retrieval difficulty can lower reported acceptability independently of agreement licensing."
+    },
+    {
+      "source": "reported_acceptability",
+      "target": "grammaticality_attribution",
+      "type": "evidential",
+      "relation_profile": "contextual_warrant",
+      "rationale": "Acceptability reports provide contextual evidence for attribution but can be perturbed by processing or task framing."
+    },
+    {
+      "source": "task_framing",
+      "target": "reported_acceptability",
+      "type": "causal",
+      "relation_profile": "mixed_contextual",
+      "rationale": "Speeded, correctness-framed, naturalness-framed, and editing tasks can shift reported acceptability for agreement contrasts."
+    },
+    {
+      "source": "task_framing",
+      "target": "grammaticality_attribution",
+      "type": "causal",
+      "relation_profile": "mixed_contextual",
+      "rationale": "Task framing can cue whether respondents treat an agreement contrast as grammar, style, error, or acceptable override."
+    },
+    {
+      "source": "standard_language_ideology",
+      "target": "metalinguistic_condemnation",
+      "type": "causal",
+      "relation_profile": "positive_monotone",
+      "rationale": "Standard-language ideology can raise explicit condemnation of agreement variants independently of production probability."
+    },
+    {
+      "source": "metalinguistic_condemnation",
+      "target": "grammaticality_attribution",
+      "type": "evidential",
+      "relation_profile": "contextual_warrant",
+      "rationale": "Condemnation can influence attribution while remaining separable from controller alignment and licensing."
+    }
+  ],
+  "scores": {
+    "empirical_coverage": 0,
+    "projective_power": 0,
+    "counterexample_resilience": 0,
+    "measurement_clarity": 0,
+    "explanatory_payoff": 0,
+    "cross_domain_stability": 0,
+    "complexity_penalty": 0,
+    "circularity_penalty": 0,
+    "construct_confusion_penalty": 0,
+    "theory_preservation_penalty": 0
+  },
+  "score_status": {
+    "kind": "unscored"
+  }
+}

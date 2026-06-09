@@ -1,0 +1,166 @@
+{
+  "id": "selection-collocation-split-allow-prevent-complement-2026-06-09",
+  "target_graph": "graphs/archive/selection-collocation-split-candidate.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "protocol-bound",
+  "score_decision": "no-score-change",
+  "activated_paths": [
+    {
+      "id": "constructional-function-to-selection",
+      "phenomenon": "allow-prevent-complement-selection-cgel",
+      "contrast_cell": "prevent-gerund",
+      "expected_path_reading": "warranting",
+      "prediction": "Constructional function should warrant a complement-selection analysis for prevent-class gerund-participial complements.",
+      "edges": [
+        {
+          "source": "constructional_function",
+          "target": "argument_linking_selection",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "selection-to-licensing",
+      "phenomenon": "allow-prevent-complement-selection-cgel",
+      "contrast_cell": "allow-to-infinitival",
+      "expected_path_reading": "component",
+      "prediction": "Selected complement form should contribute to operator value and licensing for allow-class to-infinitival complements.",
+      "edges": [
+        {
+          "source": "argument_linking_selection",
+          "target": "operator_value",
+          "type": "constitutive"
+        },
+        {
+          "source": "operator_value",
+          "target": "community_licensing",
+          "type": "constitutive"
+        }
+      ]
+    },
+    {
+      "id": "licensing-to-repair",
+      "phenomenon": "allow-prevent-complement-selection-cgel",
+      "contrast_cell": "local-passive-allowed-doing",
+      "expected_path_reading": "negative",
+      "prediction": "A locally licensed passive `allowed doing` form should lower repair pressure in the cohort where it is licensed, but the graph lacks that cohort channel.",
+      "edges": [
+        {
+          "source": "community_licensing",
+          "target": "repair_reformulation_pressure",
+          "type": "causal"
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "phenomenon": "allow-prevent-complement-selection-cgel",
+      "result": "partly_survives",
+      "expected_survival_pattern": "The graph should treat allow/prevent complement form as selection while not converting a local cohort contrast into a general catenative-class change.",
+      "notes": "Partly survives. SEL keeps selection apart from collocation and payload choice, but it lacks verb-class subtype, raising/control/passive, and cohort-stabilization machinery.",
+      "requirements": {
+        "required_nodes": [
+          "argument_linking_selection",
+          "constructional_function",
+          "operator_value",
+          "community_licensing",
+          "repair_reformulation_pressure",
+          "reported_acceptability",
+          "grammaticality_attribution"
+        ],
+        "required_edges": [
+          {
+            "source": "constructional_function",
+            "target": "argument_linking_selection",
+            "type": "evidential"
+          },
+          {
+            "source": "argument_linking_selection",
+            "target": "operator_value",
+            "type": "constitutive"
+          },
+          {
+            "source": "operator_value",
+            "target": "community_licensing",
+            "type": "constitutive"
+          },
+          {
+            "source": "community_licensing",
+            "target": "repair_reformulation_pressure",
+            "type": "causal"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "collocational_rigidity",
+            "target": "operator_value",
+            "type": "constitutive"
+          },
+          {
+            "source": "reported_acceptability",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "allow-to-infinitival",
+          "axes": {
+            "community": "Standard English speakers judging allow-class catenatives.",
+            "norm_centre": "Descriptive catenative-class norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Complement form and verb class separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "allow-there-to",
+          "axes": {
+            "community": "Standard English speakers judging allow with dummy `there` plus to-infinitival complement.",
+            "norm_centre": "Descriptive catenative-class norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Raising-like complement pattern separated from permission meaning.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "prevent-gerund",
+          "axes": {
+            "community": "Standard English speakers judging prevent-class gerund-participial complements.",
+            "norm_centre": "Descriptive catenative-class norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Gerund-participial complement selection.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "prevent-from-gerund",
+          "axes": {
+            "community": "Standard English speakers judging prevent plus `from` plus gerund-participial.",
+            "norm_centre": "Descriptive catenative-class norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "`From` construction and complement form separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "local-passive-allowed-doing",
+          "axes": {
+            "community": "Brett's local family/cohort contrast treated as a separate production and licensing probe.",
+            "norm_centre": "Local cohort norm centre, not CGEL baseline.",
+            "genre": "Informal family speech.",
+            "medium": "Speech.",
+            "task_framing": "Production and acceptability separated from descriptive CGEL baseline.",
+            "speaker_identity": "Children versus adult speaker cue."
+          }
+        }
+      ]
+    }
+  ]
+}

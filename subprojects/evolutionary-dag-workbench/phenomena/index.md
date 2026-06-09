@@ -65,9 +65,12 @@ source-backed contrast cells for graph discovery and held-out projection.
 | [numerative-category-pressure](cards/numerative-category-pressure.md) | Numerative category, function, and licensing | Source-backed |
 | [nonfinite-verbless-clause-boundaries-cgel](cards/nonfinite-verbless-clause-boundaries-cgel.md) | Clause recognition, fragment licensing, genre, and medium | Source-backed |
 | [continuative-perfect-since-cgel](cards/continuative-perfect-since-cgel.md) | Perfect-tense anchoring and continuative aspectuality | Source-backed |
+| [perfect-already-yesterday-cgel](cards/perfect-already-yesterday-cgel.md) | Definite past-time expression, current relevance, and temporal-anchor fit | Source-backed |
 | [catenative-complement-form-selection-cgel](cards/catenative-complement-form-selection-cgel.md) | Non-finite complement form, meaning, and selection | Source-backed |
+| [allow-prevent-complement-selection-cgel](cards/allow-prevent-complement-selection-cgel.md) | Catenative class, complement form, and neighbouring cohort variation | Source-backed |
 | [proximity-agreement-error-cgel](cards/proximity-agreement-error-cgel.md) | Nearest-NP salience vs agreement licensing | Source-backed |
 | [collective-number-transparent-agreement-cgel](cards/collective-number-transparent-agreement-cgel.md) | Licensed agreement overrides vs processing errors | Source-backed |
+| [coordination-agreement-resolution-cgel](cards/coordination-agreement-resolution-cgel.md) | Agreement controller choice, override patterns, and proximity advice | Source-backed |
 
 ## Gibson-Backed Processing and Dependency Tranche
 

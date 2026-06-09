@@ -217,6 +217,23 @@ Four source-backed CGEL cards have been added and evaluated:
 
 No graph mutation or score movement follows from this pass.
 
+## Twenty-Ninth-Pass Addendum
+
+Three more source-backed CGEL discriminator cards have been added and evaluated:
+
+- `perfect-already-yesterday-cgel`: `FRAME` = `P`; frame fit separates the bare present-perfect
+  mismatch from the restricted `already` case, but the graph still lacks a temporal-anchor/current
+  relevance construct.
+- `allow-prevent-complement-selection-cgel`: `SEL` = `P`; selection is represented, but the graph
+  lacks catenative verb-class subtype and cohort-stabilization machinery.
+- `coordination-agreement-resolution-cgel`: `OPG` = `P`; broad operator-value and processing
+  channels are represented, but agreement-controller identification and override-pattern licensing
+  are missing.
+
+The coordination card crosses the mutation threshold for a narrow agreement module. Added
+`agreement-controller-override-candidate`; it survives the built-on agreement cards in a
+protocol-bound no-score-change evaluation, but it has no `scoped_module` label or projective credit.
+
 ## Discriminators Already Doing Work
 
 - `left-branch-extraction`: separates `DYN` from `OPG`.
@@ -271,6 +288,12 @@ No graph mutation or score movement follows from this pass.
   exposed by `allowed-to-doing-cohort-contrast` and `attitude-complement-selection`.
 - `proximity-agreement-error-cgel` and `collective-number-transparent-agreement-cgel`: split
   agreement processing errors from licensed agreement overrides.
+- `perfect-already-yesterday-cgel`: blocks a blanket present-perfect-plus-past-time rule and
+  sharpens the temporal-anchor pressure on `FRAME`.
+- `allow-prevent-complement-selection-cgel`: separates catenative class structure from local
+  cohort-conditioned `allowed doing` production.
+- `coordination-agreement-resolution-cgel`: forces agreement-controller and override constructs,
+  triggering `agreement-controller-override-candidate`.
 
 ## Untested Cards
 
@@ -333,3 +356,7 @@ speaker/cohort and diachronic licensing channels.
 The twenty-eighth pass adds a targeted CGEL discriminator pack. All four new source-backed cards
 partly survive their target modules, strengthening pressure for temporal-anchor,
 catenative-complement, and agreement-controller constructs without yet justifying mutation.
+The twenty-ninth pass adds one more card in each repeated pressure zone. Temporal-anchor and
+catenative-subtype pressure remain unresolved without mutation. Agreement pressure crosses the
+mutation threshold, yielding `agreement-controller-override-candidate`; because it is built from the
+current agreement cards, it has no held-out projective credit, scoped label, or numeric score.

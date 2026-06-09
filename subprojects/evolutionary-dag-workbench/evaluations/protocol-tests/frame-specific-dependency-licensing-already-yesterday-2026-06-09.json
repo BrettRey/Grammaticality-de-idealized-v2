@@ -1,0 +1,151 @@
+{
+  "id": "frame-specific-dependency-licensing-already-yesterday-2026-06-09",
+  "target_graph": "graphs/archive/frame-specific-dependency-licensing-candidate.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "protocol-bound",
+  "score_decision": "no-score-change",
+  "activated_paths": [
+    {
+      "id": "frame-fit-to-licensing",
+      "phenomenon": "perfect-already-yesterday-cgel",
+      "contrast_cell": "already-perfect-yesterday",
+      "expected_path_reading": "warranting",
+      "prediction": "A restricted experiential-perfect frame should warrant licensing where a bare definite past-time expression would not.",
+      "edges": [
+        {
+          "source": "constructional_frame_fit",
+          "target": "community_licensing",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "recoverability-to-attribution",
+      "phenomenon": "perfect-already-yesterday-cgel",
+      "contrast_cell": "bare-perfect-yesterday",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Recoverability of the intended past event can affect reports, but should not by itself license the present-perfect frame.",
+      "edges": [
+        {
+          "source": "semantic_pragmatic_recoverability",
+          "target": "reported_acceptability",
+          "type": "causal"
+        },
+        {
+          "source": "reported_acceptability",
+          "target": "grammaticality_attribution",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "licensing-to-repair",
+      "phenomenon": "perfect-already-yesterday-cgel",
+      "contrast_cell": "simple-past-yesterday",
+      "expected_path_reading": "negative",
+      "prediction": "Higher licensing of the simple-past-plus-definite-past-time frame should lower repair pressure.",
+      "edges": [
+        {
+          "source": "community_licensing",
+          "target": "repair_reformulation_pressure",
+          "type": "causal"
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "phenomenon": "perfect-already-yesterday-cgel",
+      "result": "partly_survives",
+      "expected_survival_pattern": "The graph should distinguish the bare present-perfect-plus-yesterday mismatch from the restricted already-plus-yesterday experiential case without treating recoverability as licensing.",
+      "notes": "Partly survives. FRAME records frame fit, but the card now makes the missing temporal-anchor/current-relevance construct more specific.",
+      "requirements": {
+        "required_nodes": [
+          "constructional_frame_fit",
+          "operator_value",
+          "operator_repertoire_membership",
+          "semantic_pragmatic_recoverability",
+          "community_licensing",
+          "reported_acceptability",
+          "repair_reformulation_pressure",
+          "grammaticality_attribution"
+        ],
+        "required_edges": [
+          {
+            "source": "constructional_frame_fit",
+            "target": "community_licensing",
+            "type": "evidential"
+          },
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "reported_acceptability",
+            "type": "causal"
+          },
+          {
+            "source": "community_licensing",
+            "target": "repair_reformulation_pressure",
+            "type": "causal"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "community_licensing",
+            "type": "causal"
+          },
+          {
+            "source": "reported_acceptability",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "bare-perfect-yesterday",
+          "axes": {
+            "community": "Standard English speakers judging present perfect with a bare definite past-time expression.",
+            "norm_centre": "Descriptive tense/aspect norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Present-perfect frame fit and event recoverability separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "already-perfect-yesterday",
+          "axes": {
+            "community": "Standard English speakers judging the restricted experiential-perfect use with `already`.",
+            "norm_centre": "Descriptive tense/aspect norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "`Already` contribution and temporal anchoring separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "simple-past-yesterday",
+          "axes": {
+            "community": "Standard English speakers judging simple past with a definite past-time expression.",
+            "norm_centre": "Descriptive tense/aspect norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Simple-past anchor treated as the baseline.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "recent-past-perfect",
+          "axes": {
+            "community": "Standard English speakers judging present perfect with `recently` or `just`.",
+            "norm_centre": "Descriptive tense/aspect norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Indefinite recency expression contrasted with definite past-time expression.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    }
+  ]
+}
