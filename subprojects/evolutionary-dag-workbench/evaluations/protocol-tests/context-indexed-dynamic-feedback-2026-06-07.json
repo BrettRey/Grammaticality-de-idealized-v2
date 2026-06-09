@@ -4,12 +4,160 @@
   "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
   "status": "protocol-bound",
   "score_decision": "scope-only",
+  "activated_paths": [
+    {
+      "id": "regional-licensing-to-later-production",
+      "phenomenon": "needs-washed",
+      "contrast_cell": "regional-naturalness",
+      "expected_path_reading": "positive",
+      "prediction": "Community licensing in a regional cell should support later production in matching contexts, but the path remains unsigned until the dynamic graph is profiled.",
+      "edges": [
+        {
+          "source": "community_licensing_t1",
+          "target": "production_probability_t2",
+          "type": "time_lagged"
+        }
+      ]
+    },
+    {
+      "id": "standard-ideology-to-correction",
+      "phenomenon": "needs-washed",
+      "contrast_cell": "standard-correctness",
+      "expected_path_reading": "positive",
+      "prediction": "Standard-language ideology can route through condemnation into correction probability in a standard correctness cell.",
+      "edges": [
+        {
+          "source": "standard_language_ideology_t1",
+          "target": "metalinguistic_condemnation_t1",
+          "type": "causal"
+        },
+        {
+          "source": "metalinguistic_condemnation_t1",
+          "target": "editorial_correction_probability_t1",
+          "type": "causal"
+        }
+      ]
+    },
+    {
+      "id": "genre-to-attribution",
+      "phenomenon": "register-bound-fragments",
+      "contrast_cell": "fragment-licensed-genre",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Genre should route through register/genre appropriateness into reported acceptability and then attribution.",
+      "edges": [
+        {
+          "source": "genre_t1",
+          "target": "register_genre_appropriateness_t1",
+          "type": "causal"
+        },
+        {
+          "source": "register_genre_appropriateness_t1",
+          "target": "reported_acceptability_t1",
+          "type": "causal"
+        },
+        {
+          "source": "reported_acceptability_t1",
+          "target": "grammaticality_attribution_t1",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "usage-stabilization-production",
+      "phenomenon": "singular-they",
+      "contrast_cell": "later-institutional-acceptance",
+      "expected_path_reading": "non_sign_propagating",
+      "prediction": "Usage should feed later stabilization, later licensing, and production availability without treating institutional acceptance as creation from nothing.",
+      "edges": [
+        {
+          "source": "usage_frequency_t1",
+          "target": "diachronic_stabilization_t2",
+          "type": "time_lagged"
+        },
+        {
+          "source": "diachronic_stabilization_t2",
+          "target": "community_licensing_t2",
+          "type": "evidential"
+        },
+        {
+          "source": "community_licensing_t2",
+          "target": "production_probability_t2",
+          "type": "causal"
+        }
+      ]
+    },
+    {
+      "id": "task-framing-to-attribution",
+      "phenomenon": "between-you-and-I",
+      "contrast_cell": "school-correctness-judgment",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Correctness framing can route through reported acceptability into grammaticality attribution while remaining distinct from production probability.",
+      "edges": [
+        {
+          "source": "task_framing_t1",
+          "target": "reported_acceptability_t1",
+          "type": "causal"
+        },
+        {
+          "source": "reported_acceptability_t1",
+          "target": "grammaticality_attribution_t1",
+          "type": "evidential"
+        }
+      ]
+    }
+  ],
   "cards": [
     {
       "phenomenon": "needs-washed",
       "result": "survives_as_module",
       "expected_survival_pattern": "Stable production and licensing in a regional community can coexist with standard-norm condemnation, correction, lower reported acceptability, or hostile attribution.",
       "notes": "Survives as a module. The JSON graph still does not instantiate cells internally; this evaluation file records them.",
+      "requirements": {
+        "required_nodes": [
+          "production_probability_t",
+          "usage_frequency_t1",
+          "community_licensing_t1",
+          "standard_language_ideology_t1",
+          "metalinguistic_condemnation_t1",
+          "editorial_correction_probability_t1",
+          "reported_acceptability_t1",
+          "grammaticality_attribution_t1"
+        ],
+        "required_edges": [
+          {
+            "source": "production_probability_t",
+            "target": "usage_frequency_t1",
+            "type": "time_lagged"
+          },
+          {
+            "source": "community_licensing_t1",
+            "target": "reported_acceptability_t1",
+            "type": "measurement"
+          },
+          {
+            "source": "standard_language_ideology_t1",
+            "target": "metalinguistic_condemnation_t1",
+            "type": "causal"
+          },
+          {
+            "source": "metalinguistic_condemnation_t1",
+            "target": "editorial_correction_probability_t1",
+            "type": "causal"
+          },
+          {
+            "source": "community_licensing_t1",
+            "target": "grammaticality_attribution_t1",
+            "type": "evidential"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "standard_language_ideology_t1",
+            "target": "community_licensing_t1",
+            "type": "causal"
+          }
+        ]
+      },
       "contrast_cells": [
         {
           "id": "regional-naturalness",
@@ -40,6 +188,45 @@
       "result": "survives_as_module",
       "expected_survival_pattern": "Speaker cues and social-indexical value can change reported acceptability without directly changing community licensing.",
       "notes": "Survives as a module. Evaluator identity is not separately represented yet.",
+      "requirements": {
+        "required_nodes": [
+          "speaker_identity_t1",
+          "social_indexical_value_t1",
+          "community_licensing_t1",
+          "standard_language_ideology_t1",
+          "reported_acceptability_t1",
+          "grammaticality_attribution_t1"
+        ],
+        "required_edges": [
+          {
+            "source": "speaker_identity_t1",
+            "target": "social_indexical_value_t1",
+            "type": "causal"
+          },
+          {
+            "source": "social_indexical_value_t1",
+            "target": "reported_acceptability_t1",
+            "type": "causal"
+          },
+          {
+            "source": "community_licensing_t1",
+            "target": "reported_acceptability_t1",
+            "type": "measurement"
+          },
+          {
+            "source": "community_licensing_t1",
+            "target": "grammaticality_attribution_t1",
+            "type": "evidential"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "social_indexical_value_t1",
+            "target": "community_licensing_t1",
+            "type": "causal"
+          }
+        ]
+      },
       "contrast_cells": [
         {
           "id": "ingroup-naturalness",
@@ -70,6 +257,37 @@
       "result": "survives_as_module",
       "expected_survival_pattern": "Genre and medium should route through register/genre appropriateness and affect reported acceptability without globally marking fragments as unlicensed.",
       "notes": "Survives as a module. It still needs sharper treatment of explicit grammaticality condemnation under full-sentence task framing.",
+      "requirements": {
+        "required_nodes": [
+          "genre_t1",
+          "medium_t1",
+          "register_genre_appropriateness_t1",
+          "reported_acceptability_t1",
+          "grammaticality_attribution_t1"
+        ],
+        "required_edges": [
+          {
+            "source": "genre_t1",
+            "target": "register_genre_appropriateness_t1",
+            "type": "causal"
+          },
+          {
+            "source": "medium_t1",
+            "target": "register_genre_appropriateness_t1",
+            "type": "causal"
+          },
+          {
+            "source": "register_genre_appropriateness_t1",
+            "target": "reported_acceptability_t1",
+            "type": "causal"
+          },
+          {
+            "source": "reported_acceptability_t1",
+            "target": "grammaticality_attribution_t1",
+            "type": "evidential"
+          }
+        ]
+      },
       "contrast_cells": [
         {
           "id": "fragment-licensed-genre",
@@ -100,6 +318,37 @@
       "result": "partly_survives",
       "expected_survival_pattern": "Earlier production and usage should feed later usage, licensing, stabilization, ideology, and production without treating later institutional acceptance as creation from nothing.",
       "notes": "Partly survives. Multiple norm centres, cohort effects, and institutional-adoption dynamics are still underrepresented.",
+      "requirements": {
+        "required_nodes": [
+          "usage_frequency_t1",
+          "diachronic_stabilization_t2",
+          "community_licensing_t2",
+          "standard_language_ideology_t2",
+          "production_probability_t2"
+        ],
+        "required_edges": [
+          {
+            "source": "usage_frequency_t1",
+            "target": "diachronic_stabilization_t2",
+            "type": "time_lagged"
+          },
+          {
+            "source": "diachronic_stabilization_t2",
+            "target": "community_licensing_t2",
+            "type": "evidential"
+          },
+          {
+            "source": "diachronic_stabilization_t2",
+            "target": "standard_language_ideology_t2",
+            "type": "causal"
+          },
+          {
+            "source": "community_licensing_t2",
+            "target": "production_probability_t2",
+            "type": "causal"
+          }
+        ]
+      },
       "contrast_cells": [
         {
           "id": "earlier-hostile-norm-centre",
@@ -130,6 +379,38 @@
       "result": "partly_survives",
       "expected_survival_pattern": "Production probability and reported acceptability should diverge under correctness framing, standard-language ideology, and correction pressure.",
       "notes": "Partly survives. The candidate lacks schooling_instructional_exposure and does not explicitly distinguish production task from judgment task.",
+      "requirements": {
+        "required_nodes": [
+          "production_probability_t",
+          "standard_language_ideology_t1",
+          "editorial_correction_probability_t1",
+          "task_framing_t1",
+          "reported_acceptability_t1",
+          "grammaticality_attribution_t1"
+        ],
+        "required_edges": [
+          {
+            "source": "standard_language_ideology_t1",
+            "target": "reported_acceptability_t1",
+            "type": "causal"
+          },
+          {
+            "source": "editorial_correction_probability_t1",
+            "target": "grammaticality_attribution_t1",
+            "type": "evidential"
+          },
+          {
+            "source": "task_framing_t1",
+            "target": "reported_acceptability_t1",
+            "type": "causal"
+          },
+          {
+            "source": "reported_acceptability_t1",
+            "target": "grammaticality_attribution_t1",
+            "type": "evidential"
+          }
+        ]
+      },
       "contrast_cells": [
         {
           "id": "unmonitored-production",
@@ -160,6 +441,13 @@
       "result": "fails_general_out_of_scope",
       "expected_survival_pattern": "The candidate should fail as a general account or mark the case out of scope because it lacks operator-gap and recoverability modules.",
       "notes": "Useful failure. A separate context-aware operator-gap candidate is needed.",
+      "requirements": {
+        "forbidden_nodes": [
+          "operator_value_t1",
+          "semantic_pragmatic_recoverability_t1",
+          "competitor_availability_t1"
+        ]
+      },
       "contrast_cells": [
         {
           "id": "recoverable-extraction",

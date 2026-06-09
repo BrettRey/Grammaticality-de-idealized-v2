@@ -1,0 +1,145 @@
+{
+  "id": "context-aware-operator-gap-center-embedding-2026-06-08",
+  "target_graph": "graphs/archive/context-aware-operator-gap-candidate.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "protocol-bound",
+  "score_decision": "no-score-change",
+  "activated_paths": [
+    {
+      "id": "processing-cost-to-acceptability",
+      "phenomenon": "center-embedding",
+      "contrast_cell": "deep-licensed-hard",
+      "expected_path_reading": "negative",
+      "prediction": "Processing cost should lower reported acceptability without itself changing licensing.",
+      "edges": [
+        {
+          "source": "processing_cost",
+          "target": "reported_acceptability",
+          "type": "causal"
+        }
+      ]
+    },
+    {
+      "id": "recoverability-to-attribution",
+      "phenomenon": "center-embedding",
+      "contrast_cell": "scaffolded-recoverable",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Semantic-pragmatic recoverability can raise reported acceptability, but attribution remains contextual warrant rather than licensing.",
+      "edges": [
+        {
+          "source": "semantic_pragmatic_recoverability",
+          "target": "reported_acceptability",
+          "type": "causal"
+        },
+        {
+          "source": "reported_acceptability",
+          "target": "grammaticality_attribution",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "licensing-to-attribution",
+      "phenomenon": "center-embedding",
+      "contrast_cell": "shallow-licensed",
+      "expected_path_reading": "warranting",
+      "prediction": "Community licensing can warrant grammaticality attribution even when reported acceptability is affected by processing.",
+      "edges": [
+        {
+          "source": "community_licensing",
+          "target": "grammaticality_attribution",
+          "type": "evidential"
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "phenomenon": "center-embedding",
+      "result": "partly_survives",
+      "expected_survival_pattern": "The graph separates processing cost, recoverability, reported acceptability, licensing, and attribution. It partly survives because it lacks felt-naturalness and memory-depth constructs.",
+      "notes": "This repeats the agreement-attraction result: OPG has a useful processing perturbation path, but not a processing architecture.",
+      "requirements": {
+        "required_nodes": [
+          "processing_cost",
+          "semantic_pragmatic_recoverability",
+          "reported_acceptability",
+          "grammaticality_attribution",
+          "community_licensing"
+        ],
+        "forbidden_nodes": [
+          "felt_naturalness_context"
+        ],
+        "required_edges": [
+          {
+            "source": "processing_cost",
+            "target": "reported_acceptability",
+            "type": "causal"
+          },
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "reported_acceptability",
+            "type": "causal"
+          },
+          {
+            "source": "reported_acceptability",
+            "target": "grammaticality_attribution",
+            "type": "evidential"
+          },
+          {
+            "source": "community_licensing",
+            "target": "grammaticality_attribution",
+            "type": "evidential"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "processing_cost",
+            "target": "community_licensing",
+            "type": "causal"
+          },
+          {
+            "source": "reported_acceptability",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "shallow-licensed",
+          "axes": {
+            "community": "English speakers judging simple, licensed embedding.",
+            "norm_centre": "Descriptive grammar norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Grammaticality and acceptability separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "deep-licensed-hard",
+          "axes": {
+            "community": "English speakers judging deeply center-embedded but structurally licensed examples.",
+            "norm_centre": "Descriptive grammar norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Acceptability under high processing load.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "scaffolded-recoverable",
+          "axes": {
+            "community": "English speakers given punctuation, prosody, or paraphrase support.",
+            "norm_centre": "Descriptive grammar norm centre.",
+            "genre": "Judgment with comprehension support.",
+            "medium": "Written or spoken scaffolded example.",
+            "task_framing": "Recoverability and grammaticality attribution separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    }
+  ]
+}

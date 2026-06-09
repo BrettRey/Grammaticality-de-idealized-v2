@@ -1,5 +1,5 @@
 {
-  "id": "nonzero-unprofiled-score",
+  "id": "score-change-unprofiled-target-graph",
   "target_graph": "tests/fixtures/graphs/invalid/nonzero-unprofiled-score.json",
   "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
   "status": "protocol-bound",
@@ -10,7 +10,7 @@
       "phenomenon": "left-branch-extraction",
       "contrast_cell": "fixture-cell",
       "expected_path_reading": "indeterminate",
-      "prediction": "Fixture score movement commits to the profiled measurement edge.",
+      "prediction": "Score movement cannot be proposed against a graph without profiled edge semantics.",
       "edges": [
         {
           "source": "community_licensing",

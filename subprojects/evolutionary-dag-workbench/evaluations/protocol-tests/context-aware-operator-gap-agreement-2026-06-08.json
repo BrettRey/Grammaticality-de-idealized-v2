@@ -1,0 +1,226 @@
+{
+  "id": "context-aware-operator-gap-agreement-2026-06-08",
+  "target_graph": "graphs/archive/context-aware-operator-gap-candidate.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "protocol-bound",
+  "score_decision": "no-score-change",
+  "activated_paths": [
+    {
+      "id": "agreement-operator-to-attribution",
+      "phenomenon": "subject-verb-agreement-cgel",
+      "contrast_cell": "low-load-obligatory-agreement",
+      "expected_path_reading": "non_sign_propagating",
+      "prediction": "Operator value can be part of licensing and licensing can warrant attribution, but this path does not by itself encode an agreement-specific feature mechanism.",
+      "edges": [
+        {
+          "source": "operator_value",
+          "target": "community_licensing",
+          "type": "constitutive"
+        },
+        {
+          "source": "community_licensing",
+          "target": "grammaticality_attribution",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "processing-perturbation-to-attribution",
+      "phenomenon": "subject-verb-agreement-cgel",
+      "contrast_cell": "attraction-reread",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Processing cost can perturb reported acceptability, but acceptability remains contextual warrant for attribution rather than licensing.",
+      "edges": [
+        {
+          "source": "processing_cost",
+          "target": "reported_acceptability",
+          "type": "causal"
+        },
+        {
+          "source": "reported_acceptability",
+          "target": "grammaticality_attribution",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "attraction-acceptability-perturbation",
+      "phenomenon": "agreement-attraction",
+      "contrast_cell": "first-pass-attraction",
+      "expected_path_reading": "negative",
+      "prediction": "Processing cost should shift reported acceptability without creating licensing for the attraction error.",
+      "edges": [
+        {
+          "source": "processing_cost",
+          "target": "reported_acceptability",
+          "type": "causal"
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "phenomenon": "subject-verb-agreement-cgel",
+      "result": "partly_survives",
+      "expected_survival_pattern": "The graph separates operator value, licensing, processing perturbation, reported acceptability, and attribution. It only partly survives because it lacks agreement-specific feature alignment, notional agreement, and retrieval/attractor structure.",
+      "notes": "Useful as a broad operator-value and processing-perturbation module. It should not be promoted into an agreement account without feature-alignment and notional-agreement constructs.",
+      "requirements": {
+        "required_nodes": [
+          "operator_value",
+          "processing_cost",
+          "community_licensing",
+          "reported_acceptability",
+          "grammaticality_attribution",
+          "task_framing"
+        ],
+        "required_edges": [
+          {
+            "source": "operator_value",
+            "target": "community_licensing",
+            "type": "constitutive"
+          },
+          {
+            "source": "processing_cost",
+            "target": "reported_acceptability",
+            "type": "causal"
+          },
+          {
+            "source": "community_licensing",
+            "target": "grammaticality_attribution",
+            "type": "evidential"
+          },
+          {
+            "source": "reported_acceptability",
+            "target": "grammaticality_attribution",
+            "type": "evidential"
+          },
+          {
+            "source": "task_framing",
+            "target": "reported_acceptability",
+            "type": "causal"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "reported_acceptability",
+            "target": "community_licensing",
+            "type": "causal"
+          },
+          {
+            "source": "processing_cost",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "low-load-obligatory-agreement",
+          "axes": {
+            "community": "English speakers judging ordinary finite subject-verb agreement.",
+            "norm_centre": "Descriptive or explicit-grammar agreement norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Grammaticality judgment after ordinary reading.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "attraction-reread",
+          "axes": {
+            "community": "English speakers exposed to an intervening plural attractor.",
+            "norm_centre": "Descriptive agreement norm centre.",
+            "genre": "Timed judgment followed by rereading.",
+            "medium": "Written experiment item.",
+            "task_framing": "First-pass acceptability separated from reread grammaticality attribution.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "notional-collective",
+          "axes": {
+            "community": "English speakers in a variety or register allowing notional agreement in some collective contexts.",
+            "norm_centre": "Local descriptive norm rather than a simplified school rule.",
+            "genre": "Sentence judgment with collective-noun context.",
+            "medium": "Written example.",
+            "task_framing": "Acceptability and attribution separated.",
+            "speaker_identity": "Variety-neutral speaker cue."
+          }
+        },
+        {
+          "id": "correctness-rereading",
+          "axes": {
+            "community": "School or editing judgment context.",
+            "norm_centre": "Standard agreement rule.",
+            "genre": "Grammar test or editing task.",
+            "medium": "Written example.",
+            "task_framing": "Correctness-framed rereading.",
+            "speaker_identity": "Student, editor, or standard-writer cue."
+          }
+        }
+      ]
+    },
+    {
+      "phenomenon": "agreement-attraction",
+      "result": "partly_survives",
+      "expected_survival_pattern": "Attractor-driven judgment shifts should be routed through processing cost and reported acceptability, not through community licensing.",
+      "notes": "Partly survives as a processing-perturbation scaffold. It lacks a retrieval architecture or feature-alignment construct, so it cannot predict which attractors should matter.",
+      "requirements": {
+        "required_nodes": [
+          "processing_cost",
+          "reported_acceptability",
+          "grammaticality_attribution",
+          "community_licensing"
+        ],
+        "required_edges": [
+          {
+            "source": "processing_cost",
+            "target": "reported_acceptability",
+            "type": "causal"
+          },
+          {
+            "source": "reported_acceptability",
+            "target": "grammaticality_attribution",
+            "type": "evidential"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "processing_cost",
+            "target": "community_licensing",
+            "type": "causal"
+          },
+          {
+            "source": "reported_acceptability",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "first-pass-attraction",
+          "axes": {
+            "community": "English speakers in a timed judgment task.",
+            "norm_centre": "Descriptive agreement norm centre.",
+            "genre": "Psycholinguistic judgment item.",
+            "medium": "Written or rapid serial visual presentation.",
+            "task_framing": "First-pass acceptability under attraction.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "reread-structural-correction",
+          "axes": {
+            "community": "English speakers after rereading the same item.",
+            "norm_centre": "Descriptive agreement norm centre.",
+            "genre": "Psycholinguistic judgment item with rereading.",
+            "medium": "Written example.",
+            "task_framing": "Explicit grammaticality attribution after rereading.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    }
+  ]
+}

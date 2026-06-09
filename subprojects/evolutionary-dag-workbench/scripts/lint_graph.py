@@ -21,6 +21,8 @@ SCORE_STATUS_KINDS = {"unscored", "scoped_module", "general_account"}
 SCORABLE_STATUS_KINDS = {"scoped_module", "general_account"}
 LABEL_EVALUATION_STATUSES = {"protocol-bound", "held-out"}
 LABEL_EVALUATION_DECISIONS = {"scope-only", "score-change-proposed"}
+GENERAL_ACCOUNT_EVALUATION_STATUS = "held-out"
+GENERAL_ACCOUNT_EVALUATION_DECISION = "score-change-proposed"
 SCORING_EVALUATION_STATUSES = {"protocol-bound", "held-out"}
 SCORING_EVALUATION_DECISION = "score-change-proposed"
 SCORE_MIN = 0
@@ -68,6 +70,7 @@ OUTCOME_NODE_BASES = {
     "register_genre_appropriateness",
     "repair_reformulation_pressure",
     "metalinguistic_condemnation",
+    "reference_tracking_success",
 }
 CONTEXT_INDEXED_REQUIRED_AXES = {
     "community",
@@ -294,6 +297,7 @@ def lint_score_status(graph: dict, path: Path) -> list[str]:
                 lint_score_evaluation_target(
                     path,
                     evaluation,
+                    score_status_kind=kind,
                     require_label_authorized=kind in SCORABLE_STATUS_KINDS,
                     require_score_authorized=has_nonzero_scores,
                 )
@@ -370,6 +374,7 @@ def lint_score_evaluation_target(
     graph_path: Path,
     evaluation: str,
     *,
+    score_status_kind: str | None,
     require_label_authorized: bool,
     require_score_authorized: bool,
 ) -> list[str]:
@@ -435,6 +440,18 @@ def lint_score_evaluation_target(
                 f"{graph_path}: scoped/general labels require evaluation.score_decision "
                 f"to be one of {allowed}"
             )
+
+        if score_status_kind == "general_account":
+            if status != GENERAL_ACCOUNT_EVALUATION_STATUS:
+                errors.append(
+                    f"{graph_path}: general_account labels require evaluation.status "
+                    f"{GENERAL_ACCOUNT_EVALUATION_STATUS!r}"
+                )
+            if score_decision != GENERAL_ACCOUNT_EVALUATION_DECISION:
+                errors.append(
+                    f"{graph_path}: general_account labels require evaluation.score_decision "
+                    f"{GENERAL_ACCOUNT_EVALUATION_DECISION!r}"
+                )
 
     if require_score_authorized:
         status = evaluation_data.get("status")

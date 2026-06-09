@@ -1,0 +1,100 @@
+{
+  "id": "processing-naturalness-perturbation-candidate",
+  "title": "Processing-naturalness perturbation candidate",
+  "family": "processing-naturalness-perturbation",
+  "status": "candidate",
+  "edge_semantics_level": "profiled",
+  "notes": "Tenth-round mutation generated after agreement-attraction and center-embedding evaluations repeated the same missing mechanism: processing effects can perturb felt naturalness and reported acceptability without changing community licensing or grammaticality attribution. This graph is a scoped processing/measurement module, not a licensing account.",
+  "nodes": [
+    "processing_cost",
+    "semantic_pragmatic_recoverability",
+    "felt_naturalness_context",
+    "measurement_task",
+    "task_framing",
+    "reported_acceptability",
+    "community_licensing",
+    "grammaticality_attribution"
+  ],
+  "edges": [
+    {
+      "source": "processing_cost",
+      "target": "felt_naturalness_context",
+      "type": "causal",
+      "relation_profile": "negative_monotone",
+      "rationale": "Greater processing difficulty tends to lower felt naturalness in the judgment context."
+    },
+    {
+      "source": "semantic_pragmatic_recoverability",
+      "target": "felt_naturalness_context",
+      "type": "causal",
+      "relation_profile": "positive_monotone",
+      "rationale": "Recoverable meaning or scaffolding can improve felt naturalness despite processing difficulty."
+    },
+    {
+      "source": "felt_naturalness_context",
+      "target": "reported_acceptability",
+      "type": "measurement",
+      "relation_profile": "noisy_positive_indicator",
+      "rationale": "Naturalness reports and acceptability reports are linked, but the measurement is noisy and task-sensitive."
+    },
+    {
+      "source": "measurement_task",
+      "target": "reported_acceptability",
+      "type": "causal",
+      "relation_profile": "mixed_contextual",
+      "rationale": "Elicitation format changes how felt naturalness is converted into a reported acceptability response."
+    },
+    {
+      "source": "task_framing",
+      "target": "reported_acceptability",
+      "type": "causal",
+      "relation_profile": "mixed_contextual",
+      "rationale": "Correctness, naturalness, speeded judgment, and comprehension framings can shift reported acceptability."
+    },
+    {
+      "source": "task_framing",
+      "target": "grammaticality_attribution",
+      "type": "causal",
+      "relation_profile": "mixed_contextual",
+      "rationale": "Task framing can cue whether respondents treat difficulty as a grammar verdict or as processing trouble."
+    },
+    {
+      "source": "community_licensing",
+      "target": "reported_acceptability",
+      "type": "measurement",
+      "relation_profile": "task_biased_indicator",
+      "rationale": "Reported acceptability can partly measure licensing, but processing and task effects can mask that relation."
+    },
+    {
+      "source": "community_licensing",
+      "target": "grammaticality_attribution",
+      "type": "evidential",
+      "relation_profile": "contextual_warrant",
+      "rationale": "Licensing is evidence for attribution, not identical to the reported feeling of naturalness."
+    },
+    {
+      "source": "reported_acceptability",
+      "target": "grammaticality_attribution",
+      "type": "evidential",
+      "relation_profile": "contextual_warrant",
+      "rationale": "Acceptability reports provide contextual warrant for attribution but are not the target construct."
+    }
+  ],
+  "scores": {
+    "empirical_coverage": 0,
+    "projective_power": 0,
+    "counterexample_resilience": 0,
+    "measurement_clarity": 0,
+    "explanatory_payoff": 0,
+    "cross_domain_stability": 0,
+    "complexity_penalty": 0,
+    "circularity_penalty": 0,
+    "construct_confusion_penalty": 0,
+    "theory_preservation_penalty": 0
+  },
+  "score_status": {
+    "kind": "scoped_module",
+    "evaluation": "evaluations/protocol-tests/processing-naturalness-perturbation-2026-06-08.json",
+    "scope": "Processing cost, felt naturalness, recoverability, measurement-task, acceptability, and attribution perturbation module; not a licensing account."
+  }
+}

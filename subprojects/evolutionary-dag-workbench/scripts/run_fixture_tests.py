@@ -248,6 +248,15 @@ TESTS = [
         expected_output="scoped/general labels require evaluation.status",
     ),
     FixtureTest(
+        name="graph rejects scope-only general-account label",
+        command=[
+            "scripts/lint_graph.py",
+            rel("tests/fixtures/graphs/invalid/general-scope-only-label.json"),
+        ],
+        expected_returncode=1,
+        expected_output="general_account labels require evaluation.score_decision",
+    ),
+    FixtureTest(
         name="graph rejects score out of range",
         command=[
             "scripts/lint_graph.py",
@@ -387,6 +396,15 @@ TESTS = [
         ],
         expected_returncode=1,
         expected_output="score-change-proposed evaluations require activated_paths",
+    ),
+    FixtureTest(
+        name="evaluation rejects score-change unprofiled target graph",
+        command=[
+            "scripts/validate_evaluation.py",
+            rel("tests/fixtures/evaluations/invalid/score-change-unprofiled-target-graph.json"),
+        ],
+        expected_returncode=1,
+        expected_output="score-change-proposed evaluations require target_graph edge_semantics_level",
     ),
     FixtureTest(
         name="evaluation rejects score-change missing path reading",

@@ -12,6 +12,104 @@
     "context-indexed-dynamic-feedback-2026-06-07"
   ],
   "score_decision": "no-score-change",
+  "activated_paths": [
+    {
+      "id": "case-correction-to-attribution",
+      "phenomenon": "case-in-coordination-cgel",
+      "contrast_cell": "formal-correction",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Standard ideology should route through condemnation and correction into grammaticality attribution without becoming community licensing.",
+      "edges": [
+        {
+          "source": "standard_language_ideology_t1",
+          "target": "metalinguistic_condemnation_t1",
+          "type": "causal"
+        },
+        {
+          "source": "metalinguistic_condemnation_t1",
+          "target": "editorial_correction_probability_t1",
+          "type": "causal"
+        },
+        {
+          "source": "editorial_correction_probability_t1",
+          "target": "grammaticality_attribution_t1",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "pronoun-social-framing-to-attribution",
+      "phenomenon": "pronoun-personhood-proform-gender",
+      "contrast_cell": "policy-or-identity-framing",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Speaker or identity cues can route through social-indexical value into reported acceptability and then attribution, while audience design remains a missing construct.",
+      "edges": [
+        {
+          "source": "speaker_identity_t1",
+          "target": "social_indexical_value_t1",
+          "type": "causal"
+        },
+        {
+          "source": "social_indexical_value_t1",
+          "target": "reported_acceptability_t1",
+          "type": "causal"
+        },
+        {
+          "source": "reported_acceptability_t1",
+          "target": "grammaticality_attribution_t1",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "fragment-genre-to-attribution",
+      "phenomenon": "nonfinite-verbless-clause-boundaries-cgel",
+      "contrast_cell": "licensed-fragment-genre",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Genre-local licensing should route through register/genre appropriateness into reported acceptability and attribution.",
+      "edges": [
+        {
+          "source": "genre_t1",
+          "target": "register_genre_appropriateness_t1",
+          "type": "causal"
+        },
+        {
+          "source": "register_genre_appropriateness_t1",
+          "target": "reported_acceptability_t1",
+          "type": "causal"
+        },
+        {
+          "source": "reported_acceptability_t1",
+          "target": "grammaticality_attribution_t1",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "negation-standard-correction-to-attribution",
+      "phenomenon": "negation-polarity-items-cgel",
+      "contrast_cell": "standard-correction-of-dialectal-negative",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Standard correction of dialectal negative patterns should be representable as ideology/correction pressure, while polarity licensing remains out of scope without operator-value nodes.",
+      "edges": [
+        {
+          "source": "standard_language_ideology_t1",
+          "target": "metalinguistic_condemnation_t1",
+          "type": "causal"
+        },
+        {
+          "source": "metalinguistic_condemnation_t1",
+          "target": "editorial_correction_probability_t1",
+          "type": "causal"
+        },
+        {
+          "source": "editorial_correction_probability_t1",
+          "target": "grammaticality_attribution_t1",
+          "type": "evidential"
+        }
+      ]
+    }
+  ],
   "cards": [
     {
       "phenomenon": "case-in-coordination-cgel",

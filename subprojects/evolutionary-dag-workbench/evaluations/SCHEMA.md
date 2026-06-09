@@ -100,7 +100,7 @@ the held-out label from being pure ceremony.
 ## Score Decisions
 
 - `no-score-change`: records an evaluation without authorizing label or score movement.
-- `scope-only`: authorizes a scoped/general label but no numeric score movement.
+- `scope-only`: authorizes a scoped-module label but no numeric score movement.
 - `score-change-proposed`: authorizes numeric score movement; the target graph must be profiled by
   `edge_semantics_level`, and the evaluation must include `activated_paths`.
 

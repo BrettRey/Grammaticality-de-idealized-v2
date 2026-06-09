@@ -1,0 +1,185 @@
+{
+  "id": "audience-reference-tracking-candidate",
+  "title": "Audience and reference-tracking candidate",
+  "family": "audience-reference-tracking",
+  "status": "candidate",
+  "edge_semantics_level": "profiled",
+  "notes": "Eighth-round mutation generated from the pronoun/personhood/pro-form failure. It separates pronoun feature alignment, reference-tracking success, personhood ascription, audience design, social-indexical value, and ideology-driven attribution. It is a scoped module for pronoun/pro-form judgment channels, not a general account.",
+  "conditioning_axes": {
+    "community": "Required. Interpret community licensing, pronoun feature alignment, and attribution relative to a specified speech community or comparison set.",
+    "norm_centre": "Required when standard-language ideology, metalinguistic condemnation, or institutional pronoun policy is active.",
+    "genre": "Required when pronoun use appears in reference tasks, policies, conversation, edited prose, or public discourse.",
+    "medium": "Required when spoken interaction, written examples, policy text, survey items, or editing contexts may diverge.",
+    "task_framing": "Required for reported acceptability and grammaticality attribution; specify whether the task cues reference resolution, correctness, respect, policy compliance, or naturalness.",
+    "speaker_identity": "Required when speaker or referent identity cues affect social-indexical value or audience design."
+  },
+  "nodes": [
+    "personhood_ascription_t1",
+    "pronoun_feature_alignment_t1",
+    "operator_value_t1",
+    "reference_tracking_success_t1",
+    "community_licensing_t1",
+    "audience_design_t1",
+    "speaker_identity_t1",
+    "social_indexical_value_t1",
+    "standard_language_ideology_t1",
+    "metalinguistic_condemnation_t1",
+    "judgment_task_setting_t1",
+    "task_framing_t1",
+    "reported_acceptability_t1",
+    "grammaticality_attribution_t1",
+    "genre_t1",
+    "medium_t1",
+    "register_genre_appropriateness_t1"
+  ],
+  "edges": [
+    {
+      "source": "personhood_ascription_t1",
+      "target": "pronoun_feature_alignment_t1",
+      "type": "causal",
+      "relation_profile": "mixed_contextual",
+      "rationale": "How the referent is construed as person, non-person, animate, institutional, or accountable can change which pro-form features count as aligned."
+    },
+    {
+      "source": "pronoun_feature_alignment_t1",
+      "target": "reference_tracking_success_t1",
+      "type": "causal",
+      "relation_profile": "positive_monotone",
+      "rationale": "Better feature alignment generally improves referent tracking in low-stakes reference tasks."
+    },
+    {
+      "source": "pronoun_feature_alignment_t1",
+      "target": "operator_value_t1",
+      "type": "constitutive",
+      "relation_profile": "partial_component",
+      "rationale": "Feature alignment can be part of the local pronoun/pro-form operator configuration without exhausting operator value."
+    },
+    {
+      "source": "operator_value_t1",
+      "target": "community_licensing_t1",
+      "type": "constitutive",
+      "relation_profile": "necessary_component",
+      "rationale": "For the scoped pronoun module, an operator-compatible pro-form value is required for licensing but is not sufficient by itself."
+    },
+    {
+      "source": "reference_tracking_success_t1",
+      "target": "reported_acceptability_t1",
+      "type": "causal",
+      "relation_profile": "positive_monotone",
+      "rationale": "Successful referent tracking can raise reported acceptability, especially in low-stakes reference tasks."
+    },
+    {
+      "source": "community_licensing_t1",
+      "target": "reported_acceptability_t1",
+      "type": "measurement",
+      "relation_profile": "task_biased_indicator",
+      "rationale": "Acceptability reports can measure licensing, but reference tasks, policy tasks, and correctness tasks bias the indicator."
+    },
+    {
+      "source": "community_licensing_t1",
+      "target": "grammaticality_attribution_t1",
+      "type": "evidential",
+      "relation_profile": "contextual_warrant",
+      "rationale": "Community licensing is contextual warrant for grammaticality attribution, not a synonym for attribution."
+    },
+    {
+      "source": "reported_acceptability_t1",
+      "target": "grammaticality_attribution_t1",
+      "type": "evidential",
+      "relation_profile": "contextual_warrant",
+      "rationale": "Acceptability reports provide contextual warrant for attribution without defining grammatical status."
+    },
+    {
+      "source": "audience_design_t1",
+      "target": "social_indexical_value_t1",
+      "type": "causal",
+      "relation_profile": "mixed_contextual",
+      "rationale": "Anticipated audience, evaluator, or institution can change the social-indexical value of a pronoun choice."
+    },
+    {
+      "source": "audience_design_t1",
+      "target": "reported_acceptability_t1",
+      "type": "causal",
+      "relation_profile": "mixed_contextual",
+      "rationale": "Audience design can shift acceptability reports without changing the reference relation."
+    },
+    {
+      "source": "speaker_identity_t1",
+      "target": "social_indexical_value_t1",
+      "type": "causal",
+      "relation_profile": "mixed_contextual",
+      "rationale": "Speaker or referent identity cues shape the social-indexical value assigned to the pro-form choice."
+    },
+    {
+      "source": "social_indexical_value_t1",
+      "target": "reported_acceptability_t1",
+      "type": "causal",
+      "relation_profile": "mixed_contextual",
+      "rationale": "Social-indexical value can shift reported acceptability without directly changing community licensing."
+    },
+    {
+      "source": "judgment_task_setting_t1",
+      "target": "task_framing_t1",
+      "type": "causal",
+      "relation_profile": "mixed_contextual",
+      "rationale": "The judgment setting cues whether the task asks for reference resolution, correctness, respect, policy compliance, or naturalness."
+    },
+    {
+      "source": "task_framing_t1",
+      "target": "grammaticality_attribution_t1",
+      "type": "causal",
+      "relation_profile": "mixed_contextual",
+      "rationale": "Task framing can shift explicit grammaticality attribution by cueing what kind of status is being requested."
+    },
+    {
+      "source": "standard_language_ideology_t1",
+      "target": "metalinguistic_condemnation_t1",
+      "type": "causal",
+      "relation_profile": "positive_monotone",
+      "rationale": "Norm-centre ideology can generate explicit condemnation or policy-based correction talk."
+    },
+    {
+      "source": "metalinguistic_condemnation_t1",
+      "target": "grammaticality_attribution_t1",
+      "type": "evidential",
+      "relation_profile": "contextual_warrant",
+      "rationale": "Condemnation can influence attribution while remaining separable from reference success and social sanction."
+    },
+    {
+      "source": "genre_t1",
+      "target": "register_genre_appropriateness_t1",
+      "type": "causal",
+      "relation_profile": "mixed_contextual",
+      "rationale": "Genre changes what kind of pronoun choice is expected in reference tasks, policy texts, public discourse, or casual interaction."
+    },
+    {
+      "source": "medium_t1",
+      "target": "register_genre_appropriateness_t1",
+      "type": "causal",
+      "relation_profile": "mixed_contextual",
+      "rationale": "Medium conditions how pronoun choices are interpreted and policed."
+    },
+    {
+      "source": "register_genre_appropriateness_t1",
+      "target": "reported_acceptability_t1",
+      "type": "causal",
+      "relation_profile": "positive_monotone",
+      "rationale": "Higher register or genre fit tends to increase reported acceptability in situated pronoun judgments."
+    }
+  ],
+  "scores": {
+    "empirical_coverage": 0,
+    "projective_power": 0,
+    "counterexample_resilience": 0,
+    "measurement_clarity": 0,
+    "explanatory_payoff": 0,
+    "cross_domain_stability": 0,
+    "complexity_penalty": 0,
+    "circularity_penalty": 0,
+    "construct_confusion_penalty": 0,
+    "theory_preservation_penalty": 0
+  },
+  "score_status": {
+    "kind": "unscored"
+  }
+}

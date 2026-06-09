@@ -123,6 +123,19 @@ outcome_like:
       - impossibility
       - low frequency
 
+  - id: reference_tracking_success
+    label: Reference tracking success
+    definition: Degree to which hearers or respondents identify and maintain the intended referent or antecedent relation.
+    proxies:
+      - antecedent-resolution accuracy
+      - discourse referent tracking
+      - comprehension response
+      - repair outcome
+    forbidden_conflations:
+      - community licensing
+      - grammaticality attribution
+      - reported acceptability
+
 upstream_or_mediating:
   - id: usage_frequency
     label: Usage frequency
@@ -256,6 +269,43 @@ upstream_or_mediating:
       - analyst category assignment
       - community licensing
 
+  - id: payload_preposition_choice
+    label: Payload preposition choice
+    definition: Open or semi-open preposition choice contributing spatial, conceptual, or discourse content rather than a selected argument-linking value.
+    proxies:
+      - paraphrase-preserving PP alternation
+      - spatial or conceptual construal contrast
+      - open PP choice in ordinary prose
+    forbidden_conflations:
+      - argument-linking selection
+      - operator value
+      - collocational rigidity
+
+  - id: collocational_rigidity
+    label: Collocational rigidity
+    definition: Stability or fixedness of a lexical co-occurrence pattern that need not itself supply an operator-like argument-linking value.
+    proxies:
+      - fixed expression frequency
+      - restricted lexical co-occurrence
+      - idiom or semi-idiom stability
+    forbidden_conflations:
+      - operator value
+      - argument-linking selection
+      - community licensing
+
+  - id: argument_linking_selection
+    label: Argument-linking selection
+    definition: Selection of a preposition, complement type, or dependent form as part of a head or construction's participant-role, complement, or dependency-licensing pattern.
+    proxies:
+      - head-selected PP complement
+      - complement-type alternation
+      - role-assignment contrast
+      - repair to selected complement form
+    forbidden_conflations:
+      - collocational rigidity
+      - payload preposition choice
+      - raw frequency
+
   - id: operator_value
     label: Operator value
     definition: Public-update value involving commitments, roles, scope, reference, dependency, repair, or discourse configuration.
@@ -268,6 +318,84 @@ upstream_or_mediating:
       - any form-meaning relation
       - payload semantics
       - indexical value
+
+  - id: update_role_configuration
+    label: Update-role configuration
+    definition: Degree to which a form configures the move type, uptake role, response space, floor status, repair initiation, or commitment handling of an utterance.
+    proxies:
+      - response-space contrast
+      - repair-initiation pattern
+      - clause-type or force diagnostic
+      - turn-management effect
+    forbidden_conflations:
+      - social consequence
+      - semantic recoverability
+      - operator repertoire membership
+
+  - id: repertoire_closedness
+    label: Repertoire closedness
+    definition: Degree to which a form-value relation belongs to a restricted, recurrent, mutually accountable contrast set rather than an open or token-innovated class.
+    proxies:
+      - enumerable paradigm
+      - mutually exclusive alternatives
+      - stable distributional slot
+      - resistance to free innovation
+    forbidden_conflations:
+      - frequency
+      - familiarity
+      - community licensing
+
+  - id: token_innovability
+    label: Token innovability
+    definition: Degree to which a token can be stretched, repeated, blended, substituted, or newly coined without producing categorical licensing failure.
+    proxies:
+      - repeatability or stretchability
+      - nonce-token tolerance
+      - blended interjection use
+      - improvisational substitution
+    forbidden_conflations:
+      - low conventionality
+      - low production probability
+      - social-indexical value
+
+  - id: operator_repertoire_membership
+    label: Operator repertoire membership
+    definition: Degree to which a form-value relation belongs to a restricted repertoire of update-role contrasts rather than merely affecting uptake, stance, recognizability, or content.
+    proxies:
+      - closed update-role paradigm
+      - obligatory or exclusionary selection context
+      - repair targeting move type
+      - contrastive clause-type or force behaviour
+    forbidden_conflations:
+      - update-role configuration alone
+      - repertoire closedness alone
+      - grammaticality attribution
+
+  - id: pronoun_feature_alignment
+    label: Pronoun feature alignment
+    definition: Fit between a pronoun or pro-form's person, number, gender, animacy, case, or discourse-tracking features and the construed referent relation.
+    proxies:
+      - pronoun-antecedent feature match
+      - agreement-feature manipulation
+      - pro-form contrast
+      - reference-tracking error pattern
+    forbidden_conflations:
+      - reference tracking success
+      - personhood ascription
+      - community licensing
+
+  - id: personhood_ascription
+    label: Personhood ascription
+    definition: Contextual classification of a referent as person, non-person, animate, institutional entity, or socially accountable participant for purposes of pro-form choice.
+    proxies:
+      - personification contrast
+      - human/non-human referent manipulation
+      - institutional referent cue
+      - named-person versus object contrast
+    forbidden_conflations:
+      - pronoun feature alignment
+      - social-indexical value
+      - grammaticality attribution
 
   - id: social_indexical_value
     label: Social-indexical value
@@ -374,6 +502,32 @@ measurement:
     forbidden_conflations:
       - target construct
       - channel
+
+  - id: production_task_setting
+    label: Production task setting
+    definition: Setting in which production probability is observed, elicited, monitored, or left unmonitored.
+    proxies:
+      - elicited production prompt
+      - unmonitored corpus context
+      - conversation or messaging situation
+      - monitored writing task
+    forbidden_conflations:
+      - judgment task setting
+      - reported acceptability
+      - community licensing
+
+  - id: judgment_task_setting
+    label: Judgment task setting
+    definition: Setting in which acceptability, grammaticality, correction, category, or naturalness responses are elicited.
+    proxies:
+      - acceptability survey
+      - grammar test
+      - editing task
+      - category-classification prompt
+    forbidden_conflations:
+      - production task setting
+      - production probability
+      - community licensing
 
   - id: task_framing
     label: Task framing

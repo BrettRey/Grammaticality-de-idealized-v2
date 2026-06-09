@@ -1,0 +1,347 @@
+{
+  "id": "audience-reference-tracking-2026-06-08",
+  "target_graph": "graphs/archive/audience-reference-tracking-candidate.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "protocol-bound",
+  "score_decision": "no-score-change",
+  "activated_paths": [
+    {
+      "id": "feature-reference-acceptability-attribution",
+      "phenomenon": "pronoun-personhood-proform-gender",
+      "contrast_cell": "low-stakes-reference",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Pronoun feature alignment should improve reference tracking and reported acceptability, but attribution remains contextual rather than entailed by reference success.",
+      "edges": [
+        {
+          "source": "pronoun_feature_alignment_t1",
+          "target": "reference_tracking_success_t1",
+          "type": "causal"
+        },
+        {
+          "source": "reference_tracking_success_t1",
+          "target": "reported_acceptability_t1",
+          "type": "causal"
+        },
+        {
+          "source": "reported_acceptability_t1",
+          "target": "grammaticality_attribution_t1",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "personhood-to-feature-alignment",
+      "phenomenon": "pronoun-personhood-proform-gender",
+      "contrast_cell": "personified-referent",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Personhood ascription can change which pronoun features count as aligned without itself being grammaticality attribution.",
+      "edges": [
+        {
+          "source": "personhood_ascription_t1",
+          "target": "pronoun_feature_alignment_t1",
+          "type": "causal"
+        },
+        {
+          "source": "pronoun_feature_alignment_t1",
+          "target": "reference_tracking_success_t1",
+          "type": "causal"
+        }
+      ]
+    },
+    {
+      "id": "audience-social-acceptability",
+      "phenomenon": "pronoun-personhood-proform-gender",
+      "contrast_cell": "policy-or-identity-framing",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Audience design can change social-indexical value and reported acceptability without directly changing licensing.",
+      "edges": [
+        {
+          "source": "audience_design_t1",
+          "target": "social_indexical_value_t1",
+          "type": "causal"
+        },
+        {
+          "source": "social_indexical_value_t1",
+          "target": "reported_acceptability_t1",
+          "type": "causal"
+        }
+      ]
+    },
+    {
+      "id": "operator-licensing-attribution",
+      "phenomenon": "pronoun-personhood-proform-gender",
+      "contrast_cell": "low-stakes-reference",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Pronoun feature alignment can be part of operator value, which can warrant attribution through community licensing, but the path is not a simple sign-propagating effect.",
+      "edges": [
+        {
+          "source": "pronoun_feature_alignment_t1",
+          "target": "operator_value_t1",
+          "type": "constitutive"
+        },
+        {
+          "source": "operator_value_t1",
+          "target": "community_licensing_t1",
+          "type": "constitutive"
+        },
+        {
+          "source": "community_licensing_t1",
+          "target": "grammaticality_attribution_t1",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "ideology-condemnation-attribution",
+      "phenomenon": "pronoun-personhood-proform-gender",
+      "contrast_cell": "policy-or-identity-framing",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Norm-centre ideology can route through condemnation into attribution, but this is an attribution channel rather than a reference-tracking channel.",
+      "edges": [
+        {
+          "source": "standard_language_ideology_t1",
+          "target": "metalinguistic_condemnation_t1",
+          "type": "causal"
+        },
+        {
+          "source": "metalinguistic_condemnation_t1",
+          "target": "grammaticality_attribution_t1",
+          "type": "evidential"
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "phenomenon": "pronoun-personhood-proform-gender",
+      "result": "survives_as_module",
+      "expected_survival_pattern": "The graph should distinguish pronoun feature alignment, reference tracking, personhood ascription, audience design, social-indexical value, community licensing, and grammaticality attribution. Reference success may raise acceptability but must not be treated as sufficient for licensing.",
+      "notes": "Survives as a scoped pronoun/pro-form module. The graph handles the failure left by the task-separated candidate: audience design and reference tracking are explicit, while social sanction and reference success are blocked from directly becoming licensing.",
+      "requirements": {
+        "required_nodes": [
+          "personhood_ascription_t1",
+          "pronoun_feature_alignment_t1",
+          "reference_tracking_success_t1",
+          "audience_design_t1",
+          "social_indexical_value_t1",
+          "operator_value_t1",
+          "community_licensing_t1",
+          "reported_acceptability_t1",
+          "grammaticality_attribution_t1"
+        ],
+        "required_edges": [
+          {
+            "source": "personhood_ascription_t1",
+            "target": "pronoun_feature_alignment_t1",
+            "type": "causal"
+          },
+          {
+            "source": "pronoun_feature_alignment_t1",
+            "target": "reference_tracking_success_t1",
+            "type": "causal"
+          },
+          {
+            "source": "reference_tracking_success_t1",
+            "target": "reported_acceptability_t1",
+            "type": "causal"
+          },
+          {
+            "source": "pronoun_feature_alignment_t1",
+            "target": "operator_value_t1",
+            "type": "constitutive"
+          },
+          {
+            "source": "audience_design_t1",
+            "target": "social_indexical_value_t1",
+            "type": "causal"
+          },
+          {
+            "source": "social_indexical_value_t1",
+            "target": "reported_acceptability_t1",
+            "type": "causal"
+          },
+          {
+            "source": "community_licensing_t1",
+            "target": "grammaticality_attribution_t1",
+            "type": "evidential"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "reference_tracking_success_t1",
+            "target": "community_licensing_t1",
+            "type": "causal"
+          },
+          {
+            "source": "social_indexical_value_t1",
+            "target": "community_licensing_t1",
+            "type": "causal"
+          },
+          {
+            "source": "personhood_ascription_t1",
+            "target": "grammaticality_attribution_t1",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "low-stakes-reference",
+          "axes": {
+            "community": "English speakers resolving ordinary pronoun reference.",
+            "norm_centre": "Descriptive usage norm centre.",
+            "genre": "Controlled reference task.",
+            "medium": "Written or spoken example.",
+            "task_framing": "Reference resolution and acceptability separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "personified-referent",
+          "axes": {
+            "community": "English speakers judging personified or de-personified referents.",
+            "norm_centre": "Descriptive and discourse-local norm centres compared.",
+            "genre": "Controlled referent-description task.",
+            "medium": "Written or spoken example.",
+            "task_framing": "Personhood classification, reference success, and acceptability separated.",
+            "speaker_identity": "Unmarked speaker cue with referent status cued."
+          }
+        },
+        {
+          "id": "policy-or-identity-framing",
+          "axes": {
+            "community": "English speakers judging pronoun use under social or institutional framing.",
+            "norm_centre": "Institutional, community-local, or ideological norm centre.",
+            "genre": "Policy, workplace, classroom, or public-discourse context.",
+            "medium": "Written guidance, survey item, or spoken interaction.",
+            "task_framing": "Correctness, respect, identity, or policy framing.",
+            "speaker_identity": "Speaker or referent identity explicitly cued."
+          }
+        }
+      ]
+    },
+    {
+      "phenomenon": "singular-they",
+      "result": "partly_survives",
+      "expected_survival_pattern": "The graph should handle personhood, reference tracking, audience design, and ideology-conditioned attribution for singular they, but it should not claim to model the diachronic stabilization of singular they.",
+      "notes": "Partly survives. This module supplies the pronoun/reference layer missing from the dynamic module, but it lacks time-lagged usage and stabilization paths.",
+      "requirements": {
+        "required_nodes": [
+          "personhood_ascription_t1",
+          "pronoun_feature_alignment_t1",
+          "reference_tracking_success_t1",
+          "audience_design_t1",
+          "standard_language_ideology_t1",
+          "reported_acceptability_t1"
+        ],
+        "required_edges": [
+          {
+            "source": "personhood_ascription_t1",
+            "target": "pronoun_feature_alignment_t1",
+            "type": "causal"
+          },
+          {
+            "source": "pronoun_feature_alignment_t1",
+            "target": "reference_tracking_success_t1",
+            "type": "causal"
+          },
+          {
+            "source": "audience_design_t1",
+            "target": "reported_acceptability_t1",
+            "type": "causal"
+          },
+          {
+            "source": "standard_language_ideology_t1",
+            "target": "metalinguistic_condemnation_t1",
+            "type": "causal"
+          }
+        ],
+        "forbidden_nodes": [
+          "diachronic_stabilization_t1",
+          "diachronic_stabilization_t2"
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "known-human-referent",
+          "axes": {
+            "community": "English speakers judging singular they with a known human referent.",
+            "norm_centre": "Descriptive, community-local, or institutional norm centre.",
+            "genre": "Reference-resolution or policy-context judgment.",
+            "medium": "Written example, survey item, or spoken interaction.",
+            "task_framing": "Reference, respect, naturalness, and correctness separated.",
+            "speaker_identity": "Referent and speaker cues explicitly varied."
+          }
+        },
+        {
+          "id": "unknown-indefinite-referent",
+          "axes": {
+            "community": "English speakers judging indefinite or unknown antecedent uses.",
+            "norm_centre": "Descriptive usage norm centre.",
+            "genre": "Ordinary prose or controlled example.",
+            "medium": "Written or spoken example.",
+            "task_framing": "Reference tracking and acceptability separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    },
+    {
+      "phenomenon": "stigmatized-robust-vernacular",
+      "result": "partly_survives",
+      "expected_survival_pattern": "The graph should preserve speaker-identity and social-indexical effects on reported acceptability, but it should remain incomplete for stable vernacular licensing because it is not a full community/diachronic module.",
+      "notes": "Partly survives as a social-indexical judgment layer, not as a vernacular-licensing account.",
+      "requirements": {
+        "required_nodes": [
+          "speaker_identity_t1",
+          "social_indexical_value_t1",
+          "reported_acceptability_t1",
+          "community_licensing_t1"
+        ],
+        "required_edges": [
+          {
+            "source": "speaker_identity_t1",
+            "target": "social_indexical_value_t1",
+            "type": "causal"
+          },
+          {
+            "source": "social_indexical_value_t1",
+            "target": "reported_acceptability_t1",
+            "type": "causal"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "social_indexical_value_t1",
+            "target": "community_licensing_t1",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "ingroup-naturalness",
+          "axes": {
+            "community": "Community where the vernacular form is licensed.",
+            "norm_centre": "Local usage norm.",
+            "genre": "Everyday interaction.",
+            "medium": "Speech.",
+            "task_framing": "Naturalness framing.",
+            "speaker_identity": "In-group or locally recognized speaker cue."
+          }
+        },
+        {
+          "id": "standard-evaluator-correctness",
+          "axes": {
+            "community": "Standard-language judgment setting.",
+            "norm_centre": "Prestige or school norm centre.",
+            "genre": "Judgment task or edited prose.",
+            "medium": "Survey item, classroom response, or edited writing.",
+            "task_framing": "Correctness framing.",
+            "speaker_identity": "Out-group or stigmatized speaker cue."
+          }
+        }
+      ]
+    }
+  ]
+}

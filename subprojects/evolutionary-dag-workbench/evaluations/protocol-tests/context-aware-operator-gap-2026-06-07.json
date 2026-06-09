@@ -4,12 +4,135 @@
   "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
   "status": "protocol-bound",
   "score_decision": "scope-only",
+  "activated_paths": [
+    {
+      "id": "recoverability-to-attribution",
+      "phenomenon": "left-branch-extraction",
+      "contrast_cell": "recoverable-extraction",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Recoverability can raise reported acceptability, but acceptability remains contextual warrant for grammaticality attribution rather than licensing by itself.",
+      "edges": [
+        {
+          "source": "semantic_pragmatic_recoverability",
+          "target": "reported_acceptability",
+          "type": "causal"
+        },
+        {
+          "source": "reported_acceptability",
+          "target": "grammaticality_attribution",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "competitor-preemption-repair",
+      "phenomenon": "left-branch-extraction",
+      "contrast_cell": "available-repair",
+      "expected_path_reading": "non_sign_propagating",
+      "prediction": "Competitor availability can contribute to preemption, undercut licensing warrant, and route licensing trouble into repair pressure.",
+      "edges": [
+        {
+          "source": "competitor_availability",
+          "target": "preemption_strength",
+          "type": "constitutive"
+        },
+        {
+          "source": "preemption_strength",
+          "target": "community_licensing",
+          "type": "evidential"
+        },
+        {
+          "source": "community_licensing",
+          "target": "repair_reformulation_pressure",
+          "type": "causal"
+        }
+      ]
+    },
+    {
+      "id": "attestation-to-licensing",
+      "phenomenon": "transparent-free-relatives",
+      "contrast_cell": "low-opportunity-attestation",
+      "expected_path_reading": "non_sign_propagating",
+      "prediction": "Usage contributes to opportunity-normalized attestation, which can warrant licensing without treating raw frequency as licensing.",
+      "edges": [
+        {
+          "source": "usage_frequency",
+          "target": "opportunity_normalized_attestation",
+          "type": "constitutive"
+        },
+        {
+          "source": "opportunity_normalized_attestation",
+          "target": "community_licensing",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "processing-to-acceptability",
+      "phenomenon": "grammatical-but-hard",
+      "contrast_cell": "hard-but-licensed",
+      "expected_path_reading": "negative",
+      "prediction": "Processing cost should lower reported acceptability without itself constituting licensing failure.",
+      "edges": [
+        {
+          "source": "processing_cost",
+          "target": "reported_acceptability",
+          "type": "causal"
+        }
+      ]
+    }
+  ],
   "cards": [
     {
       "phenomenon": "left-branch-extraction",
       "result": "partly_survives",
       "expected_survival_pattern": "Recoverable meaning should raise reported acceptability without licensing the operator configuration; opportunity and repair pressure should make the gap visible.",
       "notes": "Partly survives. The graph has operator value, recoverability, opportunity mass, and repair pressure, but it still treats the operator-value relation as a scoped constitutive wager rather than an independently tested mechanism.",
+      "requirements": {
+        "required_nodes": [
+          "operator_value",
+          "semantic_pragmatic_recoverability",
+          "competitor_availability",
+          "preemption_strength",
+          "community_licensing",
+          "repair_reformulation_pressure",
+          "reported_acceptability"
+        ],
+        "required_edges": [
+          {
+            "source": "operator_value",
+            "target": "community_licensing",
+            "type": "constitutive"
+          },
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "reported_acceptability",
+            "type": "causal"
+          },
+          {
+            "source": "competitor_availability",
+            "target": "preemption_strength",
+            "type": "constitutive"
+          },
+          {
+            "source": "preemption_strength",
+            "target": "community_licensing",
+            "type": "evidential"
+          },
+          {
+            "source": "community_licensing",
+            "target": "repair_reformulation_pressure",
+            "type": "causal"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
       "contrast_cells": [
         {
           "id": "recoverable-extraction",
@@ -40,6 +163,40 @@
       "result": "partly_survives",
       "expected_survival_pattern": "Low frequency should not automatically count as ungrammaticality; recoverability and constructional analogy should affect judgment without collapsing into licensing.",
       "notes": "Partly survives. The graph has the relevant nodes, but it has no signed or thresholded way to distinguish weak evidence, gradient licensing, and clear failure.",
+      "requirements": {
+        "required_nodes": [
+          "opportunity_mass",
+          "usage_frequency",
+          "opportunity_normalized_attestation",
+          "constructional_analogy",
+          "semantic_pragmatic_recoverability",
+          "community_licensing"
+        ],
+        "required_edges": [
+          {
+            "source": "usage_frequency",
+            "target": "opportunity_normalized_attestation",
+            "type": "constitutive"
+          },
+          {
+            "source": "opportunity_normalized_attestation",
+            "target": "community_licensing",
+            "type": "evidential"
+          },
+          {
+            "source": "constructional_analogy",
+            "target": "community_licensing",
+            "type": "evidential"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "usage_frequency",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
       "contrast_cells": [
         {
           "id": "low-opportunity-attestation",
@@ -70,6 +227,32 @@
       "result": "survives_as_module",
       "expected_survival_pattern": "Low usage frequency should be interpreted against opportunity mass and constructional analogy before licensing is inferred.",
       "notes": "Survives as a module. This is one of the candidate's cleanest uses, provided the opportunity set is specified before interpreting rarity.",
+      "requirements": {
+        "required_nodes": [
+          "opportunity_mass",
+          "opportunity_normalized_attestation",
+          "constructional_analogy",
+          "community_licensing",
+          "production_probability"
+        ],
+        "required_edges": [
+          {
+            "source": "opportunity_normalized_attestation",
+            "target": "community_licensing",
+            "type": "evidential"
+          },
+          {
+            "source": "constructional_analogy",
+            "target": "community_licensing",
+            "type": "evidential"
+          },
+          {
+            "source": "community_licensing",
+            "target": "production_probability",
+            "type": "causal"
+          }
+        ]
+      },
       "contrast_cells": [
         {
           "id": "low-opportunity-licensed",
@@ -100,6 +283,38 @@
       "result": "partly_survives",
       "expected_survival_pattern": "Processing cost should lower reported acceptability without licensing failure.",
       "notes": "Partly survives. The graph has processing_cost, but no dedicated measurement_task or felt_naturalness_context path, so it remains a shallow processing module.",
+      "requirements": {
+        "required_nodes": [
+          "processing_cost",
+          "reported_acceptability",
+          "community_licensing",
+          "grammaticality_attribution"
+        ],
+        "required_edges": [
+          {
+            "source": "processing_cost",
+            "target": "reported_acceptability",
+            "type": "causal"
+          },
+          {
+            "source": "community_licensing",
+            "target": "grammaticality_attribution",
+            "type": "evidential"
+          },
+          {
+            "source": "reported_acceptability",
+            "target": "grammaticality_attribution",
+            "type": "evidential"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "processing_cost",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
       "contrast_cells": [
         {
           "id": "hard-but-licensed",

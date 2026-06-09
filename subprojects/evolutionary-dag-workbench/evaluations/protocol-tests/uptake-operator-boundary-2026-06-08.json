@@ -1,0 +1,302 @@
+{
+  "id": "uptake-operator-boundary-2026-06-08",
+  "target_graph": "graphs/archive/uptake-operator-boundary-candidate.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "protocol-bound",
+  "score_decision": "scope-only",
+  "activated_paths": [
+    {
+      "id": "update-role-and-closure-to-attribution",
+      "phenomenon": "clause-type-force-cgel",
+      "contrast_cell": "major-clause-response-space",
+      "expected_path_reading": "warranting",
+      "prediction": "Update-role configuration and repertoire membership should warrant grammar-relevant attribution in clear clause-type contrasts.",
+      "edges": [
+        {
+          "source": "update_role_configuration",
+          "target": "operator_repertoire_membership",
+          "type": "evidential"
+        },
+        {
+          "source": "operator_repertoire_membership",
+          "target": "grammaticality_attribution",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "licensing-to-repair",
+      "phenomenon": "clause-type-force-cgel",
+      "contrast_cell": "wrong-move-type",
+      "expected_path_reading": "negative",
+      "prediction": "Lower community licensing in an operator-repertoire context should increase repair or reformulation pressure.",
+      "edges": [
+        {
+          "source": "community_licensing",
+          "target": "repair_reformulation_pressure",
+          "type": "causal"
+        }
+      ]
+    },
+    {
+      "id": "token-innovation-undercuts-operator-membership",
+      "phenomenon": "interjection-boundary-source-card",
+      "contrast_cell": "invented-stance-token",
+      "expected_path_reading": "undercutting",
+      "prediction": "High token innovability undercuts treating a stance-understood token as a closed operator-repertoire value.",
+      "edges": [
+        {
+          "source": "token_innovability",
+          "target": "operator_repertoire_membership",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "genre-conventional-token-to-acceptability",
+      "phenomenon": "interjection-boundary-source-card",
+      "contrast_cell": "genre-conventional-token",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Genre and medium can make an interjection-like token acceptable without deciding whether it is a closed operator value.",
+      "edges": [
+        {
+          "source": "genre",
+          "target": "register_genre_appropriateness",
+          "type": "causal"
+        },
+        {
+          "source": "register_genre_appropriateness",
+          "target": "reported_acceptability",
+          "type": "causal"
+        }
+      ]
+    },
+    {
+      "id": "stance-token-to-attribution",
+      "phenomenon": "interjection-boundary-source-card",
+      "contrast_cell": "invented-stance-token",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Stance can affect acceptability and attribution without becoming community licensing or operator membership.",
+      "edges": [
+        {
+          "source": "speaker_identity",
+          "target": "social_indexical_value",
+          "type": "causal"
+        },
+        {
+          "source": "social_indexical_value",
+          "target": "reported_acceptability",
+          "type": "causal"
+        },
+        {
+          "source": "reported_acceptability",
+          "target": "grammaticality_attribution",
+          "type": "evidential"
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "phenomenon": "clause-type-force-cgel",
+      "result": "survives_as_module",
+      "expected_survival_pattern": "Clear clause-type contrasts should show update-role configuration, repertoire closedness, operator-repertoire membership, and repair pressure when the wrong move type is signalled; minor clauses should route through genre/register rather than global sentencehood.",
+      "notes": "Survives as a scoped boundary module. It does not claim every syntactic clause constraint is an operator mismatch.",
+      "requirements": {
+        "required_nodes": [
+          "update_role_configuration",
+          "repertoire_closedness",
+          "operator_value",
+          "operator_repertoire_membership",
+          "community_licensing",
+          "repair_reformulation_pressure",
+          "register_genre_appropriateness",
+          "semantic_pragmatic_recoverability",
+          "grammaticality_attribution"
+        ],
+        "required_edges": [
+          {
+            "source": "update_role_configuration",
+            "target": "operator_repertoire_membership",
+            "type": "evidential"
+          },
+          {
+            "source": "repertoire_closedness",
+            "target": "operator_repertoire_membership",
+            "type": "evidential"
+          },
+          {
+            "source": "operator_value",
+            "target": "operator_repertoire_membership",
+            "type": "constitutive"
+          },
+          {
+            "source": "operator_repertoire_membership",
+            "target": "grammaticality_attribution",
+            "type": "evidential"
+          },
+          {
+            "source": "community_licensing",
+            "target": "repair_reformulation_pressure",
+            "type": "causal"
+          },
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "reported_acceptability",
+            "type": "causal"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "operator_repertoire_membership",
+            "type": "causal"
+          },
+          {
+            "source": "reported_acceptability",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "major-clause-response-space",
+          "axes": {
+            "community": "English speakers judging major clause types.",
+            "norm_centre": "Descriptive grammar norm centre.",
+            "genre": "Controlled sentence or dialogue judgment.",
+            "medium": "Written example.",
+            "task_framing": "Move type and response expectation judgment.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "wrong-move-type",
+          "axes": {
+            "community": "English speakers interpreting a form whose content is recoverable but move type is mis-signalled.",
+            "norm_centre": "Descriptive grammar norm centre.",
+            "genre": "Dialogue or sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Repair or response-space disruption judgment.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "minor-clause-licensed-genre",
+          "axes": {
+            "community": "English speakers judging minor clauses in a genre where they are ordinary.",
+            "norm_centre": "Local genre norm centre.",
+            "genre": "Headline, note, dialogue, label, or fragment-licensed activity.",
+            "medium": "Written or spoken fragment context.",
+            "task_framing": "Genre fit and grammaticality attribution separated.",
+            "speaker_identity": "Genre-appropriate speaker cue."
+          }
+        }
+      ]
+    },
+    {
+      "phenomenon": "interjection-boundary-source-card",
+      "result": "survives_as_module",
+      "expected_survival_pattern": "Conventional repair-initiating interjections may show update-role configuration and local repertoire closure; stretched, repeated, blended, or invented affective tokens should show token innovability and social-indexical uptake without automatic operator membership.",
+      "notes": "Survives as a scoped boundary module by refusing both collapses: not every uptake effect is grammar, and not every interjection is payload noise.",
+      "requirements": {
+        "required_nodes": [
+          "update_role_configuration",
+          "repertoire_closedness",
+          "token_innovability",
+          "operator_repertoire_membership",
+          "social_indexical_value",
+          "register_genre_appropriateness",
+          "semantic_pragmatic_recoverability",
+          "reported_acceptability",
+          "grammaticality_attribution"
+        ],
+        "required_edges": [
+          {
+            "source": "token_innovability",
+            "target": "operator_repertoire_membership",
+            "type": "evidential"
+          },
+          {
+            "source": "update_role_configuration",
+            "target": "operator_repertoire_membership",
+            "type": "evidential"
+          },
+          {
+            "source": "repertoire_closedness",
+            "target": "operator_repertoire_membership",
+            "type": "evidential"
+          },
+          {
+            "source": "social_indexical_value",
+            "target": "reported_acceptability",
+            "type": "causal"
+          },
+          {
+            "source": "register_genre_appropriateness",
+            "target": "reported_acceptability",
+            "type": "causal"
+          },
+          {
+            "source": "reported_acceptability",
+            "target": "grammaticality_attribution",
+            "type": "evidential"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "social_indexical_value",
+            "target": "operator_repertoire_membership",
+            "type": "causal"
+          },
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "operator_repertoire_membership",
+            "type": "causal"
+          },
+          {
+            "source": "token_innovability",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "conventional-repair-token",
+          "axes": {
+            "community": "English speakers using a conventional repair-initiating token.",
+            "norm_centre": "Interactional norm centre.",
+            "genre": "Conversation or transcript judgment.",
+            "medium": "Speech or transcript.",
+            "task_framing": "Uptake or repair initiation judgment.",
+            "speaker_identity": "Ordinary interactional participant cue."
+          }
+        },
+        {
+          "id": "genre-conventional-token",
+          "axes": {
+            "community": "English speakers judging interjection-like forms in a genre with stable conventions.",
+            "norm_centre": "Local genre norm centre.",
+            "genre": "Conversation, comics, messaging, or performance genre.",
+            "medium": "Speech, transcript, or informal writing.",
+            "task_framing": "Register and uptake judgment.",
+            "speaker_identity": "Genre-appropriate speaker cue."
+          }
+        },
+        {
+          "id": "invented-stance-token",
+          "axes": {
+            "community": "English speakers interpreting a nonce or blended interjection token.",
+            "norm_centre": "Interactional rather than school-correction norm centre.",
+            "genre": "Informal interaction or performance.",
+            "medium": "Speech or informal writing.",
+            "task_framing": "Stance interpretation separated from grammaticality attribution.",
+            "speaker_identity": "Playful or stance-marked speaker cue."
+          }
+        }
+      ]
+    }
+  ]
+}

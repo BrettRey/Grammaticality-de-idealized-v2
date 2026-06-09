@@ -1,0 +1,200 @@
+{
+  "id": "context-indexed-task-separated-feedback-candidate",
+  "title": "Context-indexed task-separated feedback candidate",
+  "family": "context-indexed-task-separated-feedback",
+  "status": "candidate",
+  "edge_semantics_level": "profiled",
+  "notes": "Seventh-round mutation of the context-indexed dynamic-feedback module. It separates production task setting from judgment task setting so unmonitored production, elicited production, correctness judgment, and editing/correction tasks are not routed through a single task_framing node. It is a scoped mutation for production/judgment divergence, not a general account.",
+  "conditioning_axes": {
+    "community": "Required. Interpret licensing and production relative to a specified speech community or comparison set.",
+    "norm_centre": "Required when standard_language_ideology, metalinguistic_condemnation, editorial_correction_probability, or schooling_instructional_exposure are used.",
+    "genre": "Required for register-sensitive production or judgment settings.",
+    "medium": "Required when speech, edited prose, messaging, classroom response, or test response may diverge.",
+    "task_framing": "Required for reported_acceptability and grammaticality_attribution; specify whether the judgment setting cues correctness, naturalness, category assignment, register fit, or community membership.",
+    "speaker_identity": "Required when speaker cues, matched-guise manipulations, or stigmatized forms affect reported judgments."
+  },
+  "nodes": [
+    "community_licensing_t1",
+    "production_task_setting_t1",
+    "production_probability_t1",
+    "production_probability_t2",
+    "usage_frequency_t2",
+    "schooling_instructional_exposure_t1",
+    "standard_language_ideology_t1",
+    "metalinguistic_condemnation_t1",
+    "editorial_correction_probability_t1",
+    "judgment_task_setting_t1",
+    "task_framing_t1",
+    "reported_acceptability_t1",
+    "grammaticality_attribution_t1",
+    "genre_t1",
+    "medium_t1",
+    "register_genre_appropriateness_t1",
+    "speaker_identity_t1",
+    "social_indexical_value_t1"
+  ],
+  "edges": [
+    {
+      "source": "community_licensing_t1",
+      "target": "production_probability_t1",
+      "type": "causal",
+      "relation_profile": "positive_monotone",
+      "rationale": "Community licensing makes a form available for production in the specified community and setting."
+    },
+    {
+      "source": "production_task_setting_t1",
+      "target": "production_probability_t1",
+      "type": "causal",
+      "relation_profile": "mixed_contextual",
+      "rationale": "Unmonitored conversation, elicited production, edited prose, and test contexts can change production probability in different directions."
+    },
+    {
+      "source": "production_probability_t1",
+      "target": "usage_frequency_t2",
+      "type": "time_lagged",
+      "relation_profile": "positive_monotone",
+      "rationale": "Production in a setting contributes to observed usage in later matching samples."
+    },
+    {
+      "source": "community_licensing_t1",
+      "target": "production_probability_t2",
+      "type": "time_lagged",
+      "relation_profile": "positive_monotone",
+      "rationale": "Licensing at t1 supports later production availability in matching contexts."
+    },
+    {
+      "source": "editorial_correction_probability_t1",
+      "target": "production_probability_t2",
+      "type": "time_lagged",
+      "relation_profile": "negative_monotone",
+      "rationale": "Correction pressure can suppress later production in monitored or school-like settings."
+    },
+    {
+      "source": "schooling_instructional_exposure_t1",
+      "target": "standard_language_ideology_t1",
+      "type": "causal",
+      "relation_profile": "positive_monotone",
+      "rationale": "Instructional exposure can increase uptake of standard-language ideology for the relevant form."
+    },
+    {
+      "source": "standard_language_ideology_t1",
+      "target": "metalinguistic_condemnation_t1",
+      "type": "causal",
+      "relation_profile": "positive_monotone",
+      "rationale": "Standard-language ideology can generate explicit condemnation in correctness-oriented settings."
+    },
+    {
+      "source": "metalinguistic_condemnation_t1",
+      "target": "editorial_correction_probability_t1",
+      "type": "causal",
+      "relation_profile": "positive_monotone",
+      "rationale": "Explicit condemnation predicts correction in school, editing, or grammar-test settings."
+    },
+    {
+      "source": "editorial_correction_probability_t1",
+      "target": "grammaticality_attribution_t1",
+      "type": "evidential",
+      "relation_profile": "contextual_warrant",
+      "rationale": "Correction can influence grammaticality attribution while remaining separable from community licensing."
+    },
+    {
+      "source": "judgment_task_setting_t1",
+      "target": "task_framing_t1",
+      "type": "causal",
+      "relation_profile": "mixed_contextual",
+      "rationale": "Judgment procedures cue what kind of response is requested: correctness, naturalness, editing, category assignment, or register fit."
+    },
+    {
+      "source": "judgment_task_setting_t1",
+      "target": "reported_acceptability_t1",
+      "type": "causal",
+      "relation_profile": "mixed_contextual",
+      "rationale": "Judgment settings can change reported acceptability independently of production probability."
+    },
+    {
+      "source": "task_framing_t1",
+      "target": "reported_acceptability_t1",
+      "type": "causal",
+      "relation_profile": "mixed_contextual",
+      "rationale": "Correctness, naturalness, register-fit, and community-membership framings can shift reported acceptability."
+    },
+    {
+      "source": "task_framing_t1",
+      "target": "grammaticality_attribution_t1",
+      "type": "causal",
+      "relation_profile": "mixed_contextual",
+      "rationale": "Task framing can shift explicit grammaticality attribution by cueing the requested status category."
+    },
+    {
+      "source": "community_licensing_t1",
+      "target": "reported_acceptability_t1",
+      "type": "measurement",
+      "relation_profile": "task_biased_indicator",
+      "rationale": "Acceptability reports can measure licensing, but judgment setting and framing bias the indicator."
+    },
+    {
+      "source": "reported_acceptability_t1",
+      "target": "grammaticality_attribution_t1",
+      "type": "evidential",
+      "relation_profile": "contextual_warrant",
+      "rationale": "Acceptability reports provide contextual warrant for attribution without defining grammatical status."
+    },
+    {
+      "source": "community_licensing_t1",
+      "target": "grammaticality_attribution_t1",
+      "type": "evidential",
+      "relation_profile": "contextual_warrant",
+      "rationale": "Community licensing is evidence for grammaticality attribution in the relevant community and task frame."
+    },
+    {
+      "source": "genre_t1",
+      "target": "register_genre_appropriateness_t1",
+      "type": "causal",
+      "relation_profile": "mixed_contextual",
+      "rationale": "Genre determines which forms are locally appropriate for the activity type."
+    },
+    {
+      "source": "medium_t1",
+      "target": "register_genre_appropriateness_t1",
+      "type": "causal",
+      "relation_profile": "mixed_contextual",
+      "rationale": "Medium conditions whether a form is ordinary, marked, or correction-prone."
+    },
+    {
+      "source": "register_genre_appropriateness_t1",
+      "target": "reported_acceptability_t1",
+      "type": "causal",
+      "relation_profile": "positive_monotone",
+      "rationale": "Higher register or genre fit tends to increase reported acceptability in situated judgment tasks."
+    },
+    {
+      "source": "speaker_identity_t1",
+      "target": "social_indexical_value_t1",
+      "type": "causal",
+      "relation_profile": "mixed_contextual",
+      "rationale": "Speaker cues shape the social-indexical value assigned to a form in the judgment context."
+    },
+    {
+      "source": "social_indexical_value_t1",
+      "target": "reported_acceptability_t1",
+      "type": "causal",
+      "relation_profile": "mixed_contextual",
+      "rationale": "Indexical associations can shift reported acceptability without changing community licensing."
+    }
+  ],
+  "scores": {
+    "empirical_coverage": 0,
+    "projective_power": 0,
+    "counterexample_resilience": 0,
+    "measurement_clarity": 0,
+    "explanatory_payoff": 0,
+    "cross_domain_stability": 0,
+    "complexity_penalty": 0,
+    "circularity_penalty": 0,
+    "construct_confusion_penalty": 0,
+    "theory_preservation_penalty": 0
+  },
+  "score_status": {
+    "kind": "unscored"
+  }
+}

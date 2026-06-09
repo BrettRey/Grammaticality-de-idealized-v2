@@ -519,6 +519,15 @@ def validate(path: Path) -> list[str]:
     target_graph_value = data.get("target_graph")
     if isinstance(target_graph_value, str) and target_graph_value.strip():
         target_graph = load_json(ROOT / target_graph_value)
+        if (
+            data.get("score_decision") == SCORE_CHANGE_DECISION
+            and target_graph is not None
+            and target_graph.get("edge_semantics_level", "topology_only") != "profiled"
+        ):
+            errors.append(
+                f"{path}: score-change-proposed evaluations require target_graph "
+                "edge_semantics_level 'profiled'"
+            )
 
     status = data.get("status")
     if status not in STATUSES:

@@ -1,0 +1,206 @@
+{
+  "id": "context-indexed-dynamic-feedback-agreement-2026-06-08",
+  "target_graph": "graphs/archive/context-indexed-dynamic-feedback-candidate.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "protocol-bound",
+  "score_decision": "no-score-change",
+  "activated_paths": [
+    {
+      "id": "community-licensing-to-attribution",
+      "phenomenon": "subject-verb-agreement-cgel",
+      "contrast_cell": "notional-collective",
+      "expected_path_reading": "unprofiled",
+      "prediction": "Context-conditioned community licensing can be distinguished from attribution, but the path is not profiled in this graph.",
+      "edges": [
+        {
+          "source": "community_licensing_t1",
+          "target": "grammaticality_attribution_t1",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "task-framing-acceptability-attribution",
+      "phenomenon": "agreement-attraction",
+      "contrast_cell": "first-pass-attraction",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Task framing can perturb reported acceptability and attribution, but this is not an attraction mechanism.",
+      "edges": [
+        {
+          "source": "task_framing_t1",
+          "target": "reported_acceptability_t1",
+          "type": "causal"
+        },
+        {
+          "source": "reported_acceptability_t1",
+          "target": "grammaticality_attribution_t1",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "standard-ideology-correction",
+      "phenomenon": "subject-verb-agreement-cgel",
+      "contrast_cell": "correctness-rereading",
+      "expected_path_reading": "positive",
+      "prediction": "A correctness norm centre can route through condemnation into correction probability without itself defining community licensing.",
+      "edges": [
+        {
+          "source": "standard_language_ideology_t1",
+          "target": "metalinguistic_condemnation_t1",
+          "type": "causal"
+        },
+        {
+          "source": "metalinguistic_condemnation_t1",
+          "target": "editorial_correction_probability_t1",
+          "type": "causal"
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "phenomenon": "subject-verb-agreement-cgel",
+      "result": "partly_survives",
+      "expected_survival_pattern": "The graph can distinguish community licensing, standard ideology, correction, reported acceptability, and attribution across agreement contexts. It does not represent agreement operator value, feature alignment, or attraction-specific processing.",
+      "notes": "Partly survives for context and norm-centre contrasts such as notional or variety-specific agreement. It should not be treated as an agreement mechanism.",
+      "requirements": {
+        "required_nodes": [
+          "community_licensing_t1",
+          "standard_language_ideology_t1",
+          "metalinguistic_condemnation_t1",
+          "editorial_correction_probability_t1",
+          "task_framing_t1",
+          "reported_acceptability_t1",
+          "grammaticality_attribution_t1"
+        ],
+        "required_edges": [
+          {
+            "source": "community_licensing_t1",
+            "target": "reported_acceptability_t1",
+            "type": "measurement"
+          },
+          {
+            "source": "community_licensing_t1",
+            "target": "grammaticality_attribution_t1",
+            "type": "evidential"
+          },
+          {
+            "source": "standard_language_ideology_t1",
+            "target": "metalinguistic_condemnation_t1",
+            "type": "causal"
+          },
+          {
+            "source": "metalinguistic_condemnation_t1",
+            "target": "editorial_correction_probability_t1",
+            "type": "causal"
+          },
+          {
+            "source": "task_framing_t1",
+            "target": "reported_acceptability_t1",
+            "type": "causal"
+          }
+        ],
+        "forbidden_nodes": [
+          "operator_value_t1",
+          "processing_cost_t1"
+        ],
+        "forbidden_edges": [
+          {
+            "source": "reported_acceptability_t1",
+            "target": "community_licensing_t1",
+            "type": "causal"
+          },
+          {
+            "source": "standard_language_ideology_t1",
+            "target": "community_licensing_t1",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "low-load-obligatory-agreement",
+          "axes": {
+            "community": "English speakers judging ordinary finite subject-verb agreement.",
+            "norm_centre": "Descriptive or explicit-grammar agreement norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Grammaticality judgment after ordinary reading.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "notional-collective",
+          "axes": {
+            "community": "English speakers in a variety or register allowing notional agreement in some collective contexts.",
+            "norm_centre": "Local descriptive norm rather than simplified school rule.",
+            "genre": "Sentence judgment with collective-noun context.",
+            "medium": "Written example.",
+            "task_framing": "Acceptability and attribution separated.",
+            "speaker_identity": "Variety-neutral speaker cue."
+          }
+        },
+        {
+          "id": "correctness-rereading",
+          "axes": {
+            "community": "School or editing judgment context.",
+            "norm_centre": "Standard agreement rule.",
+            "genre": "Grammar test or editing task.",
+            "medium": "Written example.",
+            "task_framing": "Correctness-framed rereading.",
+            "speaker_identity": "Student, editor, or standard-writer cue."
+          }
+        }
+      ]
+    },
+    {
+      "phenomenon": "agreement-attraction",
+      "result": "fails_general_out_of_scope",
+      "expected_survival_pattern": "Agreement attraction should require a processing or retrieval construct that can perturb reported acceptability without changing licensing.",
+      "notes": "Fails as an attraction account. The graph can represent task framing and attribution channels but has no processing_cost or retrieval/attractor construct.",
+      "requirements": {
+        "required_nodes": [
+          "task_framing_t1",
+          "reported_acceptability_t1",
+          "grammaticality_attribution_t1",
+          "community_licensing_t1"
+        ],
+        "forbidden_nodes": [
+          "processing_cost_t1"
+        ],
+        "forbidden_edges": [
+          {
+            "source": "reported_acceptability_t1",
+            "target": "community_licensing_t1",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "first-pass-attraction",
+          "axes": {
+            "community": "English speakers in a timed judgment task.",
+            "norm_centre": "Descriptive agreement norm centre.",
+            "genre": "Psycholinguistic judgment item.",
+            "medium": "Written or rapid serial visual presentation.",
+            "task_framing": "First-pass acceptability under attraction.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "reread-structural-correction",
+          "axes": {
+            "community": "English speakers after rereading the same item.",
+            "norm_centre": "Descriptive agreement norm centre.",
+            "genre": "Psycholinguistic judgment item with rereading.",
+            "medium": "Written example.",
+            "task_framing": "Explicit grammaticality attribution after rereading.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    }
+  ]
+}

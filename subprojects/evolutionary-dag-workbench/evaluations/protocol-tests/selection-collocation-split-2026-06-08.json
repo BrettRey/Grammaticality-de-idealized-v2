@@ -1,0 +1,280 @@
+{
+  "id": "selection-collocation-split-2026-06-08",
+  "target_graph": "graphs/archive/selection-collocation-split-candidate.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "protocol-bound",
+  "score_decision": "no-score-change",
+  "activated_paths": [
+    {
+      "id": "argument-linking-to-attribution",
+      "phenomenon": "preposition-category-selection-cgel",
+      "contrast_cell": "selected-pp-complement",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Argument-linking selection can be part of operator value, which can support licensing and attribution, but the path mixes component and evidential relations rather than a simple sign.",
+      "edges": [
+        {
+          "source": "argument_linking_selection",
+          "target": "operator_value",
+          "type": "constitutive"
+        },
+        {
+          "source": "operator_value",
+          "target": "community_licensing",
+          "type": "constitutive"
+        },
+        {
+          "source": "community_licensing",
+          "target": "grammaticality_attribution",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "collocation-preemption-licensing",
+      "phenomenon": "preposition-category-selection-cgel",
+      "contrast_cell": "selected-pp-complement",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Collocational rigidity can provide contextual warrant for preemption, and preemption can undercut licensing warrant, without equating collocation with operator value.",
+      "edges": [
+        {
+          "source": "collocational_rigidity",
+          "target": "preemption_strength",
+          "type": "evidential"
+        },
+        {
+          "source": "preemption_strength",
+          "target": "community_licensing",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "payload-choice-acceptability-attribution",
+      "phenomenon": "preposition-category-selection-cgel",
+      "contrast_cell": "open-payload-pp-choice",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Payload preposition choice can shift reported acceptability and attribution contextually without becoming a licensing path.",
+      "edges": [
+        {
+          "source": "payload_preposition_choice",
+          "target": "reported_acceptability",
+          "type": "causal"
+        },
+        {
+          "source": "reported_acceptability",
+          "target": "grammaticality_attribution",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "selected-complement-repair",
+      "phenomenon": "preposition-category-selection-cgel",
+      "contrast_cell": "selected-pp-complement",
+      "expected_path_reading": "negative",
+      "prediction": "Lower licensing in a selected-complement context should increase repair or reformulation pressure.",
+      "edges": [
+        {
+          "source": "community_licensing",
+          "target": "repair_reformulation_pressure",
+          "type": "causal"
+        }
+      ]
+    },
+    {
+      "id": "constructional-function-to-selection",
+      "phenomenon": "preposition-category-selection-cgel",
+      "contrast_cell": "grammaticized-preposition",
+      "expected_path_reading": "warranting",
+      "prediction": "Constructional function can warrant an argument-linking-selection analysis for grammaticized or selected prepositions.",
+      "edges": [
+        {
+          "source": "constructional_function",
+          "target": "argument_linking_selection",
+          "type": "evidential"
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "phenomenon": "preposition-category-selection-cgel",
+      "result": "survives_as_module",
+      "expected_survival_pattern": "The graph should distinguish open payload PP choices, collocational rigidity, and argument-linking selection. Only argument-linking selection should route into operator value; collocational rigidity may inform preemption; payload choice may affect acceptability without becoming licensing.",
+      "notes": "Survives as a scoped preposition-selection boundary module. This directly addresses the previous held-out failure: fixedness is not automatically operator value.",
+      "requirements": {
+        "required_nodes": [
+          "payload_preposition_choice",
+          "collocational_rigidity",
+          "argument_linking_selection",
+          "operator_value",
+          "constructional_function",
+          "competitor_availability",
+          "preemption_strength",
+          "community_licensing",
+          "reported_acceptability"
+        ],
+        "required_edges": [
+          {
+            "source": "argument_linking_selection",
+            "target": "operator_value",
+            "type": "constitutive"
+          },
+          {
+            "source": "operator_value",
+            "target": "community_licensing",
+            "type": "constitutive"
+          },
+          {
+            "source": "payload_preposition_choice",
+            "target": "reported_acceptability",
+            "type": "causal"
+          },
+          {
+            "source": "collocational_rigidity",
+            "target": "preemption_strength",
+            "type": "evidential"
+          },
+          {
+            "source": "competitor_availability",
+            "target": "preemption_strength",
+            "type": "constitutive"
+          },
+          {
+            "source": "constructional_function",
+            "target": "argument_linking_selection",
+            "type": "evidential"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "collocational_rigidity",
+            "target": "operator_value",
+            "type": "constitutive"
+          },
+          {
+            "source": "payload_preposition_choice",
+            "target": "community_licensing",
+            "type": "causal"
+          },
+          {
+            "source": "collocational_rigidity",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "open-payload-pp-choice",
+          "axes": {
+            "community": "English speakers interpreting spatial or conceptual PP choices.",
+            "norm_centre": "Descriptive usage norm centre.",
+            "genre": "Ordinary prose or speech.",
+            "medium": "Speech or written example.",
+            "task_framing": "Paraphrase and interpretation task.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "selected-pp-complement",
+          "axes": {
+            "community": "English speakers judging selected PP complements.",
+            "norm_centre": "Descriptive and editorial norm centres compared.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Acceptability, correction, and paraphrase-availability compared.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "grammaticized-preposition",
+          "axes": {
+            "community": "English speakers judging restricted or grammaticized preposition constructions.",
+            "norm_centre": "Descriptive constructional norm centre.",
+            "genre": "Controlled constructional comparison.",
+            "medium": "Written example or corpus text.",
+            "task_framing": "Constructional function and acceptability separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    },
+    {
+      "phenomenon": "comparative-more-less-category",
+      "result": "partly_survives",
+      "expected_survival_pattern": "The graph should benefit from constructional_function but remain incomplete for category-analysis tasks because it lacks analyst_category_assignment and distributional_category_evidence.",
+      "notes": "Partly survives. This graph uses constructional function but is not a category-measurement graph.",
+      "requirements": {
+        "required_nodes": [
+          "constructional_function",
+          "reported_acceptability",
+          "grammaticality_attribution"
+        ],
+        "forbidden_nodes": [
+          "analyst_category_assignment",
+          "distributional_category_evidence"
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "speaker-acceptability-task",
+          "axes": {
+            "community": "English speakers judging comparative examples without category terminology.",
+            "norm_centre": "Descriptive usage norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Acceptability or naturalness framing.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "analyst-category-task",
+          "axes": {
+            "community": "Analysts or trained respondents classifying categories.",
+            "norm_centre": "Descriptive grammar analysis norm centre.",
+            "genre": "Metalinguistic classification task.",
+            "medium": "Written example.",
+            "task_framing": "Category/function classification rather than acceptability.",
+            "speaker_identity": "Analyst or instructed respondent cue."
+          }
+        }
+      ]
+    },
+    {
+      "phenomenon": "unbounded-dependency-licensing-cgel",
+      "result": "fails_general_out_of_scope",
+      "expected_survival_pattern": "The graph should fail as a general operator-gap account for unbounded dependency licensing because it lacks semantic recoverability and dependency-specific competitor paths.",
+      "notes": "Useful out-of-scope failure. This mutation is for preposition/complement selection boundaries, not dependency extraction.",
+      "requirements": {
+        "forbidden_nodes": [
+          "semantic_pragmatic_recoverability"
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "licensed-gap",
+          "axes": {
+            "community": "English speakers judging ordinary dependency examples.",
+            "norm_centre": "Descriptive judgment norm centre for dependency licensing.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Acceptability and meaning recovery separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "recoverable-unlicensed-gap",
+          "axes": {
+            "community": "English speakers judging recoverable dependency anomalies.",
+            "norm_centre": "Descriptive judgment norm centre for dependency licensing.",
+            "genre": "Controlled sentence judgment with paraphrase available.",
+            "medium": "Written example.",
+            "task_framing": "Meaning recovery foregrounded before grammaticality attribution.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    }
+  ]
+}

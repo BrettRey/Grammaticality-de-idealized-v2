@@ -1,0 +1,247 @@
+{
+  "id": "context-aware-operator-gap-clause-interjection-2026-06-08",
+  "target_graph": "graphs/archive/context-aware-operator-gap-candidate.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "protocol-bound",
+  "score_decision": "no-score-change",
+  "activated_paths": [
+    {
+      "id": "operator-value-to-repair-pressure",
+      "phenomenon": "clause-type-force-cgel",
+      "contrast_cell": "wrong-move-type",
+      "expected_path_reading": "non_sign_propagating",
+      "prediction": "Operator value can route through licensing into repair pressure when the wrong move type is signalled.",
+      "edges": [
+        {
+          "source": "operator_value",
+          "target": "community_licensing",
+          "type": "constitutive"
+        },
+        {
+          "source": "community_licensing",
+          "target": "repair_reformulation_pressure",
+          "type": "causal"
+        }
+      ]
+    },
+    {
+      "id": "recoverability-to-attribution",
+      "phenomenon": "clause-type-force-cgel",
+      "contrast_cell": "content-understood-wrong-move",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Recoverable content can raise reported acceptability without resolving whether the intended move type was licensed.",
+      "edges": [
+        {
+          "source": "semantic_pragmatic_recoverability",
+          "target": "reported_acceptability",
+          "type": "causal"
+        },
+        {
+          "source": "reported_acceptability",
+          "target": "grammaticality_attribution",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "genre-to-interjection-acceptability",
+      "phenomenon": "interjection-boundary-source-card",
+      "contrast_cell": "genre-conventional-token",
+      "expected_path_reading": "unprofiled",
+      "prediction": "Genre can affect reported acceptability for interjection-like forms, but OPG has no openness or uptake-role boundary construct.",
+      "edges": [
+        {
+          "source": "genre",
+          "target": "register_genre_appropriateness",
+          "type": "causal"
+        },
+        {
+          "source": "register_genre_appropriateness",
+          "target": "reported_acceptability",
+          "type": "causal"
+        }
+      ]
+    },
+    {
+      "id": "speaker-stance-to-acceptability",
+      "phenomenon": "interjection-boundary-source-card",
+      "contrast_cell": "invented-stance-token",
+      "expected_path_reading": "unprofiled",
+      "prediction": "Speaker or stance cues can perturb reported acceptability without deciding operator membership.",
+      "edges": [
+        {
+          "source": "speaker_identity",
+          "target": "social_indexical_value",
+          "type": "causal"
+        },
+        {
+          "source": "social_indexical_value",
+          "target": "reported_acceptability",
+          "type": "causal"
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "phenomenon": "clause-type-force-cgel",
+      "result": "partly_survives",
+      "expected_survival_pattern": "The graph can represent operator value, recoverability, repair pressure, genre, and attribution. It only partly survives because it lacks explicit update-role configuration and repertoire-closedness constructs.",
+      "notes": "Useful for clause-type cases where the issue is operator value. It should not be treated as a full clause-type/force account because the boundary between uptake role and operator membership is still implicit.",
+      "requirements": {
+        "required_nodes": [
+          "operator_value",
+          "community_licensing",
+          "semantic_pragmatic_recoverability",
+          "repair_reformulation_pressure",
+          "register_genre_appropriateness",
+          "reported_acceptability",
+          "grammaticality_attribution"
+        ],
+        "forbidden_nodes": [
+          "update_role_configuration",
+          "repertoire_closedness",
+          "operator_repertoire_membership"
+        ],
+        "required_edges": [
+          {
+            "source": "operator_value",
+            "target": "community_licensing",
+            "type": "constitutive"
+          },
+          {
+            "source": "community_licensing",
+            "target": "repair_reformulation_pressure",
+            "type": "causal"
+          },
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "reported_acceptability",
+            "type": "causal"
+          },
+          {
+            "source": "repair_reformulation_pressure",
+            "target": "grammaticality_attribution",
+            "type": "evidential"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "community_licensing",
+            "type": "causal"
+          },
+          {
+            "source": "reported_acceptability",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "major-clause-response-space",
+          "axes": {
+            "community": "English speakers judging major clause types.",
+            "norm_centre": "Descriptive grammar norm centre.",
+            "genre": "Controlled sentence or dialogue judgment.",
+            "medium": "Written example.",
+            "task_framing": "Move type and response expectation judgment.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "wrong-move-type",
+          "axes": {
+            "community": "English speakers interpreting a form whose content is recoverable but move type is mis-signalled.",
+            "norm_centre": "Descriptive grammar norm centre.",
+            "genre": "Dialogue or sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Repair or response-space disruption judgment.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "content-understood-wrong-move",
+          "axes": {
+            "community": "English speakers judging a semantically recoverable but force-misaligned utterance.",
+            "norm_centre": "Descriptive grammar norm centre.",
+            "genre": "Dialogue judgment.",
+            "medium": "Written example.",
+            "task_framing": "Comprehension and grammaticality attribution separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    },
+    {
+      "phenomenon": "interjection-boundary-source-card",
+      "result": "fails_general_out_of_scope",
+      "expected_survival_pattern": "A boundary account should distinguish conventional uptake-configuring interjections from stretchable, repeatable, blendable, or invented tokens whose stance is understood but whose form is not a closed operator contrast.",
+      "notes": "Fails as a general interjection-boundary account. OPG can handle conventional repair-like forms only by routing them through operator value or genre, but it lacks token innovability and repertoire closedness.",
+      "requirements": {
+        "required_nodes": [
+          "operator_value",
+          "social_indexical_value",
+          "register_genre_appropriateness",
+          "semantic_pragmatic_recoverability",
+          "repair_reformulation_pressure",
+          "reported_acceptability"
+        ],
+        "forbidden_nodes": [
+          "token_innovability",
+          "update_role_configuration",
+          "repertoire_closedness",
+          "operator_repertoire_membership"
+        ],
+        "forbidden_edges": [
+          {
+            "source": "social_indexical_value",
+            "target": "community_licensing",
+            "type": "causal"
+          },
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "conventional-repair-token",
+          "axes": {
+            "community": "English speakers using a conventional repair-initiating token.",
+            "norm_centre": "Interactional norm centre.",
+            "genre": "Conversation or transcript judgment.",
+            "medium": "Speech or transcript.",
+            "task_framing": "Uptake or repair initiation judgment.",
+            "speaker_identity": "Ordinary interactional participant cue."
+          }
+        },
+        {
+          "id": "genre-conventional-token",
+          "axes": {
+            "community": "English speakers judging interjection-like forms in a genre with stable conventions.",
+            "norm_centre": "Local genre norm centre.",
+            "genre": "Conversation, comics, messaging, or performance genre.",
+            "medium": "Speech, transcript, or informal writing.",
+            "task_framing": "Register and uptake judgment.",
+            "speaker_identity": "Genre-appropriate speaker cue."
+          }
+        },
+        {
+          "id": "invented-stance-token",
+          "axes": {
+            "community": "English speakers interpreting a nonce or blended interjection token.",
+            "norm_centre": "Interactional rather than school-correction norm centre.",
+            "genre": "Informal interaction or performance.",
+            "medium": "Speech or informal writing.",
+            "task_framing": "Stance interpretation separated from grammaticality attribution.",
+            "speaker_identity": "Playful or stance-marked speaker cue."
+          }
+        }
+      ]
+    }
+  ]
+}

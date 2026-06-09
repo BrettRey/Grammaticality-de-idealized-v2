@@ -1,0 +1,299 @@
+{
+  "id": "processing-naturalness-perturbation-2026-06-08",
+  "target_graph": "graphs/archive/processing-naturalness-perturbation-candidate.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "protocol-bound",
+  "score_decision": "scope-only",
+  "activated_paths": [
+    {
+      "id": "processing-to-acceptability",
+      "phenomenon": "center-embedding",
+      "contrast_cell": "deep-licensed-hard",
+      "expected_path_reading": "negative",
+      "prediction": "Processing cost lowers felt naturalness and thereby lowers reported acceptability while leaving licensing separate.",
+      "edges": [
+        {
+          "source": "processing_cost",
+          "target": "felt_naturalness_context",
+          "type": "causal"
+        },
+        {
+          "source": "felt_naturalness_context",
+          "target": "reported_acceptability",
+          "type": "measurement"
+        }
+      ]
+    },
+    {
+      "id": "recoverability-to-acceptability",
+      "phenomenon": "center-embedding",
+      "contrast_cell": "scaffolded-recoverable",
+      "expected_path_reading": "positive",
+      "prediction": "Recoverability or scaffolding should raise felt naturalness and reported acceptability without proving a change in licensing.",
+      "edges": [
+        {
+          "source": "semantic_pragmatic_recoverability",
+          "target": "felt_naturalness_context",
+          "type": "causal"
+        },
+        {
+          "source": "felt_naturalness_context",
+          "target": "reported_acceptability",
+          "type": "measurement"
+        }
+      ]
+    },
+    {
+      "id": "task-framing-to-attribution",
+      "phenomenon": "agreement-attraction",
+      "contrast_cell": "reread-structural-correction",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Task framing can cue respondents to treat first-pass acceptability as a grammar verdict or as processing trouble.",
+      "edges": [
+        {
+          "source": "task_framing",
+          "target": "grammaticality_attribution",
+          "type": "causal"
+        }
+      ]
+    },
+    {
+      "id": "licensing-and-acceptability-to-attribution",
+      "phenomenon": "grammatical-but-hard",
+      "contrast_cell": "licensed-hard-low-acceptability",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Licensing and reported acceptability can both warrant attribution, but task context decides how they are weighted.",
+      "edges": [
+        {
+          "source": "reported_acceptability",
+          "target": "grammaticality_attribution",
+          "type": "evidential"
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "phenomenon": "center-embedding",
+      "result": "survives_as_module",
+      "expected_survival_pattern": "Deep center embedding should lower felt naturalness and reported acceptability through processing cost, while recoverability or scaffolding can improve reported responses without changing licensing.",
+      "notes": "Survives as a scoped processing/measurement module. It does not decide the grammar of center embedding; it explains why a licensed structure may still be rejected.",
+      "requirements": {
+        "required_nodes": [
+          "processing_cost",
+          "semantic_pragmatic_recoverability",
+          "felt_naturalness_context",
+          "reported_acceptability",
+          "community_licensing",
+          "grammaticality_attribution"
+        ],
+        "required_edges": [
+          {
+            "source": "processing_cost",
+            "target": "felt_naturalness_context",
+            "type": "causal"
+          },
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "felt_naturalness_context",
+            "type": "causal"
+          },
+          {
+            "source": "felt_naturalness_context",
+            "target": "reported_acceptability",
+            "type": "measurement"
+          },
+          {
+            "source": "reported_acceptability",
+            "target": "grammaticality_attribution",
+            "type": "evidential"
+          },
+          {
+            "source": "community_licensing",
+            "target": "grammaticality_attribution",
+            "type": "evidential"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "processing_cost",
+            "target": "community_licensing",
+            "type": "causal"
+          },
+          {
+            "source": "reported_acceptability",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "deep-licensed-hard",
+          "axes": {
+            "community": "English speakers judging deeply center-embedded but structurally licensed examples.",
+            "norm_centre": "Descriptive grammar norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Acceptability under high processing load.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "scaffolded-recoverable",
+          "axes": {
+            "community": "English speakers given punctuation, prosody, or paraphrase support.",
+            "norm_centre": "Descriptive grammar norm centre.",
+            "genre": "Judgment with comprehension support.",
+            "medium": "Written or spoken scaffolded example.",
+            "task_framing": "Recoverability and grammaticality attribution separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    },
+    {
+      "phenomenon": "agreement-attraction",
+      "result": "partly_survives",
+      "expected_survival_pattern": "Attraction should be represented as a processing perturbation to felt naturalness or reported acceptability, not as licensing.",
+      "notes": "Partly survives. The graph has the processing/measurement separation but still lacks retrieval architecture and feature-attractor constructs.",
+      "requirements": {
+        "required_nodes": [
+          "processing_cost",
+          "felt_naturalness_context",
+          "reported_acceptability",
+          "community_licensing",
+          "grammaticality_attribution",
+          "task_framing"
+        ],
+        "required_edges": [
+          {
+            "source": "processing_cost",
+            "target": "felt_naturalness_context",
+            "type": "causal"
+          },
+          {
+            "source": "felt_naturalness_context",
+            "target": "reported_acceptability",
+            "type": "measurement"
+          },
+          {
+            "source": "task_framing",
+            "target": "grammaticality_attribution",
+            "type": "causal"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "processing_cost",
+            "target": "community_licensing",
+            "type": "causal"
+          },
+          {
+            "source": "reported_acceptability",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "first-pass-attraction",
+          "axes": {
+            "community": "English speakers in a timed judgment task.",
+            "norm_centre": "Descriptive agreement norm centre.",
+            "genre": "Psycholinguistic judgment item.",
+            "medium": "Written or rapid serial visual presentation.",
+            "task_framing": "First-pass acceptability under attraction.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "reread-structural-correction",
+          "axes": {
+            "community": "English speakers after rereading the same item.",
+            "norm_centre": "Descriptive agreement norm centre.",
+            "genre": "Psycholinguistic judgment item with rereading.",
+            "medium": "Written example.",
+            "task_framing": "Explicit grammaticality attribution after rereading.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    },
+    {
+      "phenomenon": "grammatical-but-hard",
+      "result": "survives_as_module",
+      "expected_survival_pattern": "Licensed but hard forms should show low naturalness or acceptability under processing load while preserving separable licensing and attribution channels.",
+      "notes": "Survives as a scoped module for competence/performance-style dissociations, provided licensing is supplied by another module or stipulated in the contrast cell.",
+      "requirements": {
+        "required_nodes": [
+          "processing_cost",
+          "felt_naturalness_context",
+          "measurement_task",
+          "reported_acceptability",
+          "community_licensing",
+          "grammaticality_attribution"
+        ],
+        "required_edges": [
+          {
+            "source": "processing_cost",
+            "target": "felt_naturalness_context",
+            "type": "causal"
+          },
+          {
+            "source": "felt_naturalness_context",
+            "target": "reported_acceptability",
+            "type": "measurement"
+          },
+          {
+            "source": "measurement_task",
+            "target": "reported_acceptability",
+            "type": "causal"
+          },
+          {
+            "source": "community_licensing",
+            "target": "grammaticality_attribution",
+            "type": "evidential"
+          },
+          {
+            "source": "reported_acceptability",
+            "target": "grammaticality_attribution",
+            "type": "evidential"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "reported_acceptability",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "licensed-hard-low-acceptability",
+          "axes": {
+            "community": "Speakers for whom the construction is licensed in principle.",
+            "norm_centre": "Descriptive grammar norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Acceptability under high processing load.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "scaffolded-interpretation",
+          "axes": {
+            "community": "Speakers given interpretation support.",
+            "norm_centre": "Descriptive grammar norm centre.",
+            "genre": "Comprehension-supported judgment.",
+            "medium": "Written or spoken scaffolded example.",
+            "task_framing": "Comprehension and grammaticality attribution separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    }
+  ]
+}

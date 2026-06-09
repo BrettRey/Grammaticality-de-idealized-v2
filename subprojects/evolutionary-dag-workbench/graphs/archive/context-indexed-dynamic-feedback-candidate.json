@@ -3,6 +3,7 @@
   "title": "Context-indexed dynamic feedback candidate",
   "family": "context-indexed-dynamic-feedback",
   "status": "candidate",
+  "edge_semantics_level": "profiled",
   "notes": "Fourth-round candidate generated after critique of the dynamic stratified feedback candidate. It tests whether time-lagged feedback can remain explicit while conditioning community licensing, ideology, production, and judgment by community, norm centre, genre, medium, task frame, and speaker cue. It is not scored pending critique.",
   "conditioning_axes": {
     "community": "Required. Interpret community_licensing, production_probability, usage_frequency, entrenchment, and reported_acceptability relative to a specified speech community or comparison set.",
@@ -81,12 +82,14 @@
       "source": "standard_language_ideology_t1",
       "target": "metalinguistic_condemnation_t1",
       "type": "causal",
+      "relation_profile": "positive_monotone",
       "rationale": "The specified norm centre can generate explicit condemnation at t1."
     },
     {
       "source": "metalinguistic_condemnation_t1",
       "target": "editorial_correction_probability_t1",
       "type": "causal",
+      "relation_profile": "positive_monotone",
       "rationale": "Condemnation at t1 predicts correction in the specified institutional or editorial context."
     },
     {
@@ -99,18 +102,21 @@
       "source": "speaker_identity_t1",
       "target": "social_indexical_value_t1",
       "type": "causal",
+      "relation_profile": "mixed_contextual",
       "rationale": "Speaker cues shape the social-indexical value assigned to a form in the judgment context."
     },
     {
       "source": "social_indexical_value_t1",
       "target": "reported_acceptability_t1",
       "type": "causal",
+      "relation_profile": "mixed_contextual",
       "rationale": "Indexical associations can shift reported acceptability without changing community licensing."
     },
     {
       "source": "genre_t1",
       "target": "register_genre_appropriateness_t1",
       "type": "causal",
+      "relation_profile": "mixed_contextual",
       "rationale": "Genre determines which forms are appropriate for the activity type at t1."
     },
     {
@@ -123,12 +129,14 @@
       "source": "register_genre_appropriateness_t1",
       "target": "reported_acceptability_t1",
       "type": "causal",
+      "relation_profile": "positive_monotone",
       "rationale": "Register or genre mismatch can lower reported acceptability without changing licensing."
     },
     {
       "source": "task_framing_t1",
       "target": "reported_acceptability_t1",
       "type": "causal",
+      "relation_profile": "mixed_contextual",
       "rationale": "Task framing can cue correctness, naturalness, register fit, or community membership criteria."
     },
     {
@@ -147,18 +155,21 @@
       "source": "reported_acceptability_t1",
       "target": "grammaticality_attribution_t1",
       "type": "evidential",
+      "relation_profile": "contextual_warrant",
       "rationale": "Acceptability reports provide noisy evidence for attribution in the specified task frame."
     },
     {
       "source": "editorial_correction_probability_t1",
       "target": "grammaticality_attribution_t1",
       "type": "evidential",
+      "relation_profile": "contextual_warrant",
       "rationale": "Correction can influence attribution while remaining separable from licensing and norm-centre ideology."
     },
     {
       "source": "community_licensing_t1",
       "target": "production_probability_t2",
       "type": "time_lagged",
+      "relation_profile": "positive_monotone",
       "rationale": "Licensing at t1 can increase later production in the same specified community and context."
     },
     {
@@ -183,6 +194,7 @@
       "source": "usage_frequency_t1",
       "target": "diachronic_stabilization_t2",
       "type": "time_lagged",
+      "relation_profile": "positive_monotone",
       "rationale": "Sustained context-conditioned usage at t1 contributes to later stabilization."
     },
     {
@@ -201,6 +213,7 @@
       "source": "diachronic_stabilization_t2",
       "target": "community_licensing_t2",
       "type": "evidential",
+      "relation_profile": "evidential_warrant",
       "rationale": "Stabilization by t2 is evidence about licensing at t2 in the specified community."
     },
     {
@@ -213,6 +226,7 @@
       "source": "community_licensing_t2",
       "target": "production_probability_t2",
       "type": "causal",
+      "relation_profile": "positive_monotone",
       "rationale": "Licensing at t2 affects production availability in the specified community and context."
     },
     {

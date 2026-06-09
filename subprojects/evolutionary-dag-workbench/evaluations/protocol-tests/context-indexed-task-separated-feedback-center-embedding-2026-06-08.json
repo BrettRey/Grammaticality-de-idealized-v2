@@ -1,0 +1,80 @@
+{
+  "id": "context-indexed-task-separated-feedback-center-embedding-2026-06-08",
+  "target_graph": "graphs/archive/context-indexed-task-separated-feedback-candidate.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "protocol-bound",
+  "score_decision": "no-score-change",
+  "activated_paths": [
+    {
+      "id": "judgment-setting-to-attribution",
+      "phenomenon": "center-embedding",
+      "contrast_cell": "deep-licensed-hard",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Judgment setting can alter acceptability and attribution, but it does not explain processing load.",
+      "edges": [
+        {
+          "source": "judgment_task_setting_t1",
+          "target": "reported_acceptability_t1",
+          "type": "causal"
+        },
+        {
+          "source": "reported_acceptability_t1",
+          "target": "grammaticality_attribution_t1",
+          "type": "evidential"
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "phenomenon": "center-embedding",
+      "result": "fails_general_out_of_scope",
+      "expected_survival_pattern": "Center embedding should require processing-cost and recoverability constructs; task separation alone is insufficient.",
+      "notes": "Fails as a center-embedding account. TASK correctly separates judgment channels but lacks processing_cost, felt_naturalness_context, and recoverability.",
+      "requirements": {
+        "required_nodes": [
+          "judgment_task_setting_t1",
+          "task_framing_t1",
+          "reported_acceptability_t1",
+          "grammaticality_attribution_t1"
+        ],
+        "forbidden_nodes": [
+          "processing_cost_t1",
+          "felt_naturalness_context_t1",
+          "semantic_pragmatic_recoverability_t1"
+        ],
+        "forbidden_edges": [
+          {
+            "source": "reported_acceptability_t1",
+            "target": "community_licensing_t1",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "deep-licensed-hard",
+          "axes": {
+            "community": "English speakers judging deeply center-embedded but structurally licensed examples.",
+            "norm_centre": "Descriptive grammar norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Acceptability under high processing load.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "scaffolded-recoverable",
+          "axes": {
+            "community": "English speakers given punctuation, prosody, or paraphrase support.",
+            "norm_centre": "Descriptive grammar norm centre.",
+            "genre": "Judgment with comprehension support.",
+            "medium": "Written or spoken scaffolded example.",
+            "task_framing": "Recoverability and grammaticality attribution separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    }
+  ]
+}

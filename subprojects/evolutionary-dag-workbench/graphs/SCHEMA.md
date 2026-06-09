@@ -174,9 +174,11 @@ Allowed `score_status.kind` values:
 - `scoped_module`
 - `general_account`
 
-`scoped_module` and `general_account` labels require `score_status.evaluation`. The evaluation must
-target the labelled graph, have `status` set to `protocol-bound` or `held-out`, and have
-`score_decision` set to `scope-only` or `score-change-proposed`.
+`scoped_module` and `general_account` labels require `score_status.evaluation`. A `scoped_module`
+label requires the evaluation to target the labelled graph, have `status` set to `protocol-bound` or
+`held-out`, and have `score_decision` set to `scope-only` or `score-change-proposed`.
+`general_account` labels require a held-out evaluation with `score_decision` set to
+`score-change-proposed`.
 
 Non-zero scores require `score_status.kind` to be `scoped_module` or `general_account`. They also
 require `edge_semantics_level` set to `profiled` and the referenced evaluation to have

@@ -1,0 +1,186 @@
+{
+  "id": "uptake-operator-boundary-candidate",
+  "title": "Uptake/operator boundary candidate",
+  "family": "uptake-operator-boundary",
+  "status": "candidate",
+  "edge_semantics_level": "profiled",
+  "notes": "Eleventh-round mutation generated after clause-type and interjection cards exposed a boundary OPG could not represent: uptake configuration alone is not operator-repertoire membership. This graph separates update-role configuration, repertoire closedness, token innovability, operator-repertoire membership, genre/register fit, social-indexical value, recoverability, repair pressure, acceptability, and attribution.",
+  "nodes": [
+    "update_role_configuration",
+    "repertoire_closedness",
+    "token_innovability",
+    "operator_value",
+    "operator_repertoire_membership",
+    "community_licensing",
+    "genre",
+    "medium",
+    "register_genre_appropriateness",
+    "speaker_identity",
+    "social_indexical_value",
+    "task_framing",
+    "semantic_pragmatic_recoverability",
+    "repair_reformulation_pressure",
+    "production_probability",
+    "reported_acceptability",
+    "grammaticality_attribution"
+  ],
+  "edges": [
+    {
+      "source": "update_role_configuration",
+      "target": "operator_repertoire_membership",
+      "type": "evidential",
+      "relation_profile": "evidential_warrant",
+      "rationale": "Update-role configuration is warrant for possible operator-repertoire membership, but is not sufficient by itself."
+    },
+    {
+      "source": "repertoire_closedness",
+      "target": "operator_repertoire_membership",
+      "type": "evidential",
+      "relation_profile": "evidential_warrant",
+      "rationale": "A closed, mutually accountable contrast set is warrant for operator-repertoire membership."
+    },
+    {
+      "source": "token_innovability",
+      "target": "operator_repertoire_membership",
+      "type": "evidential",
+      "relation_profile": "evidential_undercut",
+      "rationale": "High stretchability, repeatability, blending, or nonce substitution undercuts treating the form as a closed operator-repertoire value."
+    },
+    {
+      "source": "operator_value",
+      "target": "operator_repertoire_membership",
+      "type": "constitutive",
+      "relation_profile": "partial_component",
+      "rationale": "Operator value can be part of operator-repertoire membership, but the boundary also requires update-role and repertoire-closure evidence."
+    },
+    {
+      "source": "operator_repertoire_membership",
+      "target": "community_licensing",
+      "type": "evidential",
+      "relation_profile": "contextual_warrant",
+      "rationale": "Membership in a closed update-role repertoire is contextual warrant for licensing in that repertoire."
+    },
+    {
+      "source": "operator_repertoire_membership",
+      "target": "grammaticality_attribution",
+      "type": "evidential",
+      "relation_profile": "evidential_warrant",
+      "rationale": "Operator-repertoire membership provides warrant that a mismatch is grammar-relevant rather than merely stance- or content-relevant."
+    },
+    {
+      "source": "community_licensing",
+      "target": "repair_reformulation_pressure",
+      "type": "causal",
+      "relation_profile": "negative_monotone",
+      "rationale": "Lower licensing in the relevant repertoire predicts greater repair or reformulation pressure."
+    },
+    {
+      "source": "update_role_configuration",
+      "target": "repair_reformulation_pressure",
+      "type": "causal",
+      "relation_profile": "mixed_contextual",
+      "rationale": "A misconfigured uptake role can prompt repair, clarification, or response-space correction depending on the activity."
+    },
+    {
+      "source": "genre",
+      "target": "register_genre_appropriateness",
+      "type": "causal",
+      "relation_profile": "mixed_contextual",
+      "rationale": "Genre conditions whether a clause type, minor clause, exclamation, or interjection token is appropriate."
+    },
+    {
+      "source": "medium",
+      "target": "register_genre_appropriateness",
+      "type": "causal",
+      "relation_profile": "mixed_contextual",
+      "rationale": "Medium affects how uptake-configuring forms are interpreted and policed."
+    },
+    {
+      "source": "register_genre_appropriateness",
+      "target": "reported_acceptability",
+      "type": "causal",
+      "relation_profile": "positive_monotone",
+      "rationale": "Higher register or genre fit tends to increase reported acceptability for boundary forms."
+    },
+    {
+      "source": "speaker_identity",
+      "target": "social_indexical_value",
+      "type": "causal",
+      "relation_profile": "mixed_contextual",
+      "rationale": "Speaker or persona cues can change the social value assigned to an interjection or exclamation."
+    },
+    {
+      "source": "social_indexical_value",
+      "target": "reported_acceptability",
+      "type": "causal",
+      "relation_profile": "mixed_contextual",
+      "rationale": "Stance and persona can shift reported acceptability without creating operator-repertoire membership."
+    },
+    {
+      "source": "task_framing",
+      "target": "reported_acceptability",
+      "type": "causal",
+      "relation_profile": "mixed_contextual",
+      "rationale": "Task framing can foreground grammaticality, uptake, register, stance, or comprehension."
+    },
+    {
+      "source": "task_framing",
+      "target": "grammaticality_attribution",
+      "type": "causal",
+      "relation_profile": "mixed_contextual",
+      "rationale": "Task framing can shift explicit attribution by cueing whether the problem is grammar, stance, uptake, or recognizability."
+    },
+    {
+      "source": "semantic_pragmatic_recoverability",
+      "target": "reported_acceptability",
+      "type": "causal",
+      "relation_profile": "positive_monotone",
+      "rationale": "Recoverable content or stance can raise reported acceptability without proving operator-repertoire membership."
+    },
+    {
+      "source": "community_licensing",
+      "target": "production_probability",
+      "type": "causal",
+      "relation_profile": "positive_monotone",
+      "rationale": "Licensing in the relevant community or repertoire supports production availability."
+    },
+    {
+      "source": "community_licensing",
+      "target": "reported_acceptability",
+      "type": "measurement",
+      "relation_profile": "task_biased_indicator",
+      "rationale": "Acceptability can measure licensing, but boundary cases are especially task-biased."
+    },
+    {
+      "source": "repair_reformulation_pressure",
+      "target": "grammaticality_attribution",
+      "type": "evidential",
+      "relation_profile": "contextual_warrant",
+      "rationale": "Repair pressure is contextual warrant for attribution, but can target uptake, stance, or grammar depending on the case."
+    },
+    {
+      "source": "reported_acceptability",
+      "target": "grammaticality_attribution",
+      "type": "evidential",
+      "relation_profile": "contextual_warrant",
+      "rationale": "Acceptability reports provide contextual warrant for attribution without defining grammatical status."
+    }
+  ],
+  "scores": {
+    "empirical_coverage": 0,
+    "projective_power": 0,
+    "counterexample_resilience": 0,
+    "measurement_clarity": 0,
+    "explanatory_payoff": 0,
+    "cross_domain_stability": 0,
+    "complexity_penalty": 0,
+    "circularity_penalty": 0,
+    "construct_confusion_penalty": 0,
+    "theory_preservation_penalty": 0
+  },
+  "score_status": {
+    "kind": "scoped_module",
+    "evaluation": "evaluations/protocol-tests/uptake-operator-boundary-2026-06-08.json",
+    "scope": "Boundary module for clause type, uptake role, interjection-like forms, repertoire closedness, token innovability, stance, repair, and attribution; not a general grammaticality account."
+  }
+}

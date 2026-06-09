@@ -1,0 +1,323 @@
+{
+  "id": "context-indexed-task-separated-feedback-2026-06-08",
+  "target_graph": "graphs/archive/context-indexed-task-separated-feedback-candidate.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "protocol-bound",
+  "score_decision": "no-score-change",
+  "activated_paths": [
+    {
+      "id": "production-setting-to-usage",
+      "phenomenon": "case-in-coordination-cgel",
+      "contrast_cell": "informal-production",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Unmonitored production settings can raise or lower production probability depending on community and medium, and production then contributes to later usage evidence.",
+      "edges": [
+        {
+          "source": "production_task_setting_t1",
+          "target": "production_probability_t1",
+          "type": "causal"
+        },
+        {
+          "source": "production_probability_t1",
+          "target": "usage_frequency_t2",
+          "type": "time_lagged"
+        }
+      ]
+    },
+    {
+      "id": "schooling-correction-to-attribution",
+      "phenomenon": "case-in-coordination-cgel",
+      "contrast_cell": "formal-correction",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Schooling exposure can route through standard ideology, condemnation, correction, and attribution without becoming community licensing.",
+      "edges": [
+        {
+          "source": "schooling_instructional_exposure_t1",
+          "target": "standard_language_ideology_t1",
+          "type": "causal"
+        },
+        {
+          "source": "standard_language_ideology_t1",
+          "target": "metalinguistic_condemnation_t1",
+          "type": "causal"
+        },
+        {
+          "source": "metalinguistic_condemnation_t1",
+          "target": "editorial_correction_probability_t1",
+          "type": "causal"
+        },
+        {
+          "source": "editorial_correction_probability_t1",
+          "target": "grammaticality_attribution_t1",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "judgment-setting-to-attribution",
+      "phenomenon": "case-in-coordination-cgel",
+      "contrast_cell": "formal-correction",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Judgment task setting can cue task framing and shift grammaticality attribution without directly altering production probability.",
+      "edges": [
+        {
+          "source": "judgment_task_setting_t1",
+          "target": "task_framing_t1",
+          "type": "causal"
+        },
+        {
+          "source": "task_framing_t1",
+          "target": "grammaticality_attribution_t1",
+          "type": "causal"
+        }
+      ]
+    },
+    {
+      "id": "correction-to-later-production",
+      "phenomenon": "between-you-and-I",
+      "contrast_cell": "school-correctness-judgment",
+      "expected_path_reading": "negative",
+      "prediction": "Editorial or pedagogical correction pressure should decrease later production probability in monitored settings.",
+      "edges": [
+        {
+          "source": "editorial_correction_probability_t1",
+          "target": "production_probability_t2",
+          "type": "time_lagged"
+        }
+      ]
+    },
+    {
+      "id": "judgment-setting-to-acceptability",
+      "phenomenon": "between-you-and-I",
+      "contrast_cell": "school-correctness-judgment",
+      "expected_path_reading": "indeterminate",
+      "prediction": "A school-correctness judgment setting can change reported acceptability independently of unmonitored production.",
+      "edges": [
+        {
+          "source": "judgment_task_setting_t1",
+          "target": "reported_acceptability_t1",
+          "type": "causal"
+        },
+        {
+          "source": "reported_acceptability_t1",
+          "target": "grammaticality_attribution_t1",
+          "type": "evidential"
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "phenomenon": "case-in-coordination-cgel",
+      "result": "survives_as_module",
+      "expected_survival_pattern": "Unmonitored production should be represented through production task setting and production probability; correctness-framed judgment should be represented through judgment task setting, task framing, standard ideology, correction, and attribution. Neither route should collapse into community licensing.",
+      "notes": "Survives as a module for production/judgment divergence. The graph still does not model case licensing itself; it models the measurement and correction channels around case-in-coordination judgments.",
+      "requirements": {
+        "required_nodes": [
+          "production_task_setting_t1",
+          "judgment_task_setting_t1",
+          "schooling_instructional_exposure_t1",
+          "production_probability_t1",
+          "reported_acceptability_t1",
+          "grammaticality_attribution_t1",
+          "community_licensing_t1"
+        ],
+        "required_edges": [
+          {
+            "source": "production_task_setting_t1",
+            "target": "production_probability_t1",
+            "type": "causal"
+          },
+          {
+            "source": "judgment_task_setting_t1",
+            "target": "task_framing_t1",
+            "type": "causal"
+          },
+          {
+            "source": "task_framing_t1",
+            "target": "grammaticality_attribution_t1",
+            "type": "causal"
+          },
+          {
+            "source": "schooling_instructional_exposure_t1",
+            "target": "standard_language_ideology_t1",
+            "type": "causal"
+          },
+          {
+            "source": "standard_language_ideology_t1",
+            "target": "metalinguistic_condemnation_t1",
+            "type": "causal"
+          },
+          {
+            "source": "metalinguistic_condemnation_t1",
+            "target": "editorial_correction_probability_t1",
+            "type": "causal"
+          },
+          {
+            "source": "editorial_correction_probability_t1",
+            "target": "grammaticality_attribution_t1",
+            "type": "evidential"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "standard_language_ideology_t1",
+            "target": "community_licensing_t1",
+            "type": "causal"
+          },
+          {
+            "source": "production_task_setting_t1",
+            "target": "grammaticality_attribution_t1",
+            "type": "causal"
+          },
+          {
+            "source": "judgment_task_setting_t1",
+            "target": "production_probability_t1",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "informal-production",
+          "axes": {
+            "community": "English speakers producing coordinated pronouns outside explicit correction.",
+            "norm_centre": "Local conversational norm centre.",
+            "genre": "Informal conversation or messaging.",
+            "medium": "Speech or informal digital writing.",
+            "task_framing": "No explicit correctness framing.",
+            "speaker_identity": "Ordinary speaker cue."
+          }
+        },
+        {
+          "id": "formal-correction",
+          "axes": {
+            "community": "School or editing judgment context.",
+            "norm_centre": "Instructional or editorial norm centre.",
+            "genre": "Grammar test, editing task, or usage discussion.",
+            "medium": "Written example.",
+            "task_framing": "Correctness and case-rule framing.",
+            "speaker_identity": "Student, editor, or standard-writer cue."
+          }
+        }
+      ]
+    },
+    {
+      "phenomenon": "between-you-and-I",
+      "result": "survives_as_module",
+      "expected_survival_pattern": "Unmonitored production, school-correctness judgment, and later monitored production should be separable. Correction pressure may suppress later monitored production without proving lack of community licensing.",
+      "notes": "Survives as the same production/judgment divergence module. This does not decide whether the form is licensed in any community; it keeps production, correction, and attribution from collapsing.",
+      "requirements": {
+        "required_nodes": [
+          "production_task_setting_t1",
+          "judgment_task_setting_t1",
+          "editorial_correction_probability_t1",
+          "production_probability_t2",
+          "reported_acceptability_t1",
+          "grammaticality_attribution_t1"
+        ],
+        "required_edges": [
+          {
+            "source": "editorial_correction_probability_t1",
+            "target": "production_probability_t2",
+            "type": "time_lagged"
+          },
+          {
+            "source": "judgment_task_setting_t1",
+            "target": "reported_acceptability_t1",
+            "type": "causal"
+          },
+          {
+            "source": "reported_acceptability_t1",
+            "target": "grammaticality_attribution_t1",
+            "type": "evidential"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "reported_acceptability_t1",
+            "target": "production_probability_t1",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "unmonitored-production",
+          "axes": {
+            "community": "Speakers producing the form outside explicit correction.",
+            "norm_centre": "Local or conversational norm centre.",
+            "genre": "Conversation or informal writing.",
+            "medium": "Speech or messaging.",
+            "task_framing": "No explicit correctness framing.",
+            "speaker_identity": "Ordinary speaker cue."
+          }
+        },
+        {
+          "id": "school-correctness-judgment",
+          "axes": {
+            "community": "School or editing judgment context.",
+            "norm_centre": "Instructional grammar norm centre.",
+            "genre": "Grammar test, editing task, or usage discussion.",
+            "medium": "Written test or edited prose.",
+            "task_framing": "Correctness framing.",
+            "speaker_identity": "Student, editor, or standard-writer cue."
+          }
+        }
+      ]
+    },
+    {
+      "phenomenon": "pronoun-personhood-proform-gender",
+      "result": "partly_survives",
+      "expected_survival_pattern": "The graph should separate production and judgment settings, but it should still remain incomplete for pronoun/reference cases because it lacks explicit audience-design and reference-tracking constructs.",
+      "notes": "Useful partial survival. This mutation adds task separation but does not solve the audience/reference pressure point.",
+      "requirements": {
+        "required_nodes": [
+          "judgment_task_setting_t1",
+          "speaker_identity_t1",
+          "social_indexical_value_t1",
+          "reported_acceptability_t1"
+        ],
+        "required_edges": [
+          {
+            "source": "speaker_identity_t1",
+            "target": "social_indexical_value_t1",
+            "type": "causal"
+          },
+          {
+            "source": "social_indexical_value_t1",
+            "target": "reported_acceptability_t1",
+            "type": "causal"
+          }
+        ],
+        "forbidden_nodes": [
+          "audience_design_t1"
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "low-stakes-reference",
+          "axes": {
+            "community": "English speakers resolving ordinary pronoun reference.",
+            "norm_centre": "Descriptive usage norm centre.",
+            "genre": "Controlled reference task.",
+            "medium": "Written or spoken example.",
+            "task_framing": "Reference resolution and acceptability separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "policy-or-identity-framing",
+          "axes": {
+            "community": "English speakers judging pronoun use under social or institutional framing.",
+            "norm_centre": "Institutional, community-local, or ideological norm centre.",
+            "genre": "Policy, workplace, classroom, or public-discourse context.",
+            "medium": "Written guidance, survey item, or spoken interaction.",
+            "task_framing": "Correctness, respect, identity, or policy framing.",
+            "speaker_identity": "Speaker or referent identity explicitly cued."
+          }
+        }
+      ]
+    }
+  ]
+}

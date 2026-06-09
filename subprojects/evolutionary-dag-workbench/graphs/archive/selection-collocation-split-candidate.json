@@ -1,0 +1,199 @@
+{
+  "id": "selection-collocation-split-candidate",
+  "title": "Selection and collocation split candidate",
+  "family": "selection-collocation-split",
+  "status": "candidate",
+  "edge_semantics_level": "profiled",
+  "notes": "Ninth-round mutation generated from the preposition category/selection pressure. It separates payload preposition choice, collocational rigidity, and argument-linking selection so fixed prepositions are not automatically operator values. It is a scoped module for preposition and complement-selection boundary cases, not a general account.",
+  "conditioning_axes": {
+    "community": "Specify the speech or judgment community before interpreting selection, licensing, repair, or attestation.",
+    "genre": "Specify genre or constructional context before interpreting PP choice, collocation, or repair.",
+    "medium": "Specify whether evidence comes from speech, edited prose, elicited written examples, corpus text, or another medium.",
+    "task_framing": "Specify whether the task asks for paraphrase availability, acceptability, grammaticality, category assignment, or repair."
+  },
+  "nodes": [
+    "payload_preposition_choice",
+    "collocational_rigidity",
+    "argument_linking_selection",
+    "constructional_function",
+    "constructional_analogy",
+    "operator_value",
+    "competitor_availability",
+    "opportunity_mass",
+    "usage_frequency",
+    "opportunity_normalized_attestation",
+    "preemption_strength",
+    "community_licensing",
+    "repair_reformulation_pressure",
+    "reported_acceptability",
+    "grammaticality_attribution",
+    "genre",
+    "medium",
+    "register_genre_appropriateness",
+    "task_framing"
+  ],
+  "edges": [
+    {
+      "source": "argument_linking_selection",
+      "target": "operator_value",
+      "type": "constitutive",
+      "relation_profile": "partial_component",
+      "rationale": "Argument-linking selection can be part of the operator-like configuration for head-selected or grammaticized preposition patterns."
+    },
+    {
+      "source": "constructional_function",
+      "target": "argument_linking_selection",
+      "type": "evidential",
+      "relation_profile": "evidential_warrant",
+      "rationale": "A complement or argument-linking function is warrant that a preposition choice belongs to a selected constructional repertoire."
+    },
+    {
+      "source": "constructional_analogy",
+      "target": "argument_linking_selection",
+      "type": "evidential",
+      "relation_profile": "contextual_warrant",
+      "rationale": "Analogous constructions can support an argument-linking analysis, but the force depends on constructional context."
+    },
+    {
+      "source": "operator_value",
+      "target": "community_licensing",
+      "type": "constitutive",
+      "relation_profile": "necessary_component",
+      "rationale": "For scoped selection cases, a compatible operator value is required for licensing but does not by itself settle licensing."
+    },
+    {
+      "source": "payload_preposition_choice",
+      "target": "reported_acceptability",
+      "type": "causal",
+      "relation_profile": "mixed_contextual",
+      "rationale": "Open payload preposition choices can affect acceptability through content, fit, or construal without becoming licensing failures."
+    },
+    {
+      "source": "collocational_rigidity",
+      "target": "reported_acceptability",
+      "type": "causal",
+      "relation_profile": "mixed_contextual",
+      "rationale": "Fixed lexical co-occurrence can affect acceptability or naturalness without itself being operator value."
+    },
+    {
+      "source": "collocational_rigidity",
+      "target": "preemption_strength",
+      "type": "evidential",
+      "relation_profile": "contextual_warrant",
+      "rationale": "Collocational fixedness can be contextual warrant for preemption when competitors occupy the same lexical slot, but it is not automatically argument-linking selection."
+    },
+    {
+      "source": "competitor_availability",
+      "target": "preemption_strength",
+      "type": "constitutive",
+      "relation_profile": "partial_component",
+      "rationale": "Available competitors are part of what makes absence or rarity count as preemption rather than mere low opportunity."
+    },
+    {
+      "source": "opportunity_mass",
+      "target": "preemption_strength",
+      "type": "constitutive",
+      "relation_profile": "partial_component",
+      "rationale": "Opportunity mass is part of what makes a missing or rare selected form probative."
+    },
+    {
+      "source": "usage_frequency",
+      "target": "opportunity_normalized_attestation",
+      "type": "constitutive",
+      "relation_profile": "partial_component",
+      "rationale": "Observed frequency is the numerator for opportunity-normalized attestation."
+    },
+    {
+      "source": "opportunity_mass",
+      "target": "opportunity_normalized_attestation",
+      "type": "constitutive",
+      "relation_profile": "partial_component",
+      "rationale": "Opportunity mass is the denominator for interpreting attestation."
+    },
+    {
+      "source": "opportunity_normalized_attestation",
+      "target": "community_licensing",
+      "type": "evidential",
+      "relation_profile": "evidential_warrant",
+      "rationale": "Opportunity-normalized attestation is warrant for licensing in the specified community and constructional context."
+    },
+    {
+      "source": "preemption_strength",
+      "target": "community_licensing",
+      "type": "evidential",
+      "relation_profile": "evidential_undercut",
+      "rationale": "Strong preemption weakens warrant for licensing in the specified opportunity and competitor context."
+    },
+    {
+      "source": "community_licensing",
+      "target": "repair_reformulation_pressure",
+      "type": "causal",
+      "relation_profile": "negative_monotone",
+      "rationale": "Lower community licensing predicts greater repair or reformulation pressure in the selected constructional context."
+    },
+    {
+      "source": "repair_reformulation_pressure",
+      "target": "grammaticality_attribution",
+      "type": "evidential",
+      "relation_profile": "contextual_warrant",
+      "rationale": "Repair pressure is contextual evidence for licensing trouble, not the target itself."
+    },
+    {
+      "source": "community_licensing",
+      "target": "grammaticality_attribution",
+      "type": "evidential",
+      "relation_profile": "contextual_warrant",
+      "rationale": "Community licensing is contextual warrant for grammaticality attribution."
+    },
+    {
+      "source": "reported_acceptability",
+      "target": "grammaticality_attribution",
+      "type": "evidential",
+      "relation_profile": "contextual_warrant",
+      "rationale": "Acceptability reports provide contextual evidence for attribution without defining grammatical status."
+    },
+    {
+      "source": "genre",
+      "target": "register_genre_appropriateness",
+      "type": "causal",
+      "relation_profile": "mixed_contextual",
+      "rationale": "Genre conditions whether a PP choice, selected complement, or repair is appropriate in context."
+    },
+    {
+      "source": "medium",
+      "target": "register_genre_appropriateness",
+      "type": "causal",
+      "relation_profile": "mixed_contextual",
+      "rationale": "Medium affects how preposition choices, examples, and repairs are interpreted."
+    },
+    {
+      "source": "register_genre_appropriateness",
+      "target": "reported_acceptability",
+      "type": "causal",
+      "relation_profile": "positive_monotone",
+      "rationale": "Higher register or genre fit tends to increase reported acceptability in situated judgment tasks."
+    },
+    {
+      "source": "task_framing",
+      "target": "reported_acceptability",
+      "type": "causal",
+      "relation_profile": "mixed_contextual",
+      "rationale": "Task framing can foreground paraphrase availability, category assignment, naturalness, or grammaticality."
+    }
+  ],
+  "scores": {
+    "empirical_coverage": 0,
+    "projective_power": 0,
+    "counterexample_resilience": 0,
+    "measurement_clarity": 0,
+    "explanatory_payoff": 0,
+    "cross_domain_stability": 0,
+    "complexity_penalty": 0,
+    "circularity_penalty": 0,
+    "construct_confusion_penalty": 0,
+    "theory_preservation_penalty": 0
+  },
+  "score_status": {
+    "kind": "unscored"
+  }
+}

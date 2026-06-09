@@ -12,10 +12,16 @@ representations about grammaticality. The existing OVMG, detector, operator-stra
 processing-based, and normativity-based models are treated as seed graph families, not as
 conclusions or targets to vindicate.
 
-Five adversarial passes and one synthesis pass have been run. All numeric scores remain zero. Two
-current modules have `scoped_module` labels tied to protocol-bound evaluations. Two held-out CGEL
-evaluations now probe those modules without authorizing score movement. No graph has a
-`general_account` score. The current scoring schema includes `projective_power` and
+Eleven adversarial passes/synthesis steps have been run. All numeric scores remain zero. Four
+current modules have `scoped_module` labels tied to protocol-bound evaluations. The original
+scope-only evaluations now include card-level requirements and activated paths. Both held-out CGEL
+evaluations also include card-level requirements and activated paths without authorizing score
+movement. The agreement and center-embedding cards have now been converted into protocol-bound
+evaluations against the operator-gap, dynamic/context, and task-separated modules. Their repeated
+processing/naturalness gap justified a scoped `processing-naturalness-perturbation-candidate`.
+The clause-type/interjection pair has now exposed a distinct uptake/operator boundary gap, which
+justified a scoped `uptake-operator-boundary-candidate`.
+No graph has a `general_account` score. The current scoring schema includes `projective_power` and
 `theory_preservation_penalty` so held-out prediction and anti-alignment discipline are visible.
 
 ## Current Candidate Stack
@@ -27,19 +33,43 @@ evaluations now probe those modules without authorizing score movement. No graph
 - `context-indexed-dynamic-feedback-candidate`
 - `context-aware-operator-gap-candidate`
 - `category-measurement-discipline-candidate`
+- `context-indexed-task-separated-feedback-candidate`
+- `audience-reference-tracking-candidate`
+- `selection-collocation-split-candidate`
+- `processing-naturalness-perturbation-candidate`
+- `uptake-operator-boundary-candidate`
 
 The current strongest modules are scoped, not general winners:
 
 - `context-indexed-dynamic-feedback-candidate` for diachronic/context-conditioned licensing,
-  production, ideology, correction, and judgment.
+  production, ideology, correction, and judgment. This graph is now profiled only on activated
+  evaluation paths.
 - `context-aware-operator-gap-candidate` for operator-gap, opportunity, recoverability, analogy, and
-  repair-pressure cases. This is the first profiled graph and uses derived evidential constructs for
-  opportunity-normalized attestation and preemption strength.
+  repair-pressure cases. This graph uses derived evidential constructs for opportunity-normalized
+  attestation and preemption strength.
 - `category-measurement-discipline-candidate` for category-analysis and measurement-task
   divergence. It is unscored and has no scoped-module label.
+- `context-indexed-task-separated-feedback-candidate` for separating unmonitored or elicited
+  production settings from correctness-framed judgment settings. It is unscored and has no
+  scoped-module label.
+- `audience-reference-tracking-candidate` for pronoun/pro-form reference tracking, personhood
+  ascription, audience design, and social-indexical judgment channels. It is unscored and has no
+  scoped-module label.
+- `selection-collocation-split-candidate` for distinguishing payload preposition choice,
+  collocational rigidity, and argument-linking selection. It is unscored and has no scoped-module
+  label.
+- `processing-naturalness-perturbation-candidate` for processing cost, recoverability, felt
+  naturalness, measurement-task effects, reported acceptability, and attribution perturbations. It
+  is a scoped module, not a licensing account.
+- `uptake-operator-boundary-candidate` for update-role configuration, repertoire closedness, token
+  innovability, operator-repertoire membership, stance, genre fit, repair, and attribution. It is a
+  scoped module for clause-type/interjection boundaries, not a general operator-gap account.
 
-Both have protocol-bound `scope-only` evaluations and `scoped_module` labels. Neither has earned a
-non-zero numeric score or a `general_account` score.
+`context-indexed-dynamic-feedback-candidate`, `context-aware-operator-gap-candidate`, and
+`processing-naturalness-perturbation-candidate`, and `uptake-operator-boundary-candidate` currently
+have protocol-bound `scope-only` evaluations and `scoped_module` labels. No graph has earned a
+non-zero numeric score or a
+`general_account` label.
 
 ## Live Boundary Rule
 
@@ -65,8 +95,16 @@ construct separation, or held-out projectibility, not by fitting a prior paper.
 - CGEL/local correction source registry in `notes/cgel-source-registry.md`
 - conditioning protocol in `notes/conditioning-operationalization-protocol-2026-06-07.md`
 - scoped scoring policy in `notes/scoped-scoring-policy-2026-06-07.md`
+- task-separated feedback synthesis in `notes/seventh-adversarial-pass-synthesis-2026-06-08.md`
+- audience/reference-tracking synthesis in `notes/eighth-adversarial-pass-synthesis-2026-06-08.md`
+- selection/collocation synthesis in `notes/ninth-adversarial-pass-synthesis-2026-06-08.md`
+- processing/naturalness synthesis in `notes/tenth-adversarial-pass-synthesis-2026-06-08.md`
+- uptake/operator boundary synthesis in `notes/eleventh-adversarial-pass-synthesis-2026-06-08.md`
+- coverage/discriminator matrix in `notes/coverage-discriminator-matrix-2026-06-08.md`
 - protocol-bound evaluation schema and exploratory evaluations in `evaluations/`
 - held-out CGEL/local-correction evaluations in `evaluations/protocol-tests/`
+- agreement, center-embedding, and uptake-boundary protocol-bound evaluations in
+  `evaluations/protocol-tests/`
 - positive and negative validator fixtures in `tests/fixtures/`
 
 ## Current Tooling Gates
@@ -102,6 +140,8 @@ The linter now checks:
 - required evaluation references for scoped/general labels;
 - evaluation references whose `target_graph` matches the labelled graph;
 - scoped/general labels only when the referenced evaluation authorizes scope recognition;
+- `general_account` labels only when the referenced evaluation is held-out and proposes score
+  movement;
 - non-zero scores only when the referenced evaluation authorizes score movement;
 - held-out evaluation references resolve `held_out_from` items to cards or evaluations;
 - non-zero scores only on graphs with `edge_semantics_level: profiled`;
@@ -126,6 +166,7 @@ The evaluation validator checks:
 - held-out evaluations include non-empty `held_out_from` provenance resolved to cards or
   evaluations.
 - activated paths, when present, resolve to target-graph edges and continue as directed paths.
+- `score-change-proposed` evaluations target graphs whose `edge_semantics_level` is `profiled`.
 - `score-change-proposed` evaluations include activated paths whose edges have relation profiles.
 - activated paths with `expected_path_reading` match the path reading computed from relation
   profiles; score-change paths require an expected reading.
@@ -136,15 +177,15 @@ validation.
 ## Next Actions
 
 1. Enrich the source-backed cards with concrete contrast-cell examples and data pointers.
-2. Start the next graph mutation from a held-out card failure or discriminator, not from a named
-   theory family.
-3. Add a processing-specific context module or keep processing as a perturbation layer only.
-4. Profile `context-indexed-dynamic-feedback-candidate` only after deciding which dynamic paths are
-   prediction commitments.
-5. Use activated-path readings to define explicit pass/fail predictions for held-out contrast cells.
-6. Calibrate scoped-module score magnitudes after at least one held-out or parameterized evaluation
+2. Convert `frequent-condemned-form` into protocol-bound evaluations against `DYN`, `TASK`, and
+   `CAT` before adding another graph.
+3. Use that evaluation to decide whether correction/production/attribution divergence is already
+   covered by `DYN` and `TASK`, or whether a condemnation-specific module is warranted.
+4. Convert activated-path readings into explicit pass/fail predictions for held-out contrast
+   cells.
+5. Calibrate scoped-module score magnitudes after at least one held-out or parameterized evaluation
    pass.
-7. Expand `phenomena/cards/` toward 40-100 cards only after the current representation classes stop
+6. Expand `phenomena/cards/` toward 40-100 cards only after the current representation classes stop
    shifting every pass.
-8. Only after the construct inventory stabilizes, consider whether `pgmpy`, NOTEARS-style methods,
+7. Only after the construct inventory stabilizes, consider whether `pgmpy`, NOTEARS-style methods,
    or empirical causal discovery are useful.

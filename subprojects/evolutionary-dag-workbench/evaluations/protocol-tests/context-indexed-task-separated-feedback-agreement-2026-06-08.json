@@ -1,0 +1,194 @@
+{
+  "id": "context-indexed-task-separated-feedback-agreement-2026-06-08",
+  "target_graph": "graphs/archive/context-indexed-task-separated-feedback-candidate.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "protocol-bound",
+  "score_decision": "no-score-change",
+  "activated_paths": [
+    {
+      "id": "judgment-setting-to-acceptability",
+      "phenomenon": "subject-verb-agreement-cgel",
+      "contrast_cell": "correctness-rereading",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Judgment setting can shift reported acceptability and attribution in a correctness frame without changing production probability.",
+      "edges": [
+        {
+          "source": "judgment_task_setting_t1",
+          "target": "reported_acceptability_t1",
+          "type": "causal"
+        },
+        {
+          "source": "reported_acceptability_t1",
+          "target": "grammaticality_attribution_t1",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "community-to-biased-acceptability",
+      "phenomenon": "subject-verb-agreement-cgel",
+      "contrast_cell": "notional-collective",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Community licensing can be measured through reported acceptability, but the indicator remains task-biased.",
+      "edges": [
+        {
+          "source": "community_licensing_t1",
+          "target": "reported_acceptability_t1",
+          "type": "measurement"
+        }
+      ]
+    },
+    {
+      "id": "attraction-task-channel-only",
+      "phenomenon": "agreement-attraction",
+      "contrast_cell": "first-pass-attraction",
+      "expected_path_reading": "indeterminate",
+      "prediction": "The graph can encode the judgment-channel perturbation but not the attraction mechanism that causes it.",
+      "edges": [
+        {
+          "source": "judgment_task_setting_t1",
+          "target": "task_framing_t1",
+          "type": "causal"
+        },
+        {
+          "source": "task_framing_t1",
+          "target": "reported_acceptability_t1",
+          "type": "causal"
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "phenomenon": "subject-verb-agreement-cgel",
+      "result": "partly_survives",
+      "expected_survival_pattern": "The graph separates production setting, judgment setting, task framing, reported acceptability, attribution, and community licensing. It does not model agreement feature alignment or operator value.",
+      "notes": "Partly survives for task and measurement discipline. It is useful when agreement judgments diverge across first-pass, reread, correctness, naturalness, production, or editing settings.",
+      "requirements": {
+        "required_nodes": [
+          "production_task_setting_t1",
+          "judgment_task_setting_t1",
+          "community_licensing_t1",
+          "reported_acceptability_t1",
+          "grammaticality_attribution_t1",
+          "task_framing_t1"
+        ],
+        "required_edges": [
+          {
+            "source": "judgment_task_setting_t1",
+            "target": "reported_acceptability_t1",
+            "type": "causal"
+          },
+          {
+            "source": "judgment_task_setting_t1",
+            "target": "task_framing_t1",
+            "type": "causal"
+          },
+          {
+            "source": "task_framing_t1",
+            "target": "reported_acceptability_t1",
+            "type": "causal"
+          },
+          {
+            "source": "reported_acceptability_t1",
+            "target": "grammaticality_attribution_t1",
+            "type": "evidential"
+          },
+          {
+            "source": "community_licensing_t1",
+            "target": "reported_acceptability_t1",
+            "type": "measurement"
+          }
+        ],
+        "forbidden_nodes": [
+          "operator_value_t1",
+          "processing_cost_t1"
+        ],
+        "forbidden_edges": [
+          {
+            "source": "judgment_task_setting_t1",
+            "target": "production_probability_t1",
+            "type": "causal"
+          },
+          {
+            "source": "reported_acceptability_t1",
+            "target": "community_licensing_t1",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "notional-collective",
+          "axes": {
+            "community": "English speakers in a variety or register allowing notional agreement in some collective contexts.",
+            "norm_centre": "Local descriptive norm rather than simplified school rule.",
+            "genre": "Sentence judgment with collective-noun context.",
+            "medium": "Written example.",
+            "task_framing": "Acceptability and attribution separated.",
+            "speaker_identity": "Variety-neutral speaker cue."
+          }
+        },
+        {
+          "id": "correctness-rereading",
+          "axes": {
+            "community": "School or editing judgment context.",
+            "norm_centre": "Standard agreement rule.",
+            "genre": "Grammar test or editing task.",
+            "medium": "Written example.",
+            "task_framing": "Correctness-framed rereading.",
+            "speaker_identity": "Student, editor, or standard-writer cue."
+          }
+        }
+      ]
+    },
+    {
+      "phenomenon": "agreement-attraction",
+      "result": "fails_general_out_of_scope",
+      "expected_survival_pattern": "Agreement attraction should require processing-cost or retrieval structure; task-setting separation alone is insufficient.",
+      "notes": "Fails as a general attraction account. The graph is useful only for separating judgment-channel effects from production and attribution.",
+      "requirements": {
+        "required_nodes": [
+          "judgment_task_setting_t1",
+          "task_framing_t1",
+          "reported_acceptability_t1",
+          "grammaticality_attribution_t1"
+        ],
+        "forbidden_nodes": [
+          "processing_cost_t1"
+        ],
+        "forbidden_edges": [
+          {
+            "source": "reported_acceptability_t1",
+            "target": "community_licensing_t1",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "first-pass-attraction",
+          "axes": {
+            "community": "English speakers in a timed judgment task.",
+            "norm_centre": "Descriptive agreement norm centre.",
+            "genre": "Psycholinguistic judgment item.",
+            "medium": "Written or rapid serial visual presentation.",
+            "task_framing": "First-pass acceptability under attraction.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "reread-structural-correction",
+          "axes": {
+            "community": "English speakers after rereading the same item.",
+            "norm_centre": "Descriptive agreement norm centre.",
+            "genre": "Psycholinguistic judgment item with rereading.",
+            "medium": "Written example.",
+            "task_framing": "Explicit grammaticality attribution after rereading.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    }
+  ]
+}
