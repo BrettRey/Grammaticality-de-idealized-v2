@@ -180,6 +180,12 @@ flowers/things` with `are/were/is/was`, raw counts were sparse and KWIC-filtered
 1 plural row versus 1 singular row. This differs sharply from the animate tranche and supports
 treating member construal/animacy as a real conditioning pressure, but the cell is too sparse for
 score movement or a stable inanimate-profile estimate.
+The first non-`bunch` `AGR` corpus tranche is recorded in
+`notes/agr-coca-majority-minority-kwic-filter-pass-2026-06-09.md`. Across `a/the majority of
+people` and `a minority of voters`, KWIC-filtered target counts were 105 plural-agreement rows and
+0 singular-agreement rows. The positive evidence comes from the `majority` cells; both registered
+`minority` cells returned zero raw rows. This supports cross-construction portability for the
+agreement-controller module, while still not authorizing score movement.
 An internal state-of-search report now summarizes the current scoped-module partition, evaluation
 ladder, the completed transparent-relative Lane A pass, and remaining empirical lanes without
 authorizing score movement.
@@ -440,9 +446,9 @@ validation.
 
 1. Run the audience/policy pronoun task or independent-relative-`whose` human judgment task if data
    collection is available.
-2. Extend the `AGR` COCA projection lane at the next margin by running
-   `majority-minority-confirmatory`; the `bunch` animate/inanimate contrast is now measured, so the
-   next pressure should test whether the agreement-controller module generalizes beyond `bunch`.
+2. Decide whether the `AGR` COCA lane now deserves a protocol-bound evaluation update, or first run
+   the planned calibration cells (`known-qn-calibration` / `partitive-calibration`) to anchor the
+   direct-query method against known number-transparent and partitive contrasts.
 3. After the first data-bearing projection lane, run an ablation pass over scoped modules: try to
    remove distinctive nodes from `FDL`/`UOB` and `OPG`/`DYN` before adding new graph families.
 4. Run one critic-verdict variance check by evaluating the same card/protocol several times and

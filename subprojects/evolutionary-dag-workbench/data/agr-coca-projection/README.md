@@ -14,6 +14,7 @@ This directory is reserved for a confirmatory COCA run testing the `AGR` module.
 - `summary.csv`: raw and filtered summaries as they accumulate.
 - `coded/bunch-animate-kwic-coding.csv`: row-level coding for the animate `bunch` tranche.
 - `coded/bunch-inanimate-kwic-coding.csv`: row-level coding for the inanimate `bunch` tranche.
+- `coded/majority-minority-kwic-coding.csv`: row-level coding for the majority/minority tranche.
 
 Future run artifacts should use:
 
@@ -51,6 +52,7 @@ Current completed tranche:
 
 - `bunch-animate-confirmatory`, list-result counts plus KWIC filtering via result-row clicks.
 - `bunch-inanimate-confirmatory`, list-result counts plus KWIC filtering via result-row clicks.
+- `majority-minority-confirmatory`, list-result counts plus KWIC filtering via result-row clicks.
 
 The filtered target counts for the animate tranche are 71 plural agreement rows and 1 singular
 agreement row across `a bunch of people/kids` with `are/were/is/was`. Five of six raw singular
@@ -60,6 +62,10 @@ The filtered target counts for the inanimate tranche are 1 plural agreement row 
 agreement row across `a bunch of flowers/things` with `are/were/is/was`. The inanimate cells are
 sparse rather than plural-dominant, which is useful as a contrast with the animate tranche but not
 by itself a general agreement result.
+
+The filtered target counts for the majority/minority tranche are 105 plural agreement rows and 0
+singular agreement rows across `a/the majority of people` and `a minority of voters`. The
+`minority` query pair returned zero raw rows; the positive evidence comes from `majority`.
 
 Do not treat raw COCA frequency as licensing. The lane measures production/attestation over
 opportunity sets and uses KWIC filtering to distinguish genuine agreement realizations from query

@@ -43,3 +43,8 @@ Append non-trivial structural, methodological, and scope decisions here.
   with the animate 71:1 profile. This supports member-construal/animacy as a conditioning pressure
   but should not be scored; the next `AGR` corpus step should test a different construction family
   such as `majority/minority`.
+- **Treat majority evidence as `AGR` portability pressure, not a score move.** The filtered
+  majority/minority tranche yielded 105 target plural rows and 0 target singular rows, with positive
+  evidence from `majority` and zero raw rows for the registered `minority` cells. This supports
+  `AGR` beyond `bunch`, but numeric projective credit should wait for a protocol-bound evaluation
+  update or calibration against known number-transparent/partitive contrasts.
