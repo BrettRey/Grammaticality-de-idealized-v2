@@ -194,6 +194,12 @@ inconclusive. Adding the evaluation exposed a missing production-output bridge i
 `agreement-controller-override-candidate` now includes a profiled `community_licensing ->
 production_probability` edge. This is a measurement/projection bridge only; it does not equate raw
 frequency with licensing and does not move scores.
+The known-QN calibration tranche is recorded in
+`notes/agr-coca-known-qn-calibration-2026-06-09.md`. It reproduces expected directions after KWIC
+filtering: `a number of people` yields 98 target plural rows, `a lot of money is` yields 42 target
+singular rows, and `a lot of money are` yields 0 licensed target plural rows after filtering. One
+counter-direction row is retained as denominator-only nonstandard/error evidence. This calibrates
+the COCA/KWIC measurement lane but does not add projective credit or move scores.
 An internal state-of-search report now summarizes the current scoped-module partition, evaluation
 ladder, the completed transparent-relative Lane A pass, and remaining empirical lanes without
 authorizing score movement.

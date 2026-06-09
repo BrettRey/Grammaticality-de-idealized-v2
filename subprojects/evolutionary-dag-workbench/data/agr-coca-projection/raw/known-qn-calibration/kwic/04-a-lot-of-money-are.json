@@ -1,0 +1,494 @@
+{
+  "query": "a lot of money are",
+  "corpus": "coca",
+  "retrieved_at": "2026-06-09T16:35:31.857Z",
+  "method": "list-result-click",
+  "list": {
+    "url": "https://www.english-corpora.org/coca/x2.asp",
+    "text": "ON CLICK: \t    \t     ( EN )\t \t   \t    \t    \t    \t    \t (?)   \t   AI:   CATEGORIZE  *\n\nHELP\t\t\t  ALL FORMS\n12\tFREQ\n1\t\t\t  A LOT OF MONEY ARE\t12\n\t0.762 seconds",
+    "tables": [
+      [
+        [
+          "SAVE LIST",
+          "NAME OF LIST",
+          "",
+          ""
+        ],
+        [
+          "Select entries below to add these to a \"customized word list\", and then later use this list as part of a search. For example, if you add 4 or 5 entries\nbelow to the list myList, then you could use this as part of a search, like large @myList. More information:"
+        ]
+      ],
+      [
+        [
+          "ON CLICK: \t    \t     ( EN )\t \t   \t    \t    \t    \t    \t (?)   \t   AI:   CATEGORIZE  *",
+          ""
+        ],
+        [
+          "Click on  below, and then click on any word in the highlighted entry, to see detailed information on the word.\nTo come back to this page, click on  on the \"word page\".\n [Close]"
+        ],
+        [
+          "Click on\nbelow to \"save\" this word or phrase. Then click on\nat the top of the corpus to access this list at any point in the future.\n\n [Close]"
+        ],
+        [
+          "By default, when you click on one of the words/phrases below, you will see the \"Keyword in Context\" view in the tab to the right.\nBut you can also now access \"external\" resources for any of the words/phrases that you see below. To do so, click on one of the types of resources above\n(e.g. images or translation) and then click on the word/phrase below.\nNote: To change the language for translation, click on the two letter code after\nTRANSLATE above. This code will be saved for future access to the corpus as well. If it shows [??], you haven't yet selected a language.\n\n  [Close]"
+        ]
+      ],
+      [
+        [
+          "ON CLICK:",
+          "",
+          "( EN )",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "(?)",
+          "AI:   CATEGORIZE  *"
+        ]
+      ],
+      [
+        [
+          "In addition to the frequency of a word or phrase, you can also now see the number of texts in which it occurs. This can help you to eliminate words and phrases that\noccur in just a few texts. To enable this feature, click on OPTIONS / SHOW # TEXTS in the search form (show me how).\nMore information"
+        ]
+      ],
+      [
+        [
+          "HELP",
+          "",
+          "",
+          "",
+          "ALL FORMS\n12",
+          "FREQ",
+          ""
+        ],
+        [
+          "1",
+          "",
+          "",
+          "",
+          "A LOT OF MONEY ARE",
+          "12",
+          ""
+        ]
+      ],
+      [
+        [
+          "",
+          "0.762 seconds"
+        ]
+      ]
+    ]
+  },
+  "kwic": {
+    "url": "https://www.english-corpora.org/coca/x3.asp?x2w=y&xx=1&w8=a&w9=lot&w10=of&w11=money&w12=are&r=",
+    "text": "(SHUFFLE)     \t ENTRIES: 10 TEXTS\n     LIMITS: NONE\nSORTING: YEAR , GENRE\n     +CONTEXT\t      \t   \t    \t  HELP     \t    AI: patterns\n1\t2012\tWEB\thotair.com\t  #among the housewives of S Tampa and a lot of money are being raised. Sure, it comes with a lot of spicy stories\n2\t2012\tBLOG\teschatonblog.com\t  # 3238841 TOEFL:only people who earn a lot of money are successful? # Do you agree or disagree with the following statement?\n3\t2012\tBLOG\tessayforum.com\t  #following statement? Only people who earn a lot of money are successful. Use specific reasons and examples to support your answer. #\n4\t2012\tBLOG\tessayforum.com\t  #think that the person who are earn a lot of money are successful because they can buy whatever they want. I think we are\n5\t2012\tBLOG\tessayforum.com\t  #people think that the people who earn a lot of money are successful because they can buy whatever they want. # to earn --->\n6\t2006\tNEWS\tSanFranChron\t  #I think parents who don't have a lot of money are entitled to have their children use safe content on the Internet the same\n7\t2003\tNEWS\tChicago\t  #office. Making movies that consistently make a lot of money are the biggest help to a career. \" # Irons has also starred\n8\t2002\tSPOK\tCNN_CapGang\t  #said, he said people who make a lot of money are rewarded, rewarded with it. That's, that's the kind\n9\t2000\tNEWS\tDenver\t  #. The people who want to spend a lot of money aren't going to Crossroads. They're going to Park Meadows and Cherry\n10\t1999\tTV\tFamily Guy\t  #a shining example of how people with a lot of money are just plain better than everyone else. Lois, you were always my\n11\t1998\tSPOK\tNPR_TalkNation\t  #really public interest -- people who have a lot of money are getting our people in government to do what they want and not necessarily\n12\t1995\tMAG\tChristToday\t  #to come to the States and make a lot of money are gone. If you want to come to the States, you now",
+    "tables": [
+      [
+        [
+          "(SHUFFLE)",
+          "ENTRIES: 10 TEXTS\n     LIMITS: NONE\nSORTING: YEAR , GENRE"
+        ]
+      ],
+      [
+        [
+          "",
+          "SORT",
+          "LIMIT",
+          "Examples / notes"
+        ],
+        [
+          "Genre",
+          "--",
+          "-----\n\n\t\t\tSpoken\n\t\t\tFiction\n\t\t\tMagazine\n\t\t\tNewspaper\n\t\t\tAcademic\n\t\t\tWeb\n\t\t\tBlog\n\t\t\tTV/Movies\n-----\n\nSPOK:ABC\n\nSPOK:NBC\n\nSPOK:CBS\n\nSPOK:CNN\n\nSPOK:FOX\n\nSPOK:MSNBC\n\nSPOK:PBS\n\nSPOK:NPR\n\nSPOK:Indep\n\nFIC:Gen (Book)\n\nFIC:Gen (Jrnl)\n\nFIC:SciFi/Fant\n\nFIC:Juvenile\n\nFIC:Movies\n\nFIC:Fan Fiction\n\nMAG:News/Opin\n\nMAG:Financial\n\nMAG:Sci/Tech\n\nMAG:Soc/Arts\n\nMAG:Religion\n\nMAG:Sports\n\nMAG:Entertain\n\nMAG:Home/Health\n\nMAG:Afric-Amer\n\nMAG:Children\n\nMAG:Women/Men\n\nNEWS:Misc\n\nNEWS:News_Intl\n\nNEWS:News_Natl\n\nNEWS:News_Local\n\nNEWS:Money\n\nNEWS:Life\n\nNEWS:Sports\n\nNEWS:Editorial\n\nACAD:History\n\nACAD:Education\n\nACAD:Geog/SocSci\n\nACAD:Law/PolSci\n\nACAD:Humanities\n\nACAD:Phil/Rel\n\nACAD:Sci/Tech\n\nACAD:Medicine\n\nACAD:Misc\n\nACAD:Business\n\nWeb:Acad\n\nWeb:Arg\n\nWeb:Fic\n\nWeb:Info\n\nWeb:Instr\n\nWeb:Legal\n\nWeb:News\n\nWeb:Pers\n\nWeb:Revw\n\nWeb:Misc\n\nBlog:Acad\n\nBlog:Arg\n\nBlog:Fic\n\nBlog:Info\n\nBlog:Instr\n\nBlog:Legal\n\nBlog:News\n\nBlog:Pers\n\nBlog:Prom\n\nBlog:Revw\n\nBlog:Misc\n\nMov:Action\n\nMov:Adult\n\nMov:Adv\n\nMov:Anim\n\nMov:Biog\n\nMov:Comedy\n\nMov:Crime\n\nMov:Docum\n\nMov:Drama\n\nMov:Fam\n\nMov:Fantasy\n\nMov:Horror\n\nMov:Music\n\nMov:Myst\n\nMov:Romance\n\nMov:Sci-Fi\n\nMov:Short\n\nMov:Thril\n\nMov:N/A\n\nTV:Action\n\nTV:Adv\n\nTV:Anim\n\nTV:Comedy\n\nTV:Crime\n\nTV:Docum\n\nTV:Drama\n\nTV:Game\n\nTV:Horror\n\nTV:Reality\n\nTV:Sci-Fi\n\nTV:Misc"
+        ],
+        [
+          "Year",
+          "--",
+          "to",
+          "1992 to 1997"
+        ],
+        [
+          "Source",
+          "--",
+          "",
+          "New York Times or bbc.co.uk"
+        ]
+      ],
+      [
+        [
+          "Because both the node word and the collocate occur more than 400,000 times in the corpus, the entries below come from a smaller subset\nof the entire corpus, which represents about 5-10% of the complete corpus."
+        ]
+      ],
+      [
+        [
+          "+CONTEXT",
+          "Click on audio icon at translation site to hear text.",
+          "Translate to EN\n(Change and then reload this page)",
+          "Select entries below | ADD TO\n\n\t----------\n\na\n\nplace that\n\n NEW\n\n [?]\n  SEE LISTS\n\nEN:\n\nAfrikaans\nAlbanian\nAmharic\nArabic\nArmenian\nAzerbaijani\nBasque\nBelarusian\nBengali\nBosnian\nBulgarian\nBurmese\nCatalan\nCebuano\nChichewa\nChinese (S)\nChinese (T)\nCorsican\nCroatian\nCzech\nDanish\nDutch\nEnglish\nEsperanto\nEstonian\nFilipino\nFinnish\nFrench\nFrisian\nGalician\nGeorgian\nGerman\nGreek\nGujarati\nHaitian C\nHausa\nHawaiian\nHebrew\nHindi\nHmong\nHungarian\nIcelandic\nIgbo\nIndonesian\nIrish\nItalian\nJapanese\nJavanese\nKannada\nKazakh\nKhmer\nKorean\nKurdish\nKyrgyz\nLao\nLatin\nLatvian\nLithuanian\nLuxembourgish\nMacedonian\nMalagasy\nMalay\nMalayalam\nMaltese\nMaori\nMarathi\nMongolian\nNepali\nNorwegian\nPashto\nPersian\nPolish\nPortuguese\nPunjabi\nRomanian\nRussian\nSamoan\nScots Gaelic\nSerbian\nSesotho\nShona\nSindhi\nSinhala\nSlovak\nSlovenian\nSomali\nSpanish\nSundanese\nSwahili\nSwedish\nTajik\nTamil\nTelugu\nThai\nTurkish\nUkrainian\nUrdu\nUzbek\nVietnamese\nWelsh\nXhosa\nYiddish\nYoruba\nZulu\n\nALL\n\n<< Change language\n\n Select entries below |\nThen click button to analyze text; see word definitions; find related phrases",
+          "",
+          "COCA\niWeb",
+          "DIC:\n\nD\nM\nO\nC\nG\nE",
+          "",
+          "",
+          "",
+          "",
+          "HELP",
+          "AI: patterns"
+        ]
+      ],
+      [
+        [
+          "SINGLE ENTRY / LINE\n\n(CLOSE HELP)"
+        ],
+        [
+          "",
+          "Listen to the text (click on\n\t\t at the translation website)"
+        ],
+        [
+          "",
+          "Translate the text (after the first translation, you can change the language in the\n\t\tblue section above)"
+        ],
+        [
+          "",
+          "Select individual words, and then see info on words (see next\n\t\tsection). Click again to deselect."
+        ],
+        [
+          "SINGLE WORD (choose from words, after clicking\n\t\t on a given line).\n\t\t(See example)"
+        ],
+        [
+          "{ WORD }",
+          "Search for the word in the corpus (from main search page: list,\n\t\tchart, collocates, etc)"
+        ],
+        [
+          "WORD PAGE",
+          "(From COCA or iWeb) Collocates, related topics, related words,\n\t\tsynonyms, clusters, KWIC, and more"
+        ],
+        [
+          "DICTIONARY",
+          "Links to entries from several online dictionaries (Oxford,\n\t\tMerriam-Webster, etymology, etc)"
+        ],
+        [
+          "",
+          "Translation, web search, image search, video/pronunciation"
+        ],
+        [
+          "MULTIPLE ENTRIES (see links in gray above; click on text entries below to add\n\t\tto group)"
+        ],
+        [
+          "SAVE",
+          "",
+          "Save entries for later use. Can also move, delete, and\n\t\texpand entries. Categorize entries by clicking on A|B|C in entry."
+        ],
+        [
+          "TRANSLATE",
+          "",
+          "See translation for multiple lines, with original lines in English\n\t\tand their translations grouped together; you can choose from 100+ languages."
+        ],
+        [
+          "ANALYZE",
+          "",
+          "Create \"text\" composed of selected lines, and then see keywords,\n\t\tfind related phrases for words in the text, and see detailed \"word\"\n\t\tpages for any word in the \"text\"."
+        ]
+      ],
+      [
+        [
+          "Please consider supporting the corpora by getting an (individual)\npremium license or a (university-wide)\nacademic license.\nIf you have a license, you won't see these messages anymore."
+        ]
+      ],
+      [
+        [
+          "1",
+          "5036292",
+          "2012",
+          "WEB",
+          "hotair.com",
+          "#among the housewives of S Tampa and a lot of money are being raised. Sure, it comes with a lot of spicy stories"
+        ],
+        [
+          "2",
+          "5147440",
+          "2012",
+          "BLOG",
+          "eschatonblog.com",
+          "# 3238841 TOEFL:only people who earn a lot of money are successful? # Do you agree or disagree with the following statement?"
+        ],
+        [
+          "3",
+          "5147441",
+          "2012",
+          "BLOG",
+          "essayforum.com",
+          "#following statement? Only people who earn a lot of money are successful. Use specific reasons and examples to support your answer. #"
+        ],
+        [
+          "4",
+          "5147441",
+          "2012",
+          "BLOG",
+          "essayforum.com",
+          "#think that the person who are earn a lot of money are successful because they can buy whatever they want. I think we are"
+        ],
+        [
+          "5",
+          "5147441",
+          "2012",
+          "BLOG",
+          "essayforum.com",
+          "#people think that the people who earn a lot of money are successful because they can buy whatever they want. # to earn --->"
+        ],
+        [
+          "6",
+          "3052054",
+          "2006",
+          "NEWS",
+          "SanFranChron",
+          "#I think parents who don't have a lot of money are entitled to have their children use safe content on the Internet the same"
+        ],
+        [
+          "7",
+          "3063587",
+          "2003",
+          "NEWS",
+          "Chicago",
+          "#office. Making movies that consistently make a lot of money are the biggest help to a career. \" # Irons has also starred"
+        ],
+        [
+          "8",
+          "174795",
+          "2002",
+          "SPOK",
+          "CNN_CapGang",
+          "#said, he said people who make a lot of money are rewarded, rewarded with it. That's, that's the kind"
+        ],
+        [
+          "9",
+          "3069108",
+          "2000",
+          "NEWS",
+          "Denver",
+          "#. The people who want to spend a lot of money aren't going to Crossroads. They're going to Park Meadows and Cherry"
+        ],
+        [
+          "10",
+          "5230507",
+          "1999",
+          "TV",
+          "Family Guy",
+          "#a shining example of how people with a lot of money are just plain better than everyone else. Lois, you were always my"
+        ],
+        [
+          "11",
+          "245696",
+          "1998",
+          "SPOK",
+          "NPR_TalkNation",
+          "#really public interest -- people who have a lot of money are getting our people in government to do what they want and not necessarily"
+        ],
+        [
+          "12",
+          "2040009",
+          "1995",
+          "MAG",
+          "ChristToday",
+          "#to come to the States and make a lot of money are gone. If you want to come to the States, you now"
+        ]
+      ]
+    ],
+    "rows": [
+      {
+        "index": 1,
+        "text_id": "5036292",
+        "year": "2012",
+        "genre": "WEB",
+        "source": "hotair.com",
+        "text": "#among the housewives of S Tampa and a lot of money are being raised. Sure, it comes with a lot of spicy stories",
+        "cells": [
+          "1",
+          "5036292",
+          "2012",
+          "WEB",
+          "hotair.com",
+          "#among the housewives of S Tampa and a lot of money are being raised. Sure, it comes with a lot of spicy stories"
+        ]
+      },
+      {
+        "index": 2,
+        "text_id": "5147440",
+        "year": "2012",
+        "genre": "BLOG",
+        "source": "eschatonblog.com",
+        "text": "# 3238841 TOEFL:only people who earn a lot of money are successful? # Do you agree or disagree with the following statement?",
+        "cells": [
+          "2",
+          "5147440",
+          "2012",
+          "BLOG",
+          "eschatonblog.com",
+          "# 3238841 TOEFL:only people who earn a lot of money are successful? # Do you agree or disagree with the following statement?"
+        ]
+      },
+      {
+        "index": 3,
+        "text_id": "5147441",
+        "year": "2012",
+        "genre": "BLOG",
+        "source": "essayforum.com",
+        "text": "#following statement? Only people who earn a lot of money are successful. Use specific reasons and examples to support your answer. #",
+        "cells": [
+          "3",
+          "5147441",
+          "2012",
+          "BLOG",
+          "essayforum.com",
+          "#following statement? Only people who earn a lot of money are successful. Use specific reasons and examples to support your answer. #"
+        ]
+      },
+      {
+        "index": 4,
+        "text_id": "5147441",
+        "year": "2012",
+        "genre": "BLOG",
+        "source": "essayforum.com",
+        "text": "#think that the person who are earn a lot of money are successful because they can buy whatever they want. I think we are",
+        "cells": [
+          "4",
+          "5147441",
+          "2012",
+          "BLOG",
+          "essayforum.com",
+          "#think that the person who are earn a lot of money are successful because they can buy whatever they want. I think we are"
+        ]
+      },
+      {
+        "index": 5,
+        "text_id": "5147441",
+        "year": "2012",
+        "genre": "BLOG",
+        "source": "essayforum.com",
+        "text": "#people think that the people who earn a lot of money are successful because they can buy whatever they want. # to earn --->",
+        "cells": [
+          "5",
+          "5147441",
+          "2012",
+          "BLOG",
+          "essayforum.com",
+          "#people think that the people who earn a lot of money are successful because they can buy whatever they want. # to earn --->"
+        ]
+      },
+      {
+        "index": 6,
+        "text_id": "3052054",
+        "year": "2006",
+        "genre": "NEWS",
+        "source": "SanFranChron",
+        "text": "#I think parents who don't have a lot of money are entitled to have their children use safe content on the Internet the same",
+        "cells": [
+          "6",
+          "3052054",
+          "2006",
+          "NEWS",
+          "SanFranChron",
+          "#I think parents who don't have a lot of money are entitled to have their children use safe content on the Internet the same"
+        ]
+      },
+      {
+        "index": 7,
+        "text_id": "3063587",
+        "year": "2003",
+        "genre": "NEWS",
+        "source": "Chicago",
+        "text": "#office. Making movies that consistently make a lot of money are the biggest help to a career. \" # Irons has also starred",
+        "cells": [
+          "7",
+          "3063587",
+          "2003",
+          "NEWS",
+          "Chicago",
+          "#office. Making movies that consistently make a lot of money are the biggest help to a career. \" # Irons has also starred"
+        ]
+      },
+      {
+        "index": 8,
+        "text_id": "174795",
+        "year": "2002",
+        "genre": "SPOK",
+        "source": "CNN_CapGang",
+        "text": "#said, he said people who make a lot of money are rewarded, rewarded with it. That's, that's the kind",
+        "cells": [
+          "8",
+          "174795",
+          "2002",
+          "SPOK",
+          "CNN_CapGang",
+          "#said, he said people who make a lot of money are rewarded, rewarded with it. That's, that's the kind"
+        ]
+      },
+      {
+        "index": 9,
+        "text_id": "3069108",
+        "year": "2000",
+        "genre": "NEWS",
+        "source": "Denver",
+        "text": "#. The people who want to spend a lot of money aren't going to Crossroads. They're going to Park Meadows and Cherry",
+        "cells": [
+          "9",
+          "3069108",
+          "2000",
+          "NEWS",
+          "Denver",
+          "#. The people who want to spend a lot of money aren't going to Crossroads. They're going to Park Meadows and Cherry"
+        ]
+      },
+      {
+        "index": 10,
+        "text_id": "5230507",
+        "year": "1999",
+        "genre": "TV",
+        "source": "Family Guy",
+        "text": "#a shining example of how people with a lot of money are just plain better than everyone else. Lois, you were always my",
+        "cells": [
+          "10",
+          "5230507",
+          "1999",
+          "TV",
+          "Family Guy",
+          "#a shining example of how people with a lot of money are just plain better than everyone else. Lois, you were always my"
+        ]
+      },
+      {
+        "index": 11,
+        "text_id": "245696",
+        "year": "1998",
+        "genre": "SPOK",
+        "source": "NPR_TalkNation",
+        "text": "#really public interest -- people who have a lot of money are getting our people in government to do what they want and not necessarily",
+        "cells": [
+          "11",
+          "245696",
+          "1998",
+          "SPOK",
+          "NPR_TalkNation",
+          "#really public interest -- people who have a lot of money are getting our people in government to do what they want and not necessarily"
+        ]
+      },
+      {
+        "index": 12,
+        "text_id": "2040009",
+        "year": "1995",
+        "genre": "MAG",
+        "source": "ChristToday",
+        "text": "#to come to the States and make a lot of money are gone. If you want to come to the States, you now",
+        "cells": [
+          "12",
+          "2040009",
+          "1995",
+          "MAG",
+          "ChristToday",
+          "#to come to the States and make a lot of money are gone. If you want to come to the States, you now"
+        ]
+      }
+    ]
+  }
+}

@@ -53,3 +53,7 @@ Append non-trivial structural, methodological, and scope decisions here.
   production output. Add `community_licensing -> production_probability` as a profiled
   positive-monotone edge for opportunity-conditioned production measurement. Keep the forbidden
   conflation intact: raw frequency remains evidence to be filtered and interpreted, not licensing.
+- **Use known-QN results as calibration, not projective credit.** The `a number of people` and
+  `a lot of money` COCA tranche reproduces expected agreement directions after KWIC filtering and
+  exposes raw-query false positives, but it tests the measurement workflow rather than making a new
+  held-out prediction for `AGR`. Record it as calibration only; do not move scores.

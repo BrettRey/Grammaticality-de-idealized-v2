@@ -1,0 +1,1454 @@
+{
+  "query": "a number of people are",
+  "corpus": "coca",
+  "retrieved_at": "2026-06-09T16:33:19.785Z",
+  "method": "list-result-click",
+  "list": {
+    "url": "https://www.english-corpora.org/coca/x2.asp",
+    "text": "ON CLICK: \t    \t     ( EN )\t \t   \t    \t    \t    \t    \t (?)   \t   AI:   CATEGORIZE  *\n\nHELP\t\t\t  ALL FORMS\n52\tFREQ\n1\t\t\t  A NUMBER OF PEOPLE ARE\t52\n\t0.445 seconds",
+    "tables": [
+      [
+        [
+          "SAVE LIST",
+          "NAME OF LIST",
+          "",
+          ""
+        ],
+        [
+          "Select entries below to add these to a \"customized word list\", and then later use this list as part of a search. For example, if you add 4 or 5 entries\nbelow to the list myList, then you could use this as part of a search, like large @myList. More information:"
+        ]
+      ],
+      [
+        [
+          "ON CLICK: \t    \t     ( EN )\t \t   \t    \t    \t    \t    \t (?)   \t   AI:   CATEGORIZE  *",
+          ""
+        ],
+        [
+          "Click on  below, and then click on any word in the highlighted entry, to see detailed information on the word.\nTo come back to this page, click on  on the \"word page\".\n [Close]"
+        ],
+        [
+          "Click on\nbelow to \"save\" this word or phrase. Then click on\nat the top of the corpus to access this list at any point in the future.\n\n [Close]"
+        ],
+        [
+          "By default, when you click on one of the words/phrases below, you will see the \"Keyword in Context\" view in the tab to the right.\nBut you can also now access \"external\" resources for any of the words/phrases that you see below. To do so, click on one of the types of resources above\n(e.g. images or translation) and then click on the word/phrase below.\nNote: To change the language for translation, click on the two letter code after\nTRANSLATE above. This code will be saved for future access to the corpus as well. If it shows [??], you haven't yet selected a language.\n\n  [Close]"
+        ]
+      ],
+      [
+        [
+          "ON CLICK:",
+          "",
+          "( EN )",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "(?)",
+          "AI:   CATEGORIZE  *"
+        ]
+      ],
+      [
+        [
+          "In addition to the frequency of a word or phrase, you can also now see the number of texts in which it occurs. This can help you to eliminate words and phrases that\noccur in just a few texts. To enable this feature, click on OPTIONS / SHOW # TEXTS in the search form (show me how).\nMore information"
+        ]
+      ],
+      [
+        [
+          "HELP",
+          "",
+          "",
+          "",
+          "ALL FORMS\n52",
+          "FREQ",
+          ""
+        ],
+        [
+          "1",
+          "",
+          "",
+          "",
+          "A NUMBER OF PEOPLE ARE",
+          "52",
+          ""
+        ]
+      ],
+      [
+        [
+          "",
+          "0.445 seconds"
+        ]
+      ]
+    ]
+  },
+  "kwic": {
+    "url": "https://www.english-corpora.org/coca/x3.asp?x2w=y&xx=1&w10=a&w11=number&w12=of&w13=people&w14=are&r=",
+    "text": "(SHUFFLE)     \t ENTRIES: 52 TEXTS\n     LIMITS: NONE\nSORTING: YEAR , GENRE\n     +CONTEXT\t      \t   \t    \t  HELP     \t    AI: patterns\n1\t2019\tSPOK\tCBS_Sixty\t  #all? BETH-FORD) : More frustration is present because a number of people are going to lose their businesses. They are going to lose\n2\t2018\tSPOK\tPBS_Newshour\t  #president will agree to it, but I think a number of people are concerned that there's not sufficient preparation for the summit,\n3\t2017\tSPOK\tPBS_Newshour\t  #But it's now been over a month. a number of people are starting to ask, where are the results? What is\n4\t2015\tSPOK\tCNN: Nancy Grace\t  #him in the distance while, you know, a number of people are tackling him. The forensic pathologist that looked at it said\n5\t2015\tMAG\tUSAToday\t  #of responsibility, there is an alternative. # A number of people are turning to entrepreneurship. Statistically speaking, 320,000 new businesses are\n6\t2014\tSPOK\tNPR: Tell Me More\t  #is it offensive? I get the impression that a number of people are offended by this, but tell me why. Tell me\n7\t2013\tSPOK\tABC: This Week\t  #Mr. Christie thinks that's a dangerous thought, a number of people are going to say that Mr. Christie himself may be dangerous.\n8\t2012\tWEB\tthinkafricapress.com\t  #promise in the project. Mulbah explains, \" A number of people are coming back into this community. It was a promising community\n9\t2012\tWEB\tslashgear.com\t  #of course, all sorts of suggestions, but a number of people are telling Hudson that they don't want the next Mass Effect\n10\t2012\tWEB\tgnu.org\t  #enough competition to motivate people to great efforts. A number of people are competing to be the first to have visited all the countries\n11\t2012\tWEB\tpdnontheroad.com\t  #a much better surroundings and potential. However, a number of people are remiss for alternatives or suggestions that will help them stay an\n12\t2012\tWEB\tpsychologytoday.com\t  #who were exercising around the lake does suggest that a number of people are willing to engage in healthy behaviors. One thing that needs\n13\t2012\tWEB\tavert.org\t  #Furthermore, it is very hard to show that a number of people are not HIV positive who otherwise would be -- and politicians like\n14\t2012\tWEB\thuffingtonpost.com\t  #something society should seriously consider? # A: A number of people are doing just that. You may not like that in market\n15\t2012\tWEB\tw3.org\t  #. WEAR IT NOW FOR THE FUTURE # A number of people are taking the HTML5 logo and emblazoning everything\n16\t2012\tWEB\tmyenglishteacher.net\t  #word the, use a singular verb. # A number of people are waiting to see you. # The number of stars in\n17\t2012\tBLOG\t...cusnet.wordpress.com\t  #sheer number of best sellers in this genre suggests a number of people are looking for not just confidence, but the conviction to be\n18\t2012\tBLOG\tscpr.org\t  #surprise for some people in Anaheim. # \" A number of people are saying, who have been in Anaheim since the 1950s,\n19\t2012\tBLOG\tnucleargrrl.com\t  #lot. Clearly not everyone is asexual. But a number of people are. And this whole post reads as one long \" your\n20\t2012\tBLOG\t...atalk.metafilter.com\t  #should know about it. And, sure, a number of people are learning things on this subject they wouldn't otherwise know --\n21\t2012\tBLOG\t...scerningtheworld.com\t  #is running an Alpha course at the moment which a number of people are attending. Those being confirmed this summer are attending the course\n22\t2012\tBLOG\tperezhilton.com\t  #about to your nines you need to money. A number of people are generally defer a diet by means of the thought of demanding\n23\t2012\tBLOG\ttheoildrum.com\t  #gas producers all lemmings looking for a cliff? A number of people are beginning to seriously question the gas shale phenomenon given the continuing\n24\t2011\tSPOK\tNPR_TellMore\t  #encounter with President Bush over a key point. A number of people are offended by that characterization. Are you? RICE: Well,\n25\t2011\tSPOK\tPBS_NewsHour\t  #was bombed, two bombs. One bomb, a number of people are killed. There's injured. People are rushing to the\n26\t2011\tSPOK\tCNN Newsroom\t  #right? VERCAMMEN: Yes, there sure are. A number of people are being honored. One of the true characters, a man\n27\t2010\tSPOK\tCBS_Early\t  #even more so common now because of the recession a number of people are asking children, grandchildren are asking their grandparents to co-sign.\n28\t2008\tACAD\tTheologStud\t  #have never been overcome. \" Second, \" a number of people are excluded from political life in the country in which they live\n29\t2006\tSPOK\tNPR_ATCW\t  #issue is being debated across the country, and a number of people are being persuaded that same sex marriage, or if not that\n30\t2006\tSPOK\tMSNBC_Matt\t  #see what it is. MATTHEWS: Opus Dei said a number of people are coming by their headquarters at 34th and Lexington in New York\n31\t2006\tMAG\tEbony\t  # 26848 A number of people are still shedding the pounds without surgery and medication Photograph Weighing 753\n32\t2005\tFIC\tPloughshares\t  #face with a cop kneeling on his back. A number of people are staggering and spluttering after a good dose of tear gas.\n33\t2005\tMOV\tThe Upside of Anger\t  #... of angry demonstrators here today, proving that a number of people are willing to go and fight. - The feeling is that\n34\t2004\tSPOK\tCBS_Morning\t  #think that a number of the so-called fixes that a number of people are proposing would actually make the situation worse. ANDREWS: Some\n35\t2002\tSPOK\tFox_Sunday\t  #, there's another issue, Fred, that a number of people are trying to bring up, which is Enron. There was\n36\t2002\tMAG\tUSAToday\t  #features can not be seen. Through flashbacks, a number of people are introduced, virtually all of them involved in unsatisfying relationships and\n37\t1999\tSPOK\tABC_Nightline\t  #off to the poor victims in that city because a number of people are going to say,' You know, I may want\n38\t1998\tSPOK\tCNN_Talkback\t  #at this point. The Paula Jones case, a number of people are saying, is looking good now, good chance of a\n39\t1998\tSPOK\tFox_Hume\t  #in so many words, to lie. So a number of people are conceivably, you know, in jeopardy on this. Vernon\n40\t1997\tFIC\tMov:AbsolutePower\t  #RECEPTION AREA - NIGHT 346A # Luther enters. A number of people are present, all of them listening to a large radio,\n41\t1996\tSPOK\tCBS_Morning\t  #being honored tonight will -- will enjoy that. A number of people are not coming tonight. They're simply not coming -- because\n42\t1995\tMAG\tMotherEarth\t  #riper product to the stores before it does. A number of people are looking at the same sort of technology to help with fresh\n43\t1994\tNEWS\tWashPost\t  #so he will not lose his health insurance. A number of people are scheduling elective surgery before their health benefits run out. Many\n44\t1993\tSPOK\tInd_Limbaugh\t  #us. By the way, a lo -- a number of people are very upset at what's happened to Michael Jackson. Very\n45\t1993\tSPOK\tABC_Nightline\t  #area, have the economy back enough so that a number of people are employed. The economy is starting to rejuvenate. There's\n46\t1993\tACAD\tReVision\t  #, to the end of the experience. # A number of people are coming forward now to tell of their experiences who had not\n47\t1992\tSPOK\tABC_Primetime\t  #, even if the diagnosis is wrong. So a number of people are working in Russia right now to change the diagnoses so that\n48\t1992\tSPOK\tInd_Limbaugh\t  #a half here -- the press and -- and a number of people are all over you because you won't debate Clinton on his\n49\t1991\tSPOK\tABC_Nightline\t  #faced with a massive and unprecedented pollution event and a number of people are trying to understand exactly what is happening there, what is\n50\t1991\tNEWS\tAtlanta\t  #will be the tenant's decision. \" # A number of people are already concerned that outsiders might influence that decision to the detriment\n51\t1990\tSPOK\tABC_Nightline\t  #course, remains to be seen, but apparently a number of people are pressing that position upon him and those around him KOPPEL I\n52\t1990\tFIC\tMov:Ghost\t  #face a raised platform with nothing on it. A number of people are sitting there, mostly women. One gets the sense that",
+    "tables": [
+      [
+        [
+          "(SHUFFLE)",
+          "ENTRIES: 52 TEXTS\n     LIMITS: NONE\nSORTING: YEAR , GENRE"
+        ]
+      ],
+      [
+        [
+          "",
+          "SORT",
+          "LIMIT",
+          "Examples / notes"
+        ],
+        [
+          "Genre",
+          "--",
+          "-----\n\n\t\t\tSpoken\n\t\t\tFiction\n\t\t\tMagazine\n\t\t\tNewspaper\n\t\t\tAcademic\n\t\t\tWeb\n\t\t\tBlog\n\t\t\tTV/Movies\n-----\n\nSPOK:ABC\n\nSPOK:NBC\n\nSPOK:CBS\n\nSPOK:CNN\n\nSPOK:FOX\n\nSPOK:MSNBC\n\nSPOK:PBS\n\nSPOK:NPR\n\nSPOK:Indep\n\nFIC:Gen (Book)\n\nFIC:Gen (Jrnl)\n\nFIC:SciFi/Fant\n\nFIC:Juvenile\n\nFIC:Movies\n\nFIC:Fan Fiction\n\nMAG:News/Opin\n\nMAG:Financial\n\nMAG:Sci/Tech\n\nMAG:Soc/Arts\n\nMAG:Religion\n\nMAG:Sports\n\nMAG:Entertain\n\nMAG:Home/Health\n\nMAG:Afric-Amer\n\nMAG:Children\n\nMAG:Women/Men\n\nNEWS:Misc\n\nNEWS:News_Intl\n\nNEWS:News_Natl\n\nNEWS:News_Local\n\nNEWS:Money\n\nNEWS:Life\n\nNEWS:Sports\n\nNEWS:Editorial\n\nACAD:History\n\nACAD:Education\n\nACAD:Geog/SocSci\n\nACAD:Law/PolSci\n\nACAD:Humanities\n\nACAD:Phil/Rel\n\nACAD:Sci/Tech\n\nACAD:Medicine\n\nACAD:Misc\n\nACAD:Business\n\nWeb:Acad\n\nWeb:Arg\n\nWeb:Fic\n\nWeb:Info\n\nWeb:Instr\n\nWeb:Legal\n\nWeb:News\n\nWeb:Pers\n\nWeb:Revw\n\nWeb:Misc\n\nBlog:Acad\n\nBlog:Arg\n\nBlog:Fic\n\nBlog:Info\n\nBlog:Instr\n\nBlog:Legal\n\nBlog:News\n\nBlog:Pers\n\nBlog:Prom\n\nBlog:Revw\n\nBlog:Misc\n\nMov:Action\n\nMov:Adult\n\nMov:Adv\n\nMov:Anim\n\nMov:Biog\n\nMov:Comedy\n\nMov:Crime\n\nMov:Docum\n\nMov:Drama\n\nMov:Fam\n\nMov:Fantasy\n\nMov:Horror\n\nMov:Music\n\nMov:Myst\n\nMov:Romance\n\nMov:Sci-Fi\n\nMov:Short\n\nMov:Thril\n\nMov:N/A\n\nTV:Action\n\nTV:Adv\n\nTV:Anim\n\nTV:Comedy\n\nTV:Crime\n\nTV:Docum\n\nTV:Drama\n\nTV:Game\n\nTV:Horror\n\nTV:Reality\n\nTV:Sci-Fi\n\nTV:Misc"
+        ],
+        [
+          "Year",
+          "--",
+          "to",
+          "1992 to 1997"
+        ],
+        [
+          "Source",
+          "--",
+          "",
+          "New York Times or bbc.co.uk"
+        ]
+      ],
+      [
+        [
+          "Because both the node word and the collocate occur more than 400,000 times in the corpus, the entries below come from a smaller subset\nof the entire corpus, which represents about 5-10% of the complete corpus."
+        ]
+      ],
+      [
+        [
+          "+CONTEXT",
+          "Click on audio icon at translation site to hear text.",
+          "Translate to EN\n(Change and then reload this page)",
+          "Select entries below | ADD TO\n\n\t----------\n\na\n\nplace that\n\n NEW\n\n [?]\n  SEE LISTS\n\nEN:\n\nAfrikaans\nAlbanian\nAmharic\nArabic\nArmenian\nAzerbaijani\nBasque\nBelarusian\nBengali\nBosnian\nBulgarian\nBurmese\nCatalan\nCebuano\nChichewa\nChinese (S)\nChinese (T)\nCorsican\nCroatian\nCzech\nDanish\nDutch\nEnglish\nEsperanto\nEstonian\nFilipino\nFinnish\nFrench\nFrisian\nGalician\nGeorgian\nGerman\nGreek\nGujarati\nHaitian C\nHausa\nHawaiian\nHebrew\nHindi\nHmong\nHungarian\nIcelandic\nIgbo\nIndonesian\nIrish\nItalian\nJapanese\nJavanese\nKannada\nKazakh\nKhmer\nKorean\nKurdish\nKyrgyz\nLao\nLatin\nLatvian\nLithuanian\nLuxembourgish\nMacedonian\nMalagasy\nMalay\nMalayalam\nMaltese\nMaori\nMarathi\nMongolian\nNepali\nNorwegian\nPashto\nPersian\nPolish\nPortuguese\nPunjabi\nRomanian\nRussian\nSamoan\nScots Gaelic\nSerbian\nSesotho\nShona\nSindhi\nSinhala\nSlovak\nSlovenian\nSomali\nSpanish\nSundanese\nSwahili\nSwedish\nTajik\nTamil\nTelugu\nThai\nTurkish\nUkrainian\nUrdu\nUzbek\nVietnamese\nWelsh\nXhosa\nYiddish\nYoruba\nZulu\n\nALL\n\n<< Change language\n\n Select entries below |\nThen click button to analyze text; see word definitions; find related phrases",
+          "",
+          "COCA\niWeb",
+          "DIC:\n\nD\nM\nO\nC\nG\nE",
+          "",
+          "",
+          "",
+          "",
+          "HELP",
+          "AI: patterns"
+        ]
+      ],
+      [
+        [
+          "SINGLE ENTRY / LINE\n\n(CLOSE HELP)"
+        ],
+        [
+          "",
+          "Listen to the text (click on\n\t\t at the translation website)"
+        ],
+        [
+          "",
+          "Translate the text (after the first translation, you can change the language in the\n\t\tblue section above)"
+        ],
+        [
+          "",
+          "Select individual words, and then see info on words (see next\n\t\tsection). Click again to deselect."
+        ],
+        [
+          "SINGLE WORD (choose from words, after clicking\n\t\t on a given line).\n\t\t(See example)"
+        ],
+        [
+          "{ WORD }",
+          "Search for the word in the corpus (from main search page: list,\n\t\tchart, collocates, etc)"
+        ],
+        [
+          "WORD PAGE",
+          "(From COCA or iWeb) Collocates, related topics, related words,\n\t\tsynonyms, clusters, KWIC, and more"
+        ],
+        [
+          "DICTIONARY",
+          "Links to entries from several online dictionaries (Oxford,\n\t\tMerriam-Webster, etymology, etc)"
+        ],
+        [
+          "",
+          "Translation, web search, image search, video/pronunciation"
+        ],
+        [
+          "MULTIPLE ENTRIES (see links in gray above; click on text entries below to add\n\t\tto group)"
+        ],
+        [
+          "SAVE",
+          "",
+          "Save entries for later use. Can also move, delete, and\n\t\texpand entries. Categorize entries by clicking on A|B|C in entry."
+        ],
+        [
+          "TRANSLATE",
+          "",
+          "See translation for multiple lines, with original lines in English\n\t\tand their translations grouped together; you can choose from 100+ languages."
+        ],
+        [
+          "ANALYZE",
+          "",
+          "Create \"text\" composed of selected lines, and then see keywords,\n\t\tfind related phrases for words in the text, and see detailed \"word\"\n\t\tpages for any word in the \"text\"."
+        ]
+      ],
+      [
+        [
+          "Please consider supporting the corpora by getting an (individual)\npremium license or a (university-wide)\nacademic license.\nIf you have a license, you won't see these messages anymore."
+        ]
+      ],
+      [
+        [
+          "1",
+          "5000062",
+          "2019",
+          "SPOK",
+          "CBS_Sixty",
+          "#all? BETH-FORD) : More frustration is present because a number of people are going to lose their businesses. They are going to lose"
+        ],
+        [
+          "2",
+          "5001127",
+          "2018",
+          "SPOK",
+          "PBS_Newshour",
+          "#president will agree to it, but I think a number of people are concerned that there's not sufficient preparation for the summit,"
+        ],
+        [
+          "3",
+          "4172332",
+          "2017",
+          "SPOK",
+          "PBS_Newshour",
+          "#But it's now been over a month. a number of people are starting to ask, where are the results? What is"
+        ],
+        [
+          "4",
+          "4126494",
+          "2015",
+          "SPOK",
+          "CNN: Nancy Grace",
+          "#him in the distance while, you know, a number of people are tackling him. The forensic pathologist that looked at it said"
+        ],
+        [
+          "5",
+          "4155210",
+          "2015",
+          "MAG",
+          "USAToday",
+          "#of responsibility, there is an alternative. # A number of people are turning to entrepreneurship. Statistically speaking, 320,000 new businesses are"
+        ],
+        [
+          "6",
+          "4125114",
+          "2014",
+          "SPOK",
+          "NPR: Tell Me More",
+          "#is it offensive? I get the impression that a number of people are offended by this, but tell me why. Tell me"
+        ],
+        [
+          "7",
+          "4122914",
+          "2013",
+          "SPOK",
+          "ABC: This Week",
+          "#Mr. Christie thinks that's a dangerous thought, a number of people are going to say that Mr. Christie himself may be dangerous."
+        ],
+        [
+          "8",
+          "5028001",
+          "2012",
+          "WEB",
+          "thinkafricapress.com",
+          "#promise in the project. Mulbah explains, \" A number of people are coming back into this community. It was a promising community"
+        ],
+        [
+          "9",
+          "5051254",
+          "2012",
+          "WEB",
+          "slashgear.com",
+          "#of course, all sorts of suggestions, but a number of people are telling Hudson that they don't want the next Mass Effect"
+        ],
+        [
+          "10",
+          "5056708",
+          "2012",
+          "WEB",
+          "gnu.org",
+          "#enough competition to motivate people to great efforts. A number of people are competing to be the first to have visited all the countries"
+        ],
+        [
+          "11",
+          "5067194",
+          "2012",
+          "WEB",
+          "pdnontheroad.com",
+          "#a much better surroundings and potential. However, a number of people are remiss for alternatives or suggestions that will help them stay an"
+        ],
+        [
+          "12",
+          "5076341",
+          "2012",
+          "WEB",
+          "psychologytoday.com",
+          "#who were exercising around the lake does suggest that a number of people are willing to engage in healthy behaviors. One thing that needs"
+        ],
+        [
+          "13",
+          "5099448",
+          "2012",
+          "WEB",
+          "avert.org",
+          "#Furthermore, it is very hard to show that a number of people are not HIV positive who otherwise would be -- and politicians like"
+        ],
+        [
+          "14",
+          "5252267",
+          "2012",
+          "WEB",
+          "huffingtonpost.com",
+          "#something society should seriously consider? # A: A number of people are doing just that. You may not like that in market"
+        ],
+        [
+          "15",
+          "5254192",
+          "2012",
+          "WEB",
+          "w3.org",
+          "#. WEAR IT NOW FOR THE FUTURE # A number of people are taking the HTML5 logo and emblazoning everything"
+        ],
+        [
+          "16",
+          "5258465",
+          "2012",
+          "WEB",
+          "myenglishteacher.net",
+          "#word the, use a singular verb. # A number of people are waiting to see you. # The number of stars in"
+        ],
+        [
+          "17",
+          "5132616",
+          "2012",
+          "BLOG",
+          "...cusnet.wordpress.com",
+          "#sheer number of best sellers in this genre suggests a number of people are looking for not just confidence, but the conviction to be"
+        ],
+        [
+          "18",
+          "5141161",
+          "2012",
+          "BLOG",
+          "scpr.org",
+          "#surprise for some people in Anaheim. # \" A number of people are saying, who have been in Anaheim since the 1950s,"
+        ],
+        [
+          "19",
+          "5141267",
+          "2012",
+          "BLOG",
+          "nucleargrrl.com",
+          "#lot. Clearly not everyone is asexual. But a number of people are. And this whole post reads as one long \" your"
+        ],
+        [
+          "20",
+          "5148720",
+          "2012",
+          "BLOG",
+          "...atalk.metafilter.com",
+          "#should know about it. And, sure, a number of people are learning things on this subject they wouldn't otherwise know --"
+        ],
+        [
+          "21",
+          "5149245",
+          "2012",
+          "BLOG",
+          "...scerningtheworld.com",
+          "#is running an Alpha course at the moment which a number of people are attending. Those being confirmed this summer are attending the course"
+        ],
+        [
+          "22",
+          "5202164",
+          "2012",
+          "BLOG",
+          "perezhilton.com",
+          "#about to your nines you need to money. A number of people are generally defer a diet by means of the thought of demanding"
+        ],
+        [
+          "23",
+          "5207641",
+          "2012",
+          "BLOG",
+          "theoildrum.com",
+          "#gas producers all lemmings looking for a cliff? A number of people are beginning to seriously question the gas shale phenomenon given the continuing"
+        ],
+        [
+          "24",
+          "4103301",
+          "2011",
+          "SPOK",
+          "NPR_TellMore",
+          "#encounter with President Bush over a key point. A number of people are offended by that characterization. Are you? RICE: Well,"
+        ],
+        [
+          "25",
+          "4103507",
+          "2011",
+          "SPOK",
+          "PBS_NewsHour",
+          "#was bombed, two bombs. One bomb, a number of people are killed. There's injured. People are rushing to the"
+        ],
+        [
+          "26",
+          "4104298",
+          "2011",
+          "SPOK",
+          "CNN Newsroom",
+          "#right? VERCAMMEN: Yes, there sure are. A number of people are being honored. One of the true characters, a man"
+        ],
+        [
+          "27",
+          "4082225",
+          "2010",
+          "SPOK",
+          "CBS_Early",
+          "#even more so common now because of the recession a number of people are asking children, grandchildren are asking their grandparents to co-sign."
+        ],
+        [
+          "28",
+          "4026952",
+          "2008",
+          "ACAD",
+          "TheologStud",
+          "#have never been overcome. \" Second, \" a number of people are excluded from political life in the country in which they live"
+        ],
+        [
+          "29",
+          "166895",
+          "2006",
+          "SPOK",
+          "NPR_ATCW",
+          "#issue is being debated across the country, and a number of people are being persuaded that same sex marriage, or if not that"
+        ],
+        [
+          "30",
+          "167699",
+          "2006",
+          "SPOK",
+          "MSNBC_Matt",
+          "#see what it is. MATTHEWS: Opus Dei said a number of people are coming by their headquarters at 34th and Lexington in New York"
+        ],
+        [
+          "31",
+          "2026846",
+          "2006",
+          "MAG",
+          "Ebony",
+          "# 26848 A number of people are still shedding the pounds without surgery and medication Photograph Weighing 753"
+        ],
+        [
+          "32",
+          "1012336",
+          "2005",
+          "FIC",
+          "Ploughshares",
+          "#face with a cop kneeling on his back. A number of people are staggering and spluttering after a good dose of tear gas."
+        ],
+        [
+          "33",
+          "5259360",
+          "2005",
+          "MOV",
+          "The Upside of Anger",
+          "#... of angry demonstrators here today, proving that a number of people are willing to go and fight. - The feeling is that"
+        ],
+        [
+          "34",
+          "55474",
+          "2004",
+          "SPOK",
+          "CBS_Morning",
+          "#think that a number of the so-called fixes that a number of people are proposing would actually make the situation worse. ANDREWS: Some"
+        ],
+        [
+          "35",
+          "16393",
+          "2002",
+          "SPOK",
+          "Fox_Sunday",
+          "#, there's another issue, Fred, that a number of people are trying to bring up, which is Enron. There was"
+        ],
+        [
+          "36",
+          "2022497",
+          "2002",
+          "MAG",
+          "USAToday",
+          "#features can not be seen. Through flashbacks, a number of people are introduced, virtually all of them involved in unsatisfying relationships and"
+        ],
+        [
+          "37",
+          "244596",
+          "1999",
+          "SPOK",
+          "ABC_Nightline",
+          "#off to the poor victims in that city because a number of people are going to say,' You know, I may want"
+        ],
+        [
+          "38",
+          "228022",
+          "1998",
+          "SPOK",
+          "CNN_Talkback",
+          "#at this point. The Paula Jones case, a number of people are saying, is looking good now, good chance of a"
+        ],
+        [
+          "39",
+          "229632",
+          "1998",
+          "SPOK",
+          "Fox_Hume",
+          "#in so many words, to lie. So a number of people are conceivably, you know, in jeopardy on this. Vernon"
+        ],
+        [
+          "40",
+          "1050331",
+          "1997",
+          "FIC",
+          "Mov:AbsolutePower",
+          "#RECEPTION AREA - NIGHT 346A # Luther enters. A number of people are present, all of them listening to a large radio,"
+        ],
+        [
+          "41",
+          "225871",
+          "1996",
+          "SPOK",
+          "CBS_Morning",
+          "#being honored tonight will -- will enjoy that. A number of people are not coming tonight. They're simply not coming -- because"
+        ],
+        [
+          "42",
+          "2002680",
+          "1995",
+          "MAG",
+          "MotherEarth",
+          "#riper product to the stores before it does. A number of people are looking at the same sort of technology to help with fresh"
+        ],
+        [
+          "43",
+          "3033944",
+          "1994",
+          "NEWS",
+          "WashPost",
+          "#so he will not lose his health insurance. A number of people are scheduling elective surgery before their health benefits run out. Many"
+        ],
+        [
+          "44",
+          "231733",
+          "1993",
+          "SPOK",
+          "Ind_Limbaugh",
+          "#us. By the way, a lo -- a number of people are very upset at what's happened to Michael Jackson. Very"
+        ],
+        [
+          "45",
+          "242979",
+          "1993",
+          "SPOK",
+          "ABC_Nightline",
+          "#area, have the economy back enough so that a number of people are employed. The economy is starting to rejuvenate. There's"
+        ],
+        [
+          "46",
+          "4001575",
+          "1993",
+          "ACAD",
+          "ReVision",
+          "#, to the end of the experience. # A number of people are coming forward now to tell of their experiences who had not"
+        ],
+        [
+          "47",
+          "231435",
+          "1992",
+          "SPOK",
+          "ABC_Primetime",
+          "#, even if the diagnosis is wrong. So a number of people are working in Russia right now to change the diagnoses so that"
+        ],
+        [
+          "48",
+          "231609",
+          "1992",
+          "SPOK",
+          "Ind_Limbaugh",
+          "#a half here -- the press and -- and a number of people are all over you because you won't debate Clinton on his"
+        ],
+        [
+          "49",
+          "242290",
+          "1991",
+          "SPOK",
+          "ABC_Nightline",
+          "#faced with a massive and unprecedented pollution event and a number of people are trying to understand exactly what is happening there, what is"
+        ],
+        [
+          "50",
+          "3040214",
+          "1991",
+          "NEWS",
+          "Atlanta",
+          "#will be the tenant's decision. \" # A number of people are already concerned that outsiders might influence that decision to the detriment"
+        ],
+        [
+          "51",
+          "241947",
+          "1990",
+          "SPOK",
+          "ABC_Nightline",
+          "#course, remains to be seen, but apparently a number of people are pressing that position upon him and those around him KOPPEL I"
+        ],
+        [
+          "52",
+          "1050010",
+          "1990",
+          "FIC",
+          "Mov:Ghost",
+          "#face a raised platform with nothing on it. A number of people are sitting there, mostly women. One gets the sense that"
+        ]
+      ]
+    ],
+    "rows": [
+      {
+        "index": 1,
+        "text_id": "5000062",
+        "year": "2019",
+        "genre": "SPOK",
+        "source": "CBS_Sixty",
+        "text": "#all? BETH-FORD) : More frustration is present because a number of people are going to lose their businesses. They are going to lose",
+        "cells": [
+          "1",
+          "5000062",
+          "2019",
+          "SPOK",
+          "CBS_Sixty",
+          "#all? BETH-FORD) : More frustration is present because a number of people are going to lose their businesses. They are going to lose"
+        ]
+      },
+      {
+        "index": 2,
+        "text_id": "5001127",
+        "year": "2018",
+        "genre": "SPOK",
+        "source": "PBS_Newshour",
+        "text": "#president will agree to it, but I think a number of people are concerned that there's not sufficient preparation for the summit,",
+        "cells": [
+          "2",
+          "5001127",
+          "2018",
+          "SPOK",
+          "PBS_Newshour",
+          "#president will agree to it, but I think a number of people are concerned that there's not sufficient preparation for the summit,"
+        ]
+      },
+      {
+        "index": 3,
+        "text_id": "4172332",
+        "year": "2017",
+        "genre": "SPOK",
+        "source": "PBS_Newshour",
+        "text": "#But it's now been over a month. a number of people are starting to ask, where are the results? What is",
+        "cells": [
+          "3",
+          "4172332",
+          "2017",
+          "SPOK",
+          "PBS_Newshour",
+          "#But it's now been over a month. a number of people are starting to ask, where are the results? What is"
+        ]
+      },
+      {
+        "index": 4,
+        "text_id": "4126494",
+        "year": "2015",
+        "genre": "SPOK",
+        "source": "CNN: Nancy Grace",
+        "text": "#him in the distance while, you know, a number of people are tackling him. The forensic pathologist that looked at it said",
+        "cells": [
+          "4",
+          "4126494",
+          "2015",
+          "SPOK",
+          "CNN: Nancy Grace",
+          "#him in the distance while, you know, a number of people are tackling him. The forensic pathologist that looked at it said"
+        ]
+      },
+      {
+        "index": 5,
+        "text_id": "4155210",
+        "year": "2015",
+        "genre": "MAG",
+        "source": "USAToday",
+        "text": "#of responsibility, there is an alternative. # A number of people are turning to entrepreneurship. Statistically speaking, 320,000 new businesses are",
+        "cells": [
+          "5",
+          "4155210",
+          "2015",
+          "MAG",
+          "USAToday",
+          "#of responsibility, there is an alternative. # A number of people are turning to entrepreneurship. Statistically speaking, 320,000 new businesses are"
+        ]
+      },
+      {
+        "index": 6,
+        "text_id": "4125114",
+        "year": "2014",
+        "genre": "SPOK",
+        "source": "NPR: Tell Me More",
+        "text": "#is it offensive? I get the impression that a number of people are offended by this, but tell me why. Tell me",
+        "cells": [
+          "6",
+          "4125114",
+          "2014",
+          "SPOK",
+          "NPR: Tell Me More",
+          "#is it offensive? I get the impression that a number of people are offended by this, but tell me why. Tell me"
+        ]
+      },
+      {
+        "index": 7,
+        "text_id": "4122914",
+        "year": "2013",
+        "genre": "SPOK",
+        "source": "ABC: This Week",
+        "text": "#Mr. Christie thinks that's a dangerous thought, a number of people are going to say that Mr. Christie himself may be dangerous.",
+        "cells": [
+          "7",
+          "4122914",
+          "2013",
+          "SPOK",
+          "ABC: This Week",
+          "#Mr. Christie thinks that's a dangerous thought, a number of people are going to say that Mr. Christie himself may be dangerous."
+        ]
+      },
+      {
+        "index": 8,
+        "text_id": "5028001",
+        "year": "2012",
+        "genre": "WEB",
+        "source": "thinkafricapress.com",
+        "text": "#promise in the project. Mulbah explains, \" A number of people are coming back into this community. It was a promising community",
+        "cells": [
+          "8",
+          "5028001",
+          "2012",
+          "WEB",
+          "thinkafricapress.com",
+          "#promise in the project. Mulbah explains, \" A number of people are coming back into this community. It was a promising community"
+        ]
+      },
+      {
+        "index": 9,
+        "text_id": "5051254",
+        "year": "2012",
+        "genre": "WEB",
+        "source": "slashgear.com",
+        "text": "#of course, all sorts of suggestions, but a number of people are telling Hudson that they don't want the next Mass Effect",
+        "cells": [
+          "9",
+          "5051254",
+          "2012",
+          "WEB",
+          "slashgear.com",
+          "#of course, all sorts of suggestions, but a number of people are telling Hudson that they don't want the next Mass Effect"
+        ]
+      },
+      {
+        "index": 10,
+        "text_id": "5056708",
+        "year": "2012",
+        "genre": "WEB",
+        "source": "gnu.org",
+        "text": "#enough competition to motivate people to great efforts. A number of people are competing to be the first to have visited all the countries",
+        "cells": [
+          "10",
+          "5056708",
+          "2012",
+          "WEB",
+          "gnu.org",
+          "#enough competition to motivate people to great efforts. A number of people are competing to be the first to have visited all the countries"
+        ]
+      },
+      {
+        "index": 11,
+        "text_id": "5067194",
+        "year": "2012",
+        "genre": "WEB",
+        "source": "pdnontheroad.com",
+        "text": "#a much better surroundings and potential. However, a number of people are remiss for alternatives or suggestions that will help them stay an",
+        "cells": [
+          "11",
+          "5067194",
+          "2012",
+          "WEB",
+          "pdnontheroad.com",
+          "#a much better surroundings and potential. However, a number of people are remiss for alternatives or suggestions that will help them stay an"
+        ]
+      },
+      {
+        "index": 12,
+        "text_id": "5076341",
+        "year": "2012",
+        "genre": "WEB",
+        "source": "psychologytoday.com",
+        "text": "#who were exercising around the lake does suggest that a number of people are willing to engage in healthy behaviors. One thing that needs",
+        "cells": [
+          "12",
+          "5076341",
+          "2012",
+          "WEB",
+          "psychologytoday.com",
+          "#who were exercising around the lake does suggest that a number of people are willing to engage in healthy behaviors. One thing that needs"
+        ]
+      },
+      {
+        "index": 13,
+        "text_id": "5099448",
+        "year": "2012",
+        "genre": "WEB",
+        "source": "avert.org",
+        "text": "#Furthermore, it is very hard to show that a number of people are not HIV positive who otherwise would be -- and politicians like",
+        "cells": [
+          "13",
+          "5099448",
+          "2012",
+          "WEB",
+          "avert.org",
+          "#Furthermore, it is very hard to show that a number of people are not HIV positive who otherwise would be -- and politicians like"
+        ]
+      },
+      {
+        "index": 14,
+        "text_id": "5252267",
+        "year": "2012",
+        "genre": "WEB",
+        "source": "huffingtonpost.com",
+        "text": "#something society should seriously consider? # A: A number of people are doing just that. You may not like that in market",
+        "cells": [
+          "14",
+          "5252267",
+          "2012",
+          "WEB",
+          "huffingtonpost.com",
+          "#something society should seriously consider? # A: A number of people are doing just that. You may not like that in market"
+        ]
+      },
+      {
+        "index": 15,
+        "text_id": "5254192",
+        "year": "2012",
+        "genre": "WEB",
+        "source": "w3.org",
+        "text": "#. WEAR IT NOW FOR THE FUTURE # A number of people are taking the HTML5 logo and emblazoning everything",
+        "cells": [
+          "15",
+          "5254192",
+          "2012",
+          "WEB",
+          "w3.org",
+          "#. WEAR IT NOW FOR THE FUTURE # A number of people are taking the HTML5 logo and emblazoning everything"
+        ]
+      },
+      {
+        "index": 16,
+        "text_id": "5258465",
+        "year": "2012",
+        "genre": "WEB",
+        "source": "myenglishteacher.net",
+        "text": "#word the, use a singular verb. # A number of people are waiting to see you. # The number of stars in",
+        "cells": [
+          "16",
+          "5258465",
+          "2012",
+          "WEB",
+          "myenglishteacher.net",
+          "#word the, use a singular verb. # A number of people are waiting to see you. # The number of stars in"
+        ]
+      },
+      {
+        "index": 17,
+        "text_id": "5132616",
+        "year": "2012",
+        "genre": "BLOG",
+        "source": "...cusnet.wordpress.com",
+        "text": "#sheer number of best sellers in this genre suggests a number of people are looking for not just confidence, but the conviction to be",
+        "cells": [
+          "17",
+          "5132616",
+          "2012",
+          "BLOG",
+          "...cusnet.wordpress.com",
+          "#sheer number of best sellers in this genre suggests a number of people are looking for not just confidence, but the conviction to be"
+        ]
+      },
+      {
+        "index": 18,
+        "text_id": "5141161",
+        "year": "2012",
+        "genre": "BLOG",
+        "source": "scpr.org",
+        "text": "#surprise for some people in Anaheim. # \" A number of people are saying, who have been in Anaheim since the 1950s,",
+        "cells": [
+          "18",
+          "5141161",
+          "2012",
+          "BLOG",
+          "scpr.org",
+          "#surprise for some people in Anaheim. # \" A number of people are saying, who have been in Anaheim since the 1950s,"
+        ]
+      },
+      {
+        "index": 19,
+        "text_id": "5141267",
+        "year": "2012",
+        "genre": "BLOG",
+        "source": "nucleargrrl.com",
+        "text": "#lot. Clearly not everyone is asexual. But a number of people are. And this whole post reads as one long \" your",
+        "cells": [
+          "19",
+          "5141267",
+          "2012",
+          "BLOG",
+          "nucleargrrl.com",
+          "#lot. Clearly not everyone is asexual. But a number of people are. And this whole post reads as one long \" your"
+        ]
+      },
+      {
+        "index": 20,
+        "text_id": "5148720",
+        "year": "2012",
+        "genre": "BLOG",
+        "source": "...atalk.metafilter.com",
+        "text": "#should know about it. And, sure, a number of people are learning things on this subject they wouldn't otherwise know --",
+        "cells": [
+          "20",
+          "5148720",
+          "2012",
+          "BLOG",
+          "...atalk.metafilter.com",
+          "#should know about it. And, sure, a number of people are learning things on this subject they wouldn't otherwise know --"
+        ]
+      },
+      {
+        "index": 21,
+        "text_id": "5149245",
+        "year": "2012",
+        "genre": "BLOG",
+        "source": "...scerningtheworld.com",
+        "text": "#is running an Alpha course at the moment which a number of people are attending. Those being confirmed this summer are attending the course",
+        "cells": [
+          "21",
+          "5149245",
+          "2012",
+          "BLOG",
+          "...scerningtheworld.com",
+          "#is running an Alpha course at the moment which a number of people are attending. Those being confirmed this summer are attending the course"
+        ]
+      },
+      {
+        "index": 22,
+        "text_id": "5202164",
+        "year": "2012",
+        "genre": "BLOG",
+        "source": "perezhilton.com",
+        "text": "#about to your nines you need to money. A number of people are generally defer a diet by means of the thought of demanding",
+        "cells": [
+          "22",
+          "5202164",
+          "2012",
+          "BLOG",
+          "perezhilton.com",
+          "#about to your nines you need to money. A number of people are generally defer a diet by means of the thought of demanding"
+        ]
+      },
+      {
+        "index": 23,
+        "text_id": "5207641",
+        "year": "2012",
+        "genre": "BLOG",
+        "source": "theoildrum.com",
+        "text": "#gas producers all lemmings looking for a cliff? A number of people are beginning to seriously question the gas shale phenomenon given the continuing",
+        "cells": [
+          "23",
+          "5207641",
+          "2012",
+          "BLOG",
+          "theoildrum.com",
+          "#gas producers all lemmings looking for a cliff? A number of people are beginning to seriously question the gas shale phenomenon given the continuing"
+        ]
+      },
+      {
+        "index": 24,
+        "text_id": "4103301",
+        "year": "2011",
+        "genre": "SPOK",
+        "source": "NPR_TellMore",
+        "text": "#encounter with President Bush over a key point. A number of people are offended by that characterization. Are you? RICE: Well,",
+        "cells": [
+          "24",
+          "4103301",
+          "2011",
+          "SPOK",
+          "NPR_TellMore",
+          "#encounter with President Bush over a key point. A number of people are offended by that characterization. Are you? RICE: Well,"
+        ]
+      },
+      {
+        "index": 25,
+        "text_id": "4103507",
+        "year": "2011",
+        "genre": "SPOK",
+        "source": "PBS_NewsHour",
+        "text": "#was bombed, two bombs. One bomb, a number of people are killed. There's injured. People are rushing to the",
+        "cells": [
+          "25",
+          "4103507",
+          "2011",
+          "SPOK",
+          "PBS_NewsHour",
+          "#was bombed, two bombs. One bomb, a number of people are killed. There's injured. People are rushing to the"
+        ]
+      },
+      {
+        "index": 26,
+        "text_id": "4104298",
+        "year": "2011",
+        "genre": "SPOK",
+        "source": "CNN Newsroom",
+        "text": "#right? VERCAMMEN: Yes, there sure are. A number of people are being honored. One of the true characters, a man",
+        "cells": [
+          "26",
+          "4104298",
+          "2011",
+          "SPOK",
+          "CNN Newsroom",
+          "#right? VERCAMMEN: Yes, there sure are. A number of people are being honored. One of the true characters, a man"
+        ]
+      },
+      {
+        "index": 27,
+        "text_id": "4082225",
+        "year": "2010",
+        "genre": "SPOK",
+        "source": "CBS_Early",
+        "text": "#even more so common now because of the recession a number of people are asking children, grandchildren are asking their grandparents to co-sign.",
+        "cells": [
+          "27",
+          "4082225",
+          "2010",
+          "SPOK",
+          "CBS_Early",
+          "#even more so common now because of the recession a number of people are asking children, grandchildren are asking their grandparents to co-sign."
+        ]
+      },
+      {
+        "index": 28,
+        "text_id": "4026952",
+        "year": "2008",
+        "genre": "ACAD",
+        "source": "TheologStud",
+        "text": "#have never been overcome. \" Second, \" a number of people are excluded from political life in the country in which they live",
+        "cells": [
+          "28",
+          "4026952",
+          "2008",
+          "ACAD",
+          "TheologStud",
+          "#have never been overcome. \" Second, \" a number of people are excluded from political life in the country in which they live"
+        ]
+      },
+      {
+        "index": 29,
+        "text_id": "166895",
+        "year": "2006",
+        "genre": "SPOK",
+        "source": "NPR_ATCW",
+        "text": "#issue is being debated across the country, and a number of people are being persuaded that same sex marriage, or if not that",
+        "cells": [
+          "29",
+          "166895",
+          "2006",
+          "SPOK",
+          "NPR_ATCW",
+          "#issue is being debated across the country, and a number of people are being persuaded that same sex marriage, or if not that"
+        ]
+      },
+      {
+        "index": 30,
+        "text_id": "167699",
+        "year": "2006",
+        "genre": "SPOK",
+        "source": "MSNBC_Matt",
+        "text": "#see what it is. MATTHEWS: Opus Dei said a number of people are coming by their headquarters at 34th and Lexington in New York",
+        "cells": [
+          "30",
+          "167699",
+          "2006",
+          "SPOK",
+          "MSNBC_Matt",
+          "#see what it is. MATTHEWS: Opus Dei said a number of people are coming by their headquarters at 34th and Lexington in New York"
+        ]
+      },
+      {
+        "index": 31,
+        "text_id": "2026846",
+        "year": "2006",
+        "genre": "MAG",
+        "source": "Ebony",
+        "text": "# 26848 A number of people are still shedding the pounds without surgery and medication Photograph Weighing 753",
+        "cells": [
+          "31",
+          "2026846",
+          "2006",
+          "MAG",
+          "Ebony",
+          "# 26848 A number of people are still shedding the pounds without surgery and medication Photograph Weighing 753"
+        ]
+      },
+      {
+        "index": 32,
+        "text_id": "1012336",
+        "year": "2005",
+        "genre": "FIC",
+        "source": "Ploughshares",
+        "text": "#face with a cop kneeling on his back. A number of people are staggering and spluttering after a good dose of tear gas.",
+        "cells": [
+          "32",
+          "1012336",
+          "2005",
+          "FIC",
+          "Ploughshares",
+          "#face with a cop kneeling on his back. A number of people are staggering and spluttering after a good dose of tear gas."
+        ]
+      },
+      {
+        "index": 33,
+        "text_id": "5259360",
+        "year": "2005",
+        "genre": "MOV",
+        "source": "The Upside of Anger",
+        "text": "#... of angry demonstrators here today, proving that a number of people are willing to go and fight. - The feeling is that",
+        "cells": [
+          "33",
+          "5259360",
+          "2005",
+          "MOV",
+          "The Upside of Anger",
+          "#... of angry demonstrators here today, proving that a number of people are willing to go and fight. - The feeling is that"
+        ]
+      },
+      {
+        "index": 34,
+        "text_id": "55474",
+        "year": "2004",
+        "genre": "SPOK",
+        "source": "CBS_Morning",
+        "text": "#think that a number of the so-called fixes that a number of people are proposing would actually make the situation worse. ANDREWS: Some",
+        "cells": [
+          "34",
+          "55474",
+          "2004",
+          "SPOK",
+          "CBS_Morning",
+          "#think that a number of the so-called fixes that a number of people are proposing would actually make the situation worse. ANDREWS: Some"
+        ]
+      },
+      {
+        "index": 35,
+        "text_id": "16393",
+        "year": "2002",
+        "genre": "SPOK",
+        "source": "Fox_Sunday",
+        "text": "#, there's another issue, Fred, that a number of people are trying to bring up, which is Enron. There was",
+        "cells": [
+          "35",
+          "16393",
+          "2002",
+          "SPOK",
+          "Fox_Sunday",
+          "#, there's another issue, Fred, that a number of people are trying to bring up, which is Enron. There was"
+        ]
+      },
+      {
+        "index": 36,
+        "text_id": "2022497",
+        "year": "2002",
+        "genre": "MAG",
+        "source": "USAToday",
+        "text": "#features can not be seen. Through flashbacks, a number of people are introduced, virtually all of them involved in unsatisfying relationships and",
+        "cells": [
+          "36",
+          "2022497",
+          "2002",
+          "MAG",
+          "USAToday",
+          "#features can not be seen. Through flashbacks, a number of people are introduced, virtually all of them involved in unsatisfying relationships and"
+        ]
+      },
+      {
+        "index": 37,
+        "text_id": "244596",
+        "year": "1999",
+        "genre": "SPOK",
+        "source": "ABC_Nightline",
+        "text": "#off to the poor victims in that city because a number of people are going to say,' You know, I may want",
+        "cells": [
+          "37",
+          "244596",
+          "1999",
+          "SPOK",
+          "ABC_Nightline",
+          "#off to the poor victims in that city because a number of people are going to say,' You know, I may want"
+        ]
+      },
+      {
+        "index": 38,
+        "text_id": "228022",
+        "year": "1998",
+        "genre": "SPOK",
+        "source": "CNN_Talkback",
+        "text": "#at this point. The Paula Jones case, a number of people are saying, is looking good now, good chance of a",
+        "cells": [
+          "38",
+          "228022",
+          "1998",
+          "SPOK",
+          "CNN_Talkback",
+          "#at this point. The Paula Jones case, a number of people are saying, is looking good now, good chance of a"
+        ]
+      },
+      {
+        "index": 39,
+        "text_id": "229632",
+        "year": "1998",
+        "genre": "SPOK",
+        "source": "Fox_Hume",
+        "text": "#in so many words, to lie. So a number of people are conceivably, you know, in jeopardy on this. Vernon",
+        "cells": [
+          "39",
+          "229632",
+          "1998",
+          "SPOK",
+          "Fox_Hume",
+          "#in so many words, to lie. So a number of people are conceivably, you know, in jeopardy on this. Vernon"
+        ]
+      },
+      {
+        "index": 40,
+        "text_id": "1050331",
+        "year": "1997",
+        "genre": "FIC",
+        "source": "Mov:AbsolutePower",
+        "text": "#RECEPTION AREA - NIGHT 346A # Luther enters. A number of people are present, all of them listening to a large radio,",
+        "cells": [
+          "40",
+          "1050331",
+          "1997",
+          "FIC",
+          "Mov:AbsolutePower",
+          "#RECEPTION AREA - NIGHT 346A # Luther enters. A number of people are present, all of them listening to a large radio,"
+        ]
+      },
+      {
+        "index": 41,
+        "text_id": "225871",
+        "year": "1996",
+        "genre": "SPOK",
+        "source": "CBS_Morning",
+        "text": "#being honored tonight will -- will enjoy that. A number of people are not coming tonight. They're simply not coming -- because",
+        "cells": [
+          "41",
+          "225871",
+          "1996",
+          "SPOK",
+          "CBS_Morning",
+          "#being honored tonight will -- will enjoy that. A number of people are not coming tonight. They're simply not coming -- because"
+        ]
+      },
+      {
+        "index": 42,
+        "text_id": "2002680",
+        "year": "1995",
+        "genre": "MAG",
+        "source": "MotherEarth",
+        "text": "#riper product to the stores before it does. A number of people are looking at the same sort of technology to help with fresh",
+        "cells": [
+          "42",
+          "2002680",
+          "1995",
+          "MAG",
+          "MotherEarth",
+          "#riper product to the stores before it does. A number of people are looking at the same sort of technology to help with fresh"
+        ]
+      },
+      {
+        "index": 43,
+        "text_id": "3033944",
+        "year": "1994",
+        "genre": "NEWS",
+        "source": "WashPost",
+        "text": "#so he will not lose his health insurance. A number of people are scheduling elective surgery before their health benefits run out. Many",
+        "cells": [
+          "43",
+          "3033944",
+          "1994",
+          "NEWS",
+          "WashPost",
+          "#so he will not lose his health insurance. A number of people are scheduling elective surgery before their health benefits run out. Many"
+        ]
+      },
+      {
+        "index": 44,
+        "text_id": "231733",
+        "year": "1993",
+        "genre": "SPOK",
+        "source": "Ind_Limbaugh",
+        "text": "#us. By the way, a lo -- a number of people are very upset at what's happened to Michael Jackson. Very",
+        "cells": [
+          "44",
+          "231733",
+          "1993",
+          "SPOK",
+          "Ind_Limbaugh",
+          "#us. By the way, a lo -- a number of people are very upset at what's happened to Michael Jackson. Very"
+        ]
+      },
+      {
+        "index": 45,
+        "text_id": "242979",
+        "year": "1993",
+        "genre": "SPOK",
+        "source": "ABC_Nightline",
+        "text": "#area, have the economy back enough so that a number of people are employed. The economy is starting to rejuvenate. There's",
+        "cells": [
+          "45",
+          "242979",
+          "1993",
+          "SPOK",
+          "ABC_Nightline",
+          "#area, have the economy back enough so that a number of people are employed. The economy is starting to rejuvenate. There's"
+        ]
+      },
+      {
+        "index": 46,
+        "text_id": "4001575",
+        "year": "1993",
+        "genre": "ACAD",
+        "source": "ReVision",
+        "text": "#, to the end of the experience. # A number of people are coming forward now to tell of their experiences who had not",
+        "cells": [
+          "46",
+          "4001575",
+          "1993",
+          "ACAD",
+          "ReVision",
+          "#, to the end of the experience. # A number of people are coming forward now to tell of their experiences who had not"
+        ]
+      },
+      {
+        "index": 47,
+        "text_id": "231435",
+        "year": "1992",
+        "genre": "SPOK",
+        "source": "ABC_Primetime",
+        "text": "#, even if the diagnosis is wrong. So a number of people are working in Russia right now to change the diagnoses so that",
+        "cells": [
+          "47",
+          "231435",
+          "1992",
+          "SPOK",
+          "ABC_Primetime",
+          "#, even if the diagnosis is wrong. So a number of people are working in Russia right now to change the diagnoses so that"
+        ]
+      },
+      {
+        "index": 48,
+        "text_id": "231609",
+        "year": "1992",
+        "genre": "SPOK",
+        "source": "Ind_Limbaugh",
+        "text": "#a half here -- the press and -- and a number of people are all over you because you won't debate Clinton on his",
+        "cells": [
+          "48",
+          "231609",
+          "1992",
+          "SPOK",
+          "Ind_Limbaugh",
+          "#a half here -- the press and -- and a number of people are all over you because you won't debate Clinton on his"
+        ]
+      },
+      {
+        "index": 49,
+        "text_id": "242290",
+        "year": "1991",
+        "genre": "SPOK",
+        "source": "ABC_Nightline",
+        "text": "#faced with a massive and unprecedented pollution event and a number of people are trying to understand exactly what is happening there, what is",
+        "cells": [
+          "49",
+          "242290",
+          "1991",
+          "SPOK",
+          "ABC_Nightline",
+          "#faced with a massive and unprecedented pollution event and a number of people are trying to understand exactly what is happening there, what is"
+        ]
+      },
+      {
+        "index": 50,
+        "text_id": "3040214",
+        "year": "1991",
+        "genre": "NEWS",
+        "source": "Atlanta",
+        "text": "#will be the tenant's decision. \" # A number of people are already concerned that outsiders might influence that decision to the detriment",
+        "cells": [
+          "50",
+          "3040214",
+          "1991",
+          "NEWS",
+          "Atlanta",
+          "#will be the tenant's decision. \" # A number of people are already concerned that outsiders might influence that decision to the detriment"
+        ]
+      },
+      {
+        "index": 51,
+        "text_id": "241947",
+        "year": "1990",
+        "genre": "SPOK",
+        "source": "ABC_Nightline",
+        "text": "#course, remains to be seen, but apparently a number of people are pressing that position upon him and those around him KOPPEL I",
+        "cells": [
+          "51",
+          "241947",
+          "1990",
+          "SPOK",
+          "ABC_Nightline",
+          "#course, remains to be seen, but apparently a number of people are pressing that position upon him and those around him KOPPEL I"
+        ]
+      },
+      {
+        "index": 52,
+        "text_id": "1050010",
+        "year": "1990",
+        "genre": "FIC",
+        "source": "Mov:Ghost",
+        "text": "#face a raised platform with nothing on it. A number of people are sitting there, mostly women. One gets the sense that",
+        "cells": [
+          "52",
+          "1050010",
+          "1990",
+          "FIC",
+          "Mov:Ghost",
+          "#face a raised platform with nothing on it. A number of people are sitting there, mostly women. One gets the sense that"
+        ]
+      }
+    ]
+  }
+}

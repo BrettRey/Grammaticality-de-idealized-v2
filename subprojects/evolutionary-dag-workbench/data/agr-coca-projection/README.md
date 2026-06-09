@@ -15,6 +15,8 @@ This directory is reserved for a confirmatory COCA run testing the `AGR` module.
 - `coded/bunch-animate-kwic-coding.csv`: row-level coding for the animate `bunch` tranche.
 - `coded/bunch-inanimate-kwic-coding.csv`: row-level coding for the inanimate `bunch` tranche.
 - `coded/majority-minority-kwic-coding.csv`: row-level coding for the majority/minority tranche.
+- `coded/known-qn-kwic-coding.csv`: row-level coding for the known number-transparent QN
+  calibration tranche.
 
 Future run artifacts should use:
 
@@ -53,6 +55,7 @@ Current completed tranche:
 - `bunch-animate-confirmatory`, list-result counts plus KWIC filtering via result-row clicks.
 - `bunch-inanimate-confirmatory`, list-result counts plus KWIC filtering via result-row clicks.
 - `majority-minority-confirmatory`, list-result counts plus KWIC filtering via result-row clicks.
+- `known-qn-calibration`, list-result counts plus KWIC filtering via result-row clicks.
 
 The filtered target counts for the animate tranche are 71 plural agreement rows and 1 singular
 agreement row across `a bunch of people/kids` with `are/were/is/was`. Five of six raw singular
@@ -66,6 +69,12 @@ by itself a general agreement result.
 The filtered target counts for the majority/minority tranche are 105 plural agreement rows and 0
 singular agreement rows across `a/the majority of people` and `a minority of voters`. The
 `minority` query pair returned zero raw rows; the positive evidence comes from `majority`.
+
+The known-QN calibration tranche reproduces expected directions after KWIC filtering: `a number of
+people` yields 98 filtered plural target rows across `are/were` after excluding two grammar-example
+rows, while `a lot of money is` yields 42 filtered singular target rows and `a lot of money are`
+yields 0 licensed plural target rows. One `a lot of money are` row was retained as
+denominator-only nonstandard/error evidence, not as licensed plural agreement.
 
 Do not treat raw COCA frequency as licensing. The lane measures production/attestation over
 opportunity sets and uses KWIC filtering to distinguish genuine agreement realizations from query

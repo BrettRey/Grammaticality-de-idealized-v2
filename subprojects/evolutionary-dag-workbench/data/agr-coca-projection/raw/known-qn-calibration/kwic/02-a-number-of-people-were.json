@@ -1,0 +1,1358 @@
+{
+  "query": "a number of people were",
+  "corpus": "coca",
+  "retrieved_at": "2026-06-09T16:33:40.160Z",
+  "method": "list-result-click",
+  "list": {
+    "url": "https://www.english-corpora.org/coca/x2.asp",
+    "text": "ON CLICK: \t    \t     ( EN )\t \t   \t    \t    \t    \t    \t (?)   \t   AI:   CATEGORIZE  *\n\nHELP\t\t\t  ALL FORMS\n48\tFREQ\n1\t\t\t  A NUMBER OF PEOPLE WERE\t48\n\t1.785 seconds",
+    "tables": [
+      [
+        [
+          "SAVE LIST",
+          "NAME OF LIST",
+          "",
+          ""
+        ],
+        [
+          "Select entries below to add these to a \"customized word list\", and then later use this list as part of a search. For example, if you add 4 or 5 entries\nbelow to the list myList, then you could use this as part of a search, like large @myList. More information:"
+        ]
+      ],
+      [
+        [
+          "ON CLICK: \t    \t     ( EN )\t \t   \t    \t    \t    \t    \t (?)   \t   AI:   CATEGORIZE  *",
+          ""
+        ],
+        [
+          "Click on  below, and then click on any word in the highlighted entry, to see detailed information on the word.\nTo come back to this page, click on  on the \"word page\".\n [Close]"
+        ],
+        [
+          "Click on\nbelow to \"save\" this word or phrase. Then click on\nat the top of the corpus to access this list at any point in the future.\n\n [Close]"
+        ],
+        [
+          "By default, when you click on one of the words/phrases below, you will see the \"Keyword in Context\" view in the tab to the right.\nBut you can also now access \"external\" resources for any of the words/phrases that you see below. To do so, click on one of the types of resources above\n(e.g. images or translation) and then click on the word/phrase below.\nNote: To change the language for translation, click on the two letter code after\nTRANSLATE above. This code will be saved for future access to the corpus as well. If it shows [??], you haven't yet selected a language.\n\n  [Close]"
+        ]
+      ],
+      [
+        [
+          "ON CLICK:",
+          "",
+          "( EN )",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "(?)",
+          "AI:   CATEGORIZE  *"
+        ]
+      ],
+      [
+        [
+          "In addition to the frequency of a word or phrase, you can also now see the number of texts in which it occurs. This can help you to eliminate words and phrases that\noccur in just a few texts. To enable this feature, click on OPTIONS / SHOW # TEXTS in the search form (show me how).\nMore information"
+        ]
+      ],
+      [
+        [
+          "HELP",
+          "",
+          "",
+          "",
+          "ALL FORMS\n48",
+          "FREQ",
+          ""
+        ],
+        [
+          "1",
+          "",
+          "",
+          "",
+          "A NUMBER OF PEOPLE WERE",
+          "48",
+          ""
+        ]
+      ],
+      [
+        [
+          "",
+          "1.785 seconds"
+        ]
+      ]
+    ]
+  },
+  "kwic": {
+    "url": "https://www.english-corpora.org/coca/x3.asp?x2w=y&xx=1&w10=a&w11=number&w12=of&w13=people&w14=were&r=",
+    "text": "(SHUFFLE)     \t ENTRIES: 46 TEXTS\n     LIMITS: NONE\nSORTING: YEAR , GENRE\n     +CONTEXT\t      \t   \t    \t  HELP     \t    AI: patterns\n1\t2018\tSPOK\tNPR_ATC\t  #a half a mile at some points. And a number of people were wearing face masks and filters. And cold symptoms, things\n2\t2017\tMAG\tThe Verge\t  #reputation sullied by the Note 7 debacle. # A number of people were reportedly still holding onto their Note 7s in January, despite\n3\t2015\tMAG\tAtlantic\t  #be no choice. \" # Reports suggested that a number of people were dead at the market. I said goodbye, and took\n4\t2013\tSPOK\tPBS_Newshour\t  #by a second blast a few seconds later. A number of people were bloodied and had wounded arms and legs. MAN# They said\n5\t2012\tSPOK\tFox: Fox News Watch\t  #want to scare away women voters. But that a number of people were struck, as Cal said, by the president's patronizing\n6\t2012\tMOV\tOwned & Operated\t  #system, we can't envisage anything different. A number of people were speaking about, \" Well why do people break windows and\n7\t2012\tWEB\tgazette.com\t  #secretary of the El Paso County GOP, said a number of people were calling the bill \" Amycare \" and \" Colorado's prescription\n8\t2012\tWEB\tblog.editage.com\t  #a number of day s passed \" or \" a number of people were present. \" Do not be misled by the indefinite article\n9\t2012\tWEB\tdamninteresting.com\t  #that there was an experiment carried out, where a number of people were given a newly constructed crossword -- just out that very morning\n10\t2012\tWEB\tfanfiction.net\t  #Shakespeare. # A series of creaks indicated that a number of people were coming up the stairs. Tensing, he quietly told his\n11\t2012\tWEB\ttranscripts.cnn.com\t  #at a specific location. During this raid, a number of people were taken into custody by the U.S. military, among them is\n12\t2012\tWEB\ttranscripts.cnn.com\t  #of Tikrit. The result of that raid was a number of people were captured, including one individual believed to be Saddam Hussein.\n13\t2012\tWEB\ttranscripts.cnn.com\t  #or in Tikrit. And according to officials, a number of people were captured in this raid and among them is an individual initially\n14\t2012\tBLOG\tzombietime.com\t  ## First, as has been pointed out, a number of people were arrested for threatening Pres. Bush. I agree that such threats\n15\t2012\tBLOG\t...rs.pressdemocrat.com\t  #where they typically play tighter and more conservative. A number of people were on here last week ranting about how bad the passing offense\n16\t2012\tBLOG\tdailykos.com\t  #in SA doing research. One of the topics a number of people were writing about was how the SAn government didn't really allow\n17\t2011\tSPOK\tFox_Sunday\t  #focus now on Paterno -- but it seems that a number of people were and are more concerned about football, more concerned about the\n18\t2008\tSPOK\tPBS_Newshour\t  #last Tuesday. And I think in some ways a number of people were -- I wont say excited, but realistic about looking at\n19\t2006\tSPOK\tNPR_Saturday\t  #line and can't condemn my president. Which a number of people were shocked to hear from Charlie Rangel, who is a very\n20\t2006\tSPOK\tNPR_ATCW\t  #Greensboro. There was an incident in 1979 where a number of people were killed because there was a protest against a Ku Klux Klan\n21\t2004\tFIC\tFantasySciFi\t  #burning, and there was no more smoke. A number of people were walking around down near the gully where Captain Dial and I\n22\t2004\tFIC\tBk:Birthright\t  #, and the bones were deemed very old, a number of people weren't sure if they were pleased or disappointed. But for\n23\t2004\tTV\tThe West Wing\t  #How serious? Bunch of imams throwing stones. A number of people were injured. And they found Strasser, the guy at the\n24\t2003\tSPOK\tCNN_SatMorn\t  #couldn't listen, they were too angry. A number of people were wounded. Some were taken into a nearby mosque. They\n25\t2003\tFIC\tBkJuv:BetrothedToPrince\t  #cows were munching contentedly in the vegetable garden while a number of people were dancing around them, yelling and waving hats and brooms and\n26\t2003\tMOV\tSearch for the Afghan Girl\t  #the Soviet jet fighters. At that time, a number of people were killed and injured. There was no proper medical treatment.\n27\t2002\tMAG\tAtlantic\t  #the Great Pyramid of Khufu fills them all. A number of people were in the bar. Unfortunately for business, they all worked\n28\t2001\tFIC\tAntiochRev\t  #. Then I heard subdued sobs, as if a number of people were weeping. I wandered downstairs. There, the silence was\n29\t2000\tSPOK\tNPR_ATC\t  #that I would have said the same thing if a number of people were killed as a result of that. So it's easy\n30\t2000\tSPOK\tCNN_SunMorn\t  #hurt. A few people were pushed around. A number of people were sprayed with pepper spray, but there were no serious injuries\n31\t2000\tMAG\tPsychToday\t  #of PT. Sidebar THE \" PSI \" AWARD A number of people were helpful in the production of PT's \" Psi \" statue\n32\t2000\tACAD\tAmerIndianQ\t  #proportion of the population decrease he noted was because a number of people were carried on the census rolls who had been removed to and\n33\t2000\tACAD\tABAJournal\t  #. # \" When I was a prosecutor, a number of people were caught lying under a plea bargaining agreement with our office,\n34\t1999\tSPOK\tCNN_Talkback\t  #? PIERRE-THOMAS-CNN: Bobbie, as you stated, a number of people were arrested yesterday, but so far, there is no link\n35\t1998\tFIC\tSouthwestRev\t  #of the Bar Mitzvah party. He saw that a number of people were drifting off into an adjoining room and he followed them.\n36\t1997\tNEWS\tDenver\t  #vehicles lined the roads in eastern Colorado, and a number of people were still unaccounted for Saturday evening. # Gov. Roy Romer\n37\t1997\tACAD\tArmedForces\t  #taken very seriously. During the war for independence a number of people were executed by the guerrillas on the claim that they were practicing\n38\t1995\tSPOK\tCBS_FaceNation\t  #'ve admitted they made mistakes. In fact, a number of people were fired, including the head of the ATF, for that\n39\t1995\tSPOK\tInd_Limbaugh\t  #everybody was -- and Margaret Thatcher an -- and a number of people were pressuring the United States to get involved. And the president\n40\t1995\tSPOK\tNPR_Weekend\t  #parents, children, and spouses as well. A number of people were thankful for good health, especially in the aftermath of serious\n41\t1995\tACAD\tMercury\t  #small town nestled in the Appalachian foothills, and a number of people were taking turns at telescopes on the hilltop. A woman with\n42\t1993\tFIC\tAtlantic\t  #I could see at the end a room where a number of people were chopping vegetables. # \" Come here quickly, \" whispered\n43\t1993\tMAG\tRollingStone\t  #anything. The sun was shining in Rio. A number of people were sampling weenies which had been cooked in the solar box.\n44\t1993\tNEWS\tWashPost\t  #Though the attack occurred in daylight, and though a number of people were standing outside in an adjacent courtyard, everyone at the scene\n45\t1992\tSPOK\tABC_Brinkley\t  #been so predictable. Mr. BRINKLEY: Well, a number of people were killed in the Panama action and they haven't forgotten it-\n46\t1991\tSPOK\tABC_Brinkley\t  #of acute shortages of medicines and the fact that a number of people were being taken in there to have leg amputations. These were\n47\t1991\tSPOK\tPBS_Newshour\t  #an ominous sign of such ethnic conflict erupting. A number of people were killed in a gun battle on the bridge over the Dinesta\n48\t1991\tACAD\tArabStudies\t  #unprecedented rate, hundreds a day per policeman. A number of people were charged with having failed to stop at a stop sign,",
+    "tables": [
+      [
+        [
+          "(SHUFFLE)",
+          "ENTRIES: 46 TEXTS\n     LIMITS: NONE\nSORTING: YEAR , GENRE"
+        ]
+      ],
+      [
+        [
+          "",
+          "SORT",
+          "LIMIT",
+          "Examples / notes"
+        ],
+        [
+          "Genre",
+          "--",
+          "-----\n\n\t\t\tSpoken\n\t\t\tFiction\n\t\t\tMagazine\n\t\t\tNewspaper\n\t\t\tAcademic\n\t\t\tWeb\n\t\t\tBlog\n\t\t\tTV/Movies\n-----\n\nSPOK:ABC\n\nSPOK:NBC\n\nSPOK:CBS\n\nSPOK:CNN\n\nSPOK:FOX\n\nSPOK:MSNBC\n\nSPOK:PBS\n\nSPOK:NPR\n\nSPOK:Indep\n\nFIC:Gen (Book)\n\nFIC:Gen (Jrnl)\n\nFIC:SciFi/Fant\n\nFIC:Juvenile\n\nFIC:Movies\n\nFIC:Fan Fiction\n\nMAG:News/Opin\n\nMAG:Financial\n\nMAG:Sci/Tech\n\nMAG:Soc/Arts\n\nMAG:Religion\n\nMAG:Sports\n\nMAG:Entertain\n\nMAG:Home/Health\n\nMAG:Afric-Amer\n\nMAG:Children\n\nMAG:Women/Men\n\nNEWS:Misc\n\nNEWS:News_Intl\n\nNEWS:News_Natl\n\nNEWS:News_Local\n\nNEWS:Money\n\nNEWS:Life\n\nNEWS:Sports\n\nNEWS:Editorial\n\nACAD:History\n\nACAD:Education\n\nACAD:Geog/SocSci\n\nACAD:Law/PolSci\n\nACAD:Humanities\n\nACAD:Phil/Rel\n\nACAD:Sci/Tech\n\nACAD:Medicine\n\nACAD:Misc\n\nACAD:Business\n\nWeb:Acad\n\nWeb:Arg\n\nWeb:Fic\n\nWeb:Info\n\nWeb:Instr\n\nWeb:Legal\n\nWeb:News\n\nWeb:Pers\n\nWeb:Revw\n\nWeb:Misc\n\nBlog:Acad\n\nBlog:Arg\n\nBlog:Fic\n\nBlog:Info\n\nBlog:Instr\n\nBlog:Legal\n\nBlog:News\n\nBlog:Pers\n\nBlog:Prom\n\nBlog:Revw\n\nBlog:Misc\n\nMov:Action\n\nMov:Adult\n\nMov:Adv\n\nMov:Anim\n\nMov:Biog\n\nMov:Comedy\n\nMov:Crime\n\nMov:Docum\n\nMov:Drama\n\nMov:Fam\n\nMov:Fantasy\n\nMov:Horror\n\nMov:Music\n\nMov:Myst\n\nMov:Romance\n\nMov:Sci-Fi\n\nMov:Short\n\nMov:Thril\n\nMov:N/A\n\nTV:Action\n\nTV:Adv\n\nTV:Anim\n\nTV:Comedy\n\nTV:Crime\n\nTV:Docum\n\nTV:Drama\n\nTV:Game\n\nTV:Horror\n\nTV:Reality\n\nTV:Sci-Fi\n\nTV:Misc"
+        ],
+        [
+          "Year",
+          "--",
+          "to",
+          "1992 to 1997"
+        ],
+        [
+          "Source",
+          "--",
+          "",
+          "New York Times or bbc.co.uk"
+        ]
+      ],
+      [
+        [
+          "Because both the node word and the collocate occur more than 400,000 times in the corpus, the entries below come from a smaller subset\nof the entire corpus, which represents about 5-10% of the complete corpus."
+        ]
+      ],
+      [
+        [
+          "+CONTEXT",
+          "Click on audio icon at translation site to hear text.",
+          "Translate to EN\n(Change and then reload this page)",
+          "Select entries below | ADD TO\n\n\t----------\n\na\n\nplace that\n\n NEW\n\n [?]\n  SEE LISTS\n\nEN:\n\nAfrikaans\nAlbanian\nAmharic\nArabic\nArmenian\nAzerbaijani\nBasque\nBelarusian\nBengali\nBosnian\nBulgarian\nBurmese\nCatalan\nCebuano\nChichewa\nChinese (S)\nChinese (T)\nCorsican\nCroatian\nCzech\nDanish\nDutch\nEnglish\nEsperanto\nEstonian\nFilipino\nFinnish\nFrench\nFrisian\nGalician\nGeorgian\nGerman\nGreek\nGujarati\nHaitian C\nHausa\nHawaiian\nHebrew\nHindi\nHmong\nHungarian\nIcelandic\nIgbo\nIndonesian\nIrish\nItalian\nJapanese\nJavanese\nKannada\nKazakh\nKhmer\nKorean\nKurdish\nKyrgyz\nLao\nLatin\nLatvian\nLithuanian\nLuxembourgish\nMacedonian\nMalagasy\nMalay\nMalayalam\nMaltese\nMaori\nMarathi\nMongolian\nNepali\nNorwegian\nPashto\nPersian\nPolish\nPortuguese\nPunjabi\nRomanian\nRussian\nSamoan\nScots Gaelic\nSerbian\nSesotho\nShona\nSindhi\nSinhala\nSlovak\nSlovenian\nSomali\nSpanish\nSundanese\nSwahili\nSwedish\nTajik\nTamil\nTelugu\nThai\nTurkish\nUkrainian\nUrdu\nUzbek\nVietnamese\nWelsh\nXhosa\nYiddish\nYoruba\nZulu\n\nALL\n\n<< Change language\n\n Select entries below |\nThen click button to analyze text; see word definitions; find related phrases",
+          "",
+          "COCA\niWeb",
+          "DIC:\n\nD\nM\nO\nC\nG\nE",
+          "",
+          "",
+          "",
+          "",
+          "HELP",
+          "AI: patterns"
+        ]
+      ],
+      [
+        [
+          "SINGLE ENTRY / LINE\n\n(CLOSE HELP)"
+        ],
+        [
+          "",
+          "Listen to the text (click on\n\t\t at the translation website)"
+        ],
+        [
+          "",
+          "Translate the text (after the first translation, you can change the language in the\n\t\tblue section above)"
+        ],
+        [
+          "",
+          "Select individual words, and then see info on words (see next\n\t\tsection). Click again to deselect."
+        ],
+        [
+          "SINGLE WORD (choose from words, after clicking\n\t\t on a given line).\n\t\t(See example)"
+        ],
+        [
+          "{ WORD }",
+          "Search for the word in the corpus (from main search page: list,\n\t\tchart, collocates, etc)"
+        ],
+        [
+          "WORD PAGE",
+          "(From COCA or iWeb) Collocates, related topics, related words,\n\t\tsynonyms, clusters, KWIC, and more"
+        ],
+        [
+          "DICTIONARY",
+          "Links to entries from several online dictionaries (Oxford,\n\t\tMerriam-Webster, etymology, etc)"
+        ],
+        [
+          "",
+          "Translation, web search, image search, video/pronunciation"
+        ],
+        [
+          "MULTIPLE ENTRIES (see links in gray above; click on text entries below to add\n\t\tto group)"
+        ],
+        [
+          "SAVE",
+          "",
+          "Save entries for later use. Can also move, delete, and\n\t\texpand entries. Categorize entries by clicking on A|B|C in entry."
+        ],
+        [
+          "TRANSLATE",
+          "",
+          "See translation for multiple lines, with original lines in English\n\t\tand their translations grouped together; you can choose from 100+ languages."
+        ],
+        [
+          "ANALYZE",
+          "",
+          "Create \"text\" composed of selected lines, and then see keywords,\n\t\tfind related phrases for words in the text, and see detailed \"word\"\n\t\tpages for any word in the \"text\"."
+        ]
+      ],
+      [
+        [
+          "Please consider supporting the corpora by getting an (individual)\npremium license or a (university-wide)\nacademic license.\nIf you have a license, you won't see these messages anymore."
+        ]
+      ],
+      [
+        [
+          "1",
+          "5001037",
+          "2018",
+          "SPOK",
+          "NPR_ATC",
+          "#a half a mile at some points. And a number of people were wearing face masks and filters. And cold symptoms, things"
+        ],
+        [
+          "2",
+          "4184084",
+          "2017",
+          "MAG",
+          "The Verge",
+          "#reputation sullied by the Note 7 debacle. # A number of people were reportedly still holding onto their Note 7s in January, despite"
+        ],
+        [
+          "3",
+          "4139411",
+          "2015",
+          "MAG",
+          "Atlantic",
+          "#be no choice. \" # Reports suggested that a number of people were dead at the market. I said goodbye, and took"
+        ],
+        [
+          "4",
+          "4124292",
+          "2013",
+          "SPOK",
+          "PBS_Newshour",
+          "#by a second blast a few seconds later. A number of people were bloodied and had wounded arms and legs. MAN# They said"
+        ],
+        [
+          "5",
+          "4123420",
+          "2012",
+          "SPOK",
+          "Fox: Fox News Watch",
+          "#want to scare away women voters. But that a number of people were struck, as Cal said, by the president's patronizing"
+        ],
+        [
+          "6",
+          "5218039",
+          "2012",
+          "MOV",
+          "Owned & Operated",
+          "#system, we can't envisage anything different. A number of people were speaking about, \" Well why do people break windows and"
+        ],
+        [
+          "7",
+          "5036371",
+          "2012",
+          "WEB",
+          "gazette.com",
+          "#secretary of the El Paso County GOP, said a number of people were calling the bill \" Amycare \" and \" Colorado's prescription"
+        ],
+        [
+          "8",
+          "5049925",
+          "2012",
+          "WEB",
+          "blog.editage.com",
+          "#a number of day s passed \" or \" a number of people were present. \" Do not be misled by the indefinite article"
+        ],
+        [
+          "9",
+          "5054534",
+          "2012",
+          "WEB",
+          "damninteresting.com",
+          "#that there was an experiment carried out, where a number of people were given a newly constructed crossword -- just out that very morning"
+        ],
+        [
+          "10",
+          "5078583",
+          "2012",
+          "WEB",
+          "fanfiction.net",
+          "#Shakespeare. # A series of creaks indicated that a number of people were coming up the stairs. Tensing, he quietly told his"
+        ],
+        [
+          "11",
+          "5105524",
+          "2012",
+          "WEB",
+          "transcripts.cnn.com",
+          "#at a specific location. During this raid, a number of people were taken into custody by the U.S. military, among them is"
+        ],
+        [
+          "12",
+          "5105524",
+          "2012",
+          "WEB",
+          "transcripts.cnn.com",
+          "#of Tikrit. The result of that raid was a number of people were captured, including one individual believed to be Saddam Hussein."
+        ],
+        [
+          "13",
+          "5105524",
+          "2012",
+          "WEB",
+          "transcripts.cnn.com",
+          "#or in Tikrit. And according to officials, a number of people were captured in this raid and among them is an individual initially"
+        ],
+        [
+          "14",
+          "5115401",
+          "2012",
+          "BLOG",
+          "zombietime.com",
+          "## First, as has been pointed out, a number of people were arrested for threatening Pres. Bush. I agree that such threats"
+        ],
+        [
+          "15",
+          "5135204",
+          "2012",
+          "BLOG",
+          "...rs.pressdemocrat.com",
+          "#where they typically play tighter and more conservative. A number of people were on here last week ranting about how bad the passing offense"
+        ],
+        [
+          "16",
+          "5175867",
+          "2012",
+          "BLOG",
+          "dailykos.com",
+          "#in SA doing research. One of the topics a number of people were writing about was how the SAn government didn't really allow"
+        ],
+        [
+          "17",
+          "4103287",
+          "2011",
+          "SPOK",
+          "Fox_Sunday",
+          "#focus now on Paterno -- but it seems that a number of people were and are more concerned about football, more concerned about the"
+        ],
+        [
+          "18",
+          "4031597",
+          "2008",
+          "SPOK",
+          "PBS_Newshour",
+          "#last Tuesday. And I think in some ways a number of people were -- I wont say excited, but realistic about looking at"
+        ],
+        [
+          "19",
+          "152385",
+          "2006",
+          "SPOK",
+          "NPR_Saturday",
+          "#line and can't condemn my president. Which a number of people were shocked to hear from Charlie Rangel, who is a very"
+        ],
+        [
+          "20",
+          "166699",
+          "2006",
+          "SPOK",
+          "NPR_ATCW",
+          "#Greensboro. There was an incident in 1979 where a number of people were killed because there was a protest against a Ku Klux Klan"
+        ],
+        [
+          "21",
+          "1011050",
+          "2004",
+          "FIC",
+          "FantasySciFi",
+          "#burning, and there was no more smoke. A number of people were walking around down near the gully where Captain Dial and I"
+        ],
+        [
+          "22",
+          "1033945",
+          "2004",
+          "FIC",
+          "Bk:Birthright",
+          "#, and the bones were deemed very old, a number of people weren't sure if they were pleased or disappointed. But for"
+        ],
+        [
+          "23",
+          "5228285",
+          "2004",
+          "TV",
+          "The West Wing",
+          "#How serious? Bunch of imams throwing stones. A number of people were injured. And they found Strasser, the guy at the"
+        ],
+        [
+          "24",
+          "216893",
+          "2003",
+          "SPOK",
+          "CNN_SatMorn",
+          "#couldn't listen, they were too angry. A number of people were wounded. Some were taken into a nearby mosque. They"
+        ],
+        [
+          "25",
+          "1032452",
+          "2003",
+          "FIC",
+          "BkJuv:BetrothedToPrince",
+          "#cows were munching contentedly in the vegetable garden while a number of people were dancing around them, yelling and waving hats and brooms and"
+        ],
+        [
+          "26",
+          "5211188",
+          "2003",
+          "MOV",
+          "Search for the Afghan Girl",
+          "#the Soviet jet fighters. At that time, a number of people were killed and injured. There was no proper medical treatment."
+        ],
+        [
+          "27",
+          "2016699",
+          "2002",
+          "MAG",
+          "Atlantic",
+          "#the Great Pyramid of Khufu fills them all. A number of people were in the bar. Unfortunately for business, they all worked"
+        ],
+        [
+          "28",
+          "1007608",
+          "2001",
+          "FIC",
+          "AntiochRev",
+          "#. Then I heard subdued sobs, as if a number of people were weeping. I wandered downstairs. There, the silence was"
+        ],
+        [
+          "29",
+          "77097",
+          "2000",
+          "SPOK",
+          "NPR_ATC",
+          "#that I would have said the same thing if a number of people were killed as a result of that. So it's easy"
+        ],
+        [
+          "30",
+          "213062",
+          "2000",
+          "SPOK",
+          "CNN_SunMorn",
+          "#hurt. A few people were pushed around. A number of people were sprayed with pepper spray, but there were no serious injuries"
+        ],
+        [
+          "31",
+          "2023287",
+          "2000",
+          "MAG",
+          "PsychToday",
+          "#of PT. Sidebar THE \" PSI \" AWARD A number of people were helpful in the production of PT's \" Psi \" statue"
+        ],
+        [
+          "32",
+          "4003813",
+          "2000",
+          "ACAD",
+          "AmerIndianQ",
+          "#proportion of the population decrease he noted was because a number of people were carried on the census rolls who had been removed to and"
+        ],
+        [
+          "33",
+          "4008525",
+          "2000",
+          "ACAD",
+          "ABAJournal",
+          "#. # \" When I was a prosecutor, a number of people were caught lying under a plea bargaining agreement with our office,"
+        ],
+        [
+          "34",
+          "228051",
+          "1999",
+          "SPOK",
+          "CNN_Talkback",
+          "#? PIERRE-THOMAS-CNN: Bobbie, as you stated, a number of people were arrested yesterday, but so far, there is no link"
+        ],
+        [
+          "35",
+          "1006213",
+          "1998",
+          "FIC",
+          "SouthwestRev",
+          "#of the Bar Mitzvah party. He saw that a number of people were drifting off into an adjoining room and he followed them."
+        ],
+        [
+          "36",
+          "3068459",
+          "1997",
+          "NEWS",
+          "Denver",
+          "#vehicles lined the roads in eastern Colorado, and a number of people were still unaccounted for Saturday evening. # Gov. Roy Romer"
+        ],
+        [
+          "37",
+          "4018518",
+          "1997",
+          "ACAD",
+          "ArmedForces",
+          "#taken very seriously. During the war for independence a number of people were executed by the guerrillas on the claim that they were practicing"
+        ],
+        [
+          "38",
+          "228837",
+          "1995",
+          "SPOK",
+          "CBS_FaceNation",
+          "#'ve admitted they made mistakes. In fact, a number of people were fired, including the head of the ATF, for that"
+        ],
+        [
+          "39",
+          "231946",
+          "1995",
+          "SPOK",
+          "Ind_Limbaugh",
+          "#everybody was -- and Margaret Thatcher an -- and a number of people were pressuring the United States to get involved. And the president"
+        ],
+        [
+          "40",
+          "247998",
+          "1995",
+          "SPOK",
+          "NPR_Weekend",
+          "#parents, children, and spouses as well. A number of people were thankful for good health, especially in the aftermath of serious"
+        ],
+        [
+          "41",
+          "4014073",
+          "1995",
+          "ACAD",
+          "Mercury",
+          "#small town nestled in the Appalachian foothills, and a number of people were taking turns at telescopes on the hilltop. A woman with"
+        ],
+        [
+          "42",
+          "1002656",
+          "1993",
+          "FIC",
+          "Atlantic",
+          "#I could see at the end a room where a number of people were chopping vegetables. # \" Come here quickly, \" whispered"
+        ],
+        [
+          "43",
+          "2035306",
+          "1993",
+          "MAG",
+          "RollingStone",
+          "#anything. The sun was shining in Rio. A number of people were sampling weenies which had been cooked in the solar box."
+        ],
+        [
+          "44",
+          "3033549",
+          "1993",
+          "NEWS",
+          "WashPost",
+          "#Though the attack occurred in daylight, and though a number of people were standing outside in an adjacent courtyard, everyone at the scene"
+        ],
+        [
+          "45",
+          "234249",
+          "1992",
+          "SPOK",
+          "ABC_Brinkley",
+          "#been so predictable. Mr. BRINKLEY: Well, a number of people were killed in the Panama action and they haven't forgotten it-"
+        ],
+        [
+          "46",
+          "234204",
+          "1991",
+          "SPOK",
+          "ABC_Brinkley",
+          "#of acute shortages of medicines and the fact that a number of people were being taken in there to have leg amputations. These were"
+        ],
+        [
+          "47",
+          "239641",
+          "1991",
+          "SPOK",
+          "PBS_Newshour",
+          "#an ominous sign of such ethnic conflict erupting. A number of people were killed in a gun battle on the bridge over the Dinesta"
+        ],
+        [
+          "48",
+          "4002835",
+          "1991",
+          "ACAD",
+          "ArabStudies",
+          "#unprecedented rate, hundreds a day per policeman. A number of people were charged with having failed to stop at a stop sign,"
+        ]
+      ]
+    ],
+    "rows": [
+      {
+        "index": 1,
+        "text_id": "5001037",
+        "year": "2018",
+        "genre": "SPOK",
+        "source": "NPR_ATC",
+        "text": "#a half a mile at some points. And a number of people were wearing face masks and filters. And cold symptoms, things",
+        "cells": [
+          "1",
+          "5001037",
+          "2018",
+          "SPOK",
+          "NPR_ATC",
+          "#a half a mile at some points. And a number of people were wearing face masks and filters. And cold symptoms, things"
+        ]
+      },
+      {
+        "index": 2,
+        "text_id": "4184084",
+        "year": "2017",
+        "genre": "MAG",
+        "source": "The Verge",
+        "text": "#reputation sullied by the Note 7 debacle. # A number of people were reportedly still holding onto their Note 7s in January, despite",
+        "cells": [
+          "2",
+          "4184084",
+          "2017",
+          "MAG",
+          "The Verge",
+          "#reputation sullied by the Note 7 debacle. # A number of people were reportedly still holding onto their Note 7s in January, despite"
+        ]
+      },
+      {
+        "index": 3,
+        "text_id": "4139411",
+        "year": "2015",
+        "genre": "MAG",
+        "source": "Atlantic",
+        "text": "#be no choice. \" # Reports suggested that a number of people were dead at the market. I said goodbye, and took",
+        "cells": [
+          "3",
+          "4139411",
+          "2015",
+          "MAG",
+          "Atlantic",
+          "#be no choice. \" # Reports suggested that a number of people were dead at the market. I said goodbye, and took"
+        ]
+      },
+      {
+        "index": 4,
+        "text_id": "4124292",
+        "year": "2013",
+        "genre": "SPOK",
+        "source": "PBS_Newshour",
+        "text": "#by a second blast a few seconds later. A number of people were bloodied and had wounded arms and legs. MAN# They said",
+        "cells": [
+          "4",
+          "4124292",
+          "2013",
+          "SPOK",
+          "PBS_Newshour",
+          "#by a second blast a few seconds later. A number of people were bloodied and had wounded arms and legs. MAN# They said"
+        ]
+      },
+      {
+        "index": 5,
+        "text_id": "4123420",
+        "year": "2012",
+        "genre": "SPOK",
+        "source": "Fox: Fox News Watch",
+        "text": "#want to scare away women voters. But that a number of people were struck, as Cal said, by the president's patronizing",
+        "cells": [
+          "5",
+          "4123420",
+          "2012",
+          "SPOK",
+          "Fox: Fox News Watch",
+          "#want to scare away women voters. But that a number of people were struck, as Cal said, by the president's patronizing"
+        ]
+      },
+      {
+        "index": 6,
+        "text_id": "5218039",
+        "year": "2012",
+        "genre": "MOV",
+        "source": "Owned & Operated",
+        "text": "#system, we can't envisage anything different. A number of people were speaking about, \" Well why do people break windows and",
+        "cells": [
+          "6",
+          "5218039",
+          "2012",
+          "MOV",
+          "Owned & Operated",
+          "#system, we can't envisage anything different. A number of people were speaking about, \" Well why do people break windows and"
+        ]
+      },
+      {
+        "index": 7,
+        "text_id": "5036371",
+        "year": "2012",
+        "genre": "WEB",
+        "source": "gazette.com",
+        "text": "#secretary of the El Paso County GOP, said a number of people were calling the bill \" Amycare \" and \" Colorado's prescription",
+        "cells": [
+          "7",
+          "5036371",
+          "2012",
+          "WEB",
+          "gazette.com",
+          "#secretary of the El Paso County GOP, said a number of people were calling the bill \" Amycare \" and \" Colorado's prescription"
+        ]
+      },
+      {
+        "index": 8,
+        "text_id": "5049925",
+        "year": "2012",
+        "genre": "WEB",
+        "source": "blog.editage.com",
+        "text": "#a number of day s passed \" or \" a number of people were present. \" Do not be misled by the indefinite article",
+        "cells": [
+          "8",
+          "5049925",
+          "2012",
+          "WEB",
+          "blog.editage.com",
+          "#a number of day s passed \" or \" a number of people were present. \" Do not be misled by the indefinite article"
+        ]
+      },
+      {
+        "index": 9,
+        "text_id": "5054534",
+        "year": "2012",
+        "genre": "WEB",
+        "source": "damninteresting.com",
+        "text": "#that there was an experiment carried out, where a number of people were given a newly constructed crossword -- just out that very morning",
+        "cells": [
+          "9",
+          "5054534",
+          "2012",
+          "WEB",
+          "damninteresting.com",
+          "#that there was an experiment carried out, where a number of people were given a newly constructed crossword -- just out that very morning"
+        ]
+      },
+      {
+        "index": 10,
+        "text_id": "5078583",
+        "year": "2012",
+        "genre": "WEB",
+        "source": "fanfiction.net",
+        "text": "#Shakespeare. # A series of creaks indicated that a number of people were coming up the stairs. Tensing, he quietly told his",
+        "cells": [
+          "10",
+          "5078583",
+          "2012",
+          "WEB",
+          "fanfiction.net",
+          "#Shakespeare. # A series of creaks indicated that a number of people were coming up the stairs. Tensing, he quietly told his"
+        ]
+      },
+      {
+        "index": 11,
+        "text_id": "5105524",
+        "year": "2012",
+        "genre": "WEB",
+        "source": "transcripts.cnn.com",
+        "text": "#at a specific location. During this raid, a number of people were taken into custody by the U.S. military, among them is",
+        "cells": [
+          "11",
+          "5105524",
+          "2012",
+          "WEB",
+          "transcripts.cnn.com",
+          "#at a specific location. During this raid, a number of people were taken into custody by the U.S. military, among them is"
+        ]
+      },
+      {
+        "index": 12,
+        "text_id": "5105524",
+        "year": "2012",
+        "genre": "WEB",
+        "source": "transcripts.cnn.com",
+        "text": "#of Tikrit. The result of that raid was a number of people were captured, including one individual believed to be Saddam Hussein.",
+        "cells": [
+          "12",
+          "5105524",
+          "2012",
+          "WEB",
+          "transcripts.cnn.com",
+          "#of Tikrit. The result of that raid was a number of people were captured, including one individual believed to be Saddam Hussein."
+        ]
+      },
+      {
+        "index": 13,
+        "text_id": "5105524",
+        "year": "2012",
+        "genre": "WEB",
+        "source": "transcripts.cnn.com",
+        "text": "#or in Tikrit. And according to officials, a number of people were captured in this raid and among them is an individual initially",
+        "cells": [
+          "13",
+          "5105524",
+          "2012",
+          "WEB",
+          "transcripts.cnn.com",
+          "#or in Tikrit. And according to officials, a number of people were captured in this raid and among them is an individual initially"
+        ]
+      },
+      {
+        "index": 14,
+        "text_id": "5115401",
+        "year": "2012",
+        "genre": "BLOG",
+        "source": "zombietime.com",
+        "text": "## First, as has been pointed out, a number of people were arrested for threatening Pres. Bush. I agree that such threats",
+        "cells": [
+          "14",
+          "5115401",
+          "2012",
+          "BLOG",
+          "zombietime.com",
+          "## First, as has been pointed out, a number of people were arrested for threatening Pres. Bush. I agree that such threats"
+        ]
+      },
+      {
+        "index": 15,
+        "text_id": "5135204",
+        "year": "2012",
+        "genre": "BLOG",
+        "source": "...rs.pressdemocrat.com",
+        "text": "#where they typically play tighter and more conservative. A number of people were on here last week ranting about how bad the passing offense",
+        "cells": [
+          "15",
+          "5135204",
+          "2012",
+          "BLOG",
+          "...rs.pressdemocrat.com",
+          "#where they typically play tighter and more conservative. A number of people were on here last week ranting about how bad the passing offense"
+        ]
+      },
+      {
+        "index": 16,
+        "text_id": "5175867",
+        "year": "2012",
+        "genre": "BLOG",
+        "source": "dailykos.com",
+        "text": "#in SA doing research. One of the topics a number of people were writing about was how the SAn government didn't really allow",
+        "cells": [
+          "16",
+          "5175867",
+          "2012",
+          "BLOG",
+          "dailykos.com",
+          "#in SA doing research. One of the topics a number of people were writing about was how the SAn government didn't really allow"
+        ]
+      },
+      {
+        "index": 17,
+        "text_id": "4103287",
+        "year": "2011",
+        "genre": "SPOK",
+        "source": "Fox_Sunday",
+        "text": "#focus now on Paterno -- but it seems that a number of people were and are more concerned about football, more concerned about the",
+        "cells": [
+          "17",
+          "4103287",
+          "2011",
+          "SPOK",
+          "Fox_Sunday",
+          "#focus now on Paterno -- but it seems that a number of people were and are more concerned about football, more concerned about the"
+        ]
+      },
+      {
+        "index": 18,
+        "text_id": "4031597",
+        "year": "2008",
+        "genre": "SPOK",
+        "source": "PBS_Newshour",
+        "text": "#last Tuesday. And I think in some ways a number of people were -- I wont say excited, but realistic about looking at",
+        "cells": [
+          "18",
+          "4031597",
+          "2008",
+          "SPOK",
+          "PBS_Newshour",
+          "#last Tuesday. And I think in some ways a number of people were -- I wont say excited, but realistic about looking at"
+        ]
+      },
+      {
+        "index": 19,
+        "text_id": "152385",
+        "year": "2006",
+        "genre": "SPOK",
+        "source": "NPR_Saturday",
+        "text": "#line and can't condemn my president. Which a number of people were shocked to hear from Charlie Rangel, who is a very",
+        "cells": [
+          "19",
+          "152385",
+          "2006",
+          "SPOK",
+          "NPR_Saturday",
+          "#line and can't condemn my president. Which a number of people were shocked to hear from Charlie Rangel, who is a very"
+        ]
+      },
+      {
+        "index": 20,
+        "text_id": "166699",
+        "year": "2006",
+        "genre": "SPOK",
+        "source": "NPR_ATCW",
+        "text": "#Greensboro. There was an incident in 1979 where a number of people were killed because there was a protest against a Ku Klux Klan",
+        "cells": [
+          "20",
+          "166699",
+          "2006",
+          "SPOK",
+          "NPR_ATCW",
+          "#Greensboro. There was an incident in 1979 where a number of people were killed because there was a protest against a Ku Klux Klan"
+        ]
+      },
+      {
+        "index": 21,
+        "text_id": "1011050",
+        "year": "2004",
+        "genre": "FIC",
+        "source": "FantasySciFi",
+        "text": "#burning, and there was no more smoke. A number of people were walking around down near the gully where Captain Dial and I",
+        "cells": [
+          "21",
+          "1011050",
+          "2004",
+          "FIC",
+          "FantasySciFi",
+          "#burning, and there was no more smoke. A number of people were walking around down near the gully where Captain Dial and I"
+        ]
+      },
+      {
+        "index": 22,
+        "text_id": "1033945",
+        "year": "2004",
+        "genre": "FIC",
+        "source": "Bk:Birthright",
+        "text": "#, and the bones were deemed very old, a number of people weren't sure if they were pleased or disappointed. But for",
+        "cells": [
+          "22",
+          "1033945",
+          "2004",
+          "FIC",
+          "Bk:Birthright",
+          "#, and the bones were deemed very old, a number of people weren't sure if they were pleased or disappointed. But for"
+        ]
+      },
+      {
+        "index": 23,
+        "text_id": "5228285",
+        "year": "2004",
+        "genre": "TV",
+        "source": "The West Wing",
+        "text": "#How serious? Bunch of imams throwing stones. A number of people were injured. And they found Strasser, the guy at the",
+        "cells": [
+          "23",
+          "5228285",
+          "2004",
+          "TV",
+          "The West Wing",
+          "#How serious? Bunch of imams throwing stones. A number of people were injured. And they found Strasser, the guy at the"
+        ]
+      },
+      {
+        "index": 24,
+        "text_id": "216893",
+        "year": "2003",
+        "genre": "SPOK",
+        "source": "CNN_SatMorn",
+        "text": "#couldn't listen, they were too angry. A number of people were wounded. Some were taken into a nearby mosque. They",
+        "cells": [
+          "24",
+          "216893",
+          "2003",
+          "SPOK",
+          "CNN_SatMorn",
+          "#couldn't listen, they were too angry. A number of people were wounded. Some were taken into a nearby mosque. They"
+        ]
+      },
+      {
+        "index": 25,
+        "text_id": "1032452",
+        "year": "2003",
+        "genre": "FIC",
+        "source": "BkJuv:BetrothedToPrince",
+        "text": "#cows were munching contentedly in the vegetable garden while a number of people were dancing around them, yelling and waving hats and brooms and",
+        "cells": [
+          "25",
+          "1032452",
+          "2003",
+          "FIC",
+          "BkJuv:BetrothedToPrince",
+          "#cows were munching contentedly in the vegetable garden while a number of people were dancing around them, yelling and waving hats and brooms and"
+        ]
+      },
+      {
+        "index": 26,
+        "text_id": "5211188",
+        "year": "2003",
+        "genre": "MOV",
+        "source": "Search for the Afghan Girl",
+        "text": "#the Soviet jet fighters. At that time, a number of people were killed and injured. There was no proper medical treatment.",
+        "cells": [
+          "26",
+          "5211188",
+          "2003",
+          "MOV",
+          "Search for the Afghan Girl",
+          "#the Soviet jet fighters. At that time, a number of people were killed and injured. There was no proper medical treatment."
+        ]
+      },
+      {
+        "index": 27,
+        "text_id": "2016699",
+        "year": "2002",
+        "genre": "MAG",
+        "source": "Atlantic",
+        "text": "#the Great Pyramid of Khufu fills them all. A number of people were in the bar. Unfortunately for business, they all worked",
+        "cells": [
+          "27",
+          "2016699",
+          "2002",
+          "MAG",
+          "Atlantic",
+          "#the Great Pyramid of Khufu fills them all. A number of people were in the bar. Unfortunately for business, they all worked"
+        ]
+      },
+      {
+        "index": 28,
+        "text_id": "1007608",
+        "year": "2001",
+        "genre": "FIC",
+        "source": "AntiochRev",
+        "text": "#. Then I heard subdued sobs, as if a number of people were weeping. I wandered downstairs. There, the silence was",
+        "cells": [
+          "28",
+          "1007608",
+          "2001",
+          "FIC",
+          "AntiochRev",
+          "#. Then I heard subdued sobs, as if a number of people were weeping. I wandered downstairs. There, the silence was"
+        ]
+      },
+      {
+        "index": 29,
+        "text_id": "77097",
+        "year": "2000",
+        "genre": "SPOK",
+        "source": "NPR_ATC",
+        "text": "#that I would have said the same thing if a number of people were killed as a result of that. So it's easy",
+        "cells": [
+          "29",
+          "77097",
+          "2000",
+          "SPOK",
+          "NPR_ATC",
+          "#that I would have said the same thing if a number of people were killed as a result of that. So it's easy"
+        ]
+      },
+      {
+        "index": 30,
+        "text_id": "213062",
+        "year": "2000",
+        "genre": "SPOK",
+        "source": "CNN_SunMorn",
+        "text": "#hurt. A few people were pushed around. A number of people were sprayed with pepper spray, but there were no serious injuries",
+        "cells": [
+          "30",
+          "213062",
+          "2000",
+          "SPOK",
+          "CNN_SunMorn",
+          "#hurt. A few people were pushed around. A number of people were sprayed with pepper spray, but there were no serious injuries"
+        ]
+      },
+      {
+        "index": 31,
+        "text_id": "2023287",
+        "year": "2000",
+        "genre": "MAG",
+        "source": "PsychToday",
+        "text": "#of PT. Sidebar THE \" PSI \" AWARD A number of people were helpful in the production of PT's \" Psi \" statue",
+        "cells": [
+          "31",
+          "2023287",
+          "2000",
+          "MAG",
+          "PsychToday",
+          "#of PT. Sidebar THE \" PSI \" AWARD A number of people were helpful in the production of PT's \" Psi \" statue"
+        ]
+      },
+      {
+        "index": 32,
+        "text_id": "4003813",
+        "year": "2000",
+        "genre": "ACAD",
+        "source": "AmerIndianQ",
+        "text": "#proportion of the population decrease he noted was because a number of people were carried on the census rolls who had been removed to and",
+        "cells": [
+          "32",
+          "4003813",
+          "2000",
+          "ACAD",
+          "AmerIndianQ",
+          "#proportion of the population decrease he noted was because a number of people were carried on the census rolls who had been removed to and"
+        ]
+      },
+      {
+        "index": 33,
+        "text_id": "4008525",
+        "year": "2000",
+        "genre": "ACAD",
+        "source": "ABAJournal",
+        "text": "#. # \" When I was a prosecutor, a number of people were caught lying under a plea bargaining agreement with our office,",
+        "cells": [
+          "33",
+          "4008525",
+          "2000",
+          "ACAD",
+          "ABAJournal",
+          "#. # \" When I was a prosecutor, a number of people were caught lying under a plea bargaining agreement with our office,"
+        ]
+      },
+      {
+        "index": 34,
+        "text_id": "228051",
+        "year": "1999",
+        "genre": "SPOK",
+        "source": "CNN_Talkback",
+        "text": "#? PIERRE-THOMAS-CNN: Bobbie, as you stated, a number of people were arrested yesterday, but so far, there is no link",
+        "cells": [
+          "34",
+          "228051",
+          "1999",
+          "SPOK",
+          "CNN_Talkback",
+          "#? PIERRE-THOMAS-CNN: Bobbie, as you stated, a number of people were arrested yesterday, but so far, there is no link"
+        ]
+      },
+      {
+        "index": 35,
+        "text_id": "1006213",
+        "year": "1998",
+        "genre": "FIC",
+        "source": "SouthwestRev",
+        "text": "#of the Bar Mitzvah party. He saw that a number of people were drifting off into an adjoining room and he followed them.",
+        "cells": [
+          "35",
+          "1006213",
+          "1998",
+          "FIC",
+          "SouthwestRev",
+          "#of the Bar Mitzvah party. He saw that a number of people were drifting off into an adjoining room and he followed them."
+        ]
+      },
+      {
+        "index": 36,
+        "text_id": "3068459",
+        "year": "1997",
+        "genre": "NEWS",
+        "source": "Denver",
+        "text": "#vehicles lined the roads in eastern Colorado, and a number of people were still unaccounted for Saturday evening. # Gov. Roy Romer",
+        "cells": [
+          "36",
+          "3068459",
+          "1997",
+          "NEWS",
+          "Denver",
+          "#vehicles lined the roads in eastern Colorado, and a number of people were still unaccounted for Saturday evening. # Gov. Roy Romer"
+        ]
+      },
+      {
+        "index": 37,
+        "text_id": "4018518",
+        "year": "1997",
+        "genre": "ACAD",
+        "source": "ArmedForces",
+        "text": "#taken very seriously. During the war for independence a number of people were executed by the guerrillas on the claim that they were practicing",
+        "cells": [
+          "37",
+          "4018518",
+          "1997",
+          "ACAD",
+          "ArmedForces",
+          "#taken very seriously. During the war for independence a number of people were executed by the guerrillas on the claim that they were practicing"
+        ]
+      },
+      {
+        "index": 38,
+        "text_id": "228837",
+        "year": "1995",
+        "genre": "SPOK",
+        "source": "CBS_FaceNation",
+        "text": "#'ve admitted they made mistakes. In fact, a number of people were fired, including the head of the ATF, for that",
+        "cells": [
+          "38",
+          "228837",
+          "1995",
+          "SPOK",
+          "CBS_FaceNation",
+          "#'ve admitted they made mistakes. In fact, a number of people were fired, including the head of the ATF, for that"
+        ]
+      },
+      {
+        "index": 39,
+        "text_id": "231946",
+        "year": "1995",
+        "genre": "SPOK",
+        "source": "Ind_Limbaugh",
+        "text": "#everybody was -- and Margaret Thatcher an -- and a number of people were pressuring the United States to get involved. And the president",
+        "cells": [
+          "39",
+          "231946",
+          "1995",
+          "SPOK",
+          "Ind_Limbaugh",
+          "#everybody was -- and Margaret Thatcher an -- and a number of people were pressuring the United States to get involved. And the president"
+        ]
+      },
+      {
+        "index": 40,
+        "text_id": "247998",
+        "year": "1995",
+        "genre": "SPOK",
+        "source": "NPR_Weekend",
+        "text": "#parents, children, and spouses as well. A number of people were thankful for good health, especially in the aftermath of serious",
+        "cells": [
+          "40",
+          "247998",
+          "1995",
+          "SPOK",
+          "NPR_Weekend",
+          "#parents, children, and spouses as well. A number of people were thankful for good health, especially in the aftermath of serious"
+        ]
+      },
+      {
+        "index": 41,
+        "text_id": "4014073",
+        "year": "1995",
+        "genre": "ACAD",
+        "source": "Mercury",
+        "text": "#small town nestled in the Appalachian foothills, and a number of people were taking turns at telescopes on the hilltop. A woman with",
+        "cells": [
+          "41",
+          "4014073",
+          "1995",
+          "ACAD",
+          "Mercury",
+          "#small town nestled in the Appalachian foothills, and a number of people were taking turns at telescopes on the hilltop. A woman with"
+        ]
+      },
+      {
+        "index": 42,
+        "text_id": "1002656",
+        "year": "1993",
+        "genre": "FIC",
+        "source": "Atlantic",
+        "text": "#I could see at the end a room where a number of people were chopping vegetables. # \" Come here quickly, \" whispered",
+        "cells": [
+          "42",
+          "1002656",
+          "1993",
+          "FIC",
+          "Atlantic",
+          "#I could see at the end a room where a number of people were chopping vegetables. # \" Come here quickly, \" whispered"
+        ]
+      },
+      {
+        "index": 43,
+        "text_id": "2035306",
+        "year": "1993",
+        "genre": "MAG",
+        "source": "RollingStone",
+        "text": "#anything. The sun was shining in Rio. A number of people were sampling weenies which had been cooked in the solar box.",
+        "cells": [
+          "43",
+          "2035306",
+          "1993",
+          "MAG",
+          "RollingStone",
+          "#anything. The sun was shining in Rio. A number of people were sampling weenies which had been cooked in the solar box."
+        ]
+      },
+      {
+        "index": 44,
+        "text_id": "3033549",
+        "year": "1993",
+        "genre": "NEWS",
+        "source": "WashPost",
+        "text": "#Though the attack occurred in daylight, and though a number of people were standing outside in an adjacent courtyard, everyone at the scene",
+        "cells": [
+          "44",
+          "3033549",
+          "1993",
+          "NEWS",
+          "WashPost",
+          "#Though the attack occurred in daylight, and though a number of people were standing outside in an adjacent courtyard, everyone at the scene"
+        ]
+      },
+      {
+        "index": 45,
+        "text_id": "234249",
+        "year": "1992",
+        "genre": "SPOK",
+        "source": "ABC_Brinkley",
+        "text": "#been so predictable. Mr. BRINKLEY: Well, a number of people were killed in the Panama action and they haven't forgotten it-",
+        "cells": [
+          "45",
+          "234249",
+          "1992",
+          "SPOK",
+          "ABC_Brinkley",
+          "#been so predictable. Mr. BRINKLEY: Well, a number of people were killed in the Panama action and they haven't forgotten it-"
+        ]
+      },
+      {
+        "index": 46,
+        "text_id": "234204",
+        "year": "1991",
+        "genre": "SPOK",
+        "source": "ABC_Brinkley",
+        "text": "#of acute shortages of medicines and the fact that a number of people were being taken in there to have leg amputations. These were",
+        "cells": [
+          "46",
+          "234204",
+          "1991",
+          "SPOK",
+          "ABC_Brinkley",
+          "#of acute shortages of medicines and the fact that a number of people were being taken in there to have leg amputations. These were"
+        ]
+      },
+      {
+        "index": 47,
+        "text_id": "239641",
+        "year": "1991",
+        "genre": "SPOK",
+        "source": "PBS_Newshour",
+        "text": "#an ominous sign of such ethnic conflict erupting. A number of people were killed in a gun battle on the bridge over the Dinesta",
+        "cells": [
+          "47",
+          "239641",
+          "1991",
+          "SPOK",
+          "PBS_Newshour",
+          "#an ominous sign of such ethnic conflict erupting. A number of people were killed in a gun battle on the bridge over the Dinesta"
+        ]
+      },
+      {
+        "index": 48,
+        "text_id": "4002835",
+        "year": "1991",
+        "genre": "ACAD",
+        "source": "ArabStudies",
+        "text": "#unprecedented rate, hundreds a day per policeman. A number of people were charged with having failed to stop at a stop sign,",
+        "cells": [
+          "48",
+          "4002835",
+          "1991",
+          "ACAD",
+          "ArabStudies",
+          "#unprecedented rate, hundreds a day per policeman. A number of people were charged with having failed to stop at a stop sign,"
+        ]
+      }
+    ]
+  }
+}
