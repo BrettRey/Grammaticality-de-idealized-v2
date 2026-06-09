@@ -120,6 +120,12 @@ for `lots of people is`, `plenty of people are`, and `the rest of the people are
 filtered evidence gives 177 plural target rows and 0 licensed target singular rows. The `lots of
 people are` result is sample-coded only, not a full filtered count for all raw hits.
 
+The evaluation now separates two partitive/QN evidence claims. The broad
+`partitive-qn-coca-targeted-kwic` test remains `mixed` because it still depends on the sampled
+`lots of people are` positive cell. The narrower `partitive-qn-fully-filtered-subset` test is
+`passed`: it uses only the fully filtered smaller registered cells, with 77 plural target rows
+(`plenty of people are` + `the rest of the people are`) and 0 licensed singular target rows.
+
 `baseline-discriminator.csv` records which cells actually pressure a surface-head-number baseline.
 The clean discriminator cells are animate `bunch`, `majority`, and `the rest of the people`; `lots`
 and `plenty` are supportive portability evidence but less clean as surface-head diagnostics.

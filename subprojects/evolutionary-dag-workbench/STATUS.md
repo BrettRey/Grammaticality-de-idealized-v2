@@ -12,7 +12,7 @@ representations about grammaticality. The existing OVMG, detector, operator-stra
 processing-based, and normativity-based models are treated as seed graph families, not as
 conclusions or targets to vindicate.
 
-Fifty-three adversarial passes/synthesis steps have been run. All numeric scores remain zero. Seven
+Fifty-four adversarial passes/synthesis steps have been run. All numeric scores remain zero. Seven
 current modules have `scoped_module` labels tied to protocol-bound or held-out `scope-only`
 evaluations. The original scope-only evaluations now include card-level requirements and activated
 paths. The held-out CGEL evaluations also include card-level requirements and activated paths
@@ -30,7 +30,7 @@ selection-adjacent dimensions only.
 The held-out CGEL evaluations now include machine-readable `prediction_tests` with pass/fail
 conditions; score-change evaluations now require prediction tests.
 Eight held-out CGEL cards have source-checked contrast examples, and the prediction-test inventory
-now records checked evidence statuses: thirteen `passed`, four `mixed`, and one `inconclusive`.
+now records checked evidence statuses: fourteen `passed`, four `mixed`, and one `inconclusive`.
 No graph has a `general_account` score. The current scoring schema includes `projective_power` and
 `theory_preservation_penalty` so held-out prediction and anti-alignment discipline are visible.
 The Gibson source pass added five processing/dependency cards without changing graph machinery:
@@ -290,6 +290,13 @@ The fifty-third pass is recorded in
 the site exposes paginated result pages. A live full-filter attempt for `lots of people are` did not
 complete because COCA returned server-error/timeout states. No all-page artifact, evidence-label
 upgrade, graph mutation, or score movement follows.
+The fifty-fourth pass is recorded in
+`notes/agr-coca-partitive-filtered-subset-2026-06-09.md`. It separates the already fully filtered
+partitive/QN subset from the broader mixed partitive/QN claim. The new
+`partitive-qn-fully-filtered-subset` prediction test is `passed` on 77 filtered plural target rows
+and 0 licensed singular target rows, without using the sample-coded `lots of people are` positive
+cell. The broad `partitive-qn-coca-targeted-kwic` test remains `mixed`. No graph mutation or score
+movement follows.
 An internal state-of-search report now summarizes the current scoped-module partition, evaluation
 ladder, the completed transparent-relative Lane A pass, and remaining empirical lanes without
 authorizing score movement.
@@ -396,6 +403,8 @@ construct separation, or held-out projectibility, not by fitting a prior paper.
 - `AGR` ablation runner in `scripts/run_agr_ablation.py`
 - `AGR` `lots of people are` full-filter attempt note in
   `notes/agr-coca-lots-full-filter-attempt-2026-06-09.md`
+- `AGR` partitive/QN fully filtered subset note in
+  `notes/agr-coca-partitive-filtered-subset-2026-06-09.md`
 - scoped-module load-bearing compression audit in
   `notes/scoped-module-load-bearing-audit-2026-06-09.md`
 - provisional-node trim note in `notes/provisional-node-trim-2026-06-09.md`
@@ -564,8 +573,9 @@ validation.
 
 ## Next Actions
 
-1. Retry the `lots of people are` all-page KWIC fetch after the COCA session/rate state clears; if
-   it remains blocked, replace the disputed partitive/QN cell with fully filtered registered cells.
+1. Retry the `lots of people are` all-page KWIC fetch after the COCA session/rate state clears only
+   if the broad partitive/QN test needs to move beyond `mixed`; the smaller fully filtered subset is
+   already recorded as a separate `passed` test.
 2. Run the audience/policy pronoun task or independent-relative-`whose` human judgment task if data
    collection is available.
 3. Mutate `TEMP` with a temporal-orientation frame if continuing the temporal lane; keep it distinct

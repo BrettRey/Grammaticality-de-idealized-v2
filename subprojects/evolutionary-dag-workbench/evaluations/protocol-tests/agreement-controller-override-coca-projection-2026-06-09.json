@@ -203,6 +203,19 @@
       "evidence_note": "Targeted KWIC/sample evidence from `data/agr-coca-projection/summary.csv`: `lots of people is` has 0 licensed target singular rows; `lots of people are` has a pre-declared 100-row bounded KWIC sample with 100 target plural rows; the additional filtered positive subset has 63 `plenty of people are` rows and 14 `the rest of the people are` rows. The direction is supportive, but critic-verdict variance in `data/critic-variance/summaries/agr-coca-projection-variance-summary.csv` flags the sample-coded high-count `lots` cell as too weak for a clean `passed` label."
     },
     {
+      "id": "partitive-qn-fully-filtered-subset",
+      "phenomenon": "collective-number-transparent-agreement-cgel",
+      "contrast_cell": "partitive-qn-people-plural-dominant",
+      "activated_paths": [
+        "partitive-qn-controller-to-production"
+      ],
+      "prediction": "The registered fully filtered smaller partitive/QN people cells should show plural target agreement without licensed singular target rows.",
+      "pass_condition": "The subset passes only if the fully filtered `plenty of people are`, `the rest of the people are`, `plenty of people is`, `the rest of the people is`, and `lots of people is` cells yield plural target rows with zero licensed target singular rows.",
+      "fail_condition": "The subset fails if the fully filtered singular cells yield licensed target rows at comparable density or if the positive filtered cells collapse as query noise.",
+      "evidence_status": "passed",
+      "evidence_note": "Fully filtered registered subset from `data/agr-coca-projection/summary.csv` and `notes/agr-coca-partitive-agreement-targeted-kwic-pass-2026-06-09.md`: `plenty of people are` has 63 target plural rows, `the rest of the people are` has 14 target plural rows, `plenty of people is` and `the rest of the people is` are raw zero cells, and `lots of people is` has 0 licensed target singular rows after KWIC filtering. This narrower test does not use the sample-coded `lots of people are` positive cell."
+    },
+    {
       "id": "minority-coca-uninformative",
       "phenomenon": "collective-number-transparent-agreement-cgel",
       "contrast_cell": "minority-zero-cell",
