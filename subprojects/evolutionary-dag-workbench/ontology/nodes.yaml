@@ -450,6 +450,21 @@ upstream_or_mediating:
       - tense/aspect value alone
       - reported certainty
 
+  - id: temporal_orientation_frame
+    label: Temporal orientation frame
+    definition: Frame specifying the source of temporal orientation for a tense/aspect form, such as deictic speech time, narrative viewpoint, matrix/reporting frame, or modal remoteness.
+    proxies:
+      - ordinary deictic preterite orientation
+      - backshifted reported-speech orientation
+      - modal-remote preterite orientation
+      - narrative-present viewpoint orientation
+      - reference-time orientation for modal perfect inference
+    forbidden_conflations:
+      - event time alone
+      - tense/aspect value
+      - modal temporal inference frame alone
+      - semantic recoverability
+
   - id: payload_preposition_choice
     label: Payload preposition choice
     definition: Open or semi-open preposition choice contributing spatial, conceptual, or discourse content rather than a selected argument-linking value.

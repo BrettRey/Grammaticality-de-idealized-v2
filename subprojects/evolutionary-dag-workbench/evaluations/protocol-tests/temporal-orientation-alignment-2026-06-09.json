@@ -1,0 +1,253 @@
+{
+  "id": "temporal-orientation-alignment-2026-06-09",
+  "target_graph": "graphs/archive/temporal-orientation-alignment-candidate.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "protocol-bound",
+  "score_decision": "no-score-change",
+  "activated_paths": [
+    {
+      "id": "orientation-to-licensing",
+      "phenomenon": "modal-preterite-remoteness-cgel",
+      "contrast_cell": "present-time-modal-preterite",
+      "expected_path_reading": "indeterminate",
+      "prediction": "A temporal-orientation frame can make preterite form fit a present-time modal-remote situation without treating the preterite as ordinary deictic past time.",
+      "edges": [
+        {
+          "source": "temporal_orientation_frame",
+          "target": "temporal_anchor_fit",
+          "type": "evidential"
+        },
+        {
+          "source": "temporal_anchor_fit",
+          "target": "community_licensing",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "orientation-to-frame-fit",
+      "phenomenon": "backshifted-preterite-orientation-cgel",
+      "contrast_cell": "reported-present-backshift",
+      "expected_path_reading": "component",
+      "prediction": "Temporal orientation should be a component of constructional frame fit for report-supplied backshift rather than a recoverability effect.",
+      "edges": [
+        {
+          "source": "temporal_orientation_frame",
+          "target": "constructional_frame_fit",
+          "type": "constitutive"
+        }
+      ]
+    },
+    {
+      "id": "recoverability-to-acceptability",
+      "phenomenon": "backshifted-preterite-orientation-cgel",
+      "contrast_cell": "remote-matrix-backshift-present",
+      "expected_path_reading": "positive",
+      "prediction": "Recoverability of the reported proposition can raise acceptability without itself licensing the backshifted tense/aspect orientation.",
+      "edges": [
+        {
+          "source": "semantic_pragmatic_recoverability",
+          "target": "reported_acceptability",
+          "type": "causal"
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "phenomenon": "modal-preterite-remoteness-cgel",
+      "result": "survives_as_module",
+      "expected_survival_pattern": "The successor graph should handle present-time and future-time modal preterites by routing them through temporal orientation, not by treating preterite form as deictic past time or by collapsing modal remoteness into modal perfect inference.",
+      "notes": "Survives as a built-on successor module. The graph adds `temporal_orientation_frame`, which is broad enough to represent modal-remote orientation while keeping it distinct from `modal_temporal_inference_frame` and English future-tense analysis. No score or scope label follows because this card helped motivate the mutation.",
+      "requirements": {
+        "required_nodes": [
+          "tense_aspect_value",
+          "temporal_anchor_expression",
+          "temporal_anchor_fit",
+          "temporal_orientation_frame",
+          "modal_temporal_inference_frame",
+          "constructional_frame_fit",
+          "semantic_pragmatic_recoverability",
+          "community_licensing",
+          "reported_acceptability",
+          "repair_reformulation_pressure",
+          "grammaticality_attribution"
+        ],
+        "required_edges": [
+          {
+            "source": "temporal_orientation_frame",
+            "target": "temporal_anchor_fit",
+            "type": "evidential"
+          },
+          {
+            "source": "temporal_orientation_frame",
+            "target": "constructional_frame_fit",
+            "type": "constitutive"
+          },
+          {
+            "source": "temporal_anchor_fit",
+            "target": "community_licensing",
+            "type": "evidential"
+          },
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "reported_acceptability",
+            "type": "causal"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "tense_aspect_value",
+            "target": "community_licensing",
+            "type": "causal"
+          },
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "community_licensing",
+            "type": "causal"
+          },
+          {
+            "source": "modal_temporal_inference_frame",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "present-time-modal-preterite",
+          "axes": {
+            "community": "English speakers judging present-time modal preterite under a wish or remote conditional frame.",
+            "norm_centre": "Descriptive English tense, mood, and conditional norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Situation time, preterite form, and modal remoteness separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "future-time-modal-preterite",
+          "axes": {
+            "community": "English speakers judging future-time modal preterite under preference or remote conditional framing.",
+            "norm_centre": "Descriptive English tense, mood, and conditional norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Future situation time and preterite modal remoteness separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "open-conditional-present",
+          "axes": {
+            "community": "English speakers judging present tense in an open conditional.",
+            "norm_centre": "Descriptive English conditional norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Open possibility and remote possibility contrasted.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    },
+    {
+      "phenomenon": "backshifted-preterite-orientation-cgel",
+      "result": "survives_as_module",
+      "expected_survival_pattern": "The successor graph should distinguish ordinary deictic preterite, report-supplied backshift, and modal-remote backshift through temporal orientation, while keeping recoverability out of licensing.",
+      "notes": "Survives as a built-on successor module. The graph adds `temporal_orientation_frame`, which handles the source of orientation for backshift without treating backshift as modal remoteness, indirect-speech paraphrase, or ordinary past-time location. No score or scope label follows because this card helped motivate the mutation.",
+      "requirements": {
+        "required_nodes": [
+          "tense_aspect_value",
+          "temporal_anchor_expression",
+          "temporal_anchor_fit",
+          "temporal_orientation_frame",
+          "constructional_frame_fit",
+          "semantic_pragmatic_recoverability",
+          "community_licensing",
+          "reported_acceptability",
+          "repair_reformulation_pressure",
+          "grammaticality_attribution"
+        ],
+        "required_edges": [
+          {
+            "source": "temporal_orientation_frame",
+            "target": "temporal_anchor_fit",
+            "type": "evidential"
+          },
+          {
+            "source": "temporal_orientation_frame",
+            "target": "constructional_frame_fit",
+            "type": "constitutive"
+          },
+          {
+            "source": "temporal_anchor_fit",
+            "target": "community_licensing",
+            "type": "evidential"
+          },
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "reported_acceptability",
+            "type": "causal"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "community_licensing",
+            "type": "causal"
+          },
+          {
+            "source": "reported_acceptability",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "ordinary-preterite-deictic",
+          "axes": {
+            "community": "English speakers judging ordinary deictic preterite with past-time orientation.",
+            "norm_centre": "Descriptive English tense norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Deictic past-time orientation baseline.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "reported-present-backshift",
+          "axes": {
+            "community": "English speakers judging a reported present proposition backshifted under a past reporting frame.",
+            "norm_centre": "Descriptive English tense and reported-speech norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Reported content, matrix time, and tense form separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "remote-matrix-backshift-present",
+          "axes": {
+            "community": "English speakers judging backshift inside a modally remote matrix clause with present situation time.",
+            "norm_centre": "Descriptive English tense, mood, and embedded-clause norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Matrix remoteness, embedded backshift, and embedded situation time separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "current-report-present",
+          "axes": {
+            "community": "English speakers judging present tense in a current or direct report frame.",
+            "norm_centre": "Descriptive English tense norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Non-backshifted present baseline.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    }
+  ]
+}

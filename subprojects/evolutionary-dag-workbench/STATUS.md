@@ -12,7 +12,7 @@ representations about grammaticality. The existing OVMG, detector, operator-stra
 processing-based, and normativity-based models are treated as seed graph families, not as
 conclusions or targets to vindicate.
 
-Sixty adversarial passes/synthesis steps have been run. All numeric scores remain zero. Seven
+Sixty-one adversarial passes/synthesis steps have been run. All numeric scores remain zero. Seven
 current modules have `scoped_module` labels tied to protocol-bound or held-out `scope-only`
 evaluations. The original scope-only evaluations now include card-level requirements and activated
 paths. The held-out CGEL evaluations also include card-level requirements and activated paths
@@ -335,6 +335,12 @@ too coarse for response summaries, so `prediction-register.csv` now includes loa
 `item_ids`, and the summarizer groups by those item sets. All simulation rows are marked
 `counts_as_prediction_evidence=no`; no evidence-status change, graph mutation, or score movement
 follows.
+The sixty-first pass is recorded in `notes/temporal-orientation-successor-2026-06-09.md`. It adds
+`temporal_orientation_frame` to the ontology, creates
+`temporal-orientation-alignment-candidate` as a successor to the temporal-anchor graph, and adds a
+protocol-bound no-score-change evaluation for the modal-preterite and backshifted-preterite pressure
+cards. The old held-out evaluations remain evidence that `TEMP` lacked an orientation source; the
+new successor does not inherit held-out credit, a scoped label, or numeric scores.
 An internal state-of-search report now summarizes the current scoped-module partition, evaluation
 ladder, the completed transparent-relative Lane A pass, and remaining empirical lanes without
 authorizing score movement.
@@ -359,6 +365,7 @@ authorizing score movement.
 - `meaning-prior-reconstruction-candidate`
 - `agreement-controller-override-candidate`
 - `temporal-anchor-alignment-candidate`
+- `temporal-orientation-alignment-candidate`
 
 The current strongest modules are scoped, not general winners:
 
@@ -405,6 +412,10 @@ The current strongest modules are scoped, not general winners:
 - `temporal-anchor-alignment-candidate` for tense/aspect anchoring, modal temporal inference,
   definite or by-now temporal anchors, current relevance, continuative intervals, experiential
   frames, and narrative perspective. It is an unscored built-on candidate, not a scoped module yet.
+- `temporal-orientation-alignment-candidate` as a successor to the temporal-anchor graph, adding a
+  temporal-orientation frame for deictic, narrative, matrix/report-supplied, modal-remote, and
+  reference-time orientations. It is unscored and has no scoped-module label because the orientation
+  construct was added from the current temporal pressure set.
 
 `context-indexed-dynamic-feedback-candidate`, `context-aware-operator-gap-candidate`, and
 `audience-reference-tracking-candidate`, `processing-naturalness-perturbation-candidate`, and
@@ -430,7 +441,7 @@ construct separation, or held-out projectibility, not by fitting a prior paper.
 - source-backed Gibson processing/dependency card tranche in `phenomena/cards/`
 - local minimal-pair card tranche in `phenomena/cards/`
 - measurement-validity card tranche in `phenomena/cards/`
-- temporal-anchor alignment candidate and evaluation in `graphs/archive/` and
+- temporal-anchor and temporal-orientation alignment candidates/evaluations in `graphs/archive/` and
   `evaluations/protocol-tests/`
 - number-construal/realization consolidation evaluation in `evaluations/protocol-tests/`
 - `AGR` COCA projection protocol in `notes/agreement-coca-projection-protocol-2026-06-09.md`
@@ -466,6 +477,7 @@ construct separation, or held-out projectibility, not by fitting a prior paper.
   `scripts/build_critic_variance_packet.py`, and `scripts/summarize_critic_variance.py`
 - held-out temporal/modal evaluation in `evaluations/protocol-tests/`
 - second held-out temporal-orientation evaluation in `evaluations/protocol-tests/`
+- temporal-orientation successor synthesis in `notes/temporal-orientation-successor-2026-06-09.md`
 - `DISCOVERY_RULES.md`
 - initial phenomenon cards in `phenomena/cards/`
 - graph schema and seed graphs in `graphs/`
@@ -632,8 +644,9 @@ audience/reference response validation.
    `scripts/validate_audience_reference_responses.py --require-responses` and summarize it with
    `scripts/summarize_audience_reference_responses.py` before evaluation; do not treat the
    simulation-only rows as evidence.
-3. Mutate `TEMP` with a temporal-orientation frame if continuing the temporal lane; keep it distinct
-   from modal temporal inference and from English future-tense analysis.
+3. Add a fresh held-out temporal card before giving `temporal-orientation-alignment-candidate` any
+   scoped label; keep temporal orientation distinct from modal temporal inference and from English
+   future-tense analysis.
 4. Add one more catenative card only if it distinguishes catenative subtype from cohort-conditioned
    production.
 5. Test comparative-illusion cards against combined `CAT` plus noisy-channel interpretations only

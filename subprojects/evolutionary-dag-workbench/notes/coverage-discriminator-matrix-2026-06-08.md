@@ -30,6 +30,7 @@ Module abbreviations:
 - `MPR`: `meaning-prior-reconstruction-candidate`
 - `AGR`: `agreement-controller-override-candidate`
 - `TEMP`: `temporal-anchor-alignment-candidate`
+- `TOR`: `temporal-orientation-alignment-candidate`
 
 ## Matrix
 
@@ -156,6 +157,10 @@ grammaticality account.
 temporal inference, definite or by-now temporal anchors, current relevance, continuative intervals,
 experiential frames, and narrative perspective. It is built from the current temporal cards and is
 not a scoped module yet.
+
+`TOR` is the temporal-orientation successor candidate. It adds temporal orientation as the source
+of deictic, narrative, report-supplied, modal-remote, or reference-time anchoring. It is built from
+the modal-preterite/backshift pressure that partly broke `TEMP`, so it has no scoped label or score.
 
 ## Twenty-Third-Pass Addendum
 
@@ -493,8 +498,8 @@ Newly exposed untested pairings remain:
 2. Run the `AGR` COCA projection protocol before adding more agreement cards; the consolidated
    number-construal pass did not force mutation, and the next useful agreement pressure is a
    registered corpus projection.
-3. Mutate `TEMP` with a temporal-orientation frame if continuing the temporal lane; keep the new
-   construct distinct from modal inference and English future-tense analysis.
+3. Test `TOR` with a fresh held-out temporal card before any scoped label; keep temporal
+   orientation distinct from modal inference and English future-tense analysis.
 4. Use held-out contrast cells to test whether `OPG`, `CAT`, and `SEL` remain complementary or
    require a fused-construction split.
 5. Test comparative-illusion cards against a combined category/noisy-channel interpretation only if
@@ -571,3 +576,6 @@ The forty-first pass gives `TEMP` its first held-out test. It partly survives
 promotion and leaves mutation pending a second modal/conditional card.
 The forty-second pass adds that second pressure point. Backshifted preterite partly survives but
 shows the repair should be a temporal-orientation frame rather than a modal-remoteness-only node.
+The sixty-first pass adds `TOR` as the successor mutation with that broader orientation construct.
+The old held-out cards now explain the mutation; they do not authorize a scoped label or score for
+the successor.

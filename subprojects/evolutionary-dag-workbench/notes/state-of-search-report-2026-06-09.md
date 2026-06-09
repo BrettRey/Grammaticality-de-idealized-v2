@@ -13,13 +13,13 @@ expert judgment.
 
 All numeric scores remain zero. Seven graphs currently have `scoped_module` labels backed by
 protocol-bound or held-out `scope-only` evaluations. `TEMP` has now joined the candidate set as a
-built-on temporal-anchor module without a scoped label. The strongest current result is division of
-labor, not a winner.
+built-on temporal-anchor module without a scoped label. `TOR` is its unscored temporal-orientation
+successor. The strongest current result is division of labor, not a winner.
 
 The next useful work is not more graph invention by default. It is to put the existing modules under
 additional data pressure, especially through a pronoun/pro-form audience-reference task run, a
-human judgment run for independent relative `whose`, the `AGR` COCA projection lane, or a
-temporal-orientation mutation for `TEMP`.
+human judgment run for independent relative `whose`, the `AGR` COCA projection lane, or a fresh
+held-out temporal test for `TOR`.
 
 ## Current Search Shape
 
@@ -33,6 +33,7 @@ flowchart LR
   FRAME["FRAME<br/>frame-specific licensing"]
   AGR["AGR<br/>agreement controller/override"]
   TEMP["TEMP<br/>temporal anchoring"]
+  TOR["TOR<br/>temporal orientation"]
 
   DYN --> ContextCases["needs washed<br/>robust vernaculars<br/>register fragments"]
   OPG --> GapCases["left-branch extraction<br/>fused relatives<br/>rare forms"]
@@ -42,6 +43,7 @@ flowchart LR
   FRAME --> FrameCases["I have five years<br/>island variation"]
   AGR --> AgreementCases["measure NPs<br/>fused heads<br/>coordination<br/>number construal"]
   TEMP --> TemporalCases["perfect + yesterday<br/>narrative present<br/>modal perfect<br/>preterite orientation pressure"]
+  TOR --> OrientationCases["modal preterite<br/>backshift<br/>orientation-source pressure"]
 ```
 
 This map should be read as a live partition of work, not as a taxonomy. The modules are useful
@@ -57,6 +59,7 @@ because each now has a reasonably sharp boundary:
 | `FRAME` | Question-answer frame fit and construction-specific dependency licensing | `I have five years`, island construction variation | Not an opportunity/preemption or general temporal-anchor account |
 | `AGR` | Controller identification, feature alignment, licensed override, notional basis, and retrieval-attractor salience | measure-NP agreement, fused determiner-head agreement, coordination and number-construal pressure | Not a category-analysis, pronoun/audience, diachronic, or general grammaticality account |
 | `TEMP` | Temporal-anchor fit across tense/aspect, modal inference, current relevance, continuative intervals, experiential frames, and narrative perspective | perfect plus definite past time, continuative perfect, already plus yesterday, narrative present, modal perfect by now; modal and backshifted preterite partly | Held-out preterite-orientation tests are partial; mutation needs a temporal-orientation frame |
+| `TOR` | Temporal orientation across deictic, narrative, report-supplied, modal-remote, and reference-time frames | modal-preterite and backshift pressure that partly broke `TEMP` | Built from those pressure cards; needs a fresh held-out temporal test before any scoped label |
 
 ## Evaluation Ladder
 
@@ -92,7 +95,8 @@ the cards used to build the graph.
 - Held-out cards are now more informative than new seed cards, provided they carry source evidence,
   contrast cells, activated paths, and pass/fail conditions.
 - The repeated pressure points are no longer vague: temporal anchoring now has a built-on `TEMP`
-  candidate, while catenative complement subtypes, agreement-controller overrides,
+  candidate and a `TOR` orientation successor, while catenative complement subtypes,
+  agreement-controller overrides,
   repair-neighbour distance, meaning priors, and audience/reference channels remain separate
   pressures.
 - Number construal and realization have now been consolidated under `AGR` without adding a new
@@ -103,6 +107,8 @@ the cards used to build the graph.
   denominators, reproducible KWIC coding, uncertainty estimates, and search-error audit.
 - `TEMP` has now received two held-out temporal/preterite-orientation tests. Both partly survive
   and jointly point to a temporal-orientation frame rather than a modal-remoteness-only repair.
+  That repair is now represented in `TOR`, but `TOR` needs fresh held-out pressure before a scoped
+  label.
 - Comparative illusions now reinforce complementarity rather than mutation: category-analysis
   leakage belongs with `CAT`, repair distance with `RNR`/`INR`, and intended-meaning plausibility
   with `MPR`.
