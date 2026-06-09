@@ -1,0 +1,166 @@
+{
+  "id": "selection-collocation-split-catenative-complement-2026-06-09",
+  "target_graph": "graphs/archive/selection-collocation-split-candidate.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "protocol-bound",
+  "score_decision": "no-score-change",
+  "activated_paths": [
+    {
+      "id": "constructional-function-to-selection",
+      "phenomenon": "catenative-complement-form-selection-cgel",
+      "contrast_cell": "try-gerund-participial",
+      "expected_path_reading": "warranting",
+      "prediction": "Constructional function should warrant a complement-selection analysis when complement form changes constructional meaning.",
+      "edges": [
+        {
+          "source": "constructional_function",
+          "target": "argument_linking_selection",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "selection-to-licensing",
+      "phenomenon": "catenative-complement-form-selection-cgel",
+      "contrast_cell": "unlicensed-form-substitution",
+      "expected_path_reading": "component",
+      "prediction": "Selected complement form should contribute to operator value and licensing when a substitution is unlicensed.",
+      "edges": [
+        {
+          "source": "argument_linking_selection",
+          "target": "operator_value",
+          "type": "constitutive"
+        },
+        {
+          "source": "operator_value",
+          "target": "community_licensing",
+          "type": "constitutive"
+        }
+      ]
+    },
+    {
+      "id": "licensing-to-repair",
+      "phenomenon": "catenative-complement-form-selection-cgel",
+      "contrast_cell": "intend-to-infinitival",
+      "expected_path_reading": "negative",
+      "prediction": "Higher licensing for a permitted complement form should lower repair pressure.",
+      "edges": [
+        {
+          "source": "community_licensing",
+          "target": "repair_reformulation_pressure",
+          "type": "causal"
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "phenomenon": "catenative-complement-form-selection-cgel",
+      "result": "partly_survives",
+      "expected_survival_pattern": "The graph should treat catenative complement form as selection, not payload choice, while acknowledging that it cannot yet distinguish catenative subclasses.",
+      "notes": "Partly survives. SEL has the right selection/collocation split, but it lacks catenative form-type and same-meaning vs meaning-shifting subclass constructs.",
+      "requirements": {
+        "required_nodes": [
+          "argument_linking_selection",
+          "constructional_function",
+          "operator_value",
+          "community_licensing",
+          "repair_reformulation_pressure",
+          "reported_acceptability",
+          "grammaticality_attribution"
+        ],
+        "required_edges": [
+          {
+            "source": "constructional_function",
+            "target": "argument_linking_selection",
+            "type": "evidential"
+          },
+          {
+            "source": "argument_linking_selection",
+            "target": "operator_value",
+            "type": "constitutive"
+          },
+          {
+            "source": "operator_value",
+            "target": "community_licensing",
+            "type": "constitutive"
+          },
+          {
+            "source": "community_licensing",
+            "target": "repair_reformulation_pressure",
+            "type": "causal"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "payload_preposition_choice",
+            "target": "community_licensing",
+            "type": "causal"
+          },
+          {
+            "source": "collocational_rigidity",
+            "target": "operator_value",
+            "type": "constitutive"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "intend-to-infinitival",
+          "axes": {
+            "community": "Standard English speakers judging catenative complement forms.",
+            "norm_centre": "Descriptive complement-selection norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Complement form and meaning comparison.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "intend-gerund-participial",
+          "axes": {
+            "community": "Standard English speakers judging catenative complement forms.",
+            "norm_centre": "Descriptive complement-selection norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Same-meaning complement alternation.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "try-to-infinitival",
+          "axes": {
+            "community": "Standard English speakers judging `try` with to-infinitival complement.",
+            "norm_centre": "Descriptive complement-selection norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Meaning-changing complement alternation.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "try-gerund-participial",
+          "axes": {
+            "community": "Standard English speakers judging `try` with gerund-participial complement.",
+            "norm_centre": "Descriptive complement-selection norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Meaning-changing complement alternation.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "unlicensed-form-substitution",
+          "axes": {
+            "community": "Standard English speakers judging a verb outside its licensed catenative form class.",
+            "norm_centre": "Descriptive complement-selection norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Unlicensed complement-form substitution.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    }
+  ]
+}

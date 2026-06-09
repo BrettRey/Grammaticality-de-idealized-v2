@@ -1,0 +1,125 @@
+{
+  "id": "processing-naturalness-perturbation-proximity-agreement-2026-06-09",
+  "target_graph": "graphs/archive/processing-naturalness-perturbation-candidate.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "protocol-bound",
+  "score_decision": "no-score-change",
+  "activated_paths": [
+    {
+      "id": "processing-to-acceptability",
+      "phenomenon": "proximity-agreement-error-cgel",
+      "contrast_cell": "plural-nearest-np-error",
+      "expected_path_reading": "negative",
+      "prediction": "Nearest-NP salience should perturb felt naturalness and reported acceptability without changing licensing.",
+      "edges": [
+        {
+          "source": "processing_cost",
+          "target": "felt_naturalness_context",
+          "type": "causal"
+        },
+        {
+          "source": "felt_naturalness_context",
+          "target": "reported_acceptability",
+          "type": "measurement"
+        }
+      ]
+    },
+    {
+      "id": "task-framing-to-attribution",
+      "phenomenon": "proximity-agreement-error-cgel",
+      "contrast_cell": "edited-correction",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Editing or rereading should shift attribution toward the singular controller without making first-pass production into licensing.",
+      "edges": [
+        {
+          "source": "task_framing",
+          "target": "grammaticality_attribution",
+          "type": "causal"
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "phenomenon": "proximity-agreement-error-cgel",
+      "result": "partly_survives",
+      "expected_survival_pattern": "The graph should treat proximity agreement as a processing or production error, not as licensed nearest-NP agreement.",
+      "notes": "Partly survives. PROC has processing and task-framing channels but still lacks retrieval-attractor and agreement-controller constructs.",
+      "requirements": {
+        "required_nodes": [
+          "processing_cost",
+          "felt_naturalness_context",
+          "measurement_task",
+          "task_framing",
+          "reported_acceptability",
+          "community_licensing",
+          "grammaticality_attribution"
+        ],
+        "required_edges": [
+          {
+            "source": "processing_cost",
+            "target": "felt_naturalness_context",
+            "type": "causal"
+          },
+          {
+            "source": "felt_naturalness_context",
+            "target": "reported_acceptability",
+            "type": "measurement"
+          },
+          {
+            "source": "task_framing",
+            "target": "grammaticality_attribution",
+            "type": "causal"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "processing_cost",
+            "target": "community_licensing",
+            "type": "causal"
+          },
+          {
+            "source": "reported_acceptability",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "simple-singular-controller",
+          "axes": {
+            "community": "Standard English speakers judging simple subject-verb agreement.",
+            "norm_centre": "Descriptive agreement norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Low-load grammaticality judgment.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "plural-nearest-np-error",
+          "axes": {
+            "community": "English speakers or writers under production or first-pass processing pressure.",
+            "norm_centre": "Descriptive agreement norm centre.",
+            "genre": "Written production or timed judgment.",
+            "medium": "Written example.",
+            "task_framing": "First-pass production or acceptability with a plural attractor.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "edited-correction",
+          "axes": {
+            "community": "English speakers or editors rereading a proximity-agreement item.",
+            "norm_centre": "Descriptive or editorial agreement norm centre.",
+            "genre": "Editing or correction task.",
+            "medium": "Written example.",
+            "task_framing": "Explicit correction and grammaticality attribution.",
+            "speaker_identity": "Editor or careful-reader cue."
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "id": "frame-specific-dependency-licensing-continuative-perfect-2026-06-09",
+  "target_graph": "graphs/archive/frame-specific-dependency-licensing-candidate.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "protocol-bound",
+  "score_decision": "no-score-change",
+  "activated_paths": [
+    {
+      "id": "frame-fit-to-licensing",
+      "phenomenon": "continuative-perfect-since-cgel",
+      "contrast_cell": "simple-past-since-ongoing",
+      "expected_path_reading": "warranting",
+      "prediction": "A failed simple-past-plus-continuative-since frame should warrant a licensing contrast without using recoverability as licensing.",
+      "edges": [
+        {
+          "source": "constructional_frame_fit",
+          "target": "community_licensing",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "recoverability-to-attribution",
+      "phenomenon": "continuative-perfect-since-cgel",
+      "contrast_cell": "simple-past-since-ongoing",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Recoverability of the intended ongoing reading can affect reports, but should not decide licensing.",
+      "edges": [
+        {
+          "source": "semantic_pragmatic_recoverability",
+          "target": "reported_acceptability",
+          "type": "causal"
+        },
+        {
+          "source": "reported_acceptability",
+          "target": "grammaticality_attribution",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "licensing-to-repair",
+      "phenomenon": "continuative-perfect-since-cgel",
+      "contrast_cell": "present-perfect-since",
+      "expected_path_reading": "negative",
+      "prediction": "Higher licensing for the present-perfect-plus-since frame should lower repair pressure in the target repertoire.",
+      "edges": [
+        {
+          "source": "community_licensing",
+          "target": "repair_reformulation_pressure",
+          "type": "causal"
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "phenomenon": "continuative-perfect-since-cgel",
+      "result": "partly_survives",
+      "expected_survival_pattern": "The graph should separate the licensed continuative perfect from a simple-past form under the same intended ongoing reading while keeping recoverability out of licensing.",
+      "notes": "Partly survives. FRAME has broad frame-fit machinery, but the repeated tense/aspect cards now make a temporal-anchor or tense/aspect-alignment construct more plausible.",
+      "requirements": {
+        "required_nodes": [
+          "constructional_frame_fit",
+          "operator_value",
+          "operator_repertoire_membership",
+          "semantic_pragmatic_recoverability",
+          "community_licensing",
+          "reported_acceptability",
+          "repair_reformulation_pressure",
+          "grammaticality_attribution"
+        ],
+        "required_edges": [
+          {
+            "source": "constructional_frame_fit",
+            "target": "community_licensing",
+            "type": "evidential"
+          },
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "reported_acceptability",
+            "type": "causal"
+          },
+          {
+            "source": "community_licensing",
+            "target": "repair_reformulation_pressure",
+            "type": "causal"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "community_licensing",
+            "type": "causal"
+          },
+          {
+            "source": "reported_acceptability",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "present-perfect-since",
+          "axes": {
+            "community": "Standard English speakers judging continuative perfect examples.",
+            "norm_centre": "Descriptive tense/aspect norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Continuative reading and acceptability separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "simple-past-since-ongoing",
+          "axes": {
+            "community": "Standard English speakers judging a simple past under an intended ongoing-since reading.",
+            "norm_centre": "Descriptive tense/aspect norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Ongoing interpretation, repair, and grammaticality attribution separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "present-perfect-no-duration",
+          "axes": {
+            "community": "Standard English speakers judging present perfect without an explicit duration expression.",
+            "norm_centre": "Descriptive tense/aspect norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Non-continuative default interpretation.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "simple-past-wholly-before",
+          "axes": {
+            "community": "Standard English speakers judging simple past with wholly-before interpretation.",
+            "norm_centre": "Descriptive tense/aspect norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Past-time interpretation and acceptability separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -12,7 +12,7 @@ representations about grammaticality. The existing OVMG, detector, operator-stra
 processing-based, and normativity-based models are treated as seed graph families, not as
 conclusions or targets to vindicate.
 
-Twenty-seven adversarial passes/synthesis steps have been run. All numeric scores remain zero. Six
+Twenty-eight adversarial passes/synthesis steps have been run. All numeric scores remain zero. Six
 current modules have `scoped_module` labels tied to protocol-bound evaluations. The original
 scope-only evaluations now include card-level requirements and activated paths. Both held-out CGEL
 evaluations also include card-level requirements and activated paths without authorizing score
@@ -78,6 +78,11 @@ The twenty-seventh pass added the `allowed to do` / `allowed doing` cohort contr
 survives because it handles complement-selection structure, but it lacks speaker/cohort identity,
 production probability, and diachronic stabilization nodes needed for the adult/children contrast.
 No new graph is justified yet.
+The twenty-eighth pass added a targeted source-backed CGEL discriminator pack: continuative perfect
+with `since`, catenative complement-form selection, proximity agreement error, and collective/
+number-transparent agreement overrides. All four partly survive their target modules. The repeated
+partial-survival pattern strengthens pressure for temporal-anchor, catenative-complement subtype,
+and agreement-controller/retrieval constructs, but still does not justify a new graph.
 
 ## Current Candidate Stack
 
@@ -201,6 +206,8 @@ construct separation, or held-out projectibility, not by fitting a prior paper.
   `notes/twenty-sixth-adversarial-pass-synthesis-2026-06-09.md`
 - cohort-conditioned complement-selection synthesis in
   `notes/twenty-seventh-adversarial-pass-synthesis-2026-06-09.md`
+- CGEL discriminator-pack synthesis in
+  `notes/twenty-eighth-adversarial-pass-synthesis-2026-06-09.md`
 - coverage/discriminator matrix in `notes/coverage-discriminator-matrix-2026-06-08.md`
 - protocol-bound evaluation schema and exploratory evaluations in `evaluations/`
 - held-out CGEL/local-correction evaluations in `evaluations/protocol-tests/`
@@ -283,8 +290,8 @@ validation.
 
 1. Add data pointers for the remaining unresolved prediction-test cells: pronoun policy/audience
    design and rare transparent-relative opportunity thresholds.
-2. Add more tense/aspect anchoring and complement-selection cards before introducing temporal-anchor
-   or selected-update-role constructs.
+2. Add one more targeted card in each repeated pressure zone before mutating: temporal-anchor,
+   catenative-complement subtype, and agreement-controller/retrieval structure.
 3. Test comparative-illusion cards against `CAT` and the noisy-channel candidates to keep category
    analysis separate from reconstruction.
 4. Test whether `OPG`, `CAT`, and `SEL` stay complementary on richer fused-construction cards before

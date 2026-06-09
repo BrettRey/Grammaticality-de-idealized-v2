@@ -1,0 +1,176 @@
+{
+  "id": "context-aware-operator-gap-agreement-overrides-2026-06-09",
+  "target_graph": "graphs/archive/context-aware-operator-gap-candidate.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "protocol-bound",
+  "score_decision": "no-score-change",
+  "activated_paths": [
+    {
+      "id": "agreement-operator-to-attribution",
+      "phenomenon": "collective-number-transparent-agreement-cgel",
+      "contrast_cell": "collective-plural-override",
+      "expected_path_reading": "non_sign_propagating",
+      "prediction": "Agreement value can be part of licensing and attribution, but broad operator value cannot distinguish override subclasses.",
+      "edges": [
+        {
+          "source": "operator_value",
+          "target": "community_licensing",
+          "type": "constitutive"
+        },
+        {
+          "source": "community_licensing",
+          "target": "grammaticality_attribution",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "processing-perturbation-to-attribution",
+      "phenomenon": "collective-number-transparent-agreement-cgel",
+      "contrast_cell": "proximity-error-control",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Processing can perturb reports for proximity errors, but that does not explain licensed collective or number-transparent overrides.",
+      "edges": [
+        {
+          "source": "processing_cost",
+          "target": "reported_acceptability",
+          "type": "causal"
+        },
+        {
+          "source": "reported_acceptability",
+          "target": "grammaticality_attribution",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "licensing-to-repair",
+      "phenomenon": "collective-number-transparent-agreement-cgel",
+      "contrast_cell": "number-transparent-plural-override",
+      "expected_path_reading": "negative",
+      "prediction": "Licensed override patterns should show lower repair pressure in their appropriate repertoires.",
+      "edges": [
+        {
+          "source": "community_licensing",
+          "target": "repair_reformulation_pressure",
+          "type": "causal"
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "phenomenon": "collective-number-transparent-agreement-cgel",
+      "result": "partly_survives",
+      "expected_survival_pattern": "The graph should recognize agreement as grammar-relevant while failing to collapse licensed overrides with proximity errors.",
+      "notes": "Partly survives. OPG has broad operator-value and processing channels, but lacks agreement-controller and override-pattern constructs.",
+      "requirements": {
+        "required_nodes": [
+          "operator_value",
+          "processing_cost",
+          "community_licensing",
+          "repair_reformulation_pressure",
+          "reported_acceptability",
+          "grammaticality_attribution",
+          "task_framing"
+        ],
+        "required_edges": [
+          {
+            "source": "operator_value",
+            "target": "community_licensing",
+            "type": "constitutive"
+          },
+          {
+            "source": "processing_cost",
+            "target": "reported_acceptability",
+            "type": "causal"
+          },
+          {
+            "source": "community_licensing",
+            "target": "repair_reformulation_pressure",
+            "type": "causal"
+          },
+          {
+            "source": "community_licensing",
+            "target": "grammaticality_attribution",
+            "type": "evidential"
+          },
+          {
+            "source": "reported_acceptability",
+            "target": "grammaticality_attribution",
+            "type": "evidential"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "processing_cost",
+            "target": "community_licensing",
+            "type": "causal"
+          },
+          {
+            "source": "reported_acceptability",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "collective-singular-simple",
+          "axes": {
+            "community": "Standard English speakers judging singular collective agreement.",
+            "norm_centre": "Descriptive agreement norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Agreement value and interpretation separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "collective-plural-override",
+          "axes": {
+            "community": "Standard English speakers judging collective plural agreement.",
+            "norm_centre": "British/American and formality-sensitive descriptive norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Licensed override and register sensitivity separated.",
+            "speaker_identity": "Variety-neutral speaker cue."
+          }
+        },
+        {
+          "id": "number-transparent-plural-override",
+          "axes": {
+            "community": "Standard English speakers judging number-transparent noun agreement.",
+            "norm_centre": "Descriptive agreement norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Required override and simple head agreement contrasted.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "number-transparent-singular-override",
+          "axes": {
+            "community": "Standard English speakers judging singular override with a plural head in a number-transparent construction.",
+            "norm_centre": "Descriptive agreement norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Required override and simple head agreement contrasted.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "proximity-error-control",
+          "axes": {
+            "community": "English speakers or writers under processing or production pressure.",
+            "norm_centre": "Descriptive agreement norm centre.",
+            "genre": "Written production or timed judgment.",
+            "medium": "Written example.",
+            "task_framing": "Processing error contrasted with licensed override.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    }
+  ]
+}

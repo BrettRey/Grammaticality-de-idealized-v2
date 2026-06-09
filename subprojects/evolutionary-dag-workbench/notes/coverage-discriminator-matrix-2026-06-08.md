@@ -202,6 +202,21 @@ One local cohort-conditioned complement-selection card has been added:
 
 No graph mutation or score movement follows from this pass.
 
+## Twenty-Eighth-Pass Addendum
+
+Four source-backed CGEL cards have been added and evaluated:
+
+- `continuative-perfect-since-cgel`: `FRAME` = `P`; frame fit and recoverability are separated,
+  but temporal-anchor or tense/aspect-alignment machinery is still missing.
+- `catenative-complement-form-selection-cgel`: `SEL` = `P`; complement selection is represented,
+  but catenative form-type subclasses are still missing.
+- `proximity-agreement-error-cgel`: `PROC` = `P`; processing/naturalness perturbation is
+  represented, but agreement-controller and retrieval-attractor machinery is still missing.
+- `collective-number-transparent-agreement-cgel`: `OPG` = `P`; agreement is represented only as
+  broad operator value, not as simple agreement vs licensed override vs proximity error.
+
+No graph mutation or score movement follows from this pass.
+
 ## Discriminators Already Doing Work
 
 - `left-branch-extraction`: separates `DYN` from `OPG`.
@@ -250,6 +265,12 @@ No graph mutation or score movement follows from this pass.
   and sets up a future comparison with `FRAME` and `UPT`.
 - `allowed-to-doing-cohort-contrast`: separates complement-selection structure from
   cohort-conditioned licensing and adult correction frames.
+- `continuative-perfect-since-cgel`: repeats the temporal-anchor pressure exposed by
+  `perfect-definite-past-time`.
+- `catenative-complement-form-selection-cgel`: repeats the complement-selection subtype pressure
+  exposed by `allowed-to-doing-cohort-contrast` and `attitude-complement-selection`.
+- `proximity-agreement-error-cgel` and `collective-number-transparent-agreement-cgel`: split
+  agreement processing errors from licensed agreement overrides.
 
 ## Untested Cards
 
@@ -309,3 +330,6 @@ agreement attraction) and one scoped survival (`SEL` for attitude complement sel
 The twenty-seventh pass adds the `allowed to do` / `allowed doing` cohort contrast. It partly
 survives `SEL`, exposing the need to keep complement-selection structure separate from
 speaker/cohort and diachronic licensing channels.
+The twenty-eighth pass adds a targeted CGEL discriminator pack. All four new source-backed cards
+partly survive their target modules, strengthening pressure for temporal-anchor,
+catenative-complement, and agreement-controller constructs without yet justifying mutation.

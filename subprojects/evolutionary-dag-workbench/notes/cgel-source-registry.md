@@ -40,6 +40,9 @@ before any public release.
 | `cgel-number-quantification` | `<CGEL_ROOT>/out/043_3 Number and countability 333.pdf`; `<CGEL_ROOT>/out/045_5 Quantification 358.pdf`; `<CGEL_ROOT>/out/051_11 Determinative Phrases 431.pdf` | Numeratives, determinatives, countability, category/function pressure |
 | `reynolds-numeratives` | `<LITERATURE_ROOT>/Reynolds2026_lexicon_syntax_numerals.md` | Numerative category correction and constructional diagnostics |
 | `cgel-nonfinite-verbless` | `<CGEL_ROOT>/out/023_1 Inflectional categories of the verb 74.pdf`; `<CGEL_ROOT>/out/140_10 Verbless clauses.pdf`; `<CGEL_ROOT>/out/23_14 Non-finite and verbless clauses.pdf` | Fragment and clause-boundary licensing |
+| `cgel-perfect-tense` | `<CGEL_ROOT>/out/027_5 Perfect tense 139.pdf` | Perfect tense, continuative readings, `since`/duration contrasts, temporal anchoring |
+| `cgel-past-tense-uses` | `<CGEL_ROOT>/out/028_6 Further uses of the past tenses 148.pdf` | Modal remoteness, past-tense construal, tense/aspect frame contrasts |
+| `cgel-catenative-classification` | `<CGEL_ROOT>/out/135_5 Classification of catenative verbs.pdf` | Catenative complement form classes, same-meaning vs meaning-shifting alternations |
 | `gibson-syntax-cognitive` | `<LITERATURE_ROOT>/gibson-2025-syntax-a-cognitive-approach.md` | Acceptability/grammaticality separation, dependency locality, garden paths, noisy-channel overacceptance, construction-specific islands, legalese center embedding |
 | `brett-duration-have-minimal-pair` | Brett session example, 2026-06-09 | Contextual anchoring, frame-conditioned licensing, semantic recoverability without ad hoc rescue |
 

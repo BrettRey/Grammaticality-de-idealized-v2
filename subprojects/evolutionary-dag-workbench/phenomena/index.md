@@ -64,6 +64,10 @@ source-backed contrast cells for graph discovery and held-out projection.
 | [interjection-boundary-source-card](cards/interjection-boundary-source-card.md) | Uptake configuration without automatic operator membership | Source-backed |
 | [numerative-category-pressure](cards/numerative-category-pressure.md) | Numerative category, function, and licensing | Source-backed |
 | [nonfinite-verbless-clause-boundaries-cgel](cards/nonfinite-verbless-clause-boundaries-cgel.md) | Clause recognition, fragment licensing, genre, and medium | Source-backed |
+| [continuative-perfect-since-cgel](cards/continuative-perfect-since-cgel.md) | Perfect-tense anchoring and continuative aspectuality | Source-backed |
+| [catenative-complement-form-selection-cgel](cards/catenative-complement-form-selection-cgel.md) | Non-finite complement form, meaning, and selection | Source-backed |
+| [proximity-agreement-error-cgel](cards/proximity-agreement-error-cgel.md) | Nearest-NP salience vs agreement licensing | Source-backed |
+| [collective-number-transparent-agreement-cgel](cards/collective-number-transparent-agreement-cgel.md) | Licensed agreement overrides vs processing errors | Source-backed |
 
 ## Gibson-Backed Processing and Dependency Tranche
 
