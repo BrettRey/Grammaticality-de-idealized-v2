@@ -38,3 +38,8 @@ Append non-trivial structural, methodological, and scope decisions here.
   while normal list queries followed by clicking the result phrase reliably populated the KWIC frame.
   The first filtered `AGR` tranche (`a bunch of people/kids`) supports the registered plural
   direction but remains a narrow corpus slice and does not move numeric scores.
+- **Treat the inanimate `bunch` tranche as contrastive, not decisive.** Filtered
+  `a bunch of flowers/things` evidence is sparse and balanced (1 plural, 1 singular), contrasting
+  with the animate 71:1 profile. This supports member-construal/animacy as a conditioning pressure
+  but should not be scored; the next `AGR` corpus step should test a different construction family
+  such as `majority/minority`.

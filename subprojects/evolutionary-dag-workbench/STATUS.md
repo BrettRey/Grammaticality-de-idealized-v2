@@ -174,6 +174,12 @@ which proved more reliable than direct KWIC form submission. The filtered target
 plural-agreement rows versus 1 singular-agreement row. Five of the six raw singular hits were
 non-subject false positives. This supports the registered `AGR` direction for animate plural
 complements but remains one narrow corpus tranche; it does not authorize score movement.
+The inanimate contrast tranche is recorded in
+`notes/agr-coca-bunch-inanimate-kwic-filter-pass-2026-06-09.md`. Across `a bunch of
+flowers/things` with `are/were/is/was`, raw counts were sparse and KWIC-filtered target counts were
+1 plural row versus 1 singular row. This differs sharply from the animate tranche and supports
+treating member construal/animacy as a real conditioning pressure, but the cell is too sparse for
+score movement or a stable inanimate-profile estimate.
 An internal state-of-search report now summarizes the current scoped-module partition, evaluation
 ladder, the completed transparent-relative Lane A pass, and remaining empirical lanes without
 authorizing score movement.
@@ -434,10 +440,9 @@ validation.
 
 1. Run the audience/policy pronoun task or independent-relative-`whose` human judgment task if data
    collection is available.
-2. Extend the `AGR` COCA projection lane at the next margin: either run
-   `bunch-inanimate-confirmatory` to test the animate/member-construal contrast or run
-   `majority-minority-confirmatory` to test whether the agreement-controller module generalizes
-   beyond `bunch`.
+2. Extend the `AGR` COCA projection lane at the next margin by running
+   `majority-minority-confirmatory`; the `bunch` animate/inanimate contrast is now measured, so the
+   next pressure should test whether the agreement-controller module generalizes beyond `bunch`.
 3. After the first data-bearing projection lane, run an ablation pass over scoped modules: try to
    remove distinctive nodes from `FDL`/`UOB` and `OPG`/`DYN` before adding new graph families.
 4. Run one critic-verdict variance check by evaluating the same card/protocol several times and
