@@ -59,7 +59,7 @@ Module abbreviations:
 | `garden-path-temporary-ambiguity-gibson` | . | . | . | . | . | . | S | . |
 | `noisy-channel-overacceptance-gibson` | . | . | . | . | . | . | P | . |
 | `island-construction-variation-gibson` | . | P | . | . | . | . | . | P |
-| `legalese-center-embedding-gibson` | P | . | . | P | . | . | . | . |
+| `legalese-center-embedding-gibson` | P | . | . | P | . | . | P | . |
 | `frame-conditioned-duration-have` | . | P | . | . | . | . | . | S |
 
 ## Nineteenth-Pass Addendum
@@ -141,6 +141,8 @@ or processing account.
   `UPT`'s construction-specific update-role machinery.
 - `legalese-center-embedding-gibson`: separates `DYN`/`TASK` genre and production persistence from
   the missing processing/comprehension mechanism.
+- `legalese-center-embedding-gibson`: now also shows that `PROC` covers the processing,
+  naturalness, comprehension, and preference side without explaining genre persistence.
 - `frame-conditioned-duration-have`: separates `UPT`'s question-answer frame fit from `OPG`'s
   broader recoverability/licensing separation.
 - `frame-conditioned-duration-have` and `island-construction-variation-gibson`: justify `FRAME` as
@@ -153,8 +155,6 @@ No phenomenon cards are completely untested in protocol-test evaluations.
 
 Newly exposed untested pairings remain:
 
-- `legalese-center-embedding-gibson` against `PROC`, to isolate processing/comprehension burden
-  without genre persistence.
 - `noisy-channel-overacceptance-gibson` against `CAT`, for comparative-illusion/category-analysis
   cases.
 - richer island and dependency cards against `FRAME`, to test whether the new module stays scoped
@@ -168,9 +168,8 @@ Newly exposed untested pairings remain:
    require a fused-construction split.
 3. Test whether noisy-channel overacceptance needs an `intended_form_distance` or
    `repair_neighbour_distance` construct.
-4. Test whether island construction variation needs a construction-specific dependency-licensing
-   module or is sufficiently covered by `OPG` + `UPT`.
-5. Test legalese against `PROC` before deciding whether a genre-processing hybrid module is needed.
+4. Add richer island and dependency cards against `FRAME` before any numeric movement or broader
+   dependency claim.
 
 ## Working Decision
 
@@ -187,3 +186,5 @@ licensing, and legalese as a genre-processing hybrid.
 The nineteenth pass resolves one of those pressure points by adding
 `frame-specific-dependency-licensing-candidate`. It leaves intended-form distance and
 legalese/processing interaction as live pressure points.
+The twentieth pass resolves legalese/processing interaction without a new graph: `PROC` covers the
+processing side, while `DYN` and `TASK` cover genre persistence and production/judgment separation.

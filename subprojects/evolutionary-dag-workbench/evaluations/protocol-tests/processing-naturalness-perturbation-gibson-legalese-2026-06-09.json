@@ -1,0 +1,148 @@
+{
+  "id": "processing-naturalness-perturbation-gibson-legalese-2026-06-09",
+  "target_graph": "graphs/archive/processing-naturalness-perturbation-candidate.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "protocol-bound",
+  "score_decision": "no-score-change",
+  "activated_paths": [
+    {
+      "id": "legalese-processing-to-acceptability",
+      "phenomenon": "legalese-center-embedding-gibson",
+      "contrast_cell": "official-legalese",
+      "expected_path_reading": "negative",
+      "prediction": "High processing cost in legalese should lower felt naturalness and reported acceptability or preference without lowering licensing.",
+      "edges": [
+        {
+          "source": "processing_cost",
+          "target": "felt_naturalness_context",
+          "type": "causal"
+        },
+        {
+          "source": "felt_naturalness_context",
+          "target": "reported_acceptability",
+          "type": "measurement"
+        }
+      ]
+    },
+    {
+      "id": "plain-paraphrase-recoverability-to-acceptability",
+      "phenomenon": "legalese-center-embedding-gibson",
+      "contrast_cell": "plain-english-paraphrase",
+      "expected_path_reading": "positive",
+      "prediction": "A plain paraphrase with preserved content should raise recoverability, felt naturalness, and reported acceptability or preference.",
+      "edges": [
+        {
+          "source": "semantic_pragmatic_recoverability",
+          "target": "felt_naturalness_context",
+          "type": "causal"
+        },
+        {
+          "source": "felt_naturalness_context",
+          "target": "reported_acceptability",
+          "type": "measurement"
+        }
+      ]
+    },
+    {
+      "id": "legalese-task-to-attribution",
+      "phenomenon": "legalese-center-embedding-gibson",
+      "contrast_cell": "official-legalese",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Officialness, comprehension, preference, and grammaticality framings should shift attribution without making processing cost identical to ungrammaticality.",
+      "edges": [
+        {
+          "source": "task_framing",
+          "target": "grammaticality_attribution",
+          "type": "causal"
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "phenomenon": "legalese-center-embedding-gibson",
+      "result": "partly_survives",
+      "expected_survival_pattern": "The graph should capture the processing, naturalness, comprehension, and preference side of legalese, but it should not pretend to explain legal genre persistence or professional production probability.",
+      "notes": "Partly survives. PROC handles the processing and naturalness channel directly. DYN or TASK remains needed for official genre fit, professional production, and institutional persistence.",
+      "requirements": {
+        "required_nodes": [
+          "processing_cost",
+          "semantic_pragmatic_recoverability",
+          "felt_naturalness_context",
+          "reported_acceptability",
+          "community_licensing",
+          "grammaticality_attribution",
+          "task_framing"
+        ],
+        "forbidden_nodes": [
+          "genre",
+          "register_genre_appropriateness",
+          "production_probability"
+        ],
+        "required_edges": [
+          {
+            "source": "processing_cost",
+            "target": "felt_naturalness_context",
+            "type": "causal"
+          },
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "felt_naturalness_context",
+            "type": "causal"
+          },
+          {
+            "source": "felt_naturalness_context",
+            "target": "reported_acceptability",
+            "type": "measurement"
+          },
+          {
+            "source": "reported_acceptability",
+            "target": "grammaticality_attribution",
+            "type": "evidential"
+          },
+          {
+            "source": "community_licensing",
+            "target": "grammaticality_attribution",
+            "type": "evidential"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "processing_cost",
+            "target": "community_licensing",
+            "type": "causal"
+          },
+          {
+            "source": "reported_acceptability",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "official-legalese",
+          "axes": {
+            "community": "Legal writers and readers encountering legal contract prose.",
+            "norm_centre": "Legal-institutional norm centre.",
+            "genre": "Contract or statute.",
+            "medium": "Edited legal prose.",
+            "task_framing": "Comprehension, recall, preference, or officialness judgment.",
+            "speaker_identity": "Legal professional or institutional writer cue."
+          }
+        },
+        {
+          "id": "plain-english-paraphrase",
+          "axes": {
+            "community": "Legal writers and readers comparing plain-English paraphrases.",
+            "norm_centre": "Plain-language or reader-comprehension norm centre.",
+            "genre": "Plain-English legal explanation.",
+            "medium": "Edited prose.",
+            "task_framing": "Comprehension, recall, or preference judgment.",
+            "speaker_identity": "Legal professional or institutional writer cue."
+          }
+        }
+      ]
+    }
+  ]
+}

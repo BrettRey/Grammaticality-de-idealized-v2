@@ -12,7 +12,7 @@ representations about grammaticality. The existing OVMG, detector, operator-stra
 processing-based, and normativity-based models are treated as seed graph families, not as
 conclusions or targets to vindicate.
 
-Nineteen adversarial passes/synthesis steps have been run. All numeric scores remain zero. Six
+Twenty adversarial passes/synthesis steps have been run. All numeric scores remain zero. Six
 current modules have `scoped_module` labels tied to protocol-bound evaluations. The original
 scope-only evaluations now include card-level requirements and activated paths. Both held-out CGEL
 evaluations also include card-level requirements and activated paths without authorizing score
@@ -47,6 +47,10 @@ fit, and construction-specific dependency licensing. The resulting
 `frame-specific-dependency-licensing-candidate` is a scoped module for the `I have five years`
 minimal pair and Gibson's island construction-variation card. It does not replace `OPG`'s
 opportunity/preemption machinery or `UPT`'s broader uptake/repertoire boundary machinery.
+The twentieth pass ran legalese against `PROC`. It partly survives: `PROC` captures processing,
+naturalness, comprehension, and preference pressure, while `DYN` and `TASK` remain needed for
+official genre fit, professional production, and institutional persistence. No genre-processing
+hybrid graph is justified yet.
 
 ## Current Candidate Stack
 
@@ -142,6 +146,8 @@ construct separation, or held-out projectibility, not by fitting a prior paper.
 - Gibson/local-card evaluation synthesis in `notes/eighteenth-adversarial-pass-synthesis-2026-06-09.md`
 - frame-specific dependency synthesis in
   `notes/nineteenth-adversarial-pass-synthesis-2026-06-09.md`
+- legalese/processing synthesis in
+  `notes/twentieth-adversarial-pass-synthesis-2026-06-09.md`
 - coverage/discriminator matrix in `notes/coverage-discriminator-matrix-2026-06-08.md`
 - protocol-bound evaluation schema and exploratory evaluations in `evaluations/`
 - held-out CGEL/local-correction evaluations in `evaluations/protocol-tests/`
@@ -226,12 +232,11 @@ validation.
    design and rare transparent-relative opportunity thresholds.
 2. Decide whether noisy-channel overacceptance needs an `intended_form_distance` or
    `repair_neighbour_distance` construct.
-3. Run legalese against `PROC` before adding any genre-processing hybrid graph.
-4. Test whether `OPG`, `CAT`, and `SEL` stay complementary on richer fused-construction cards before
+3. Test whether `OPG`, `CAT`, and `SEL` stay complementary on richer fused-construction cards before
    adding any fused-head-specific graph.
-5. Calibrate scoped-module score magnitudes after at least one held-out or parameterized evaluation
+4. Calibrate scoped-module score magnitudes after at least one held-out or parameterized evaluation
    pass.
-6. Expand `phenomena/cards/` toward 40-100 cards only after the current representation classes stop
+5. Expand `phenomena/cards/` toward 40-100 cards only after the current representation classes stop
    shifting every pass.
-7. Only after the construct inventory stabilizes, consider whether `pgmpy`, NOTEARS-style methods,
+6. Only after the construct inventory stabilizes, consider whether `pgmpy`, NOTEARS-style methods,
    or empirical causal discovery are useful.
