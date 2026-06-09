@@ -12,7 +12,7 @@ representations about grammaticality. The existing OVMG, detector, operator-stra
 processing-based, and normativity-based models are treated as seed graph families, not as
 conclusions or targets to vindicate.
 
-Twenty-three adversarial passes/synthesis steps have been run. All numeric scores remain zero. Six
+Twenty-four adversarial passes/synthesis steps have been run. All numeric scores remain zero. Six
 current modules have `scoped_module` labels tied to protocol-bound evaluations. The original
 scope-only evaluations now include card-level requirements and activated paths. Both held-out CGEL
 evaluations also include card-level requirements and activated paths without authorizing score
@@ -63,6 +63,9 @@ The twenty-third pass added `information-normalized-repair-candidate`, separatin
 distance, target information mass, and information-normalized repair distance. It survives the
 edit-distance/length card and preserves the missing-verb repair path, but remains unscored and has
 no `scoped_module` label.
+The twenty-fourth pass tested INR against depth-charge and comparative-illusion cards. It partly
+survives both, confirming that normalized repair distance should not absorb meaning-prior or
+category-analysis machinery.
 
 ## Current Candidate Stack
 
@@ -174,6 +177,8 @@ construct separation, or held-out projectibility, not by fitting a prior paper.
   `notes/twenty-second-adversarial-pass-synthesis-2026-06-09.md`
 - information-normalized repair synthesis in
   `notes/twenty-third-adversarial-pass-synthesis-2026-06-09.md`
+- INR boundary-test synthesis in
+  `notes/twenty-fourth-adversarial-pass-synthesis-2026-06-09.md`
 - coverage/discriminator matrix in `notes/coverage-discriminator-matrix-2026-06-08.md`
 - protocol-bound evaluation schema and exploratory evaluations in `evaluations/`
 - held-out CGEL/local-correction evaluations in `evaluations/protocol-tests/`
@@ -256,9 +261,8 @@ validation.
 
 1. Add data pointers for the remaining unresolved prediction-test cells: pronoun policy/audience
    design and rare transparent-relative opportunity thresholds.
-2. Test `information-normalized-repair-candidate` against depth-charge and comparative-illusion
-   cards before deciding whether it or `repair-neighbour-reconstruction-candidate` should receive a
-   scoped label.
+2. Decide whether depth-charge semantic illusions require a meaning-prior or
+   intended-meaning-plausibility construct.
 3. Test whether `OPG`, `CAT`, and `SEL` stay complementary on richer fused-construction cards before
    adding any fused-head-specific graph.
 4. Calibrate scoped-module score magnitudes after at least one held-out or parameterized evaluation

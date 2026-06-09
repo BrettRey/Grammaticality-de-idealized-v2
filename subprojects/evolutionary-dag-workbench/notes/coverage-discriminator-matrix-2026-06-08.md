@@ -152,6 +152,17 @@ yet a scoped module.
 `INR` remains unscored and has no `scoped_module` label until tested against depth-charge and
 comparative-illusion cases.
 
+## Twenty-Fourth-Pass Addendum
+
+`INR` has now been tested against the harder noisy-channel subtype cards:
+
+- `depth-charge-semantic-illusion-gibson`: `INR` = `P`; normalized repair helps, but a meaning-prior
+  or intended-meaning-plausibility construct is missing.
+- `comparative-illusion-noisy-channel-gibson`: `INR` = `P`; normalized repair helps, but category
+  analysis remains a `CAT` problem.
+
+This blocks promotion of `INR`.
+
 ## Discriminators Already Doing Work
 
 - `left-branch-extraction`: separates `DYN` from `OPG`.
@@ -199,10 +210,9 @@ No phenomenon cards are completely untested in protocol-test evaluations.
 
 Newly exposed untested pairings remain:
 
-- depth-charge and comparative-illusion cards against `INR`, to test whether normalization helps or
-  whether meaning-prior and category-analysis modules are still needed.
 - comparative-illusion cards against `CAT`, to test whether category-analysis divergence remains
   separable from repair-neighbour reconstruction.
+- depth-charge cards against a possible meaning-prior or intended-meaning-plausibility candidate.
 - richer island and dependency cards against `FRAME`, to test whether the new module stays scoped
   or overfits the first Gibson island card.
 
@@ -212,8 +222,8 @@ Newly exposed untested pairings remain:
    transparent-relative opportunity thresholds.
 2. Use held-out contrast cells to test whether `OPG`, `CAT`, and `SEL` remain complementary or
    require a fused-construction split.
-3. Test whether `INR` handles depth-charge and comparative-illusion cards or remains limited to
-   edit-distance and missing-material cases.
+3. Decide whether depth-charge semantic illusions require a meaning-prior or
+   intended-meaning-plausibility construct.
 4. Add richer island and dependency cards against `FRAME` before any numeric movement or broader
    dependency claim.
 
@@ -242,3 +252,5 @@ depth-charge, comparative-illusion, and edit-distance/length effects.
 The twenty-third pass adds `information-normalized-repair-candidate`, resolving the
 edit-distance/length pressure while leaving meaning-prior and category-sensitive noisy-channel cases
 open.
+The twenty-fourth pass confirms that INR remains partial on depth-charge and comparative-illusion
+cards; those should not be folded into repair-distance normalization.

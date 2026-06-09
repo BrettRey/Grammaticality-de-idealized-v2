@@ -1,0 +1,225 @@
+{
+  "id": "information-normalized-repair-depth-comparative-2026-06-09",
+  "target_graph": "graphs/archive/information-normalized-repair-candidate.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "protocol-bound",
+  "score_decision": "no-score-change",
+  "activated_paths": [
+    {
+      "id": "depth-normalized-distance-to-acceptability",
+      "phenomenon": "depth-charge-semantic-illusion-gibson",
+      "contrast_cell": "plausible-global-interpretation",
+      "expected_path_reading": "negative",
+      "prediction": "Lower normalized repair distance can raise recoverability and acceptability, but the graph lacks a separate meaning-prior channel.",
+      "edges": [
+        {
+          "source": "information_normalized_repair_distance",
+          "target": "semantic_pragmatic_recoverability",
+          "type": "causal"
+        },
+        {
+          "source": "semantic_pragmatic_recoverability",
+          "target": "felt_naturalness_context",
+          "type": "causal"
+        },
+        {
+          "source": "felt_naturalness_context",
+          "target": "reported_acceptability",
+          "type": "measurement"
+        }
+      ]
+    },
+    {
+      "id": "depth-literal-task-to-attribution",
+      "phenomenon": "depth-charge-semantic-illusion-gibson",
+      "contrast_cell": "literal-composition",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Literal-composition framing should shift grammar attribution away from first-pass global interpretation.",
+      "edges": [
+        {
+          "source": "task_framing",
+          "target": "grammaticality_attribution",
+          "type": "causal"
+        }
+      ]
+    },
+    {
+      "id": "comparative-normalized-distance-to-acceptability",
+      "phenomenon": "comparative-illusion-noisy-channel-gibson",
+      "contrast_cell": "plausible-comparative-repair",
+      "expected_path_reading": "negative",
+      "prediction": "Lower normalized repair distance can raise first-pass acceptability for a plausible intended comparative, but not category-analysis success.",
+      "edges": [
+        {
+          "source": "information_normalized_repair_distance",
+          "target": "semantic_pragmatic_recoverability",
+          "type": "causal"
+        },
+        {
+          "source": "semantic_pragmatic_recoverability",
+          "target": "felt_naturalness_context",
+          "type": "causal"
+        },
+        {
+          "source": "felt_naturalness_context",
+          "target": "reported_acceptability",
+          "type": "measurement"
+        }
+      ]
+    },
+    {
+      "id": "comparative-category-task-to-attribution",
+      "phenomenon": "comparative-illusion-noisy-channel-gibson",
+      "contrast_cell": "literal-category-analysis",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Category-analysis framing should shift attribution through a task channel that INR does not itself analyze.",
+      "edges": [
+        {
+          "source": "task_framing",
+          "target": "grammaticality_attribution",
+          "type": "causal"
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "phenomenon": "depth-charge-semantic-illusion-gibson",
+      "result": "partly_survives",
+      "expected_survival_pattern": "The graph should capture reconstruction-mediated acceptability, but should still expose a missing meaning-prior or intended-meaning-plausibility construct.",
+      "notes": "Partly survives. INR improves on RNR where target information mass matters, but depth-charge effects require semantic prior plausibility, not just normalized repair distance.",
+      "requirements": {
+        "required_nodes": [
+          "information_normalized_repair_distance",
+          "semantic_pragmatic_recoverability",
+          "felt_naturalness_context",
+          "reported_acceptability",
+          "task_framing",
+          "grammaticality_attribution"
+        ],
+        "required_edges": [
+          {
+            "source": "information_normalized_repair_distance",
+            "target": "semantic_pragmatic_recoverability",
+            "type": "causal"
+          },
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "felt_naturalness_context",
+            "type": "causal"
+          },
+          {
+            "source": "felt_naturalness_context",
+            "target": "reported_acceptability",
+            "type": "measurement"
+          },
+          {
+            "source": "task_framing",
+            "target": "grammaticality_attribution",
+            "type": "causal"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "plausible-global-interpretation",
+          "axes": {
+            "community": "English speakers reading a depth-charge or semantic-illusion item.",
+            "norm_centre": "Descriptive grammar and semantics norm centre.",
+            "genre": "Comprehension or acceptability item.",
+            "medium": "Written sentence.",
+            "task_framing": "First-pass meaning or acceptability judgment.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "literal-composition",
+          "axes": {
+            "community": "English speakers asked to evaluate the literal composition of the same item.",
+            "norm_centre": "Descriptive grammar and semantics norm centre.",
+            "genre": "Literal interpretation or teaching item.",
+            "medium": "Written sentence.",
+            "task_framing": "Literal semantic analysis.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    },
+    {
+      "phenomenon": "comparative-illusion-noisy-channel-gibson",
+      "result": "partly_survives",
+      "expected_survival_pattern": "The graph should capture noisy-channel repair into a plausible comparative, but category/function analysis should remain outside the graph.",
+      "notes": "Partly survives. INR represents the reconstruction channel; CAT remains needed for category-analysis leakage and more/less function questions.",
+      "requirements": {
+        "required_nodes": [
+          "information_normalized_repair_distance",
+          "semantic_pragmatic_recoverability",
+          "felt_naturalness_context",
+          "reported_acceptability",
+          "task_framing",
+          "grammaticality_attribution"
+        ],
+        "required_edges": [
+          {
+            "source": "information_normalized_repair_distance",
+            "target": "semantic_pragmatic_recoverability",
+            "type": "causal"
+          },
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "felt_naturalness_context",
+            "type": "causal"
+          },
+          {
+            "source": "felt_naturalness_context",
+            "target": "reported_acceptability",
+            "type": "measurement"
+          },
+          {
+            "source": "task_framing",
+            "target": "grammaticality_attribution",
+            "type": "causal"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "reported_acceptability",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "plausible-comparative-repair",
+          "axes": {
+            "community": "English speakers reading a comparative illusion with a plausible intended comparative.",
+            "norm_centre": "Descriptive grammar norm centre.",
+            "genre": "Judgment or comprehension item.",
+            "medium": "Written sentence.",
+            "task_framing": "First-pass acceptability or interpretation judgment.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "literal-category-analysis",
+          "axes": {
+            "community": "Analysts or trained respondents classifying the literal comparative construction.",
+            "norm_centre": "Category-analysis norm centre.",
+            "genre": "Grammar analysis task.",
+            "medium": "Written sentence.",
+            "task_framing": "Category/function classification.",
+            "speaker_identity": "Analyst or trained respondent cue."
+          }
+        }
+      ]
+    }
+  ]
+}
