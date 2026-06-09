@@ -28,3 +28,9 @@ Append non-trivial structural, methodological, and scope decisions here.
   denominators, preserving reproducible KWIC coding, estimating uncertainty, and auditing
   false-positive/false-omission rates. COCA evidence is a measurement source for controller,
   override, and agreement-realization predictions, not a grammaticality oracle.
+- **Keep the external-feedback queue live but marginal.** Record the remaining Claude/GPT-Pro
+  pressure points as a queue: projection first, then compression/ablation, critic-verdict variance,
+  and modest edge semantics. These should not displace the `AGR` COCA lane unless live data remains
+  blocked.
+- **Soften causal-edge semantics.** `causal` edges are directional explanatory-dependence claims
+  inside typed construct graphs, not automatic intervention or d-separation claims.

@@ -154,6 +154,10 @@ The follow-on run harness, `scripts/run_agr_coca_queries.py`, expands the regist
 plan into concrete English-Corpora.org wrapper calls. It refuses live execution when the COCA
 wrapper session is unauthenticated, so the current state remains a protocol and run harness, not a
 completed corpus result.
+The live external-feedback queue is recorded in `notes/live-feedback-queue-2026-06-09.md`: projection
+remains first, followed by compression/ablation pressure, critic-verdict variance checks, and modest
+edge semantics. The immediate edge-semantics consistency fix softened `causal` in
+`ontology/edge-types.yaml` from interventionist DAG language to directional explanatory dependence.
 An internal state-of-search report now summarizes the current scoped-module partition, evaluation
 ladder, the completed transparent-relative Lane A pass, and remaining empirical lanes without
 authorizing score movement.
@@ -416,17 +420,21 @@ validation.
    collection is available.
 2. Run the `AGR` COCA projection protocol before adding more agreement cards; the next agreement
    pressure should come from a registered corpus projection, not another CGEL accommodation.
-3. Mutate `TEMP` with a temporal-orientation frame if continuing the temporal lane; keep it distinct
+3. After the first data-bearing projection lane, run a compression/ablation pass over scoped modules:
+   try to kill, merge, or simplify modules before adding new graph families.
+4. Run one critic-verdict variance check by evaluating the same card/protocol several times and
+   logging whether survival labels flip.
+5. Mutate `TEMP` with a temporal-orientation frame if continuing the temporal lane; keep it distinct
    from modal temporal inference and from English future-tense analysis.
-4. Add one more catenative card only if it distinguishes catenative subtype from cohort-conditioned
+6. Add one more catenative card only if it distinguishes catenative subtype from cohort-conditioned
    production.
-5. Test comparative-illusion cards against combined `CAT` plus noisy-channel interpretations only
+7. Test comparative-illusion cards against combined `CAT` plus noisy-channel interpretations only
    if a future card forces an interaction rather than complementarity.
-6. Test whether `OPG`, `CAT`, and `SEL` stay complementary on richer fused-construction cards before
+8. Test whether `OPG`, `CAT`, and `SEL` stay complementary on richer fused-construction cards before
    adding any fused-head-specific graph.
-7. Calibrate scoped-module score magnitudes after at least one held-out or parameterized evaluation
+9. Calibrate scoped-module score magnitudes after at least one held-out or parameterized evaluation
    pass.
-8. Expand `phenomena/cards/` toward 40-100 cards only after the current representation classes stop
+10. Expand `phenomena/cards/` toward 40-100 cards only after the current representation classes stop
    shifting every pass.
 9. Only after the construct inventory stabilizes, consider whether `pgmpy`, NOTEARS-style methods,
    or empirical causal discovery are useful.

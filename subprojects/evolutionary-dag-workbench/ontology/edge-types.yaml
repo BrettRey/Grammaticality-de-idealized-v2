@@ -1,8 +1,8 @@
-# Edge types for conceptual DAGs.
+# Edge types for typed acyclic construct graphs.
 
 edge_types:
   causal:
-    definition: Intervention on the source would change the target, holding relevant background fixed.
+    definition: Directional explanatory dependence in the graph's mechanism; changes in the source or its realized value are expected to change the target under the declared context. This edge type does not by itself license causal-DAG intervention or d-separation claims.
     examples:
       - schooling_instructional_exposure -> reported_acceptability
       - processing_cost -> felt_naturalness_context
@@ -37,6 +37,7 @@ edge_types:
 constraints:
   - Non-time-indexed graphs must be acyclic.
   - Feedback has to be represented with time-indexed variables or time_lagged edges.
+  - Mixed construct graphs must not be read as causal DAGs licensed for d-separation or intervention without a separate empirical model.
   - Measurement proxies cannot be used as direct synonyms for constructs.
   - A graph cannot use grammaticality_attribution as both the explanandum and its own cause.
   - Edge rationales should state why the edge is causal, measurement, constitutive, evidential, or time-lagged.
