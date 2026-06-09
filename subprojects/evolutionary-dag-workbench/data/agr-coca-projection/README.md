@@ -12,6 +12,8 @@ This directory is reserved for a confirmatory COCA run testing the `AGR` module.
 - `query-plan.csv`: query cells, denominators, and expected patterns.
 - `kwic-coding-schema.csv`: row-level labels for raw KWIC filtering.
 - `summary.csv`: raw and filtered summaries as they accumulate.
+- `baseline-discriminator.csv`: compact comparison of the AGR prediction against a simple
+  surface-head-number baseline.
 - `coded/bunch-animate-kwic-coding.csv`: row-level coding for the animate `bunch` tranche.
 - `coded/bunch-inanimate-kwic-coding.csv`: row-level coding for the inanimate `bunch` tranche.
 - `coded/majority-minority-kwic-coding.csv`: row-level coding for the majority/minority tranche.
@@ -93,6 +95,10 @@ for `lots of people is`, `plenty of people are`, and `the rest of the people are
 100-row bounded sample has been coded for the high-count `lots of people are` cell. The sample/
 filtered evidence gives 177 plural target rows and 0 licensed target singular rows. The `lots of
 people are` result is sample-coded only, not a full filtered count for all raw hits.
+
+`baseline-discriminator.csv` records which cells actually pressure a surface-head-number baseline.
+The clean discriminator cells are animate `bunch`, `majority`, and `the rest of the people`; `lots`
+and `plenty` are supportive portability evidence but less clean as surface-head diagnostics.
 
 Do not treat raw COCA frequency as licensing. The lane measures production/attestation over
 opportunity sets and uses KWIC filtering to distinguish genuine agreement realizations from query

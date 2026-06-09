@@ -228,6 +228,13 @@ fully filtered.
 `evaluations/protocol-tests/agreement-controller-override-coca-projection-2026-06-09.json` now
 records the partitive/QN people-frame result as a `passed` prediction test under the pre-declared
 bounded-sample rule.
+The forty-fifth pass is recorded in
+`notes/agr-coca-surface-head-baseline-discriminator-2026-06-09.md` and
+`data/agr-coca-projection/baseline-discriminator.csv`. It makes the baseline comparison explicit:
+animate `bunch`, `majority`, and `the rest of the people` are the clean cells where a simple
+surface-head-number account predicts the wrong dominant direction. `lots/plenty of people` remain
+supportive portability evidence rather than clean baseline-discriminator cells. No graph mutation or
+score movement follows.
 An internal state-of-search report now summarizes the current scoped-module partition, evaluation
 ladder, the completed transparent-relative Lane A pass, and remaining empirical lanes without
 authorizing score movement.
