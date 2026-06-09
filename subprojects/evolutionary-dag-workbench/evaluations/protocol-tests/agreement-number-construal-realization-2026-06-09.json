@@ -1,0 +1,469 @@
+{
+  "id": "agreement-number-construal-realization-2026-06-09",
+  "target_graph": "graphs/archive/agreement-controller-override-candidate.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "protocol-bound",
+  "score_decision": "no-score-change",
+  "activated_paths": [
+    {
+      "id": "notional-basis-to-alignment",
+      "phenomenon": "collective-number-transparent-agreement-cgel",
+      "contrast_cell": "collective-plural-override",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Number construal should provide contextual warrant for controller identification and agreement alignment, not a direct licensing shortcut.",
+      "edges": [
+        {
+          "source": "notional_agreement_basis",
+          "target": "agreement_controller_identification",
+          "type": "evidential"
+        },
+        {
+          "source": "agreement_controller_identification",
+          "target": "agreement_feature_alignment",
+          "type": "constitutive"
+        }
+      ]
+    },
+    {
+      "id": "override-to-licensing",
+      "phenomenon": "collective-number-transparent-agreement-cgel",
+      "contrast_cell": "number-transparent-plural-override",
+      "expected_path_reading": "component",
+      "prediction": "A licensed override pattern should feed agreement alignment and licensing in number-transparent constructions.",
+      "edges": [
+        {
+          "source": "agreement_override_pattern",
+          "target": "agreement_feature_alignment",
+          "type": "constitutive"
+        },
+        {
+          "source": "agreement_feature_alignment",
+          "target": "community_licensing",
+          "type": "constitutive"
+        }
+      ]
+    },
+    {
+      "id": "measure-override-to-licensing",
+      "phenomenon": "measure-agreement-override-cgel",
+      "contrast_cell": "plural-measure-singular-verb",
+      "expected_path_reading": "component",
+      "prediction": "A formally plural measure expression can license singular agreement when the measure is construed as one quantity.",
+      "edges": [
+        {
+          "source": "agreement_override_pattern",
+          "target": "agreement_feature_alignment",
+          "type": "constitutive"
+        },
+        {
+          "source": "agreement_feature_alignment",
+          "target": "community_licensing",
+          "type": "constitutive"
+        }
+      ]
+    },
+    {
+      "id": "fused-style-to-attribution",
+      "phenomenon": "fused-determiner-head-agreement-cgel",
+      "contrast_cell": "formal-style-plural-avoidance",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Formal-style pressure should affect condemnation and attribution without deciding the agreement controller.",
+      "edges": [
+        {
+          "source": "standard_language_ideology",
+          "target": "metalinguistic_condemnation",
+          "type": "causal"
+        },
+        {
+          "source": "metalinguistic_condemnation",
+          "target": "grammaticality_attribution",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "attractor-to-attribution",
+      "phenomenon": "proximity-agreement-error-cgel",
+      "contrast_cell": "proximity-error",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Nearest-NP salience should perturb processing, reports, and attribution without becoming an agreement controller.",
+      "edges": [
+        {
+          "source": "retrieval_attractor_salience",
+          "target": "processing_cost",
+          "type": "causal"
+        },
+        {
+          "source": "processing_cost",
+          "target": "reported_acceptability",
+          "type": "causal"
+        },
+        {
+          "source": "reported_acceptability",
+          "target": "grammaticality_attribution",
+          "type": "evidential"
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "phenomenon": "collective-number-transparent-agreement-cgel",
+      "result": "survives_as_module",
+      "expected_survival_pattern": "The graph should distinguish collective singular agreement, collective plural override, number-transparent override, and proximity error through notional basis, override pattern, feature alignment, and attractor salience.",
+      "notes": "Survives. The existing AGR nodes cover number construal and realization without a new graph mutation.",
+      "requirements": {
+        "required_nodes": [
+          "agreement_controller_identification",
+          "agreement_feature_alignment",
+          "agreement_override_pattern",
+          "notional_agreement_basis",
+          "retrieval_attractor_salience",
+          "community_licensing",
+          "reported_acceptability",
+          "grammaticality_attribution"
+        ],
+        "required_edges": [
+          {
+            "source": "notional_agreement_basis",
+            "target": "agreement_controller_identification",
+            "type": "evidential"
+          },
+          {
+            "source": "agreement_override_pattern",
+            "target": "agreement_feature_alignment",
+            "type": "constitutive"
+          },
+          {
+            "source": "agreement_feature_alignment",
+            "target": "community_licensing",
+            "type": "constitutive"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "retrieval_attractor_salience",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "collective-singular-simple",
+          "axes": {
+            "community": "English speakers judging singular agreement with a collective noun under unit construal.",
+            "norm_centre": "Descriptive agreement norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Unit construal and singular realization separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "collective-plural-override",
+          "axes": {
+            "community": "English speakers judging plural agreement with a collective noun under member-construal.",
+            "norm_centre": "Variety- and register-sensitive descriptive agreement norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Notional basis, variety, and licensing separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "number-transparent-plural-override",
+          "axes": {
+            "community": "English speakers judging number-transparent agreement such as a number of spots have appeared.",
+            "norm_centre": "Descriptive agreement norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Override pattern and surface head number separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    },
+    {
+      "phenomenon": "coordination-agreement-resolution-cgel",
+      "result": "survives_as_module",
+      "expected_survival_pattern": "The graph should distinguish ordinary plural coordination, unit-construal singular coordination, one-participant coordination, distributive singular coordination, and mixed-number avoidance pressure.",
+      "notes": "Survives. Coordination number realization routes through notional basis, controller identification, and override pattern rather than nearest noun alone.",
+      "requirements": {
+        "required_nodes": [
+          "agreement_controller_identification",
+          "agreement_feature_alignment",
+          "agreement_override_pattern",
+          "notional_agreement_basis",
+          "retrieval_attractor_salience",
+          "community_licensing",
+          "repair_reformulation_pressure"
+        ],
+        "required_edges": [
+          {
+            "source": "notional_agreement_basis",
+            "target": "agreement_controller_identification",
+            "type": "evidential"
+          },
+          {
+            "source": "agreement_controller_identification",
+            "target": "agreement_feature_alignment",
+            "type": "constitutive"
+          },
+          {
+            "source": "agreement_override_pattern",
+            "target": "agreement_feature_alignment",
+            "type": "constitutive"
+          },
+          {
+            "source": "community_licensing",
+            "target": "repair_reformulation_pressure",
+            "type": "causal"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "retrieval_attractor_salience",
+            "target": "agreement_feature_alignment",
+            "type": "constitutive"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "ordinary-and-plural",
+          "axes": {
+            "community": "English speakers judging ordinary and-coordination with plural agreement.",
+            "norm_centre": "Descriptive agreement norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Ordinary plural realization baseline.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "unit-and-singular",
+          "axes": {
+            "community": "English speakers judging unit-construal coordination with singular agreement.",
+            "norm_centre": "Descriptive agreement norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Unit construal and agreement realization separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "or-mixed-number",
+          "axes": {
+            "community": "English speakers judging mixed-number or-coordination and avoidance pressure.",
+            "norm_centre": "Descriptive agreement norm centre with proximity advice noted.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Avoidance, proximity pressure, and licensing separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    },
+    {
+      "phenomenon": "measure-agreement-override-cgel",
+      "result": "survives_as_module",
+      "expected_survival_pattern": "The graph should treat plural measure singular agreement as a licensed override under single-measure construal, not as attraction or error.",
+      "notes": "Survives. This card had already provided held-out support; the consolidated pass keeps it in the number-construal bundle without score movement.",
+      "requirements": {
+        "required_nodes": [
+          "agreement_controller_identification",
+          "agreement_feature_alignment",
+          "agreement_override_pattern",
+          "notional_agreement_basis",
+          "community_licensing"
+        ],
+        "required_edges": [
+          {
+            "source": "notional_agreement_basis",
+            "target": "agreement_controller_identification",
+            "type": "evidential"
+          },
+          {
+            "source": "agreement_override_pattern",
+            "target": "agreement_feature_alignment",
+            "type": "constitutive"
+          },
+          {
+            "source": "agreement_feature_alignment",
+            "target": "community_licensing",
+            "type": "constitutive"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "retrieval_attractor_salience",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "plural-measure-singular-verb",
+          "axes": {
+            "community": "English speakers judging a formally plural measure expression construed as one amount.",
+            "norm_centre": "Descriptive agreement norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Measure construal and surface plurality separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "plural-items-plural-verb",
+          "axes": {
+            "community": "English speakers judging a formally plural expression construed as individual plural items.",
+            "norm_centre": "Descriptive agreement norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Individual plurality and agreement realization separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    },
+    {
+      "phenomenon": "fused-determiner-head-agreement-cgel",
+      "result": "survives_as_module",
+      "expected_survival_pattern": "The graph should keep fused-head controller identification and quantified-set construal separate from formal-style pressure.",
+      "notes": "Survives. The formal-style path goes through ideology and condemnation, not controller alignment.",
+      "requirements": {
+        "required_nodes": [
+          "agreement_controller_identification",
+          "agreement_feature_alignment",
+          "notional_agreement_basis",
+          "standard_language_ideology",
+          "metalinguistic_condemnation",
+          "grammaticality_attribution",
+          "community_licensing"
+        ],
+        "required_edges": [
+          {
+            "source": "notional_agreement_basis",
+            "target": "agreement_controller_identification",
+            "type": "evidential"
+          },
+          {
+            "source": "agreement_controller_identification",
+            "target": "agreement_feature_alignment",
+            "type": "constitutive"
+          },
+          {
+            "source": "standard_language_ideology",
+            "target": "metalinguistic_condemnation",
+            "type": "causal"
+          },
+          {
+            "source": "metalinguistic_condemnation",
+            "target": "grammaticality_attribution",
+            "type": "evidential"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "noncount-singular",
+          "axes": {
+            "community": "English speakers judging fused determiner-head agreement under non-count singular construal.",
+            "norm_centre": "Descriptive agreement norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Non-count construal and singular agreement separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "none-plural-set-plural",
+          "axes": {
+            "community": "English speakers judging none over a plural set with plural agreement.",
+            "norm_centre": "Descriptive agreement norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Plural-set construal and agreement realization separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "formal-style-plural-avoidance",
+          "axes": {
+            "community": "English speakers judging either/neither plural variants under formal-style pressure.",
+            "norm_centre": "Formal written standard-language norm centre.",
+            "genre": "Formal prose or usage-advice setting.",
+            "medium": "Written example.",
+            "task_framing": "Formal avoidance and grammatical licensing separated.",
+            "speaker_identity": "Edited prose cue."
+          }
+        }
+      ]
+    },
+    {
+      "phenomenon": "proximity-agreement-error-cgel",
+      "result": "survives_as_module",
+      "expected_survival_pattern": "The graph should route nearest-NP effects through retrieval-attractor salience and processing/report perturbation, while blocking an attractor-to-licensing path.",
+      "notes": "Survives as the error side of the number-realization bundle. It remains a processing perturbation within AGR, not a licensed override.",
+      "requirements": {
+        "required_nodes": [
+          "retrieval_attractor_salience",
+          "processing_cost",
+          "reported_acceptability",
+          "grammaticality_attribution",
+          "community_licensing"
+        ],
+        "required_edges": [
+          {
+            "source": "retrieval_attractor_salience",
+            "target": "processing_cost",
+            "type": "causal"
+          },
+          {
+            "source": "processing_cost",
+            "target": "reported_acceptability",
+            "type": "causal"
+          },
+          {
+            "source": "reported_acceptability",
+            "target": "grammaticality_attribution",
+            "type": "evidential"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "retrieval_attractor_salience",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "proximity-error",
+          "axes": {
+            "community": "English speakers or writers under processing or production pressure.",
+            "norm_centre": "Descriptive agreement norm centre.",
+            "genre": "Written production or timed judgment.",
+            "medium": "Written example.",
+            "task_framing": "Attraction error contrasted with licensed override.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "licensed-override-control",
+          "axes": {
+            "community": "English speakers judging a licensed number override control case.",
+            "norm_centre": "Descriptive agreement norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Licensed override and attraction error separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    }
+  ]
+}

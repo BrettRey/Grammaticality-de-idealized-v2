@@ -347,6 +347,26 @@ No graph mutation or score movement follows.
 `TEMP` remains unscored and has no `scoped_module` label because all five cards were used to shape
 the mutation.
 
+## Fortieth-Pass Addendum
+
+`AGR` has now been run against a consolidated number-construal/realization bundle:
+
+- `collective-number-transparent-agreement-cgel`: `AGR` = `S`; notional basis and override pattern
+  separate collective/member and number-transparent construals from simple head matching.
+- `coordination-agreement-resolution-cgel`: `AGR` = `S`; controller identification and notional
+  basis distinguish ordinary plural, unit singular, one-participant, distributive, and mixed-number
+  cases.
+- `measure-agreement-override-cgel`: `AGR` = `S`; single-measure construal licenses singular
+  realization despite formal plurality.
+- `fused-determiner-head-agreement-cgel`: `AGR` = `S`; fused-head construal and formal-style
+  pressure remain separate paths.
+- `proximity-agreement-error-cgel`: `AGR` = `S`; nearest-NP effects remain processing/attribution
+  perturbations, not licensing paths.
+
+No mutation follows. The current `AGR` graph already has the needed separation among notional
+basis, controller identification, override pattern, feature alignment, and retrieval-attractor
+salience.
+
 ## Discriminators Already Doing Work
 
 - `left-branch-extraction`: separates `DYN` from `OPG`.
@@ -444,8 +464,8 @@ Newly exposed untested pairings remain:
 
 1. Run the pronoun policy/audience task or independent-relative-`whose` human judgment task if data
    collection is available.
-2. Run a number-construal/realization stress pass across collective nouns, coordination, measure
-   overrides, fused determiner-heads, and proximity errors before adding more agreement nodes.
+2. Pause agreement growth unless a genuinely different source domain is available; the consolidated
+   number-construal pass did not force mutation.
 3. Test `TEMP` against a held-out temporal/modal card before any scoped label.
 4. Use held-out contrast cells to test whether `OPG`, `CAT`, and `SEL` remain complementary or
    require a fused-construction split.
@@ -515,3 +535,6 @@ The thirty-ninth pass resolves the repeated temporal-anchor pressure by adding
 `temporal-anchor-alignment-candidate`. It survives the built-on perfect, narrative-present, and
 modal-perfect-by-now cards, but it has no scoped label or score until a held-out temporal/modal card
 tests whether the anchor-fit machinery projects.
+The fortieth pass consolidates number construal/realization under `AGR` without mutation:
+notional basis, controller identification, override pattern, feature alignment, and attractor
+salience remain sufficient for the current agreement bundle.

@@ -12,7 +12,7 @@ representations about grammaticality. The existing OVMG, detector, operator-stra
 processing-based, and normativity-based models are treated as seed graph families, not as
 conclusions or targets to vindicate.
 
-Thirty-nine adversarial passes/synthesis steps have been run. All numeric scores remain zero. Seven
+Forty adversarial passes/synthesis steps have been run. All numeric scores remain zero. Seven
 current modules have `scoped_module` labels tied to protocol-bound evaluations. The original
 scope-only evaluations now include card-level requirements and activated paths. Both held-out CGEL
 evaluations also include card-level requirements and activated paths without authorizing score
@@ -131,6 +131,11 @@ tense/aspect value, modal temporal inference, temporal anchor expression, tempor
 current relevance, continuative interval, experiential frame, and narrative perspective separate.
 It survives the built-on temporal cards, but it is unscored and has no `scoped_module` label because
 no held-out temporal card has tested it yet.
+The fortieth pass consolidated number construal/realization against
+`agreement-controller-override-candidate`. The graph survives collective, coordination, measure,
+fused determiner-head, and proximity-error cards without mutation: notional basis, controller
+identification, override pattern, feature alignment, and retrieval-attractor salience are enough for
+the current number-realization bundle. No score movement follows.
 An internal state-of-search report now summarizes the current scoped-module partition, evaluation
 ladder, the completed transparent-relative Lane A pass, and remaining empirical lanes without
 authorizing score movement.
@@ -228,6 +233,7 @@ construct separation, or held-out projectibility, not by fitting a prior paper.
 - measurement-validity card tranche in `phenomena/cards/`
 - temporal-anchor alignment candidate and evaluation in `graphs/archive/` and
   `evaluations/protocol-tests/`
+- number-construal/realization consolidation evaluation in `evaluations/protocol-tests/`
 - `DISCOVERY_RULES.md`
 - initial phenomenon cards in `phenomena/cards/`
 - graph schema and seed graphs in `graphs/`
@@ -386,8 +392,8 @@ validation.
 
 1. Run the audience/policy pronoun task or independent-relative-`whose` human judgment task if data
    collection is available.
-2. Pause agreement growth unless a genuinely different source domain is available; `AGR` now has a
-   scoped label but no numeric score.
+2. Pause agreement growth unless a genuinely different source domain is available; the
+   number-construal consolidation pass did not force mutation.
 3. Test `temporal-anchor-alignment-candidate` against a held-out temporal/modal card before any
    scoped label; keep English `will` out of the tense inventory.
 4. Add one more catenative card only if it distinguishes catenative subtype from cohort-conditioned

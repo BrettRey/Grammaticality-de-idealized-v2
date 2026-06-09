@@ -18,8 +18,7 @@ labor, not a winner.
 
 The next useful work is not more graph invention by default. It is to put the existing modules under
 additional data pressure, especially through a pronoun/pro-form audience-reference task run, a
-human judgment run for independent relative `whose`, a held-out temporal/modal card for `TEMP`, or
-a number-construal/realization run for `AGR`.
+human judgment run for independent relative `whose`, or a held-out temporal/modal card for `TEMP`.
 
 ## Current Search Shape
 
@@ -40,7 +39,7 @@ flowchart LR
   PROC --> ProcessingCases["center embedding<br/>garden paths<br/>locality"]
   UPT --> UptakeCases["clause type<br/>interjections<br/>move type"]
   FRAME --> FrameCases["I have five years<br/>island variation"]
-  AGR --> AgreementCases["measure NPs<br/>fused heads<br/>coordination"]
+  AGR --> AgreementCases["measure NPs<br/>fused heads<br/>coordination<br/>number construal"]
   TEMP --> TemporalCases["perfect + yesterday<br/>narrative present<br/>will have arrived by now"]
 ```
 
@@ -55,7 +54,7 @@ because each now has a reasonably sharp boundary:
 | `PROC` | Processing cost, recoverability, felt naturalness, task effects, and attribution perturbation | center embedding, garden paths, dependency locality, legalese partly | Not a licensing, agreement-feature, or production-feedback account |
 | `UPT` | Update-role configuration, repertoire closedness, token innovability, stance, genre fit, and repair | clause type, interjection boundaries, duration-frame answer partly | Not a general social-indexical or operator-gap account |
 | `FRAME` | Question-answer frame fit and construction-specific dependency licensing | `I have five years`, island construction variation | Not an opportunity/preemption or general temporal-anchor account |
-| `AGR` | Controller identification, feature alignment, licensed override, notional basis, and retrieval-attractor salience | measure-NP agreement, fused determiner-head agreement, coordination pressure | Not a category-analysis, pronoun/audience, diachronic, or general grammaticality account |
+| `AGR` | Controller identification, feature alignment, licensed override, notional basis, and retrieval-attractor salience | measure-NP agreement, fused determiner-head agreement, coordination and number-construal pressure | Not a category-analysis, pronoun/audience, diachronic, or general grammaticality account |
 | `TEMP` | Temporal-anchor fit across tense/aspect, modal inference, current relevance, continuative intervals, experiential frames, and narrative perspective | perfect plus definite past time, continuative perfect, already plus yesterday, narrative present, modal perfect by now | Built-on candidate only; not scoped until held-out temporal/modal projection |
 
 ## Evaluation Ladder
@@ -95,6 +94,9 @@ the cards used to build the graph.
   candidate, while catenative complement subtypes, agreement-controller overrides,
   repair-neighbour distance, meaning priors, and audience/reference channels remain separate
   pressures.
+- Number construal and realization have now been consolidated under `AGR` without adding a new
+  construct: notional basis, controller identification, override pattern, feature alignment, and
+  attractor salience remain sufficient for the current agreement bundle.
 - Comparative illusions now reinforce complementarity rather than mutation: category-analysis
   leakage belongs with `CAT`, repair distance with `RNR`/`INR`, and intended-meaning plausibility
   with `MPR`.
