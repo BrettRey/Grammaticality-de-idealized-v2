@@ -128,18 +128,19 @@ It also does not authorize numeric scores because:
 The result is a publishable pilot slice for the workbench method, not a claim that the best graph of
 grammaticality has been found.
 
+## Completed Follow-Up
+
+The compression test is now recorded in `notes/agr-coca-ablation-test-2026-06-09.md`.
+
+It found that the core agreement-scope constructs remain load-bearing across the existing
+evaluations, while `production_probability` and `retrieval_attractor_salience` are load-bearing for
+the COCA projection layer specifically. No graph mutation, compression, numeric score movement, or
+new held-out card tranche follows from that result.
+
 ## Next Decision Boundary
 
-The next step should be a write-up or compression test, not another nearby COCA query.
+The next step should not be another nearby COCA query.
 
-For a methods/pilot paper, use this report as the worked example.
-
-For discovery pressure, run the next unit of work as an ablation:
-
-- remove `notional_agreement_basis`;
-- merge `agreement_controller_identification` into `agreement_feature_alignment`;
-- remove `production_probability`;
-- ask which prediction/evaluation claims break.
-
-That would convert the AGR vertical slice from evidence for a graph into evidence about which parts
-of the graph are load-bearing.
+For a methods/pilot paper, use this report plus the ablation note as the worked example. For
+discovery pressure, move to critic-verdict variance or to a compression pass over overlap pairs such
+as `FDL`/`UOB` and `OPG`/`DYN`.

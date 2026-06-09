@@ -1,0 +1,19 @@
+ablation,evaluation,graph_valid,evaluation_valid,graph_error_count,evaluation_error_count,first_graph_error,first_evaluation_error
+baseline,agreement-controller-override-coca-projection-2026-06-09,yes,yes,0,0,,
+baseline,agreement-controller-override-heldout-scope-2026-06-09,yes,yes,0,0,,
+baseline,agreement-controller-override-heldout-measure-2026-06-09,yes,yes,0,0,,
+drop_notional_agreement_basis,agreement-controller-override-coca-projection-2026-06-09,yes,no,0,6,,<tmp>/drop_notional_agreement_basis__agreement-controller-override-coca-projection-2026-06-09.json: card 1 requirements: required node 'notional_agreement_basis' does not exist in target_graph
+drop_notional_agreement_basis,agreement-controller-override-heldout-scope-2026-06-09,yes,no,0,8,,<tmp>/drop_notional_agreement_basis__agreement-controller-override-heldout-scope-2026-06-09.json: card 1 requirements: required node 'notional_agreement_basis' does not exist in target_graph
+drop_notional_agreement_basis,agreement-controller-override-heldout-measure-2026-06-09,yes,no,0,4,,<tmp>/drop_notional_agreement_basis__agreement-controller-override-heldout-measure-2026-06-09.json: card 1 requirements: required node 'notional_agreement_basis' does not exist in target_graph
+merge_controller_into_alignment,agreement-controller-override-coca-projection-2026-06-09,yes,no,0,15,,<tmp>/merge_controller_into_alignment__agreement-controller-override-coca-projection-2026-06-09.json: card 1 requirements: required node 'agreement_controller_identification' does not exist in target_graph
+merge_controller_into_alignment,agreement-controller-override-heldout-scope-2026-06-09,yes,no,0,12,,<tmp>/merge_controller_into_alignment__agreement-controller-override-heldout-scope-2026-06-09.json: card 1 requirements: required node 'agreement_controller_identification' does not exist in target_graph
+merge_controller_into_alignment,agreement-controller-override-heldout-measure-2026-06-09,yes,no,0,6,,<tmp>/merge_controller_into_alignment__agreement-controller-override-heldout-measure-2026-06-09.json: card 1 requirements: required node 'agreement_controller_identification' does not exist in target_graph
+drop_production_probability,agreement-controller-override-coca-projection-2026-06-09,yes,no,0,12,,<tmp>/drop_production_probability__agreement-controller-override-coca-projection-2026-06-09.json: card 1 requirements: required node 'production_probability' does not exist in target_graph
+drop_production_probability,agreement-controller-override-heldout-scope-2026-06-09,yes,yes,0,0,,
+drop_production_probability,agreement-controller-override-heldout-measure-2026-06-09,yes,yes,0,0,,
+drop_retrieval_attractor_salience,agreement-controller-override-coca-projection-2026-06-09,yes,no,0,1,,<tmp>/drop_retrieval_attractor_salience__agreement-controller-override-coca-projection-2026-06-09.json: card 1 requirements: required node 'retrieval_attractor_salience' does not exist in target_graph
+drop_retrieval_attractor_salience,agreement-controller-override-heldout-scope-2026-06-09,yes,yes,0,0,,
+drop_retrieval_attractor_salience,agreement-controller-override-heldout-measure-2026-06-09,yes,yes,0,0,,
+drop_agreement_override_pattern,agreement-controller-override-coca-projection-2026-06-09,yes,yes,0,0,,
+drop_agreement_override_pattern,agreement-controller-override-heldout-scope-2026-06-09,yes,no,0,4,,<tmp>/drop_agreement_override_pattern__agreement-controller-override-heldout-scope-2026-06-09.json: card 1 requirements: required node 'agreement_override_pattern' does not exist in target_graph
+drop_agreement_override_pattern,agreement-controller-override-heldout-measure-2026-06-09,yes,no,0,4,,<tmp>/drop_agreement_override_pattern__agreement-controller-override-heldout-measure-2026-06-09.json: card 1 requirements: required node 'agreement_override_pattern' does not exist in target_graph

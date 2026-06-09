@@ -12,7 +12,7 @@ representations about grammaticality. The existing OVMG, detector, operator-stra
 processing-based, and normativity-based models are treated as seed graph families, not as
 conclusions or targets to vindicate.
 
-Forty-eight adversarial passes/synthesis steps have been run. All numeric scores remain zero. Seven
+Forty-nine adversarial passes/synthesis steps have been run. All numeric scores remain zero. Seven
 current modules have `scoped_module` labels tied to protocol-bound or held-out `scope-only`
 evaluations. The original scope-only evaluations now include card-level requirements and activated
 paths. The held-out CGEL evaluations also include card-level requirements and activated paths
@@ -257,6 +257,13 @@ publishable pilot claim narrowly: in the checked English production cells, plura
 raw-query artifact and is not predicted by a simple surface-head-number baseline, with the strongest
 pressure from `majority` plus the denominator omission audit. No graph mutation or score movement
 follows.
+The forty-ninth pass is recorded in `notes/agr-coca-ablation-test-2026-06-09.md`, supported by
+`scripts/run_agr_ablation.py` and `data/agr-coca-projection/ablation-summary.csv`. The ablation
+shows that `notional_agreement_basis` and the controller/alignment split are load-bearing across
+the COCA and held-out agreement evaluations. `production_probability` and
+`retrieval_attractor_salience` are load-bearing for the COCA/projection layer, while
+`agreement_override_pattern` is load-bearing for held-out agreement scope. No compression, graph
+mutation, or score movement follows.
 An internal state-of-search report now summarizes the current scoped-module partition, evaluation
 ladder, the completed transparent-relative Lane A pass, and remaining empirical lanes without
 authorizing score movement.
@@ -357,6 +364,10 @@ construct separation, or held-out projectibility, not by fitting a prior paper.
 - number-construal/realization consolidation evaluation in `evaluations/protocol-tests/`
 - `AGR` COCA projection protocol in `notes/agreement-coca-projection-protocol-2026-06-09.md`
 - `AGR` COCA data scaffold in `data/agr-coca-projection/`
+- `AGR` vertical-slice report and ablation check in
+  `notes/agr-coca-vertical-slice-report-2026-06-09.md` and
+  `notes/agr-coca-ablation-test-2026-06-09.md`
+- `AGR` ablation runner in `scripts/run_agr_ablation.py`
 - held-out temporal/modal evaluation in `evaluations/protocol-tests/`
 - second held-out temporal-orientation evaluation in `evaluations/protocol-tests/`
 - `DISCOVERY_RULES.md`
@@ -515,26 +526,23 @@ validation.
 
 ## Next Actions
 
-1. Run the audience/policy pronoun task or independent-relative-`whose` human judgment task if data
-   collection is available.
-2. Run the planned calibration cells (`known-qn-calibration` / `partitive-calibration`) to anchor
-   the direct-query method against known number-transparent and partitive contrasts before any
-   numeric projective credit is considered.
-3. After the first data-bearing projection lane, run an ablation pass over scoped modules: try to
-   remove distinctive nodes from `FDL`/`UOB` and `OPG`/`DYN` before adding new graph families.
-4. Run one critic-verdict variance check by evaluating the same card/protocol several times and
+1. Run one critic-verdict variance check by evaluating the same card/protocol several times and
    logging whether survival labels flip.
-5. Mutate `TEMP` with a temporal-orientation frame if continuing the temporal lane; keep it distinct
+2. Run a second compression pass over scoped modules: try to remove distinctive nodes from
+   `FDL`/`UOB` and `OPG`/`DYN` before adding new graph families.
+3. Run the audience/policy pronoun task or independent-relative-`whose` human judgment task if data
+   collection is available.
+4. Mutate `TEMP` with a temporal-orientation frame if continuing the temporal lane; keep it distinct
    from modal temporal inference and from English future-tense analysis.
-6. Add one more catenative card only if it distinguishes catenative subtype from cohort-conditioned
+5. Add one more catenative card only if it distinguishes catenative subtype from cohort-conditioned
    production.
-7. Test comparative-illusion cards against combined `CAT` plus noisy-channel interpretations only
+6. Test comparative-illusion cards against combined `CAT` plus noisy-channel interpretations only
    if a future card forces an interaction rather than complementarity.
-8. Test whether `OPG`, `CAT`, and `SEL` stay complementary on richer fused-construction cards before
+7. Test whether `OPG`, `CAT`, and `SEL` stay complementary on richer fused-construction cards before
    adding any fused-head-specific graph.
-9. Calibrate scoped-module score magnitudes after at least one held-out or parameterized evaluation
+8. Calibrate scoped-module score magnitudes after at least one held-out or parameterized evaluation
    pass.
-10. Expand `phenomena/cards/` toward 40-100 cards only after the current representation classes stop
+9. Expand `phenomena/cards/` toward 40-100 cards only after the current representation classes stop
    shifting every pass.
-9. Only after the construct inventory stabilizes, consider whether `pgmpy`, NOTEARS-style methods,
+10. Only after the construct inventory stabilizes, consider whether `pgmpy`, NOTEARS-style methods,
    or empirical causal discovery are useful.

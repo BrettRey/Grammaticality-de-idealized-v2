@@ -109,6 +109,7 @@ python3 scripts/run_fixture_tests.py
 The first data-bearing vertical slice is the AGR COCA projection lane:
 
 - report: `notes/agr-coca-vertical-slice-report-2026-06-09.md`;
+- ablation check: `notes/agr-coca-ablation-test-2026-06-09.md`;
 - graph: `graphs/archive/agreement-controller-override-candidate.json`;
 - evaluation: `evaluations/protocol-tests/agreement-controller-override-coca-projection-2026-06-09.json`;
 - data: `data/agr-coca-projection/`.
@@ -116,3 +117,9 @@ The first data-bearing vertical slice is the AGR COCA projection lane:
 The current result is scoped: `AGR` beats a simple surface-head-number baseline in checked English
 production cells, especially `majority`, but no numeric score movement or general-account claim
 follows.
+
+Run the AGR ablation/compression check with:
+
+```bash
+python3 scripts/run_agr_ablation.py --output data/agr-coca-projection/ablation-summary.csv
+```
