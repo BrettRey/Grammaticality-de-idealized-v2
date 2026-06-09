@@ -34,3 +34,7 @@ Append non-trivial structural, methodological, and scope decisions here.
   blocked.
 - **Soften causal-edge semantics.** `causal` edges are directional explanatory-dependence claims
   inside typed construct graphs, not automatic intervention or d-separation claims.
+- **Use list-result clicks for COCA KWIC filtering.** Direct KWIC form submission proved brittle,
+  while normal list queries followed by clicking the result phrase reliably populated the KWIC frame.
+  The first filtered `AGR` tranche (`a bunch of people/kids`) supports the registered plural
+  direction but remains a narrow corpus slice and does not move numeric scores.

@@ -1,0 +1,830 @@
+{
+  "query": "a bunch of people are",
+  "corpus": "coca",
+  "retrieved_at": "2026-06-09T15:48:17.304Z",
+  "method": "list-result-click",
+  "list": {
+    "url": "https://www.english-corpora.org/coca/x2.asp",
+    "text": "ON CLICK: \t    \t     ( EN )\t \t   \t    \t    \t    \t    \t (?)   \t   AI:   CATEGORIZE  *\n\nHELP\t\t\t  ALL FORMS\n27\tFREQ\n1\t\t\t  A BUNCH OF PEOPLE ARE\t27\n\t0.863 seconds",
+    "tables": [
+      [
+        [
+          "SAVE LIST",
+          "NAME OF LIST",
+          "",
+          ""
+        ],
+        [
+          "Select entries below to add these to a \"customized word list\", and then later use this list as part of a search. For example, if you add 4 or 5 entries\nbelow to the list myList, then you could use this as part of a search, like large @myList. More information:"
+        ]
+      ],
+      [
+        [
+          "ON CLICK: \t    \t     ( EN )\t \t   \t    \t    \t    \t    \t (?)   \t   AI:   CATEGORIZE  *",
+          ""
+        ],
+        [
+          "Click on  below, and then click on any word in the highlighted entry, to see detailed information on the word.\nTo come back to this page, click on  on the \"word page\".\n [Close]"
+        ],
+        [
+          "Click on\nbelow to \"save\" this word or phrase. Then click on\nat the top of the corpus to access this list at any point in the future.\n\n [Close]"
+        ],
+        [
+          "By default, when you click on one of the words/phrases below, you will see the \"Keyword in Context\" view in the tab to the right.\nBut you can also now access \"external\" resources for any of the words/phrases that you see below. To do so, click on one of the types of resources above\n(e.g. images or translation) and then click on the word/phrase below.\nNote: To change the language for translation, click on the two letter code after\nTRANSLATE above. This code will be saved for future access to the corpus as well. If it shows [??], you haven't yet selected a language.\n\n  [Close]"
+        ]
+      ],
+      [
+        [
+          "ON CLICK:",
+          "",
+          "( EN )",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "(?)",
+          "AI:   CATEGORIZE  *"
+        ]
+      ],
+      [
+        [
+          "In addition to the frequency of a word or phrase, you can also now see the number of texts in which it occurs. This can help you to eliminate words and phrases that\noccur in just a few texts. To enable this feature, click on OPTIONS / SHOW # TEXTS in the search form (show me how).\nMore information"
+        ]
+      ],
+      [
+        [
+          "HELP",
+          "",
+          "",
+          "",
+          "ALL FORMS\n27",
+          "FREQ",
+          ""
+        ],
+        [
+          "1",
+          "",
+          "",
+          "",
+          "A BUNCH OF PEOPLE ARE",
+          "27",
+          ""
+        ]
+      ],
+      [
+        [
+          "",
+          "0.863 seconds"
+        ]
+      ]
+    ]
+  },
+  "kwic": {
+    "url": "https://www.english-corpora.org/coca/x3.asp?x2w=y&xx=1&w10=a&w11=bunch&w12=of&w13=people&w14=are&r=",
+    "text": "(SHUFFLE)     \t ENTRIES: 26 TEXTS\n     LIMITS: NONE\nSORTING: YEAR , GENRE\n     +CONTEXT\t      \t   \t    \t  HELP     \t    AI: patterns\n1\t2017\tSPOK\tNBC: Today Show\t  #not alone. And like the he -- like a bunch of people are going through and everything like that. That helps. And\n2\t2017\tTV\tThe Vampire Diaries\t  #'m standing at a crime scene right now where a bunch of people are dead. And one of them is Violet Fell. What\n3\t2015\tMOV\tA Girl Like Her\t  #like, a rumor going around. Um, a bunch of people are saying that you're the one to blame for Jessica's\n4\t2014\tFIC\tBk:Player\t  #a tip about a neighborhood in Newark where apparently a bunch of people are getting sick and no one knows why. \" # \"\n5\t2012\tSPOK\tCNN: Piers Morgan Tonight\t  #or a school or a neighborhood or whatever and a bunch of people are killed. So I mean this is -- this is my\n6\t2012\tWEB\tdaringfireball.net\t  #something new? I don't. Sometimes when a bunch of people are doing something, and my gut tells me they're mistaken\n7\t2012\tWEB\t...thursday.typepad.com\t  #don't. You don't know yet what a bunch of people are going to expect of you. You're just you.\n9\t2012\tBLOG\ttcj.com (1)\t  #bunch of dumb statements last year and now a bunch of people are so mad that they're trying to discredit his entire body\n10\t2012\tBLOG\tfeministe.us\t  #like the feeling of solidarity, actually, when a bunch of people are saying smart things that I can agree with (but may\n11\t2012\tBLOG\t...ogs.villagevoice.com\t  #, he said. # So, simply because a bunch of people are willing to give up their phones for sex, that does\n12\t2012\tBLOG\tdailykos.com\t  #as I can tell, it will mean that a bunch of people are going get shafted. Some will have no idea they've\n13\t2012\tBLOG\tdatmoney.com\t  #this site is so unique that I'm sure a bunch of people are going to start copying it. # Matter of fact,\n14\t2012\tBLOG\tmnprblog.com\t  #disrespectful. In writing this I am sure that a bunch of people are going to feel like I am annoyed with them. The\n15\t2011\tFIC\tBk:GamesPlayAfter\t  #\" But you know how that is; when a bunch of people are dipping the dip gets all ick. \" Darcy's face\n16\t2009\tTV\tNumb3rs\t  #gun to his head in a game, Or a bunch of people are eating cow testicles on an island, It's all entertainment\n17\t2008\tSPOK\tNBC_Today\t  #medals. GIFFORD: Right. KOTB: And a bunch of people are betting on China. But the Wall Street Journal says,\n18\t2008\tNEWS\tDenver\t  #a couple of plays. I'm pretty sure a bunch of people are saying I can only carry the ball 10 or 15 times\n19\t2008\tMOV\tGardens of the Night\t  #mean, I bet you a bunch of... a bunch of people are gon na get fucking caught up on that shit. Arm\n20\t2006\tFIC\tBk:AbortionistsDaughter\t  #told him. \" Did she tell you? A bunch of people are going to Mexico. I'll pay for the ticket,\n21\t2003\tSPOK\tCBS_48Hours\t  #decks collapsed with about 50 people on them. A bunch of people are trapped under the deck. ! BILLY-LANHAM-SPEC: My\n22\t2003\tTV\tCharmed\t  #I am, but someone's not. Actually a bunch of people aren't. People? Like people out there, people?\n23\t2002\tSPOK\tNPR_Morning\t  #, how you got those enviable skills or why a bunch of people are trying to kill you. (Soundbite-of- \" The-\n24\t1999\tMOV\tThe Big Kahuna\t  #with 40 candles on it, maybe 50. A bunch of people are gon na jump out of a closet and yell, \"\n25\t1998\tNEWS\tNYTimes\t  #on his farm just south of Zurich. \" A bunch of people are trying to get rich by telling us that nature isn't\n26\t1994\tFIC\tBk:NorthMontana\t  #have gone out to a restaurant until I notice a bunch of people are crowded into the small conference room with the lights out.\n27\t1992\tSPOK\tInd_Limbaugh\t  #of people -- or pay for these children that a bunch of people are going to make women have,' and so forth.",
+    "tables": [
+      [
+        [
+          "(SHUFFLE)",
+          "ENTRIES: 26 TEXTS\n     LIMITS: NONE\nSORTING: YEAR , GENRE"
+        ]
+      ],
+      [
+        [
+          "",
+          "SORT",
+          "LIMIT",
+          "Examples / notes"
+        ],
+        [
+          "Genre",
+          "--",
+          "-----\n\n\t\t\tSpoken\n\t\t\tFiction\n\t\t\tMagazine\n\t\t\tNewspaper\n\t\t\tAcademic\n\t\t\tWeb\n\t\t\tBlog\n\t\t\tTV/Movies\n-----\n\nSPOK:ABC\n\nSPOK:NBC\n\nSPOK:CBS\n\nSPOK:CNN\n\nSPOK:FOX\n\nSPOK:MSNBC\n\nSPOK:PBS\n\nSPOK:NPR\n\nSPOK:Indep\n\nFIC:Gen (Book)\n\nFIC:Gen (Jrnl)\n\nFIC:SciFi/Fant\n\nFIC:Juvenile\n\nFIC:Movies\n\nFIC:Fan Fiction\n\nMAG:News/Opin\n\nMAG:Financial\n\nMAG:Sci/Tech\n\nMAG:Soc/Arts\n\nMAG:Religion\n\nMAG:Sports\n\nMAG:Entertain\n\nMAG:Home/Health\n\nMAG:Afric-Amer\n\nMAG:Children\n\nMAG:Women/Men\n\nNEWS:Misc\n\nNEWS:News_Intl\n\nNEWS:News_Natl\n\nNEWS:News_Local\n\nNEWS:Money\n\nNEWS:Life\n\nNEWS:Sports\n\nNEWS:Editorial\n\nACAD:History\n\nACAD:Education\n\nACAD:Geog/SocSci\n\nACAD:Law/PolSci\n\nACAD:Humanities\n\nACAD:Phil/Rel\n\nACAD:Sci/Tech\n\nACAD:Medicine\n\nACAD:Misc\n\nACAD:Business\n\nWeb:Acad\n\nWeb:Arg\n\nWeb:Fic\n\nWeb:Info\n\nWeb:Instr\n\nWeb:Legal\n\nWeb:News\n\nWeb:Pers\n\nWeb:Revw\n\nWeb:Misc\n\nBlog:Acad\n\nBlog:Arg\n\nBlog:Fic\n\nBlog:Info\n\nBlog:Instr\n\nBlog:Legal\n\nBlog:News\n\nBlog:Pers\n\nBlog:Prom\n\nBlog:Revw\n\nBlog:Misc\n\nMov:Action\n\nMov:Adult\n\nMov:Adv\n\nMov:Anim\n\nMov:Biog\n\nMov:Comedy\n\nMov:Crime\n\nMov:Docum\n\nMov:Drama\n\nMov:Fam\n\nMov:Fantasy\n\nMov:Horror\n\nMov:Music\n\nMov:Myst\n\nMov:Romance\n\nMov:Sci-Fi\n\nMov:Short\n\nMov:Thril\n\nMov:N/A\n\nTV:Action\n\nTV:Adv\n\nTV:Anim\n\nTV:Comedy\n\nTV:Crime\n\nTV:Docum\n\nTV:Drama\n\nTV:Game\n\nTV:Horror\n\nTV:Reality\n\nTV:Sci-Fi\n\nTV:Misc"
+        ],
+        [
+          "Year",
+          "--",
+          "to",
+          "1992 to 1997"
+        ],
+        [
+          "Source",
+          "--",
+          "",
+          "New York Times or bbc.co.uk"
+        ]
+      ],
+      [
+        [
+          "Because both the node word and the collocate occur more than 400,000 times in the corpus, the entries below come from a smaller subset\nof the entire corpus, which represents about 5-10% of the complete corpus."
+        ]
+      ],
+      [
+        [
+          "+CONTEXT",
+          "Click on audio icon at translation site to hear text.",
+          "Translate to EN\n(Change and then reload this page)",
+          "Select entries below | ADD TO\n\n\t----------\n\na\n\nplace that\n\n NEW\n\n [?]\n  SEE LISTS\n\nEN:\n\nAfrikaans\nAlbanian\nAmharic\nArabic\nArmenian\nAzerbaijani\nBasque\nBelarusian\nBengali\nBosnian\nBulgarian\nBurmese\nCatalan\nCebuano\nChichewa\nChinese (S)\nChinese (T)\nCorsican\nCroatian\nCzech\nDanish\nDutch\nEnglish\nEsperanto\nEstonian\nFilipino\nFinnish\nFrench\nFrisian\nGalician\nGeorgian\nGerman\nGreek\nGujarati\nHaitian C\nHausa\nHawaiian\nHebrew\nHindi\nHmong\nHungarian\nIcelandic\nIgbo\nIndonesian\nIrish\nItalian\nJapanese\nJavanese\nKannada\nKazakh\nKhmer\nKorean\nKurdish\nKyrgyz\nLao\nLatin\nLatvian\nLithuanian\nLuxembourgish\nMacedonian\nMalagasy\nMalay\nMalayalam\nMaltese\nMaori\nMarathi\nMongolian\nNepali\nNorwegian\nPashto\nPersian\nPolish\nPortuguese\nPunjabi\nRomanian\nRussian\nSamoan\nScots Gaelic\nSerbian\nSesotho\nShona\nSindhi\nSinhala\nSlovak\nSlovenian\nSomali\nSpanish\nSundanese\nSwahili\nSwedish\nTajik\nTamil\nTelugu\nThai\nTurkish\nUkrainian\nUrdu\nUzbek\nVietnamese\nWelsh\nXhosa\nYiddish\nYoruba\nZulu\n\nALL\n\n<< Change language\n\n Select entries below |\nThen click button to analyze text; see word definitions; find related phrases",
+          "",
+          "COCA\niWeb",
+          "DIC:\n\nD\nM\nO\nC\nG\nE",
+          "",
+          "",
+          "",
+          "",
+          "HELP",
+          "AI: patterns"
+        ]
+      ],
+      [
+        [
+          "SINGLE ENTRY / LINE\n\n(CLOSE HELP)"
+        ],
+        [
+          "",
+          "Listen to the text (click on\n\t\t at the translation website)"
+        ],
+        [
+          "",
+          "Translate the text (after the first translation, you can change the language in the\n\t\tblue section above)"
+        ],
+        [
+          "",
+          "Select individual words, and then see info on words (see next\n\t\tsection). Click again to deselect."
+        ],
+        [
+          "SINGLE WORD (choose from words, after clicking\n\t\t on a given line).\n\t\t(See example)"
+        ],
+        [
+          "{ WORD }",
+          "Search for the word in the corpus (from main search page: list,\n\t\tchart, collocates, etc)"
+        ],
+        [
+          "WORD PAGE",
+          "(From COCA or iWeb) Collocates, related topics, related words,\n\t\tsynonyms, clusters, KWIC, and more"
+        ],
+        [
+          "DICTIONARY",
+          "Links to entries from several online dictionaries (Oxford,\n\t\tMerriam-Webster, etymology, etc)"
+        ],
+        [
+          "",
+          "Translation, web search, image search, video/pronunciation"
+        ],
+        [
+          "MULTIPLE ENTRIES (see links in gray above; click on text entries below to add\n\t\tto group)"
+        ],
+        [
+          "SAVE",
+          "",
+          "Save entries for later use. Can also move, delete, and\n\t\texpand entries. Categorize entries by clicking on A|B|C in entry."
+        ],
+        [
+          "TRANSLATE",
+          "",
+          "See translation for multiple lines, with original lines in English\n\t\tand their translations grouped together; you can choose from 100+ languages."
+        ],
+        [
+          "ANALYZE",
+          "",
+          "Create \"text\" composed of selected lines, and then see keywords,\n\t\tfind related phrases for words in the text, and see detailed \"word\"\n\t\tpages for any word in the \"text\"."
+        ]
+      ],
+      [
+        [
+          "Please consider supporting the corpora by getting an (individual)\npremium license or a (university-wide)\nacademic license.\nIf you have a license, you won't see these messages anymore."
+        ]
+      ],
+      [
+        [
+          "1",
+          "4172312",
+          "2017",
+          "SPOK",
+          "NBC: Today Show",
+          "#not alone. And like the he -- like a bunch of people are going through and everything like that. That helps. And"
+        ],
+        [
+          "2",
+          "5241012",
+          "2017",
+          "TV",
+          "The Vampire Diaries",
+          "#'m standing at a crime scene right now where a bunch of people are dead. And one of them is Violet Fell. What"
+        ],
+        [
+          "3",
+          "5209088",
+          "2015",
+          "MOV",
+          "A Girl Like Her",
+          "#like, a rumor going around. Um, a bunch of people are saying that you're the one to blame for Jessica's"
+        ],
+        [
+          "4",
+          "4160570",
+          "2014",
+          "FIC",
+          "Bk:Player",
+          "#a tip about a neighborhood in Newark where apparently a bunch of people are getting sick and no one knows why. \" # \""
+        ],
+        [
+          "5",
+          "4123329",
+          "2012",
+          "SPOK",
+          "CNN: Piers Morgan Tonight",
+          "#or a school or a neighborhood or whatever and a bunch of people are killed. So I mean this is -- this is my"
+        ],
+        [
+          "6",
+          "5081243",
+          "2012",
+          "WEB",
+          "daringfireball.net",
+          "#something new? I don't. Sometimes when a bunch of people are doing something, and my gut tells me they're mistaken"
+        ],
+        [
+          "7",
+          "5255545",
+          "2012",
+          "WEB",
+          "...thursday.typepad.com",
+          "#don't. You don't know yet what a bunch of people are going to expect of you. You're just you."
+        ],
+        [
+          "9",
+          "5136335",
+          "2012",
+          "BLOG",
+          "tcj.com (1)",
+          "#bunch of dumb statements last year and now a bunch of people are so mad that they're trying to discredit his entire body"
+        ],
+        [
+          "10",
+          "5157656",
+          "2012",
+          "BLOG",
+          "feministe.us",
+          "#like the feeling of solidarity, actually, when a bunch of people are saying smart things that I can agree with (but may"
+        ],
+        [
+          "11",
+          "5159114",
+          "2012",
+          "BLOG",
+          "...ogs.villagevoice.com",
+          "#, he said. # So, simply because a bunch of people are willing to give up their phones for sex, that does"
+        ],
+        [
+          "12",
+          "5166284",
+          "2012",
+          "BLOG",
+          "dailykos.com",
+          "#as I can tell, it will mean that a bunch of people are going get shafted. Some will have no idea they've"
+        ],
+        [
+          "13",
+          "5186440",
+          "2012",
+          "BLOG",
+          "datmoney.com",
+          "#this site is so unique that I'm sure a bunch of people are going to start copying it. # Matter of fact,"
+        ],
+        [
+          "14",
+          "5202386",
+          "2012",
+          "BLOG",
+          "mnprblog.com",
+          "#disrespectful. In writing this I am sure that a bunch of people are going to feel like I am annoyed with them. The"
+        ],
+        [
+          "15",
+          "4121349",
+          "2011",
+          "FIC",
+          "Bk:GamesPlayAfter",
+          "#\" But you know how that is; when a bunch of people are dipping the dip gets all ick. \" Darcy's face"
+        ],
+        [
+          "16",
+          "5261464",
+          "2009",
+          "TV",
+          "Numb3rs",
+          "#gun to his head in a game, Or a bunch of people are eating cow testicles on an island, It's all entertainment"
+        ],
+        [
+          "17",
+          "4026289",
+          "2008",
+          "SPOK",
+          "NBC_Today",
+          "#medals. GIFFORD: Right. KOTB: And a bunch of people are betting on China. But the Wall Street Journal says,"
+        ],
+        [
+          "18",
+          "4024742",
+          "2008",
+          "NEWS",
+          "Denver",
+          "#a couple of plays. I'm pretty sure a bunch of people are saying I can only carry the ball 10 or 15 times"
+        ],
+        [
+          "19",
+          "5214190",
+          "2008",
+          "MOV",
+          "Gardens of the Night",
+          "#mean, I bet you a bunch of... a bunch of people are gon na get fucking caught up on that shit. Arm"
+        ],
+        [
+          "20",
+          "1031653",
+          "2006",
+          "FIC",
+          "Bk:AbortionistsDaughter",
+          "#told him. \" Did she tell you? A bunch of people are going to Mexico. I'll pay for the ticket,"
+        ],
+        [
+          "21",
+          "22097",
+          "2003",
+          "SPOK",
+          "CBS_48Hours",
+          "#decks collapsed with about 50 people on them. A bunch of people are trapped under the deck. ! BILLY-LANHAM-SPEC: My"
+        ],
+        [
+          "22",
+          "5227434",
+          "2003",
+          "TV",
+          "Charmed",
+          "#I am, but someone's not. Actually a bunch of people aren't. People? Like people out there, people?"
+        ],
+        [
+          "23",
+          "117297",
+          "2002",
+          "SPOK",
+          "NPR_Morning",
+          "#, how you got those enviable skills or why a bunch of people are trying to kill you. (Soundbite-of- \" The-"
+        ],
+        [
+          "24",
+          "5208171",
+          "1999",
+          "MOV",
+          "The Big Kahuna",
+          "#with 40 candles on it, maybe 50. A bunch of people are gon na jump out of a closet and yell, \""
+        ],
+        [
+          "25",
+          "3003397",
+          "1998",
+          "NEWS",
+          "NYTimes",
+          "#on his farm just south of Zurich. \" A bunch of people are trying to get rich by telling us that nature isn't"
+        ],
+        [
+          "26",
+          "1040354",
+          "1994",
+          "FIC",
+          "Bk:NorthMontana",
+          "#have gone out to a restaurant until I notice a bunch of people are crowded into the small conference room with the lights out."
+        ],
+        [
+          "27",
+          "231614",
+          "1992",
+          "SPOK",
+          "Ind_Limbaugh",
+          "#of people -- or pay for these children that a bunch of people are going to make women have,' and so forth."
+        ]
+      ]
+    ],
+    "rows": [
+      {
+        "index": 1,
+        "text_id": "4172312",
+        "year": "2017",
+        "genre": "SPOK",
+        "source": "NBC: Today Show",
+        "text": "#not alone. And like the he -- like a bunch of people are going through and everything like that. That helps. And",
+        "cells": [
+          "1",
+          "4172312",
+          "2017",
+          "SPOK",
+          "NBC: Today Show",
+          "#not alone. And like the he -- like a bunch of people are going through and everything like that. That helps. And"
+        ]
+      },
+      {
+        "index": 2,
+        "text_id": "5241012",
+        "year": "2017",
+        "genre": "TV",
+        "source": "The Vampire Diaries",
+        "text": "#'m standing at a crime scene right now where a bunch of people are dead. And one of them is Violet Fell. What",
+        "cells": [
+          "2",
+          "5241012",
+          "2017",
+          "TV",
+          "The Vampire Diaries",
+          "#'m standing at a crime scene right now where a bunch of people are dead. And one of them is Violet Fell. What"
+        ]
+      },
+      {
+        "index": 3,
+        "text_id": "5209088",
+        "year": "2015",
+        "genre": "MOV",
+        "source": "A Girl Like Her",
+        "text": "#like, a rumor going around. Um, a bunch of people are saying that you're the one to blame for Jessica's",
+        "cells": [
+          "3",
+          "5209088",
+          "2015",
+          "MOV",
+          "A Girl Like Her",
+          "#like, a rumor going around. Um, a bunch of people are saying that you're the one to blame for Jessica's"
+        ]
+      },
+      {
+        "index": 4,
+        "text_id": "4160570",
+        "year": "2014",
+        "genre": "FIC",
+        "source": "Bk:Player",
+        "text": "#a tip about a neighborhood in Newark where apparently a bunch of people are getting sick and no one knows why. \" # \"",
+        "cells": [
+          "4",
+          "4160570",
+          "2014",
+          "FIC",
+          "Bk:Player",
+          "#a tip about a neighborhood in Newark where apparently a bunch of people are getting sick and no one knows why. \" # \""
+        ]
+      },
+      {
+        "index": 5,
+        "text_id": "4123329",
+        "year": "2012",
+        "genre": "SPOK",
+        "source": "CNN: Piers Morgan Tonight",
+        "text": "#or a school or a neighborhood or whatever and a bunch of people are killed. So I mean this is -- this is my",
+        "cells": [
+          "5",
+          "4123329",
+          "2012",
+          "SPOK",
+          "CNN: Piers Morgan Tonight",
+          "#or a school or a neighborhood or whatever and a bunch of people are killed. So I mean this is -- this is my"
+        ]
+      },
+      {
+        "index": 6,
+        "text_id": "5081243",
+        "year": "2012",
+        "genre": "WEB",
+        "source": "daringfireball.net",
+        "text": "#something new? I don't. Sometimes when a bunch of people are doing something, and my gut tells me they're mistaken",
+        "cells": [
+          "6",
+          "5081243",
+          "2012",
+          "WEB",
+          "daringfireball.net",
+          "#something new? I don't. Sometimes when a bunch of people are doing something, and my gut tells me they're mistaken"
+        ]
+      },
+      {
+        "index": 7,
+        "text_id": "5255545",
+        "year": "2012",
+        "genre": "WEB",
+        "source": "...thursday.typepad.com",
+        "text": "#don't. You don't know yet what a bunch of people are going to expect of you. You're just you.",
+        "cells": [
+          "7",
+          "5255545",
+          "2012",
+          "WEB",
+          "...thursday.typepad.com",
+          "#don't. You don't know yet what a bunch of people are going to expect of you. You're just you."
+        ]
+      },
+      {
+        "index": 9,
+        "text_id": "5136335",
+        "year": "2012",
+        "genre": "BLOG",
+        "source": "tcj.com (1)",
+        "text": "#bunch of dumb statements last year and now a bunch of people are so mad that they're trying to discredit his entire body",
+        "cells": [
+          "9",
+          "5136335",
+          "2012",
+          "BLOG",
+          "tcj.com (1)",
+          "#bunch of dumb statements last year and now a bunch of people are so mad that they're trying to discredit his entire body"
+        ]
+      },
+      {
+        "index": 10,
+        "text_id": "5157656",
+        "year": "2012",
+        "genre": "BLOG",
+        "source": "feministe.us",
+        "text": "#like the feeling of solidarity, actually, when a bunch of people are saying smart things that I can agree with (but may",
+        "cells": [
+          "10",
+          "5157656",
+          "2012",
+          "BLOG",
+          "feministe.us",
+          "#like the feeling of solidarity, actually, when a bunch of people are saying smart things that I can agree with (but may"
+        ]
+      },
+      {
+        "index": 11,
+        "text_id": "5159114",
+        "year": "2012",
+        "genre": "BLOG",
+        "source": "...ogs.villagevoice.com",
+        "text": "#, he said. # So, simply because a bunch of people are willing to give up their phones for sex, that does",
+        "cells": [
+          "11",
+          "5159114",
+          "2012",
+          "BLOG",
+          "...ogs.villagevoice.com",
+          "#, he said. # So, simply because a bunch of people are willing to give up their phones for sex, that does"
+        ]
+      },
+      {
+        "index": 12,
+        "text_id": "5166284",
+        "year": "2012",
+        "genre": "BLOG",
+        "source": "dailykos.com",
+        "text": "#as I can tell, it will mean that a bunch of people are going get shafted. Some will have no idea they've",
+        "cells": [
+          "12",
+          "5166284",
+          "2012",
+          "BLOG",
+          "dailykos.com",
+          "#as I can tell, it will mean that a bunch of people are going get shafted. Some will have no idea they've"
+        ]
+      },
+      {
+        "index": 13,
+        "text_id": "5186440",
+        "year": "2012",
+        "genre": "BLOG",
+        "source": "datmoney.com",
+        "text": "#this site is so unique that I'm sure a bunch of people are going to start copying it. # Matter of fact,",
+        "cells": [
+          "13",
+          "5186440",
+          "2012",
+          "BLOG",
+          "datmoney.com",
+          "#this site is so unique that I'm sure a bunch of people are going to start copying it. # Matter of fact,"
+        ]
+      },
+      {
+        "index": 14,
+        "text_id": "5202386",
+        "year": "2012",
+        "genre": "BLOG",
+        "source": "mnprblog.com",
+        "text": "#disrespectful. In writing this I am sure that a bunch of people are going to feel like I am annoyed with them. The",
+        "cells": [
+          "14",
+          "5202386",
+          "2012",
+          "BLOG",
+          "mnprblog.com",
+          "#disrespectful. In writing this I am sure that a bunch of people are going to feel like I am annoyed with them. The"
+        ]
+      },
+      {
+        "index": 15,
+        "text_id": "4121349",
+        "year": "2011",
+        "genre": "FIC",
+        "source": "Bk:GamesPlayAfter",
+        "text": "#\" But you know how that is; when a bunch of people are dipping the dip gets all ick. \" Darcy's face",
+        "cells": [
+          "15",
+          "4121349",
+          "2011",
+          "FIC",
+          "Bk:GamesPlayAfter",
+          "#\" But you know how that is; when a bunch of people are dipping the dip gets all ick. \" Darcy's face"
+        ]
+      },
+      {
+        "index": 16,
+        "text_id": "5261464",
+        "year": "2009",
+        "genre": "TV",
+        "source": "Numb3rs",
+        "text": "#gun to his head in a game, Or a bunch of people are eating cow testicles on an island, It's all entertainment",
+        "cells": [
+          "16",
+          "5261464",
+          "2009",
+          "TV",
+          "Numb3rs",
+          "#gun to his head in a game, Or a bunch of people are eating cow testicles on an island, It's all entertainment"
+        ]
+      },
+      {
+        "index": 17,
+        "text_id": "4026289",
+        "year": "2008",
+        "genre": "SPOK",
+        "source": "NBC_Today",
+        "text": "#medals. GIFFORD: Right. KOTB: And a bunch of people are betting on China. But the Wall Street Journal says,",
+        "cells": [
+          "17",
+          "4026289",
+          "2008",
+          "SPOK",
+          "NBC_Today",
+          "#medals. GIFFORD: Right. KOTB: And a bunch of people are betting on China. But the Wall Street Journal says,"
+        ]
+      },
+      {
+        "index": 18,
+        "text_id": "4024742",
+        "year": "2008",
+        "genre": "NEWS",
+        "source": "Denver",
+        "text": "#a couple of plays. I'm pretty sure a bunch of people are saying I can only carry the ball 10 or 15 times",
+        "cells": [
+          "18",
+          "4024742",
+          "2008",
+          "NEWS",
+          "Denver",
+          "#a couple of plays. I'm pretty sure a bunch of people are saying I can only carry the ball 10 or 15 times"
+        ]
+      },
+      {
+        "index": 19,
+        "text_id": "5214190",
+        "year": "2008",
+        "genre": "MOV",
+        "source": "Gardens of the Night",
+        "text": "#mean, I bet you a bunch of... a bunch of people are gon na get fucking caught up on that shit. Arm",
+        "cells": [
+          "19",
+          "5214190",
+          "2008",
+          "MOV",
+          "Gardens of the Night",
+          "#mean, I bet you a bunch of... a bunch of people are gon na get fucking caught up on that shit. Arm"
+        ]
+      },
+      {
+        "index": 20,
+        "text_id": "1031653",
+        "year": "2006",
+        "genre": "FIC",
+        "source": "Bk:AbortionistsDaughter",
+        "text": "#told him. \" Did she tell you? A bunch of people are going to Mexico. I'll pay for the ticket,",
+        "cells": [
+          "20",
+          "1031653",
+          "2006",
+          "FIC",
+          "Bk:AbortionistsDaughter",
+          "#told him. \" Did she tell you? A bunch of people are going to Mexico. I'll pay for the ticket,"
+        ]
+      },
+      {
+        "index": 21,
+        "text_id": "22097",
+        "year": "2003",
+        "genre": "SPOK",
+        "source": "CBS_48Hours",
+        "text": "#decks collapsed with about 50 people on them. A bunch of people are trapped under the deck. ! BILLY-LANHAM-SPEC: My",
+        "cells": [
+          "21",
+          "22097",
+          "2003",
+          "SPOK",
+          "CBS_48Hours",
+          "#decks collapsed with about 50 people on them. A bunch of people are trapped under the deck. ! BILLY-LANHAM-SPEC: My"
+        ]
+      },
+      {
+        "index": 22,
+        "text_id": "5227434",
+        "year": "2003",
+        "genre": "TV",
+        "source": "Charmed",
+        "text": "#I am, but someone's not. Actually a bunch of people aren't. People? Like people out there, people?",
+        "cells": [
+          "22",
+          "5227434",
+          "2003",
+          "TV",
+          "Charmed",
+          "#I am, but someone's not. Actually a bunch of people aren't. People? Like people out there, people?"
+        ]
+      },
+      {
+        "index": 23,
+        "text_id": "117297",
+        "year": "2002",
+        "genre": "SPOK",
+        "source": "NPR_Morning",
+        "text": "#, how you got those enviable skills or why a bunch of people are trying to kill you. (Soundbite-of- \" The-",
+        "cells": [
+          "23",
+          "117297",
+          "2002",
+          "SPOK",
+          "NPR_Morning",
+          "#, how you got those enviable skills or why a bunch of people are trying to kill you. (Soundbite-of- \" The-"
+        ]
+      },
+      {
+        "index": 24,
+        "text_id": "5208171",
+        "year": "1999",
+        "genre": "MOV",
+        "source": "The Big Kahuna",
+        "text": "#with 40 candles on it, maybe 50. A bunch of people are gon na jump out of a closet and yell, \"",
+        "cells": [
+          "24",
+          "5208171",
+          "1999",
+          "MOV",
+          "The Big Kahuna",
+          "#with 40 candles on it, maybe 50. A bunch of people are gon na jump out of a closet and yell, \""
+        ]
+      },
+      {
+        "index": 25,
+        "text_id": "3003397",
+        "year": "1998",
+        "genre": "NEWS",
+        "source": "NYTimes",
+        "text": "#on his farm just south of Zurich. \" A bunch of people are trying to get rich by telling us that nature isn't",
+        "cells": [
+          "25",
+          "3003397",
+          "1998",
+          "NEWS",
+          "NYTimes",
+          "#on his farm just south of Zurich. \" A bunch of people are trying to get rich by telling us that nature isn't"
+        ]
+      },
+      {
+        "index": 26,
+        "text_id": "1040354",
+        "year": "1994",
+        "genre": "FIC",
+        "source": "Bk:NorthMontana",
+        "text": "#have gone out to a restaurant until I notice a bunch of people are crowded into the small conference room with the lights out.",
+        "cells": [
+          "26",
+          "1040354",
+          "1994",
+          "FIC",
+          "Bk:NorthMontana",
+          "#have gone out to a restaurant until I notice a bunch of people are crowded into the small conference room with the lights out."
+        ]
+      },
+      {
+        "index": 27,
+        "text_id": "231614",
+        "year": "1992",
+        "genre": "SPOK",
+        "source": "Ind_Limbaugh",
+        "text": "#of people -- or pay for these children that a bunch of people are going to make women have,' and so forth.",
+        "cells": [
+          "27",
+          "231614",
+          "1992",
+          "SPOK",
+          "Ind_Limbaugh",
+          "#of people -- or pay for these children that a bunch of people are going to make women have,' and so forth."
+        ]
+      }
+    ]
+  }
+}

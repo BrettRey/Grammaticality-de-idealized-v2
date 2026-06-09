@@ -151,9 +151,8 @@ and data scaffold that improves on the Linguistic Transparency COCA pilot by sep
 from confirmation, requiring opportunity denominators, preserving reproducible KWIC coding, and
 estimating uncertainty before any projective score movement.
 The follow-on run harness, `scripts/run_agr_coca_queries.py`, expands the registered `AGR` query
-plan into concrete English-Corpora.org wrapper calls. It refuses live execution when the COCA
-wrapper session is unauthenticated, so the current state remains a protocol and run harness, not a
-completed corpus result.
+plan into concrete English-Corpora.org wrapper calls. The first live run exposed that raw list
+counts need KWIC filtering before they can support projection claims.
 The live external-feedback queue is recorded in `notes/live-feedback-queue-2026-06-09.md`: projection
 remains first, followed by compression/ablation pressure, critic-verdict variance checks, and modest
 edge semantics. The immediate edge-semantics consistency fix softened `causal` in
@@ -168,6 +167,13 @@ The first live COCA tranche is recorded in
 raw list-count queries and returned 72 plural-agreement hits versus 6 singular-agreement hits across
 `a bunch of people/kids` with `are/were/is/was`. This is raw unfiltered production evidence only;
 KWIC filtering and denominator work are still required before any evaluation or score movement.
+The follow-on KWIC-filtered tranche is recorded in
+`notes/agr-coca-bunch-animate-kwic-filter-pass-2026-06-09.md`. The repo-local
+`scripts/fetch_coca_kwic_from_list.mjs` retrieves KWIC rows by clicking COCA list-result links,
+which proved more reliable than direct KWIC form submission. The filtered target counts are 71
+plural-agreement rows versus 1 singular-agreement row. Five of the six raw singular hits were
+non-subject false positives. This supports the registered `AGR` direction for animate plural
+complements but remains one narrow corpus tranche; it does not authorize score movement.
 An internal state-of-search report now summarizes the current scoped-module partition, evaluation
 ladder, the completed transparent-relative Lane A pass, and remaining empirical lanes without
 authorizing score movement.
@@ -428,8 +434,10 @@ validation.
 
 1. Run the audience/policy pronoun task or independent-relative-`whose` human judgment task if data
    collection is available.
-2. Run the `AGR` COCA projection protocol before adding more agreement cards; the next agreement
-   pressure should come from a registered corpus projection, not another CGEL accommodation.
+2. Extend the `AGR` COCA projection lane at the next margin: either run
+   `bunch-inanimate-confirmatory` to test the animate/member-construal contrast or run
+   `majority-minority-confirmatory` to test whether the agreement-controller module generalizes
+   beyond `bunch`.
 3. After the first data-bearing projection lane, run an ablation pass over scoped modules: try to
    remove distinctive nodes from `FDL`/`UOB` and `OPG`/`DYN` before adding new graph families.
 4. Run one critic-verdict variance check by evaluating the same card/protocol several times and

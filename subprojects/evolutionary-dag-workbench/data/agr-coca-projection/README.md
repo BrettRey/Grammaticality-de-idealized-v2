@@ -12,6 +12,7 @@ This directory is reserved for a confirmatory COCA run testing the `AGR` module.
 - `query-plan.csv`: query cells, denominators, and expected patterns.
 - `kwic-coding-schema.csv`: row-level labels for raw KWIC filtering.
 - `summary.csv`: raw and filtered summaries as they accumulate.
+- `coded/bunch-animate-kwic-coding.csv`: row-level coding for the first completed tranche.
 
 Future run artifacts should use:
 
@@ -47,9 +48,11 @@ available.
 
 Current completed tranche:
 
-- `bunch-animate-confirmatory`, `list` query type, raw unfiltered counts only.
+- `bunch-animate-confirmatory`, list-result counts plus KWIC filtering via result-row clicks.
 
-KWIC filtering remains required before treating counter-direction cells as genuine target evidence.
+The filtered target counts for the first tranche are 71 plural agreement rows and 1 singular
+agreement row across `a bunch of people/kids` with `are/were/is/was`. Five of six raw singular
+hits were non-subject false positives.
 
 Do not treat raw COCA frequency as licensing. The lane measures production/attestation over
 opportunity sets and uses KWIC filtering to distinguish genuine agreement realizations from query

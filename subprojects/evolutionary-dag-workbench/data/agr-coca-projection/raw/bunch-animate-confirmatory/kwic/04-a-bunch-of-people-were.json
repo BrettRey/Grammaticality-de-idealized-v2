@@ -1,0 +1,1214 @@
+{
+  "query": "a bunch of people were",
+  "corpus": "coca",
+  "retrieved_at": "2026-06-09T15:48:34.553Z",
+  "method": "list-result-click",
+  "list": {
+    "url": "https://www.english-corpora.org/coca/x2.asp",
+    "text": "ON CLICK: \t    \t     ( EN )\t \t   \t    \t    \t    \t    \t (?)   \t   AI:   CATEGORIZE  *\n\nHELP\t\t\t  ALL FORMS\n28\tFREQ\n1\t\t\t  A BUNCH OF PEOPLE WERE\t28\n\t0.863 seconds",
+    "tables": [
+      [
+        [
+          "SAVE LIST",
+          "NAME OF LIST",
+          "",
+          ""
+        ],
+        [
+          "Select entries below to add these to a \"customized word list\", and then later use this list as part of a search. For example, if you add 4 or 5 entries\nbelow to the list myList, then you could use this as part of a search, like large @myList. More information:"
+        ]
+      ],
+      [
+        [
+          "ON CLICK: \t    \t     ( EN )\t \t   \t    \t    \t    \t    \t (?)   \t   AI:   CATEGORIZE  *",
+          ""
+        ],
+        [
+          "Click on  below, and then click on any word in the highlighted entry, to see detailed information on the word.\nTo come back to this page, click on  on the \"word page\".\n [Close]"
+        ],
+        [
+          "Click on\nbelow to \"save\" this word or phrase. Then click on\nat the top of the corpus to access this list at any point in the future.\n\n [Close]"
+        ],
+        [
+          "By default, when you click on one of the words/phrases below, you will see the \"Keyword in Context\" view in the tab to the right.\nBut you can also now access \"external\" resources for any of the words/phrases that you see below. To do so, click on one of the types of resources above\n(e.g. images or translation) and then click on the word/phrase below.\nNote: To change the language for translation, click on the two letter code after\nTRANSLATE above. This code will be saved for future access to the corpus as well. If it shows [??], you haven't yet selected a language.\n\n  [Close]"
+        ]
+      ],
+      [
+        [
+          "ON CLICK:",
+          "",
+          "( EN )",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "(?)",
+          "AI:   CATEGORIZE  *"
+        ]
+      ],
+      [
+        [
+          "In addition to the frequency of a word or phrase, you can also now see the number of texts in which it occurs. This can help you to eliminate words and phrases that\noccur in just a few texts. To enable this feature, click on OPTIONS / SHOW # TEXTS in the search form (show me how).\nMore information"
+        ]
+      ],
+      [
+        [
+          "HELP",
+          "",
+          "",
+          "",
+          "ALL FORMS\n28",
+          "FREQ",
+          ""
+        ],
+        [
+          "1",
+          "",
+          "",
+          "",
+          "A BUNCH OF PEOPLE WERE",
+          "28",
+          ""
+        ]
+      ],
+      [
+        [
+          "",
+          "0.863 seconds"
+        ]
+      ]
+    ]
+  },
+  "kwic": {
+    "url": "https://www.english-corpora.org/coca/x3.asp?x2w=y&xx=1&w10=a&w11=bunch&w12=of&w13=people&w14=were&r=",
+    "text": "(SHUFFLE)     \t ENTRIES: 28 TEXTS\n     LIMITS: NONE\nSORTING: YEAR , GENRE\n     CLICK FOR MORE CONTEXT\t    SAVE  \t TRANSLATE  \t ANALYZE   \t  HELP     \t    AI: patterns\n1\t2019\tSPOK\tCBS_48Hours\t\t\t\t  . ERIN-MORIARTY) : Let's go back to November 12, 2016. STEPHEN-NASO) : A bunch of people were going out to New York City. ELISA-LIBRETTO) : Joey would go\n2\t2019\tFIC\tThe Dalhousie Review\t\t\t\t  got a call from a guy in my program, Eli, who said a bunch of people were going to a bar called The Charles. He said that I\n3\t2019\tFIC\tMichigan Quarterly Review\t\t\t\t  She said it in English class. \" Stephanie wiped her nose. \" A bunch of people were talking about Adam. \" Adam was the one boy in school\n4\t2019\tMAG\tTechCrunch\t\t\t\t  influencer, so calm down. My whole family is Irish Catholic. # A bunch of people were sharing my tweet. I was like, oh, god.\n5\t2018\tSPOK\tCBS_Morning\t\t\t\t  MOLLY-TOBIN) : We're like, let's get him in this towel. A bunch of people were around. We all started carrying him down. MICHELLE-MILLER) : Lytton\n6\t2018\tFIC\tIowaRev\t\t\t\t  Camels. He told me he'd be up in a second. # A bunch of people were already on the roof. They were looking out toward New Jersey\n7\t2018\tFIC\tNewYorker\t\t\t\t  'm so sorry! \" she said. \" I thought it was like a bunch of people were meeting. \" # It didn't matter anymore. He was\n8\t2018\tMOV\tTyrel\t\t\t\t  So... Yeah, so I come outside, right? Yeah. And a bunch of people were there, so my car was blocked in... Uh-huh. So\n9\t2015\tSPOK\tABC: The View\t\t\t\t  if I had to go and, like, stand in a room where a bunch of people were sitting there with me naked, kind of, like, sculpting\n10\t2015\tFIC\tAntiochRev\t\t\t\t  injured. All that was left of the building was the floor. \" A bunch of people were going to drive by after school, \" Ryan said. \"\n11\t2013\tSPOK\tCBS: News Sunday Morning\t\t\t\t  severely autistic son had never interacted verbally with anybody in the family before. A bunch of people were in the kitchen playing with magnetic poetry, and suddenly he indicated\n12\t2013\tTV\tSiberia\t\t\t\t  Flintstones \" where you do it and it just happens, so I guess a bunch of people were getting going with the sticks, trying to get a fire started\n13\t2012\tWEB\trushlimbaugh.com\t\t\t\t  to tell you that I believe that they did. I fully believe that a bunch of people were made to believe that Mitt Romney actually enjoyed watching a guy's\n14\t2012\tWEB\tfatnutritionist.com\t\t\t\t  , yes, yes! # I was once on a usenet group where a bunch of people were very smugly dissing McDonalds and I and another old fart commented that\n15\t2012\tWEB\tskepchick.org\t\t\t\t  the men you refer to here. After the SGU dinner at TAM Oz a bunch of people were at a pub down the road hanging out, including George Hrab\n16\t2012\tWEB\tvanityfair.com\t\t\t\t  walking out to my car outside the capitol, and he and Gramm and a bunch of people were setting up their press conference on the steps. I remember feeling\n17\t2012\tBLOG\tdailykitten.com\t\t\t\t  from her sister they had found a kitten in the middle of the street a bunch of people were around it just looking at it and then left it there so\n18\t2012\tBLOG\t...edator.wordpress.com\t\t\t\t  I've voted at since I moved to my house in 1997. # A bunch of people were standing around outside -- locked out! Around 720, we got\n19\t2009\tSPOK\tABC_Nightline\t\t\t\t  late today. MICHELE-BIDER-1NE# And then they were on our front lawn. Like a bunch of people were gathering on our front lawn because the smoke was kind of going\n20\t2009\tSPOK\tFox_Journal\t\t\t\t  \" reporter who was rescued by British commandos from the Taliban in Afghanistan. A bunch of people were killed in that raid, including reporters, an Afghan interpreter and\n21\t2009\tTV\tIn Plain Sight\t\t\t\t  in front of a church the night before... and woke up just as a bunch of people were going in for a morning meeting. Hello. Yes, it\n22\t2008\tMOV\tSaw V\t\t\t\t  'd you do to get here? I... I did something, and a bunch of people were killed. I didn't mean to. They're still dead\n23\t2002\tMOV\t...n: The Making of 'Citizen Toxie'\t\t\t\t  that. But I didn't know you could act. INTERVIEWER: [laughs] A bunch of people were like, are you An actor, like professionally? And one\n24\t2000\tFIC\tUnfamiliarPlaces\t\t\t\t  his village. Beyond the village walls, she reached an open field. A bunch of people were watching something, some with their toothbrush sticks temporarily arrested in their\n25\t1999\tFIC\tAnalog\t\t\t\t  . She lifted herself up slowly from the floor. Across the room, a bunch of people were around Landry, slapping him around, talking angrily-in Russian. They\n26\t1997\tMAG\tChildDigest\t\t\t\t  , he spotted a picture of one of the first airplanes ever built. A bunch of people were standing around, looking at it and laughing their heads off.\n27\t1995\tACAD\tAmerScholar\t\t\t\t  I went up the steps of a church and into a back room where a bunch of people were having a meeting. I introduced myself by my first name,\n28\t1993\tFIC\tBk:Snagged\t\t\t\t  throat. Down the hall, there was a flurry at the elevator. A bunch of people were getting off. Ruth looked wild-eyed over her shoulder. Head and",
+    "tables": [
+      [
+        [
+          "(SHUFFLE)",
+          "ENTRIES: 28 TEXTS\n     LIMITS: NONE\nSORTING: YEAR , GENRE"
+        ]
+      ],
+      [
+        [
+          "",
+          "SORT",
+          "LIMIT",
+          "Examples / notes"
+        ],
+        [
+          "Genre",
+          "--",
+          "-----\n\n\t\t\tSpoken\n\t\t\tFiction\n\t\t\tMagazine\n\t\t\tNewspaper\n\t\t\tAcademic\n\t\t\tWeb\n\t\t\tBlog\n\t\t\tTV/Movies\n-----\n\nSPOK:ABC\n\nSPOK:NBC\n\nSPOK:CBS\n\nSPOK:CNN\n\nSPOK:FOX\n\nSPOK:MSNBC\n\nSPOK:PBS\n\nSPOK:NPR\n\nSPOK:Indep\n\nFIC:Gen (Book)\n\nFIC:Gen (Jrnl)\n\nFIC:SciFi/Fant\n\nFIC:Juvenile\n\nFIC:Movies\n\nFIC:Fan Fiction\n\nMAG:News/Opin\n\nMAG:Financial\n\nMAG:Sci/Tech\n\nMAG:Soc/Arts\n\nMAG:Religion\n\nMAG:Sports\n\nMAG:Entertain\n\nMAG:Home/Health\n\nMAG:Afric-Amer\n\nMAG:Children\n\nMAG:Women/Men\n\nNEWS:Misc\n\nNEWS:News_Intl\n\nNEWS:News_Natl\n\nNEWS:News_Local\n\nNEWS:Money\n\nNEWS:Life\n\nNEWS:Sports\n\nNEWS:Editorial\n\nACAD:History\n\nACAD:Education\n\nACAD:Geog/SocSci\n\nACAD:Law/PolSci\n\nACAD:Humanities\n\nACAD:Phil/Rel\n\nACAD:Sci/Tech\n\nACAD:Medicine\n\nACAD:Misc\n\nACAD:Business\n\nWeb:Acad\n\nWeb:Arg\n\nWeb:Fic\n\nWeb:Info\n\nWeb:Instr\n\nWeb:Legal\n\nWeb:News\n\nWeb:Pers\n\nWeb:Revw\n\nWeb:Misc\n\nBlog:Acad\n\nBlog:Arg\n\nBlog:Fic\n\nBlog:Info\n\nBlog:Instr\n\nBlog:Legal\n\nBlog:News\n\nBlog:Pers\n\nBlog:Prom\n\nBlog:Revw\n\nBlog:Misc\n\nMov:Action\n\nMov:Adult\n\nMov:Adv\n\nMov:Anim\n\nMov:Biog\n\nMov:Comedy\n\nMov:Crime\n\nMov:Docum\n\nMov:Drama\n\nMov:Fam\n\nMov:Fantasy\n\nMov:Horror\n\nMov:Music\n\nMov:Myst\n\nMov:Romance\n\nMov:Sci-Fi\n\nMov:Short\n\nMov:Thril\n\nMov:N/A\n\nTV:Action\n\nTV:Adv\n\nTV:Anim\n\nTV:Comedy\n\nTV:Crime\n\nTV:Docum\n\nTV:Drama\n\nTV:Game\n\nTV:Horror\n\nTV:Reality\n\nTV:Sci-Fi\n\nTV:Misc"
+        ],
+        [
+          "Year",
+          "--",
+          "to",
+          "1992 to 1997"
+        ],
+        [
+          "Source",
+          "--",
+          "",
+          "New York Times or bbc.co.uk"
+        ]
+      ],
+      [
+        [
+          "Because both the node word and the collocate occur more than 400,000 times in the corpus, the entries below come from a smaller subset\nof the entire corpus, which represents about 5-10% of the complete corpus."
+        ]
+      ],
+      [
+        [
+          "CLICK FOR MORE CONTEXT",
+          "Click on audio icon at translation site to hear text.",
+          "Translate to EN\n(Change and then reload this page)",
+          "Select entries below | ADD TO\n\n\t----------\n\na\n\nplace that\n\n NEW\n\n [?]\n  SEE LISTS\n\nEN:\n\nAfrikaans\nAlbanian\nAmharic\nArabic\nArmenian\nAzerbaijani\nBasque\nBelarusian\nBengali\nBosnian\nBulgarian\nBurmese\nCatalan\nCebuano\nChichewa\nChinese (S)\nChinese (T)\nCorsican\nCroatian\nCzech\nDanish\nDutch\nEnglish\nEsperanto\nEstonian\nFilipino\nFinnish\nFrench\nFrisian\nGalician\nGeorgian\nGerman\nGreek\nGujarati\nHaitian C\nHausa\nHawaiian\nHebrew\nHindi\nHmong\nHungarian\nIcelandic\nIgbo\nIndonesian\nIrish\nItalian\nJapanese\nJavanese\nKannada\nKazakh\nKhmer\nKorean\nKurdish\nKyrgyz\nLao\nLatin\nLatvian\nLithuanian\nLuxembourgish\nMacedonian\nMalagasy\nMalay\nMalayalam\nMaltese\nMaori\nMarathi\nMongolian\nNepali\nNorwegian\nPashto\nPersian\nPolish\nPortuguese\nPunjabi\nRomanian\nRussian\nSamoan\nScots Gaelic\nSerbian\nSesotho\nShona\nSindhi\nSinhala\nSlovak\nSlovenian\nSomali\nSpanish\nSundanese\nSwahili\nSwedish\nTajik\nTamil\nTelugu\nThai\nTurkish\nUkrainian\nUrdu\nUzbek\nVietnamese\nWelsh\nXhosa\nYiddish\nYoruba\nZulu\n\nSelect entries below to translate |\nFor one line below:\n\n<< Change language\n\n Select entries below |\nThen click button to analyze text; see word definitions; find related phrases",
+          "",
+          "WORD PAGE:\nCOCA\niWeb",
+          "DIC:\n\nD\nM\nO\nC\nG\nE",
+          "TR\n WEB\n IMG\n VID",
+          "SAVE",
+          "TRANSLATE",
+          "ANALYZE",
+          "HELP",
+          "AI: patterns"
+        ]
+      ],
+      [
+        [
+          "SINGLE ENTRY / LINE\n\n(CLOSE HELP)"
+        ],
+        [
+          "",
+          "Listen to the text (click on\n\t\t at the translation website)"
+        ],
+        [
+          "",
+          "Translate the text (after the first translation, you can change the language in the\n\t\tblue section above)"
+        ],
+        [
+          "",
+          "Select individual words, and then see info on words (see next\n\t\tsection). Click again to deselect."
+        ],
+        [
+          "SINGLE WORD (choose from words, after clicking\n\t\t on a given line).\n\t\t(See example)"
+        ],
+        [
+          "{ WORD }",
+          "Search for the word in the corpus (from main search page: list,\n\t\tchart, collocates, etc)"
+        ],
+        [
+          "WORD PAGE",
+          "(From COCA or iWeb) Collocates, related topics, related words,\n\t\tsynonyms, clusters, KWIC, and more"
+        ],
+        [
+          "DICTIONARY",
+          "Links to entries from several online dictionaries (Oxford,\n\t\tMerriam-Webster, etymology, etc)"
+        ],
+        [
+          "",
+          "Translation, web search, image search, video/pronunciation"
+        ],
+        [
+          "MULTIPLE ENTRIES (see links in gray above; click on text entries below to add\n\t\tto group)"
+        ],
+        [
+          "SAVE",
+          "",
+          "Save entries for later use. Can also move, delete, and\n\t\texpand entries. Categorize entries by clicking on A|B|C in entry."
+        ],
+        [
+          "TRANSLATE",
+          "",
+          "See translation for multiple lines, with original lines in English\n\t\tand their translations grouped together; you can choose from 100+ languages."
+        ],
+        [
+          "ANALYZE",
+          "",
+          "Create \"text\" composed of selected lines, and then see keywords,\n\t\tfind related phrases for words in the text, and see detailed \"word\"\n\t\tpages for any word in the \"text\"."
+        ]
+      ],
+      [
+        [
+          "Please consider supporting the corpora by getting an (individual)\npremium license or a (university-wide)\nacademic license.\nIf you have a license, you won't see these messages anymore."
+        ]
+      ],
+      [
+        [
+          "1",
+          "5001796",
+          "2019",
+          "SPOK",
+          "CBS_48Hours",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          ". ERIN-MORIARTY) : Let's go back to November 12, 2016. STEPHEN-NASO) : A bunch of people were going out to New York City. ELISA-LIBRETTO) : Joey would go"
+        ],
+        [
+          "2",
+          "5003035",
+          "2019",
+          "FIC",
+          "The Dalhousie Review",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "got a call from a guy in my program, Eli, who said a bunch of people were going to a bar called The Charles. He said that I"
+        ],
+        [
+          "3",
+          "5003729",
+          "2019",
+          "FIC",
+          "Michigan Quarterly Review",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "She said it in English class. \" Stephanie wiped her nose. \" A bunch of people were talking about Adam. \" Adam was the one boy in school"
+        ],
+        [
+          "4",
+          "5008924",
+          "2019",
+          "MAG",
+          "TechCrunch",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "influencer, so calm down. My whole family is Irish Catholic. # A bunch of people were sharing my tweet. I was like, oh, god."
+        ],
+        [
+          "5",
+          "5000055",
+          "2018",
+          "SPOK",
+          "CBS_Morning",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "MOLLY-TOBIN) : We're like, let's get him in this towel. A bunch of people were around. We all started carrying him down. MICHELLE-MILLER) : Lytton"
+        ],
+        [
+          "6",
+          "5003808",
+          "2018",
+          "FIC",
+          "IowaRev",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "Camels. He told me he'd be up in a second. # A bunch of people were already on the roof. They were looking out toward New Jersey"
+        ],
+        [
+          "7",
+          "5003962",
+          "2018",
+          "FIC",
+          "NewYorker",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "'m so sorry! \" she said. \" I thought it was like a bunch of people were meeting. \" # It didn't matter anymore. He was"
+        ],
+        [
+          "8",
+          "5247070",
+          "2018",
+          "MOV",
+          "Tyrel",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "So... Yeah, so I come outside, right? Yeah. And a bunch of people were there, so my car was blocked in... Uh-huh. So"
+        ],
+        [
+          "9",
+          "4126318",
+          "2015",
+          "SPOK",
+          "ABC: The View",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "if I had to go and, like, stand in a room where a bunch of people were sitting there with me naked, kind of, like, sculpting"
+        ],
+        [
+          "10",
+          "4163853",
+          "2015",
+          "FIC",
+          "AntiochRev",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "injured. All that was left of the building was the floor. \" A bunch of people were going to drive by after school, \" Ryan said. \""
+        ],
+        [
+          "11",
+          "4123662",
+          "2013",
+          "SPOK",
+          "CBS: News Sunday Morning",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "severely autistic son had never interacted verbally with anybody in the family before. A bunch of people were in the kitchen playing with magnetic poetry, and suddenly he indicated"
+        ],
+        [
+          "12",
+          "5240454",
+          "2013",
+          "TV",
+          "Siberia",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "Flintstones \" where you do it and it just happens, so I guess a bunch of people were getting going with the sticks, trying to get a fire started"
+        ],
+        [
+          "13",
+          "5038442",
+          "2012",
+          "WEB",
+          "rushlimbaugh.com",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "to tell you that I believe that they did. I fully believe that a bunch of people were made to believe that Mitt Romney actually enjoyed watching a guy's"
+        ],
+        [
+          "14",
+          "5053669",
+          "2012",
+          "WEB",
+          "fatnutritionist.com",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          ", yes, yes! # I was once on a usenet group where a bunch of people were very smugly dissing McDonalds and I and another old fart commented that"
+        ],
+        [
+          "15",
+          "5073248",
+          "2012",
+          "WEB",
+          "skepchick.org",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "the men you refer to here. After the SGU dinner at TAM Oz a bunch of people were at a pub down the road hanging out, including George Hrab"
+        ],
+        [
+          "16",
+          "5092741",
+          "2012",
+          "WEB",
+          "vanityfair.com",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "walking out to my car outside the capitol, and he and Gramm and a bunch of people were setting up their press conference on the steps. I remember feeling"
+        ],
+        [
+          "17",
+          "5132520",
+          "2012",
+          "BLOG",
+          "dailykitten.com",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "from her sister they had found a kitten in the middle of the street a bunch of people were around it just looking at it and then left it there so"
+        ],
+        [
+          "18",
+          "5142769",
+          "2012",
+          "BLOG",
+          "...edator.wordpress.com",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "I've voted at since I moved to my house in 1997. # A bunch of people were standing around outside -- locked out! Around 720, we got"
+        ],
+        [
+          "19",
+          "4031052",
+          "2009",
+          "SPOK",
+          "ABC_Nightline",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "late today. MICHELE-BIDER-1NE# And then they were on our front lawn. Like a bunch of people were gathering on our front lawn because the smoke was kind of going"
+        ],
+        [
+          "20",
+          "4072214",
+          "2009",
+          "SPOK",
+          "Fox_Journal",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "\" reporter who was rescued by British commandos from the Taliban in Afghanistan. A bunch of people were killed in that raid, including reporters, an Afghan interpreter and"
+        ],
+        [
+          "21",
+          "5231215",
+          "2009",
+          "TV",
+          "In Plain Sight",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "in front of a church the night before... and woke up just as a bunch of people were going in for a morning meeting. Hello. Yes, it"
+        ],
+        [
+          "22",
+          "5216407",
+          "2008",
+          "MOV",
+          "Saw V",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "'d you do to get here? I... I did something, and a bunch of people were killed. I didn't mean to. They're still dead"
+        ],
+        [
+          "23",
+          "5218551",
+          "2002",
+          "MOV",
+          "...n: The Making of 'Citizen Toxie'",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "that. But I didn't know you could act. INTERVIEWER: [laughs] A bunch of people were like, are you An actor, like professionally? And one"
+        ],
+        [
+          "24",
+          "1014632",
+          "2000",
+          "FIC",
+          "UnfamiliarPlaces",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "his village. Beyond the village walls, she reached an open field. A bunch of people were watching something, some with their toothbrush sticks temporarily arrested in their"
+        ],
+        [
+          "25",
+          "1006354",
+          "1999",
+          "FIC",
+          "Analog",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          ". She lifted herself up slowly from the floor. Across the room, a bunch of people were around Landry, slapping him around, talking angrily-in Russian. They"
+        ],
+        [
+          "26",
+          "2014544",
+          "1997",
+          "MAG",
+          "ChildDigest",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          ", he spotted a picture of one of the first airplanes ever built. A bunch of people were standing around, looking at it and laughing their heads off."
+        ],
+        [
+          "27",
+          "4000211",
+          "1995",
+          "ACAD",
+          "AmerScholar",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "I went up the steps of a church and into a back room where a bunch of people were having a meeting. I introduced myself by my first name,"
+        ],
+        [
+          "28",
+          "1040035",
+          "1993",
+          "FIC",
+          "Bk:Snagged",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "throat. Down the hall, there was a flurry at the elevator. A bunch of people were getting off. Ruth looked wild-eyed over her shoulder. Head and"
+        ]
+      ]
+    ],
+    "rows": [
+      {
+        "index": 1,
+        "text_id": "5001796",
+        "year": "2019",
+        "genre": "SPOK",
+        "source": "CBS_48Hours",
+        "text": ". ERIN-MORIARTY) : Let's go back to November 12, 2016. STEPHEN-NASO) : A bunch of people were going out to New York City. ELISA-LIBRETTO) : Joey would go",
+        "cells": [
+          "1",
+          "5001796",
+          "2019",
+          "SPOK",
+          "CBS_48Hours",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          ". ERIN-MORIARTY) : Let's go back to November 12, 2016. STEPHEN-NASO) : A bunch of people were going out to New York City. ELISA-LIBRETTO) : Joey would go"
+        ]
+      },
+      {
+        "index": 2,
+        "text_id": "5003035",
+        "year": "2019",
+        "genre": "FIC",
+        "source": "The Dalhousie Review",
+        "text": "got a call from a guy in my program, Eli, who said a bunch of people were going to a bar called The Charles. He said that I",
+        "cells": [
+          "2",
+          "5003035",
+          "2019",
+          "FIC",
+          "The Dalhousie Review",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "got a call from a guy in my program, Eli, who said a bunch of people were going to a bar called The Charles. He said that I"
+        ]
+      },
+      {
+        "index": 3,
+        "text_id": "5003729",
+        "year": "2019",
+        "genre": "FIC",
+        "source": "Michigan Quarterly Review",
+        "text": "She said it in English class. \" Stephanie wiped her nose. \" A bunch of people were talking about Adam. \" Adam was the one boy in school",
+        "cells": [
+          "3",
+          "5003729",
+          "2019",
+          "FIC",
+          "Michigan Quarterly Review",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "She said it in English class. \" Stephanie wiped her nose. \" A bunch of people were talking about Adam. \" Adam was the one boy in school"
+        ]
+      },
+      {
+        "index": 4,
+        "text_id": "5008924",
+        "year": "2019",
+        "genre": "MAG",
+        "source": "TechCrunch",
+        "text": "influencer, so calm down. My whole family is Irish Catholic. # A bunch of people were sharing my tweet. I was like, oh, god.",
+        "cells": [
+          "4",
+          "5008924",
+          "2019",
+          "MAG",
+          "TechCrunch",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "influencer, so calm down. My whole family is Irish Catholic. # A bunch of people were sharing my tweet. I was like, oh, god."
+        ]
+      },
+      {
+        "index": 5,
+        "text_id": "5000055",
+        "year": "2018",
+        "genre": "SPOK",
+        "source": "CBS_Morning",
+        "text": "MOLLY-TOBIN) : We're like, let's get him in this towel. A bunch of people were around. We all started carrying him down. MICHELLE-MILLER) : Lytton",
+        "cells": [
+          "5",
+          "5000055",
+          "2018",
+          "SPOK",
+          "CBS_Morning",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "MOLLY-TOBIN) : We're like, let's get him in this towel. A bunch of people were around. We all started carrying him down. MICHELLE-MILLER) : Lytton"
+        ]
+      },
+      {
+        "index": 6,
+        "text_id": "5003808",
+        "year": "2018",
+        "genre": "FIC",
+        "source": "IowaRev",
+        "text": "Camels. He told me he'd be up in a second. # A bunch of people were already on the roof. They were looking out toward New Jersey",
+        "cells": [
+          "6",
+          "5003808",
+          "2018",
+          "FIC",
+          "IowaRev",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "Camels. He told me he'd be up in a second. # A bunch of people were already on the roof. They were looking out toward New Jersey"
+        ]
+      },
+      {
+        "index": 7,
+        "text_id": "5003962",
+        "year": "2018",
+        "genre": "FIC",
+        "source": "NewYorker",
+        "text": "'m so sorry! \" she said. \" I thought it was like a bunch of people were meeting. \" # It didn't matter anymore. He was",
+        "cells": [
+          "7",
+          "5003962",
+          "2018",
+          "FIC",
+          "NewYorker",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "'m so sorry! \" she said. \" I thought it was like a bunch of people were meeting. \" # It didn't matter anymore. He was"
+        ]
+      },
+      {
+        "index": 8,
+        "text_id": "5247070",
+        "year": "2018",
+        "genre": "MOV",
+        "source": "Tyrel",
+        "text": "So... Yeah, so I come outside, right? Yeah. And a bunch of people were there, so my car was blocked in... Uh-huh. So",
+        "cells": [
+          "8",
+          "5247070",
+          "2018",
+          "MOV",
+          "Tyrel",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "So... Yeah, so I come outside, right? Yeah. And a bunch of people were there, so my car was blocked in... Uh-huh. So"
+        ]
+      },
+      {
+        "index": 9,
+        "text_id": "4126318",
+        "year": "2015",
+        "genre": "SPOK",
+        "source": "ABC: The View",
+        "text": "if I had to go and, like, stand in a room where a bunch of people were sitting there with me naked, kind of, like, sculpting",
+        "cells": [
+          "9",
+          "4126318",
+          "2015",
+          "SPOK",
+          "ABC: The View",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "if I had to go and, like, stand in a room where a bunch of people were sitting there with me naked, kind of, like, sculpting"
+        ]
+      },
+      {
+        "index": 10,
+        "text_id": "4163853",
+        "year": "2015",
+        "genre": "FIC",
+        "source": "AntiochRev",
+        "text": "injured. All that was left of the building was the floor. \" A bunch of people were going to drive by after school, \" Ryan said. \"",
+        "cells": [
+          "10",
+          "4163853",
+          "2015",
+          "FIC",
+          "AntiochRev",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "injured. All that was left of the building was the floor. \" A bunch of people were going to drive by after school, \" Ryan said. \""
+        ]
+      },
+      {
+        "index": 11,
+        "text_id": "4123662",
+        "year": "2013",
+        "genre": "SPOK",
+        "source": "CBS: News Sunday Morning",
+        "text": "severely autistic son had never interacted verbally with anybody in the family before. A bunch of people were in the kitchen playing with magnetic poetry, and suddenly he indicated",
+        "cells": [
+          "11",
+          "4123662",
+          "2013",
+          "SPOK",
+          "CBS: News Sunday Morning",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "severely autistic son had never interacted verbally with anybody in the family before. A bunch of people were in the kitchen playing with magnetic poetry, and suddenly he indicated"
+        ]
+      },
+      {
+        "index": 12,
+        "text_id": "5240454",
+        "year": "2013",
+        "genre": "TV",
+        "source": "Siberia",
+        "text": "Flintstones \" where you do it and it just happens, so I guess a bunch of people were getting going with the sticks, trying to get a fire started",
+        "cells": [
+          "12",
+          "5240454",
+          "2013",
+          "TV",
+          "Siberia",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "Flintstones \" where you do it and it just happens, so I guess a bunch of people were getting going with the sticks, trying to get a fire started"
+        ]
+      },
+      {
+        "index": 13,
+        "text_id": "5038442",
+        "year": "2012",
+        "genre": "WEB",
+        "source": "rushlimbaugh.com",
+        "text": "to tell you that I believe that they did. I fully believe that a bunch of people were made to believe that Mitt Romney actually enjoyed watching a guy's",
+        "cells": [
+          "13",
+          "5038442",
+          "2012",
+          "WEB",
+          "rushlimbaugh.com",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "to tell you that I believe that they did. I fully believe that a bunch of people were made to believe that Mitt Romney actually enjoyed watching a guy's"
+        ]
+      },
+      {
+        "index": 14,
+        "text_id": "5053669",
+        "year": "2012",
+        "genre": "WEB",
+        "source": "fatnutritionist.com",
+        "text": ", yes, yes! # I was once on a usenet group where a bunch of people were very smugly dissing McDonalds and I and another old fart commented that",
+        "cells": [
+          "14",
+          "5053669",
+          "2012",
+          "WEB",
+          "fatnutritionist.com",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          ", yes, yes! # I was once on a usenet group where a bunch of people were very smugly dissing McDonalds and I and another old fart commented that"
+        ]
+      },
+      {
+        "index": 15,
+        "text_id": "5073248",
+        "year": "2012",
+        "genre": "WEB",
+        "source": "skepchick.org",
+        "text": "the men you refer to here. After the SGU dinner at TAM Oz a bunch of people were at a pub down the road hanging out, including George Hrab",
+        "cells": [
+          "15",
+          "5073248",
+          "2012",
+          "WEB",
+          "skepchick.org",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "the men you refer to here. After the SGU dinner at TAM Oz a bunch of people were at a pub down the road hanging out, including George Hrab"
+        ]
+      },
+      {
+        "index": 16,
+        "text_id": "5092741",
+        "year": "2012",
+        "genre": "WEB",
+        "source": "vanityfair.com",
+        "text": "walking out to my car outside the capitol, and he and Gramm and a bunch of people were setting up their press conference on the steps. I remember feeling",
+        "cells": [
+          "16",
+          "5092741",
+          "2012",
+          "WEB",
+          "vanityfair.com",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "walking out to my car outside the capitol, and he and Gramm and a bunch of people were setting up their press conference on the steps. I remember feeling"
+        ]
+      },
+      {
+        "index": 17,
+        "text_id": "5132520",
+        "year": "2012",
+        "genre": "BLOG",
+        "source": "dailykitten.com",
+        "text": "from her sister they had found a kitten in the middle of the street a bunch of people were around it just looking at it and then left it there so",
+        "cells": [
+          "17",
+          "5132520",
+          "2012",
+          "BLOG",
+          "dailykitten.com",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "from her sister they had found a kitten in the middle of the street a bunch of people were around it just looking at it and then left it there so"
+        ]
+      },
+      {
+        "index": 18,
+        "text_id": "5142769",
+        "year": "2012",
+        "genre": "BLOG",
+        "source": "...edator.wordpress.com",
+        "text": "I've voted at since I moved to my house in 1997. # A bunch of people were standing around outside -- locked out! Around 720, we got",
+        "cells": [
+          "18",
+          "5142769",
+          "2012",
+          "BLOG",
+          "...edator.wordpress.com",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "I've voted at since I moved to my house in 1997. # A bunch of people were standing around outside -- locked out! Around 720, we got"
+        ]
+      },
+      {
+        "index": 19,
+        "text_id": "4031052",
+        "year": "2009",
+        "genre": "SPOK",
+        "source": "ABC_Nightline",
+        "text": "late today. MICHELE-BIDER-1NE# And then they were on our front lawn. Like a bunch of people were gathering on our front lawn because the smoke was kind of going",
+        "cells": [
+          "19",
+          "4031052",
+          "2009",
+          "SPOK",
+          "ABC_Nightline",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "late today. MICHELE-BIDER-1NE# And then they were on our front lawn. Like a bunch of people were gathering on our front lawn because the smoke was kind of going"
+        ]
+      },
+      {
+        "index": 20,
+        "text_id": "4072214",
+        "year": "2009",
+        "genre": "SPOK",
+        "source": "Fox_Journal",
+        "text": "\" reporter who was rescued by British commandos from the Taliban in Afghanistan. A bunch of people were killed in that raid, including reporters, an Afghan interpreter and",
+        "cells": [
+          "20",
+          "4072214",
+          "2009",
+          "SPOK",
+          "Fox_Journal",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "\" reporter who was rescued by British commandos from the Taliban in Afghanistan. A bunch of people were killed in that raid, including reporters, an Afghan interpreter and"
+        ]
+      },
+      {
+        "index": 21,
+        "text_id": "5231215",
+        "year": "2009",
+        "genre": "TV",
+        "source": "In Plain Sight",
+        "text": "in front of a church the night before... and woke up just as a bunch of people were going in for a morning meeting. Hello. Yes, it",
+        "cells": [
+          "21",
+          "5231215",
+          "2009",
+          "TV",
+          "In Plain Sight",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "in front of a church the night before... and woke up just as a bunch of people were going in for a morning meeting. Hello. Yes, it"
+        ]
+      },
+      {
+        "index": 22,
+        "text_id": "5216407",
+        "year": "2008",
+        "genre": "MOV",
+        "source": "Saw V",
+        "text": "'d you do to get here? I... I did something, and a bunch of people were killed. I didn't mean to. They're still dead",
+        "cells": [
+          "22",
+          "5216407",
+          "2008",
+          "MOV",
+          "Saw V",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "'d you do to get here? I... I did something, and a bunch of people were killed. I didn't mean to. They're still dead"
+        ]
+      },
+      {
+        "index": 23,
+        "text_id": "5218551",
+        "year": "2002",
+        "genre": "MOV",
+        "source": "...n: The Making of 'Citizen Toxie'",
+        "text": "that. But I didn't know you could act. INTERVIEWER: [laughs] A bunch of people were like, are you An actor, like professionally? And one",
+        "cells": [
+          "23",
+          "5218551",
+          "2002",
+          "MOV",
+          "...n: The Making of 'Citizen Toxie'",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "that. But I didn't know you could act. INTERVIEWER: [laughs] A bunch of people were like, are you An actor, like professionally? And one"
+        ]
+      },
+      {
+        "index": 24,
+        "text_id": "1014632",
+        "year": "2000",
+        "genre": "FIC",
+        "source": "UnfamiliarPlaces",
+        "text": "his village. Beyond the village walls, she reached an open field. A bunch of people were watching something, some with their toothbrush sticks temporarily arrested in their",
+        "cells": [
+          "24",
+          "1014632",
+          "2000",
+          "FIC",
+          "UnfamiliarPlaces",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "his village. Beyond the village walls, she reached an open field. A bunch of people were watching something, some with their toothbrush sticks temporarily arrested in their"
+        ]
+      },
+      {
+        "index": 25,
+        "text_id": "1006354",
+        "year": "1999",
+        "genre": "FIC",
+        "source": "Analog",
+        "text": ". She lifted herself up slowly from the floor. Across the room, a bunch of people were around Landry, slapping him around, talking angrily-in Russian. They",
+        "cells": [
+          "25",
+          "1006354",
+          "1999",
+          "FIC",
+          "Analog",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          ". She lifted herself up slowly from the floor. Across the room, a bunch of people were around Landry, slapping him around, talking angrily-in Russian. They"
+        ]
+      },
+      {
+        "index": 26,
+        "text_id": "2014544",
+        "year": "1997",
+        "genre": "MAG",
+        "source": "ChildDigest",
+        "text": ", he spotted a picture of one of the first airplanes ever built. A bunch of people were standing around, looking at it and laughing their heads off.",
+        "cells": [
+          "26",
+          "2014544",
+          "1997",
+          "MAG",
+          "ChildDigest",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          ", he spotted a picture of one of the first airplanes ever built. A bunch of people were standing around, looking at it and laughing their heads off."
+        ]
+      },
+      {
+        "index": 27,
+        "text_id": "4000211",
+        "year": "1995",
+        "genre": "ACAD",
+        "source": "AmerScholar",
+        "text": "I went up the steps of a church and into a back room where a bunch of people were having a meeting. I introduced myself by my first name,",
+        "cells": [
+          "27",
+          "4000211",
+          "1995",
+          "ACAD",
+          "AmerScholar",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "I went up the steps of a church and into a back room where a bunch of people were having a meeting. I introduced myself by my first name,"
+        ]
+      },
+      {
+        "index": 28,
+        "text_id": "1040035",
+        "year": "1993",
+        "genre": "FIC",
+        "source": "Bk:Snagged",
+        "text": "throat. Down the hall, there was a flurry at the elevator. A bunch of people were getting off. Ruth looked wild-eyed over her shoulder. Head and",
+        "cells": [
+          "28",
+          "1040035",
+          "1993",
+          "FIC",
+          "Bk:Snagged",
+          "A",
+          "B",
+          "C",
+          "",
+          "",
+          "",
+          "throat. Down the hall, there was a flurry at the elevator. A bunch of people were getting off. Ruth looked wild-eyed over her shoulder. Head and"
+        ]
+      }
+    ]
+  }
+}
