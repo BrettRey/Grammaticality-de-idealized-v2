@@ -53,6 +53,20 @@ transparent-free-relative and independent-relative-`whose` materials; those sour
 attestation pressure for opportunity-normalized reasoning, but they still do not provide a general
 threshold that would make rare transparent cases categorically resolved.
 
+## Data Pointers
+
+- For transparent free relatives, use `Transparent_free_relatives/two-kinds.tex` and `coca-data/` to
+  split opportunity by verb class, nucleus category, external position, and false-positive type.
+  The immediate threshold lane is not "rare vs common" but "absence after a checked opportunity
+  set."
+- For independent relative `whose`, use
+  `Independent_relative_whose_A_Bayesian_analysis_of_a_low-frequency_gap/` for the
+  low-opportunity/weak-absence logic and `Independent_relative_whose/items/all_items.csv` for
+  judgment contrasts that vary licensing context against baselines.
+- A future `passed` prediction should require an explicit opportunity denominator, a verified
+  attestation count or absence check, and a named competitor set. Until then, the card should remain
+  `mixed` or `partly_survives` rather than promoting numeric score movement.
+
 ## Candidate Nodes
 
 - constructional_analogy

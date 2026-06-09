@@ -50,6 +50,22 @@ social-indexical value. Checked against `reynolds-personhood-proforms`; the loca
 the designatum, personhood, and reference-chain evidence. The policy/audience-design part of the
 card still needs task-specific audience evidence before it can count as fully passed.
 
+## Data Pointers
+
+- `reynolds-personhood-proforms` supplies the strongest local evidence for designatum-driven
+  pro-form selection, personal/non-personal chain coherence, and personification or
+  de-personification effects.
+- The Journal of Linguistics reviewer notes in `Personhood_and_proforms/reviews/` are useful stress
+  sources for dialect-sensitive gender/pro-form systems, social identity, and reallocation of
+  pronoun patterns.
+- The unresolved prediction cell is narrower: it needs a task design that varies audience,
+  institution, policy framing, speaker/referent identity, and judgment prompt while separately
+  measuring reference success, reported acceptability, grammaticality attribution, and social
+  sanction.
+- Treat policy or respect judgments as data for `audience_design`, `social_indexical_value`,
+  `standard_language_ideology`, and `grammaticality_attribution`; do not treat them as direct
+  evidence that `reference_tracking_success` or `community_licensing` changed.
+
 ## Candidate Nodes
 
 - operator_value

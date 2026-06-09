@@ -151,7 +151,7 @@
       "pass_condition": "The graph passes as a partial module if audience or policy framing shifts acceptability or attribution while keeping social value distinct from licensing and reference tracking.",
       "fail_condition": "The graph fails if social-indexical value is treated as direct licensing, or if policy framing has no path to reported acceptability or attribution.",
       "evidence_status": "mixed",
-      "evidence_note": "Checked against reynolds-personhood-proforms. The source supports pragmatic overlays, identity marking, and social construal, but task-specific audience-design evidence is still needed."
+      "evidence_note": "Checked against reynolds-personhood-proforms and local reviewer/status notes. The sources support pragmatic overlays, identity marking, dialect-sensitive construal, and social reallocation of pronoun patterns. The cell remains mixed because it still needs a task-specific audience or policy-framing design that separately measures reference success, reported acceptability, grammaticality attribution, and social sanction."
     }
   ],
   "cards": [

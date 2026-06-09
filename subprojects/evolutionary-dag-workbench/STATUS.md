@@ -12,7 +12,7 @@ representations about grammaticality. The existing OVMG, detector, operator-stra
 processing-based, and normativity-based models are treated as seed graph families, not as
 conclusions or targets to vindicate.
 
-Thirty-one adversarial passes/synthesis steps have been run. All numeric scores remain zero. Seven
+Thirty-two adversarial passes/synthesis steps have been run. All numeric scores remain zero. Seven
 current modules have `scoped_module` labels tied to protocol-bound evaluations. The original
 scope-only evaluations now include card-level requirements and activated paths. Both held-out CGEL
 evaluations also include card-level requirements and activated paths without authorizing score
@@ -96,6 +96,9 @@ has no `scoped_module` label pending at least one more held-out agreement subtyp
 The thirty-first pass added `fused-determiner-head-agreement-cgel` as a second held-out agreement
 subtype. The graph survived without adding nodes, so `agreement-controller-override-candidate` now
 has a held-out `scope-only` evaluation and a `scoped_module` label. Numeric scores remain zero.
+The thirty-second pass did not mutate any graph. It added concrete source/data pointers for the two
+remaining mixed prediction cells: pronoun policy/audience design and rare transparent-relative
+opportunity thresholds.
 
 ## Current Candidate Stack
 
@@ -232,6 +235,8 @@ construct separation, or held-out projectibility, not by fitting a prior paper.
   `notes/thirtieth-adversarial-pass-synthesis-2026-06-09.md`
 - held-out fused determiner-head agreement synthesis in
   `notes/thirty-first-adversarial-pass-synthesis-2026-06-09.md`
+- unresolved data-pointer synthesis in
+  `notes/thirty-second-adversarial-pass-synthesis-2026-06-09.md`
 - coverage/discriminator matrix in `notes/coverage-discriminator-matrix-2026-06-08.md`
 - protocol-bound evaluation schema and exploratory evaluations in `evaluations/`
 - held-out CGEL/local-correction evaluations in `evaluations/protocol-tests/`
@@ -312,8 +317,8 @@ validation.
 
 ## Next Actions
 
-1. Add data pointers for the remaining unresolved prediction-test cells: pronoun policy/audience
-   design and rare transparent-relative opportunity thresholds.
+1. Convert one unresolved data-pointer lane into a measurement design: either an audience/policy
+   pronoun task or an opportunity-denominator check for rare transparent relatives.
 2. Pause agreement growth unless a genuinely different source domain is available; `AGR` now has a
    scoped label but no numeric score.
 3. Add one more temporal-anchor card only if it distinguishes recent-past, experiential, and
