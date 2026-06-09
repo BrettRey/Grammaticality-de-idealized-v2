@@ -1,0 +1,145 @@
+{
+  "id": "agreement-construction-listing-baseline-rival-2026-06-09",
+  "target_graph": "graphs/archive/agreement-construction-listing-baseline-candidate.json",
+  "protocol": "notes/agr-construction-listing-rival-protocol-2026-06-09.md",
+  "status": "protocol-bound",
+  "score_decision": "no-score-change",
+  "activated_paths": [
+    {
+      "id": "listed-preference-to-production",
+      "phenomenon": "collective-number-transparent-agreement-cgel",
+      "contrast_cell": "known-qn-accommodation",
+      "expected_path_reading": "positive",
+      "prediction": "A stored local agreement preference should raise production probability for the preferred value in already-observed constructional frames.",
+      "edges": [
+        {
+          "source": "construction_specific_agreement_preference",
+          "target": "production_probability",
+          "type": "causal"
+        }
+      ]
+    },
+    {
+      "id": "listed-preference-to-attribution",
+      "phenomenon": "collective-number-transparent-agreement-cgel",
+      "contrast_cell": "known-qn-accommodation",
+      "expected_path_reading": "indeterminate",
+      "prediction": "A stable local preference can provide contextual warrant for licensing and attribution in known frames, while leaving the mechanism of generalization unspecified.",
+      "edges": [
+        {
+          "source": "construction_specific_agreement_preference",
+          "target": "community_licensing",
+          "type": "evidential"
+        },
+        {
+          "source": "community_licensing",
+          "target": "grammaticality_attribution",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "low-frequency-listing-gap",
+      "phenomenon": "collective-number-transparent-agreement-cgel",
+      "contrast_cell": "low-frequency-qn-generalization",
+      "expected_path_reading": "positive",
+      "prediction": "The listing baseline can make a production prediction for low-frequency QNs only after a local preference has been observed or stipulated.",
+      "edges": [
+        {
+          "source": "construction_specific_agreement_preference",
+          "target": "production_probability",
+          "type": "causal"
+        }
+      ]
+    }
+  ],
+  "prediction_tests": [
+    {
+      "id": "known-qn-listing-accommodation",
+      "phenomenon": "collective-number-transparent-agreement-cgel",
+      "contrast_cell": "known-qn-accommodation",
+      "activated_paths": [
+        "listed-preference-to-production",
+        "listed-preference-to-attribution"
+      ],
+      "prediction": "The listing baseline should accommodate observed agreement profiles for known QN and collective frames once their local distributions are known.",
+      "pass_condition": "The existing filtered COCA cells can be summarized as item- or construction-specific agreement preferences without invoking controller identification.",
+      "fail_condition": "The accommodation fails if known cells require notional/controller machinery even to describe their local preference.",
+      "evidence_status": "passed",
+      "evidence_note": "Existing AGR COCA cells are compatible with post-hoc local listing. This is accommodation evidence only, not projective support."
+    },
+    {
+      "id": "low-frequency-qn-listing-challenge",
+      "phenomenon": "collective-number-transparent-agreement-cgel",
+      "contrast_cell": "low-frequency-qn-generalization",
+      "activated_paths": [
+        "low-frequency-listing-gap"
+      ],
+      "prediction": "The listing baseline should be weak or non-committal for low-frequency animate plural QN frames unless it adds item-specific preferences after the fact.",
+      "pass_condition": "The baseline stays live if the new cells are too sparse or if each item shows idiosyncratic local behaviour unrelated to notional/controller diagnostics.",
+      "fail_condition": "The baseline loses if registered low-frequency cells generalize in the AGR-predicted direction without enough local evidence to justify independent listing.",
+      "evidence_status": "not-run",
+      "evidence_note": "Registered as a future discriminator; no COCA rows have been inspected for this tranche in this pass."
+    }
+  ],
+  "cards": [
+    {
+      "phenomenon": "collective-number-transparent-agreement-cgel",
+      "result": "partly_survives",
+      "expected_survival_pattern": "The construction-listing baseline should accommodate already-observed QN agreement profiles but remain weak on low-frequency or novel QN generalization.",
+      "notes": "Rival baseline registered against AGR. It deliberately collapses controller identification, notional basis, and override pattern into local agreement preferences, so it is useful as a deflationary baseline but not as a scoped agreement module.",
+      "requirements": {
+        "required_nodes": [
+          "construction_specific_agreement_preference",
+          "usage_frequency",
+          "production_probability",
+          "community_licensing",
+          "reported_acceptability",
+          "grammaticality_attribution"
+        ],
+        "forbidden_nodes": [
+          "agreement_controller_identification",
+          "notional_agreement_basis",
+          "agreement_override_pattern",
+          "retrieval_attractor_salience"
+        ],
+        "required_edges": [
+          {
+            "source": "usage_frequency",
+            "target": "construction_specific_agreement_preference",
+            "type": "evidential"
+          },
+          {
+            "source": "construction_specific_agreement_preference",
+            "target": "production_probability",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "known-qn-accommodation",
+          "axes": {
+            "community": "COCA-attested English production in already observed QN and collective agreement frames.",
+            "norm_centre": "Descriptive corpus-attestation frame, not prescriptive judgment.",
+            "genre": "Mixed COCA registers represented in the existing AGR coded rows.",
+            "medium": "Written corpus transcripts/texts from COCA list and KWIC rows.",
+            "task_framing": "Post-hoc accommodation of known production distributions.",
+            "speaker_identity": "Corpus speaker/writer identity as available only through COCA source metadata."
+          }
+        },
+        {
+          "id": "low-frequency-qn-generalization",
+          "axes": {
+            "community": "COCA-attested English production in pre-registered low-frequency animate plural QN frames.",
+            "norm_centre": "Descriptive corpus-attestation frame, not prescriptive judgment.",
+            "genre": "Mixed COCA registers if rows are available; sparse-cell caution required.",
+            "medium": "Written corpus transcripts/texts from COCA list and KWIC rows.",
+            "task_framing": "Prospective discriminator between AGR generalization and item-specific listing.",
+            "speaker_identity": "Corpus speaker/writer identity as available only through COCA source metadata."
+          }
+        }
+      ]
+    }
+  ]
+}

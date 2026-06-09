@@ -1,0 +1,81 @@
+{
+  "id": "agreement-construction-listing-baseline-candidate",
+  "title": "Construction-specific agreement listing baseline",
+  "family": "agreement-construction-listing-baseline",
+  "status": "candidate",
+  "edge_semantics_level": "profiled",
+  "notes": "Sixty-second-round rival baseline generated after external critique noted that AGR had beaten a simple surface-head baseline but not a construction-specific listing account. This graph deliberately collapses controller identification, notional agreement basis, and override machinery into stored local agreement preferences. It is a live rival to AGR for known item profiles, not a scoped module and not a general grammaticality account.",
+  "nodes": [
+    "usage_frequency",
+    "construction_specific_agreement_preference",
+    "production_probability",
+    "community_licensing",
+    "reported_acceptability",
+    "grammaticality_attribution",
+    "standard_language_ideology",
+    "metalinguistic_condemnation"
+  ],
+  "edges": [
+    {
+      "source": "usage_frequency",
+      "target": "construction_specific_agreement_preference",
+      "type": "evidential",
+      "relation_profile": "evidential_warrant",
+      "rationale": "Observed local agreement distributions provide warrant for a stored construction-specific preference."
+    },
+    {
+      "source": "construction_specific_agreement_preference",
+      "target": "production_probability",
+      "type": "causal",
+      "relation_profile": "positive_monotone",
+      "rationale": "A learned local preference raises production probability for the preferred agreement value in that lexical or constructional frame."
+    },
+    {
+      "source": "construction_specific_agreement_preference",
+      "target": "community_licensing",
+      "type": "evidential",
+      "relation_profile": "contextual_warrant",
+      "rationale": "A stable local preference can provide contextual warrant for licensing in an already-attested constructional niche, without explaining why the preference generalizes."
+    },
+    {
+      "source": "community_licensing",
+      "target": "reported_acceptability",
+      "type": "measurement",
+      "relation_profile": "task_biased_indicator",
+      "rationale": "Reported acceptability can indicate licensing but is biased by task framing, familiarity, and ideology."
+    },
+    {
+      "source": "community_licensing",
+      "target": "grammaticality_attribution",
+      "type": "evidential",
+      "relation_profile": "evidential_warrant",
+      "rationale": "Community licensing provides warrant for agreement-related grammaticality attribution without being identical to the attribution."
+    },
+    {
+      "source": "standard_language_ideology",
+      "target": "metalinguistic_condemnation",
+      "type": "causal",
+      "relation_profile": "positive_monotone",
+      "rationale": "Standard-language ideology can raise explicit condemnation of familiar agreement variants independently of production probability."
+    },
+    {
+      "source": "metalinguistic_condemnation",
+      "target": "grammaticality_attribution",
+      "type": "evidential",
+      "relation_profile": "contextual_warrant",
+      "rationale": "Condemnation can influence attribution while remaining separable from distributional production preferences."
+    }
+  ],
+  "scores": {
+    "empirical_coverage": 0,
+    "projective_power": 0,
+    "counterexample_resilience": 0,
+    "measurement_clarity": 0,
+    "explanatory_payoff": 0,
+    "cross_domain_stability": 0,
+    "complexity_penalty": 0,
+    "circularity_penalty": 0,
+    "construct_confusion_penalty": 0,
+    "theory_preservation_penalty": 0
+  }
+}

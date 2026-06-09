@@ -153,6 +153,11 @@ alignment, licensed override, notional agreement basis, and retrieval-attractor 
 scoped agreement module, not a category-analysis, pronoun/audience, diachronic, or general
 grammaticality account.
 
+`LIST` is the construction-specific agreement-listing baseline. It deliberately collapses AGR's
+controller, notional-basis, and override machinery into stored local agreement preferences. It can
+accommodate known QN profiles after their distributions are observed, but it is unscored and has no
+scoped label. Its pressure point is the registered low-frequency-QN tranche.
+
 `TEMP` is the temporal-anchor alignment candidate. It handles tense/aspect anchoring, modal
 temporal inference, definite or by-now temporal anchors, current relevance, continuative intervals,
 experiential frames, and narrative perspective. It is built from the current temporal cards and is
@@ -495,9 +500,8 @@ Newly exposed untested pairings remain:
 
 1. Run the pronoun policy/audience task or independent-relative-`whose` human judgment task if data
    collection is available.
-2. Run the `AGR` COCA projection protocol before adding more agreement cards; the consolidated
-   number-construal pass did not force mutation, and the next useful agreement pressure is a
-   registered corpus projection.
+2. Run the `AGR` low-frequency-QN discriminator against `LIST`; the surface-head baseline is now
+   only a sanity check, not the live rival.
 3. Test `TOR` with a fresh held-out temporal card before any scoped label; keep temporal
    orientation distinct from modal inference and English future-tense analysis.
 4. Use held-out contrast cells to test whether `OPG`, `CAT`, and `SEL` remain complementary or
@@ -579,3 +583,6 @@ shows the repair should be a temporal-orientation frame rather than a modal-remo
 The sixty-first pass adds `TOR` as the successor mutation with that broader orientation construct.
 The old held-out cards now explain the mutation; they do not authorize a scoped label or score for
 the successor.
+The sixty-second pass adds `LIST` as a stronger AGR rival than surface-head number. The next AGR
+data move is no longer another win against surface-head number; it is the registered
+low-frequency-QN discriminator against construction-specific listing.

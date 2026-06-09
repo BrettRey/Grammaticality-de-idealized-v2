@@ -56,6 +56,13 @@ The corpus run should test whether `AGR`'s internal distinctions project:
 The core question is whether knowing the candidate expression's notional basis and constructional
 subtype predicts agreement realization better than surface-head number alone.
 
+After the first COCA tranche, the stronger live rival is no longer surface-head number. It is
+construction-specific listing: each QN or local frame has a stored agreement preference, with no
+need to decompose the preference into controller identification, notional basis, or override
+machinery. The next confirmatory run should therefore compare `AGR` against
+`graphs/archive/agreement-construction-listing-baseline-candidate.json`, not only against a
+surface-head baseline.
+
 ## Discovery Set
 
 Use known central cases only to calibrate query syntax and filtering:
@@ -83,6 +90,14 @@ The first confirmatory tranche should target boundary or candidate cases:
 - optionally `rest/remainder` fused-head or partitive variants if denominator cells can be defined
   independently.
 
+The next registered rival-facing tranche is:
+
+- low-frequency animate plural QN-like frames such as `a smattering of critics`,
+  `a gaggle of tourists`, and `a tranche of voters`.
+
+These are useful because a construction-specific listing account can accommodate known local
+profiles after the fact, but should be weaker before an item-specific preference has been observed.
+
 The prediction should be registered before the relevant COCA cells are inspected.
 
 ## Prediction Shape
@@ -94,6 +109,7 @@ For each target, record:
 - predicted agreement realization: singular-dominant, plural-dominant, mixed/contextual, or
   uncertain;
 - predicted contrast with a surface-head-only account;
+- predicted contrast with construction-specific listing once that rival is live;
 - required opportunity denominator;
 - exclusion labels that would invalidate raw hits.
 
@@ -127,6 +143,8 @@ Pass examples:
 Failure examples:
 
 - surface-head number predicts agreement realization as well as the `AGR` node bundle;
+- construction-specific listing predicts the registered low-frequency cells as well as the `AGR`
+  node bundle without post-hoc item-specific additions;
 - boundary targets require a construct not present in `AGR`;
 - KWIC filtering depends on undocumented judgment calls;
 - zero or sparse cells lack opportunity denominators and therefore cannot be interpreted.

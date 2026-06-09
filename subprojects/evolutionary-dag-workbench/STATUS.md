@@ -12,7 +12,7 @@ representations about grammaticality. The existing OVMG, detector, operator-stra
 processing-based, and normativity-based models are treated as seed graph families, not as
 conclusions or targets to vindicate.
 
-Sixty-one adversarial passes/synthesis steps have been run. All numeric scores remain zero. Seven
+Sixty-two adversarial passes/synthesis steps have been run. All numeric scores remain zero. Seven
 current modules have `scoped_module` labels tied to protocol-bound or held-out `scope-only`
 evaluations. The original scope-only evaluations now include card-level requirements and activated
 paths. The held-out CGEL evaluations also include card-level requirements and activated paths
@@ -30,7 +30,8 @@ selection-adjacent dimensions only.
 The held-out CGEL evaluations now include machine-readable `prediction_tests` with pass/fail
 conditions; score-change evaluations now require prediction tests.
 Eight held-out CGEL cards have source-checked contrast examples, and the prediction-test inventory
-now records checked evidence statuses: fourteen `passed`, four `mixed`, and one `inconclusive`.
+now records checked evidence statuses: fifteen `passed`, four `mixed`, one `inconclusive`, and one
+registered `not-run` discriminator.
 No graph has a `general_account` score. The current scoring schema includes `projective_power` and
 `theory_preservation_penalty` so held-out prediction and anti-alignment discipline are visible.
 The Gibson source pass added five processing/dependency cards without changing graph machinery:
@@ -341,6 +342,13 @@ The sixty-first pass is recorded in `notes/temporal-orientation-successor-2026-0
 protocol-bound no-score-change evaluation for the modal-preterite and backshifted-preterite pressure
 cards. The old held-out evaluations remain evidence that `TEMP` lacked an orientation source; the
 new successor does not inherit held-out credit, a scoped label, or numeric scores.
+The sixty-second pass is recorded in
+`notes/agr-construction-listing-rival-protocol-2026-06-09.md`. It adds
+`construction_specific_agreement_preference` to the ontology and creates
+`agreement-construction-listing-baseline-candidate` as a deliberately collapsed AGR rival. The new
+baseline can accommodate already observed QN/collective agreement profiles, but the registered
+low-frequency-QN tranche is now the live discriminator between AGR's controller/notional machinery
+and construction-specific listing. No scoped label or score movement follows.
 An internal state-of-search report now summarizes the current scoped-module partition, evaluation
 ladder, the completed transparent-relative Lane A pass, and remaining empirical lanes without
 authorizing score movement.
@@ -364,6 +372,7 @@ authorizing score movement.
 - `information-normalized-repair-candidate`
 - `meaning-prior-reconstruction-candidate`
 - `agreement-controller-override-candidate`
+- `agreement-construction-listing-baseline-candidate`
 - `temporal-anchor-alignment-candidate`
 - `temporal-orientation-alignment-candidate`
 
@@ -409,6 +418,10 @@ The current strongest modules are scoped, not general winners:
   controller identification, licensed override, notional basis, and retrieval-attractor salience
   must be separated. It is now a scoped agreement module through held-out measure and fused
   determiner-head tests, with all numeric scores still zero.
+- `agreement-construction-listing-baseline-candidate` as a deliberately collapsed rival to AGR. It
+  replaces controller identification, notional basis, and override machinery with stored local
+  agreement preferences. It is unscored, has no scoped label, and should be tested against AGR on
+  low-frequency or novel QN cells before any AGR projective claim is strengthened.
 - `temporal-anchor-alignment-candidate` for tense/aspect anchoring, modal temporal inference,
   definite or by-now temporal anchors, current relevance, continuative intervals, experiential
   frames, and narrative perspective. It is an unscored built-on candidate, not a scoped module yet.
@@ -644,18 +657,21 @@ audience/reference response validation.
    `scripts/validate_audience_reference_responses.py --require-responses` and summarize it with
    `scripts/summarize_audience_reference_responses.py` before evaluation; do not treat the
    simulation-only rows as evidence.
-3. Add a fresh held-out temporal card before giving `temporal-orientation-alignment-candidate` any
+3. Run or prepare the registered low-frequency-QN discriminator in
+   `notes/agr-construction-listing-rival-protocol-2026-06-09.md` before claiming AGR has beaten
+   strong agreement rivals; surface-head number is now only a sanity baseline.
+4. Add a fresh held-out temporal card before giving `temporal-orientation-alignment-candidate` any
    scoped label; keep temporal orientation distinct from modal temporal inference and from English
    future-tense analysis.
-4. Add one more catenative card only if it distinguishes catenative subtype from cohort-conditioned
+5. Add one more catenative card only if it distinguishes catenative subtype from cohort-conditioned
    production.
-5. Test comparative-illusion cards against combined `CAT` plus noisy-channel interpretations only
+6. Test comparative-illusion cards against combined `CAT` plus noisy-channel interpretations only
    if a future card forces an interaction rather than complementarity.
-6. Test whether `OPG`, `CAT`, and `SEL` stay complementary on richer fused-construction cards before
+7. Test whether `OPG`, `CAT`, and `SEL` stay complementary on richer fused-construction cards before
    adding any fused-head-specific graph.
-7. Calibrate scoped-module score magnitudes after at least one held-out or parameterized evaluation
+8. Calibrate scoped-module score magnitudes after at least one held-out or parameterized evaluation
    pass.
-8. Expand `phenomena/cards/` toward 40-100 cards only after the current representation classes stop
+9. Expand `phenomena/cards/` toward 40-100 cards only after the current representation classes stop
    shifting every pass.
-9. Only after the construct inventory stabilizes, consider whether `pgmpy`, NOTEARS-style methods,
+10. Only after the construct inventory stabilizes, consider whether `pgmpy`, NOTEARS-style methods,
    or empirical causal discovery are useful.

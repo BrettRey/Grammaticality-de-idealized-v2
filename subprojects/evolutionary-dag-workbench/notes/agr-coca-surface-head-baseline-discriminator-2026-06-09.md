@@ -50,6 +50,19 @@ This pass should not move numeric scores. It does, however, sharpen the COCA ver
 - The next empirical improvement should be an uncertainty/denominator pass, not another nearby
   plural-complement query.
 
+## Stronger Rival Added Later
+
+This memo is now superseded as the main discriminator boundary. Surface-head number is a useful
+sanity baseline, but the live rival is construction-specific listing:
+
+> known QN and collective frames have local learned agreement preferences.
+
+That rival is now represented by
+`graphs/archive/agreement-construction-listing-baseline-candidate.json` and
+`evaluations/protocol-tests/agreement-construction-listing-baseline-rival-2026-06-09.json`. The next
+AGR data move should pressure that rival with the registered low-frequency QN tranche, not continue
+to accumulate wins against surface-head number.
+
 ## Next Marginal Step
 
 Run the planned `false-positive-audit` / `false-omission-audit` validation lane, or define a compact

@@ -580,6 +580,20 @@ upstream_or_mediating:
       - community licensing
       - notional agreement basis
 
+  - id: construction_specific_agreement_preference
+    label: Construction-specific agreement preference
+    definition: Stored or distributionally learned preference for an agreement value in a particular lexical or constructional frame, without decomposing the preference into controller identification, notional basis, or licensed override machinery.
+    proxies:
+      - item-specific singular or plural agreement rate
+      - construction-entry agreement preference
+      - query-family agreement profile
+      - learned local agreement template
+    forbidden_conflations:
+      - agreement controller identification
+      - notional agreement basis
+      - agreement override pattern
+      - surface-head number
+
   - id: operator_value
     label: Operator value
     definition: Public-update value involving commitments, roles, scope, reference, dependency, repair, or discourse configuration.

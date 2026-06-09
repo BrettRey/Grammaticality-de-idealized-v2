@@ -14,6 +14,10 @@ selection pressure rather than accumulation.
 The COCA lane is now usable as a measurement workflow. Raw list counts are treated as discovery or
 triage only; KWIC-filtered target rows are the evidential unit.
 
+The relevant live rival is now construction-specific listing, not simple surface-head number. The
+surface-head comparison remains a sanity baseline, but it no longer fixes the decision boundary for
+projective credit.
+
 Completed calibration:
 
 - Known-QN calibration reproduces expected directions: `a number of people` gives 98 target plural
@@ -70,7 +74,7 @@ not `projective_power`, unless a held-out or pre-registered projection threshold
 The current warranted claim is narrower:
 
 > `AGR` has a working corpus measurement lane and multiple supportive English production tranches,
-> but no numeric projective credit yet.
+> but no numeric projective credit yet, and it has not beaten construction-specific listing.
 
 ## Next Action
 
@@ -80,3 +84,8 @@ Run a bounded KWIC check for `lots of people are`:
 2. If full coding is too costly, pre-declare a 100-row sample from the saved KWIC/list path and code
    only that sample.
 3. Update `summary.csv`, the partitive KWIC note, and the COCA projection evaluation accordingly.
+
+After the construction-listing rival was registered, the better marginal move is the
+low-frequency-QN discriminator in `notes/agr-construction-listing-rival-protocol-2026-06-09.md`.
+The `lots of people are` full-filter remains useful measurement cleanup, but it does not answer the
+stronger rival.

@@ -14,7 +14,8 @@ expert judgment.
 All numeric scores remain zero. Seven graphs currently have `scoped_module` labels backed by
 protocol-bound or held-out `scope-only` evaluations. `TEMP` has now joined the candidate set as a
 built-on temporal-anchor module without a scoped label. `TOR` is its unscored temporal-orientation
-successor. The strongest current result is division of labor, not a winner.
+successor. The AGR lane now also has a deliberately collapsed construction-listing rival. The
+strongest current result is division of labor plus sharper rival pressure, not a winner.
 
 The next useful work is not more graph invention by default. It is to put the existing modules under
 additional data pressure, especially through a pronoun/pro-form audience-reference task run, a
@@ -32,6 +33,7 @@ flowchart LR
   UPT["UPT<br/>uptake/operator boundary"]
   FRAME["FRAME<br/>frame-specific licensing"]
   AGR["AGR<br/>agreement controller/override"]
+  LIST["LIST<br/>agreement listing rival"]
   TEMP["TEMP<br/>temporal anchoring"]
   TOR["TOR<br/>temporal orientation"]
 
@@ -42,6 +44,7 @@ flowchart LR
   UPT --> UptakeCases["clause type<br/>interjections<br/>move type"]
   FRAME --> FrameCases["I have five years<br/>island variation"]
   AGR --> AgreementCases["measure NPs<br/>fused heads<br/>coordination<br/>number construal"]
+  LIST --> ListingCases["known QN profiles<br/>low-frequency QN challenge"]
   TEMP --> TemporalCases["perfect + yesterday<br/>narrative present<br/>modal perfect<br/>preterite orientation pressure"]
   TOR --> OrientationCases["modal preterite<br/>backshift<br/>orientation-source pressure"]
 ```
@@ -58,6 +61,7 @@ because each now has a reasonably sharp boundary:
 | `UPT` | Update-role configuration, repertoire closedness, token innovability, stance, genre fit, and repair | clause type, interjection boundaries, duration-frame answer partly | Not a general social-indexical or operator-gap account |
 | `FRAME` | Question-answer frame fit and construction-specific dependency licensing | `I have five years`, island construction variation | Not an opportunity/preemption or general temporal-anchor account |
 | `AGR` | Controller identification, feature alignment, licensed override, notional basis, and retrieval-attractor salience | measure-NP agreement, fused determiner-head agreement, coordination and number-construal pressure | Not a category-analysis, pronoun/audience, diachronic, or general grammaticality account |
+| `LIST` | Stored local agreement preferences in lexical or constructional frames | known QN/collective profiles after their distributions are observed | Not a controller/notional account; live rival whose pressure is low-frequency or novel QN generalization |
 | `TEMP` | Temporal-anchor fit across tense/aspect, modal inference, current relevance, continuative intervals, experiential frames, and narrative perspective | perfect plus definite past time, continuative perfect, already plus yesterday, narrative present, modal perfect by now; modal and backshifted preterite partly | Held-out preterite-orientation tests are partial; mutation needs a temporal-orientation frame |
 | `TOR` | Temporal orientation across deictic, narrative, report-supplied, modal-remote, and reference-time frames | modal-preterite and backshift pressure that partly broke `TEMP` | Built from those pressure cards; needs a fresh held-out temporal test before any scoped label |
 
@@ -105,6 +109,9 @@ the cards used to build the graph.
 - `AGR` now has the first explicit COCA projection protocol. The decision is to improve on the
   Linguistic Transparency COCA pilot with discovery/confirmation separation, opportunity
   denominators, reproducible KWIC coding, uncertainty estimates, and search-error audit.
+- `AGR` has beaten the simple surface-head-number baseline in checked cells, but that baseline is no
+  longer the decision boundary. The live rival is construction-specific listing, now represented by
+  `LIST` and a registered low-frequency-QN discriminator.
 - `TEMP` has now received two held-out temporal/preterite-orientation tests. Both partly survive
   and jointly point to a temporal-orientation frame rather than a modal-remoteness-only repair.
   That repair is now represented in `TOR`, but `TOR` needs fresh held-out pressure before a scoped
@@ -187,7 +194,7 @@ flowchart LR
 This lane borrows KWIC-filtering discipline from the Linguistic Transparency COCA pilot and
 opportunity-funnel discipline from the English LBC paper. A pass would mean that notional basis,
 controller identification, and override pattern predict filtered agreement realization better than
-surface-head number alone.
+surface-head number and, next, construction-specific listing.
 
 ## What Not To Write Yet
 
@@ -207,7 +214,8 @@ rules, scoped modules, and two empirical lanes where it can start earning projec
 
 1. Run the pronoun/pro-form audience-reference task if data collection is available.
 2. Run the independent-relative-`whose` human judgment task if data collection is available.
-3. Run the `AGR` COCA projection lane if COCA access and time are available.
+3. Run the AGR low-frequency-QN tranche against the construction-listing rival if COCA access and
+   time are available.
 4. Add evaluation-level prediction paths only where a card actually activates an edge path.
 5. Keep numeric scores at zero until a held-out, source-backed evaluation proposes score movement
    through profiled paths.
