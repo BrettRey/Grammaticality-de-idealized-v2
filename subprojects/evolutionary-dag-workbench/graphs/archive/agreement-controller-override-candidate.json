@@ -141,6 +141,8 @@
     "theory_preservation_penalty": 0
   },
   "score_status": {
-    "kind": "unscored"
+    "kind": "scoped_module",
+    "evaluation": "evaluations/protocol-tests/agreement-controller-override-heldout-scope-2026-06-09.json",
+    "scope": "Agreement controller identification, agreement feature alignment, licensed override patterns, notional agreement basis, and retrieval-attractor salience; not a general grammaticality account."
   }
 }

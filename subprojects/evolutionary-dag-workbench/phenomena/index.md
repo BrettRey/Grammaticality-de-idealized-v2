@@ -72,6 +72,7 @@ source-backed contrast cells for graph discovery and held-out projection.
 | [collective-number-transparent-agreement-cgel](cards/collective-number-transparent-agreement-cgel.md) | Licensed agreement overrides vs processing errors | Source-backed |
 | [coordination-agreement-resolution-cgel](cards/coordination-agreement-resolution-cgel.md) | Agreement controller choice, override patterns, and proximity advice | Source-backed |
 | [measure-agreement-override-cgel](cards/measure-agreement-override-cgel.md) | Measure-NP singular override and notional agreement basis | Held-out source-backed |
+| [fused-determiner-head-agreement-cgel](cards/fused-determiner-head-agreement-cgel.md) | Fused determiner-head agreement, quantifier construal, and formal-style pressure | Held-out source-backed |
 
 ## Gibson-Backed Processing and Dependency Tranche
 

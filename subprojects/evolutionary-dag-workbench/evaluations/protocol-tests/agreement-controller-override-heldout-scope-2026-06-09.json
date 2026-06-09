@@ -1,0 +1,306 @@
+{
+  "id": "agreement-controller-override-heldout-scope-2026-06-09",
+  "target_graph": "graphs/archive/agreement-controller-override-candidate.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "held-out",
+  "held_out_from": [
+    "agreement-controller-override-2026-06-09",
+    "subject-verb-agreement-cgel",
+    "proximity-agreement-error-cgel",
+    "collective-number-transparent-agreement-cgel",
+    "coordination-agreement-resolution-cgel"
+  ],
+  "score_decision": "scope-only",
+  "activated_paths": [
+    {
+      "id": "measure-notional-basis-to-alignment",
+      "phenomenon": "measure-agreement-override-cgel",
+      "contrast_cell": "plural-measure-singular-verb",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Single-measure construal should provide contextual warrant for controller identification and agreement feature alignment.",
+      "edges": [
+        {
+          "source": "notional_agreement_basis",
+          "target": "agreement_controller_identification",
+          "type": "evidential"
+        },
+        {
+          "source": "agreement_controller_identification",
+          "target": "agreement_feature_alignment",
+          "type": "constitutive"
+        }
+      ]
+    },
+    {
+      "id": "measure-override-to-licensing",
+      "phenomenon": "measure-agreement-override-cgel",
+      "contrast_cell": "plural-measure-singular-verb",
+      "expected_path_reading": "component",
+      "prediction": "A recognized measure override should feed agreement alignment and licensing even with a formally plural head.",
+      "edges": [
+        {
+          "source": "agreement_override_pattern",
+          "target": "agreement_feature_alignment",
+          "type": "constitutive"
+        },
+        {
+          "source": "agreement_feature_alignment",
+          "target": "community_licensing",
+          "type": "constitutive"
+        }
+      ]
+    },
+    {
+      "id": "fused-head-notional-basis-to-alignment",
+      "phenomenon": "fused-determiner-head-agreement-cgel",
+      "contrast_cell": "none-plural-set-plural",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Plural-set construal should provide contextual warrant for controller identification and alignment in `none` examples.",
+      "edges": [
+        {
+          "source": "notional_agreement_basis",
+          "target": "agreement_controller_identification",
+          "type": "evidential"
+        },
+        {
+          "source": "agreement_controller_identification",
+          "target": "agreement_feature_alignment",
+          "type": "constitutive"
+        }
+      ]
+    },
+    {
+      "id": "fused-head-style-to-attribution",
+      "phenomenon": "fused-determiner-head-agreement-cgel",
+      "contrast_cell": "formal-style-plural-avoidance",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Formal-style pressure should affect condemnation and attribution without deciding controller alignment.",
+      "edges": [
+        {
+          "source": "standard_language_ideology",
+          "target": "metalinguistic_condemnation",
+          "type": "causal"
+        },
+        {
+          "source": "metalinguistic_condemnation",
+          "target": "grammaticality_attribution",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "licensing-to-repair",
+      "phenomenon": "fused-determiner-head-agreement-cgel",
+      "contrast_cell": "noncount-singular",
+      "expected_path_reading": "negative",
+      "prediction": "Higher licensing for non-count singular construal should lower repair pressure for singular agreement.",
+      "edges": [
+        {
+          "source": "community_licensing",
+          "target": "repair_reformulation_pressure",
+          "type": "causal"
+        }
+      ]
+    }
+  ],
+  "prediction_tests": [
+    {
+      "id": "measure-override-projection",
+      "phenomenon": "measure-agreement-override-cgel",
+      "contrast_cell": "plural-measure-singular-verb",
+      "activated_paths": [
+        "measure-notional-basis-to-alignment",
+        "measure-override-to-licensing"
+      ],
+      "prediction": "The graph should predict that a formally plural measure NP can license singular agreement when construed as a single measure, without treating the form as an attraction error.",
+      "pass_condition": "The held-out source supports singular agreement for plural measure NPs under single-measure construal and describes the pattern as an override or respecification, not as proximity error.",
+      "fail_condition": "The graph fails if the measure case requires a construct absent from the graph, or if the source treats the singular agreement as mere error, processing attraction, or raw preference.",
+      "evidence_status": "passed",
+      "evidence_note": "Checked against `cgel-subject-verb-agreement`, especially the further overrides section on plural measure nominals respecified as singular."
+    },
+    {
+      "id": "fused-head-agreement-projection",
+      "phenomenon": "fused-determiner-head-agreement-cgel",
+      "contrast_cell": "none-plural-set-plural",
+      "activated_paths": [
+        "fused-head-notional-basis-to-alignment"
+      ],
+      "prediction": "The graph should predict that fused determiner-head agreement can vary with quantified-set construal while keeping formal-style avoidance separate from licensing.",
+      "pass_condition": "The source supports singular agreement for non-count construal, singular/plural alternatives for plural-set `none`, and formal-style avoidance for some plural variants without reducing all of this to processing attraction.",
+      "fail_condition": "The graph fails if fused determiner-head agreement requires a category/function construct for the agreement contrast itself, or if formal-style pressure must be treated as licensing failure.",
+      "evidence_status": "passed",
+      "evidence_note": "Checked against `cgel-subject-verb-agreement`, especially the fused determiner-head discussion of any, none, either, and neither."
+    }
+  ],
+  "cards": [
+    {
+      "phenomenon": "measure-agreement-override-cgel",
+      "result": "survives_as_module",
+      "expected_survival_pattern": "The graph should generalize from built-on agreement override cards to a held-out measure-NP singular override by routing the case through notional basis, controller identification, override pattern, and feature alignment.",
+      "notes": "Held-out survival. This supports the narrow agreement-controller graph as a real module, but no numeric score movement follows.",
+      "requirements": {
+        "required_nodes": [
+          "agreement_controller_identification",
+          "agreement_feature_alignment",
+          "agreement_override_pattern",
+          "notional_agreement_basis",
+          "community_licensing",
+          "repair_reformulation_pressure",
+          "reported_acceptability",
+          "grammaticality_attribution"
+        ],
+        "required_edges": [
+          {
+            "source": "notional_agreement_basis",
+            "target": "agreement_controller_identification",
+            "type": "evidential"
+          },
+          {
+            "source": "agreement_controller_identification",
+            "target": "agreement_feature_alignment",
+            "type": "constitutive"
+          },
+          {
+            "source": "agreement_override_pattern",
+            "target": "agreement_feature_alignment",
+            "type": "constitutive"
+          },
+          {
+            "source": "agreement_feature_alignment",
+            "target": "community_licensing",
+            "type": "constitutive"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "retrieval_attractor_salience",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "plural-measure-singular-verb",
+          "axes": {
+            "community": "Standard English speakers judging plural measure NPs under single-measure construal.",
+            "norm_centre": "Descriptive agreement norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Measure construal and agreement value separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "singular-complement-obligatory",
+          "axes": {
+            "community": "Standard English speakers judging measure NP plus singular predicative complement.",
+            "norm_centre": "Descriptive agreement norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Obligatory singular override and repair pressure separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    },
+    {
+      "phenomenon": "fused-determiner-head-agreement-cgel",
+      "result": "survives_as_module",
+      "expected_survival_pattern": "The graph should route fused determiner-head agreement through notional basis, controller identification, feature alignment, and task/ideology channels without adding a fused-head-specific graph.",
+      "notes": "Held-out survival. The graph covers the agreement contrast; category analysis may still belong to CAT, but it is not needed for the scoped agreement path.",
+      "requirements": {
+        "required_nodes": [
+          "agreement_controller_identification",
+          "agreement_feature_alignment",
+          "notional_agreement_basis",
+          "standard_language_ideology",
+          "metalinguistic_condemnation",
+          "community_licensing",
+          "reported_acceptability",
+          "grammaticality_attribution"
+        ],
+        "required_edges": [
+          {
+            "source": "notional_agreement_basis",
+            "target": "agreement_controller_identification",
+            "type": "evidential"
+          },
+          {
+            "source": "agreement_controller_identification",
+            "target": "agreement_feature_alignment",
+            "type": "constitutive"
+          },
+          {
+            "source": "agreement_feature_alignment",
+            "target": "community_licensing",
+            "type": "constitutive"
+          },
+          {
+            "source": "standard_language_ideology",
+            "target": "metalinguistic_condemnation",
+            "type": "causal"
+          },
+          {
+            "source": "metalinguistic_condemnation",
+            "target": "grammaticality_attribution",
+            "type": "evidential"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "processing_cost",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "noncount-singular",
+          "axes": {
+            "community": "Standard English speakers judging fused determiner-heads with non-count singular construal.",
+            "norm_centre": "Descriptive agreement norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Non-count singular construal and agreement value separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "none-plural-set-plural",
+          "axes": {
+            "community": "Standard English speakers judging `none` over a plural set with plural agreement.",
+            "norm_centre": "Descriptive agreement norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Plural-set construal and agreement value separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "none-plural-set-singular",
+          "axes": {
+            "community": "Standard English speakers judging `none` over a plural set with singular agreement.",
+            "norm_centre": "Descriptive agreement norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Singular agreement variant and plural-set construal separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "formal-style-plural-avoidance",
+          "axes": {
+            "community": "Standard English speakers judging fused determiner-head plural variants under formal-style framing.",
+            "norm_centre": "Formal written norm centre.",
+            "genre": "Formal usage or editing judgment.",
+            "medium": "Written example.",
+            "task_framing": "Formal-style avoidance separated from licensing failure.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    }
+  ]
+}

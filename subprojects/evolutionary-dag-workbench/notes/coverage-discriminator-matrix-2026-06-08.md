@@ -146,6 +146,11 @@ yet a scoped module.
 plausible intended meaning diverges from literal compositional coherence. It is not yet a scoped
 module.
 
+`AGR` is the agreement-controller/override candidate. It handles controller identification, feature
+alignment, licensed override, notional agreement basis, and retrieval-attractor salience. It is a
+scoped agreement module, not a category-analysis, pronoun/audience, diachronic, or general
+grammaticality account.
+
 ## Twenty-Third-Pass Addendum
 
 `INR` has been evaluated after the table above was created:
@@ -247,6 +252,18 @@ This is the first projective check for `agreement-controller-override-candidate`
 candidate as a real agreement module but does not authorize score movement or a `scoped_module`
 label yet, because it is one held-out subtype from the same CGEL chapter.
 
+## Thirty-First-Pass Addendum
+
+One additional held-out agreement card has been added and evaluated:
+
+- `fused-determiner-head-agreement-cgel`: `AGR` = `S`; fused determiner-head agreement varies with
+  non-count singular construal, plural-set construal, and formal-style pressure, and the agreement
+  candidate survives without adding nodes.
+
+Created `agreement-controller-override-heldout-scope-2026-06-09`, a held-out `scope-only`
+evaluation combining the measure and fused determiner-head cards. `agreement-controller-override-candidate`
+now has a `scoped_module` label. All numeric scores remain zero.
+
 ## Discriminators Already Doing Work
 
 - `left-branch-extraction`: separates `DYN` from `OPG`.
@@ -310,6 +327,8 @@ label yet, because it is one held-out subtype from the same CGEL chapter.
 - `measure-agreement-override-cgel`: first held-out support for
   `agreement-controller-override-candidate`; it tests a new override direction rather than another
   build-card subtype.
+- `fused-determiner-head-agreement-cgel`: second held-out support for `AGR`; it keeps fused-head
+  category analysis separate from the agreement-controller path.
 
 ## Untested Cards
 
@@ -328,7 +347,8 @@ Newly exposed untested pairings remain:
 
 1. Add data pointers for unresolved prediction-test cells: pronoun policy/audience design and rare
    transparent-relative opportunity thresholds.
-2. Add one more held-out agreement subtype before promoting `AGR` to a scoped label.
+2. Pause agreement growth unless a genuinely different source domain is available; `AGR` now has a
+   scoped label but no numeric score.
 3. Use held-out contrast cells to test whether `OPG`, `CAT`, and `SEL` remain complementary or
    require a fused-construction split.
 4. Test comparative-illusion cards against `CAT`, `INR`, and `MPR` as complementary modules.
@@ -380,3 +400,6 @@ current agreement cards, it has no held-out projective credit, scoped label, or 
 The thirtieth pass adds a held-out measure-agreement override card. The agreement candidate survives
 without adding nodes, which is projective evidence for the module. It remains unscored and unlabeled
 until at least one more held-out agreement subtype is tested.
+The thirty-first pass adds a second held-out agreement subtype, fused determiner-head agreement.
+Together with the measure override card, it authorizes a `scope-only` evaluation and a scoped label
+for `agreement-controller-override-candidate`. Numeric scores remain zero.
