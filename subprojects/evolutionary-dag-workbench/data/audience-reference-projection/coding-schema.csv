@@ -1,0 +1,22 @@
+field,allowed_values,description
+run_id,string,Unique data collection or simulation run identifier.
+item_id,string,Stimulus identifier from stimulus-register.csv.
+participant_id,string_or_blank,Anonymous participant or critic identifier.
+condition_id,string,Condition identifier combining cell and frame.
+cell_id,low-stakes-reference|policy-or-identity-framing|personified-referent,Workbench contrast cell.
+referent_status,known_human|unknown_human|personified_nonhuman|depersonified_human|institution_collective,Referent classification cue.
+pro_form_pattern,feature_aligned|reference_recoverable_socially_marked|chain_switched|ambiguous|policy_specified,Target pro-form pattern.
+audience_or_evaluator,ordinary_interlocutor|descriptive_linguist|teacher_editor|institution_policy_officer|target_community_member,Audience or evaluator frame.
+norm_centre,descriptive_usage|school_standard|institutional_policy|community_local_norm,Norm centre cued by the item.
+task_prompt,reference_resolution|feature_fit|naturalness|correctness|respect_social_sanction|policy_compliance|grammaticality_attribution,Prompt channel.
+speaker_identity,unmarked|learner|institutional_representative|ingroup_speaker|outgroup_speaker,Speaker or writer cue.
+reference_success,yes|no|ambiguous|not_applicable,Coded from reference-identification response.
+reference_confidence,1-7_or_blank,Confidence in reference identification.
+feature_fit_score,1-7_or_blank,Feature/personhood fit response.
+acceptability_score,1-7_or_blank,Acceptability or naturalness response.
+attribution_label,grammar_error|style_register_issue|respect_policy_issue|reference_ambiguity|no_problem|other|blank,Attribution response.
+sanction_label,correct|challenge|avoid|leave_alone|depends|blank,Correction or social sanction response.
+norm_orientation_label,ordinary_conversation|school_correctness|workplace_policy|community_local_norm|personal_preference|other|blank,Reported norm orientation.
+counts_as_prediction_evidence,yes|no,Whether row is usable for prediction-test evaluation.
+exclusion_reason,wrong_task|failed_attention|uninterpretable|duplicate|other|blank,Why row is excluded if not usable.
+notes,string,Free coding note.

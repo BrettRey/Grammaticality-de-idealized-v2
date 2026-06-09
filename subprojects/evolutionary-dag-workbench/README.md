@@ -118,6 +118,16 @@ The current result is scoped: `AGR` beats a simple surface-head-number baseline 
 production cells, especially `majority`, but no numeric score movement or general-account claim
 follows.
 
+The next data-ready lane is the audience/reference pronoun projection scaffold:
+
+- design: `notes/pronoun-audience-policy-task-design-2026-06-09.md`;
+- scaffold: `data/audience-reference-projection/`;
+- graph: `graphs/archive/audience-reference-tracking-candidate.json`;
+- evaluation: `evaluations/protocol-tests/audience-reference-tracking-2026-06-08.json`.
+
+It is not a data pass yet. The unresolved audience-policy prediction remains `mixed` until
+channel-specific response data are collected or supplied.
+
 Run the AGR ablation/compression check with:
 
 ```bash

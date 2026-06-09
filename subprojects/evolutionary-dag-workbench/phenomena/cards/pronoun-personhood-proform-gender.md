@@ -65,6 +65,9 @@ card still needs task-specific audience evidence before it can count as fully pa
 - Task design:
   [pronoun audience-policy task design](../../notes/pronoun-audience-policy-task-design-2026-06-09.md)
   specifies the contrast cells and response channels needed to move the remaining mixed cell.
+- Data scaffold:
+  [audience reference projection](../../data/audience-reference-projection/README.md)
+  contains draft stimuli, response-channel fields, prediction rows, and coding schema for a pilot.
 - Treat policy or respect judgments as data for `audience_design`, `social_indexical_value`,
   `standard_language_ideology`, and `grammaticality_attribution`; do not treat them as direct
   evidence that `reference_tracking_success` or `community_licensing` changed.

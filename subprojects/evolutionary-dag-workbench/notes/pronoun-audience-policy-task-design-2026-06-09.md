@@ -167,3 +167,9 @@ the measured channel.
 This is a task design, not a data pass. The relevant prediction tests should remain `mixed` until a
 dataset or elicitation run records channel-specific outcomes. No graph mutation or numeric score
 movement follows.
+
+## Data Scaffold
+
+The design has been converted into data-ready files in `data/audience-reference-projection/`.
+Those files define draft stimuli, response channels, prediction rows, and row-level coding fields.
+They do not contain participant data and do not change any evidence labels.
