@@ -1,0 +1,112 @@
+{
+  "id": "context-indexed-dynamic-feedback-gibson-legalese-2026-06-09",
+  "target_graph": "graphs/archive/context-indexed-dynamic-feedback-candidate.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "protocol-bound",
+  "score_decision": "no-score-change",
+  "activated_paths": [
+    {
+      "id": "genre-fit-to-acceptability",
+      "phenomenon": "legalese-center-embedding-gibson",
+      "contrast_cell": "official-legalese",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Legal genre can raise register appropriateness and reported acceptability or officialness without improving comprehension.",
+      "edges": [
+        {
+          "source": "genre_t1",
+          "target": "register_genre_appropriateness_t1",
+          "type": "causal"
+        },
+        {
+          "source": "register_genre_appropriateness_t1",
+          "target": "reported_acceptability_t1",
+          "type": "causal"
+        }
+      ]
+    },
+    {
+      "id": "ideology-to-acceptability",
+      "phenomenon": "legalese-center-embedding-gibson",
+      "contrast_cell": "official-legalese",
+      "expected_path_reading": "unprofiled",
+      "prediction": "An official or standard norm centre can shift reported acceptability independently of processing burden.",
+      "edges": [
+        {
+          "source": "standard_language_ideology_t1",
+          "target": "reported_acceptability_t1",
+          "type": "causal"
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "phenomenon": "legalese-center-embedding-gibson",
+      "result": "partly_survives",
+      "expected_survival_pattern": "The graph should capture genre/register and norm-centre channels, but it cannot represent the processing/comprehension burden directly.",
+      "notes": "Partly survives. DYN handles genre persistence and officialness pressure, but lacks `processing_cost`, production-task separation, and comprehension/preference tasks.",
+      "requirements": {
+        "required_nodes": [
+          "genre_t1",
+          "register_genre_appropriateness_t1",
+          "standard_language_ideology_t1",
+          "reported_acceptability_t1",
+          "grammaticality_attribution_t1"
+        ],
+        "required_edges": [
+          {
+            "source": "genre_t1",
+            "target": "register_genre_appropriateness_t1",
+            "type": "causal"
+          },
+          {
+            "source": "register_genre_appropriateness_t1",
+            "target": "reported_acceptability_t1",
+            "type": "causal"
+          },
+          {
+            "source": "standard_language_ideology_t1",
+            "target": "reported_acceptability_t1",
+            "type": "causal"
+          },
+          {
+            "source": "reported_acceptability_t1",
+            "target": "grammaticality_attribution_t1",
+            "type": "evidential"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "standard_language_ideology_t1",
+            "target": "community_licensing_t1",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "official-legalese",
+          "axes": {
+            "community": "Legal writers and readers encountering legal contract prose.",
+            "norm_centre": "Legal-institutional norm centre.",
+            "genre": "Contract or statute.",
+            "medium": "Edited legal prose.",
+            "task_framing": "Officialness or genre-fit judgment.",
+            "speaker_identity": "Legal professional or institutional writer cue."
+          }
+        },
+        {
+          "id": "plain-english-paraphrase",
+          "axes": {
+            "community": "Legal writers and readers comparing plain-English paraphrases.",
+            "norm_centre": "Plain-language or reader-comprehension norm centre.",
+            "genre": "Plain-English legal explanation.",
+            "medium": "Edited prose.",
+            "task_framing": "Comprehension, recall, or preference judgment.",
+            "speaker_identity": "Legal professional or institutional writer cue."
+          }
+        }
+      ]
+    }
+  ]
+}

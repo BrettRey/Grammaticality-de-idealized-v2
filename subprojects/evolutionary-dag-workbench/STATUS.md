@@ -12,7 +12,7 @@ representations about grammaticality. The existing OVMG, detector, operator-stra
 processing-based, and normativity-based models are treated as seed graph families, not as
 conclusions or targets to vindicate.
 
-Seventeen adversarial passes/synthesis steps have been run. All numeric scores remain zero. Five
+Eighteen adversarial passes/synthesis steps have been run. All numeric scores remain zero. Five
 current modules have `scoped_module` labels tied to protocol-bound evaluations. The original
 scope-only evaluations now include card-level requirements and activated paths. Both held-out CGEL
 evaluations also include card-level requirements and activated paths without authorizing score
@@ -37,6 +37,11 @@ dependency-locality alternations, garden-path temporary ambiguity, noisy-channel
 island construction variation, and legalese center embedding.
 The same card pass added a local minimal-pair card for `I have five years`, separating contextual
 anchoring from ad hoc rescue.
+Those new cards now have protocol-bound no-score-change evaluations. `PROC` survives the locality
+and garden-path cards and partly survives noisy-channel overacceptance. `UPT` survives the duration
+frame minimal pair while `OPG` only partly survives it. `OPG` and `UPT` both partly survive island
+construction variation. `DYN` and `TASK` partly survive legalese, but both lack direct processing
+or comprehension-cost machinery.
 
 ## Current Candidate Stack
 
@@ -124,11 +129,12 @@ construct separation, or held-out projectibility, not by fitting a prior paper.
   `notes/fifteenth-adversarial-pass-synthesis-2026-06-08.md`
 - unresolved evidence-lane update in `notes/sixteenth-adversarial-pass-synthesis-2026-06-08.md`
 - Gibson card-pass synthesis in `notes/seventeenth-adversarial-pass-synthesis-2026-06-09.md`
+- Gibson/local-card evaluation synthesis in `notes/eighteenth-adversarial-pass-synthesis-2026-06-09.md`
 - coverage/discriminator matrix in `notes/coverage-discriminator-matrix-2026-06-08.md`
 - protocol-bound evaluation schema and exploratory evaluations in `evaluations/`
 - held-out CGEL/local-correction evaluations in `evaluations/protocol-tests/`
-- agreement, center-embedding, uptake-boundary, frequent-condemned-form, and fused-head evaluations in
-  `evaluations/protocol-tests/`
+- agreement, center-embedding, uptake-boundary, frequent-condemned-form, fused-head,
+  Gibson-backed, and local minimal-pair evaluations in `evaluations/protocol-tests/`
 - positive and negative validator fixtures in `tests/fixtures/`
 
 ## Current Tooling Gates
@@ -205,15 +211,16 @@ validation.
 
 1. Add data pointers for the remaining unresolved prediction-test cells: pronoun policy/audience
    design and rare transparent-relative opportunity thresholds.
-2. Run the Gibson-backed cards against `PROC`, `OPG`, `DYN`, `TASK`, and `UPT`, starting with
-   garden-path/noisy-channel and island-construction-variation evaluations.
-3. Run `frame-conditioned-duration-have` against `OPG` and `UPT` as a compact contextual anchoring
-   test.
-4. Test whether `OPG`, `CAT`, and `SEL` stay complementary on richer fused-construction cards before
+2. Decide whether noisy-channel overacceptance needs an `intended_form_distance` or
+   `repair_neighbour_distance` construct.
+3. Test whether island construction variation requires a construction-specific dependency-licensing
+   module or can remain split between `OPG` and `UPT`.
+4. Run legalese against `PROC` before adding any genre-processing hybrid graph.
+5. Test whether `OPG`, `CAT`, and `SEL` stay complementary on richer fused-construction cards before
    adding any fused-head-specific graph.
-5. Calibrate scoped-module score magnitudes after at least one held-out or parameterized evaluation
+6. Calibrate scoped-module score magnitudes after at least one held-out or parameterized evaluation
    pass.
-6. Expand `phenomena/cards/` toward 40-100 cards only after the current representation classes stop
+7. Expand `phenomena/cards/` toward 40-100 cards only after the current representation classes stop
    shifting every pass.
-7. Only after the construct inventory stabilizes, consider whether `pgmpy`, NOTEARS-style methods,
+8. Only after the construct inventory stabilizes, consider whether `pgmpy`, NOTEARS-style methods,
    or empirical causal discovery are useful.

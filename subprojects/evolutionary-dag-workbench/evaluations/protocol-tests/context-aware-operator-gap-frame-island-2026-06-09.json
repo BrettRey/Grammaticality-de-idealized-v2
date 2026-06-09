@@ -1,0 +1,230 @@
+{
+  "id": "context-aware-operator-gap-frame-island-2026-06-09",
+  "target_graph": "graphs/archive/context-aware-operator-gap-candidate.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "protocol-bound",
+  "score_decision": "no-score-change",
+  "activated_paths": [
+    {
+      "id": "frame-recoverability-to-attribution",
+      "phenomenon": "frame-conditioned-duration-have",
+      "contrast_cell": "age-answer-have-duration",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Recoverability can raise reported acceptability and attribution warrant, but it should not license the age-answer frame.",
+      "edges": [
+        {
+          "source": "semantic_pragmatic_recoverability",
+          "target": "reported_acceptability",
+          "type": "causal"
+        },
+        {
+          "source": "reported_acceptability",
+          "target": "grammaticality_attribution",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "frame-operator-to-repair",
+      "phenomenon": "frame-conditioned-duration-have",
+      "contrast_cell": "age-answer-have-duration",
+      "expected_path_reading": "non_sign_propagating",
+      "prediction": "A failed operator/configuration fit can route through community licensing to repair pressure.",
+      "edges": [
+        {
+          "source": "operator_value",
+          "target": "community_licensing",
+          "type": "constitutive"
+        },
+        {
+          "source": "community_licensing",
+          "target": "repair_reformulation_pressure",
+          "type": "causal"
+        }
+      ]
+    },
+    {
+      "id": "island-preemption-repair",
+      "phenomenon": "island-construction-variation-gibson",
+      "contrast_cell": "wh-question-subject-island",
+      "expected_path_reading": "non_sign_propagating",
+      "prediction": "Competitor availability and preemption can help explain repair pressure for wh-question island configurations.",
+      "edges": [
+        {
+          "source": "competitor_availability",
+          "target": "preemption_strength",
+          "type": "constitutive"
+        },
+        {
+          "source": "preemption_strength",
+          "target": "community_licensing",
+          "type": "evidential"
+        },
+        {
+          "source": "community_licensing",
+          "target": "repair_reformulation_pressure",
+          "type": "causal"
+        }
+      ]
+    },
+    {
+      "id": "island-recoverability-to-attribution",
+      "phenomenon": "island-construction-variation-gibson",
+      "contrast_cell": "relative-clause-subject-extraction",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Recoverability can support reported acceptability and attribution in constructions where the dependency is tolerated.",
+      "edges": [
+        {
+          "source": "semantic_pragmatic_recoverability",
+          "target": "reported_acceptability",
+          "type": "causal"
+        },
+        {
+          "source": "reported_acceptability",
+          "target": "grammaticality_attribution",
+          "type": "evidential"
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "phenomenon": "frame-conditioned-duration-have",
+      "result": "partly_survives",
+      "expected_survival_pattern": "The graph should keep recoverability separate from licensing, but it lacks a direct construct for question-answer frame fit.",
+      "notes": "Partly survives. OPG blocks the recoverability-to-licensing collapse, but `operator_value` is too coarse for the age-answer versus remaining-duration contrast.",
+      "requirements": {
+        "required_nodes": [
+          "operator_value",
+          "semantic_pragmatic_recoverability",
+          "community_licensing",
+          "reported_acceptability",
+          "repair_reformulation_pressure",
+          "grammaticality_attribution"
+        ],
+        "required_edges": [
+          {
+            "source": "operator_value",
+            "target": "community_licensing",
+            "type": "constitutive"
+          },
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "reported_acceptability",
+            "type": "causal"
+          },
+          {
+            "source": "community_licensing",
+            "target": "repair_reformulation_pressure",
+            "type": "causal"
+          },
+          {
+            "source": "reported_acceptability",
+            "target": "grammaticality_attribution",
+            "type": "evidential"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "age-answer-have-duration",
+          "axes": {
+            "community": "Ordinary English speakers interpreting an age question.",
+            "norm_centre": "Ordinary English age-ascription norm centre.",
+            "genre": "Dialogue answer.",
+            "medium": "Speech or written dialogue.",
+            "task_framing": "Question-answer fit and grammaticality attribution.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "remaining-duration-have",
+          "axes": {
+            "community": "Ordinary English speakers interpreting a remaining-duration question.",
+            "norm_centre": "Ordinary English duration-expression norm centre.",
+            "genre": "Dialogue answer.",
+            "medium": "Speech or written dialogue.",
+            "task_framing": "Question-answer fit and naturalness judgment.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    },
+    {
+      "phenomenon": "island-construction-variation-gibson",
+      "result": "partly_survives",
+      "expected_survival_pattern": "The graph should capture recoverability and preemption pressure, but construction-specific update role remains under-modelled.",
+      "notes": "Partly survives. OPG handles the operator-gap side of islands, but Gibson's construction-specific variation pressures it toward UPT or a construction-specific dependency-licensing construct.",
+      "requirements": {
+        "required_nodes": [
+          "operator_value",
+          "semantic_pragmatic_recoverability",
+          "competitor_availability",
+          "preemption_strength",
+          "community_licensing",
+          "repair_reformulation_pressure",
+          "reported_acceptability",
+          "grammaticality_attribution"
+        ],
+        "required_edges": [
+          {
+            "source": "competitor_availability",
+            "target": "preemption_strength",
+            "type": "constitutive"
+          },
+          {
+            "source": "preemption_strength",
+            "target": "community_licensing",
+            "type": "evidential"
+          },
+          {
+            "source": "community_licensing",
+            "target": "repair_reformulation_pressure",
+            "type": "causal"
+          },
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "reported_acceptability",
+            "type": "causal"
+          },
+          {
+            "source": "reported_acceptability",
+            "target": "grammaticality_attribution",
+            "type": "evidential"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "wh-question-subject-island",
+          "axes": {
+            "community": "English speakers judging wh-question extractions from subject configurations.",
+            "norm_centre": "Experimental syntax or descriptive judgment norm centre.",
+            "genre": "Controlled island judgment.",
+            "medium": "Written sentence.",
+            "task_framing": "Acceptability with no-extraction controls.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "relative-clause-subject-extraction",
+          "axes": {
+            "community": "English speakers judging relative-clause extractions from comparable subject configurations.",
+            "norm_centre": "Experimental syntax or descriptive judgment norm centre.",
+            "genre": "Controlled island judgment.",
+            "medium": "Written sentence.",
+            "task_framing": "Acceptability with no-extraction controls.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,323 @@
+{
+  "id": "processing-naturalness-perturbation-gibson-2026-06-09",
+  "target_graph": "graphs/archive/processing-naturalness-perturbation-candidate.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "protocol-bound",
+  "score_decision": "no-score-change",
+  "activated_paths": [
+    {
+      "id": "garden-path-processing-to-acceptability",
+      "phenomenon": "garden-path-temporary-ambiguity-gibson",
+      "contrast_cell": "garden-path-first-pass",
+      "expected_path_reading": "negative",
+      "prediction": "Strong temporary ambiguity raises processing cost, lowers felt naturalness, and lowers reported acceptability without lowering licensing.",
+      "edges": [
+        {
+          "source": "processing_cost",
+          "target": "felt_naturalness_context",
+          "type": "causal"
+        },
+        {
+          "source": "felt_naturalness_context",
+          "target": "reported_acceptability",
+          "type": "measurement"
+        }
+      ]
+    },
+    {
+      "id": "garden-path-reread-recoverability",
+      "phenomenon": "garden-path-temporary-ambiguity-gibson",
+      "contrast_cell": "disambiguated-reread",
+      "expected_path_reading": "positive",
+      "prediction": "Disambiguation, rereading, or explanation can raise recoverability and felt naturalness without changing licensing.",
+      "edges": [
+        {
+          "source": "semantic_pragmatic_recoverability",
+          "target": "felt_naturalness_context",
+          "type": "causal"
+        },
+        {
+          "source": "felt_naturalness_context",
+          "target": "reported_acceptability",
+          "type": "measurement"
+        }
+      ]
+    },
+    {
+      "id": "noisy-channel-recoverability-to-acceptability",
+      "phenomenon": "noisy-channel-overacceptance-gibson",
+      "contrast_cell": "nearby-intended-repair",
+      "expected_path_reading": "positive",
+      "prediction": "A highly recoverable intended neighbour can raise felt naturalness and reported acceptability even when the presented string is not licensed.",
+      "edges": [
+        {
+          "source": "semantic_pragmatic_recoverability",
+          "target": "felt_naturalness_context",
+          "type": "causal"
+        },
+        {
+          "source": "felt_naturalness_context",
+          "target": "reported_acceptability",
+          "type": "measurement"
+        }
+      ]
+    },
+    {
+      "id": "noisy-channel-task-to-attribution",
+      "phenomenon": "noisy-channel-overacceptance-gibson",
+      "contrast_cell": "literal-analysis",
+      "expected_path_reading": "indeterminate",
+      "prediction": "A literal-analysis or proofreading frame should shift attribution away from first-pass acceptability.",
+      "edges": [
+        {
+          "source": "task_framing",
+          "target": "grammaticality_attribution",
+          "type": "causal"
+        }
+      ]
+    },
+    {
+      "id": "locality-processing-to-acceptability",
+      "phenomenon": "dependency-locality-alternations-gibson",
+      "contrast_cell": "long-dependency-licensed",
+      "expected_path_reading": "negative",
+      "prediction": "A licensed high-locality-cost alternative should receive lower felt naturalness and reported acceptability than its shorter-dependency competitor.",
+      "edges": [
+        {
+          "source": "processing_cost",
+          "target": "felt_naturalness_context",
+          "type": "causal"
+        },
+        {
+          "source": "felt_naturalness_context",
+          "target": "reported_acceptability",
+          "type": "measurement"
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "phenomenon": "garden-path-temporary-ambiguity-gibson",
+      "result": "survives_as_module",
+      "expected_survival_pattern": "Garden-path rejection should route through processing cost, felt naturalness, reported acceptability, and task-sensitive attribution rather than community licensing.",
+      "notes": "Survives as a processing/naturalness module. It does not explain why a particular parse is locally preferred; it records the judgment-channel effect.",
+      "requirements": {
+        "required_nodes": [
+          "processing_cost",
+          "semantic_pragmatic_recoverability",
+          "felt_naturalness_context",
+          "reported_acceptability",
+          "community_licensing",
+          "grammaticality_attribution",
+          "task_framing"
+        ],
+        "required_edges": [
+          {
+            "source": "processing_cost",
+            "target": "felt_naturalness_context",
+            "type": "causal"
+          },
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "felt_naturalness_context",
+            "type": "causal"
+          },
+          {
+            "source": "felt_naturalness_context",
+            "target": "reported_acceptability",
+            "type": "measurement"
+          },
+          {
+            "source": "reported_acceptability",
+            "target": "grammaticality_attribution",
+            "type": "evidential"
+          },
+          {
+            "source": "community_licensing",
+            "target": "grammaticality_attribution",
+            "type": "evidential"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "processing_cost",
+            "target": "community_licensing",
+            "type": "causal"
+          },
+          {
+            "source": "reported_acceptability",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "garden-path-first-pass",
+          "axes": {
+            "community": "English speakers reading a strongly garden-pathing but licensed sentence.",
+            "norm_centre": "Descriptive grammar norm centre.",
+            "genre": "Psycholinguistic judgment item.",
+            "medium": "Written sentence.",
+            "task_framing": "First-pass naturalness or acceptability judgment.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "disambiguated-reread",
+          "axes": {
+            "community": "English speakers after rereading, explanation, or disambiguating support.",
+            "norm_centre": "Descriptive grammar norm centre.",
+            "genre": "Psycholinguistic judgment or teaching example.",
+            "medium": "Written sentence with support.",
+            "task_framing": "Reread grammaticality attribution separated from confusion.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    },
+    {
+      "phenomenon": "noisy-channel-overacceptance-gibson",
+      "result": "partly_survives",
+      "expected_survival_pattern": "Recoverable intended-neighbour strings should show high reported acceptability while grammaticality attribution remains task-sensitive and separable from licensing.",
+      "notes": "Partly survives. The graph captures recoverability and task-sensitive attribution, but it lacks an explicit construct for distance to a recoverable intended form.",
+      "requirements": {
+        "required_nodes": [
+          "semantic_pragmatic_recoverability",
+          "felt_naturalness_context",
+          "reported_acceptability",
+          "community_licensing",
+          "grammaticality_attribution",
+          "task_framing"
+        ],
+        "required_edges": [
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "felt_naturalness_context",
+            "type": "causal"
+          },
+          {
+            "source": "felt_naturalness_context",
+            "target": "reported_acceptability",
+            "type": "measurement"
+          },
+          {
+            "source": "task_framing",
+            "target": "grammaticality_attribution",
+            "type": "causal"
+          },
+          {
+            "source": "reported_acceptability",
+            "target": "grammaticality_attribution",
+            "type": "evidential"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "reported_acceptability",
+            "target": "community_licensing",
+            "type": "causal"
+          },
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "nearby-intended-repair",
+          "axes": {
+            "community": "English speakers reading a malformed string with a highly plausible intended neighbour.",
+            "norm_centre": "Descriptive grammar norm centre.",
+            "genre": "Judgment or comprehension item.",
+            "medium": "Written sentence.",
+            "task_framing": "First-pass acceptability or comprehension judgment.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "literal-analysis",
+          "axes": {
+            "community": "English speakers asked to analyze the literal presented string.",
+            "norm_centre": "Descriptive grammar or proofreading norm centre.",
+            "genre": "Grammar discussion, proofreading, or slow judgment.",
+            "medium": "Written sentence.",
+            "task_framing": "Literal grammaticality or error-detection framing.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    },
+    {
+      "phenomenon": "dependency-locality-alternations-gibson",
+      "result": "survives_as_module",
+      "expected_survival_pattern": "Licensed long-dependency alternatives should show lower felt naturalness and reported acceptability than shorter-dependency alternatives without a licensing change.",
+      "notes": "Survives as a scoped processing preference module, not as a production grammar or cross-linguistic locality theory.",
+      "requirements": {
+        "required_nodes": [
+          "processing_cost",
+          "felt_naturalness_context",
+          "reported_acceptability",
+          "community_licensing",
+          "measurement_task"
+        ],
+        "required_edges": [
+          {
+            "source": "processing_cost",
+            "target": "felt_naturalness_context",
+            "type": "causal"
+          },
+          {
+            "source": "felt_naturalness_context",
+            "target": "reported_acceptability",
+            "type": "measurement"
+          },
+          {
+            "source": "measurement_task",
+            "target": "reported_acceptability",
+            "type": "causal"
+          },
+          {
+            "source": "community_licensing",
+            "target": "reported_acceptability",
+            "type": "measurement"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "processing_cost",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "short-dependency-licensed",
+          "axes": {
+            "community": "English speakers comparing licensed alternants.",
+            "norm_centre": "Descriptive grammar norm centre.",
+            "genre": "Controlled alternation judgment.",
+            "medium": "Written sentence.",
+            "task_framing": "Naturalness and acceptability judgment.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "long-dependency-licensed",
+          "axes": {
+            "community": "English speakers comparing a licensed but longer-dependency alternant.",
+            "norm_centre": "Descriptive grammar norm centre.",
+            "genre": "Controlled alternation judgment.",
+            "medium": "Written sentence.",
+            "task_framing": "Naturalness and acceptability judgment.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    }
+  ]
+}

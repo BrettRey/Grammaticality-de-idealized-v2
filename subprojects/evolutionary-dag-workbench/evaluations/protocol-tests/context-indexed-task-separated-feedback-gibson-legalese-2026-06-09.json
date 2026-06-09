@@ -1,0 +1,152 @@
+{
+  "id": "context-indexed-task-separated-feedback-gibson-legalese-2026-06-09",
+  "target_graph": "graphs/archive/context-indexed-task-separated-feedback-candidate.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "protocol-bound",
+  "score_decision": "no-score-change",
+  "activated_paths": [
+    {
+      "id": "genre-fit-to-acceptability",
+      "phenomenon": "legalese-center-embedding-gibson",
+      "contrast_cell": "official-legalese",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Legal genre can support register appropriateness and officialness-style acceptability.",
+      "edges": [
+        {
+          "source": "genre_t1",
+          "target": "register_genre_appropriateness_t1",
+          "type": "causal"
+        },
+        {
+          "source": "register_genre_appropriateness_t1",
+          "target": "reported_acceptability_t1",
+          "type": "causal"
+        }
+      ]
+    },
+    {
+      "id": "production-setting-to-usage",
+      "phenomenon": "legalese-center-embedding-gibson",
+      "contrast_cell": "official-legalese",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Professional production setting can support production and later usage evidence even if readers prefer the plain version.",
+      "edges": [
+        {
+          "source": "production_task_setting_t1",
+          "target": "production_probability_t1",
+          "type": "causal"
+        },
+        {
+          "source": "production_probability_t1",
+          "target": "usage_frequency_t2",
+          "type": "time_lagged"
+        }
+      ]
+    },
+    {
+      "id": "judgment-setting-to-acceptability",
+      "phenomenon": "legalese-center-embedding-gibson",
+      "contrast_cell": "plain-english-paraphrase",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Comprehension, recall, preference, and officialness tasks should not collapse into one reported-acceptability channel.",
+      "edges": [
+        {
+          "source": "judgment_task_setting_t1",
+          "target": "reported_acceptability_t1",
+          "type": "causal"
+        },
+        {
+          "source": "reported_acceptability_t1",
+          "target": "grammaticality_attribution_t1",
+          "type": "evidential"
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "phenomenon": "legalese-center-embedding-gibson",
+      "result": "partly_survives",
+      "expected_survival_pattern": "The graph should separate production settings, judgment settings, genre fit, and reported acceptability, but it still lacks direct processing and comprehension-cost nodes.",
+      "notes": "Partly survives. TASK is better than DYN for legalese's production/preference split, but not enough for the processing mechanism Gibson foregrounds.",
+      "requirements": {
+        "required_nodes": [
+          "production_task_setting_t1",
+          "production_probability_t1",
+          "usage_frequency_t2",
+          "judgment_task_setting_t1",
+          "reported_acceptability_t1",
+          "grammaticality_attribution_t1",
+          "genre_t1",
+          "register_genre_appropriateness_t1"
+        ],
+        "required_edges": [
+          {
+            "source": "production_task_setting_t1",
+            "target": "production_probability_t1",
+            "type": "causal"
+          },
+          {
+            "source": "production_probability_t1",
+            "target": "usage_frequency_t2",
+            "type": "time_lagged"
+          },
+          {
+            "source": "judgment_task_setting_t1",
+            "target": "reported_acceptability_t1",
+            "type": "causal"
+          },
+          {
+            "source": "genre_t1",
+            "target": "register_genre_appropriateness_t1",
+            "type": "causal"
+          },
+          {
+            "source": "register_genre_appropriateness_t1",
+            "target": "reported_acceptability_t1",
+            "type": "causal"
+          },
+          {
+            "source": "reported_acceptability_t1",
+            "target": "grammaticality_attribution_t1",
+            "type": "evidential"
+          }
+        ],
+        "forbidden_nodes": [
+          "processing_cost"
+        ],
+        "forbidden_edges": [
+          {
+            "source": "judgment_task_setting_t1",
+            "target": "production_probability_t1",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "official-legalese",
+          "axes": {
+            "community": "Legal writers and readers encountering legal contract prose.",
+            "norm_centre": "Legal-institutional norm centre.",
+            "genre": "Contract or statute.",
+            "medium": "Edited legal prose.",
+            "task_framing": "Officialness or genre-fit judgment.",
+            "speaker_identity": "Legal professional or institutional writer cue."
+          }
+        },
+        {
+          "id": "plain-english-paraphrase",
+          "axes": {
+            "community": "Legal writers and readers comparing plain-English paraphrases.",
+            "norm_centre": "Plain-language or reader-comprehension norm centre.",
+            "genre": "Plain-English legal explanation.",
+            "medium": "Edited prose.",
+            "task_framing": "Comprehension, recall, or preference judgment.",
+            "speaker_identity": "Legal professional or institutional writer cue."
+          }
+        }
+      ]
+    }
+  ]
+}

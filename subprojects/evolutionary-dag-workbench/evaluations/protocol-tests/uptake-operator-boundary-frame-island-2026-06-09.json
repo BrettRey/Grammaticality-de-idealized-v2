@@ -1,0 +1,240 @@
+{
+  "id": "uptake-operator-boundary-frame-island-2026-06-09",
+  "target_graph": "graphs/archive/uptake-operator-boundary-candidate.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "protocol-bound",
+  "score_decision": "no-score-change",
+  "activated_paths": [
+    {
+      "id": "frame-role-to-attribution",
+      "phenomenon": "frame-conditioned-duration-have",
+      "contrast_cell": "age-answer-have-duration",
+      "expected_path_reading": "warranting",
+      "prediction": "The age-answer frame should fail because the answer does not supply the licensed update-role value for age ascription.",
+      "edges": [
+        {
+          "source": "update_role_configuration",
+          "target": "operator_repertoire_membership",
+          "type": "evidential"
+        },
+        {
+          "source": "operator_repertoire_membership",
+          "target": "grammaticality_attribution",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "frame-recoverability-to-attribution",
+      "phenomenon": "frame-conditioned-duration-have",
+      "contrast_cell": "age-answer-have-duration",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Recoverability may raise reported acceptability but should not by itself establish operator membership.",
+      "edges": [
+        {
+          "source": "semantic_pragmatic_recoverability",
+          "target": "reported_acceptability",
+          "type": "causal"
+        },
+        {
+          "source": "reported_acceptability",
+          "target": "grammaticality_attribution",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "duration-frame-role-to-attribution",
+      "phenomenon": "frame-conditioned-duration-have",
+      "contrast_cell": "remaining-duration-have",
+      "expected_path_reading": "warranting",
+      "prediction": "The remaining-duration question supplies a response slot in which the have-duration construction can be licensed.",
+      "edges": [
+        {
+          "source": "update_role_configuration",
+          "target": "operator_repertoire_membership",
+          "type": "evidential"
+        },
+        {
+          "source": "operator_repertoire_membership",
+          "target": "grammaticality_attribution",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "island-update-role-to-membership",
+      "phenomenon": "island-construction-variation-gibson",
+      "contrast_cell": "wh-question-subject-island",
+      "expected_path_reading": "warranting",
+      "prediction": "Construction-specific update role and repertoire membership should distinguish wh-question islands from other dependency constructions.",
+      "edges": [
+        {
+          "source": "update_role_configuration",
+          "target": "operator_repertoire_membership",
+          "type": "evidential"
+        },
+        {
+          "source": "operator_repertoire_membership",
+          "target": "grammaticality_attribution",
+          "type": "evidential"
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "phenomenon": "frame-conditioned-duration-have",
+      "result": "survives_as_module",
+      "expected_survival_pattern": "Question-answer frame should affect update-role configuration and operator-repertoire membership; recoverability alone should not license the age-answer use.",
+      "notes": "Survives as a compact uptake/operator-boundary test. The graph still uses broad `update_role_configuration` rather than a specialized constructional-frame-fit node.",
+      "requirements": {
+        "required_nodes": [
+          "update_role_configuration",
+          "operator_repertoire_membership",
+          "community_licensing",
+          "semantic_pragmatic_recoverability",
+          "reported_acceptability",
+          "grammaticality_attribution",
+          "repair_reformulation_pressure"
+        ],
+        "required_edges": [
+          {
+            "source": "update_role_configuration",
+            "target": "operator_repertoire_membership",
+            "type": "evidential"
+          },
+          {
+            "source": "operator_repertoire_membership",
+            "target": "community_licensing",
+            "type": "evidential"
+          },
+          {
+            "source": "operator_repertoire_membership",
+            "target": "grammaticality_attribution",
+            "type": "evidential"
+          },
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "reported_acceptability",
+            "type": "causal"
+          },
+          {
+            "source": "reported_acceptability",
+            "target": "grammaticality_attribution",
+            "type": "evidential"
+          },
+          {
+            "source": "community_licensing",
+            "target": "repair_reformulation_pressure",
+            "type": "causal"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "operator_repertoire_membership",
+            "type": "causal"
+          },
+          {
+            "source": "reported_acceptability",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "age-answer-have-duration",
+          "axes": {
+            "community": "Ordinary English speakers interpreting an age question.",
+            "norm_centre": "Ordinary English age-ascription norm centre.",
+            "genre": "Dialogue answer.",
+            "medium": "Speech or written dialogue.",
+            "task_framing": "Question-answer fit and grammaticality attribution.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "remaining-duration-have",
+          "axes": {
+            "community": "Ordinary English speakers interpreting a remaining-duration question.",
+            "norm_centre": "Ordinary English duration-expression norm centre.",
+            "genre": "Dialogue answer.",
+            "medium": "Speech or written dialogue.",
+            "task_framing": "Question-answer fit and naturalness judgment.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    },
+    {
+      "phenomenon": "island-construction-variation-gibson",
+      "result": "partly_survives",
+      "expected_survival_pattern": "Construction-specific update role should help distinguish wh-question, relative-clause, and exclamative dependency profiles, but opportunity/preemption remains outside this graph.",
+      "notes": "Partly survives. UPT explains why construction type matters, but does not model opportunity-normalized absence or competitor preemption.",
+      "requirements": {
+        "required_nodes": [
+          "update_role_configuration",
+          "operator_repertoire_membership",
+          "community_licensing",
+          "semantic_pragmatic_recoverability",
+          "reported_acceptability",
+          "grammaticality_attribution",
+          "repair_reformulation_pressure"
+        ],
+        "required_edges": [
+          {
+            "source": "update_role_configuration",
+            "target": "operator_repertoire_membership",
+            "type": "evidential"
+          },
+          {
+            "source": "operator_repertoire_membership",
+            "target": "community_licensing",
+            "type": "evidential"
+          },
+          {
+            "source": "operator_repertoire_membership",
+            "target": "grammaticality_attribution",
+            "type": "evidential"
+          },
+          {
+            "source": "community_licensing",
+            "target": "repair_reformulation_pressure",
+            "type": "causal"
+          },
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "reported_acceptability",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "wh-question-subject-island",
+          "axes": {
+            "community": "English speakers judging wh-question extractions from subject configurations.",
+            "norm_centre": "Experimental syntax or descriptive judgment norm centre.",
+            "genre": "Controlled island judgment.",
+            "medium": "Written sentence.",
+            "task_framing": "Acceptability with no-extraction controls.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "relative-clause-subject-extraction",
+          "axes": {
+            "community": "English speakers judging relative-clause extractions from comparable subject configurations.",
+            "norm_centre": "Experimental syntax or descriptive judgment norm centre.",
+            "genre": "Controlled island judgment.",
+            "medium": "Written sentence.",
+            "task_framing": "Acceptability with no-extraction controls.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    }
+  ]
+}

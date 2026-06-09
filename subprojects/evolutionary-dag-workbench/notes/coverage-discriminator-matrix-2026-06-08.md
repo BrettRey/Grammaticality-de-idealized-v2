@@ -54,12 +54,12 @@ Module abbreviations:
 | `transparent-free-relatives` | . | P | . | . | . | . | . | . |
 | `rare-uncontroversial-form` | . | S | . | . | . | . | . | . |
 | `grammatical-but-hard` | . | P | . | . | . | . | S | . |
-| `dependency-locality-alternations-gibson` | . | . | . | . | . | . | . | . |
-| `garden-path-temporary-ambiguity-gibson` | . | . | . | . | . | . | . | . |
-| `noisy-channel-overacceptance-gibson` | . | . | . | . | . | . | . | . |
-| `island-construction-variation-gibson` | . | . | . | . | . | . | . | . |
-| `legalese-center-embedding-gibson` | . | . | . | . | . | . | . | . |
-| `frame-conditioned-duration-have` | . | . | . | . | . | . | . | . |
+| `dependency-locality-alternations-gibson` | . | . | . | . | . | . | S | . |
+| `garden-path-temporary-ambiguity-gibson` | . | . | . | . | . | . | S | . |
+| `noisy-channel-overacceptance-gibson` | . | . | . | . | . | . | P | . |
+| `island-construction-variation-gibson` | . | P | . | . | . | . | . | P |
+| `legalese-center-embedding-gibson` | P | . | . | P | . | . | . | . |
+| `frame-conditioned-duration-have` | . | P | . | . | . | . | . | S |
 
 ## Current Module Boundaries
 
@@ -117,17 +117,31 @@ attribution. It is not a general operator-gap or social-indexical module.
   frequency/condemnation split, while `CAT` is out of scope.
 - `fused-head-nps-cgel`: confirms that `OPG` covers constructional analogy plus recoverability,
   while `CAT` and `SEL` cover only category/function and selection-adjacent pieces.
+- `dependency-locality-alternations-gibson`: strengthens `PROC` as a licensed-but-less-natural
+  alternation module.
+- `garden-path-temporary-ambiguity-gibson`: strengthens `PROC` by adding first-pass illusion of
+  ungrammaticality.
+- `noisy-channel-overacceptance-gibson`: pressures `PROC` toward an intended-form-distance
+  construct because recoverability alone is too coarse.
+- `island-construction-variation-gibson`: separates `OPG`'s opportunity/preemption machinery from
+  `UPT`'s construction-specific update-role machinery.
+- `legalese-center-embedding-gibson`: separates `DYN`/`TASK` genre and production persistence from
+  the missing processing/comprehension mechanism.
+- `frame-conditioned-duration-have`: separates `UPT`'s question-answer frame fit from `OPG`'s
+  broader recoverability/licensing separation.
 
 ## Untested Cards
 
-The Gibson-backed cards are newly added and not yet tested in protocol-test evaluations:
+No phenomenon cards are completely untested in protocol-test evaluations.
 
-- `dependency-locality-alternations-gibson`
-- `garden-path-temporary-ambiguity-gibson`
-- `noisy-channel-overacceptance-gibson`
-- `island-construction-variation-gibson`
-- `legalese-center-embedding-gibson`
-- `frame-conditioned-duration-have`
+Newly exposed untested pairings remain:
+
+- `legalese-center-embedding-gibson` against `PROC`, to isolate processing/comprehension burden
+  without genre persistence.
+- `noisy-channel-overacceptance-gibson` against `CAT`, for comparative-illusion/category-analysis
+  cases.
+- `island-construction-variation-gibson` against a possible future construction-specific
+  dependency-licensing module, if `OPG` + `UPT` remain insufficient.
 
 ## Next Evaluation Moves
 
@@ -135,10 +149,11 @@ The Gibson-backed cards are newly added and not yet tested in protocol-test eval
    transparent-relative opportunity thresholds.
 2. Use held-out contrast cells to test whether `OPG`, `CAT`, and `SEL` remain complementary or
    require a fused-construction split.
-3. Run the Gibson-backed cards against `PROC`, `OPG`, `DYN`, `TASK`, and `UPT` before adding new
-   graph families.
-4. Run `frame-conditioned-duration-have` against `OPG` and `UPT` as a compact test of contextual
-   anchoring without ad hoc licensing.
+3. Test whether noisy-channel overacceptance needs an `intended_form_distance` or
+   `repair_neighbour_distance` construct.
+4. Test whether island construction variation needs a construction-specific dependency-licensing
+   module or is sufficiently covered by `OPG` + `UPT`.
+5. Test legalese against `PROC` before deciding whether a genre-processing hybrid module is needed.
 
 ## Working Decision
 
@@ -149,3 +164,6 @@ added as a scoped module. `frequent-condemned-form` showed no new graph was need
 `fused-head-nps-cgel` also does not justify a new graph yet: `OPG` covers the core
 recoverability/constructional-support split, while `CAT` and `SEL` partly survive only on their
 own narrower dimensions.
+The Gibson/local-card pass does not justify a new graph yet. It strengthens `PROC` and `UPT`, and
+it exposes three named pressure points: intended-form distance, construction-specific dependency
+licensing, and legalese as a genre-processing hybrid.
