@@ -17,6 +17,10 @@ Added:
 - `data/agr-coca-projection/kwic-coding-schema.csv`;
 - `data/agr-coca-projection/prediction-register.csv`.
 
+A follow-on implementation added `scripts/run_agr_coca_queries.py`, which expands the query plan
+into auditable English-Corpora.org wrapper calls and refuses live execution if the COCA session is
+not authenticated.
+
 ## Rationale
 
 The workbench already has a scoped agreement module, and the prior Linguistic Transparency paper

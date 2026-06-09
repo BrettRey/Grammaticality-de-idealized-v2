@@ -150,6 +150,10 @@ The forty-third pass recorded `AGR` as the first COCA projection vertical slice.
 and data scaffold that improves on the Linguistic Transparency COCA pilot by separating discovery
 from confirmation, requiring opportunity denominators, preserving reproducible KWIC coding, and
 estimating uncertainty before any projective score movement.
+The follow-on run harness, `scripts/run_agr_coca_queries.py`, expands the registered `AGR` query
+plan into concrete English-Corpora.org wrapper calls. It refuses live execution when the COCA
+wrapper session is unauthenticated, so the current state remains a protocol and run harness, not a
+completed corpus result.
 An internal state-of-search report now summarizes the current scoped-module partition, evaluation
 ladder, the completed transparent-relative Lane A pass, and remaining empirical lanes without
 authorizing score movement.
