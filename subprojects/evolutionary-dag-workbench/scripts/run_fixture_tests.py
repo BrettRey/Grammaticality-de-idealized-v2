@@ -266,6 +266,40 @@ TESTS = [
         expected_output="must be between 0 and 5",
     ),
     FixtureTest(
+        name="audience responses valid empty template",
+        command=[
+            "scripts/validate_audience_reference_responses.py",
+        ],
+        expected_returncode=0,
+    ),
+    FixtureTest(
+        name="audience responses reject empty collected responses",
+        command=[
+            "scripts/validate_audience_reference_responses.py",
+            "--require-responses",
+        ],
+        expected_returncode=1,
+        expected_output="raw_response is required",
+    ),
+    FixtureTest(
+        name="audience responses reject scale and metadata drift",
+        command=[
+            "scripts/validate_audience_reference_responses.py",
+            rel("tests/fixtures/audience-responses/invalid/bad-scale-and-metadata.csv"),
+        ],
+        expected_returncode=1,
+        expected_output="reference_confidence='8' is not an integer from 1 to 7",
+    ),
+    FixtureTest(
+        name="audience responses reject stimulus metadata drift",
+        command=[
+            "scripts/validate_audience_reference_responses.py",
+            rel("tests/fixtures/audience-responses/invalid/bad-scale-and-metadata.csv"),
+        ],
+        expected_returncode=1,
+        expected_output="cell_id='policy-or-identity-framing' does not match stimulus",
+    ),
+    FixtureTest(
         name="evaluation valid minimal fixture",
         command=[
             "scripts/validate_evaluation.py",

@@ -1,0 +1,2 @@
+run_id,item_id,participant_id,condition_id,cell_id,referent_status,pro_form_pattern,audience_or_evaluator,norm_centre,task_prompt,speaker_identity,raw_response,reference_success,reference_confidence,feature_fit_score,acceptability_score,attribution_label,sanction_label,norm_orientation_label,counts_as_prediction_evidence,exclusion_reason,notes
+fixture-run,aud-ref-001,,aud-ref-001::reference_identification,policy-or-identity-framing,known_human,feature_aligned,ordinary_interlocutor,descriptive_usage,reference_resolution,unmarked,Anna,yes,8,,,,,,yes,blank,Bad fixture row.
