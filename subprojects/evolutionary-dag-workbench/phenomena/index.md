@@ -65,11 +65,34 @@ source-backed contrast cells for graph discovery and held-out projection.
 | [numerative-category-pressure](cards/numerative-category-pressure.md) | Numerative category, function, and licensing | Source-backed |
 | [nonfinite-verbless-clause-boundaries-cgel](cards/nonfinite-verbless-clause-boundaries-cgel.md) | Clause recognition, fragment licensing, genre, and medium | Source-backed |
 
+## Gibson-Backed Processing and Dependency Tranche
+
+These cards draw from Gibson's dependency/processing book as a source pool. They do not commit the
+workbench to dependency grammar, dependency locality, or noisy-channel processing as the right
+general graph. Their role is to sharpen processing, production, and construction-specific
+discriminators for the next evaluation round.
+
+| Card | Stress-test role | Current state |
+|---|---|---|
+| [dependency-locality-alternations-gibson](cards/dependency-locality-alternations-gibson.md) | Licensed alternatives with different locality, production, and naturalness profiles | Source-backed |
+| [garden-path-temporary-ambiguity-gibson](cards/garden-path-temporary-ambiguity-gibson.md) | Illusion of ungrammaticality under strong temporary ambiguity | Source-backed |
+| [noisy-channel-overacceptance-gibson](cards/noisy-channel-overacceptance-gibson.md) | Illusion of grammaticality and rational reconstruction | Source-backed |
+| [island-construction-variation-gibson](cards/island-construction-variation-gibson.md) | Construction-specific island effects and controlled interaction tests | Source-backed |
+| [legalese-center-embedding-gibson](cards/legalese-center-embedding-gibson.md) | Genre-stabilized complexity without licensing failure | Source-backed |
+
+## Local Minimal-Pair Cards
+
+These cards use compact examples from Brett as contrast cells. They are useful only when they force a
+construct distinction; they should not be treated as evidence by themselves without later source or
+elicitation support.
+
+| Card | Stress-test role | Current state |
+|---|---|---|
+| [frame-conditioned-duration-have](cards/frame-conditioned-duration-have.md) | Contextual anchoring without ad hoc licensing | Local minimal pair |
+
 ## Expansion Targets
 
-- island effects;
 - NPI illusions;
-- comparative illusions;
 - fragments and sluicing;
 - register-based ellipsis;
 - learner judgments;

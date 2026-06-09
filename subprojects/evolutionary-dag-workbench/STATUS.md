@@ -12,7 +12,7 @@ representations about grammaticality. The existing OVMG, detector, operator-stra
 processing-based, and normativity-based models are treated as seed graph families, not as
 conclusions or targets to vindicate.
 
-Sixteen adversarial passes/synthesis steps have been run. All numeric scores remain zero. Five
+Seventeen adversarial passes/synthesis steps have been run. All numeric scores remain zero. Five
 current modules have `scoped_module` labels tied to protocol-bound evaluations. The original
 scope-only evaluations now include card-level requirements and activated paths. Both held-out CGEL
 evaluations also include card-level requirements and activated paths without authorizing score
@@ -32,6 +32,11 @@ Six held-out CGEL cards have source-checked contrast examples, and the held-out 
 now record checked evidence statuses: four `passed` and two `mixed`.
 No graph has a `general_account` score. The current scoring schema includes `projective_power` and
 `theory_preservation_penalty` so held-out prediction and anti-alignment discipline are visible.
+The Gibson source pass added five processing/dependency cards without changing graph machinery:
+dependency-locality alternations, garden-path temporary ambiguity, noisy-channel overacceptance,
+island construction variation, and legalese center embedding.
+The same card pass added a local minimal-pair card for `I have five years`, separating contextual
+anchoring from ad hoc rescue.
 
 ## Current Candidate Stack
 
@@ -95,6 +100,8 @@ construct separation, or held-out projectibility, not by fitting a prior paper.
 - `ontology/forbidden-conflations.md`
 - `phenomena/index.md`
 - source-backed CGEL/local-correction card tranche in `phenomena/cards/`
+- source-backed Gibson processing/dependency card tranche in `phenomena/cards/`
+- local minimal-pair card tranche in `phenomena/cards/`
 - `DISCOVERY_RULES.md`
 - initial phenomenon cards in `phenomena/cards/`
 - graph schema and seed graphs in `graphs/`
@@ -102,7 +109,7 @@ construct separation, or held-out projectibility, not by fitting a prior paper.
 - stdlib validation, linting, and scoring scripts in `scripts/`
 - evaluation summary utility in `scripts/summarize_evaluations.py`
 - source map and pressure test in `notes/`
-- CGEL/local correction source registry in `notes/cgel-source-registry.md`
+- CGEL/Gibson/local correction source registry in `notes/cgel-source-registry.md`
 - conditioning protocol in `notes/conditioning-operationalization-protocol-2026-06-07.md`
 - scoped scoring policy in `notes/scoped-scoring-policy-2026-06-07.md`
 - task-separated feedback synthesis in `notes/seventh-adversarial-pass-synthesis-2026-06-08.md`
@@ -116,6 +123,7 @@ construct separation, or held-out projectibility, not by fitting a prior paper.
 - source-backed prediction evidence synthesis in
   `notes/fifteenth-adversarial-pass-synthesis-2026-06-08.md`
 - unresolved evidence-lane update in `notes/sixteenth-adversarial-pass-synthesis-2026-06-08.md`
+- Gibson card-pass synthesis in `notes/seventeenth-adversarial-pass-synthesis-2026-06-09.md`
 - coverage/discriminator matrix in `notes/coverage-discriminator-matrix-2026-06-08.md`
 - protocol-bound evaluation schema and exploratory evaluations in `evaluations/`
 - held-out CGEL/local-correction evaluations in `evaluations/protocol-tests/`
@@ -197,11 +205,15 @@ validation.
 
 1. Add data pointers for the remaining unresolved prediction-test cells: pronoun policy/audience
    design and rare transparent-relative opportunity thresholds.
-2. Test whether `OPG`, `CAT`, and `SEL` stay complementary on richer fused-construction cards before
+2. Run the Gibson-backed cards against `PROC`, `OPG`, `DYN`, `TASK`, and `UPT`, starting with
+   garden-path/noisy-channel and island-construction-variation evaluations.
+3. Run `frame-conditioned-duration-have` against `OPG` and `UPT` as a compact contextual anchoring
+   test.
+4. Test whether `OPG`, `CAT`, and `SEL` stay complementary on richer fused-construction cards before
    adding any fused-head-specific graph.
-3. Calibrate scoped-module score magnitudes after at least one held-out or parameterized evaluation
+5. Calibrate scoped-module score magnitudes after at least one held-out or parameterized evaluation
    pass.
-4. Expand `phenomena/cards/` toward 40-100 cards only after the current representation classes stop
+6. Expand `phenomena/cards/` toward 40-100 cards only after the current representation classes stop
    shifting every pass.
-5. Only after the construct inventory stabilizes, consider whether `pgmpy`, NOTEARS-style methods,
+7. Only after the construct inventory stabilizes, consider whether `pgmpy`, NOTEARS-style methods,
    or empirical causal discovery are useful.

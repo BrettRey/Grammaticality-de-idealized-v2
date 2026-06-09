@@ -1,4 +1,4 @@
-# CGEL and Local Correction Source Registry
+# CGEL, Gibson, and Local Correction Source Registry
 
 This registry records source pools for phenomenon-card extraction. These sources supply
 contrast cells, examples, and adversarial pressure. They do not supply conclusions the
@@ -6,7 +6,7 @@ workbench must vindicate.
 
 ## Use Rule
 
-Use CGEL and Brett's correction papers as discovery inputs:
+Use CGEL, Gibson's dependency/processing book, and Brett's correction papers as discovery inputs:
 
 - extract a phenomenon only when it can stress a construct boundary;
 - paraphrase examples and analyses rather than copying source prose;
@@ -40,6 +40,8 @@ before any public release.
 | `cgel-number-quantification` | `<CGEL_ROOT>/out/043_3 Number and countability 333.pdf`; `<CGEL_ROOT>/out/045_5 Quantification 358.pdf`; `<CGEL_ROOT>/out/051_11 Determinative Phrases 431.pdf` | Numeratives, determinatives, countability, category/function pressure |
 | `reynolds-numeratives` | `<LITERATURE_ROOT>/Reynolds2026_lexicon_syntax_numerals.md` | Numerative category correction and constructional diagnostics |
 | `cgel-nonfinite-verbless` | `<CGEL_ROOT>/out/023_1 Inflectional categories of the verb 74.pdf`; `<CGEL_ROOT>/out/140_10 Verbless clauses.pdf`; `<CGEL_ROOT>/out/23_14 Non-finite and verbless clauses.pdf` | Fragment and clause-boundary licensing |
+| `gibson-syntax-cognitive` | `<LITERATURE_ROOT>/gibson-2025-syntax-a-cognitive-approach.md` | Acceptability/grammaticality separation, dependency locality, garden paths, noisy-channel overacceptance, construction-specific islands, legalese center embedding |
+| `brett-duration-have-minimal-pair` | Brett session example, 2026-06-09 | Contextual anchoring, frame-conditioned licensing, semantic recoverability without ad hoc rescue |
 
 Path roots for local use:
 

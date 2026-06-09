@@ -54,6 +54,12 @@ Module abbreviations:
 | `transparent-free-relatives` | . | P | . | . | . | . | . | . |
 | `rare-uncontroversial-form` | . | S | . | . | . | . | . | . |
 | `grammatical-but-hard` | . | P | . | . | . | . | S | . |
+| `dependency-locality-alternations-gibson` | . | . | . | . | . | . | . | . |
+| `garden-path-temporary-ambiguity-gibson` | . | . | . | . | . | . | . | . |
+| `noisy-channel-overacceptance-gibson` | . | . | . | . | . | . | . | . |
+| `island-construction-variation-gibson` | . | . | . | . | . | . | . | . |
+| `legalese-center-embedding-gibson` | . | . | . | . | . | . | . | . |
+| `frame-conditioned-duration-have` | . | . | . | . | . | . | . | . |
 
 ## Current Module Boundaries
 
@@ -114,7 +120,14 @@ attribution. It is not a general operator-gap or social-indexical module.
 
 ## Untested Cards
 
-No phenomenon cards are completely untested in protocol-test evaluations.
+The Gibson-backed cards are newly added and not yet tested in protocol-test evaluations:
+
+- `dependency-locality-alternations-gibson`
+- `garden-path-temporary-ambiguity-gibson`
+- `noisy-channel-overacceptance-gibson`
+- `island-construction-variation-gibson`
+- `legalese-center-embedding-gibson`
+- `frame-conditioned-duration-have`
 
 ## Next Evaluation Moves
 
@@ -122,6 +135,10 @@ No phenomenon cards are completely untested in protocol-test evaluations.
    transparent-relative opportunity thresholds.
 2. Use held-out contrast cells to test whether `OPG`, `CAT`, and `SEL` remain complementary or
    require a fused-construction split.
+3. Run the Gibson-backed cards against `PROC`, `OPG`, `DYN`, `TASK`, and `UPT` before adding new
+   graph families.
+4. Run `frame-conditioned-duration-have` against `OPG` and `UPT` as a compact test of contextual
+   anchoring without ad hoc licensing.
 
 ## Working Decision
 
