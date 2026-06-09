@@ -1,0 +1,2 @@
+prediction_id,cell_id,item_ids,activated_paths,target_graph_prediction,pass_condition,fail_condition,status,notes
+bad_prediction,low-stakes-reference,missing-item,feature-reference-acceptability-attribution,Fixture prediction with an unresolved item id.,Fixture pass condition.,Fixture fail condition.,planned,Invalid prediction-register fixture.

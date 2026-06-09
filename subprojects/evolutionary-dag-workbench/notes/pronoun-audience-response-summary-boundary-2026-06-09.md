@@ -14,11 +14,18 @@ This pass adds a descriptive summarizer for future collected rows.
 `scripts/summarize_audience_reference_responses.py`
 
 The script validates the response CSV first, then reports usable coded rows by registered prediction
-cell and response channel. It summarizes 1-7 numeric fields and categorical labels but does not
-assign pass/fail outcomes.
+cell, prediction item set, and response channel. The `item_ids` column in `prediction-register.csv`
+is now load-bearing because several predictions share a broader `cell_id`. It summarizes 1-7
+numeric fields and categorical labels but does not assign pass/fail outcomes.
 
 The fixture runner now checks that the summarizer runs on the empty template and refuses an invalid
 response file before producing a summary.
+
+The optional `--include-non-evidence` flag allows simulation-only rows marked
+`counts_as_prediction_evidence=no` to be summarized for pipeline QA without counting as evidence.
+
+The summarizer also validates that every prediction declares `item_ids`, and that each item exists
+in the stimulus register under the prediction's declared `cell_id`.
 
 Rows are treated as usable only when they contain a raw or coded response, are not explicitly marked
 `counts_as_prediction_evidence=no`, and have no non-blank exclusion reason.

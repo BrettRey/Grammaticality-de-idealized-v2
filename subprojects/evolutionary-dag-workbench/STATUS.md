@@ -12,7 +12,7 @@ representations about grammaticality. The existing OVMG, detector, operator-stra
 processing-based, and normativity-based models are treated as seed graph families, not as
 conclusions or targets to vindicate.
 
-Fifty-nine adversarial passes/synthesis steps have been run. All numeric scores remain zero. Seven
+Sixty adversarial passes/synthesis steps have been run. All numeric scores remain zero. Seven
 current modules have `scoped_module` labels tied to protocol-bound or held-out `scope-only`
 evaluations. The original scope-only evaluations now include card-level requirements and activated
 paths. The held-out CGEL evaluations also include card-level requirements and activated paths
@@ -323,9 +323,18 @@ change, graph mutation, or score movement follows.
 The fifty-ninth pass is recorded in
 `notes/pronoun-audience-response-summary-boundary-2026-06-09.md`. It adds
 `scripts/summarize_audience_reference_responses.py`, a descriptive summarizer that validates a
-future response CSV, groups usable rows by registered prediction cell and response channel, and
-reports numeric/categorical summaries without deciding prediction outcomes. No evidence-status
-change, graph mutation, or score movement follows.
+future response CSV, groups usable rows by registered prediction item set and response channel, and
+reports numeric/categorical summaries without deciding prediction outcomes. The summarizer also
+validates that prediction-register `item_ids` resolve to stimulus-register rows under the declared
+cell. No evidence-status change, graph mutation, or score movement follows.
+The sixtieth pass is recorded in
+`notes/pronoun-audience-simulation-dry-run-2026-06-09.md`. It adds
+`scripts/simulate_audience_reference_responses.py` plus a simulation-only response CSV and summary
+under `data/audience-reference-projection/simulations/`. The dry run exposed that `cell_id` alone is
+too coarse for response summaries, so `prediction-register.csv` now includes load-bearing
+`item_ids`, and the summarizer groups by those item sets. All simulation rows are marked
+`counts_as_prediction_evidence=no`; no evidence-status change, graph mutation, or score movement
+follows.
 An internal state-of-search report now summarizes the current scoped-module partition, evaluation
 ladder, the completed transparent-relative Lane A pass, and remaining empirical lanes without
 authorizing score movement.
@@ -441,6 +450,9 @@ construct separation, or held-out projectibility, not by fitting a prior paper.
   `scripts/validate_audience_reference_responses.py`
 - audience/reference response summarizer in
   `scripts/summarize_audience_reference_responses.py`
+- audience/reference simulation-only dry run in
+  `scripts/simulate_audience_reference_responses.py` and
+  `data/audience-reference-projection/simulations/`
 - audience/reference response-validator fixtures in `tests/fixtures/audience-responses/`
 - scoped-module load-bearing compression audit in
   `notes/scoped-module-load-bearing-audit-2026-06-09.md`
@@ -618,7 +630,8 @@ audience/reference response validation.
    `data/audience-reference-projection/pilot-response-template.csv` if data collection is
    available, then validate the response CSV with
    `scripts/validate_audience_reference_responses.py --require-responses` and summarize it with
-   `scripts/summarize_audience_reference_responses.py` before evaluation.
+   `scripts/summarize_audience_reference_responses.py` before evaluation; do not treat the
+   simulation-only rows as evidence.
 3. Mutate `TEMP` with a temporal-orientation frame if continuing the temporal lane; keep it distinct
    from modal temporal inference and from English future-tense analysis.
 4. Add one more catenative card only if it distinguishes catenative subtype from cohort-conditioned

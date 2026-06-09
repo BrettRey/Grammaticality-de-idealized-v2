@@ -12,10 +12,12 @@ not contain participant data.
 
 - `stimulus-register.csv`: draft item frames and manipulations.
 - `response-channel-schema.csv`: response channels mapped to workbench constructs.
-- `prediction-register.csv`: pre-run predictions, pass/fail thresholds, and active paths.
+- `prediction-register.csv`: pre-run predictions, item memberships, pass/fail thresholds, and
+  active paths.
 - `coding-schema.csv`: row-level coding fields for future responses.
 - `pilot-packet.md`: participant/critic-facing pilot packet generated from the register.
 - `pilot-response-template.csv`: row-level response template generated from the register.
+- `simulations/`: simulation-only response dry runs; not evidence.
 
 ## Current Status
 
@@ -71,3 +73,12 @@ python3 scripts/summarize_audience_reference_responses.py \
 ```
 
 The summary is descriptive. It does not decide prediction-test outcomes or update evidence labels.
+
+For simulation-only rows marked `counts_as_prediction_evidence=no`, add `--include-non-evidence`
+to check the pipeline without treating the rows as evidence.
+
+Generate the current simulation dry run with:
+
+```bash
+python3 scripts/simulate_audience_reference_responses.py
+```

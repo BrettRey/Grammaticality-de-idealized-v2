@@ -317,6 +317,44 @@ TESTS = [
         expected_output="reference_confidence='8' is not an integer from 1 to 7",
     ),
     FixtureTest(
+        name="audience response summary rejects unresolved prediction item",
+        command=[
+            "scripts/summarize_audience_reference_responses.py",
+            "--predictions",
+            rel("tests/fixtures/audience-responses/invalid/bad-prediction-register.csv"),
+        ],
+        expected_returncode=1,
+        expected_output="item_id 'missing-item' is not in stimulus register",
+    ),
+    FixtureTest(
+        name="audience simulation response rows validate",
+        command=[
+            "scripts/validate_audience_reference_responses.py",
+            rel("data/audience-reference-projection/simulations/structured-critic-simulation-2026-06-09.csv"),
+            "--require-responses",
+        ],
+        expected_returncode=0,
+    ),
+    FixtureTest(
+        name="audience summary excludes non-evidence simulation by default",
+        command=[
+            "scripts/summarize_audience_reference_responses.py",
+            rel("data/audience-reference-projection/simulations/structured-critic-simulation-2026-06-09.csv"),
+        ],
+        expected_returncode=0,
+        expected_output="**Summarized response rows:** 0",
+    ),
+    FixtureTest(
+        name="audience summary can include non-evidence simulation",
+        command=[
+            "scripts/summarize_audience_reference_responses.py",
+            rel("data/audience-reference-projection/simulations/structured-critic-simulation-2026-06-09.csv"),
+            "--include-non-evidence",
+        ],
+        expected_returncode=0,
+        expected_output="**Summarized response rows:** 66",
+    ),
+    FixtureTest(
         name="evaluation valid minimal fixture",
         command=[
             "scripts/validate_evaluation.py",
