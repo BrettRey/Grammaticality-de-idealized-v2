@@ -6,7 +6,7 @@
   "edge_semantics_level": "profiled",
   "notes": "Fourth-round candidate generated after critique of the dynamic stratified feedback candidate. It tests whether time-lagged feedback can remain explicit while conditioning community licensing, ideology, production, and judgment by community, norm centre, genre, medium, task frame, and speaker cue. It is not scored pending critique.",
   "conditioning_axes": {
-    "community": "Required. Interpret community_licensing, production_probability, usage_frequency, entrenchment, and reported_acceptability relative to a specified speech community or comparison set.",
+    "community": "Required. Interpret community_licensing, production_probability, usage_frequency, and reported_acceptability relative to a specified speech community or comparison set.",
     "norm_centre": "Required when standard_language_ideology, metalinguistic_condemnation, or editorial_correction_probability are used. Do not treat the standard norm centre as the whole community.",
     "genre": "Required for register-sensitive cases. Specify the activity type before interpreting register_genre_appropriateness or production_probability.",
     "medium": "Required when speech, edited prose, messaging, classroom response, or test response may diverge.",
@@ -17,7 +17,6 @@
     "production_probability_t",
     "opportunity_mass_t1",
     "usage_frequency_t1",
-    "entrenchment_t1",
     "community_licensing_t1",
     "standard_language_ideology_t1",
     "metalinguistic_condemnation_t1",
@@ -56,21 +55,9 @@
     },
     {
       "source": "usage_frequency_t1",
-      "target": "entrenchment_t1",
-      "type": "causal",
-      "rationale": "Repeated exposure at t1 can increase learned accessibility within the specified community and context."
-    },
-    {
-      "source": "usage_frequency_t1",
       "target": "community_licensing_t1",
       "type": "evidential",
       "rationale": "Usage at t1 is evidence for licensing only inside the specified opportunity and community frame."
-    },
-    {
-      "source": "entrenchment_t1",
-      "target": "reported_acceptability_t1",
-      "type": "causal",
-      "rationale": "Entrenchment can shift familiarity and reported acceptability in the specified task context."
     },
     {
       "source": "community_licensing_t1",
@@ -171,12 +158,6 @@
       "type": "time_lagged",
       "relation_profile": "positive_monotone",
       "rationale": "Licensing at t1 can increase later production in the same specified community and context."
-    },
-    {
-      "source": "entrenchment_t1",
-      "target": "production_probability_t2",
-      "type": "time_lagged",
-      "rationale": "Entrenchment at t1 can increase later production probability in matching contexts."
     },
     {
       "source": "editorial_correction_probability_t1",

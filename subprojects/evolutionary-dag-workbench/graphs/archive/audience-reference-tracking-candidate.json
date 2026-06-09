@@ -24,7 +24,6 @@
     "social_indexical_value_t1",
     "standard_language_ideology_t1",
     "metalinguistic_condemnation_t1",
-    "judgment_task_setting_t1",
     "task_framing_t1",
     "reported_acceptability_t1",
     "grammaticality_attribution_t1",
@@ -116,13 +115,6 @@
       "type": "causal",
       "relation_profile": "mixed_contextual",
       "rationale": "Social-indexical value can shift reported acceptability without directly changing community licensing."
-    },
-    {
-      "source": "judgment_task_setting_t1",
-      "target": "task_framing_t1",
-      "type": "causal",
-      "relation_profile": "mixed_contextual",
-      "rationale": "The judgment setting cues whether the task asks for reference resolution, correctness, respect, policy compliance, or naturalness."
     },
     {
       "source": "task_framing_t1",

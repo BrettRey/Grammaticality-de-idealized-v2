@@ -12,7 +12,7 @@ representations about grammaticality. The existing OVMG, detector, operator-stra
 processing-based, and normativity-based models are treated as seed graph families, not as
 conclusions or targets to vindicate.
 
-Forty-nine adversarial passes/synthesis steps have been run. All numeric scores remain zero. Seven
+Fifty-one adversarial passes/synthesis steps have been run. All numeric scores remain zero. Seven
 current modules have `scoped_module` labels tied to protocol-bound or held-out `scope-only`
 evaluations. The original scope-only evaluations now include card-level requirements and activated
 paths. The held-out CGEL evaluations also include card-level requirements and activated paths
@@ -264,6 +264,18 @@ the COCA and held-out agreement evaluations. `production_probability` and
 `retrieval_attractor_salience` are load-bearing for the COCA/projection layer, while
 `agreement_override_pattern` is load-bearing for held-out agreement scope. No compression, graph
 mutation, or score movement follows.
+The fiftieth pass is recorded in `notes/scoped-module-load-bearing-audit-2026-06-09.md`, supported
+by `scripts/audit_authorizing_load_bearing.py` and
+`data/module-compression/authorizing-load-bearing.csv`. The audit checks whether each scoped
+module's distinctive nodes are used by its authorizing evaluation. It protects `FDL`/`UOB` and
+`OPG`/`DYN` from immediate merger, while flagging `ART.judgment_task_setting` and `DYN.entrenchment`
+as provisional nodes absent from their authorizing evaluations. The audit alone did not justify a
+module merger or score movement.
+The fifty-first pass is recorded in `notes/provisional-node-trim-2026-06-09.md`. It trims
+`judgment_task_setting_t1` from `audience-reference-tracking-candidate` and `entrenchment_t1` from
+`context-indexed-dynamic-feedback-candidate` because neither node was used by the module's
+authorizing evaluation or scoped label. The regenerated load-bearing audit now has no
+`not_authorized` distinctive nodes. No score movement follows.
 An internal state-of-search report now summarizes the current scoped-module partition, evaluation
 ladder, the completed transparent-relative Lane A pass, and remaining empirical lanes without
 authorizing score movement.
@@ -368,6 +380,11 @@ construct separation, or held-out projectibility, not by fitting a prior paper.
   `notes/agr-coca-vertical-slice-report-2026-06-09.md` and
   `notes/agr-coca-ablation-test-2026-06-09.md`
 - `AGR` ablation runner in `scripts/run_agr_ablation.py`
+- scoped-module load-bearing compression audit in
+  `notes/scoped-module-load-bearing-audit-2026-06-09.md`
+- provisional-node trim note in `notes/provisional-node-trim-2026-06-09.md`
+- compression audit data and runner in `data/module-compression/` and
+  `scripts/audit_authorizing_load_bearing.py`
 - held-out temporal/modal evaluation in `evaluations/protocol-tests/`
 - second held-out temporal-orientation evaluation in `evaluations/protocol-tests/`
 - `DISCOVERY_RULES.md`
@@ -528,21 +545,19 @@ validation.
 
 1. Run one critic-verdict variance check by evaluating the same card/protocol several times and
    logging whether survival labels flip.
-2. Run a second compression pass over scoped modules: try to remove distinctive nodes from
-   `FDL`/`UOB` and `OPG`/`DYN` before adding new graph families.
-3. Run the audience/policy pronoun task or independent-relative-`whose` human judgment task if data
+2. Run the audience/policy pronoun task or independent-relative-`whose` human judgment task if data
    collection is available.
-4. Mutate `TEMP` with a temporal-orientation frame if continuing the temporal lane; keep it distinct
+3. Mutate `TEMP` with a temporal-orientation frame if continuing the temporal lane; keep it distinct
    from modal temporal inference and from English future-tense analysis.
-5. Add one more catenative card only if it distinguishes catenative subtype from cohort-conditioned
+4. Add one more catenative card only if it distinguishes catenative subtype from cohort-conditioned
    production.
-6. Test comparative-illusion cards against combined `CAT` plus noisy-channel interpretations only
+5. Test comparative-illusion cards against combined `CAT` plus noisy-channel interpretations only
    if a future card forces an interaction rather than complementarity.
-7. Test whether `OPG`, `CAT`, and `SEL` stay complementary on richer fused-construction cards before
+6. Test whether `OPG`, `CAT`, and `SEL` stay complementary on richer fused-construction cards before
    adding any fused-head-specific graph.
-8. Calibrate scoped-module score magnitudes after at least one held-out or parameterized evaluation
+7. Calibrate scoped-module score magnitudes after at least one held-out or parameterized evaluation
    pass.
-9. Expand `phenomena/cards/` toward 40-100 cards only after the current representation classes stop
+8. Expand `phenomena/cards/` toward 40-100 cards only after the current representation classes stop
    shifting every pass.
-10. Only after the construct inventory stabilizes, consider whether `pgmpy`, NOTEARS-style methods,
+9. Only after the construct inventory stabilizes, consider whether `pgmpy`, NOTEARS-style methods,
    or empirical causal discovery are useful.

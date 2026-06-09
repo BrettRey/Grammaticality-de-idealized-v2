@@ -123,3 +123,9 @@ Run the AGR ablation/compression check with:
 ```bash
 python3 scripts/run_agr_ablation.py --output data/agr-coca-projection/ablation-summary.csv
 ```
+
+Run the scoped-module distinctive-node load-bearing audit with:
+
+```bash
+python3 scripts/audit_authorizing_load_bearing.py --output data/module-compression/authorizing-load-bearing.csv
+```
