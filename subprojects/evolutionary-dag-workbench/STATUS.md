@@ -12,7 +12,7 @@ representations about grammaticality. The existing OVMG, detector, operator-stra
 processing-based, and normativity-based models are treated as seed graph families, not as
 conclusions or targets to vindicate.
 
-Fifty-five adversarial passes/synthesis steps have been run. All numeric scores remain zero. Seven
+Fifty-six adversarial passes/synthesis steps have been run. All numeric scores remain zero. Seven
 current modules have `scoped_module` labels tied to protocol-bound or held-out `scope-only`
 evaluations. The original scope-only evaluations now include card-level requirements and activated
 paths. The held-out CGEL evaluations also include card-level requirements and activated paths
@@ -303,6 +303,12 @@ pronoun/audience-policy task design into a data-ready scaffold in
 `data/audience-reference-projection/`: stimulus register, response-channel schema, prediction
 register, and coding schema. This makes the mixed `audience-policy-framing-prediction` runnable
 without changing its evidence status. No graph mutation or score movement follows.
+The fifty-sixth pass operationalizes that scaffold with
+`scripts/build_audience_reference_pilot_packet.py`, `pilot-packet.md`, and
+`pilot-response-template.csv`. The packet is participant/critic-facing and omits hidden predictions
+and expected-reference metadata; the response template expands 11 stimuli across 6 response
+channels into 66 coding rows. A CSV quoting bug in the response-channel schema was also fixed. No
+evidence-status change, graph mutation, or score movement follows.
 An internal state-of-search report now summarizes the current scoped-module partition, evaluation
 ladder, the completed transparent-relative Lane A pass, and remaining empirical lanes without
 authorizing score movement.
@@ -413,6 +419,7 @@ construct separation, or held-out projectibility, not by fitting a prior paper.
   `notes/agr-coca-partitive-filtered-subset-2026-06-09.md`
 - audience/reference projection scaffold in `data/audience-reference-projection/` and
   `notes/pronoun-audience-projection-scaffold-2026-06-09.md`
+- audience/reference pilot-packet builder in `scripts/build_audience_reference_pilot_packet.py`
 - scoped-module load-bearing compression audit in
   `notes/scoped-module-load-bearing-audit-2026-06-09.md`
 - provisional-node trim note in `notes/provisional-node-trim-2026-06-09.md`
@@ -584,8 +591,10 @@ validation.
 1. Retry the `lots of people are` all-page KWIC fetch after the COCA session/rate state clears only
    if the broad partitive/QN test needs to move beyond `mixed`; the smaller fully filtered subset is
    already recorded as a separate `passed` test.
-2. Run a small pilot or structured critic pass over
-   `data/audience-reference-projection/stimulus-register.csv` if data collection is available.
+2. Run a small pilot or structured critic pass using
+   `data/audience-reference-projection/pilot-packet.md` and
+   `data/audience-reference-projection/pilot-response-template.csv` if data collection is
+   available.
 3. Mutate `TEMP` with a temporal-orientation frame if continuing the temporal lane; keep it distinct
    from modal temporal inference and from English future-tense analysis.
 4. Add one more catenative card only if it distinguishes catenative subtype from cohort-conditioned

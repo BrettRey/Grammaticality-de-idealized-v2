@@ -14,6 +14,8 @@ not contain participant data.
 - `response-channel-schema.csv`: response channels mapped to workbench constructs.
 - `prediction-register.csv`: pre-run predictions, pass/fail thresholds, and active paths.
 - `coding-schema.csv`: row-level coding fields for future responses.
+- `pilot-packet.md`: participant/critic-facing pilot packet generated from the register.
+- `pilot-response-template.csv`: row-level response template generated from the register.
 
 ## Current Status
 
@@ -38,3 +40,15 @@ A useful first run needs at least:
   attribution, social sanction, and norm orientation.
 
 Do not collapse these channels into a single acceptability score.
+
+## Build the Pilot Packet
+
+Regenerate the pilot packet and response template with:
+
+```bash
+python3 scripts/build_audience_reference_pilot_packet.py \
+  --run-id audience-reference-pilot-template
+```
+
+The packet is intentionally participant-facing: it omits hidden predictions and expected-reference
+metadata. Use `prediction-register.csv` separately when evaluating the collected rows.

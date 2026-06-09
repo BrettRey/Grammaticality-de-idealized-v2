@@ -23,6 +23,8 @@ stable.
 - `response-channel-schema.csv`
 - `prediction-register.csv`
 - `coding-schema.csv`
+- `pilot-packet.md`
+- `pilot-response-template.csv`
 
 The register turns the existing task design into concrete draft items across five cells:
 
@@ -31,6 +33,9 @@ The register turns the existing task design into concrete draft items across fiv
 - reference-failure control;
 - personhood reclassification;
 - chain-coherence pressure.
+
+`scripts/build_audience_reference_pilot_packet.py` regenerates the participant-facing packet and a
+66-row response template from the stimulus and response-channel registers.
 
 ## Decision
 
