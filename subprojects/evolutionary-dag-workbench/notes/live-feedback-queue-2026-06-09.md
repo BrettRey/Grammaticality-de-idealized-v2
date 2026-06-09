@@ -27,3 +27,12 @@ the first data-bearing chance to test whether a scoped module projects beyond ca
 
 `ontology/edge-types.yaml` now defines `causal` as directional explanatory dependence rather than
 as an interventionist DAG relation, matching the README disclaimer.
+
+## Compression Screen Added
+
+`notes/scoped-module-compression-audit-2026-06-09.md` records the first node-overlap compression
+screen, and `scripts/audit_module_overlap.py` makes it reproducible. The screen does not justify
+immediate merger, but it names two pressure pairs:
+
+- `FDL` / `UOB`: best future merger test.
+- `OPG` / `DYN`: best overfitting guard.

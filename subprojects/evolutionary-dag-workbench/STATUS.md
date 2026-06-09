@@ -158,6 +158,11 @@ The live external-feedback queue is recorded in `notes/live-feedback-queue-2026-
 remains first, followed by compression/ablation pressure, critic-verdict variance checks, and modest
 edge semantics. The immediate edge-semantics consistency fix softened `causal` in
 `ontology/edge-types.yaml` from interventionist DAG language to directional explanatory dependence.
+The first compression screen is recorded in
+`notes/scoped-module-compression-audit-2026-06-09.md`, supported by
+`scripts/audit_module_overlap.py`. It finds no merge/kill action justified by node overlap alone,
+but identifies `FDL`/`UOB` as the best future merger test and `OPG`/`DYN` as the best overfitting
+guard.
 An internal state-of-search report now summarizes the current scoped-module partition, evaluation
 ladder, the completed transparent-relative Lane A pass, and remaining empirical lanes without
 authorizing score movement.
@@ -420,8 +425,8 @@ validation.
    collection is available.
 2. Run the `AGR` COCA projection protocol before adding more agreement cards; the next agreement
    pressure should come from a registered corpus projection, not another CGEL accommodation.
-3. After the first data-bearing projection lane, run a compression/ablation pass over scoped modules:
-   try to kill, merge, or simplify modules before adding new graph families.
+3. After the first data-bearing projection lane, run an ablation pass over scoped modules: try to
+   remove distinctive nodes from `FDL`/`UOB` and `OPG`/`DYN` before adding new graph families.
 4. Run one critic-verdict variance check by evaluating the same card/protocol several times and
    logging whether survival labels flip.
 5. Mutate `TEMP` with a temporal-orientation frame if continuing the temporal lane; keep it distinct
