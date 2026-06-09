@@ -11,6 +11,7 @@ This directory is reserved for a confirmatory COCA run testing the `AGR` module.
 - `prediction-register.csv`: pre-run predictions and pass/fail thresholds.
 - `query-plan.csv`: query cells, denominators, and expected patterns.
 - `kwic-coding-schema.csv`: row-level labels for raw KWIC filtering.
+- `summary.csv`: raw and filtered summaries as they accumulate.
 
 Future run artifacts should use:
 
@@ -36,11 +37,19 @@ python3 scripts/run_agr_coca_queries.py --manifest data/agr-coca-projection/quer
 To execute live COCA queries after the wrapper session is authenticated:
 
 ```bash
-python3 scripts/run_agr_coca_queries.py --run
+python3 scripts/run_agr_coca_queries.py --cell bunch-animate-confirmatory --run --type list
 ```
 
-The runner checks wrapper authentication before live execution and stops rather than producing
-partial data from an expired session.
+The runner defaults to a delay between searches to respect English-Corpora.org's rate limit. Use
+`--preflight-status` only when the wrapper's status probe is known to match the current site state;
+otherwise `ecorg query` will use configured private credentials and fail if authentication is not
+available.
+
+Current completed tranche:
+
+- `bunch-animate-confirmatory`, `list` query type, raw unfiltered counts only.
+
+KWIC filtering remains required before treating counter-direction cells as genuine target evidence.
 
 Do not treat raw COCA frequency as licensing. The lane measures production/attestation over
 opportunity sets and uses KWIC filtering to distinguish genuine agreement realizations from query

@@ -15,6 +15,7 @@ import re
 import shlex
 import subprocess
 import sys
+import time
 from pathlib import Path
 
 
@@ -131,6 +132,8 @@ def main() -> int:
     parser.add_argument("--kwic", type=int, choices=[100, 200, 500, 1000], default=100)
     parser.add_argument("--cell", action="append", help="Restrict to one cell_id; repeatable.")
     parser.add_argument("--manifest", type=Path, help="Write expanded command manifest CSV.")
+    parser.add_argument("--delay", type=float, default=4.0, help="Seconds to wait between live queries.")
+    parser.add_argument("--preflight-status", action="store_true", help="Require wrapper status to report authenticated before running.")
     parser.add_argument("--run", action="store_true", help="Execute queries. Default only prints.")
     args = parser.parse_args()
 
@@ -176,22 +179,26 @@ def main() -> int:
             print(row["command"])
         return 0
 
-    session = status(args.wrapper, args.corpus)
-    if not session.get("authenticated"):
-        print(
-            "English-Corpora.org session is not authenticated. "
-            "Run the shared wrapper login or refresh the browser session first.",
-            file=sys.stderr,
-        )
-        return 2
+    if args.preflight_status:
+        session = status(args.wrapper, args.corpus)
+        if not session.get("authenticated"):
+            print(
+                "English-Corpora.org status does not report an authenticated browser session. "
+                "Run the shared wrapper login or omit --preflight-status to let ecorg query use "
+                "configured private credentials.",
+                file=sys.stderr,
+            )
+            return 2
 
-    for row, cmd in zip(manifest_rows, commands, strict=True):
+    for index, (row, cmd) in enumerate(zip(manifest_rows, commands, strict=True), start=1):
         output = ROOT / row["output"]
         output.parent.mkdir(parents=True, exist_ok=True)
         print(f"running: {row['cell_id']} :: {row['query']}", file=sys.stderr)
         result = subprocess.run(cmd, check=False)
         if result.returncode != 0:
             return result.returncode
+        if index < len(commands) and args.delay > 0:
+            time.sleep(args.delay)
     return 0
 
 

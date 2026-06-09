@@ -163,6 +163,11 @@ The first compression screen is recorded in
 `scripts/audit_module_overlap.py`. It finds no merge/kill action justified by node overlap alone,
 but identifies `FDL`/`UOB` as the best future merger test and `OPG`/`DYN` as the best overfitting
 guard.
+The first live COCA tranche is recorded in
+`notes/agr-coca-bunch-animate-raw-list-pass-2026-06-09.md`: `bunch-animate-confirmatory` ran as
+raw list-count queries and returned 72 plural-agreement hits versus 6 singular-agreement hits across
+`a bunch of people/kids` with `are/were/is/was`. This is raw unfiltered production evidence only;
+KWIC filtering and denominator work are still required before any evaluation or score movement.
 An internal state-of-search report now summarizes the current scoped-module partition, evaluation
 ladder, the completed transparent-relative Lane A pass, and remaining empirical lanes without
 authorizing score movement.

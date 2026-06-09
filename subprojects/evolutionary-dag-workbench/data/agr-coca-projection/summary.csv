@@ -1,0 +1,11 @@
+run_id,cell_id,query,query_type,agreement_value,raw_count,filtered_count,filtering_status,source_file,evidence_status,notes
+2026-06-09-bunch-animate-list,bunch-animate-confirmatory,a bunch of people is,list,singular_present,3,,raw_list_unfiltered,raw/bunch-animate-confirmatory/01-a-bunch-of-people-is.json,raw_observed,Raw COCA list count; not KWIC-filtered.
+2026-06-09-bunch-animate-list,bunch-animate-confirmatory,a bunch of people are,list,plural_present,27,,raw_list_unfiltered,raw/bunch-animate-confirmatory/02-a-bunch-of-people-are.json,raw_observed,Raw COCA list count; not KWIC-filtered.
+2026-06-09-bunch-animate-list,bunch-animate-confirmatory,a bunch of people was,list,singular_past,0,,raw_list_unfiltered,raw/bunch-animate-confirmatory/03-a-bunch-of-people-was.json,raw_zero,Raw no-match result; not KWIC-filtered.
+2026-06-09-bunch-animate-list,bunch-animate-confirmatory,a bunch of people were,list,plural_past,28,,raw_list_unfiltered,raw/bunch-animate-confirmatory/04-a-bunch-of-people-were.json,raw_observed,Raw COCA list count; not KWIC-filtered.
+2026-06-09-bunch-animate-list,bunch-animate-confirmatory,a bunch of kids is,list,singular_present,3,,raw_list_unfiltered,raw/bunch-animate-confirmatory/05-a-bunch-of-kids-is.json,raw_observed,Raw COCA list count; not KWIC-filtered.
+2026-06-09-bunch-animate-list,bunch-animate-confirmatory,a bunch of kids are,list,plural_present,5,,raw_list_unfiltered,raw/bunch-animate-confirmatory/06-a-bunch-of-kids-are.json,raw_observed,Raw COCA list count; not KWIC-filtered.
+2026-06-09-bunch-animate-list,bunch-animate-confirmatory,a bunch of kids was,list,singular_past,0,,raw_list_unfiltered,raw/bunch-animate-confirmatory/07-a-bunch-of-kids-was.json,raw_zero,Raw no-match result; not KWIC-filtered.
+2026-06-09-bunch-animate-list,bunch-animate-confirmatory,a bunch of kids were,list,plural_past,12,,raw_list_unfiltered,raw/bunch-animate-confirmatory/08-a-bunch-of-kids-were.json,raw_observed,Raw COCA list count; not KWIC-filtered.
+2026-06-09-bunch-animate-list,bunch-animate-confirmatory,aggregate plural,list,plural,72,,raw_list_unfiltered,,raw_observed,Plural agreement raw total: are+were over people/kids.
+2026-06-09-bunch-animate-list,bunch-animate-confirmatory,aggregate singular,list,singular,6,,raw_list_unfiltered,,raw_observed,Singular agreement raw total: is+was over people/kids.
