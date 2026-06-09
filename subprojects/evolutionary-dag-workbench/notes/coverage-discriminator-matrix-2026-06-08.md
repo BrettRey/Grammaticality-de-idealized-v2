@@ -25,6 +25,7 @@ Module abbreviations:
 - `PROC`: `processing-naturalness-perturbation-candidate`
 - `UPT`: `uptake-operator-boundary-candidate`
 - `FRAME`: `frame-specific-dependency-licensing-candidate`
+- `RNR`: `repair-neighbour-reconstruction-candidate`
 
 ## Matrix
 
@@ -71,6 +72,13 @@ Module abbreviations:
 - `island-construction-variation-gibson`: `S`; it represents construction-specific dependency
   licensing without converting island effects into a global extraction ban.
 
+## Twenty-First-Pass Addendum
+
+`RNR` has been evaluated after the table above was created. It survives
+`noisy-channel-overacceptance-gibson` as a one-card reconstruction module, but it is unscored and
+has no `scoped_module` label. The key contrast is repair-neighbour distance, not general
+recoverability.
+
 ## Current Module Boundaries
 
 `DYN` is the best module for context-indexed licensing, ideology, correction, production, reported
@@ -110,6 +118,10 @@ attribution. It is not a general operator-gap or social-indexical module.
 construction-specific dependency licensing. It is not a general operator-gap, opportunity/preemption,
 or processing account.
 
+`RNR` is the repair-neighbour reconstruction candidate. It handles noisy-channel overacceptance
+where a nearby intended repair inflates first-pass reported acceptability. It is not yet a scoped
+module.
+
 ## Discriminators Already Doing Work
 
 - `left-branch-extraction`: separates `DYN` from `OPG`.
@@ -137,6 +149,8 @@ or processing account.
   ungrammaticality.
 - `noisy-channel-overacceptance-gibson`: pressures `PROC` toward an intended-form-distance
   construct because recoverability alone is too coarse.
+- `noisy-channel-overacceptance-gibson`: now justifies `RNR` as an unscored one-card candidate, but
+  not as a scoped module.
 - `island-construction-variation-gibson`: separates `OPG`'s opportunity/preemption machinery from
   `UPT`'s construction-specific update-role machinery.
 - `legalese-center-embedding-gibson`: separates `DYN`/`TASK` genre and production persistence from
@@ -155,8 +169,8 @@ No phenomenon cards are completely untested in protocol-test evaluations.
 
 Newly exposed untested pairings remain:
 
-- `noisy-channel-overacceptance-gibson` against `CAT`, for comparative-illusion/category-analysis
-  cases.
+- comparative-illusion and missing-material noisy-channel cards against `RNR` and `CAT`, to test
+  whether repair-neighbour distance and category-analysis divergence stay separable.
 - richer island and dependency cards against `FRAME`, to test whether the new module stays scoped
   or overfits the first Gibson island card.
 
@@ -166,8 +180,7 @@ Newly exposed untested pairings remain:
    transparent-relative opportunity thresholds.
 2. Use held-out contrast cells to test whether `OPG`, `CAT`, and `SEL` remain complementary or
    require a fused-construction split.
-3. Test whether noisy-channel overacceptance needs an `intended_form_distance` or
-   `repair_neighbour_distance` construct.
+3. Build separate noisy-channel cards before promoting `RNR` beyond one-card candidate status.
 4. Add richer island and dependency cards against `FRAME` before any numeric movement or broader
    dependency claim.
 
@@ -188,3 +201,6 @@ The nineteenth pass resolves one of those pressure points by adding
 legalese/processing interaction as live pressure points.
 The twentieth pass resolves legalese/processing interaction without a new graph: `PROC` covers the
 processing side, while `DYN` and `TASK` cover genre persistence and production/judgment separation.
+The twenty-first pass resolves the intended-form-distance pressure by adding
+`repair-neighbour-reconstruction-candidate`, while keeping it unscored until it survives more than
+one noisy-channel contrast family.

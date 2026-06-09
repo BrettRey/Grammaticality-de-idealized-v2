@@ -1,0 +1,184 @@
+{
+  "id": "repair-neighbour-reconstruction-2026-06-09",
+  "target_graph": "graphs/archive/repair-neighbour-reconstruction-candidate.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "protocol-bound",
+  "score_decision": "no-score-change",
+  "activated_paths": [
+    {
+      "id": "repair-distance-to-acceptability",
+      "phenomenon": "noisy-channel-overacceptance-gibson",
+      "contrast_cell": "nearby-intended-repair",
+      "expected_path_reading": "negative",
+      "prediction": "Higher repair-neighbour distance should reduce intended-form recovery, felt naturalness, and reported acceptability; low distance explains overacceptance.",
+      "edges": [
+        {
+          "source": "repair_neighbour_distance",
+          "target": "semantic_pragmatic_recoverability",
+          "type": "causal"
+        },
+        {
+          "source": "semantic_pragmatic_recoverability",
+          "target": "felt_naturalness_context",
+          "type": "causal"
+        },
+        {
+          "source": "felt_naturalness_context",
+          "target": "reported_acceptability",
+          "type": "measurement"
+        }
+      ]
+    },
+    {
+      "id": "distance-direct-naturalness",
+      "phenomenon": "noisy-channel-overacceptance-gibson",
+      "contrast_cell": "distant-no-repair",
+      "expected_path_reading": "negative",
+      "prediction": "A malformed string without a plausible nearby repair should lose the direct naturalness boost that produces overacceptance.",
+      "edges": [
+        {
+          "source": "repair_neighbour_distance",
+          "target": "felt_naturalness_context",
+          "type": "causal"
+        },
+        {
+          "source": "felt_naturalness_context",
+          "target": "reported_acceptability",
+          "type": "measurement"
+        }
+      ]
+    },
+    {
+      "id": "literal-task-to-attribution",
+      "phenomenon": "noisy-channel-overacceptance-gibson",
+      "contrast_cell": "literal-analysis",
+      "expected_path_reading": "indeterminate",
+      "prediction": "A literal-analysis or proofreading frame should shift grammar attribution away from first-pass reconstructed acceptability.",
+      "edges": [
+        {
+          "source": "task_framing",
+          "target": "grammaticality_attribution",
+          "type": "causal"
+        }
+      ]
+    },
+    {
+      "id": "repair-pressure-to-attribution",
+      "phenomenon": "noisy-channel-overacceptance-gibson",
+      "contrast_cell": "literal-analysis",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Targeted repair pressure can provide attribution evidence about the literal string, but this path remains task-sensitive.",
+      "edges": [
+        {
+          "source": "repair_reformulation_pressure",
+          "target": "grammaticality_attribution",
+          "type": "evidential"
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "phenomenon": "noisy-channel-overacceptance-gibson",
+      "result": "survives_as_module",
+      "expected_survival_pattern": "The graph should distinguish low repair-neighbour distance from general recoverability, and it should preserve the difference between inflated acceptability and literal-string licensing.",
+      "notes": "Survives as a one-card reconstruction module. It should remain unscored until tested against more noisy-channel, comparative-illusion, and edit-distance contrast cells.",
+      "requirements": {
+        "required_nodes": [
+          "repair_neighbour_distance",
+          "semantic_pragmatic_recoverability",
+          "felt_naturalness_context",
+          "reported_acceptability",
+          "repair_reformulation_pressure",
+          "community_licensing",
+          "grammaticality_attribution",
+          "task_framing"
+        ],
+        "required_edges": [
+          {
+            "source": "repair_neighbour_distance",
+            "target": "semantic_pragmatic_recoverability",
+            "type": "causal"
+          },
+          {
+            "source": "repair_neighbour_distance",
+            "target": "felt_naturalness_context",
+            "type": "causal"
+          },
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "felt_naturalness_context",
+            "type": "causal"
+          },
+          {
+            "source": "felt_naturalness_context",
+            "target": "reported_acceptability",
+            "type": "measurement"
+          },
+          {
+            "source": "task_framing",
+            "target": "grammaticality_attribution",
+            "type": "causal"
+          },
+          {
+            "source": "reported_acceptability",
+            "target": "grammaticality_attribution",
+            "type": "evidential"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "reported_acceptability",
+            "target": "community_licensing",
+            "type": "causal"
+          },
+          {
+            "source": "repair_neighbour_distance",
+            "target": "community_licensing",
+            "type": "causal"
+          },
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "nearby-intended-repair",
+          "axes": {
+            "community": "English speakers reading a malformed string with a highly plausible intended neighbour.",
+            "norm_centre": "Descriptive grammar norm centre.",
+            "genre": "Judgment or comprehension item.",
+            "medium": "Written sentence.",
+            "task_framing": "First-pass acceptability or comprehension judgment.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "distant-no-repair",
+          "axes": {
+            "community": "English speakers reading an equally malformed string without a plausible nearby intended repair.",
+            "norm_centre": "Descriptive grammar norm centre.",
+            "genre": "Judgment or comprehension item.",
+            "medium": "Written sentence.",
+            "task_framing": "First-pass acceptability or comprehension judgment.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "literal-analysis",
+          "axes": {
+            "community": "English speakers asked to analyze the literal presented string.",
+            "norm_centre": "Descriptive grammar or proofreading norm centre.",
+            "genre": "Grammar discussion, proofreading, or slow judgment.",
+            "medium": "Written sentence.",
+            "task_framing": "Literal grammaticality or error-detection framing.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    }
+  ]
+}

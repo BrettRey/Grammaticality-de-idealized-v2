@@ -1,0 +1,114 @@
+{
+  "id": "repair-neighbour-reconstruction-candidate",
+  "title": "Repair-neighbour reconstruction candidate",
+  "family": "repair-neighbour-reconstruction",
+  "status": "candidate",
+  "edge_semantics_level": "profiled",
+  "notes": "Twenty-first-round mutation generated after noisy-channel overacceptance exposed a gap in the processing/naturalness module. It tests whether distance to a plausible intended repair neighbour must be represented separately from semantic-pragmatic recoverability. It is an unscored candidate, not a scoped module yet.",
+  "nodes": [
+    "repair_neighbour_distance",
+    "semantic_pragmatic_recoverability",
+    "processing_cost",
+    "felt_naturalness_context",
+    "measurement_task",
+    "task_framing",
+    "reported_acceptability",
+    "repair_reformulation_pressure",
+    "community_licensing",
+    "grammaticality_attribution"
+  ],
+  "edges": [
+    {
+      "source": "repair_neighbour_distance",
+      "target": "semantic_pragmatic_recoverability",
+      "type": "causal",
+      "relation_profile": "negative_monotone",
+      "rationale": "Greater distance from a plausible intended repair neighbour tends to lower recovery of the intended form or move."
+    },
+    {
+      "source": "repair_neighbour_distance",
+      "target": "felt_naturalness_context",
+      "type": "causal",
+      "relation_profile": "negative_monotone",
+      "rationale": "Greater distance from a nearby intended form tends to lower felt naturalness in first-pass or noisy-channel judgments."
+    },
+    {
+      "source": "repair_neighbour_distance",
+      "target": "repair_reformulation_pressure",
+      "type": "causal",
+      "relation_profile": "negative_monotone",
+      "rationale": "Greater distance makes a specific repair neighbour less available, lowering targeted reformulation pressure even when rejection remains possible."
+    },
+    {
+      "source": "semantic_pragmatic_recoverability",
+      "target": "felt_naturalness_context",
+      "type": "causal",
+      "relation_profile": "positive_monotone",
+      "rationale": "Recovering an intended form or move can increase felt naturalness even when the presented string is formally defective."
+    },
+    {
+      "source": "processing_cost",
+      "target": "felt_naturalness_context",
+      "type": "causal",
+      "relation_profile": "negative_monotone",
+      "rationale": "Processing burden can lower felt naturalness independently of repair-neighbour availability."
+    },
+    {
+      "source": "felt_naturalness_context",
+      "target": "reported_acceptability",
+      "type": "measurement",
+      "relation_profile": "noisy_positive_indicator",
+      "rationale": "Felt naturalness can appear as reported acceptability in fast or comprehension-oriented tasks."
+    },
+    {
+      "source": "measurement_task",
+      "target": "reported_acceptability",
+      "type": "causal",
+      "relation_profile": "mixed_contextual",
+      "rationale": "Task format affects whether respondents report reconstructed meaning, literal form status, or ordinary acceptability."
+    },
+    {
+      "source": "task_framing",
+      "target": "grammaticality_attribution",
+      "type": "causal",
+      "relation_profile": "mixed_contextual",
+      "rationale": "A proofreading, literal-analysis, or fast-comprehension frame changes whether overacceptance becomes a grammar attribution."
+    },
+    {
+      "source": "community_licensing",
+      "target": "grammaticality_attribution",
+      "type": "evidential",
+      "relation_profile": "contextual_warrant",
+      "rationale": "Community licensing remains evidence for attribution, but noisy-channel reconstruction is not licensing."
+    },
+    {
+      "source": "reported_acceptability",
+      "target": "grammaticality_attribution",
+      "type": "evidential",
+      "relation_profile": "contextual_warrant",
+      "rationale": "Reported acceptability provides contextual evidence for attribution but can be inflated by repair-neighbour reconstruction."
+    },
+    {
+      "source": "repair_reformulation_pressure",
+      "target": "grammaticality_attribution",
+      "type": "evidential",
+      "relation_profile": "contextual_warrant",
+      "rationale": "Targeted repair pressure can provide evidence about the literal presented string without equaling grammaticality attribution."
+    }
+  ],
+  "scores": {
+    "empirical_coverage": 0,
+    "projective_power": 0,
+    "counterexample_resilience": 0,
+    "measurement_clarity": 0,
+    "explanatory_payoff": 0,
+    "cross_domain_stability": 0,
+    "complexity_penalty": 0,
+    "circularity_penalty": 0,
+    "construct_confusion_penalty": 0,
+    "theory_preservation_penalty": 0
+  },
+  "score_status": {
+    "kind": "unscored"
+  }
+}

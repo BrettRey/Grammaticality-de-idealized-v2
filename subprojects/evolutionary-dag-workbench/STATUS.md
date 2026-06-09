@@ -12,7 +12,7 @@ representations about grammaticality. The existing OVMG, detector, operator-stra
 processing-based, and normativity-based models are treated as seed graph families, not as
 conclusions or targets to vindicate.
 
-Twenty adversarial passes/synthesis steps have been run. All numeric scores remain zero. Six
+Twenty-one adversarial passes/synthesis steps have been run. All numeric scores remain zero. Six
 current modules have `scoped_module` labels tied to protocol-bound evaluations. The original
 scope-only evaluations now include card-level requirements and activated paths. Both held-out CGEL
 evaluations also include card-level requirements and activated paths without authorizing score
@@ -51,6 +51,9 @@ The twentieth pass ran legalese against `PROC`. It partly survives: `PROC` captu
 naturalness, comprehension, and preference pressure, while `DYN` and `TASK` remain needed for
 official genre fit, professional production, and institutional persistence. No genre-processing
 hybrid graph is justified yet.
+The twenty-first pass added `repair-neighbour-reconstruction-candidate` after noisy-channel
+overacceptance exposed that general recoverability is too broad. The candidate survives that card as
+a one-card module but remains unscored and has no `scoped_module` label.
 
 ## Current Candidate Stack
 
@@ -67,6 +70,7 @@ hybrid graph is justified yet.
 - `processing-naturalness-perturbation-candidate`
 - `uptake-operator-boundary-candidate`
 - `frame-specific-dependency-licensing-candidate`
+- `repair-neighbour-reconstruction-candidate`
 
 The current strongest modules are scoped, not general winners:
 
@@ -97,6 +101,9 @@ The current strongest modules are scoped, not general winners:
   construction-specific dependency licensing. It is a scoped module for frame-conditioned duration
   answers and construction-specific island variation, not a general dependency or operator-gap
   account.
+- `repair-neighbour-reconstruction-candidate` for noisy-channel overacceptance cases where distance
+  to a plausible intended repair neighbour drives inflated acceptability. It is an unscored
+  one-card candidate, not a scoped module yet.
 
 `context-indexed-dynamic-feedback-candidate`, `context-aware-operator-gap-candidate`, and
 `audience-reference-tracking-candidate`, `processing-naturalness-perturbation-candidate`, and
@@ -148,6 +155,8 @@ construct separation, or held-out projectibility, not by fitting a prior paper.
   `notes/nineteenth-adversarial-pass-synthesis-2026-06-09.md`
 - legalese/processing synthesis in
   `notes/twentieth-adversarial-pass-synthesis-2026-06-09.md`
+- repair-neighbour reconstruction synthesis in
+  `notes/twenty-first-adversarial-pass-synthesis-2026-06-09.md`
 - coverage/discriminator matrix in `notes/coverage-discriminator-matrix-2026-06-08.md`
 - protocol-bound evaluation schema and exploratory evaluations in `evaluations/`
 - held-out CGEL/local-correction evaluations in `evaluations/protocol-tests/`
@@ -230,8 +239,9 @@ validation.
 
 1. Add data pointers for the remaining unresolved prediction-test cells: pronoun policy/audience
    design and rare transparent-relative opportunity thresholds.
-2. Decide whether noisy-channel overacceptance needs an `intended_form_distance` or
-   `repair_neighbour_distance` construct.
+2. Build separate noisy-channel cards for comparative illusions, missing-verb materials, duplicated
+   or missing function words, and error-distance manipulations before promoting
+   `repair-neighbour-reconstruction-candidate`.
 3. Test whether `OPG`, `CAT`, and `SEL` stay complementary on richer fused-construction cards before
    adding any fused-head-specific graph.
 4. Calibrate scoped-module score magnitudes after at least one held-out or parameterized evaluation
