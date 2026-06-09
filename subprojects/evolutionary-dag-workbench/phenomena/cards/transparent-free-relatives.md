@@ -28,6 +28,7 @@ The case tests whether a graph can handle low opportunity, gradient reported acc
   uncertainty rather than categorical rejection.
 - `Independent_relative_whose/items/all_items.csv` supplies a ready judgment-material pattern:
   critical items vary licensing context against dependent-`whose` baselines and fillers.
+- Measurement design: [transparent-relative opportunity measurement](../../notes/transparent-relative-opportunity-measurement-design-2026-06-09.md)
 
 ## Candidate Nodes
 

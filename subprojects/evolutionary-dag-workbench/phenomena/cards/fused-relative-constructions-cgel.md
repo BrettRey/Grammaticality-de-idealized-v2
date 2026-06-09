@@ -66,6 +66,7 @@ threshold that would make rare transparent cases categorically resolved.
 - A future `passed` prediction should require an explicit opportunity denominator, a verified
   attestation count or absence check, and a named competitor set. Until then, the card should remain
   `mixed` or `partly_survives` rather than promoting numeric score movement.
+- Measurement design: [transparent-relative opportunity measurement](../../notes/transparent-relative-opportunity-measurement-design-2026-06-09.md)
 
 ## Candidate Nodes
 
