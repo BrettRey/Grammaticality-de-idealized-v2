@@ -62,6 +62,9 @@ card still needs task-specific audience evidence before it can count as fully pa
   institution, policy framing, speaker/referent identity, and judgment prompt while separately
   measuring reference success, reported acceptability, grammaticality attribution, and social
   sanction.
+- Task design:
+  [pronoun audience-policy task design](../../notes/pronoun-audience-policy-task-design-2026-06-09.md)
+  specifies the contrast cells and response channels needed to move the remaining mixed cell.
 - Treat policy or respect judgments as data for `audience_design`, `social_indexical_value`,
   `standard_language_ideology`, and `grammaticality_attribution`; do not treat them as direct
   evidence that `reference_tracking_success` or `community_licensing` changed.

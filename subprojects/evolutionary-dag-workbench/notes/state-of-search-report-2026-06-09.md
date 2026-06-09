@@ -16,7 +16,7 @@ protocol-bound or held-out `scope-only` evaluations. The strongest current resul
 labor, not a winner.
 
 The next useful work is not more graph invention by default. It is to put the existing modules under
-additional data pressure, especially through pronoun/pro-form audience-reference task design and the
+additional data pressure, especially through a pronoun/pro-form audience-reference task run and the
 remaining independent-relative-`whose` opportunity lane.
 
 ## Current Search Shape
@@ -135,11 +135,12 @@ flowchart LR
   Ref -. "forbidden shortcut" .-> Licensing["community licensing"]
 ```
 
-The point is not to ask whether a pronoun form is "really grammatical" in the abstract. The test
-should vary audience, policy frame, speaker/referent identity, and reference success so the graph has
-to predict which channel changes. If reference succeeds but acceptability shifts with audience or
-institutional frame, that supports the audience/reference split. If reference failure drives the
-same judgments regardless of audience, `AUD` is too social-indexical for the case.
+The point is not to ask whether a pronoun form is "really grammatical" in the abstract. The task
+design in `notes/pronoun-audience-policy-task-design-2026-06-09.md` varies audience, policy frame,
+speaker/referent identity, and reference success so the graph has to predict which channel changes.
+If reference succeeds but acceptability shifts with audience or institutional frame, that supports
+the audience/reference split. If reference failure drives the same judgments regardless of audience,
+`AUD` is too social-indexical for the case.
 
 ## What Not To Write Yet
 
@@ -157,8 +158,7 @@ rules, scoped modules, and two empirical lanes where it can start earning projec
 
 ## Next Moves
 
-1. Build the pronoun/pro-form audience-reference task design with explicit contrast cells and
-   predicted channels.
+1. Run the pronoun/pro-form audience-reference task if data collection is available.
 2. Run the independent-relative-`whose` lane if transparent-relative uncertainty remains live.
 3. Add evaluation-level prediction paths only where a card actually activates an edge path.
 4. Keep numeric scores at zero until a held-out, source-backed evaluation proposes score movement

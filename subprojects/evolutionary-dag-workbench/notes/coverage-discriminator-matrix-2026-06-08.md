@@ -290,6 +290,18 @@ transparent-free-relative sources:
 No graph mutation or numeric score movement follows. The independent-relative-`whose` lane remains
 unrun.
 
+## Thirty-Sixth-Pass Addendum
+
+The remaining pronoun/audience mixed cell has been converted into a task design:
+
+- `pronoun-personhood-proform-gender`: `AUD` remains `S` as a scoped module, but
+  `audience-policy-framing-prediction` remains `mixed` until actual task outcomes exist. The new
+  design specifies how to vary audience, evaluator, institution, norm centre, speaker/referent cue,
+  and judgment prompt while separately measuring reference tracking, acceptability, attribution,
+  and social sanction.
+
+No graph mutation or numeric score movement follows.
+
 ## Discriminators Already Doing Work
 
 - `left-branch-extraction`: separates `DYN` from `OPG`.
@@ -359,6 +371,8 @@ unrun.
   category analysis separate from the agreement-controller path.
 - `fused-relative-constructions-cgel`: now gives a passed Lane A opportunity-denominator test for
   `OPG`, separating raw rarity from checked subtype-conditioned absence.
+- `pronoun-personhood-proform-gender`: now has a runnable audience-policy task design, but the
+  mixed prediction cell is deliberately unchanged until channel-specific data exist.
 
 ## Untested Cards
 
@@ -375,8 +389,8 @@ Newly exposed untested pairings remain:
 
 ## Next Evaluation Moves
 
-1. Build the pronoun policy/audience task design and run the independent-relative-`whose` lane if
-   transparent-relative uncertainty remains live.
+1. Run the pronoun policy/audience task if data collection is available, or run the
+   independent-relative-`whose` lane if transparent-relative uncertainty remains live.
 2. Pause agreement growth unless a genuinely different source domain is available; `AGR` now has a
    scoped label but no numeric score.
 3. Use held-out contrast cells to test whether `OPG`, `CAT`, and `SEL` remain complementary or
@@ -436,3 +450,5 @@ for `agreement-controller-override-candidate`. Numeric scores remain zero.
 The thirty-fifth pass resolves Lane A of the transparent-relative opportunity threshold question:
 `OPG` passes the checked attributional-vs-`seem`/`appear` subtype contrast without score movement,
 while the independent-relative-`whose` lane remains open.
+The thirty-sixth pass resolves the pronoun/audience bookkeeping gap into a runnable task design, but
+keeps the evidence status `mixed` until data exist.

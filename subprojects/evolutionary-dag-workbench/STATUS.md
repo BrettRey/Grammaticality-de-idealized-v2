@@ -12,7 +12,7 @@ representations about grammaticality. The existing OVMG, detector, operator-stra
 processing-based, and normativity-based models are treated as seed graph families, not as
 conclusions or targets to vindicate.
 
-Thirty-five adversarial passes/synthesis steps have been run. All numeric scores remain zero. Seven
+Thirty-six adversarial passes/synthesis steps have been run. All numeric scores remain zero. Seven
 current modules have `scoped_module` labels tied to protocol-bound evaluations. The original
 scope-only evaluations now include card-level requirements and activated paths. Both held-out CGEL
 evaluations also include card-level requirements and activated paths without authorizing score
@@ -112,6 +112,10 @@ attributional `call`-type contexts have sampled positive scoped attestation, whi
 AP-transparent contexts show checked zero genuine cases over a meaningful opportunity denominator.
 `OPG` therefore passes the `transparent-rare-relative-prediction` for this source lane only. Lane B,
 independent relative `whose`, remains unrun, and no graph mutation or score movement follows.
+The thirty-sixth pass converted the remaining pronoun/audience mixed cell into an explicit task
+design. The design specifies contrast cells and separate response channels for reference tracking,
+feature/personhood fit, reported acceptability, grammaticality attribution, social sanction, and
+norm orientation. The relevant prediction tests remain `mixed` until actual task data exist.
 An internal state-of-search report now summarizes the current scoped-module partition, evaluation
 ladder, the completed transparent-relative Lane A pass, and remaining empirical lanes without
 authorizing score movement.
@@ -262,6 +266,10 @@ construct separation, or held-out projectibility, not by fitting a prior paper.
   `notes/thirty-fourth-adversarial-pass-synthesis-2026-06-09.md`
 - transparent-relative opportunity data pass in
   `notes/transparent-relative-opportunity-data-pass-2026-06-09.md`
+- pronoun audience-policy task design in
+  `notes/pronoun-audience-policy-task-design-2026-06-09.md`
+- pronoun audience-policy design synthesis in
+  `notes/thirty-sixth-adversarial-pass-synthesis-2026-06-09.md`
 - state-of-search report with module/evaluation visual maps in
   `notes/state-of-search-report-2026-06-09.md`
 - static state visualization in
@@ -347,8 +355,8 @@ validation.
 
 ## Next Actions
 
-1. Build the parallel audience/policy pronoun task design, or run the independent-relative-`whose`
-   lane for the remaining transparent-relative uncertainty.
+1. Run the audience/policy pronoun task if data collection is available, or run the
+   independent-relative-`whose` lane for the remaining transparent-relative uncertainty.
 2. Pause agreement growth unless a genuinely different source domain is available; `AGR` now has a
    scoped label but no numeric score.
 3. Add one more temporal-anchor card only if it distinguishes recent-past, experiential, and
