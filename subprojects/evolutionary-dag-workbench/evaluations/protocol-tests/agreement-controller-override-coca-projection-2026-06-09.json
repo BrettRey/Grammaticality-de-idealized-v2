@@ -186,8 +186,8 @@
       "prediction": "Partitive/QN people frames should show plural agreement dominance after KWIC filtering, with counter-direction singular raw hits disappearing or being coded as non-target/nonstandard rows.",
       "pass_condition": "The test passes only when the registered positive and counter-direction cells are KWIC-filtered enough to show target plural dominance over licensed target singular agreement.",
       "fail_condition": "The portability claim fails if the singular cells yield licensed target rows at comparable density, or if plural dominance is only a raw-query artifact.",
-      "evidence_status": "mixed",
-      "evidence_note": "Targeted KWIC filtering from `data/agr-coca-projection/summary.csv`: `lots of people is` has 0 licensed target singular rows; filtered positive subset has 63 `plenty of people are` rows and 14 `the rest of the people are` rows. The largest positive cell, `lots of people are` (raw 287), remains unfiltered, so this is supportive but incomplete."
+      "evidence_status": "passed",
+      "evidence_note": "Targeted KWIC/sample evidence from `data/agr-coca-projection/summary.csv`: `lots of people is` has 0 licensed target singular rows; `lots of people are` has a pre-declared 100-row bounded KWIC sample with 100 target plural rows; the additional filtered positive subset has 63 `plenty of people are` rows and 14 `the rest of the people are` rows. The `lots` positive cell is sample-coded rather than fully filtered, so this remains evidence-trail movement only, not score movement."
     },
     {
       "id": "minority-coca-uninformative",
@@ -289,9 +289,9 @@
                   "axes": {
                     "community": "COCA-attested English production in registered `lots/plenty/rest` people-frame contexts.",
                     "norm_centre": "Descriptive corpus-attestation frame, not prescriptive judgment.",
-                    "genre": "Mixed COCA registers for the targeted KWIC subset, with the high-count `lots of people are` cell still raw-unfiltered.",
+                    "genre": "Mixed COCA registers for the targeted KWIC subset plus a pre-declared 100-row bounded sample from the high-count `lots of people are` cell.",
                     "medium": "Written corpus transcripts/texts from COCA list and KWIC rows.",
-                    "task_framing": "Corpus production measurement with partial KWIC filtering and explicit raw-cell caution.",
+                    "task_framing": "Corpus production measurement with full KWIC filtering for smaller cells and bounded-sample caution for the high-count positive cell.",
                     "speaker_identity": "Corpus speaker/writer identity as available only through COCA source metadata."
                   }
                 },

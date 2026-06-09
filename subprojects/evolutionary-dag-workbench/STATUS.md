@@ -12,7 +12,7 @@ representations about grammaticality. The existing OVMG, detector, operator-stra
 processing-based, and normativity-based models are treated as seed graph families, not as
 conclusions or targets to vindicate.
 
-Forty-three adversarial passes/synthesis steps have been run. All numeric scores remain zero. Seven
+Forty-four adversarial passes/synthesis steps have been run. All numeric scores remain zero. Seven
 current modules have `scoped_module` labels tied to protocol-bound or held-out `scope-only`
 evaluations. The original scope-only evaluations now include card-level requirements and activated
 paths. The held-out CGEL evaluations also include card-level requirements and activated paths
@@ -30,7 +30,7 @@ selection-adjacent dimensions only.
 The held-out CGEL evaluations now include machine-readable `prediction_tests` with pass/fail
 conditions; score-change evaluations now require prediction tests.
 Eight held-out CGEL cards have source-checked contrast examples, and the prediction-test inventory
-now records checked evidence statuses: ten `passed` and two `mixed`.
+now records checked evidence statuses: eleven `passed` and one `mixed`.
 No graph has a `general_account` score. The current scoring schema includes `projective_power` and
 `theory_preservation_penalty` so held-out prediction and anti-alignment discipline are visible.
 The Gibson source pass added five processing/dependency cards without changing graph machinery:
@@ -217,12 +217,17 @@ The targeted KWIC follow-up is recorded in
 `notes/agr-coca-partitive-agreement-targeted-kwic-pass-2026-06-09.md`. The five
 `lots of people is` rows yield 0 licensed target singular rows after filtering; the filtered
 positive subset yields 63 target `plenty of people are` rows and 14 target
-`the rest of the people are` rows. The high-count `lots of people are` cell remains raw-unfiltered,
-so the tranche is partially filtered rather than complete.
+`the rest of the people are` rows.
+The forty-fourth pass is recorded in
+`notes/agr-coca-lots-people-are-sample-kwic-pass-2026-06-09.md`. A pre-declared 100-row bounded
+KWIC sample from the high-count `lots of people are` cell yielded 100 target plural-agreement rows.
+The partitive/QN people-frame prediction therefore moves from `mixed` to `passed`: the sample/
+filtered evidence is 177 plural target rows versus 0 licensed target singular rows. This is evidence
+movement only, not numeric score movement, because the largest cell is sample-coded rather than
+fully filtered.
 `evaluations/protocol-tests/agreement-controller-override-coca-projection-2026-06-09.json` now
-records the partitive/QN people-frame result as a `mixed` prediction test: supportive targeted KWIC
-evidence, but incomplete until the high-count `lots of people are` cell is sampled or fully
-filtered.
+records the partitive/QN people-frame result as a `passed` prediction test under the pre-declared
+bounded-sample rule.
 An internal state-of-search report now summarizes the current scoped-module partition, evaluation
 ladder, the completed transparent-relative Lane A pass, and remaining empirical lanes without
 authorizing score movement.

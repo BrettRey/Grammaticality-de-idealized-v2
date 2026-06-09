@@ -21,6 +21,8 @@ Options:
   --query TEXT          Query text
   --output PATH         Output JSON path
   --hits N              List result rows, default 100
+  --allow-partial       Save a bounded KWIC sample when the frame exposes fewer than ENTRIES
+  --min-rows N          Minimum rows required with --allow-partial, default 1
   --headed              Show browser
 `);
   process.exit(exitCode);
@@ -31,8 +33,8 @@ function parseArgs(argv) {
   for (let i = 0; i < argv.length; i += 1) {
     const arg = argv[i];
     if (arg === "--help") usage(0);
-    if (arg === "--headed") {
-      out.headed = true;
+    if (arg === "--headed" || arg === "--allow-partial") {
+      out[arg.slice(2)] = true;
       continue;
     }
     if (!arg.startsWith("--")) throw new Error(`Unexpected argument: ${arg}`);
@@ -212,7 +214,7 @@ function expectedEntries(text) {
   return match ? Number.parseInt(match[1], 10) : null;
 }
 
-async function waitForKwicData(frame, timeoutMs = 45000) {
+async function waitForKwicData(frame, timeoutMs = 45000, { allowPartial = false, minRows = 1 } = {}) {
   const started = Date.now();
   let last = null;
   while (Date.now() - started < timeoutMs) {
@@ -228,6 +230,9 @@ async function waitForKwicData(frame, timeoutMs = 45000) {
     await frame.page().waitForTimeout(1000);
   }
   if (!last) throw new Error("Timed out waiting for KWIC data.");
+  if (allowPartial && last.rows.length >= minRows) {
+    return { ...last, partial: true };
+  }
   const expected = last.expected == null ? "unknown" : String(last.expected);
   throw new Error(`Timed out waiting for complete KWIC rows: got ${last.rows.length}, expected ${expected}.`);
 }
@@ -247,7 +252,7 @@ function assertUsable(text) {
   }
 }
 
-async function fetchKwic({ corpus, query, output, hits, headed }) {
+async function fetchKwic({ corpus, query, output, hits, headed, allowPartial, minRows }) {
   await loadEnvFiles();
   const context = await chromium.launchPersistentContext(profileDir(), {
     headless: !headed,
@@ -292,7 +297,7 @@ async function fetchKwic({ corpus, query, output, hits, headed }) {
     await resultLink.click({ timeout: 10000 });
 
     const x3 = await waitForResultFrame(page, "x3");
-    const kwic = await waitForKwicData(x3);
+    const kwic = await waitForKwicData(x3, 45000, { allowPartial, minRows });
     assertUsable(kwic.text);
 
     const result = {
@@ -309,7 +314,9 @@ async function fetchKwic({ corpus, query, output, hits, headed }) {
         url: kwic.url,
         text: kwic.text,
         tables: kwic.tables,
-        rows: kwic.rows
+        rows: kwic.rows,
+        partial: Boolean(kwic.partial),
+        expected: kwic.expected
       }
     };
 
@@ -328,7 +335,17 @@ async function main() {
   if (!args.output) throw new Error("--output is required");
   const hits = Number.parseInt(args.hits || "100", 10);
   if (!Number.isFinite(hits) || hits < 1) throw new Error(`Invalid --hits: ${args.hits}`);
-  await fetchKwic({ corpus, query, output: args.output, hits, headed: Boolean(args.headed) });
+  const minRows = Number.parseInt(args["min-rows"] || "1", 10);
+  if (!Number.isFinite(minRows) || minRows < 1) throw new Error(`Invalid --min-rows: ${args["min-rows"]}`);
+  await fetchKwic({
+    corpus,
+    query,
+    output: args.output,
+    hits,
+    headed: Boolean(args.headed),
+    allowPartial: Boolean(args["allow-partial"]),
+    minRows
+  });
 }
 
 main().catch((error) => {

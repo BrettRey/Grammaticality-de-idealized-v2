@@ -17,6 +17,8 @@ This directory is reserved for a confirmatory COCA run testing the `AGR` module.
 - `coded/majority-minority-kwic-coding.csv`: row-level coding for the majority/minority tranche.
 - `coded/known-qn-kwic-coding.csv`: row-level coding for the known number-transparent QN
   calibration tranche.
+- `coded/lots-people-are-sample-kwic-coding.csv`: row-level coding for the pre-declared
+  `lots of people are` bounded KWIC sample.
 
 Future run artifacts should use:
 
@@ -57,7 +59,8 @@ Current completed tranche:
 - `majority-minority-confirmatory`, list-result counts plus KWIC filtering via result-row clicks.
 - `known-qn-calibration`, list-result counts plus KWIC filtering via result-row clicks.
 - `partitive-calibration`, raw phrase-count denominator probe only.
-- `partitive-agreement-followup`, raw finite-agreement list counts only.
+- `partitive-agreement-followup`, raw finite-agreement list counts plus targeted KWIC filtering and
+  a bounded positive-cell sample.
 
 The filtered target counts for the animate tranche are 71 plural agreement rows and 1 singular
 agreement row across `a bunch of people/kids` with `are/were/is/was`. Five of six raw singular
@@ -86,9 +89,10 @@ does not code agreement because the registered strings do not include finite ver
 The partitive agreement follow-up adds present-tense finite agreement strings for the usable people
 frames. Raw counts are plural-dominant (`lots/plenty/rest of people are` totals 367) with only one
 non-zero singular counter-cell (`lots of people is`, 5). Targeted KWIC filtering has been completed
-for `lots of people is`, `plenty of people are`, and `the rest of the people are`: the filtered
-subset has 77 target plural rows and 0 licensed target singular rows. The high-count
-`lots of people are` cell remains raw-unfiltered.
+for `lots of people is`, `plenty of people are`, and `the rest of the people are`; a pre-declared
+100-row bounded sample has been coded for the high-count `lots of people are` cell. The sample/
+filtered evidence gives 177 plural target rows and 0 licensed target singular rows. The `lots of
+people are` result is sample-coded only, not a full filtered count for all raw hits.
 
 Do not treat raw COCA frequency as licensing. The lane measures production/attestation over
 opportunity sets and uses KWIC filtering to distinguish genuine agreement realizations from query
