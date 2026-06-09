@@ -1,0 +1,107 @@
+{
+  "id": "information-normalized-repair-candidate",
+  "title": "Information-normalized repair candidate",
+  "family": "information-normalized-repair",
+  "status": "candidate",
+  "edge_semantics_level": "profiled",
+  "notes": "Twenty-third-round mutation generated after edit-distance acceptability showed that raw repair-neighbour distance is too coarse. It tests whether repair distance must be normalized by target sentence length or information mass before predicting acceptability. It is an unscored successor candidate, not a scoped module.",
+  "nodes": [
+    "repair_neighbour_distance",
+    "target_information_mass",
+    "information_normalized_repair_distance",
+    "semantic_pragmatic_recoverability",
+    "felt_naturalness_context",
+    "measurement_task",
+    "task_framing",
+    "reported_acceptability",
+    "community_licensing",
+    "grammaticality_attribution"
+  ],
+  "edges": [
+    {
+      "source": "repair_neighbour_distance",
+      "target": "information_normalized_repair_distance",
+      "type": "mediating",
+      "relation_profile": "positive_monotone",
+      "rationale": "Higher raw distance raises normalized repair distance when target information mass is held fixed."
+    },
+    {
+      "source": "target_information_mass",
+      "target": "information_normalized_repair_distance",
+      "type": "mediating",
+      "relation_profile": "negative_monotone",
+      "rationale": "Higher target information mass lowers the normalized cost of the same raw repair distance."
+    },
+    {
+      "source": "information_normalized_repair_distance",
+      "target": "semantic_pragmatic_recoverability",
+      "type": "causal",
+      "relation_profile": "negative_monotone",
+      "rationale": "Higher normalized repair distance makes the intended sentence or message harder to recover."
+    },
+    {
+      "source": "information_normalized_repair_distance",
+      "target": "felt_naturalness_context",
+      "type": "causal",
+      "relation_profile": "negative_monotone",
+      "rationale": "Higher normalized repair distance tends to lower felt naturalness in noisy-channel acceptability tasks."
+    },
+    {
+      "source": "semantic_pragmatic_recoverability",
+      "target": "felt_naturalness_context",
+      "type": "causal",
+      "relation_profile": "positive_monotone",
+      "rationale": "Recovering the intended form or message can increase felt naturalness."
+    },
+    {
+      "source": "felt_naturalness_context",
+      "target": "reported_acceptability",
+      "type": "measurement",
+      "relation_profile": "noisy_positive_indicator",
+      "rationale": "Felt naturalness can surface as reported acceptability in rating tasks."
+    },
+    {
+      "source": "measurement_task",
+      "target": "reported_acceptability",
+      "type": "causal",
+      "relation_profile": "mixed_contextual",
+      "rationale": "Task format affects whether respondents rate literal form status, reconstructed meaning, or ordinary acceptability."
+    },
+    {
+      "source": "task_framing",
+      "target": "grammaticality_attribution",
+      "type": "causal",
+      "relation_profile": "mixed_contextual",
+      "rationale": "Literal-analysis, proofreading, and first-pass acceptability frames change grammar attribution."
+    },
+    {
+      "source": "community_licensing",
+      "target": "grammaticality_attribution",
+      "type": "evidential",
+      "relation_profile": "contextual_warrant",
+      "rationale": "Community licensing remains attribution evidence, but normalized repair distance is not licensing."
+    },
+    {
+      "source": "reported_acceptability",
+      "target": "grammaticality_attribution",
+      "type": "evidential",
+      "relation_profile": "contextual_warrant",
+      "rationale": "Reported acceptability is contextual evidence for attribution and can be inflated by noisy-channel reconstruction."
+    }
+  ],
+  "scores": {
+    "empirical_coverage": 0,
+    "projective_power": 0,
+    "counterexample_resilience": 0,
+    "measurement_clarity": 0,
+    "explanatory_payoff": 0,
+    "cross_domain_stability": 0,
+    "complexity_penalty": 0,
+    "circularity_penalty": 0,
+    "construct_confusion_penalty": 0,
+    "theory_preservation_penalty": 0
+  },
+  "score_status": {
+    "kind": "unscored"
+  }
+}

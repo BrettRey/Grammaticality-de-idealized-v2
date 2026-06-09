@@ -1,0 +1,254 @@
+{
+  "id": "information-normalized-repair-2026-06-09",
+  "target_graph": "graphs/archive/information-normalized-repair-candidate.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "protocol-bound",
+  "score_decision": "no-score-change",
+  "activated_paths": [
+    {
+      "id": "raw-distance-to-acceptability",
+      "phenomenon": "edit-distance-acceptability-gibson",
+      "contrast_cell": "many-edit-scrambled",
+      "expected_path_reading": "negative",
+      "prediction": "Higher raw repair distance should increase normalized repair distance and lower felt naturalness and reported acceptability.",
+      "edges": [
+        {
+          "source": "repair_neighbour_distance",
+          "target": "information_normalized_repair_distance",
+          "type": "mediating"
+        },
+        {
+          "source": "information_normalized_repair_distance",
+          "target": "felt_naturalness_context",
+          "type": "causal"
+        },
+        {
+          "source": "felt_naturalness_context",
+          "target": "reported_acceptability",
+          "type": "measurement"
+        }
+      ]
+    },
+    {
+      "id": "information-mass-cushioning",
+      "phenomenon": "edit-distance-acceptability-gibson",
+      "contrast_cell": "one-edit-long",
+      "expected_path_reading": "positive",
+      "prediction": "Higher target information mass should lower normalized repair distance and therefore raise felt naturalness and reported acceptability for the same edit count.",
+      "edges": [
+        {
+          "source": "target_information_mass",
+          "target": "information_normalized_repair_distance",
+          "type": "mediating"
+        },
+        {
+          "source": "information_normalized_repair_distance",
+          "target": "felt_naturalness_context",
+          "type": "causal"
+        },
+        {
+          "source": "felt_naturalness_context",
+          "target": "reported_acceptability",
+          "type": "measurement"
+        }
+      ]
+    },
+    {
+      "id": "normalized-distance-to-recoverability",
+      "phenomenon": "missing-verb-phrase-illusion-gibson",
+      "contrast_cell": "missing-verb-close-repair",
+      "expected_path_reading": "negative",
+      "prediction": "Lower normalized repair distance should raise recoverability, felt naturalness, and reported acceptability for missing-material illusions.",
+      "edges": [
+        {
+          "source": "information_normalized_repair_distance",
+          "target": "semantic_pragmatic_recoverability",
+          "type": "causal"
+        },
+        {
+          "source": "semantic_pragmatic_recoverability",
+          "target": "felt_naturalness_context",
+          "type": "causal"
+        },
+        {
+          "source": "felt_naturalness_context",
+          "target": "reported_acceptability",
+          "type": "measurement"
+        }
+      ]
+    },
+    {
+      "id": "literal-task-to-attribution",
+      "phenomenon": "edit-distance-acceptability-gibson",
+      "contrast_cell": "many-edit-scrambled",
+      "expected_path_reading": "indeterminate",
+      "prediction": "A literal-analysis task should shift grammar attribution away from first-pass acceptability.",
+      "edges": [
+        {
+          "source": "task_framing",
+          "target": "grammaticality_attribution",
+          "type": "causal"
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "phenomenon": "edit-distance-acceptability-gibson",
+      "result": "survives_as_module",
+      "expected_survival_pattern": "The graph should distinguish raw repair distance from repair distance normalized by target length or information mass, predicting that the same edit count can have different acceptability effects at different lengths.",
+      "notes": "Survives as an edit-distance/length module. It directly represents the rational-inference pressure that RNR lacked.",
+      "requirements": {
+        "required_nodes": [
+          "repair_neighbour_distance",
+          "target_information_mass",
+          "information_normalized_repair_distance",
+          "felt_naturalness_context",
+          "reported_acceptability",
+          "measurement_task",
+          "task_framing",
+          "grammaticality_attribution"
+        ],
+        "required_edges": [
+          {
+            "source": "repair_neighbour_distance",
+            "target": "information_normalized_repair_distance",
+            "type": "mediating"
+          },
+          {
+            "source": "target_information_mass",
+            "target": "information_normalized_repair_distance",
+            "type": "mediating"
+          },
+          {
+            "source": "information_normalized_repair_distance",
+            "target": "felt_naturalness_context",
+            "type": "causal"
+          },
+          {
+            "source": "felt_naturalness_context",
+            "target": "reported_acceptability",
+            "type": "measurement"
+          },
+          {
+            "source": "task_framing",
+            "target": "grammaticality_attribution",
+            "type": "causal"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "reported_acceptability",
+            "target": "community_licensing",
+            "type": "causal"
+          },
+          {
+            "source": "information_normalized_repair_distance",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "one-edit-short",
+          "axes": {
+            "community": "Readers rating short one-edit strings against intact controls.",
+            "norm_centre": "Descriptive grammar norm centre.",
+            "genre": "Acceptability experiment.",
+            "medium": "Written sentence.",
+            "task_framing": "Acceptability rating.",
+            "speaker_identity": "Unmarked respondent cue."
+          }
+        },
+        {
+          "id": "one-edit-long",
+          "axes": {
+            "community": "Readers rating longer one-edit strings against intact controls.",
+            "norm_centre": "Descriptive grammar norm centre.",
+            "genre": "Acceptability experiment.",
+            "medium": "Written sentence.",
+            "task_framing": "Acceptability rating.",
+            "speaker_identity": "Unmarked respondent cue."
+          }
+        },
+        {
+          "id": "many-edit-scrambled",
+          "axes": {
+            "community": "Readers rating high-edit-distance scrambled strings.",
+            "norm_centre": "Descriptive grammar norm centre.",
+            "genre": "Acceptability experiment.",
+            "medium": "Written sentence.",
+            "task_framing": "Acceptability rating.",
+            "speaker_identity": "Unmarked respondent cue."
+          }
+        }
+      ]
+    },
+    {
+      "phenomenon": "missing-verb-phrase-illusion-gibson",
+      "result": "survives_as_module",
+      "expected_survival_pattern": "The graph should preserve the close-repair prediction from RNR while allowing target length or information mass to modulate the acceptability effect.",
+      "notes": "Survives. The normalized candidate subsumes RNR's clean missing-verb case without promoting the literal defective string to licensing.",
+      "requirements": {
+        "required_nodes": [
+          "repair_neighbour_distance",
+          "target_information_mass",
+          "information_normalized_repair_distance",
+          "semantic_pragmatic_recoverability",
+          "felt_naturalness_context",
+          "reported_acceptability",
+          "grammaticality_attribution"
+        ],
+        "required_edges": [
+          {
+            "source": "information_normalized_repair_distance",
+            "target": "semantic_pragmatic_recoverability",
+            "type": "causal"
+          },
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "felt_naturalness_context",
+            "type": "causal"
+          },
+          {
+            "source": "felt_naturalness_context",
+            "target": "reported_acceptability",
+            "type": "measurement"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "reported_acceptability",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "missing-verb-close-repair",
+          "axes": {
+            "community": "English speakers reading a missing-verb or missing-verb-phrase illusion item.",
+            "norm_centre": "Descriptive grammar norm centre.",
+            "genre": "Psycholinguistic acceptability item.",
+            "medium": "Written sentence.",
+            "task_framing": "First-pass acceptability or comprehension judgment.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "literal-proofreading",
+          "axes": {
+            "community": "English speakers asked to proofread the same presented string.",
+            "norm_centre": "Descriptive grammar or proofreading norm centre.",
+            "genre": "Grammar discussion or editing task.",
+            "medium": "Written sentence.",
+            "task_framing": "Literal error detection.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    }
+  ]
+}

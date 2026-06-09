@@ -246,6 +246,31 @@ upstream_or_mediating:
       - community licensing
       - reported acceptability
 
+  - id: target_information_mass
+    label: Target information mass
+    definition: Amount of recoverable material, length, or information carried by the plausible intended target sentence or message.
+    proxies:
+      - target sentence length
+      - token count
+      - information content
+      - recoverable proposition count
+    forbidden_conflations:
+      - processing cost
+      - opportunity mass
+      - community licensing
+
+  - id: information_normalized_repair_distance
+    label: Information-normalized repair distance
+    definition: Repair-neighbour distance interpreted relative to the length or information mass of the intended target.
+    proxies:
+      - edit distance divided by target length
+      - errors per recoverable unit
+      - normalized Damerau-Levenshtein distance
+    forbidden_conflations:
+      - raw repair-neighbour distance
+      - processing cost
+      - grammaticality attribution
+
   - id: constructional_analogy
     label: Constructional analogy
     definition: Support from similar constructions, patterns, schemas, or distributional neighborhoods.

@@ -12,7 +12,7 @@ representations about grammaticality. The existing OVMG, detector, operator-stra
 processing-based, and normativity-based models are treated as seed graph families, not as
 conclusions or targets to vindicate.
 
-Twenty-two adversarial passes/synthesis steps have been run. All numeric scores remain zero. Six
+Twenty-three adversarial passes/synthesis steps have been run. All numeric scores remain zero. Six
 current modules have `scoped_module` labels tied to protocol-bound evaluations. The original
 scope-only evaluations now include card-level requirements and activated paths. Both held-out CGEL
 evaluations also include card-level requirements and activated paths without authorizing score
@@ -59,6 +59,10 @@ missing-verb-phrase illusion, depth-charge semantic illusion, comparative illusi
 noisy-channel repair, and edit-distance/length acceptability. `RNR` survives missing-verb repair,
 partly survives depth-charge and comparative illusions, and partly survives edit-distance
 acceptability while exposing a missing length/information-normalization construct.
+The twenty-third pass added `information-normalized-repair-candidate`, separating raw repair
+distance, target information mass, and information-normalized repair distance. It survives the
+edit-distance/length card and preserves the missing-verb repair path, but remains unscored and has
+no `scoped_module` label.
 
 ## Current Candidate Stack
 
@@ -76,6 +80,7 @@ acceptability while exposing a missing length/information-normalization construc
 - `uptake-operator-boundary-candidate`
 - `frame-specific-dependency-licensing-candidate`
 - `repair-neighbour-reconstruction-candidate`
+- `information-normalized-repair-candidate`
 
 The current strongest modules are scoped, not general winners:
 
@@ -109,6 +114,9 @@ The current strongest modules are scoped, not general winners:
 - `repair-neighbour-reconstruction-candidate` for noisy-channel overacceptance cases where distance
   to a plausible intended repair neighbour drives inflated acceptability. It is an unscored
   one-card candidate, not a scoped module yet.
+- `information-normalized-repair-candidate` for noisy-channel acceptability cases where raw repair
+  distance must be normalized by target sentence length or information mass. It is an unscored
+  successor candidate, not a scoped module yet.
 
 `context-indexed-dynamic-feedback-candidate`, `context-aware-operator-gap-candidate`, and
 `audience-reference-tracking-candidate`, `processing-naturalness-perturbation-candidate`, and
@@ -164,6 +172,8 @@ construct separation, or held-out projectibility, not by fitting a prior paper.
   `notes/twenty-first-adversarial-pass-synthesis-2026-06-09.md`
 - noisy-channel subtype synthesis in
   `notes/twenty-second-adversarial-pass-synthesis-2026-06-09.md`
+- information-normalized repair synthesis in
+  `notes/twenty-third-adversarial-pass-synthesis-2026-06-09.md`
 - coverage/discriminator matrix in `notes/coverage-discriminator-matrix-2026-06-08.md`
 - protocol-bound evaluation schema and exploratory evaluations in `evaluations/`
 - held-out CGEL/local-correction evaluations in `evaluations/protocol-tests/`
@@ -246,9 +256,9 @@ validation.
 
 1. Add data pointers for the remaining unresolved prediction-test cells: pronoun policy/audience
    design and rare transparent-relative opportunity thresholds.
-2. Decide whether edit-distance/length effects require an `information_mass` or
-   `length_normalized_repair_distance` construct before promoting
-   `repair-neighbour-reconstruction-candidate`.
+2. Test `information-normalized-repair-candidate` against depth-charge and comparative-illusion
+   cards before deciding whether it or `repair-neighbour-reconstruction-candidate` should receive a
+   scoped label.
 3. Test whether `OPG`, `CAT`, and `SEL` stay complementary on richer fused-construction cards before
    adding any fused-head-specific graph.
 4. Calibrate scoped-module score magnitudes after at least one held-out or parameterized evaluation
