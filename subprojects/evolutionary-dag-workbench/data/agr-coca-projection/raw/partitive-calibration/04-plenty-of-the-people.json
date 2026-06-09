@@ -1,0 +1,79 @@
+{
+  "url": "https://www.english-corpora.org/coca/x2.asp",
+  "title": "jQuery UI Dialog - Default functionality",
+  "text": "ON CLICK: \t    \t     ( EN )\t \t   \t    \t    \t    \t    \t (?)   \t   AI:   CATEGORIZE  *\n\nHELP\t\t\t  ALL FORMS\n1\tFREQ\n1\t\t\t  PLENTY OF THE PEOPLE\t1\n\t0.344 seconds",
+  "tables": [
+    [
+      [
+        "SAVE LIST",
+        "NAME OF LIST",
+        "",
+        ""
+      ],
+      [
+        "Select entries below to add these to a \"customized word list\", and then later use this list as part of a search. For example, if you add 4 or 5 entries\nbelow to the list myList, then you could use this as part of a search, like large @myList. More information:"
+      ]
+    ],
+    [
+      [
+        "ON CLICK: \t    \t     ( EN )\t \t   \t    \t    \t    \t    \t (?)   \t   AI:   CATEGORIZE  *",
+        ""
+      ],
+      [
+        "Click on  below, and then click on any word in the highlighted entry, to see detailed information on the word.\nTo come back to this page, click on  on the \"word page\".\n [Close]"
+      ],
+      [
+        "Click on\nbelow to \"save\" this word or phrase. Then click on\nat the top of the corpus to access this list at any point in the future.\n\n [Close]"
+      ],
+      [
+        "By default, when you click on one of the words/phrases below, you will see the \"Keyword in Context\" view in the tab to the right.\nBut you can also now access \"external\" resources for any of the words/phrases that you see below. To do so, click on one of the types of resources above\n(e.g. images or translation) and then click on the word/phrase below.\nNote: To change the language for translation, click on the two letter code after\nTRANSLATE above. This code will be saved for future access to the corpus as well. If it shows [??], you haven't yet selected a language.\n\n  [Close]"
+      ]
+    ],
+    [
+      [
+        "ON CLICK:",
+        "",
+        "( EN )",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "(?)",
+        "AI:   CATEGORIZE  *"
+      ]
+    ],
+    [
+      [
+        "In addition to the frequency of a word or phrase, you can also now see the number of texts in which it occurs. This can help you to eliminate words and phrases that\noccur in just a few texts. To enable this feature, click on OPTIONS / SHOW # TEXTS in the search form (show me how).\nMore information"
+      ]
+    ],
+    [
+      [
+        "HELP",
+        "",
+        "",
+        "",
+        "ALL FORMS\n1",
+        "FREQ",
+        ""
+      ],
+      [
+        "1",
+        "",
+        "",
+        "",
+        "PLENTY OF THE PEOPLE",
+        "1",
+        ""
+      ]
+    ],
+    [
+      [
+        "",
+        "0.344 seconds"
+      ]
+    ]
+  ]
+}

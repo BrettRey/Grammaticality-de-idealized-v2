@@ -56,6 +56,7 @@ Current completed tranche:
 - `bunch-inanimate-confirmatory`, list-result counts plus KWIC filtering via result-row clicks.
 - `majority-minority-confirmatory`, list-result counts plus KWIC filtering via result-row clicks.
 - `known-qn-calibration`, list-result counts plus KWIC filtering via result-row clicks.
+- `partitive-calibration`, raw phrase-count denominator probe only.
 
 The filtered target counts for the animate tranche are 71 plural agreement rows and 1 singular
 agreement row across `a bunch of people/kids` with `are/were/is/was`. Five of six raw singular
@@ -75,6 +76,11 @@ people` yields 98 filtered plural target rows across `are/were` after excluding 
 rows, while `a lot of money is` yields 42 filtered singular target rows and `a lot of money are`
 yields 0 licensed plural target rows. One `a lot of money are` row was retained as
 denominator-only nonstandard/error evidence, not as licensed plural agreement.
+
+The partitive calibration tranche is raw phrase-count only. It confirms that `lots of people` and
+`plenty of people` are high-frequency bare/non-partitive frames, `lots/plenty of the people` are
+rare as direct strings, and `the rest of the people` greatly outnumbers `the rest of people`. It
+does not code agreement because the registered strings do not include finite verbs.
 
 Do not treat raw COCA frequency as licensing. The lane measures production/attestation over
 opportunity sets and uses KWIC filtering to distinguish genuine agreement realizations from query

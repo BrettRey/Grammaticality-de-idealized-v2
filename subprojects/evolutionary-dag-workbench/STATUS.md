@@ -200,6 +200,12 @@ filtering: `a number of people` yields 98 target plural rows, `a lot of money is
 singular rows, and `a lot of money are` yields 0 licensed target plural rows after filtering. One
 counter-direction row is retained as denominator-only nonstandard/error evidence. This calibrates
 the COCA/KWIC measurement lane but does not add projective credit or move scores.
+The partitive raw-list tranche is recorded in
+`notes/agr-coca-partitive-raw-list-pass-2026-06-09.md`. It confirms the expected denominator
+contrast among direct strings: `lots of people` (3875) and `plenty of people` (1563) are common,
+`lots/plenty of the people` are rare (5/1), and `the rest of the people` (272) greatly outnumbers
+`the rest of people` (12). This is phrase-count denominator design only; it does not code agreement
+or evaluate `AGR` outcome predictions.
 An internal state-of-search report now summarizes the current scoped-module partition, evaluation
 ladder, the completed transparent-relative Lane A pass, and remaining empirical lanes without
 authorizing score movement.
