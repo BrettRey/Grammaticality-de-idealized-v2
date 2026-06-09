@@ -103,3 +103,16 @@ Run positive and negative validator fixture tests:
 ```bash
 python3 scripts/run_fixture_tests.py
 ```
+
+## Worked Vertical Slice
+
+The first data-bearing vertical slice is the AGR COCA projection lane:
+
+- report: `notes/agr-coca-vertical-slice-report-2026-06-09.md`;
+- graph: `graphs/archive/agreement-controller-override-candidate.json`;
+- evaluation: `evaluations/protocol-tests/agreement-controller-override-coca-projection-2026-06-09.json`;
+- data: `data/agr-coca-projection/`.
+
+The current result is scoped: `AGR` beats a simple surface-head-number baseline in checked English
+production cells, especially `majority`, but no numeric score movement or general-account claim
+follows.

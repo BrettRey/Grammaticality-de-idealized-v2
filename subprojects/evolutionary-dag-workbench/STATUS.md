@@ -12,7 +12,7 @@ representations about grammaticality. The existing OVMG, detector, operator-stra
 processing-based, and normativity-based models are treated as seed graph families, not as
 conclusions or targets to vindicate.
 
-Forty-seven adversarial passes/synthesis steps have been run. All numeric scores remain zero. Seven
+Forty-eight adversarial passes/synthesis steps have been run. All numeric scores remain zero. Seven
 current modules have `scoped_module` labels tied to protocol-bound or held-out `scope-only`
 evaluations. The original scope-only evaluations now include card-level requirements and activated
 paths. The held-out CGEL evaluations also include card-level requirements and activated paths
@@ -250,6 +250,13 @@ non-`bunch` discriminator: 105:0 exact target rows with a lower Wilson bound of 
 when augmented by the omission audit. Animate `bunch` remains strong at 71:1 with lower bound 0.925.
 `The rest of the people` is directionally clean at 14:0 but wide, with lower bound 0.785. No score
 movement follows.
+The forty-eighth pass is recorded in `notes/agr-coca-vertical-slice-report-2026-06-09.md`. It
+consolidates the AGR COCA lane into a publication-facing worked example: method, discriminator,
+measurement audit, uncertainty summary, warranted claim, and limits. The report states the current
+publishable pilot claim narrowly: in the checked English production cells, plural agreement is not a
+raw-query artifact and is not predicted by a simple surface-head-number baseline, with the strongest
+pressure from `majority` plus the denominator omission audit. No graph mutation or score movement
+follows.
 An internal state-of-search report now summarizes the current scoped-module partition, evaluation
 ladder, the completed transparent-relative Lane A pass, and remaining empirical lanes without
 authorizing score movement.
