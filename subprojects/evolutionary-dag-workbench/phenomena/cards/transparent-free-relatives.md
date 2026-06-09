@@ -21,6 +21,9 @@ The case tests whether a graph can handle low opportunity, gradient reported acc
 - `Transparent_free_relatives/two-kinds.tex` and `coca-data/` give a concrete opportunity lane:
   category-flexible transparent relatives are productive with attributional verbs, while comparable
   `seem`/`appear` searches yielded no genuine non-NP transparent cases in the checked COCA set.
+- Lane A data pass:
+  [transparent-relative opportunity data pass](../../notes/transparent-relative-opportunity-data-pass-2026-06-09.md)
+  records the checked attributional-vs-`seem`/`appear` contrast as a passed source lane for `OPG`.
 - This can become a threshold test by separating raw hits, verified genuine cases, false positives,
   verb class, external constructional position, and competitor/paraphrase availability.
 - `Independent_relative_whose_A_Bayesian_analysis_of_a_low-frequency_gap/` supplies the

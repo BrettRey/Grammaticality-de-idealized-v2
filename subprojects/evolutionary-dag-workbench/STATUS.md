@@ -12,7 +12,7 @@ representations about grammaticality. The existing OVMG, detector, operator-stra
 processing-based, and normativity-based models are treated as seed graph families, not as
 conclusions or targets to vindicate.
 
-Thirty-four adversarial passes/synthesis steps have been run. All numeric scores remain zero. Seven
+Thirty-five adversarial passes/synthesis steps have been run. All numeric scores remain zero. Seven
 current modules have `scoped_module` labels tied to protocol-bound evaluations. The original
 scope-only evaluations now include card-level requirements and activated paths. Both held-out CGEL
 evaluations also include card-level requirements and activated paths without authorizing score
@@ -28,8 +28,8 @@ support/recoverability split, while `CAT` and `SEL` partly cover category/functi
 selection-adjacent dimensions only.
 The held-out CGEL evaluations now include machine-readable `prediction_tests` with pass/fail
 conditions; score-change evaluations now require prediction tests.
-Eight held-out CGEL cards have source-checked contrast examples, and the held-out prediction tests
-now record checked evidence statuses: six `passed` and two `mixed`.
+Eight held-out CGEL cards have source-checked contrast examples, and the prediction-test inventory
+now records checked evidence statuses: ten `passed` and two `mixed`.
 No graph has a `general_account` score. The current scoring schema includes `projective_power` and
 `theory_preservation_penalty` so held-out prediction and anti-alignment discipline are visible.
 The Gibson source pass added five processing/dependency cards without changing graph machinery:
@@ -106,8 +106,15 @@ The thirty-fourth pass added a source-backed measurement-validity card from Kauf
 ANN-to-brain similarity. `PROC` and `CAT` partly survive because they enforce measurement-channel
 discipline, while `OPG` is out of scope as a general account. No graph mutation or score movement
 follows.
+The thirty-fifth pass ran Lane A of the transparent-relative opportunity-denominator measurement
+design. The local transparent-free-relative sources support a subtype-conditioned result:
+attributional `call`-type contexts have sampled positive scoped attestation, while `seem`/`appear`
+AP-transparent contexts show checked zero genuine cases over a meaningful opportunity denominator.
+`OPG` therefore passes the `transparent-rare-relative-prediction` for this source lane only. Lane B,
+independent relative `whose`, remains unrun, and no graph mutation or score movement follows.
 An internal state-of-search report now summarizes the current scoped-module partition, evaluation
-ladder, and two live empirical lanes without authorizing score movement.
+ladder, the completed transparent-relative Lane A pass, and remaining empirical lanes without
+authorizing score movement.
 
 ## Current Candidate Stack
 
@@ -253,6 +260,8 @@ construct separation, or held-out projectibility, not by fitting a prior paper.
   `notes/thirty-third-adversarial-pass-synthesis-2026-06-09.md`
 - ANN/fMRI measurement-validity synthesis in
   `notes/thirty-fourth-adversarial-pass-synthesis-2026-06-09.md`
+- transparent-relative opportunity data pass in
+  `notes/transparent-relative-opportunity-data-pass-2026-06-09.md`
 - state-of-search report with module/evaluation visual maps in
   `notes/state-of-search-report-2026-06-09.md`
 - static state visualization in
@@ -338,8 +347,8 @@ validation.
 
 ## Next Actions
 
-1. Run the transparent-relative opportunity-denominator data pass, or build the parallel
-   audience/policy pronoun task design.
+1. Build the parallel audience/policy pronoun task design, or run the independent-relative-`whose`
+   lane for the remaining transparent-relative uncertainty.
 2. Pause agreement growth unless a genuinely different source domain is available; `AGR` now has a
    scoped label but no numeric score.
 3. Add one more temporal-anchor card only if it distinguishes recent-past, experiential, and

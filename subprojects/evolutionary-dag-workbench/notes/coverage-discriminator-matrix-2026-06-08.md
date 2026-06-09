@@ -276,6 +276,20 @@ No graph mutation follows. The card's main value is to block inference from ANN-
 predictivity to grammar-facing constructs unless a graph explicitly represents the measurement
 channel and a grammar-relevant contrast cell.
 
+## Thirty-Fifth-Pass Addendum
+
+Lane A of the transparent-relative opportunity-denominator design has been run against local
+transparent-free-relative sources:
+
+- `fused-relative-constructions-cgel`: the `OPG` held-out prediction
+  `transparent-rare-relative-prediction` moves from `mixed` to `passed` for this source lane.
+  Attributional `call`-type contexts have sampled positive scoped attestation, while `seem`/`appear`
+  AP-transparent contexts show checked zero genuine cases over a meaningful opportunity
+  denominator.
+
+No graph mutation or numeric score movement follows. The independent-relative-`whose` lane remains
+unrun.
+
 ## Discriminators Already Doing Work
 
 - `left-branch-extraction`: separates `DYN` from `OPG`.
@@ -343,6 +357,8 @@ channel and a grammar-relevant contrast cell.
   build-card subtype.
 - `fused-determiner-head-agreement-cgel`: second held-out support for `AGR`; it keeps fused-head
   category analysis separate from the agreement-controller path.
+- `fused-relative-constructions-cgel`: now gives a passed Lane A opportunity-denominator test for
+  `OPG`, separating raw rarity from checked subtype-conditioned absence.
 
 ## Untested Cards
 
@@ -359,8 +375,8 @@ Newly exposed untested pairings remain:
 
 ## Next Evaluation Moves
 
-1. Add data pointers for unresolved prediction-test cells: pronoun policy/audience design and rare
-   transparent-relative opportunity thresholds.
+1. Build the pronoun policy/audience task design and run the independent-relative-`whose` lane if
+   transparent-relative uncertainty remains live.
 2. Pause agreement growth unless a genuinely different source domain is available; `AGR` now has a
    scoped label but no numeric score.
 3. Use held-out contrast cells to test whether `OPG`, `CAT`, and `SEL` remain complementary or
@@ -417,3 +433,6 @@ until at least one more held-out agreement subtype is tested.
 The thirty-first pass adds a second held-out agreement subtype, fused determiner-head agreement.
 Together with the measure override card, it authorizes a `scope-only` evaluation and a scoped label
 for `agreement-controller-override-candidate`. Numeric scores remain zero.
+The thirty-fifth pass resolves Lane A of the transparent-relative opportunity threshold question:
+`OPG` passes the checked attributional-vs-`seem`/`appear` subtype contrast without score movement,
+while the independent-relative-`whose` lane remains open.

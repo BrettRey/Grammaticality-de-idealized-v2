@@ -112,6 +112,7 @@ This is not yet a universal threshold. It is a per-subtype evidence rule.
 
 ## Status
 
-This design is ready for a data pass, but it is not itself a data pass. The current held-out
-evaluation should remain `mixed` until at least one lane is run with checked denominators and
-recorded outcomes.
+Lane A has now been run as a source-recorded denominator pass:
+[transparent-relative opportunity data pass](transparent-relative-opportunity-data-pass-2026-06-09.md).
+The held-out `OPG` prediction has been updated from `mixed` to `passed` for this lane only. Lane B,
+independent relative `whose`, remains unrun. No graph mutation or numeric score movement follows.

@@ -105,8 +105,8 @@
       "prediction": "Transparent rare relative constructions should remain partly resolved: opportunity-normalized attestation can warrant licensing, but low opportunity and missing thresholds should block categorical score movement.",
       "pass_condition": "The graph passes partially if rare transparent cases are not rejected on raw frequency alone and licensing confidence depends on opportunity-normalized evidence.",
       "fail_condition": "The graph fails if raw rarity by itself decides licensing, or if it predicts categorical survival without a threshold or contrast set.",
-      "evidence_status": "mixed",
-      "evidence_note": "Checked against enriched fused-relative and transparent-free-relative cards, cgel-fused-relatives, reynolds-transparent-free-relatives, and reynolds-independent-relative-whose. The local transparent-relative sources now identify a concrete COCA-backed opportunity lane by verb class and checked false positives; the independent-relative-whose materials identify a low-opportunity Bayesian lane plus judgment materials. The result remains mixed because neither lane yet supplies a general threshold that categorically decides rare transparent cases."
+      "evidence_status": "passed",
+      "evidence_note": "Checked against enriched fused-relative and transparent-free-relative cards, cgel-fused-relatives, reynolds-transparent-free-relatives, and reynolds-independent-relative-whose. Lane A has now been recorded in notes/transparent-relative-opportunity-data-pass-2026-06-09.md: attributional call-type contexts show sampled positive scoped attestation, while seem/appear AP-transparent contexts show checked zero genuine cases over a meaningful opportunity denominator. This supports OPG's subtype-conditioned opportunity-normalized prediction without authorizing a general threshold or numeric score movement. The independent-relative-whose lane remains unrun."
     }
   ],
   "cards": [

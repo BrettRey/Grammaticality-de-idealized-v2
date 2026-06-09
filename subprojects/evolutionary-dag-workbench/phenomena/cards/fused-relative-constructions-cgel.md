@@ -53,6 +53,12 @@ transparent-free-relative and independent-relative-`whose` materials; those sour
 attestation pressure for opportunity-normalized reasoning, but they still do not provide a general
 threshold that would make rare transparent cases categorically resolved.
 
+Lane A of the transparent-relative opportunity test is now recorded as a source-backed data pass:
+attributional `call`-type contexts show sampled positive scoped attestation, while `seem`/`appear`
+AP-transparent contexts show checked zero genuine cases over a meaningful opportunity denominator.
+This supports the `OPG` prediction for that subtype without settling independent relative `whose` or
+all rare relative constructions.
+
 ## Data Pointers
 
 - For transparent free relatives, use `Transparent_free_relatives/two-kinds.tex` and `coca-data/` to
@@ -67,6 +73,7 @@ threshold that would make rare transparent cases categorically resolved.
   attestation count or absence check, and a named competitor set. Until then, the card should remain
   `mixed` or `partly_survives` rather than promoting numeric score movement.
 - Measurement design: [transparent-relative opportunity measurement](../../notes/transparent-relative-opportunity-measurement-design-2026-06-09.md)
+- Lane A data pass: [transparent-relative opportunity data pass](../../notes/transparent-relative-opportunity-data-pass-2026-06-09.md)
 
 ## Candidate Nodes
 

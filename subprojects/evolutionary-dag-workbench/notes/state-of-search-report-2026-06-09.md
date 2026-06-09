@@ -8,16 +8,16 @@
 
 The workbench is now useful enough to visualize and write up internally. It has not discovered a
 general theory of grammaticality. It has discovered a set of scoped modules, repeated pressure
-points, and two near-term empirical lanes that can make the next round less dependent on expert
-judgment.
+points, plus one completed source-denominator lane that makes the next round less dependent on
+expert judgment.
 
 All numeric scores remain zero. Seven graphs currently have `scoped_module` labels backed by
 protocol-bound or held-out `scope-only` evaluations. The strongest current result is division of
 labor, not a winner.
 
 The next useful work is not more graph invention by default. It is to put the existing modules under
-data pressure, especially through transparent-relative opportunity denominators and pronoun/pro-form
-audience-reference task design.
+additional data pressure, especially through pronoun/pro-form audience-reference task design and the
+remaining independent-relative-`whose` opportunity lane.
 
 ## Current Search Shape
 
@@ -90,12 +90,12 @@ the cards used to build the graph.
   subtypes, agreement-controller overrides, repair-neighbour distance, meaning priors, and
   audience/reference channels are separate pressures.
 
-## Live Empirical Lanes
+## Empirical Lanes
 
 ### Transparent-relative opportunity
 
-The transparent-relative lane is the cleanest immediate test of `OPG`, because it can distinguish
-raw rarity from probative absence.
+The transparent-relative lane is the first completed source-denominator test of `OPG`, because it
+distinguishes raw rarity from probative absence.
 
 ```mermaid
 flowchart LR
@@ -110,10 +110,13 @@ flowchart LR
   Restricted["positive but restricted attestation"] --> Scoped["scoped licensing"]
 ```
 
-The design is already specified in
-`notes/transparent-relative-opportunity-measurement-design-2026-06-09.md`. It needs a data pass, not
-another conceptual pass. The strongest possible result would be a checked opportunity denominator
-that makes one subtype probatively absent while leaving another merely under-sampled.
+The design is specified in
+`notes/transparent-relative-opportunity-measurement-design-2026-06-09.md`. Lane A is now recorded in
+`notes/transparent-relative-opportunity-data-pass-2026-06-09.md`: attributional `call`-type contexts
+show sampled positive scoped attestation, while `seem`/`appear` AP-transparent contexts show checked
+zero genuine cases over a meaningful opportunity denominator. This moves the `OPG` held-out
+prediction from `mixed` to `passed` for this lane only. The independent-relative-`whose` lane
+remains open.
 
 ### Pronoun/pro-form audience and reference
 
@@ -154,10 +157,9 @@ rules, scoped modules, and two empirical lanes where it can start earning projec
 
 ## Next Moves
 
-1. Run the transparent-relative opportunity-denominator data pass from the existing measurement
-   design.
-2. Build the pronoun/pro-form audience-reference task design with explicit contrast cells and
+1. Build the pronoun/pro-form audience-reference task design with explicit contrast cells and
    predicted channels.
+2. Run the independent-relative-`whose` lane if transparent-relative uncertainty remains live.
 3. Add evaluation-level prediction paths only where a card actually activates an edge path.
 4. Keep numeric scores at zero until a held-out, source-backed evaluation proposes score movement
    through profiled paths.
