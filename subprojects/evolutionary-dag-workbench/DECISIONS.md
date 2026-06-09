@@ -48,3 +48,8 @@ Append non-trivial structural, methodological, and scope decisions here.
   evidence from `majority` and zero raw rows for the registered `minority` cells. This supports
   `AGR` beyond `bunch`, but numeric projective credit should wait for a protocol-bound evaluation
   update or calibration against known number-transparent/partitive contrasts.
+- **Add a production bridge without collapsing licensing into frequency.** The COCA projection
+  evaluation exposed that `AGR` had `production_probability` but no path from licensed agreement to
+  production output. Add `community_licensing -> production_probability` as a profiled
+  positive-monotone edge for opportunity-conditioned production measurement. Keep the forbidden
+  conflation intact: raw frequency remains evidence to be filtered and interpreted, not licensing.

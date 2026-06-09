@@ -59,6 +59,13 @@
     },
     {
       "source": "community_licensing",
+      "target": "production_probability",
+      "type": "causal",
+      "relation_profile": "positive_monotone",
+      "rationale": "Licensed agreement values tend to have higher production probability in relevant opportunity contexts, without making raw frequency identical to licensing."
+    },
+    {
+      "source": "community_licensing",
       "target": "grammaticality_attribution",
       "type": "evidential",
       "relation_profile": "evidential_warrant",

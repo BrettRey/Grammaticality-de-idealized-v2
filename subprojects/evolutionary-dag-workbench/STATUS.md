@@ -186,6 +186,14 @@ people` and `a minority of voters`, KWIC-filtered target counts were 105 plural-
 0 singular-agreement rows. The positive evidence comes from the `majority` cells; both registered
 `minority` cells returned zero raw rows. This supports cross-construction portability for the
 agreement-controller module, while still not authorizing score movement.
+The COCA lane is now bound into the evaluation layer by
+`evaluations/protocol-tests/agreement-controller-override-coca-projection-2026-06-09.json`. That
+evaluation records the animate `bunch` projection as passed, the inanimate `bunch` contrast as
+mixed/sparse, the majority portability test as passed, and the minority direct-query cells as
+inconclusive. Adding the evaluation exposed a missing production-output bridge in `AGR`, so
+`agreement-controller-override-candidate` now includes a profiled `community_licensing ->
+production_probability` edge. This is a measurement/projection bridge only; it does not equate raw
+frequency with licensing and does not move scores.
 An internal state-of-search report now summarizes the current scoped-module partition, evaluation
 ladder, the completed transparent-relative Lane A pass, and remaining empirical lanes without
 authorizing score movement.
@@ -446,9 +454,9 @@ validation.
 
 1. Run the audience/policy pronoun task or independent-relative-`whose` human judgment task if data
    collection is available.
-2. Decide whether the `AGR` COCA lane now deserves a protocol-bound evaluation update, or first run
-   the planned calibration cells (`known-qn-calibration` / `partitive-calibration`) to anchor the
-   direct-query method against known number-transparent and partitive contrasts.
+2. Run the planned calibration cells (`known-qn-calibration` / `partitive-calibration`) to anchor
+   the direct-query method against known number-transparent and partitive contrasts before any
+   numeric projective credit is considered.
 3. After the first data-bearing projection lane, run an ablation pass over scoped modules: try to
    remove distinctive nodes from `FDL`/`UOB` and `OPG`/`DYN` before adding new graph families.
 4. Run one critic-verdict variance check by evaluating the same card/protocol several times and
