@@ -300,6 +300,23 @@ TESTS = [
         expected_output="cell_id='policy-or-identity-framing' does not match stimulus",
     ),
     FixtureTest(
+        name="audience response summary runs on empty template",
+        command=[
+            "scripts/summarize_audience_reference_responses.py",
+        ],
+        expected_returncode=0,
+        expected_output="**Usable response rows:** 0",
+    ),
+    FixtureTest(
+        name="audience response summary rejects invalid response file",
+        command=[
+            "scripts/summarize_audience_reference_responses.py",
+            rel("tests/fixtures/audience-responses/invalid/bad-scale-and-metadata.csv"),
+        ],
+        expected_returncode=1,
+        expected_output="reference_confidence='8' is not an integer from 1 to 7",
+    ),
+    FixtureTest(
         name="evaluation valid minimal fixture",
         command=[
             "scripts/validate_evaluation.py",

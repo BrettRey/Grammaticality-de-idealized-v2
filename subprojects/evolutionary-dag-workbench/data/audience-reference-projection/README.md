@@ -61,3 +61,13 @@ python3 scripts/validate_audience_reference_responses.py \
 ```
 
 Add `--require-responses` when checking a collected run rather than an empty template.
+
+Summarize a validated response file with:
+
+```bash
+python3 scripts/summarize_audience_reference_responses.py \
+  path/to/responses.csv \
+  --output path/to/summary.md
+```
+
+The summary is descriptive. It does not decide prediction-test outcomes or update evidence labels.
