@@ -28,6 +28,7 @@ Module abbreviations:
 - `RNR`: `repair-neighbour-reconstruction-candidate`
 - `INR`: `information-normalized-repair-candidate`
 - `MPR`: `meaning-prior-reconstruction-candidate`
+- `AGR`: `agreement-controller-override-candidate`
 
 ## Matrix
 
@@ -234,6 +235,18 @@ The coordination card crosses the mutation threshold for a narrow agreement modu
 `agreement-controller-override-candidate`; it survives the built-on agreement cards in a
 protocol-bound no-score-change evaluation, but it has no `scoped_module` label or projective credit.
 
+## Thirtieth-Pass Addendum
+
+One held-out agreement card has been added and evaluated:
+
+- `measure-agreement-override-cgel`: `AGR` = `S`; a formally plural measure NP can license singular
+  agreement under single-measure construal, and the new agreement candidate routes the case through
+  notional basis, controller identification, override pattern, and feature alignment.
+
+This is the first projective check for `agreement-controller-override-candidate`. It supports the
+candidate as a real agreement module but does not authorize score movement or a `scoped_module`
+label yet, because it is one held-out subtype from the same CGEL chapter.
+
 ## Discriminators Already Doing Work
 
 - `left-branch-extraction`: separates `DYN` from `OPG`.
@@ -294,6 +307,9 @@ protocol-bound no-score-change evaluation, but it has no `scoped_module` label o
   cohort-conditioned `allowed doing` production.
 - `coordination-agreement-resolution-cgel`: forces agreement-controller and override constructs,
   triggering `agreement-controller-override-candidate`.
+- `measure-agreement-override-cgel`: first held-out support for
+  `agreement-controller-override-candidate`; it tests a new override direction rather than another
+  build-card subtype.
 
 ## Untested Cards
 
@@ -312,10 +328,11 @@ Newly exposed untested pairings remain:
 
 1. Add data pointers for unresolved prediction-test cells: pronoun policy/audience design and rare
    transparent-relative opportunity thresholds.
-2. Use held-out contrast cells to test whether `OPG`, `CAT`, and `SEL` remain complementary or
+2. Add one more held-out agreement subtype before promoting `AGR` to a scoped label.
+3. Use held-out contrast cells to test whether `OPG`, `CAT`, and `SEL` remain complementary or
    require a fused-construction split.
-3. Test comparative-illusion cards against `CAT`, `INR`, and `MPR` as complementary modules.
-4. Add richer island and dependency cards against `FRAME` before any numeric movement or broader
+4. Test comparative-illusion cards against `CAT`, `INR`, and `MPR` as complementary modules.
+5. Add richer island and dependency cards against `FRAME` before any numeric movement or broader
    dependency claim.
 
 ## Working Decision
@@ -360,3 +377,6 @@ The twenty-ninth pass adds one more card in each repeated pressure zone. Tempora
 catenative-subtype pressure remain unresolved without mutation. Agreement pressure crosses the
 mutation threshold, yielding `agreement-controller-override-candidate`; because it is built from the
 current agreement cards, it has no held-out projective credit, scoped label, or numeric score.
+The thirtieth pass adds a held-out measure-agreement override card. The agreement candidate survives
+without adding nodes, which is projective evidence for the module. It remains unscored and unlabeled
+until at least one more held-out agreement subtype is tested.

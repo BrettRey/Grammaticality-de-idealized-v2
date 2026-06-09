@@ -1,0 +1,189 @@
+{
+  "id": "agreement-controller-override-heldout-measure-2026-06-09",
+  "target_graph": "graphs/archive/agreement-controller-override-candidate.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "held-out",
+  "held_out_from": [
+    "agreement-controller-override-2026-06-09",
+    "subject-verb-agreement-cgel",
+    "proximity-agreement-error-cgel",
+    "collective-number-transparent-agreement-cgel",
+    "coordination-agreement-resolution-cgel"
+  ],
+  "score_decision": "no-score-change",
+  "activated_paths": [
+    {
+      "id": "notional-basis-to-alignment",
+      "phenomenon": "measure-agreement-override-cgel",
+      "contrast_cell": "plural-measure-singular-verb",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Single-measure construal should provide contextual warrant for controller identification and agreement feature alignment.",
+      "edges": [
+        {
+          "source": "notional_agreement_basis",
+          "target": "agreement_controller_identification",
+          "type": "evidential"
+        },
+        {
+          "source": "agreement_controller_identification",
+          "target": "agreement_feature_alignment",
+          "type": "constitutive"
+        }
+      ]
+    },
+    {
+      "id": "override-to-licensing",
+      "phenomenon": "measure-agreement-override-cgel",
+      "contrast_cell": "plural-measure-singular-verb",
+      "expected_path_reading": "component",
+      "prediction": "A recognized measure override should feed agreement alignment and licensing even with a formally plural head.",
+      "edges": [
+        {
+          "source": "agreement_override_pattern",
+          "target": "agreement_feature_alignment",
+          "type": "constitutive"
+        },
+        {
+          "source": "agreement_feature_alignment",
+          "target": "community_licensing",
+          "type": "constitutive"
+        }
+      ]
+    },
+    {
+      "id": "licensing-to-repair",
+      "phenomenon": "measure-agreement-override-cgel",
+      "contrast_cell": "singular-complement-obligatory",
+      "expected_path_reading": "negative",
+      "prediction": "Higher licensing for the singular measure override should lower repair pressure where the singular construal is required.",
+      "edges": [
+        {
+          "source": "community_licensing",
+          "target": "repair_reformulation_pressure",
+          "type": "causal"
+        }
+      ]
+    }
+  ],
+  "prediction_tests": [
+    {
+      "id": "measure-override-projection",
+      "phenomenon": "measure-agreement-override-cgel",
+      "contrast_cell": "plural-measure-singular-verb",
+      "activated_paths": [
+        "notional-basis-to-alignment",
+        "override-to-licensing"
+      ],
+      "prediction": "The graph should predict that a formally plural measure NP can license singular agreement when construed as a single measure, without treating the form as an attraction error.",
+      "pass_condition": "The held-out source supports singular agreement for plural measure NPs under single-measure construal and describes the pattern as an override or respecification, not as proximity error.",
+      "fail_condition": "The graph fails if the measure case requires a construct absent from the graph, or if the source treats the singular agreement as mere error, processing attraction, or raw preference.",
+      "evidence_status": "passed",
+      "evidence_note": "Checked against `cgel-subject-verb-agreement`, especially the further overrides section on plural measure nominals respecified as singular."
+    }
+  ],
+  "cards": [
+    {
+      "phenomenon": "measure-agreement-override-cgel",
+      "result": "survives_as_module",
+      "expected_survival_pattern": "The graph should generalize from built-on agreement override cards to a held-out measure-NP singular override by routing the case through notional basis, controller identification, override pattern, and feature alignment.",
+      "notes": "Held-out survival. This supports the narrow agreement-controller graph as a real module, but no score movement follows from a single held-out agreement card.",
+      "requirements": {
+        "required_nodes": [
+          "agreement_controller_identification",
+          "agreement_feature_alignment",
+          "agreement_override_pattern",
+          "notional_agreement_basis",
+          "community_licensing",
+          "repair_reformulation_pressure",
+          "reported_acceptability",
+          "grammaticality_attribution"
+        ],
+        "required_edges": [
+          {
+            "source": "notional_agreement_basis",
+            "target": "agreement_controller_identification",
+            "type": "evidential"
+          },
+          {
+            "source": "agreement_controller_identification",
+            "target": "agreement_feature_alignment",
+            "type": "constitutive"
+          },
+          {
+            "source": "agreement_override_pattern",
+            "target": "agreement_feature_alignment",
+            "type": "constitutive"
+          },
+          {
+            "source": "agreement_feature_alignment",
+            "target": "community_licensing",
+            "type": "constitutive"
+          },
+          {
+            "source": "community_licensing",
+            "target": "repair_reformulation_pressure",
+            "type": "causal"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "retrieval_attractor_salience",
+            "target": "community_licensing",
+            "type": "causal"
+          },
+          {
+            "source": "processing_cost",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "plural-measure-singular-verb",
+          "axes": {
+            "community": "Standard English speakers judging plural measure NPs under single-measure construal.",
+            "norm_centre": "Descriptive agreement norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Measure construal and agreement value separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "plural-measure-plural-control",
+          "axes": {
+            "community": "Standard English speakers judging formally plural expressions construed as individual plural items.",
+            "norm_centre": "Descriptive agreement norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Individual-plural construal contrasted with single-measure construal.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "singular-complement-obligatory",
+          "axes": {
+            "community": "Standard English speakers judging measure NP plus singular predicative complement.",
+            "norm_centre": "Descriptive agreement norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Obligatory singular override and repair pressure separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "optional-distance-measure",
+          "axes": {
+            "community": "Standard English speakers judging distance or amount expressions with optional but preferred singular agreement.",
+            "norm_centre": "Descriptive agreement norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Optionality and preference separated from categorical licensing.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    }
+  ]
+}

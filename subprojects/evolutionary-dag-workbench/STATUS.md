@@ -12,7 +12,7 @@ representations about grammaticality. The existing OVMG, detector, operator-stra
 processing-based, and normativity-based models are treated as seed graph families, not as
 conclusions or targets to vindicate.
 
-Twenty-nine adversarial passes/synthesis steps have been run. All numeric scores remain zero. Six
+Thirty adversarial passes/synthesis steps have been run. All numeric scores remain zero. Six
 current modules have `scoped_module` labels tied to protocol-bound evaluations. The original
 scope-only evaluations now include card-level requirements and activated paths. Both held-out CGEL
 evaluations also include card-level requirements and activated paths without authorizing score
@@ -89,6 +89,10 @@ agreement resolution. The temporal and catenative cards remain pressure without 
 coordination agreement card crossed the mutation threshold, producing
 `agreement-controller-override-candidate`, a narrow unscored candidate with no `scoped_module`
 label because it was built from the current agreement cards rather than held-out evidence.
+The thirtieth pass added `measure-agreement-override-cgel` as a held-out test of
+`agreement-controller-override-candidate`. The graph survives the measure-NP singular override
+without adding nodes, giving first held-out support for the agreement module. It remains unscored and
+has no `scoped_module` label pending at least one more held-out agreement subtype.
 
 ## Current Candidate Stack
 
@@ -220,6 +224,8 @@ construct separation, or held-out projectibility, not by fitting a prior paper.
   `notes/twenty-eighth-adversarial-pass-synthesis-2026-06-09.md`
 - agreement-controller mutation synthesis in
   `notes/twenty-ninth-adversarial-pass-synthesis-2026-06-09.md`
+- held-out measure-agreement synthesis in
+  `notes/thirtieth-adversarial-pass-synthesis-2026-06-09.md`
 - coverage/discriminator matrix in `notes/coverage-discriminator-matrix-2026-06-08.md`
 - protocol-bound evaluation schema and exploratory evaluations in `evaluations/`
 - held-out CGEL/local-correction evaluations in `evaluations/protocol-tests/`
@@ -302,8 +308,8 @@ validation.
 
 1. Add data pointers for the remaining unresolved prediction-test cells: pronoun policy/audience
    design and rare transparent-relative opportunity thresholds.
-2. Run held-out agreement tests against `agreement-controller-override-candidate` before adding a
-   scoped label or numeric score.
+2. Run one more held-out agreement subtype against `agreement-controller-override-candidate` before
+   adding a scoped label or numeric score.
 3. Add one more temporal-anchor card only if it distinguishes recent-past, experiential, and
    continuative perfect readings.
 4. Add one more catenative card only if it distinguishes catenative subtype from cohort-conditioned
