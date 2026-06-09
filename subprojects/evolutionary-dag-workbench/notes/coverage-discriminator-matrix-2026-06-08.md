@@ -302,6 +302,17 @@ The remaining pronoun/audience mixed cell has been converted into a task design:
 
 No graph mutation or numeric score movement follows.
 
+## Thirty-Seventh-Pass Addendum
+
+The independent-relative-`whose` lane has been recorded as a design/simulation lane:
+
+- `fused-relative-constructions-cgel`: Lane B supports `OPG`'s low-opportunity discipline at the
+  design level. The materials explicitly manipulate licensing context, include dependent-`whose`
+  baselines and fillers, and contain LLM/simulation outputs. They do not supply human or corpus
+  evidence, so no additional score movement or evidence-status change follows.
+
+No graph mutation follows.
+
 ## Discriminators Already Doing Work
 
 - `left-branch-extraction`: separates `DYN` from `OPG`.
@@ -373,6 +384,8 @@ No graph mutation or numeric score movement follows.
   `OPG`, separating raw rarity from checked subtype-conditioned absence.
 - `pronoun-personhood-proform-gender`: now has a runnable audience-policy task design, but the
   mixed prediction cell is deliberately unchanged until channel-specific data exist.
+- `fused-relative-constructions-cgel`: now has both Lane A checked opportunity evidence and Lane B
+  experiment-ready independent-relative-`whose` materials, with only Lane A counting as evidence.
 
 ## Untested Cards
 
@@ -389,8 +402,8 @@ Newly exposed untested pairings remain:
 
 ## Next Evaluation Moves
 
-1. Run the pronoun policy/audience task if data collection is available, or run the
-   independent-relative-`whose` lane if transparent-relative uncertainty remains live.
+1. Run the pronoun policy/audience task or independent-relative-`whose` human judgment task if data
+   collection is available.
 2. Pause agreement growth unless a genuinely different source domain is available; `AGR` now has a
    scoped label but no numeric score.
 3. Use held-out contrast cells to test whether `OPG`, `CAT`, and `SEL` remain complementary or
@@ -452,3 +465,5 @@ The thirty-fifth pass resolves Lane A of the transparent-relative opportunity th
 while the independent-relative-`whose` lane remains open.
 The thirty-sixth pass resolves the pronoun/audience bookkeeping gap into a runnable task design, but
 keeps the evidence status `mixed` until data exist.
+The thirty-seventh pass records the independent-relative-`whose` materials as a design/simulation
+lane, preserving the distinction between measurement readiness and human evidence.

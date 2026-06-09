@@ -16,8 +16,8 @@ protocol-bound or held-out `scope-only` evaluations. The strongest current resul
 labor, not a winner.
 
 The next useful work is not more graph invention by default. It is to put the existing modules under
-additional data pressure, especially through a pronoun/pro-form audience-reference task run and the
-remaining independent-relative-`whose` opportunity lane.
+additional data pressure, especially through a pronoun/pro-form audience-reference task run or a
+human judgment run for independent relative `whose`.
 
 ## Current Search Shape
 
@@ -115,8 +115,9 @@ The design is specified in
 `notes/transparent-relative-opportunity-data-pass-2026-06-09.md`: attributional `call`-type contexts
 show sampled positive scoped attestation, while `seem`/`appear` AP-transparent contexts show checked
 zero genuine cases over a meaningful opportunity denominator. This moves the `OPG` held-out
-prediction from `mixed` to `passed` for this lane only. The independent-relative-`whose` lane
-remains open.
+prediction from `mixed` to `passed` for this lane only. Lane B is recorded in
+`notes/independent-relative-whose-opportunity-lane-2026-06-09.md` as measurement readiness rather
+than human evidence.
 
 ### Pronoun/pro-form audience and reference
 
@@ -159,7 +160,7 @@ rules, scoped modules, and two empirical lanes where it can start earning projec
 ## Next Moves
 
 1. Run the pronoun/pro-form audience-reference task if data collection is available.
-2. Run the independent-relative-`whose` lane if transparent-relative uncertainty remains live.
+2. Run the independent-relative-`whose` human judgment task if data collection is available.
 3. Add evaluation-level prediction paths only where a card actually activates an edge path.
 4. Keep numeric scores at zero until a held-out, source-backed evaluation proposes score movement
    through profiled paths.

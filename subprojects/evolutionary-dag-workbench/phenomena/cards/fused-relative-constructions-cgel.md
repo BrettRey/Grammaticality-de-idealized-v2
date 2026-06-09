@@ -69,6 +69,10 @@ all rare relative constructions.
   `Independent_relative_whose_A_Bayesian_analysis_of_a_low-frequency_gap/` for the
   low-opportunity/weak-absence logic and `Independent_relative_whose/items/all_items.csv` for
   judgment contrasts that vary licensing context against baselines.
+- Independent relative `whose` lane:
+  [independent relative whose opportunity lane](../../notes/independent-relative-whose-opportunity-lane-2026-06-09.md)
+  records the item materials, experiment plan, power-analysis summary, and LLM/simulation outputs.
+  This is measurement readiness, not human evidence.
 - A future `passed` prediction should require an explicit opportunity denominator, a verified
   attestation count or absence check, and a named competitor set. Until then, the card should remain
   `mixed` or `partly_survives` rather than promoting numeric score movement.
