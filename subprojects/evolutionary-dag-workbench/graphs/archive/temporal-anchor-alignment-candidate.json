@@ -1,0 +1,148 @@
+{
+  "id": "temporal-anchor-alignment-candidate",
+  "title": "Temporal anchor alignment candidate",
+  "family": "temporal-anchor-alignment",
+  "status": "candidate",
+  "edge_semantics_level": "profiled",
+  "notes": "Thirty-ninth-round mutation generated from repeated perfect-tense pressure cards and constrained by the narrative-present and modal-perfect-by-now examples. It tests whether tense/aspect value, modal temporal inference, temporal anchor expression, temporal-anchor fit, current relevance, continuative intervals, experiential frames, and narrative perspective explain contrasts that broad constructional frame fit can only annotate. It is unscored and has no scoped-module label because it was built from the current temporal cards.",
+  "nodes": [
+    "tense_aspect_value",
+    "temporal_anchor_expression",
+    "temporal_anchor_fit",
+    "current_relevance_relation",
+    "continuative_interval_relation",
+    "experiential_relevance_frame",
+    "narrative_perspective_frame",
+    "modal_temporal_inference_frame",
+    "operator_value",
+    "constructional_frame_fit",
+    "semantic_pragmatic_recoverability",
+    "community_licensing",
+    "reported_acceptability",
+    "repair_reformulation_pressure",
+    "grammaticality_attribution",
+    "task_framing"
+  ],
+  "edges": [
+    {
+      "source": "tense_aspect_value",
+      "target": "operator_value",
+      "type": "constitutive",
+      "relation_profile": "partial_component",
+      "rationale": "Tense/aspect value is an operator-like value when the repertoire treats it as a contrastive temporal anchoring instruction."
+    },
+    {
+      "source": "tense_aspect_value",
+      "target": "temporal_anchor_fit",
+      "type": "constitutive",
+      "relation_profile": "partial_component",
+      "rationale": "Temporal-anchor fit depends partly on the selected tense/aspect value."
+    },
+    {
+      "source": "temporal_anchor_expression",
+      "target": "temporal_anchor_fit",
+      "type": "evidential",
+      "relation_profile": "contextual_warrant",
+      "rationale": "Temporal expressions such as yesterday, since, recently, and one morning last year provide contextual warrant for whether a tense/aspect value fits."
+    },
+    {
+      "source": "current_relevance_relation",
+      "target": "temporal_anchor_fit",
+      "type": "evidential",
+      "relation_profile": "evidential_warrant",
+      "rationale": "A current relevance relation warrants present-perfect anchoring where the repertoire licenses it."
+    },
+    {
+      "source": "continuative_interval_relation",
+      "target": "temporal_anchor_fit",
+      "type": "evidential",
+      "relation_profile": "evidential_warrant",
+      "rationale": "A continuative interval relation warrants the present-perfect-plus-since frame and undercuts a wholly-before simple-past analysis for the same intended reading."
+    },
+    {
+      "source": "experiential_relevance_frame",
+      "target": "temporal_anchor_fit",
+      "type": "evidential",
+      "relation_profile": "contextual_warrant",
+      "rationale": "An experiential frame can make an otherwise excluded definite past-time expression fit when already contributes the relevant comparison."
+    },
+    {
+      "source": "narrative_perspective_frame",
+      "target": "temporal_anchor_fit",
+      "type": "evidential",
+      "relation_profile": "contextual_warrant",
+      "rationale": "A narrative-present frame can make present-tense morphology fit a past story-time anchor by shifting viewpoint rather than event time."
+    },
+    {
+      "source": "modal_temporal_inference_frame",
+      "target": "temporal_anchor_fit",
+      "type": "evidential",
+      "relation_profile": "contextual_warrant",
+      "rationale": "A modal inference frame can license will plus perfect with a by-now anchor without treating English will as future tense."
+    },
+    {
+      "source": "temporal_anchor_fit",
+      "target": "constructional_frame_fit",
+      "type": "constitutive",
+      "relation_profile": "partial_component",
+      "rationale": "For tense/aspect cases, temporal-anchor fit is part of constructional frame fit rather than a generic discourse frame fact."
+    },
+    {
+      "source": "temporal_anchor_fit",
+      "target": "community_licensing",
+      "type": "evidential",
+      "relation_profile": "evidential_warrant",
+      "rationale": "Temporal-anchor fit provides warrant for licensing in the relevant tense/aspect repertoire."
+    },
+    {
+      "source": "semantic_pragmatic_recoverability",
+      "target": "reported_acceptability",
+      "type": "causal",
+      "relation_profile": "positive_monotone",
+      "rationale": "Recoverable event meaning can raise reported acceptability without licensing the tense/aspect-anchor combination."
+    },
+    {
+      "source": "community_licensing",
+      "target": "repair_reformulation_pressure",
+      "type": "causal",
+      "relation_profile": "negative_monotone",
+      "rationale": "Lower licensing for a tense/aspect-anchor combination predicts greater pressure to repair or reformulate."
+    },
+    {
+      "source": "community_licensing",
+      "target": "grammaticality_attribution",
+      "type": "evidential",
+      "relation_profile": "contextual_warrant",
+      "rationale": "Licensing provides contextual warrant for grammaticality attribution without being identical to the attribution."
+    },
+    {
+      "source": "reported_acceptability",
+      "target": "grammaticality_attribution",
+      "type": "evidential",
+      "relation_profile": "contextual_warrant",
+      "rationale": "Reported acceptability provides noisy contextual warrant for grammaticality attribution."
+    },
+    {
+      "source": "task_framing",
+      "target": "grammaticality_attribution",
+      "type": "causal",
+      "relation_profile": "mixed_contextual",
+      "rationale": "Task framing changes whether respondents treat a temporal-anchor mismatch as grammar, meaning, style, or repair trouble."
+    }
+  ],
+  "scores": {
+    "empirical_coverage": 0,
+    "projective_power": 0,
+    "counterexample_resilience": 0,
+    "measurement_clarity": 0,
+    "explanatory_payoff": 0,
+    "cross_domain_stability": 0,
+    "complexity_penalty": 0,
+    "circularity_penalty": 0,
+    "construct_confusion_penalty": 0,
+    "theory_preservation_penalty": 0
+  },
+  "score_status": {
+    "kind": "unscored"
+  }
+}

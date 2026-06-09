@@ -12,7 +12,7 @@ representations about grammaticality. The existing OVMG, detector, operator-stra
 processing-based, and normativity-based models are treated as seed graph families, not as
 conclusions or targets to vindicate.
 
-Thirty-eight adversarial passes/synthesis steps have been run. All numeric scores remain zero. Seven
+Thirty-nine adversarial passes/synthesis steps have been run. All numeric scores remain zero. Seven
 current modules have `scoped_module` labels tied to protocol-bound evaluations. The original
 scope-only evaluations now include card-level requirements and activated paths. Both held-out CGEL
 evaluations also include card-level requirements and activated paths without authorizing score
@@ -124,6 +124,13 @@ The thirty-eighth pass tested the comparative-illusion noisy-channel card agains
 partly survives: it handles category-analysis and measurement-task leakage while leaving repair
 distance and intended-meaning-prior machinery to `INR`/`RNR` and `MPR`. No graph mutation or score
 movement follows.
+The thirty-ninth pass crossed the temporal-anchor mutation threshold. It added
+`temporal-anchor-alignment-candidate`, built from the perfect-definite-past-time, continuative
+perfect, already-plus-yesterday, narrative-present, and modal-perfect-by-now cards. The graph keeps
+tense/aspect value, modal temporal inference, temporal anchor expression, temporal-anchor fit,
+current relevance, continuative interval, experiential frame, and narrative perspective separate.
+It survives the built-on temporal cards, but it is unscored and has no `scoped_module` label because
+no held-out temporal card has tested it yet.
 An internal state-of-search report now summarizes the current scoped-module partition, evaluation
 ladder, the completed transparent-relative Lane A pass, and remaining empirical lanes without
 authorizing score movement.
@@ -147,6 +154,7 @@ authorizing score movement.
 - `information-normalized-repair-candidate`
 - `meaning-prior-reconstruction-candidate`
 - `agreement-controller-override-candidate`
+- `temporal-anchor-alignment-candidate`
 
 The current strongest modules are scoped, not general winners:
 
@@ -190,6 +198,9 @@ The current strongest modules are scoped, not general winners:
   controller identification, licensed override, notional basis, and retrieval-attractor salience
   must be separated. It is now a scoped agreement module through held-out measure and fused
   determiner-head tests, with all numeric scores still zero.
+- `temporal-anchor-alignment-candidate` for tense/aspect anchoring, modal temporal inference,
+  definite or by-now temporal anchors, current relevance, continuative intervals, experiential
+  frames, and narrative perspective. It is an unscored built-on candidate, not a scoped module yet.
 
 `context-indexed-dynamic-feedback-candidate`, `context-aware-operator-gap-candidate`, and
 `audience-reference-tracking-candidate`, `processing-naturalness-perturbation-candidate`, and
@@ -215,6 +226,8 @@ construct separation, or held-out projectibility, not by fitting a prior paper.
 - source-backed Gibson processing/dependency card tranche in `phenomena/cards/`
 - local minimal-pair card tranche in `phenomena/cards/`
 - measurement-validity card tranche in `phenomena/cards/`
+- temporal-anchor alignment candidate and evaluation in `graphs/archive/` and
+  `evaluations/protocol-tests/`
 - `DISCOVERY_RULES.md`
 - initial phenomenon cards in `phenomena/cards/`
 - graph schema and seed graphs in `graphs/`
@@ -375,8 +388,8 @@ validation.
    collection is available.
 2. Pause agreement growth unless a genuinely different source domain is available; `AGR` now has a
    scoped label but no numeric score.
-3. Add one more temporal-anchor card only if it distinguishes recent-past, experiential, and
-   continuative perfect readings.
+3. Test `temporal-anchor-alignment-candidate` against a held-out temporal/modal card before any
+   scoped label; keep English `will` out of the tense inventory.
 4. Add one more catenative card only if it distinguishes catenative subtype from cohort-conditioned
    production.
 5. Test comparative-illusion cards against combined `CAT` plus noisy-channel interpretations only

@@ -1,0 +1,592 @@
+{
+  "id": "temporal-anchor-alignment-2026-06-09",
+  "target_graph": "graphs/archive/temporal-anchor-alignment-candidate.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "protocol-bound",
+  "score_decision": "no-score-change",
+  "activated_paths": [
+    {
+      "id": "anchor-fit-to-licensing",
+      "phenomenon": "perfect-definite-past-time",
+      "contrast_cell": "present-perfect-definite-past-time",
+      "expected_path_reading": "warranting",
+      "prediction": "Temporal-anchor fit warrants licensing for a tense/aspect frame; a present-perfect-plus-definite-past-time mismatch should undercut licensing despite recoverability.",
+      "edges": [
+        {
+          "source": "temporal_anchor_fit",
+          "target": "community_licensing",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "recoverability-to-acceptability",
+      "phenomenon": "perfect-definite-past-time",
+      "contrast_cell": "present-perfect-definite-past-time",
+      "expected_path_reading": "positive",
+      "prediction": "Recoverability can raise reported acceptability for the intended event without licensing the tense/aspect-anchor pairing.",
+      "edges": [
+        {
+          "source": "semantic_pragmatic_recoverability",
+          "target": "reported_acceptability",
+          "type": "causal"
+        }
+      ]
+    },
+    {
+      "id": "licensing-to-repair",
+      "phenomenon": "perfect-definite-past-time",
+      "contrast_cell": "simple-past-definite-past-time",
+      "expected_path_reading": "negative",
+      "prediction": "Higher licensing for the simple-past-plus-definite-past-time frame should lower repair pressure.",
+      "edges": [
+        {
+          "source": "community_licensing",
+          "target": "repair_reformulation_pressure",
+          "type": "causal"
+        }
+      ]
+    },
+    {
+      "id": "continuative-interval-to-licensing",
+      "phenomenon": "continuative-perfect-since-cgel",
+      "contrast_cell": "present-perfect-since",
+      "expected_path_reading": "warranting",
+      "prediction": "A continuative interval relation warrants temporal-anchor fit and licensing for the present-perfect-plus-since frame.",
+      "edges": [
+        {
+          "source": "continuative_interval_relation",
+          "target": "temporal_anchor_fit",
+          "type": "evidential"
+        },
+        {
+          "source": "temporal_anchor_fit",
+          "target": "community_licensing",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "experiential-frame-to-licensing",
+      "phenomenon": "perfect-already-yesterday-cgel",
+      "contrast_cell": "already-perfect-yesterday",
+      "expected_path_reading": "indeterminate",
+      "prediction": "An experiential relevance frame can make the already-plus-yesterday case fit without licensing every present-perfect-plus-definite-past-time expression.",
+      "edges": [
+        {
+          "source": "experiential_relevance_frame",
+          "target": "temporal_anchor_fit",
+          "type": "evidential"
+        },
+        {
+          "source": "temporal_anchor_fit",
+          "target": "community_licensing",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "narrative-perspective-to-licensing",
+      "phenomenon": "narrative-present-past-time-frame",
+      "contrast_cell": "narrative-present-past-story-time",
+      "expected_path_reading": "indeterminate",
+      "prediction": "A narrative perspective frame can make present-tense morphology fit a past story-time anchor without licensing ordinary present reports with past-time anchors.",
+      "edges": [
+        {
+          "source": "narrative_perspective_frame",
+          "target": "temporal_anchor_fit",
+          "type": "evidential"
+        },
+        {
+          "source": "temporal_anchor_fit",
+          "target": "community_licensing",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "modal-inference-to-licensing",
+      "phenomenon": "modal-perfect-by-now-inference",
+      "contrast_cell": "modal-perfect-by-now",
+      "expected_path_reading": "indeterminate",
+      "prediction": "A modal temporal inference frame can license will plus perfect with a by-now anchor without treating English will as a future-tense value.",
+      "edges": [
+        {
+          "source": "modal_temporal_inference_frame",
+          "target": "temporal_anchor_fit",
+          "type": "evidential"
+        },
+        {
+          "source": "temporal_anchor_fit",
+          "target": "community_licensing",
+          "type": "evidential"
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "phenomenon": "perfect-definite-past-time",
+      "result": "survives_as_module",
+      "expected_survival_pattern": "The graph should distinguish present perfect without a definite past-time anchor, simple past with a definite past-time anchor, and the non-licensed present-perfect-plus-definite-past-time combination while keeping recoverability out of licensing.",
+      "notes": "Survives as a built-on temporal-anchor module. The graph adds tense/aspect value, temporal anchor expression, and temporal-anchor fit, which are the missing constructs exposed by earlier FRAME evaluations.",
+      "requirements": {
+        "required_nodes": [
+          "tense_aspect_value",
+          "temporal_anchor_expression",
+          "temporal_anchor_fit",
+          "semantic_pragmatic_recoverability",
+          "community_licensing",
+          "reported_acceptability",
+          "repair_reformulation_pressure",
+          "grammaticality_attribution"
+        ],
+        "required_edges": [
+          {
+            "source": "tense_aspect_value",
+            "target": "temporal_anchor_fit",
+            "type": "constitutive"
+          },
+          {
+            "source": "temporal_anchor_expression",
+            "target": "temporal_anchor_fit",
+            "type": "evidential"
+          },
+          {
+            "source": "temporal_anchor_fit",
+            "target": "community_licensing",
+            "type": "evidential"
+          },
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "reported_acceptability",
+            "type": "causal"
+          },
+          {
+            "source": "community_licensing",
+            "target": "repair_reformulation_pressure",
+            "type": "causal"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "community_licensing",
+            "type": "causal"
+          },
+          {
+            "source": "reported_acceptability",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "simple-past-no-definite-past-time",
+          "axes": {
+            "community": "Ordinary English speakers judging simple-past event description.",
+            "norm_centre": "Standard descriptive English tense/aspect norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example or spoken sentence.",
+            "task_framing": "Acceptability and temporal interpretation separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "present-perfect-no-definite-past-time",
+          "axes": {
+            "community": "Ordinary English speakers judging present-perfect event description.",
+            "norm_centre": "Standard descriptive English tense/aspect norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example or spoken sentence.",
+            "task_framing": "Acceptability and temporal interpretation separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "simple-past-definite-past-time",
+          "axes": {
+            "community": "Ordinary English speakers judging simple past with a definite past-time expression.",
+            "norm_centre": "Standard descriptive English tense/aspect norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example or spoken sentence.",
+            "task_framing": "Acceptability and temporal anchoring judgment.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "present-perfect-definite-past-time",
+          "axes": {
+            "community": "Ordinary English speakers judging present perfect with a definite past-time expression.",
+            "norm_centre": "Standard descriptive English tense/aspect norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example or spoken sentence.",
+            "task_framing": "Grammaticality attribution with recoverable intended event.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    },
+    {
+      "phenomenon": "continuative-perfect-since-cgel",
+      "result": "survives_as_module",
+      "expected_survival_pattern": "The graph should distinguish a licensed present-perfect-plus-since continuative frame from a simple-past form under the same intended ongoing reading.",
+      "notes": "Survives as a built-on temporal-anchor module. The key construct is continuative_interval_relation feeding temporal_anchor_fit, not broad frame fit or semantic recoverability alone.",
+      "requirements": {
+        "required_nodes": [
+          "tense_aspect_value",
+          "temporal_anchor_expression",
+          "temporal_anchor_fit",
+          "continuative_interval_relation",
+          "semantic_pragmatic_recoverability",
+          "community_licensing",
+          "repair_reformulation_pressure"
+        ],
+        "required_edges": [
+          {
+            "source": "continuative_interval_relation",
+            "target": "temporal_anchor_fit",
+            "type": "evidential"
+          },
+          {
+            "source": "temporal_anchor_fit",
+            "target": "community_licensing",
+            "type": "evidential"
+          },
+          {
+            "source": "community_licensing",
+            "target": "repair_reformulation_pressure",
+            "type": "causal"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "present-perfect-since",
+          "axes": {
+            "community": "Standard English speakers judging continuative perfect examples.",
+            "norm_centre": "Descriptive tense/aspect norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Continuative reading and acceptability separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "simple-past-since-ongoing",
+          "axes": {
+            "community": "Standard English speakers judging a simple past under an intended ongoing-since reading.",
+            "norm_centre": "Descriptive tense/aspect norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Ongoing interpretation, repair, and grammaticality attribution separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "present-perfect-no-duration",
+          "axes": {
+            "community": "Standard English speakers judging present perfect without an explicit duration expression.",
+            "norm_centre": "Descriptive tense/aspect norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Non-continuative default interpretation.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "simple-past-wholly-before",
+          "axes": {
+            "community": "Standard English speakers judging simple past with wholly-before interpretation.",
+            "norm_centre": "Descriptive tense/aspect norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Past-time interpretation and acceptability separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    },
+    {
+      "phenomenon": "perfect-already-yesterday-cgel",
+      "result": "survives_as_module",
+      "expected_survival_pattern": "The graph should distinguish the bare present-perfect-plus-yesterday mismatch from the restricted already-plus-yesterday experiential case and from simple past with yesterday.",
+      "notes": "Survives as a built-on temporal-anchor module. The experiential_relevance_frame node captures why already can change the fit of the definite past-time expression without licensing all such combinations.",
+      "requirements": {
+        "required_nodes": [
+          "tense_aspect_value",
+          "temporal_anchor_expression",
+          "temporal_anchor_fit",
+          "experiential_relevance_frame",
+          "semantic_pragmatic_recoverability",
+          "community_licensing",
+          "reported_acceptability",
+          "repair_reformulation_pressure"
+        ],
+        "required_edges": [
+          {
+            "source": "experiential_relevance_frame",
+            "target": "temporal_anchor_fit",
+            "type": "evidential"
+          },
+          {
+            "source": "temporal_anchor_fit",
+            "target": "community_licensing",
+            "type": "evidential"
+          },
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "reported_acceptability",
+            "type": "causal"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "community_licensing",
+            "type": "causal"
+          },
+          {
+            "source": "reported_acceptability",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "bare-perfect-yesterday",
+          "axes": {
+            "community": "Standard English speakers judging present perfect with a bare definite past-time expression.",
+            "norm_centre": "Descriptive tense/aspect norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Present-perfect frame fit and event recoverability separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "already-perfect-yesterday",
+          "axes": {
+            "community": "Standard English speakers judging the restricted experiential-perfect use with `already`.",
+            "norm_centre": "Descriptive tense/aspect norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "`Already` contribution and temporal anchoring separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "simple-past-yesterday",
+          "axes": {
+            "community": "Standard English speakers judging simple past with a definite past-time expression.",
+            "norm_centre": "Descriptive tense/aspect norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Simple-past anchor treated as the baseline.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "recent-past-perfect",
+          "axes": {
+            "community": "Standard English speakers judging present perfect with `recently` or `just`.",
+            "norm_centre": "Descriptive tense/aspect norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Indefinite recency expression contrasted with definite past-time expression.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    },
+    {
+      "phenomenon": "modal-perfect-by-now-inference",
+      "result": "survives_as_module",
+      "expected_survival_pattern": "The graph should license will plus perfect with a by-now completion inference through a modal temporal inference frame, not by treating English will as future tense.",
+      "notes": "Survives as a built-on temporal-anchor guard. The modal_temporal_inference_frame node keeps will-plus-perfect anchoring distinct from tense/aspect value and from reported certainty.",
+      "requirements": {
+        "required_nodes": [
+          "modal_temporal_inference_frame",
+          "tense_aspect_value",
+          "temporal_anchor_expression",
+          "temporal_anchor_fit",
+          "current_relevance_relation",
+          "community_licensing",
+          "reported_acceptability",
+          "grammaticality_attribution"
+        ],
+        "required_edges": [
+          {
+            "source": "modal_temporal_inference_frame",
+            "target": "temporal_anchor_fit",
+            "type": "evidential"
+          },
+          {
+            "source": "temporal_anchor_fit",
+            "target": "community_licensing",
+            "type": "evidential"
+          },
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "reported_acceptability",
+            "type": "causal"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "modal_temporal_inference_frame",
+            "target": "tense_aspect_value",
+            "type": "constitutive"
+          },
+          {
+            "source": "reported_acceptability",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "modal-perfect-by-now",
+          "axes": {
+            "community": "English speakers judging will plus perfect with a by-now completion inference.",
+            "norm_centre": "Descriptive English auxiliary and perfect system; no future-tense analysis assumed.",
+            "genre": "Controlled sentence judgment or ordinary inferential report.",
+            "medium": "Written or spoken example.",
+            "task_framing": "Modal inference, completion-by-reference-time, and tense labels separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "present-perfect-by-now",
+          "axes": {
+            "community": "English speakers judging present perfect plus by-now inference.",
+            "norm_centre": "Descriptive English perfect system.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written or spoken example.",
+            "task_framing": "Current evidence and perfect anchoring separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "will-nonperfect-prospective-deadline",
+          "axes": {
+            "community": "English speakers judging will plus non-perfect verb with a prospective deadline such as by noon.",
+            "norm_centre": "Descriptive English auxiliary and temporal-anchor norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written or spoken example.",
+            "task_framing": "Prospective deadline and completion-by-now reading separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "will-nonperfect-by-now-completion",
+          "axes": {
+            "community": "English speakers judging will plus non-perfect verb with by now under a completed-by-reference-time reading.",
+            "norm_centre": "Descriptive English auxiliary and perfect system; no future-tense analysis assumed.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written or spoken example.",
+            "task_framing": "Completion-by-now inference and non-perfect form selection separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    },
+    {
+      "phenomenon": "narrative-present-past-time-frame",
+      "result": "survives_as_module",
+      "expected_survival_pattern": "The graph should permit narrative-present morphology under a past story-time anchor only when a narrative perspective frame is active, while still rejecting ordinary present reports with past-time anchors.",
+      "notes": "Survives as a guard against overfitting the perfect-tense cards. The narrative_perspective_frame path keeps event time and discourse viewpoint separate.",
+      "requirements": {
+        "required_nodes": [
+          "tense_aspect_value",
+          "temporal_anchor_expression",
+          "temporal_anchor_fit",
+          "narrative_perspective_frame",
+          "community_licensing",
+          "reported_acceptability",
+          "grammaticality_attribution"
+        ],
+        "required_edges": [
+          {
+            "source": "narrative_perspective_frame",
+            "target": "temporal_anchor_fit",
+            "type": "evidential"
+          },
+          {
+            "source": "temporal_anchor_fit",
+            "target": "community_licensing",
+            "type": "evidential"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "temporal_anchor_expression",
+            "target": "community_licensing",
+            "type": "causal"
+          },
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "ordinary-past-narrative",
+          "axes": {
+            "community": "English speakers judging ordinary past-tense narrative.",
+            "norm_centre": "Descriptive tense/aspect norm centre.",
+            "genre": "Conversational story.",
+            "medium": "Spoken or written example.",
+            "task_framing": "Story-time and tense choice separated.",
+            "speaker_identity": "Unmarked storyteller cue."
+          }
+        },
+        {
+          "id": "narrative-present-past-story-time",
+          "axes": {
+            "community": "English speakers judging narrative present in a past story frame.",
+            "norm_centre": "Descriptive tense/aspect norm centre.",
+            "genre": "Conversational or vivid narrative.",
+            "medium": "Spoken or written example.",
+            "task_framing": "Narrative viewpoint, event time, and acceptability separated.",
+            "speaker_identity": "Unmarked storyteller cue."
+          }
+        },
+        {
+          "id": "non-narrative-present-past-time",
+          "axes": {
+            "community": "English speakers judging present-tense report with a definite past-time expression outside a story frame.",
+            "norm_centre": "Descriptive tense/aspect norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written or spoken example.",
+            "task_framing": "Current-event report and past-time anchor separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "current-present-report",
+          "axes": {
+            "community": "English speakers judging present-tense report of a current event.",
+            "norm_centre": "Descriptive tense/aspect norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written or spoken example.",
+            "task_framing": "Present-time anchoring baseline.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    }
+  ]
+}

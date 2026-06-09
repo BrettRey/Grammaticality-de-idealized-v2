@@ -47,6 +47,8 @@ before any public release.
 | `gibson-syntax-cognitive` | `<LITERATURE_ROOT>/gibson-2025-syntax-a-cognitive-approach.md` | Acceptability/grammaticality separation, dependency locality, garden paths, noisy-channel overacceptance, construction-specific islands, legalese center embedding |
 | `kauf-et-al-2023-ann-brain-similarity` | `/Users/brettreynolds/Downloads/nol_a_00116.pdf.txt` | Measurement-validity discriminator for ANN/fMRI predictivity, lexical-semantic content sensitivity, and syntactic/grammatical inference limits |
 | `brett-duration-have-minimal-pair` | Brett session example, 2026-06-09 | Contextual anchoring, frame-conditioned licensing, semantic recoverability without ad hoc rescue |
+| `brett-narrative-present-past-time` | Brett session example, 2026-06-09 | Narrative present, past story-time anchoring, viewpoint frame vs tense/aspect anchor fit |
+| `brett-modal-perfect-by-now` | Brett session example, 2026-06-09 | Modal perfect, by-now inference, temporal-anchor fit, and avoiding future-tense analysis for English `will` |
 
 Path roots for local use:
 

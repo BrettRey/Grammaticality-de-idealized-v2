@@ -12,12 +12,14 @@ points, plus one completed source-denominator lane that makes the next round les
 expert judgment.
 
 All numeric scores remain zero. Seven graphs currently have `scoped_module` labels backed by
-protocol-bound or held-out `scope-only` evaluations. The strongest current result is division of
+protocol-bound or held-out `scope-only` evaluations. `TEMP` has now joined the candidate set as a
+built-on temporal-anchor module without a scoped label. The strongest current result is division of
 labor, not a winner.
 
 The next useful work is not more graph invention by default. It is to put the existing modules under
-additional data pressure, especially through a pronoun/pro-form audience-reference task run or a
-human judgment run for independent relative `whose`.
+additional data pressure, especially through a pronoun/pro-form audience-reference task run, a
+human judgment run for independent relative `whose`, a held-out temporal/modal card for `TEMP`, or
+a number-construal/realization run for `AGR`.
 
 ## Current Search Shape
 
@@ -30,6 +32,7 @@ flowchart LR
   UPT["UPT<br/>uptake/operator boundary"]
   FRAME["FRAME<br/>frame-specific licensing"]
   AGR["AGR<br/>agreement controller/override"]
+  TEMP["TEMP<br/>temporal anchoring"]
 
   DYN --> ContextCases["needs washed<br/>robust vernaculars<br/>register fragments"]
   OPG --> GapCases["left-branch extraction<br/>fused relatives<br/>rare forms"]
@@ -38,6 +41,7 @@ flowchart LR
   UPT --> UptakeCases["clause type<br/>interjections<br/>move type"]
   FRAME --> FrameCases["I have five years<br/>island variation"]
   AGR --> AgreementCases["measure NPs<br/>fused heads<br/>coordination"]
+  TEMP --> TemporalCases["perfect + yesterday<br/>narrative present<br/>will have arrived by now"]
 ```
 
 This map should be read as a live partition of work, not as a taxonomy. The modules are useful
@@ -52,6 +56,7 @@ because each now has a reasonably sharp boundary:
 | `UPT` | Update-role configuration, repertoire closedness, token innovability, stance, genre fit, and repair | clause type, interjection boundaries, duration-frame answer partly | Not a general social-indexical or operator-gap account |
 | `FRAME` | Question-answer frame fit and construction-specific dependency licensing | `I have five years`, island construction variation | Not an opportunity/preemption or general temporal-anchor account |
 | `AGR` | Controller identification, feature alignment, licensed override, notional basis, and retrieval-attractor salience | measure-NP agreement, fused determiner-head agreement, coordination pressure | Not a category-analysis, pronoun/audience, diachronic, or general grammaticality account |
+| `TEMP` | Temporal-anchor fit across tense/aspect, modal inference, current relevance, continuative intervals, experiential frames, and narrative perspective | perfect plus definite past time, continuative perfect, already plus yesterday, narrative present, modal perfect by now | Built-on candidate only; not scoped until held-out temporal/modal projection |
 
 ## Evaluation Ladder
 
@@ -86,9 +91,10 @@ the cards used to build the graph.
   OVMG, the operator-stratum paper, CGEL, or any other prior account.
 - Held-out cards are now more informative than new seed cards, provided they carry source evidence,
   contrast cells, activated paths, and pass/fail conditions.
-- The repeated pressure points are no longer vague: temporal anchoring, catenative complement
-  subtypes, agreement-controller overrides, repair-neighbour distance, meaning priors, and
-  audience/reference channels are separate pressures.
+- The repeated pressure points are no longer vague: temporal anchoring now has a built-on `TEMP`
+  candidate, while catenative complement subtypes, agreement-controller overrides,
+  repair-neighbour distance, meaning priors, and audience/reference channels remain separate
+  pressures.
 - Comparative illusions now reinforce complementarity rather than mutation: category-analysis
   leakage belongs with `CAT`, repair distance with `RNR`/`INR`, and intended-meaning plausibility
   with `MPR`.

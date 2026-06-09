@@ -394,7 +394,7 @@
   <header>
     <h1>Evolutionary DAG Workbench State</h1>
     <p class="subtitle">
-      Snapshot of the current search space after 38 adversarial passes. This view treats the
+      Snapshot of the current search space after 39 adversarial passes. This view treats the
       workbench as a discovery system: scoped modules, pressure zones, held-out evidence, and
       unearned scores are kept visually separate.
     </p>
@@ -404,9 +404,9 @@
     <section>
       <h2>Current Scale</h2>
       <div class="metrics">
-        <div class="metric"><span class="metric-value">49</span><span class="metric-label">phenomenon cards</span></div>
-        <div class="metric"><span class="metric-value">52</span><span class="metric-label">evaluations</span></div>
-        <div class="metric"><span class="metric-value">17</span><span class="metric-label">candidate graphs</span></div>
+        <div class="metric"><span class="metric-value">51</span><span class="metric-label">phenomenon cards</span></div>
+        <div class="metric"><span class="metric-value">54</span><span class="metric-label">evaluations</span></div>
+        <div class="metric"><span class="metric-value">18</span><span class="metric-label">candidate graphs</span></div>
         <div class="metric"><span class="metric-value">7</span><span class="metric-label">scoped modules</span></div>
         <div class="metric"><span class="metric-value">4</span><span class="metric-label">held-out evaluations</span></div>
         <div class="metric"><span class="metric-value">0</span><span class="metric-label">numeric scores earned</span></div>
@@ -519,9 +519,9 @@
         </div>
         <div class="module-card">
           <div class="module-head"><span class="abbr">Near modules</span><span class="kind" style="color: var(--gray)">unscored</span></div>
-          <h3>SEL / CAT / TASK / RNR / INR / MPR</h3>
+          <h3>SEL / CAT / TASK / RNR / INR / MPR / TEMP</h3>
           <div class="bar"><span class="survive" style="width: 35%"></span><span class="partial" style="width: 55%"></span><span class="out" style="width: 10%"></span></div>
-          <p class="counts">Useful but unpromoted candidates. They mark repeated pressures: selection, measurement discipline, noisy-channel repair, and meaning priors.</p>
+          <p class="counts">Useful but unpromoted candidates. They mark repeated pressures: selection, measurement discipline, noisy-channel repair, meaning priors, and temporal anchoring.</p>
         </div>
       </div>
     </section>
@@ -548,6 +548,7 @@
         <div class="cell">UPT</div><div class="cell shade3">3</div><div class="cell shadeP1">1</div><div class="cell shade0">0</div><div class="cell">0</div>
         <div class="cell">AUD</div><div class="cell shade1">1</div><div class="cell shadeP1">2</div><div class="cell shade0">0</div><div class="cell">3</div>
         <div class="cell">MPR</div><div class="cell shade1">1</div><div class="cell shadeP1">1</div><div class="cell shade0">0</div><div class="cell">0</div>
+        <div class="cell">TEMP</div><div class="cell shade4">5</div><div class="cell shade0">0</div><div class="cell shade0">0</div><div class="cell">0</div>
       </div>
       <p class="note">Darker green means more survive-as-module results; darker amber means more partial-survival pressure; red marks explicit out-of-scope failures.</p>
     </section>
@@ -575,6 +576,17 @@
             <span class="pill">policy frame</span><span class="arrow">→</span>
             <span class="pill">reported acceptability</span><span class="arrow">→</span>
             <span class="pill">attribution</span>
+          </div>
+        </div>
+        <div class="lane">
+          <h3>Temporal/modal held-out test</h3>
+          <p class="note">Tests whether TEMP projects beyond its build cards without treating English will as future tense.</p>
+          <div class="flow">
+            <span class="pill">modal frame</span><span class="arrow">→</span>
+            <span class="pill">anchor expression</span><span class="arrow">→</span>
+            <span class="pill">anchor fit</span><span class="arrow">→</span>
+            <span class="pill">licensing warrant</span><span class="arrow">→</span>
+            <span class="pill">repair pressure</span>
           </div>
         </div>
       </div>

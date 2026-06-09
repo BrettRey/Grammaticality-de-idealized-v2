@@ -63,6 +63,8 @@ temporal expressions conflict with which tense/aspect frames.
 
 - `FRAME` should partly survive by separating frame fit from recoverability, but it may lack a
   temporal-anchor-specific construct.
+- `TEMP` should survive if temporal-anchor fit mediates the present-perfect-plus-definite-past-time
+  mismatch without using recoverability as licensing.
 - `OPG` should partly survive if it represents operator value without collapsing it into
   acceptability.
 - `PROC` should not explain the contrast as processing difficulty.

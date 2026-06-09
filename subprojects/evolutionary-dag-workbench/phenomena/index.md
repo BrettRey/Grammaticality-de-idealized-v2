@@ -103,6 +103,8 @@ elicitation support.
 |---|---|---|
 | [frame-conditioned-duration-have](cards/frame-conditioned-duration-have.md) | Contextual anchoring without ad hoc licensing | Local minimal pair |
 | [perfect-definite-past-time](cards/perfect-definite-past-time.md) | Temporal anchoring and tense/aspect frame fit | Local minimal pair |
+| [narrative-present-past-time-frame](cards/narrative-present-past-time-frame.md) | Past story time, present-tense viewpoint, and temporal-anchor fit | Local minimal pair |
+| [modal-perfect-by-now-inference](cards/modal-perfect-by-now-inference.md) | Modal perfect, by-now inference, and temporal-anchor fit without future-tense analysis | Local minimal pair |
 | [nearest-noun-agreement-attraction](cards/nearest-noun-agreement-attraction.md) | Agreement-controller alignment vs nearest-attractor illusion | Local minimal pair |
 | [attitude-complement-selection](cards/attitude-complement-selection.md) | Complement selection, update role, and recoverability | Local minimal pair |
 | [allowed-to-doing-cohort-contrast](cards/allowed-to-doing-cohort-contrast.md) | Cohort-conditioned complement selection | Local minimal pair |

@@ -345,6 +345,111 @@ upstream_or_mediating:
       - genre appropriateness
       - operator repertoire membership
 
+  - id: tense_aspect_value
+    label: Tense/aspect value
+    definition: The tense, aspect, or perfect-related operator value selected by a clause or construction in the relevant repertoire.
+    proxies:
+      - simple past vs present perfect contrast
+      - continuative perfect reading
+      - experiential perfect reading
+      - narrative-present contrast
+    forbidden_conflations:
+      - temporal anchor expression
+      - event time alone
+      - modal temporal inference frame
+      - semantic recoverability
+
+  - id: temporal_anchor_expression
+    label: Temporal anchor expression
+    definition: Explicit or implicit expression that anchors the event, state, interval, or relevance relation in time.
+    proxies:
+      - definite past-time expression
+      - recency expression
+      - since or ever-since expression
+      - context-supplied reference time
+    forbidden_conflations:
+      - tense/aspect value
+      - current relevance relation
+      - payload temporal content alone
+
+  - id: temporal_anchor_fit
+    label: Temporal anchor fit
+    definition: Fit between a tense/aspect value and the temporal anchor, interval relation, or viewpoint frame supplied by the construction or context.
+    proxies:
+      - present-perfect plus definite past-time contrast
+      - simple-past plus since under continuative reading
+      - already plus experiential-perfect contrast
+      - narrative present with past story frame
+      - will plus perfect with by-now inference
+    forbidden_conflations:
+      - semantic recoverability
+      - reported acceptability
+      - constructional frame fit
+
+  - id: current_relevance_relation
+    label: Current relevance relation
+    definition: Relation by which a past event, state, or experience is presented as relevant to the reference time.
+    proxies:
+      - present perfect without definite past-time anchor
+      - result-state relevance
+      - experience relevance
+      - current-state diagnostic
+    forbidden_conflations:
+      - temporal anchor expression
+      - continuative interval relation
+      - reported acceptability
+
+  - id: continuative_interval_relation
+    label: Continuative interval relation
+    definition: Relation in which a state or activity extends from before the reference time up to that reference time.
+    proxies:
+      - since or ever-since continuative reading
+      - duration-to-reference-time paraphrase
+      - contrast with wholly-before simple past
+    forbidden_conflations:
+      - current relevance relation
+      - temporal anchor expression alone
+      - semantic recoverability
+
+  - id: experiential_relevance_frame
+    label: Experiential relevance frame
+    definition: Perfect-related frame in which a prior event is presented as an experience relevant to a comparison, expectation, or current discourse state.
+    proxies:
+      - already plus experiential perfect
+      - have-ever contrast
+      - experience-before-now paraphrase
+      - expectation-satisfaction context
+    forbidden_conflations:
+      - definite past-time anchor
+      - simple past event location
+      - semantic recoverability
+
+  - id: narrative_perspective_frame
+    label: Narrative perspective frame
+    definition: Discourse frame in which events located in a past story world are presented from an internal or vivid present viewpoint.
+    proxies:
+      - historical or narrative present
+      - story-opening present progressive
+      - past story-time expression with present-tense narration
+      - conversational recounting frame
+    forbidden_conflations:
+      - current relevance relation
+      - tense/aspect value
+      - simple event time
+
+  - id: modal_temporal_inference_frame
+    label: Modal temporal inference frame
+    definition: Frame in which a modal auxiliary plus perfect or temporal anchor presents completion or occurrence as inferable relative to a reference time.
+    proxies:
+      - will plus perfect plus by-now inference
+      - should or must plus perfect inference
+      - completion-by-reference-time judgment
+      - epistemic uncertainty marker with temporal inference
+    forbidden_conflations:
+      - future tense label
+      - tense/aspect value alone
+      - reported certainty
+
   - id: payload_preposition_choice
     label: Payload preposition choice
     definition: Open or semi-open preposition choice contributing spatial, conceptual, or discourse content rather than a selected argument-linking value.

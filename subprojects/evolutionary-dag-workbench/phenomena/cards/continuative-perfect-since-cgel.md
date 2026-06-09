@@ -60,5 +60,6 @@ perfect reading while the simple past fails under the same intended ongoing read
 ## Predicted Discriminators
 
 - `FRAME` should partly survive because it separates frame fit from recoverability.
+- `TEMP` should survive if continuative interval relation feeds temporal-anchor fit.
 - `OPG` should partly survive only as broad operator-value scaffolding.
 - `PROC` should not explain the contrast as processing difficulty.

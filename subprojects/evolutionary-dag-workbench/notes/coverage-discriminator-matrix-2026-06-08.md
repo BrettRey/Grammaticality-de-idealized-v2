@@ -29,6 +29,7 @@ Module abbreviations:
 - `INR`: `information-normalized-repair-candidate`
 - `MPR`: `meaning-prior-reconstruction-candidate`
 - `AGR`: `agreement-controller-override-candidate`
+- `TEMP`: `temporal-anchor-alignment-candidate`
 
 ## Matrix
 
@@ -150,6 +151,11 @@ module.
 alignment, licensed override, notional agreement basis, and retrieval-attractor salience. It is a
 scoped agreement module, not a category-analysis, pronoun/audience, diachronic, or general
 grammaticality account.
+
+`TEMP` is the temporal-anchor alignment candidate. It handles tense/aspect anchoring, modal
+temporal inference, definite or by-now temporal anchors, current relevance, continuative intervals,
+experiential frames, and narrative perspective. It is built from the current temporal cards and is
+not a scoped module yet.
 
 ## Twenty-Third-Pass Addendum
 
@@ -323,6 +329,24 @@ No graph mutation follows.
 
 No graph mutation or score movement follows.
 
+## Thirty-Ninth-Pass Addendum
+
+`TEMP` has been added after repeated temporal-anchor pressure crossed the mutation threshold:
+
+- `perfect-definite-past-time`: `TEMP` = `S`; temporal-anchor fit separates the
+  present-perfect-plus-definite-past mismatch from recoverable event meaning.
+- `continuative-perfect-since-cgel`: `TEMP` = `S`; continuative interval relation feeds
+  temporal-anchor fit for the present-perfect-plus-since frame.
+- `perfect-already-yesterday-cgel`: `TEMP` = `S`; experiential relevance can change the fit of
+  `already` plus `yesterday` without licensing all present-perfect-plus-definite-past expressions.
+- `narrative-present-past-time-frame`: `TEMP` = `S`; narrative perspective keeps past story time
+  distinct from present-tense viewpoint.
+- `modal-perfect-by-now-inference`: `TEMP` = `S`; modal temporal inference licenses `will` plus
+  perfect with `by now` without treating English `will` as future tense.
+
+`TEMP` remains unscored and has no `scoped_module` label because all five cards were used to shape
+the mutation.
+
 ## Discriminators Already Doing Work
 
 - `left-branch-extraction`: separates `DYN` from `OPG`.
@@ -365,8 +389,8 @@ No graph mutation or score movement follows.
 - `frame-conditioned-duration-have` and `island-construction-variation-gibson`: justify `FRAME` as
   a scoped module when the needed contrast is finer than broad update-role configuration or broad
   operator value.
-- `perfect-definite-past-time`: pressures `FRAME` toward temporal-anchor specificity without
-  yet justifying a new temporal graph.
+- `perfect-definite-past-time`: now separates `FRAME`'s broad frame fit from `TEMP`'s
+  temporal-anchor fit.
 - `nearest-noun-agreement-attraction`: repeats the agreement-controller/retrieval gap left by the
   broader agreement cards and keeps `PROC` scoped to processing perturbation.
 - `attitude-complement-selection`: strengthens `SEL` as the complement-selection boundary module
@@ -374,13 +398,17 @@ No graph mutation or score movement follows.
 - `allowed-to-doing-cohort-contrast`: separates complement-selection structure from
   cohort-conditioned licensing and adult correction frames.
 - `continuative-perfect-since-cgel`: repeats the temporal-anchor pressure exposed by
-  `perfect-definite-past-time`.
+  `perfect-definite-past-time` and now supports `TEMP`.
 - `catenative-complement-form-selection-cgel`: repeats the complement-selection subtype pressure
   exposed by `allowed-to-doing-cohort-contrast` and `attitude-complement-selection`.
 - `proximity-agreement-error-cgel` and `collective-number-transparent-agreement-cgel`: split
   agreement processing errors from licensed agreement overrides.
 - `perfect-already-yesterday-cgel`: blocks a blanket present-perfect-plus-past-time rule and
-  sharpens the temporal-anchor pressure on `FRAME`.
+  sharpens the difference between broad `FRAME` and narrow `TEMP`.
+- `narrative-present-past-time-frame`: prevents `TEMP` from overgeneralizing a ban on present
+  morphology with past-time expressions.
+- `modal-perfect-by-now-inference`: prevents `TEMP` from treating English `will` as future tense
+  and forces a modal temporal inference frame.
 - `allow-prevent-complement-selection-cgel`: separates catenative class structure from local
   cohort-conditioned `allowed doing` production.
 - `coordination-agreement-resolution-cgel`: forces agreement-controller and override constructs,
@@ -416,13 +444,14 @@ Newly exposed untested pairings remain:
 
 1. Run the pronoun policy/audience task or independent-relative-`whose` human judgment task if data
    collection is available.
-2. Pause agreement growth unless a genuinely different source domain is available; `AGR` now has a
-   scoped label but no numeric score.
-3. Use held-out contrast cells to test whether `OPG`, `CAT`, and `SEL` remain complementary or
+2. Run a number-construal/realization stress pass across collective nouns, coordination, measure
+   overrides, fused determiner-heads, and proximity errors before adding more agreement nodes.
+3. Test `TEMP` against a held-out temporal/modal card before any scoped label.
+4. Use held-out contrast cells to test whether `OPG`, `CAT`, and `SEL` remain complementary or
    require a fused-construction split.
-4. Test comparative-illusion cards against a combined category/noisy-channel interpretation only if
+5. Test comparative-illusion cards against a combined category/noisy-channel interpretation only if
    a future card forces the interaction.
-5. Add richer island and dependency cards against `FRAME` before any numeric movement or broader
+6. Add richer island and dependency cards against `FRAME` before any numeric movement or broader
    dependency claim.
 
 ## Working Decision
@@ -482,3 +511,7 @@ The thirty-seventh pass records the independent-relative-`whose` materials as a 
 lane, preserving the distinction between measurement readiness and human evidence.
 The thirty-eighth pass keeps comparative illusions split across complementary modules: category
 analysis belongs with `CAT`, repair distance with `INR`/`RNR`, and intended meaning with `MPR`.
+The thirty-ninth pass resolves the repeated temporal-anchor pressure by adding
+`temporal-anchor-alignment-candidate`. It survives the built-on perfect, narrative-present, and
+modal-perfect-by-now cards, but it has no scoped label or score until a held-out temporal/modal card
+tests whether the anchor-fit machinery projects.

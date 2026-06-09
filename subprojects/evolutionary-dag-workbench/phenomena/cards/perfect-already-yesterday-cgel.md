@@ -66,5 +66,6 @@ frame fit can record the contrast, but it cannot yet predict why `already` chang
 ## Predicted Discriminators
 
 - `FRAME` should partly survive because it separates frame fit from recoverability.
-- A future temporal-anchor graph should do better by representing the specific anchoring relation.
+- `TEMP` should survive if experiential relevance changes temporal-anchor fit without licensing all
+  present-perfect-plus-definite-past-time expressions.
 - `PROC` should not explain the contrast as processing difficulty.
