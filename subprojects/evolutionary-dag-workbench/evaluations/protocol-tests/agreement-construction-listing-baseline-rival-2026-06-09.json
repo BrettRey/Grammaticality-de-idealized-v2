@@ -78,8 +78,8 @@
       "prediction": "The listing baseline should be weak or non-committal for low-frequency animate plural QN frames unless it adds item-specific preferences after the fact.",
       "pass_condition": "The baseline stays live if the new cells are too sparse or if each item shows idiosyncratic local behaviour unrelated to notional/controller diagnostics.",
       "fail_condition": "The baseline loses if registered low-frequency cells generalize in the AGR-predicted direction without enough local evidence to justify independent listing.",
-      "evidence_status": "not-run",
-      "evidence_note": "Registered as a future discriminator; no COCA rows have been inspected for this tranche in this pass."
+      "evidence_status": "inconclusive",
+      "evidence_note": "Direct-string COCA run in `notes/agr-coca-low-frequency-qn-listing-rival-run-2026-06-09.md` returned no matching records for all six registered cells. This is a query-design failure, not evidence for either AGR or LIST."
     }
   ],
   "cards": [

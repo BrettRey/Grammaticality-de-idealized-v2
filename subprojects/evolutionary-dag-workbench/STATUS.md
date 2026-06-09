@@ -12,7 +12,7 @@ representations about grammaticality. The existing OVMG, detector, operator-stra
 processing-based, and normativity-based models are treated as seed graph families, not as
 conclusions or targets to vindicate.
 
-Sixty-two adversarial passes/synthesis steps have been run. All numeric scores remain zero. Seven
+Sixty-three adversarial passes/synthesis steps have been run. All numeric scores remain zero. Seven
 current modules have `scoped_module` labels tied to protocol-bound or held-out `scope-only`
 evaluations. The original scope-only evaluations now include card-level requirements and activated
 paths. The held-out CGEL evaluations also include card-level requirements and activated paths
@@ -30,8 +30,7 @@ selection-adjacent dimensions only.
 The held-out CGEL evaluations now include machine-readable `prediction_tests` with pass/fail
 conditions; score-change evaluations now require prediction tests.
 Eight held-out CGEL cards have source-checked contrast examples, and the prediction-test inventory
-now records checked evidence statuses: fifteen `passed`, four `mixed`, one `inconclusive`, and one
-registered `not-run` discriminator.
+now records checked evidence statuses: fifteen `passed`, four `mixed`, and two `inconclusive`.
 No graph has a `general_account` score. The current scoring schema includes `projective_power` and
 `theory_preservation_penalty` so held-out prediction and anti-alignment discipline are visible.
 The Gibson source pass added five processing/dependency cards without changing graph machinery:
@@ -349,6 +348,11 @@ The sixty-second pass is recorded in
 baseline can accommodate already observed QN/collective agreement profiles, but the registered
 low-frequency-QN tranche is now the live discriminator between AGR's controller/notional machinery
 and construction-specific listing. No scoped label or score movement follows.
+The sixty-third pass is recorded in
+`notes/agr-coca-low-frequency-qn-listing-rival-run-2026-06-09.md`. The registered direct-string
+low-frequency-QN COCA tranche ran, but all six cells returned no matching records. The result is
+inconclusive and should be treated as a query-design failure, not as support for either AGR or the
+construction-listing rival.
 An internal state-of-search report now summarizes the current scoped-module partition, evaluation
 ladder, the completed transparent-relative Lane A pass, and remaining empirical lanes without
 authorizing score movement.
@@ -657,9 +661,9 @@ audience/reference response validation.
    `scripts/validate_audience_reference_responses.py --require-responses` and summarize it with
    `scripts/summarize_audience_reference_responses.py` before evaluation; do not treat the
    simulation-only rows as evidence.
-3. Run or prepare the registered low-frequency-QN discriminator in
-   `notes/agr-construction-listing-rival-protocol-2026-06-09.md` before claiming AGR has beaten
-   strong agreement rivals; surface-head number is now only a sanity baseline.
+3. Revise the low-frequency-QN discriminator after the all-zero direct-string COCA run: use broader
+   items, less restrictive frames, a larger corpus, or elicited/judgment materials before claiming
+   AGR has beaten construction-specific listing.
 4. Add a fresh held-out temporal card before giving `temporal-orientation-alignment-candidate` any
    scoped label; keep temporal orientation distinct from modal temporal inference and from English
    future-tense analysis.

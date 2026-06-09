@@ -111,7 +111,8 @@ the cards used to build the graph.
   denominators, reproducible KWIC coding, uncertainty estimates, and search-error audit.
 - `AGR` has beaten the simple surface-head-number baseline in checked cells, but that baseline is no
   longer the decision boundary. The live rival is construction-specific listing, now represented by
-  `LIST` and a registered low-frequency-QN discriminator.
+  `LIST`. The first direct-string low-frequency-QN discriminator was all-zero in COCA, so it is an
+  inconclusive query-design result rather than evidence for either graph.
 - `TEMP` has now received two held-out temporal/preterite-orientation tests. Both partly survive
   and jointly point to a temporal-orientation frame rather than a modal-remoteness-only repair.
   That repair is now represented in `TOR`, but `TOR` needs fresh held-out pressure before a scoped
@@ -214,8 +215,8 @@ rules, scoped modules, and two empirical lanes where it can start earning projec
 
 1. Run the pronoun/pro-form audience-reference task if data collection is available.
 2. Run the independent-relative-`whose` human judgment task if data collection is available.
-3. Run the AGR low-frequency-QN tranche against the construction-listing rival if COCA access and
-   time are available.
+3. Redesign the AGR low-frequency-QN discriminator against the construction-listing rival; the first
+   direct-string COCA tranche was too sparse.
 4. Add evaluation-level prediction paths only where a card actually activates an edge path.
 5. Keep numeric scores at zero until a held-out, source-backed evaluation proposes score movement
    through profiled paths.

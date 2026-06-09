@@ -586,3 +586,6 @@ the successor.
 The sixty-second pass adds `LIST` as a stronger AGR rival than surface-head number. The next AGR
 data move is no longer another win against surface-head number; it is the registered
 low-frequency-QN discriminator against construction-specific listing.
+The sixty-third pass runs that first low-frequency-QN direct-string tranche. All six COCA cells
+return no matching records, so the result is inconclusive and the discriminator needs broader items
+or a different measurement route.
