@@ -34,14 +34,16 @@ negative meaning, polarity form, dialect licensing, and standard condemnation to
   so form identity alone is not licensing.
 - Idiom contrast: a phrase can retain negative meaning as an idiom even when the original polarity
   environment has changed.
-- Standardness contrast: CGEL's polarity section supports the licensing-environment distinction; a
-  separate dialect or usage source is still needed for a strong negative-concord correction cell.
+- Standardness contrast: CGEL's multiple-negation section distinguishes Standard English multiple
+  semantic negation from negative concord in non-standard dialects, with standard NPI alternatives
+  for the non-standard concord examples.
 
 ## Source-Checked Evidence
 
-Checked against `cgel-negation-polarity`. The source strongly supports polarity licensing and the
-recoverability/licensing split. The dialect-standard correction cell remains partly source-backed
-rather than fully checked by CGEL alone.
+Checked against `cgel-negation-polarity`, including the multiple-negation section. The source
+strongly supports polarity licensing, the recoverability/licensing split, and the dialect/standard
+negative-concord contrast. It supports the workbench's source-backed standard-correction cell, while
+still leaving corpus distribution and social-evaluation strength for later empirical work.
 
 ## Candidate Nodes
 

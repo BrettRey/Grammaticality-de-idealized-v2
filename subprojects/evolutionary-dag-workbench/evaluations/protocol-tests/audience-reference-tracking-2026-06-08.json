@@ -3,7 +3,7 @@
   "target_graph": "graphs/archive/audience-reference-tracking-candidate.json",
   "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
   "status": "protocol-bound",
-  "score_decision": "no-score-change",
+  "score_decision": "scope-only",
   "activated_paths": [
     {
       "id": "feature-reference-acceptability-attribution",
@@ -109,6 +109,49 @@
           "type": "evidential"
         }
       ]
+    }
+  ],
+  "prediction_tests": [
+    {
+      "id": "reference-alignment-prediction",
+      "phenomenon": "pronoun-personhood-proform-gender",
+      "contrast_cell": "low-stakes-reference",
+      "activated_paths": [
+        "feature-reference-acceptability-attribution",
+        "operator-licensing-attribution"
+      ],
+      "prediction": "Pronoun feature alignment should support reference tracking and reported acceptability while remaining distinct from direct licensing or attribution.",
+      "pass_condition": "The graph passes if source evidence supports pro-form feature alignment and reference-chain coherence while the graph blocks reference success from becoming community licensing.",
+      "fail_condition": "The graph fails if reference success alone is treated as licensing, or if pro-form feature alignment is absent from the reference path.",
+      "evidence_status": "passed",
+      "evidence_note": "Checked against cgel-pronouns and reynolds-personhood-proforms. Both support a distinct pro-form/reference-chain layer; the graph's forbidden reference-success-to-licensing edge preserves the needed separation."
+    },
+    {
+      "id": "personhood-reclassification-prediction",
+      "phenomenon": "pronoun-personhood-proform-gender",
+      "contrast_cell": "personified-referent",
+      "activated_paths": [
+        "personhood-to-feature-alignment"
+      ],
+      "prediction": "Personhood ascription should change which pro-form features count as aligned, without itself being grammaticality attribution.",
+      "pass_condition": "The graph passes if personification or de-personification changes pro-form alignment while attribution remains mediated by reference, licensing, acceptability, or task channels.",
+      "fail_condition": "The graph fails if personhood ascription directly entails grammaticality attribution or if personification has no path into feature alignment.",
+      "evidence_status": "passed",
+      "evidence_note": "Checked against cgel-pronouns and reynolds-personhood-proforms. The sources support designatum-driven personhood and reclassification effects, including non-human personal construal and human non-personal construal."
+    },
+    {
+      "id": "audience-policy-framing-prediction",
+      "phenomenon": "pronoun-personhood-proform-gender",
+      "contrast_cell": "policy-or-identity-framing",
+      "activated_paths": [
+        "audience-social-acceptability",
+        "ideology-condemnation-attribution"
+      ],
+      "prediction": "Audience design, identity cues, and norm-centre ideology should perturb social-indexical value, acceptability, condemnation, and attribution without directly changing reference tracking.",
+      "pass_condition": "The graph passes as a partial module if audience or policy framing shifts acceptability or attribution while keeping social value distinct from licensing and reference tracking.",
+      "fail_condition": "The graph fails if social-indexical value is treated as direct licensing, or if policy framing has no path to reported acceptability or attribution.",
+      "evidence_status": "mixed",
+      "evidence_note": "Checked against reynolds-personhood-proforms. The source supports pragmatic overlays, identity marking, and social construal, but task-specific audience-design evidence is still needed."
     }
   ],
   "cards": [

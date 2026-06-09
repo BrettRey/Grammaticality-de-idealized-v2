@@ -135,7 +135,7 @@
       "pass_condition": "The graph passes only as a partial module if social framing shifts acceptability or attribution without claiming to model reference-tracking success.",
       "fail_condition": "The graph fails if it predicts pronoun reference success, audience accommodation, or feature alignment despite lacking those constructs.",
       "evidence_status": "mixed",
-      "evidence_note": "Checked against enriched pronoun/personhood card and CGEL pronoun/gender sections. CGEL supports personhood and social-value contrasts, but the policy/audience-design cell still needs local paper or task evidence."
+      "evidence_note": "Checked against enriched pronoun/personhood card, CGEL pronoun/gender sections, and reynolds-personhood-proforms. The local paper supports designatum-driven personhood and reference-chain coherence, but the policy/audience-design cell still needs task-specific audience evidence."
     },
     {
       "id": "fragment-genre-prediction",
@@ -160,8 +160,8 @@
       "prediction": "Standard correction of dialectal negative patterns should be captured as ideology/correction pressure, while polarity licensing remains outside the graph's scope.",
       "pass_condition": "The graph passes as out-of-scope if it predicts correction-driven attribution while refusing to model polarity licensing itself.",
       "fail_condition": "The graph fails if it treats standard condemnation as a polarity-licensing diagnosis or claims coverage for the licensed polarity environment.",
-      "evidence_status": "mixed",
-      "evidence_note": "Checked against enriched negation/polarity card and cgel-negation-polarity. CGEL supports polarity licensing and recoverability splits; dialect-standard correction needs an additional variety/source check."
+      "evidence_status": "passed",
+      "evidence_note": "Checked against enriched negation/polarity card and cgel-negation-polarity, including the multiple-negation section. CGEL directly distinguishes Standard English multiple semantic negation from negative concord in non-standard dialects and gives standard NPI alternatives, supporting the graph's ideology/correction/out-of-scope split."
     }
   ],
   "cards": [

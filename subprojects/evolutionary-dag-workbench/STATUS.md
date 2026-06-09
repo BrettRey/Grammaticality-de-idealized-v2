@@ -12,7 +12,7 @@ representations about grammaticality. The existing OVMG, detector, operator-stra
 processing-based, and normativity-based models are treated as seed graph families, not as
 conclusions or targets to vindicate.
 
-Fifteen adversarial passes/synthesis steps have been run. All numeric scores remain zero. Four
+Sixteen adversarial passes/synthesis steps have been run. All numeric scores remain zero. Five
 current modules have `scoped_module` labels tied to protocol-bound evaluations. The original
 scope-only evaluations now include card-level requirements and activated paths. Both held-out CGEL
 evaluations also include card-level requirements and activated paths without authorizing score
@@ -29,7 +29,7 @@ selection-adjacent dimensions only.
 The held-out CGEL evaluations now include machine-readable `prediction_tests` with pass/fail
 conditions; score-change evaluations now require prediction tests.
 Six held-out CGEL cards have source-checked contrast examples, and the held-out prediction tests
-now record checked evidence statuses: three `passed`, two `mixed`, and one `inconclusive`.
+now record checked evidence statuses: four `passed` and two `mixed`.
 No graph has a `general_account` score. The current scoring schema includes `projective_power` and
 `theory_preservation_penalty` so held-out prediction and anti-alignment discipline are visible.
 
@@ -62,8 +62,8 @@ The current strongest modules are scoped, not general winners:
   production settings from correctness-framed judgment settings. It is unscored and has no
   scoped-module label.
 - `audience-reference-tracking-candidate` for pronoun/pro-form reference tracking, personhood
-  ascription, audience design, and social-indexical judgment channels. It is unscored and has no
-  scoped-module label.
+  ascription, audience design, and social-indexical judgment channels. It is a scoped module, not a
+  general account.
 - `selection-collocation-split-candidate` for distinguishing payload preposition choice,
   collocational rigidity, and argument-linking selection. It is unscored and has no scoped-module
   label.
@@ -75,8 +75,9 @@ The current strongest modules are scoped, not general winners:
   scoped module for clause-type/interjection boundaries, not a general operator-gap account.
 
 `context-indexed-dynamic-feedback-candidate`, `context-aware-operator-gap-candidate`, and
-`processing-naturalness-perturbation-candidate`, and `uptake-operator-boundary-candidate` currently
-have protocol-bound `scope-only` evaluations and `scoped_module` labels. No graph has earned a
+`audience-reference-tracking-candidate`, `processing-naturalness-perturbation-candidate`, and
+`uptake-operator-boundary-candidate` currently have protocol-bound `scope-only` evaluations and
+`scoped_module` labels. No graph has earned a
 non-zero numeric score or a
 `general_account` label.
 
@@ -114,6 +115,7 @@ construct separation, or held-out projectibility, not by fitting a prior paper.
 - prediction-test synthesis in `notes/fourteenth-adversarial-pass-synthesis-2026-06-08.md`
 - source-backed prediction evidence synthesis in
   `notes/fifteenth-adversarial-pass-synthesis-2026-06-08.md`
+- unresolved evidence-lane update in `notes/sixteenth-adversarial-pass-synthesis-2026-06-08.md`
 - coverage/discriminator matrix in `notes/coverage-discriminator-matrix-2026-06-08.md`
 - protocol-bound evaluation schema and exploratory evaluations in `evaluations/`
 - held-out CGEL/local-correction evaluations in `evaluations/protocol-tests/`
@@ -193,8 +195,8 @@ validation.
 
 ## Next Actions
 
-1. Add data pointers for the unresolved prediction-test cells: pronoun policy/audience design,
-   dialectal negative correction, and rare transparent-relative opportunity thresholds.
+1. Add data pointers for the remaining unresolved prediction-test cells: pronoun policy/audience
+   design and rare transparent-relative opportunity thresholds.
 2. Test whether `OPG`, `CAT`, and `SEL` stay complementary on richer fused-construction cards before
    adding any fused-head-specific graph.
 3. Calibrate scoped-module score magnitudes after at least one held-out or parameterized evaluation

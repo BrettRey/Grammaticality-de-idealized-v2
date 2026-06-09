@@ -10,7 +10,8 @@ impossible; others are understandable while still triggering repair or reformula
 
 ## Source Pointers
 
-- Source IDs: `cgel-fused-relatives`
+- Source IDs: `cgel-fused-relatives`, `reynolds-transparent-free-relatives`,
+  `reynolds-independent-relative-whose`
 - Related seed card: [transparent-free-relatives](transparent-free-relatives.md)
 
 ## Why It Matters
@@ -36,12 +37,21 @@ than converted directly into ungrammaticality.
 - Reduction contrast: open interrogatives can reduce in ways fused relatives cannot.
 - Restricted-word contrast: several wh forms occur in fused relatives only under special
   restrictions, while `-ever` forms are freer in fused relatives.
+- Corpus-opportunity contrast: local transparent-free-relative work treats corpus absences and
+  verb-class asymmetries as evidence about where a construction is licensed, not as immediate proof
+  of global ungrammaticality.
+- Rare-attestation contrast: the independent relative `whose` work treats rare relative patterns as
+  constrained but attested, requiring context and information-structural support rather than a raw
+  frequency verdict.
 
 ## Source-Checked Evidence
 
 Checked against `cgel-fused-relatives`. The source supports constructional-function and
 competitor/paraphrase contrasts. It does not by itself settle low-frequency thresholds, so rarity
-and transparent-relative projectibility remain inconclusive until opportunity evidence is added.
+and transparent-relative projectibility remain incomplete. Checked against local
+transparent-free-relative and independent-relative-`whose` materials; those sources add corpus and
+attestation pressure for opportunity-normalized reasoning, but they still do not provide a general
+threshold that would make rare transparent cases categorically resolved.
 
 ## Candidate Nodes
 

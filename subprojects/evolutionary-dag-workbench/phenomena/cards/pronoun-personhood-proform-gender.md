@@ -37,13 +37,18 @@ social-indexical value and ideological correction, without denying that they can
   receive different pronouns depending on construal, empathy, or social stance.
 - De-personhood contrast: `it` with a human baby can be licensed in some contexts but can also carry
   a dehumanizing or affectively marked value.
+- Designatum contrast: the local personhood/pro-forms paper treats English pro-form gender as
+  driven by how a discourse entity is conceptualized, not by antecedent form alone.
+- Chain-coherence contrast: personal and non-personal pro-forms are disfavoured when mixed inside a
+  single reference chain unless the discourse independently reclassifies the designatum.
 
 ## Source-Checked Evidence
 
 Checked against `cgel-pronouns` and the CGEL gender/agreement section. The source supports the
 separation among reference tracking, grammatical form, gender/personhood compatibility, and
-social-indexical value. The policy/audience-design part of the card still needs local paper or
-task-specific evidence before it can count as fully passed.
+social-indexical value. Checked against `reynolds-personhood-proforms`; the local paper strengthens
+the designatum, personhood, and reference-chain evidence. The policy/audience-design part of the
+card still needs task-specific audience evidence before it can count as fully passed.
 
 ## Candidate Nodes
 

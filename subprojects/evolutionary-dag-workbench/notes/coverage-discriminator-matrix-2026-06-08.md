@@ -118,8 +118,8 @@ No phenomenon cards are completely untested in protocol-test evaluations.
 
 ## Next Evaluation Moves
 
-1. Add data pointers for unresolved prediction-test cells: pronoun policy/audience design,
-   dialectal negative correction, and rare transparent-relative opportunity thresholds.
+1. Add data pointers for unresolved prediction-test cells: pronoun policy/audience design and rare
+   transparent-relative opportunity thresholds.
 2. Use held-out contrast cells to test whether `OPG`, `CAT`, and `SEL` remain complementary or
    require a fused-construction split.
 
