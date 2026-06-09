@@ -12,7 +12,7 @@ representations about grammaticality. The existing OVMG, detector, operator-stra
 processing-based, and normativity-based models are treated as seed graph families, not as
 conclusions or targets to vindicate.
 
-Twenty-five adversarial passes/synthesis steps have been run. All numeric scores remain zero. Six
+Twenty-six adversarial passes/synthesis steps have been run. All numeric scores remain zero. Six
 current modules have `scoped_module` labels tied to protocol-bound evaluations. The original
 scope-only evaluations now include card-level requirements and activated paths. Both held-out CGEL
 evaluations also include card-level requirements and activated paths without authorizing score
@@ -69,6 +69,11 @@ category-analysis machinery.
 The twenty-fifth pass added `meaning-prior-reconstruction-candidate`, separating intended-meaning
 plausibility from literal-composition coherence. It survives the depth-charge card and partly
 survives comparative illusion, where category/function analysis remains outside the graph.
+The twenty-sixth pass added three local minimal-pair cards from Brett: perfect with a definite
+past-time adverbial, nearest-noun agreement attraction, and `know`/`believe`/`wonder` complement
+selection. `FRAME` partly survives the perfect/adverbial card, `PROC` partly survives nearest-noun
+agreement attraction, and `SEL` survives the attitude-complement card as a scoped
+complement-selection module. No new graph is justified yet.
 
 ## Current Candidate Stack
 
@@ -188,11 +193,13 @@ construct separation, or held-out projectibility, not by fitting a prior paper.
   `notes/twenty-fourth-adversarial-pass-synthesis-2026-06-09.md`
 - meaning-prior reconstruction synthesis in
   `notes/twenty-fifth-adversarial-pass-synthesis-2026-06-09.md`
+- local operator-contrast synthesis in
+  `notes/twenty-sixth-adversarial-pass-synthesis-2026-06-09.md`
 - coverage/discriminator matrix in `notes/coverage-discriminator-matrix-2026-06-08.md`
 - protocol-bound evaluation schema and exploratory evaluations in `evaluations/`
 - held-out CGEL/local-correction evaluations in `evaluations/protocol-tests/`
 - agreement, center-embedding, uptake-boundary, frequent-condemned-form, fused-head,
-  Gibson-backed, local minimal-pair, and frame-specific dependency evaluations in
+  Gibson-backed, local minimal-pair, local operator-contrast, and frame-specific dependency evaluations in
   `evaluations/protocol-tests/`
 - positive and negative validator fixtures in `tests/fixtures/`
 
@@ -270,13 +277,15 @@ validation.
 
 1. Add data pointers for the remaining unresolved prediction-test cells: pronoun policy/audience
    design and rare transparent-relative opportunity thresholds.
-2. Test comparative-illusion cards against `CAT` and the noisy-channel candidates to keep category
+2. Add more tense/aspect anchoring and complement-selection cards before introducing temporal-anchor
+   or selected-update-role constructs.
+3. Test comparative-illusion cards against `CAT` and the noisy-channel candidates to keep category
    analysis separate from reconstruction.
-3. Test whether `OPG`, `CAT`, and `SEL` stay complementary on richer fused-construction cards before
+4. Test whether `OPG`, `CAT`, and `SEL` stay complementary on richer fused-construction cards before
    adding any fused-head-specific graph.
-4. Calibrate scoped-module score magnitudes after at least one held-out or parameterized evaluation
+5. Calibrate scoped-module score magnitudes after at least one held-out or parameterized evaluation
    pass.
-5. Expand `phenomena/cards/` toward 40-100 cards only after the current representation classes stop
+6. Expand `phenomena/cards/` toward 40-100 cards only after the current representation classes stop
    shifting every pass.
-6. Only after the construct inventory stabilizes, consider whether `pgmpy`, NOTEARS-style methods,
+7. Only after the construct inventory stabilizes, consider whether `pgmpy`, NOTEARS-style methods,
    or empirical causal discovery are useful.

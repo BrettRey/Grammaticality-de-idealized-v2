@@ -1,0 +1,160 @@
+{
+  "id": "processing-naturalness-perturbation-nearest-agreement-2026-06-09",
+  "target_graph": "graphs/archive/processing-naturalness-perturbation-candidate.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "protocol-bound",
+  "score_decision": "no-score-change",
+  "activated_paths": [
+    {
+      "id": "processing-to-acceptability",
+      "phenomenon": "nearest-noun-agreement-attraction",
+      "contrast_cell": "plural-attractor-first-pass",
+      "expected_path_reading": "negative",
+      "prediction": "Nearest-attractor interference should perturb felt naturalness and reported acceptability under first-pass or speeded judgment without changing licensing.",
+      "edges": [
+        {
+          "source": "processing_cost",
+          "target": "felt_naturalness_context",
+          "type": "causal"
+        },
+        {
+          "source": "felt_naturalness_context",
+          "target": "reported_acceptability",
+          "type": "measurement"
+        }
+      ]
+    },
+    {
+      "id": "task-framing-to-attribution",
+      "phenomenon": "nearest-noun-agreement-attraction",
+      "contrast_cell": "reread-structural-correction",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Rereading or correctness framing can shift the same item from first-pass naturalness toward structural agreement attribution.",
+      "edges": [
+        {
+          "source": "task_framing",
+          "target": "grammaticality_attribution",
+          "type": "causal"
+        }
+      ]
+    },
+    {
+      "id": "licensing-to-attribution",
+      "phenomenon": "nearest-noun-agreement-attraction",
+      "contrast_cell": "low-load-controller-agreement",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Community licensing and acceptability reports can both inform attribution, but the path is task-biased and does not identify the agreement controller.",
+      "edges": [
+        {
+          "source": "community_licensing",
+          "target": "reported_acceptability",
+          "type": "measurement"
+        },
+        {
+          "source": "reported_acceptability",
+          "target": "grammaticality_attribution",
+          "type": "evidential"
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "phenomenon": "nearest-noun-agreement-attraction",
+      "result": "partly_survives",
+      "expected_survival_pattern": "The graph should represent the nearest-attractor effect as a processing/naturalness perturbation that can change reported acceptability without licensing nearest-noun agreement.",
+      "notes": "Partly survives. PROC has the right processing and measurement separation, but it still lacks agreement-controller, feature-alignment, or retrieval-attractor constructs that would predict which attractors matter.",
+      "requirements": {
+        "required_nodes": [
+          "processing_cost",
+          "felt_naturalness_context",
+          "measurement_task",
+          "task_framing",
+          "reported_acceptability",
+          "community_licensing",
+          "grammaticality_attribution"
+        ],
+        "required_edges": [
+          {
+            "source": "processing_cost",
+            "target": "felt_naturalness_context",
+            "type": "causal"
+          },
+          {
+            "source": "felt_naturalness_context",
+            "target": "reported_acceptability",
+            "type": "measurement"
+          },
+          {
+            "source": "task_framing",
+            "target": "grammaticality_attribution",
+            "type": "causal"
+          },
+          {
+            "source": "community_licensing",
+            "target": "reported_acceptability",
+            "type": "measurement"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "processing_cost",
+            "target": "community_licensing",
+            "type": "causal"
+          },
+          {
+            "source": "reported_acceptability",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "low-load-controller-agreement",
+          "axes": {
+            "community": "English speakers judging ordinary subject-verb agreement without an attractor.",
+            "norm_centre": "Descriptive agreement norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Grammaticality judgment after ordinary reading.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "plural-attractor-first-pass",
+          "axes": {
+            "community": "English speakers exposed to a plural nearest-noun attractor.",
+            "norm_centre": "Descriptive agreement norm centre.",
+            "genre": "Timed or first-pass judgment item.",
+            "medium": "Written example or rapid serial visual presentation.",
+            "task_framing": "First-pass acceptability or naturalness under attraction.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "reread-structural-correction",
+          "axes": {
+            "community": "English speakers after rereading an attraction item.",
+            "norm_centre": "Descriptive or school agreement norm centre.",
+            "genre": "Judgment item with rereading or editing.",
+            "medium": "Written example.",
+            "task_framing": "Explicit grammaticality or correction judgment.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "notional-agreement-control",
+          "axes": {
+            "community": "English speakers in a variety or register allowing some notional agreement.",
+            "norm_centre": "Local descriptive norm centre rather than nearest-attractor framing.",
+            "genre": "Sentence judgment with collective or notional controller.",
+            "medium": "Written or spoken example.",
+            "task_framing": "Agreement-controller and acceptability judgment separated.",
+            "speaker_identity": "Variety-neutral speaker cue."
+          }
+        }
+      ]
+    }
+  ]
+}
