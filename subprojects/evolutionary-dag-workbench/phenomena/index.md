@@ -67,6 +67,7 @@ source-backed contrast cells for graph discovery and held-out projection.
 | [continuative-perfect-since-cgel](cards/continuative-perfect-since-cgel.md) | Perfect-tense anchoring and continuative aspectuality | Source-backed |
 | [perfect-already-yesterday-cgel](cards/perfect-already-yesterday-cgel.md) | Definite past-time expression, current relevance, and temporal-anchor fit | Source-backed |
 | [modal-preterite-remoteness-cgel](cards/modal-preterite-remoteness-cgel.md) | Preterite form, non-past time reference, and modal remoteness | Held-out source-backed |
+| [backshifted-preterite-orientation-cgel](cards/backshifted-preterite-orientation-cgel.md) | Preterite form, matrix-oriented time, and non-deictic temporal orientation | Held-out source-backed |
 | [catenative-complement-form-selection-cgel](cards/catenative-complement-form-selection-cgel.md) | Non-finite complement form, meaning, and selection | Source-backed |
 | [allow-prevent-complement-selection-cgel](cards/allow-prevent-complement-selection-cgel.md) | Catenative class, complement form, and neighbouring cohort variation | Source-backed |
 | [proximity-agreement-error-cgel](cards/proximity-agreement-error-cgel.md) | Nearest-NP salience vs agreement licensing | Source-backed |

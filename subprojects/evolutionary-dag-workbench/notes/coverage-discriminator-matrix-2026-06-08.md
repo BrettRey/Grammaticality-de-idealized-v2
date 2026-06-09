@@ -377,6 +377,18 @@ salience.
 This blocks a `scoped_module` label for `TEMP`. A second held-out modal/conditional card is needed
 before mutating the graph.
 
+## Forty-Second-Pass Addendum
+
+`TEMP` has now been tested against a second held-out preterite-orientation card:
+
+- `backshifted-preterite-orientation-cgel`: `TEMP` = `P`; it avoids treating backshifted preterite
+  as ordinary deictic past time, but it lacks a temporal-orientation frame for matrix/report-supplied
+  orientation.
+
+Together with `modal-preterite-remoteness-cgel`, this justifies a future `TEMP` mutation. The repair
+should be broader than a modal-remoteness-only node: the needed construct is temporal orientation
+source.
+
 ## Discriminators Already Doing Work
 
 - `left-branch-extraction`: separates `DYN` from `OPG`.
@@ -441,6 +453,8 @@ before mutating the graph.
   and forces a modal temporal inference frame.
 - `modal-preterite-remoteness-cgel`: first held-out pressure on `TEMP`; it separates preterite form
   from past-time anchoring and exposes the missing modal-remoteness frame.
+- `backshifted-preterite-orientation-cgel`: second held-out pressure on `TEMP`; it shows the missing
+  construct is temporal orientation source, not modal remoteness alone.
 - `allow-prevent-complement-selection-cgel`: separates catenative class structure from local
   cohort-conditioned `allowed doing` production.
 - `coordination-agreement-resolution-cgel`: forces agreement-controller and override constructs,
@@ -478,8 +492,8 @@ Newly exposed untested pairings remain:
    collection is available.
 2. Pause agreement growth unless a genuinely different source domain is available; the consolidated
    number-construal pass did not force mutation.
-3. Add a second held-out modal/conditional temporal card before mutating `TEMP`; the current
-   pressure is modal remoteness, not future tense.
+3. Mutate `TEMP` with a temporal-orientation frame if continuing the temporal lane; keep the new
+   construct distinct from modal inference and English future-tense analysis.
 4. Use held-out contrast cells to test whether `OPG`, `CAT`, and `SEL` remain complementary or
    require a fused-construction split.
 5. Test comparative-illusion cards against a combined category/noisy-channel interpretation only if
@@ -554,3 +568,5 @@ salience remain sufficient for the current agreement bundle.
 The forty-first pass gives `TEMP` its first held-out test. It partly survives
 `modal-preterite-remoteness-cgel`, but the missing modal-remoteness frame blocks scoped-module
 promotion and leaves mutation pending a second modal/conditional card.
+The forty-second pass adds that second pressure point. Backshifted preterite partly survives but
+shows the repair should be a temporal-orientation frame rather than a modal-remoteness-only node.

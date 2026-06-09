@@ -18,8 +18,7 @@ labor, not a winner.
 
 The next useful work is not more graph invention by default. It is to put the existing modules under
 additional data pressure, especially through a pronoun/pro-form audience-reference task run, a
-human judgment run for independent relative `whose`, or a second held-out modal/conditional card for
-`TEMP`.
+human judgment run for independent relative `whose`, or a temporal-orientation mutation for `TEMP`.
 
 ## Current Search Shape
 
@@ -41,7 +40,7 @@ flowchart LR
   UPT --> UptakeCases["clause type<br/>interjections<br/>move type"]
   FRAME --> FrameCases["I have five years<br/>island variation"]
   AGR --> AgreementCases["measure NPs<br/>fused heads<br/>coordination<br/>number construal"]
-  TEMP --> TemporalCases["perfect + yesterday<br/>narrative present<br/>modal perfect<br/>modal preterite pressure"]
+  TEMP --> TemporalCases["perfect + yesterday<br/>narrative present<br/>modal perfect<br/>preterite orientation pressure"]
 ```
 
 This map should be read as a live partition of work, not as a taxonomy. The modules are useful
@@ -56,7 +55,7 @@ because each now has a reasonably sharp boundary:
 | `UPT` | Update-role configuration, repertoire closedness, token innovability, stance, genre fit, and repair | clause type, interjection boundaries, duration-frame answer partly | Not a general social-indexical or operator-gap account |
 | `FRAME` | Question-answer frame fit and construction-specific dependency licensing | `I have five years`, island construction variation | Not an opportunity/preemption or general temporal-anchor account |
 | `AGR` | Controller identification, feature alignment, licensed override, notional basis, and retrieval-attractor salience | measure-NP agreement, fused determiner-head agreement, coordination and number-construal pressure | Not a category-analysis, pronoun/audience, diachronic, or general grammaticality account |
-| `TEMP` | Temporal-anchor fit across tense/aspect, modal inference, current relevance, continuative intervals, experiential frames, and narrative perspective | perfect plus definite past time, continuative perfect, already plus yesterday, narrative present, modal perfect by now; modal preterite partly | Held-out modal-preterite test is partial; not scoped until modal-remoteness pressure is resolved |
+| `TEMP` | Temporal-anchor fit across tense/aspect, modal inference, current relevance, continuative intervals, experiential frames, and narrative perspective | perfect plus definite past time, continuative perfect, already plus yesterday, narrative present, modal perfect by now; modal and backshifted preterite partly | Held-out preterite-orientation tests are partial; mutation needs a temporal-orientation frame |
 
 ## Evaluation Ladder
 
@@ -98,9 +97,8 @@ the cards used to build the graph.
 - Number construal and realization have now been consolidated under `AGR` without adding a new
   construct: notional basis, controller identification, override pattern, feature alignment, and
   attractor salience remain sufficient for the current agreement bundle.
-- `TEMP` has now received its first held-out temporal/modal test. It partly survives modal
-  preterite remoteness but lacks a modal-remoteness or remote-conditional frame, so promotion is
-  blocked.
+- `TEMP` has now received two held-out temporal/preterite-orientation tests. Both partly survive
+  and jointly point to a temporal-orientation frame rather than a modal-remoteness-only repair.
 - Comparative illusions now reinforce complementarity rather than mutation: category-analysis
   leakage belongs with `CAT`, repair distance with `RNR`/`INR`, and intended-meaning plausibility
   with `MPR`.

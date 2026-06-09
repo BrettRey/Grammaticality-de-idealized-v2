@@ -1,0 +1,178 @@
+{
+  "id": "temporal-anchor-heldout-backshifted-preterite-2026-06-09",
+  "target_graph": "graphs/archive/temporal-anchor-alignment-candidate.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "held-out",
+  "held_out_from": [
+    "temporal-anchor-alignment-2026-06-09",
+    "temporal-anchor-heldout-modal-preterite-2026-06-09",
+    "perfect-definite-past-time",
+    "continuative-perfect-since-cgel",
+    "perfect-already-yesterday-cgel",
+    "narrative-present-past-time-frame",
+    "modal-perfect-by-now-inference",
+    "modal-preterite-remoteness-cgel"
+  ],
+  "score_decision": "no-score-change",
+  "activated_paths": [
+    {
+      "id": "anchor-fit-to-licensing",
+      "phenomenon": "backshifted-preterite-orientation-cgel",
+      "contrast_cell": "reported-present-backshift",
+      "expected_path_reading": "warranting",
+      "prediction": "Temporal-anchor fit should contribute warrant for licensing, but the graph needs an orientation frame to predict why preterite form fits a reported present.",
+      "edges": [
+        {
+          "source": "temporal_anchor_fit",
+          "target": "community_licensing",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "recoverability-to-acceptability",
+      "phenomenon": "backshifted-preterite-orientation-cgel",
+      "contrast_cell": "remote-matrix-backshift-present",
+      "expected_path_reading": "positive",
+      "prediction": "Recoverability of the reported or embedded proposition can raise reported acceptability without itself licensing backshift.",
+      "edges": [
+        {
+          "source": "semantic_pragmatic_recoverability",
+          "target": "reported_acceptability",
+          "type": "causal"
+        }
+      ]
+    },
+    {
+      "id": "licensing-to-repair",
+      "phenomenon": "backshifted-preterite-orientation-cgel",
+      "contrast_cell": "ordinary-preterite-deictic",
+      "expected_path_reading": "negative",
+      "prediction": "Higher licensing for an ordinary deictic preterite should lower repair pressure in its own frame, but that does not predict backshift.",
+      "edges": [
+        {
+          "source": "community_licensing",
+          "target": "repair_reformulation_pressure",
+          "type": "causal"
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "phenomenon": "backshifted-preterite-orientation-cgel",
+      "result": "partly_survives",
+      "expected_survival_pattern": "The graph should avoid treating backshifted preterite as ordinary deictic past time, but should expose a missing temporal-orientation frame.",
+      "notes": "Partly survives. TEMP keeps tense/aspect value, temporal-anchor fit, recoverability, and licensing separate. It lacks a node for the source of temporal orientation, so it cannot distinguish ordinary deictic preterite, matrix/report-oriented backshift, and modal-remote orientation.",
+      "requirements": {
+        "required_nodes": [
+          "tense_aspect_value",
+          "temporal_anchor_expression",
+          "temporal_anchor_fit",
+          "constructional_frame_fit",
+          "semantic_pragmatic_recoverability",
+          "community_licensing",
+          "reported_acceptability",
+          "repair_reformulation_pressure",
+          "grammaticality_attribution"
+        ],
+        "required_edges": [
+          {
+            "source": "tense_aspect_value",
+            "target": "temporal_anchor_fit",
+            "type": "constitutive"
+          },
+          {
+            "source": "temporal_anchor_fit",
+            "target": "constructional_frame_fit",
+            "type": "constitutive"
+          },
+          {
+            "source": "temporal_anchor_fit",
+            "target": "community_licensing",
+            "type": "evidential"
+          },
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "reported_acceptability",
+            "type": "causal"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "tense_aspect_value",
+            "target": "community_licensing",
+            "type": "causal"
+          },
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "community_licensing",
+            "type": "causal"
+          },
+          {
+            "source": "reported_acceptability",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "ordinary-preterite-deictic",
+          "axes": {
+            "community": "English speakers judging ordinary deictic preterite with past-time orientation.",
+            "norm_centre": "Descriptive English tense norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Deictic past-time orientation baseline.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "reported-present-backshift",
+          "axes": {
+            "community": "English speakers judging a reported present proposition backshifted under a past reporting frame.",
+            "norm_centre": "Descriptive English tense and reported-speech norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Reported content, matrix time, and tense form separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "remote-matrix-backshift-present",
+          "axes": {
+            "community": "English speakers judging backshift inside a modally remote matrix clause with present situation time.",
+            "norm_centre": "Descriptive English tense, mood, and embedded-clause norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Matrix remoteness, embedded backshift, and embedded situation time separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "current-report-present",
+          "axes": {
+            "community": "English speakers judging present tense in a current or direct report frame.",
+            "norm_centre": "Descriptive English tense norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Non-backshifted present baseline.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "original-preterite-backshifted-perfect",
+          "axes": {
+            "community": "English speakers judging preterite perfect as the backshifted counterpart of an original preterite.",
+            "norm_centre": "Descriptive English tense and reported-speech norm centre.",
+            "genre": "Controlled sentence judgment.",
+            "medium": "Written example.",
+            "task_framing": "Original anteriority and backshifted orientation separated.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    }
+  ]
+}
