@@ -79,6 +79,19 @@ Module abbreviations:
 has no `scoped_module` label. The key contrast is repair-neighbour distance, not general
 recoverability.
 
+## Twenty-Second-Pass Addendum
+
+Four sharper noisy-channel subtype cards have been added from Gibson:
+
+- `missing-verb-phrase-illusion-gibson`: `RNR` = `S`; close omitted-material repair is the clean
+  case for repair-neighbour distance.
+- `depth-charge-semantic-illusion-gibson`: `RNR` = `P`; reconstruction is represented, but a
+  meaning-prior or intended-meaning-plausibility construct is missing.
+- `comparative-illusion-noisy-channel-gibson`: `RNR` = `P`; repair-neighbour reconstruction is
+  represented, but category/function analysis still belongs with `CAT`.
+- `edit-distance-acceptability-gibson`: `RNR` = `P`; repair distance is represented, but the graph
+  lacks length or information-mass normalization.
+
 ## Current Module Boundaries
 
 `DYN` is the best module for context-indexed licensing, ideology, correction, production, reported
@@ -171,6 +184,8 @@ Newly exposed untested pairings remain:
 
 - comparative-illusion and missing-material noisy-channel cards against `RNR` and `CAT`, to test
   whether repair-neighbour distance and category-analysis divergence stay separable.
+- edit-distance/length cards against a possible length-normalized repair candidate, if
+  `repair_neighbour_distance` remains too coarse.
 - richer island and dependency cards against `FRAME`, to test whether the new module stays scoped
   or overfits the first Gibson island card.
 
@@ -180,7 +195,8 @@ Newly exposed untested pairings remain:
    transparent-relative opportunity thresholds.
 2. Use held-out contrast cells to test whether `OPG`, `CAT`, and `SEL` remain complementary or
    require a fused-construction split.
-3. Build separate noisy-channel cards before promoting `RNR` beyond one-card candidate status.
+3. Test whether edit-distance/length effects need an information-mass or length-normalized repair
+   construct before promoting `RNR` beyond candidate status.
 4. Add richer island and dependency cards against `FRAME` before any numeric movement or broader
    dependency claim.
 
@@ -204,3 +220,5 @@ processing side, while `DYN` and `TASK` cover genre persistence and production/j
 The twenty-first pass resolves the intended-form-distance pressure by adding
 `repair-neighbour-reconstruction-candidate`, while keeping it unscored until it survives more than
 one noisy-channel contrast family.
+The twenty-second pass shows that `RNR` survives the close-repair subtype but is too coarse for
+depth-charge, comparative-illusion, and edit-distance/length effects.

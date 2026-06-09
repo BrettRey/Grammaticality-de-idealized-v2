@@ -1,0 +1,380 @@
+{
+  "id": "repair-neighbour-reconstruction-gibson-subtypes-2026-06-09",
+  "target_graph": "graphs/archive/repair-neighbour-reconstruction-candidate.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "protocol-bound",
+  "score_decision": "no-score-change",
+  "activated_paths": [
+    {
+      "id": "missing-verb-distance-to-acceptability",
+      "phenomenon": "missing-verb-phrase-illusion-gibson",
+      "contrast_cell": "missing-verb-close-repair",
+      "expected_path_reading": "negative",
+      "prediction": "Lower repair-neighbour distance should raise intended-form recovery, felt naturalness, and reported acceptability for missing-verb materials.",
+      "edges": [
+        {
+          "source": "repair_neighbour_distance",
+          "target": "semantic_pragmatic_recoverability",
+          "type": "causal"
+        },
+        {
+          "source": "semantic_pragmatic_recoverability",
+          "target": "felt_naturalness_context",
+          "type": "causal"
+        },
+        {
+          "source": "felt_naturalness_context",
+          "target": "reported_acceptability",
+          "type": "measurement"
+        }
+      ]
+    },
+    {
+      "id": "depth-charge-recoverability-to-acceptability",
+      "phenomenon": "depth-charge-semantic-illusion-gibson",
+      "contrast_cell": "plausible-global-interpretation",
+      "expected_path_reading": "negative",
+      "prediction": "A low-distance or highly available intended semantic neighbour can raise recoverability and acceptability, but the path does not yet model meaning priors.",
+      "edges": [
+        {
+          "source": "repair_neighbour_distance",
+          "target": "semantic_pragmatic_recoverability",
+          "type": "causal"
+        },
+        {
+          "source": "semantic_pragmatic_recoverability",
+          "target": "felt_naturalness_context",
+          "type": "causal"
+        },
+        {
+          "source": "felt_naturalness_context",
+          "target": "reported_acceptability",
+          "type": "measurement"
+        }
+      ]
+    },
+    {
+      "id": "comparative-task-to-attribution",
+      "phenomenon": "comparative-illusion-noisy-channel-gibson",
+      "contrast_cell": "literal-category-analysis",
+      "expected_path_reading": "indeterminate",
+      "prediction": "A category-analysis task should shift grammaticality attribution away from first-pass noisy-channel acceptability.",
+      "edges": [
+        {
+          "source": "task_framing",
+          "target": "grammaticality_attribution",
+          "type": "causal"
+        }
+      ]
+    },
+    {
+      "id": "edit-distance-to-acceptability",
+      "phenomenon": "edit-distance-acceptability-gibson",
+      "contrast_cell": "one-edit-short",
+      "expected_path_reading": "negative",
+      "prediction": "Higher repair-neighbour distance should lower felt naturalness and reported acceptability, but this graph cannot yet normalize by target length.",
+      "edges": [
+        {
+          "source": "repair_neighbour_distance",
+          "target": "felt_naturalness_context",
+          "type": "causal"
+        },
+        {
+          "source": "felt_naturalness_context",
+          "target": "reported_acceptability",
+          "type": "measurement"
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "phenomenon": "missing-verb-phrase-illusion-gibson",
+      "result": "survives_as_module",
+      "expected_survival_pattern": "The graph should predict inflated first-pass acceptability when the defective string is close to an intended omitted-material repair, while preserving literal-string non-licensing.",
+      "notes": "Survives. This is the cleanest use case for `repair_neighbour_distance`.",
+      "requirements": {
+        "required_nodes": [
+          "repair_neighbour_distance",
+          "semantic_pragmatic_recoverability",
+          "felt_naturalness_context",
+          "reported_acceptability",
+          "community_licensing",
+          "grammaticality_attribution",
+          "task_framing"
+        ],
+        "required_edges": [
+          {
+            "source": "repair_neighbour_distance",
+            "target": "semantic_pragmatic_recoverability",
+            "type": "causal"
+          },
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "felt_naturalness_context",
+            "type": "causal"
+          },
+          {
+            "source": "felt_naturalness_context",
+            "target": "reported_acceptability",
+            "type": "measurement"
+          },
+          {
+            "source": "task_framing",
+            "target": "grammaticality_attribution",
+            "type": "causal"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "reported_acceptability",
+            "target": "community_licensing",
+            "type": "causal"
+          },
+          {
+            "source": "repair_neighbour_distance",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "missing-verb-close-repair",
+          "axes": {
+            "community": "English speakers reading a missing-verb or missing-verb-phrase illusion item.",
+            "norm_centre": "Descriptive grammar norm centre.",
+            "genre": "Psycholinguistic acceptability item.",
+            "medium": "Written sentence.",
+            "task_framing": "First-pass acceptability or comprehension judgment.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "literal-proofreading",
+          "axes": {
+            "community": "English speakers asked to proofread the same presented string.",
+            "norm_centre": "Descriptive grammar or proofreading norm centre.",
+            "genre": "Grammar discussion or editing task.",
+            "medium": "Written sentence.",
+            "task_framing": "Literal error detection.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    },
+    {
+      "phenomenon": "depth-charge-semantic-illusion-gibson",
+      "result": "partly_survives",
+      "expected_survival_pattern": "The graph should separate reconstructed meaning from literal composition, but it should expose whether a meaning-prior construct is needed beyond repair-neighbour distance.",
+      "notes": "Partly survives. RNR captures reconstruction and task-sensitive attribution, but semantic illusions require a meaning-prior or intended-meaning-plausibility construct not yet represented.",
+      "requirements": {
+        "required_nodes": [
+          "repair_neighbour_distance",
+          "semantic_pragmatic_recoverability",
+          "felt_naturalness_context",
+          "reported_acceptability",
+          "grammaticality_attribution",
+          "task_framing"
+        ],
+        "required_edges": [
+          {
+            "source": "repair_neighbour_distance",
+            "target": "semantic_pragmatic_recoverability",
+            "type": "causal"
+          },
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "felt_naturalness_context",
+            "type": "causal"
+          },
+          {
+            "source": "felt_naturalness_context",
+            "target": "reported_acceptability",
+            "type": "measurement"
+          },
+          {
+            "source": "task_framing",
+            "target": "grammaticality_attribution",
+            "type": "causal"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "plausible-global-interpretation",
+          "axes": {
+            "community": "English speakers reading a depth-charge or semantic-illusion item.",
+            "norm_centre": "Descriptive grammar and semantics norm centre.",
+            "genre": "Comprehension or acceptability item.",
+            "medium": "Written sentence.",
+            "task_framing": "First-pass meaning or acceptability judgment.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "literal-composition",
+          "axes": {
+            "community": "English speakers asked to evaluate the literal composition of the same item.",
+            "norm_centre": "Descriptive grammar and semantics norm centre.",
+            "genre": "Literal interpretation or teaching item.",
+            "medium": "Written sentence.",
+            "task_framing": "Literal semantic analysis.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        }
+      ]
+    },
+    {
+      "phenomenon": "comparative-illusion-noisy-channel-gibson",
+      "result": "partly_survives",
+      "expected_survival_pattern": "The graph should model the reconstructed comparative channel but should not handle analyst category assignment by itself.",
+      "notes": "Partly survives. RNR captures noisy-channel reconstruction; CAT remains needed for category/function analysis in comparative illusion tasks.",
+      "requirements": {
+        "required_nodes": [
+          "repair_neighbour_distance",
+          "semantic_pragmatic_recoverability",
+          "felt_naturalness_context",
+          "reported_acceptability",
+          "grammaticality_attribution",
+          "task_framing"
+        ],
+        "required_edges": [
+          {
+            "source": "repair_neighbour_distance",
+            "target": "semantic_pragmatic_recoverability",
+            "type": "causal"
+          },
+          {
+            "source": "felt_naturalness_context",
+            "target": "reported_acceptability",
+            "type": "measurement"
+          },
+          {
+            "source": "task_framing",
+            "target": "grammaticality_attribution",
+            "type": "causal"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "reported_acceptability",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "plausible-comparative-repair",
+          "axes": {
+            "community": "English speakers reading a comparative illusion with a plausible intended comparative.",
+            "norm_centre": "Descriptive grammar norm centre.",
+            "genre": "Judgment or comprehension item.",
+            "medium": "Written sentence.",
+            "task_framing": "First-pass acceptability or interpretation judgment.",
+            "speaker_identity": "Unmarked speaker cue."
+          }
+        },
+        {
+          "id": "literal-category-analysis",
+          "axes": {
+            "community": "Analysts or trained respondents classifying the literal comparative construction.",
+            "norm_centre": "Category-analysis norm centre.",
+            "genre": "Grammar analysis task.",
+            "medium": "Written sentence.",
+            "task_framing": "Category/function classification.",
+            "speaker_identity": "Analyst or trained respondent cue."
+          }
+        }
+      ]
+    },
+    {
+      "phenomenon": "edit-distance-acceptability-gibson",
+      "result": "partly_survives",
+      "expected_survival_pattern": "The graph should predict that greater repair-neighbour distance lowers acceptability, but should fail to distinguish same-edit-count strings at different lengths.",
+      "notes": "Partly survives. RNR has repair distance, but not the length or information-mass normalization Gibson's rational-inference model requires.",
+      "requirements": {
+        "required_nodes": [
+          "repair_neighbour_distance",
+          "felt_naturalness_context",
+          "reported_acceptability",
+          "measurement_task",
+          "grammaticality_attribution",
+          "task_framing"
+        ],
+        "required_edges": [
+          {
+            "source": "repair_neighbour_distance",
+            "target": "felt_naturalness_context",
+            "type": "causal"
+          },
+          {
+            "source": "felt_naturalness_context",
+            "target": "reported_acceptability",
+            "type": "measurement"
+          },
+          {
+            "source": "measurement_task",
+            "target": "reported_acceptability",
+            "type": "causal"
+          },
+          {
+            "source": "task_framing",
+            "target": "grammaticality_attribution",
+            "type": "causal"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "reported_acceptability",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "one-edit-short",
+          "axes": {
+            "community": "Readers rating short one-edit strings against intact controls.",
+            "norm_centre": "Descriptive grammar norm centre.",
+            "genre": "Acceptability experiment.",
+            "medium": "Written sentence.",
+            "task_framing": "Acceptability rating.",
+            "speaker_identity": "Unmarked respondent cue."
+          }
+        },
+        {
+          "id": "one-edit-long",
+          "axes": {
+            "community": "Readers rating longer one-edit strings against intact controls.",
+            "norm_centre": "Descriptive grammar norm centre.",
+            "genre": "Acceptability experiment.",
+            "medium": "Written sentence.",
+            "task_framing": "Acceptability rating.",
+            "speaker_identity": "Unmarked respondent cue."
+          }
+        },
+        {
+          "id": "many-edit-scrambled",
+          "axes": {
+            "community": "Readers rating high-edit-distance scrambled strings.",
+            "norm_centre": "Descriptive grammar norm centre.",
+            "genre": "Acceptability experiment.",
+            "medium": "Written sentence.",
+            "task_framing": "Acceptability rating.",
+            "speaker_identity": "Unmarked respondent cue."
+          }
+        }
+      ]
+    }
+  ]
+}

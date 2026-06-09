@@ -77,6 +77,10 @@ discriminators for the next evaluation round.
 | [dependency-locality-alternations-gibson](cards/dependency-locality-alternations-gibson.md) | Licensed alternatives with different locality, production, and naturalness profiles | Source-backed |
 | [garden-path-temporary-ambiguity-gibson](cards/garden-path-temporary-ambiguity-gibson.md) | Illusion of ungrammaticality under strong temporary ambiguity | Source-backed |
 | [noisy-channel-overacceptance-gibson](cards/noisy-channel-overacceptance-gibson.md) | Illusion of grammaticality and rational reconstruction | Source-backed |
+| [missing-verb-phrase-illusion-gibson](cards/missing-verb-phrase-illusion-gibson.md) | Overacceptance from a close omitted-material repair | Source-backed |
+| [depth-charge-semantic-illusion-gibson](cards/depth-charge-semantic-illusion-gibson.md) | Plausible global interpretation despite incoherent literal composition | Source-backed |
+| [comparative-illusion-noisy-channel-gibson](cards/comparative-illusion-noisy-channel-gibson.md) | Category-sensitive illusion with a plausible intended comparative | Source-backed |
+| [edit-distance-acceptability-gibson](cards/edit-distance-acceptability-gibson.md) | Repair distance normalized by target information or length | Source-backed |
 | [island-construction-variation-gibson](cards/island-construction-variation-gibson.md) | Construction-specific island effects and controlled interaction tests | Source-backed |
 | [legalese-center-embedding-gibson](cards/legalese-center-embedding-gibson.md) | Genre-stabilized complexity without licensing failure | Source-backed |
 

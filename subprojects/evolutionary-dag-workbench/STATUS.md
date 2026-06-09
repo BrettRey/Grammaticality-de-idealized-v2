@@ -12,7 +12,7 @@ representations about grammaticality. The existing OVMG, detector, operator-stra
 processing-based, and normativity-based models are treated as seed graph families, not as
 conclusions or targets to vindicate.
 
-Twenty-one adversarial passes/synthesis steps have been run. All numeric scores remain zero. Six
+Twenty-two adversarial passes/synthesis steps have been run. All numeric scores remain zero. Six
 current modules have `scoped_module` labels tied to protocol-bound evaluations. The original
 scope-only evaluations now include card-level requirements and activated paths. Both held-out CGEL
 evaluations also include card-level requirements and activated paths without authorizing score
@@ -54,6 +54,11 @@ hybrid graph is justified yet.
 The twenty-first pass added `repair-neighbour-reconstruction-candidate` after noisy-channel
 overacceptance exposed that general recoverability is too broad. The candidate survives that card as
 a one-card module but remains unscored and has no `scoped_module` label.
+The twenty-second pass split the noisy-channel omnibus into four sharper Gibson-backed cards:
+missing-verb-phrase illusion, depth-charge semantic illusion, comparative illusion as
+noisy-channel repair, and edit-distance/length acceptability. `RNR` survives missing-verb repair,
+partly survives depth-charge and comparative illusions, and partly survives edit-distance
+acceptability while exposing a missing length/information-normalization construct.
 
 ## Current Candidate Stack
 
@@ -157,6 +162,8 @@ construct separation, or held-out projectibility, not by fitting a prior paper.
   `notes/twentieth-adversarial-pass-synthesis-2026-06-09.md`
 - repair-neighbour reconstruction synthesis in
   `notes/twenty-first-adversarial-pass-synthesis-2026-06-09.md`
+- noisy-channel subtype synthesis in
+  `notes/twenty-second-adversarial-pass-synthesis-2026-06-09.md`
 - coverage/discriminator matrix in `notes/coverage-discriminator-matrix-2026-06-08.md`
 - protocol-bound evaluation schema and exploratory evaluations in `evaluations/`
 - held-out CGEL/local-correction evaluations in `evaluations/protocol-tests/`
@@ -239,8 +246,8 @@ validation.
 
 1. Add data pointers for the remaining unresolved prediction-test cells: pronoun policy/audience
    design and rare transparent-relative opportunity thresholds.
-2. Build separate noisy-channel cards for comparative illusions, missing-verb materials, duplicated
-   or missing function words, and error-distance manipulations before promoting
+2. Decide whether edit-distance/length effects require an `information_mass` or
+   `length_normalized_repair_distance` construct before promoting
    `repair-neighbour-reconstruction-candidate`.
 3. Test whether `OPG`, `CAT`, and `SEL` stay complementary on richer fused-construction cards before
    adding any fused-head-specific graph.
