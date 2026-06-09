@@ -1,5 +1,5 @@
 {
-  "id": "frame-specific-dependency-licensing-perfect-adverbial-2026-06-09",
+  "id": "frame-specific-dependency-licensing-perfect-past-time-2026-06-09",
   "target_graph": "graphs/archive/frame-specific-dependency-licensing-candidate.json",
   "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
   "status": "protocol-bound",
@@ -7,8 +7,8 @@
   "activated_paths": [
     {
       "id": "frame-fit-to-licensing",
-      "phenomenon": "perfect-definite-past-adverbial",
-      "contrast_cell": "present-perfect-definite-past",
+      "phenomenon": "perfect-definite-past-time",
+      "contrast_cell": "present-perfect-definite-past-time",
       "expected_path_reading": "warranting",
       "prediction": "A failed tense/aspect-plus-definite-past frame should warrant a licensing contrast without using recoverability as licensing.",
       "edges": [
@@ -21,8 +21,8 @@
     },
     {
       "id": "recoverability-to-attribution",
-      "phenomenon": "perfect-definite-past-adverbial",
-      "contrast_cell": "present-perfect-definite-past",
+      "phenomenon": "perfect-definite-past-time",
+      "contrast_cell": "present-perfect-definite-past-time",
       "expected_path_reading": "indeterminate",
       "prediction": "Recoverability can raise reported acceptability for a transparent intended event, but this path remains indeterminate for licensing or grammar attribution.",
       "edges": [
@@ -40,8 +40,8 @@
     },
     {
       "id": "licensing-to-repair",
-      "phenomenon": "perfect-definite-past-adverbial",
-      "contrast_cell": "simple-past-definite-past",
+      "phenomenon": "perfect-definite-past-time",
+      "contrast_cell": "simple-past-definite-past-time",
       "expected_path_reading": "negative",
       "prediction": "Higher licensing for the simple-past-plus-definite-past frame should lower repair or reformulation pressure.",
       "edges": [
@@ -55,7 +55,7 @@
   ],
   "cards": [
     {
-      "phenomenon": "perfect-definite-past-adverbial",
+      "phenomenon": "perfect-definite-past-time",
       "result": "partly_survives",
       "expected_survival_pattern": "The graph should distinguish the licensed simple-past-plus-yesterday cell from the non-licensed present-perfect-plus-yesterday cell while keeping semantic recoverability separate from licensing.",
       "notes": "Partly survives. FRAME has the right broad contrast between constructional frame fit and recoverability, but it lacks a temporal-anchor or tense/aspect-specific construct that would predict this cell without analyst annotation.",
@@ -113,7 +113,7 @@
       },
       "contrast_cells": [
         {
-          "id": "simple-past-no-adverbial",
+          "id": "simple-past-no-definite-past-time",
           "axes": {
             "community": "Ordinary English speakers judging simple-past event description.",
             "norm_centre": "Standard descriptive English tense/aspect norm centre.",
@@ -124,7 +124,7 @@
           }
         },
         {
-          "id": "present-perfect-no-definite-past",
+          "id": "present-perfect-no-definite-past-time",
           "axes": {
             "community": "Ordinary English speakers judging present-perfect event description.",
             "norm_centre": "Standard descriptive English tense/aspect norm centre.",
@@ -135,9 +135,9 @@
           }
         },
         {
-          "id": "simple-past-definite-past",
+          "id": "simple-past-definite-past-time",
           "axes": {
-            "community": "Ordinary English speakers judging simple past with a definite past-time adverbial.",
+            "community": "Ordinary English speakers judging simple past with a definite past-time expression.",
             "norm_centre": "Standard descriptive English tense/aspect norm centre.",
             "genre": "Controlled sentence judgment.",
             "medium": "Written example or spoken sentence.",
@@ -146,9 +146,9 @@
           }
         },
         {
-          "id": "present-perfect-definite-past",
+          "id": "present-perfect-definite-past-time",
           "axes": {
-            "community": "Ordinary English speakers judging present perfect with a definite past-time adverbial.",
+            "community": "Ordinary English speakers judging present perfect with a definite past-time expression.",
             "norm_centre": "Standard descriptive English tense/aspect norm centre.",
             "genre": "Controlled sentence judgment.",
             "medium": "Written example or spoken sentence.",

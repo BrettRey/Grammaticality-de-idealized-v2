@@ -183,12 +183,22 @@ This blocks promotion of `INR`.
 
 Three local minimal-pair cards have been added and evaluated:
 
-- `perfect-definite-past-adverbial`: `FRAME` = `P`; frame fit and recoverability are separated,
+- `perfect-definite-past-time`: `FRAME` = `P`; frame fit and recoverability are separated,
   but a temporal-anchor or tense/aspect alignment construct is still missing.
 - `nearest-noun-agreement-attraction`: `PROC` = `P`; processing/naturalness perturbation is
   represented, but agreement-controller and retrieval-attractor machinery is still missing.
 - `attitude-complement-selection`: `SEL` = `S`; complement-type choice patterns as
   argument-linking selection rather than payload choice or raw collocation.
+
+No graph mutation or score movement follows from this pass.
+
+## Twenty-Seventh-Pass Addendum
+
+One local cohort-conditioned complement-selection card has been added:
+
+- `allowed-to-doing-cohort-contrast`: `SEL` = `P`; complement selection is represented, but the
+  adult/children contrast requires speaker/cohort identity, production probability, and diachronic
+  stabilization machinery that `SEL` intentionally lacks.
 
 No graph mutation or score movement follows from this pass.
 
@@ -232,12 +242,14 @@ No graph mutation or score movement follows from this pass.
 - `frame-conditioned-duration-have` and `island-construction-variation-gibson`: justify `FRAME` as
   a scoped module when the needed contrast is finer than broad update-role configuration or broad
   operator value.
-- `perfect-definite-past-adverbial`: pressures `FRAME` toward temporal-anchor specificity without
+- `perfect-definite-past-time`: pressures `FRAME` toward temporal-anchor specificity without
   yet justifying a new temporal graph.
 - `nearest-noun-agreement-attraction`: repeats the agreement-controller/retrieval gap left by the
   broader agreement cards and keeps `PROC` scoped to processing perturbation.
 - `attitude-complement-selection`: strengthens `SEL` as the complement-selection boundary module
   and sets up a future comparison with `FRAME` and `UPT`.
+- `allowed-to-doing-cohort-contrast`: separates complement-selection structure from
+  cohort-conditioned licensing and adult correction frames.
 
 ## Untested Cards
 
@@ -294,3 +306,6 @@ pressure while leaving comparative category/reconstruction interaction open.
 The twenty-sixth pass adds three local operator-contrast cards. It records two partial survivals
 without mutation (`FRAME` for perfect-plus-definite-past anchoring, `PROC` for nearest-noun
 agreement attraction) and one scoped survival (`SEL` for attitude complement selection).
+The twenty-seventh pass adds the `allowed to do` / `allowed doing` cohort contrast. It partly
+survives `SEL`, exposing the need to keep complement-selection structure separate from
+speaker/cohort and diachronic licensing channels.

@@ -12,7 +12,7 @@ representations about grammaticality. The existing OVMG, detector, operator-stra
 processing-based, and normativity-based models are treated as seed graph families, not as
 conclusions or targets to vindicate.
 
-Twenty-six adversarial passes/synthesis steps have been run. All numeric scores remain zero. Six
+Twenty-seven adversarial passes/synthesis steps have been run. All numeric scores remain zero. Six
 current modules have `scoped_module` labels tied to protocol-bound evaluations. The original
 scope-only evaluations now include card-level requirements and activated paths. Both held-out CGEL
 evaluations also include card-level requirements and activated paths without authorizing score
@@ -70,10 +70,14 @@ The twenty-fifth pass added `meaning-prior-reconstruction-candidate`, separating
 plausibility from literal-composition coherence. It survives the depth-charge card and partly
 survives comparative illusion, where category/function analysis remains outside the graph.
 The twenty-sixth pass added three local minimal-pair cards from Brett: perfect with a definite
-past-time adverbial, nearest-noun agreement attraction, and `know`/`believe`/`wonder` complement
-selection. `FRAME` partly survives the perfect/adverbial card, `PROC` partly survives nearest-noun
+past-time expression, nearest-noun agreement attraction, and `know`/`believe`/`wonder` complement
+selection. `FRAME` partly survives the perfect/past-time card, `PROC` partly survives nearest-noun
 agreement attraction, and `SEL` survives the attitude-complement card as a scoped
 complement-selection module. No new graph is justified yet.
+The twenty-seventh pass added the `allowed to do` / `allowed doing` cohort contrast. `SEL` partly
+survives because it handles complement-selection structure, but it lacks speaker/cohort identity,
+production probability, and diachronic stabilization nodes needed for the adult/children contrast.
+No new graph is justified yet.
 
 ## Current Candidate Stack
 
@@ -195,6 +199,8 @@ construct separation, or held-out projectibility, not by fitting a prior paper.
   `notes/twenty-fifth-adversarial-pass-synthesis-2026-06-09.md`
 - local operator-contrast synthesis in
   `notes/twenty-sixth-adversarial-pass-synthesis-2026-06-09.md`
+- cohort-conditioned complement-selection synthesis in
+  `notes/twenty-seventh-adversarial-pass-synthesis-2026-06-09.md`
 - coverage/discriminator matrix in `notes/coverage-discriminator-matrix-2026-06-08.md`
 - protocol-bound evaluation schema and exploratory evaluations in `evaluations/`
 - held-out CGEL/local-correction evaluations in `evaluations/protocol-tests/`

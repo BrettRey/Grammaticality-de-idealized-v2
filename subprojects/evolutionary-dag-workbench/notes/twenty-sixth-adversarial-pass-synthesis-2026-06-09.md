@@ -12,7 +12,7 @@
 
 Created three local minimal-pair cards:
 
-- `perfect-definite-past-adverbial`
+- `perfect-definite-past-time`
 - `nearest-noun-agreement-attraction`
 - `attitude-complement-selection`
 
@@ -23,7 +23,7 @@ graph inventory before broader CGEL, corpus, or elicitation sourcing.
 
 Added three protocol-bound no-score-change evaluations:
 
-- `frame-specific-dependency-licensing-perfect-adverbial-2026-06-09`
+- `frame-specific-dependency-licensing-perfect-past-time-2026-06-09`
 - `processing-naturalness-perturbation-nearest-agreement-2026-06-09`
 - `selection-collocation-split-attitude-complement-2026-06-09`
 
@@ -31,7 +31,7 @@ The activated paths validate and compute the intended path readings.
 
 ## Results
 
-`perfect-definite-past-adverbial` partly survives `FRAME`.
+`perfect-definite-past-time` partly survives `FRAME`.
 
 `FRAME` separates constructional frame fit from semantic recoverability, so it blocks the bad
 collapse: the present-perfect-plus-`yesterday` cell is transparent but not licensed in the target
@@ -61,7 +61,7 @@ The correct state is:
 
 - record the cards;
 - keep numeric scores at zero;
-- treat `perfect-definite-past-adverbial` and `nearest-noun-agreement-attraction` as live pressure
+- treat `perfect-definite-past-time` and `nearest-noun-agreement-attraction` as live pressure
   on finer constructs;
 - treat `attitude-complement-selection` as new support for `SEL`'s scoped complement-selection
   boundary.

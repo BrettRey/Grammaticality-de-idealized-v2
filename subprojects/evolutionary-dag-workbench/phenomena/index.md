@@ -93,9 +93,10 @@ elicitation support.
 | Card | Stress-test role | Current state |
 |---|---|---|
 | [frame-conditioned-duration-have](cards/frame-conditioned-duration-have.md) | Contextual anchoring without ad hoc licensing | Local minimal pair |
-| [perfect-definite-past-adverbial](cards/perfect-definite-past-adverbial.md) | Temporal anchoring and tense/aspect frame fit | Local minimal pair |
+| [perfect-definite-past-time](cards/perfect-definite-past-time.md) | Temporal anchoring and tense/aspect frame fit | Local minimal pair |
 | [nearest-noun-agreement-attraction](cards/nearest-noun-agreement-attraction.md) | Agreement-controller alignment vs nearest-attractor illusion | Local minimal pair |
 | [attitude-complement-selection](cards/attitude-complement-selection.md) | Complement selection, update role, and recoverability | Local minimal pair |
+| [allowed-to-doing-cohort-contrast](cards/allowed-to-doing-cohort-contrast.md) | Cohort-conditioned complement selection | Local minimal pair |
 
 ## Expansion Targets
 

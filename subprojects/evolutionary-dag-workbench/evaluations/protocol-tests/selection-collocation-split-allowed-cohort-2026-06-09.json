@@ -1,0 +1,190 @@
+{
+  "id": "selection-collocation-split-allowed-cohort-2026-06-09",
+  "target_graph": "graphs/archive/selection-collocation-split-candidate.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "protocol-bound",
+  "score_decision": "no-score-change",
+  "activated_paths": [
+    {
+      "id": "constructional-function-to-selection",
+      "phenomenon": "allowed-to-doing-cohort-contrast",
+      "contrast_cell": "adult-allowed-doing",
+      "expected_path_reading": "warranting",
+      "prediction": "`Allowed doing` should be treated as a complement-selection question, not as free payload variation.",
+      "edges": [
+        {
+          "source": "constructional_function",
+          "target": "argument_linking_selection",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "selection-to-repair",
+      "phenomenon": "allowed-to-doing-cohort-contrast",
+      "contrast_cell": "adult-allowed-doing",
+      "expected_path_reading": "non_sign_propagating",
+      "prediction": "In Brett's repertoire, a selected-complement mismatch should route through operator value and licensing before repair pressure.",
+      "edges": [
+        {
+          "source": "argument_linking_selection",
+          "target": "operator_value",
+          "type": "constitutive"
+        },
+        {
+          "source": "operator_value",
+          "target": "community_licensing",
+          "type": "constitutive"
+        },
+        {
+          "source": "community_licensing",
+          "target": "repair_reformulation_pressure",
+          "type": "causal"
+        }
+      ]
+    },
+    {
+      "id": "licensing-to-repair",
+      "phenomenon": "allowed-to-doing-cohort-contrast",
+      "contrast_cell": "children-allowed-doing",
+      "expected_path_reading": "negative",
+      "prediction": "If `allowed doing` is licensed in the children's repertoire, repair pressure should be lower inside that repertoire than in an adult correction frame.",
+      "edges": [
+        {
+          "source": "community_licensing",
+          "target": "repair_reformulation_pressure",
+          "type": "causal"
+        }
+      ]
+    },
+    {
+      "id": "acceptability-to-attribution",
+      "phenomenon": "allowed-to-doing-cohort-contrast",
+      "contrast_cell": "adult-correction-frame",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Adult correction-framed acceptability can influence attribution but should not decide licensing for the children's repertoire.",
+      "edges": [
+        {
+          "source": "reported_acceptability",
+          "target": "grammaticality_attribution",
+          "type": "evidential"
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "phenomenon": "allowed-to-doing-cohort-contrast",
+      "result": "partly_survives",
+      "expected_survival_pattern": "The graph should classify `allowed doing` as a complement-selection case while leaving cohort-conditioned licensing and diachronic stabilization to another module.",
+      "notes": "Partly survives. SEL has the selection path, but it lacks speaker/cohort identity, production probability, and diachronic stabilization nodes needed for the children-vs-adult contrast.",
+      "requirements": {
+        "required_nodes": [
+          "argument_linking_selection",
+          "constructional_function",
+          "operator_value",
+          "community_licensing",
+          "repair_reformulation_pressure",
+          "reported_acceptability",
+          "grammaticality_attribution"
+        ],
+        "forbidden_nodes": [
+          "speaker_identity",
+          "production_probability",
+          "diachronic_stabilization"
+        ],
+        "required_edges": [
+          {
+            "source": "constructional_function",
+            "target": "argument_linking_selection",
+            "type": "evidential"
+          },
+          {
+            "source": "argument_linking_selection",
+            "target": "operator_value",
+            "type": "constitutive"
+          },
+          {
+            "source": "operator_value",
+            "target": "community_licensing",
+            "type": "constitutive"
+          },
+          {
+            "source": "community_licensing",
+            "target": "repair_reformulation_pressure",
+            "type": "causal"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "payload_preposition_choice",
+            "target": "community_licensing",
+            "type": "causal"
+          },
+          {
+            "source": "reported_acceptability",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "adult-allowed-to",
+          "axes": {
+            "community": "Brett's adult English repertoire.",
+            "norm_centre": "Adult household or self-ascribed descriptive norm centre.",
+            "genre": "Everyday family speech report.",
+            "medium": "Spoken example reported in writing.",
+            "task_framing": "Complement-selection acceptability judgment.",
+            "speaker_identity": "Adult speaker cue."
+          }
+        },
+        {
+          "id": "adult-allowed-doing",
+          "axes": {
+            "community": "Brett's adult English repertoire.",
+            "norm_centre": "Adult household or self-ascribed descriptive norm centre.",
+            "genre": "Everyday family speech report.",
+            "medium": "Spoken example reported in writing.",
+            "task_framing": "Complement-selection rejection judgment.",
+            "speaker_identity": "Adult speaker cue."
+          }
+        },
+        {
+          "id": "children-allowed-to",
+          "axes": {
+            "community": "Brett's children's English repertoire.",
+            "norm_centre": "Child or younger-cohort household norm centre.",
+            "genre": "Everyday family speech.",
+            "medium": "Spoken example reported in writing.",
+            "task_framing": "Observed production and acceptability separated from adult correction.",
+            "speaker_identity": "Child speaker cue."
+          }
+        },
+        {
+          "id": "children-allowed-doing",
+          "axes": {
+            "community": "Brett's children's English repertoire.",
+            "norm_centre": "Child or younger-cohort household norm centre.",
+            "genre": "Everyday family speech.",
+            "medium": "Spoken example reported in writing.",
+            "task_framing": "Observed production and local licensing judgment.",
+            "speaker_identity": "Child speaker cue."
+          }
+        },
+        {
+          "id": "adult-correction-frame",
+          "axes": {
+            "community": "Adult evaluator responding to children's `allowed doing`.",
+            "norm_centre": "Adult correction or standard-oriented household norm centre.",
+            "genre": "Metalinguistic correction or report.",
+            "medium": "Spoken correction or written reflection.",
+            "task_framing": "Correction probability and grammaticality attribution separated from child-community licensing.",
+            "speaker_identity": "Adult evaluator cue."
+          }
+        }
+      ]
+    }
+  ]
+}

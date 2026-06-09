@@ -1,4 +1,4 @@
-# Phenomenon Card: perfect with definite past adverbial
+# Phenomenon Card: perfect with definite past time
 
 **Stress test:** Temporal anchoring and aspect/tense operator fit.
 
@@ -13,7 +13,7 @@ Ordinary English contrasts:
 
 The bad cell is transparent: the hearer can recover the intended event and time. The problem is
 not semantic opacity. In the relevant standard-English repertoire, the present perfect frame does
-not combine with a definite past-time anchor like `yesterday` in the way the simple past does.
+not combine with a definite past-time expression like `yesterday` in the way the simple past does.
 
 ## Source Pointers
 
@@ -29,10 +29,10 @@ meaning should not count as licensing for the present-perfect-plus-definite-past
 
 ## Minimum Contrast Cells
 
-- simple past without definite adverbial: `I did it`;
-- present perfect without definite past adverbial: `I have done it`;
-- simple past with definite past adverbial: `I did it yesterday`;
-- present perfect with definite past adverbial: `I have done it yesterday`.
+- simple past without definite past-time expression: `I did it`;
+- present perfect without definite past-time expression: `I have done it`;
+- simple past with definite past-time expression: `I did it yesterday`;
+- present perfect with definite past-time expression: `I have done it yesterday`.
 
 ## Candidate Nodes
 
@@ -49,7 +49,7 @@ meaning should not count as licensing for the present-perfect-plus-definite-past
 
 This card may require a more specific construct for temporal-anchor fit or tense/aspect value
 alignment if `constructional_frame_fit` and `operator_value` remain too broad to predict which
-temporal adverbials conflict with which tense/aspect frames.
+temporal expressions conflict with which tense/aspect frames.
 
 ## Graph Failure Modes
 
