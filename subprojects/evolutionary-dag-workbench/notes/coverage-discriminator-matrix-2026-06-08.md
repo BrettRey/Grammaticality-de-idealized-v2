@@ -490,8 +490,9 @@ Newly exposed untested pairings remain:
 
 1. Run the pronoun policy/audience task or independent-relative-`whose` human judgment task if data
    collection is available.
-2. Pause agreement growth unless a genuinely different source domain is available; the consolidated
-   number-construal pass did not force mutation.
+2. Run the `AGR` COCA projection protocol before adding more agreement cards; the consolidated
+   number-construal pass did not force mutation, and the next useful agreement pressure is a
+   registered corpus projection.
 3. Mutate `TEMP` with a temporal-orientation frame if continuing the temporal lane; keep the new
    construct distinct from modal inference and English future-tense analysis.
 4. Use held-out contrast cells to test whether `OPG`, `CAT`, and `SEL` remain complementary or

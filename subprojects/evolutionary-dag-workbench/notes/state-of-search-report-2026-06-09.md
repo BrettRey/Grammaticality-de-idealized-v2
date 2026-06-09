@@ -18,7 +18,8 @@ labor, not a winner.
 
 The next useful work is not more graph invention by default. It is to put the existing modules under
 additional data pressure, especially through a pronoun/pro-form audience-reference task run, a
-human judgment run for independent relative `whose`, or a temporal-orientation mutation for `TEMP`.
+human judgment run for independent relative `whose`, the `AGR` COCA projection lane, or a
+temporal-orientation mutation for `TEMP`.
 
 ## Current Search Shape
 
@@ -97,6 +98,9 @@ the cards used to build the graph.
 - Number construal and realization have now been consolidated under `AGR` without adding a new
   construct: notional basis, controller identification, override pattern, feature alignment, and
   attractor salience remain sufficient for the current agreement bundle.
+- `AGR` now has the first explicit COCA projection protocol. The decision is to improve on the
+  Linguistic Transparency COCA pilot with discovery/confirmation separation, opportunity
+  denominators, reproducible KWIC coding, uncertainty estimates, and search-error audit.
 - `TEMP` has now received two held-out temporal/preterite-orientation tests. Both partly survive
   and jointly point to a temporal-orientation frame rather than a modal-remoteness-only repair.
 - Comparative illusions now reinforce complementarity rather than mutation: category-analysis
@@ -156,6 +160,29 @@ If reference succeeds but acceptability shifts with audience or institutional fr
 the audience/reference split. If reference failure drives the same judgments regardless of audience,
 `AUD` is too social-indexical for the case.
 
+### Agreement COCA projection
+
+The agreement lane is the best first chance to move from structured survival toward actual
+projection. The design in `notes/agreement-coca-projection-protocol-2026-06-09.md` uses known
+number-transparent QN cases only for query calibration, then registers boundary targets such as
+`bunch`, `majority`, `minority`, and possibly the `couple` sense split before inspecting the
+confirmatory cells.
+
+```mermaid
+flowchart LR
+  Known["known QNs<br/>calibration only"] --> Register["pre-registered<br/>boundary prediction"]
+  Register --> Query["COCA query cells"]
+  Query --> KWIC["KWIC coding<br/>raw vs filtered"]
+  KWIC --> Denom["opportunity denominator"]
+  Denom --> Interval["intervals / upper bounds"]
+  Interval --> Eval["AGR projection update"]
+```
+
+This lane borrows KWIC-filtering discipline from the Linguistic Transparency COCA pilot and
+opportunity-funnel discipline from the English LBC paper. A pass would mean that notional basis,
+controller identification, and override pattern predict filtered agreement realization better than
+surface-head number alone.
+
 ## What Not To Write Yet
 
 This is not ready to be written as a general discovery result. In particular, do not yet claim:
@@ -174,8 +201,9 @@ rules, scoped modules, and two empirical lanes where it can start earning projec
 
 1. Run the pronoun/pro-form audience-reference task if data collection is available.
 2. Run the independent-relative-`whose` human judgment task if data collection is available.
-3. Add evaluation-level prediction paths only where a card actually activates an edge path.
-4. Keep numeric scores at zero until a held-out, source-backed evaluation proposes score movement
+3. Run the `AGR` COCA projection lane if COCA access and time are available.
+4. Add evaluation-level prediction paths only where a card actually activates an edge path.
+5. Keep numeric scores at zero until a held-out, source-backed evaluation proposes score movement
    through profiled paths.
-5. Use visual summaries only at the module and evaluation-ladder level until graph-level prediction
+6. Use visual summaries only at the module and evaluation-ladder level until graph-level prediction
    paths become load-bearing.

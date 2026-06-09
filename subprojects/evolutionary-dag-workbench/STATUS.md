@@ -12,7 +12,7 @@ representations about grammaticality. The existing OVMG, detector, operator-stra
 processing-based, and normativity-based models are treated as seed graph families, not as
 conclusions or targets to vindicate.
 
-Forty-two adversarial passes/synthesis steps have been run. All numeric scores remain zero. Seven
+Forty-three adversarial passes/synthesis steps have been run. All numeric scores remain zero. Seven
 current modules have `scoped_module` labels tied to protocol-bound or held-out `scope-only`
 evaluations. The original scope-only evaluations now include card-level requirements and activated
 paths. The held-out CGEL evaluations also include card-level requirements and activated paths
@@ -146,6 +146,10 @@ The forty-second pass added `backshifted-preterite-orientation-cgel` as a second
 `TEMP`. It partly survives and shows that the missing construct is broader than modal remoteness:
 the graph needs a temporal-orientation frame distinguishing deictic, matrix/report-supplied,
 modal-remote, narrative, and other construction-supplied orientation sources.
+The forty-third pass recorded `AGR` as the first COCA projection vertical slice. It adds a protocol
+and data scaffold that improves on the Linguistic Transparency COCA pilot by separating discovery
+from confirmation, requiring opportunity denominators, preserving reproducible KWIC coding, and
+estimating uncertainty before any projective score movement.
 An internal state-of-search report now summarizes the current scoped-module partition, evaluation
 ladder, the completed transparent-relative Lane A pass, and remaining empirical lanes without
 authorizing score movement.
@@ -244,6 +248,8 @@ construct separation, or held-out projectibility, not by fitting a prior paper.
 - temporal-anchor alignment candidate and evaluation in `graphs/archive/` and
   `evaluations/protocol-tests/`
 - number-construal/realization consolidation evaluation in `evaluations/protocol-tests/`
+- `AGR` COCA projection protocol in `notes/agreement-coca-projection-protocol-2026-06-09.md`
+- `AGR` COCA data scaffold in `data/agr-coca-projection/`
 - held-out temporal/modal evaluation in `evaluations/protocol-tests/`
 - second held-out temporal-orientation evaluation in `evaluations/protocol-tests/`
 - `DISCOVERY_RULES.md`
@@ -404,8 +410,8 @@ validation.
 
 1. Run the audience/policy pronoun task or independent-relative-`whose` human judgment task if data
    collection is available.
-2. Pause agreement growth unless a genuinely different source domain is available; the
-   number-construal consolidation pass did not force mutation.
+2. Run the `AGR` COCA projection protocol before adding more agreement cards; the next agreement
+   pressure should come from a registered corpus projection, not another CGEL accommodation.
 3. Mutate `TEMP` with a temporal-orientation frame if continuing the temporal lane; keep it distinct
    from modal temporal inference and from English future-tense analysis.
 4. Add one more catenative card only if it distinguishes catenative subtype from cohort-conditioned

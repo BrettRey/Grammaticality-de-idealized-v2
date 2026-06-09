@@ -19,3 +19,12 @@ Append non-trivial structural, methodological, and scope decisions here.
 - **Score projectibility and penalize theory preservation.** Add `projective_power` and
   `theory_preservation_penalty` to the rubric so held-out forecasts count separately from coverage
   and theory-saving moves are visible.
+
+## 2026-06-09
+
+- **Use `AGR` as the first COCA projection vertical slice.** The number-transparent/collective
+  agreement work in `Linguistic_transparency` supplies the immediate corpus precedent, but the
+  workbench should improve on it by separating discovery from confirmation, defining opportunity
+  denominators, preserving reproducible KWIC coding, estimating uncertainty, and auditing
+  false-positive/false-omission rates. COCA evidence is a measurement source for controller,
+  override, and agreement-realization predictions, not a grammaticality oracle.
