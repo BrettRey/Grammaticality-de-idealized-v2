@@ -264,6 +264,18 @@ Created `agreement-controller-override-heldout-scope-2026-06-09`, a held-out `sc
 evaluation combining the measure and fused determiner-head cards. `agreement-controller-override-candidate`
 now has a `scoped_module` label. All numeric scores remain zero.
 
+## Thirty-Fourth-Pass Addendum
+
+One measurement-validity card has been added and evaluated:
+
+- `ann-brain-lexical-semantic-predictivity`: `PROC` = `P`, `CAT` = `P`, `OPG` = `O`. The Kauf et
+  al. ANN/fMRI result is useful evidence about a measurement channel, not direct evidence about
+  grammatical licensing, syntactic structure, or operator gaps.
+
+No graph mutation follows. The card's main value is to block inference from ANN-to-brain
+predictivity to grammar-facing constructs unless a graph explicitly represents the measurement
+channel and a grammar-relevant contrast cell.
+
 ## Discriminators Already Doing Work
 
 - `left-branch-extraction`: separates `DYN` from `OPG`.
@@ -283,6 +295,8 @@ now has a `scoped_module` label. All numeric scores remain zero.
   update-role/repertoire-boundary discipline.
 - `frequent-condemned-form`: confirms that `DYN` and `TASK` already cover the
   frequency/condemnation split, while `CAT` is out of scope.
+- `ann-brain-lexical-semantic-predictivity`: separates measurement-channel sensitivity from
+  grammatical licensing, keeping `PROC` and `CAT` partial while blocking `OPG` overreach.
 - `fused-head-nps-cgel`: confirms that `OPG` covers constructional analogy plus recoverability,
   while `CAT` and `SEL` cover only category/function and selection-adjacent pieces.
 - `dependency-locality-alternations-gibson`: strengthens `PROC` as a licensed-but-less-natural

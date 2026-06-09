@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Evolutionary DAG Workbench State</title>
+  <style>
+    :root {
+      --ink: #17212b;
+      --muted: #617080;
+      --line: #d8dee6;
+      --paper: #f7f8fa;
+      --panel: #ffffff;
+      --blue: #2d6cdf;
+      --green: #16835f;
+      --amber: #b16b00;
+      --red: #b33a3a;
+      --violet: #6b4fc4;
+      --cyan: #147b8f;
+      --gray: #8591a0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.4;
+    }
+
+    header {
+      padding: 28px 32px 18px;
+      background: #ffffff;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h1, h2, h3, p {
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+
+    .subtitle {
+      margin-top: 8px;
+      color: var(--muted);
+      max-width: 980px;
+      font-size: 15px;
+    }
+
+    main {
+      padding: 24px 32px 40px;
+      display: grid;
+      gap: 24px;
+    }
+
+    section {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 1px 2px rgba(20, 28, 38, 0.04);
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    h3 {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(120px, 1fr));
+      gap: 12px;
+    }
+
+    .metric {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      background: #fbfcfd;
+    }
+
+    .metric-value {
+      display: block;
+      font-size: 28px;
+      font-weight: 750;
+    }
+
+    .metric-label {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 3px;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(320px, 0.7fr);
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .module-map {
+      position: relative;
+      min-height: 510px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background:
+        linear-gradient(90deg, rgba(216, 222, 230, 0.45) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(216, 222, 230, 0.45) 1px, transparent 1px);
+      background-size: 36px 36px;
+      overflow: hidden;
+    }
+
+    .node {
+      position: absolute;
+      width: 210px;
+      min-height: 84px;
+      border: 2px solid var(--line);
+      border-radius: 8px;
+      background: #ffffff;
+      padding: 11px 12px;
+      box-shadow: 0 8px 18px rgba(23, 33, 43, 0.08);
+    }
+
+    .node strong {
+      display: block;
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+
+    .node span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .scoped {
+      border-color: var(--green);
+    }
+
+    .candidate {
+      border-color: var(--gray);
+    }
+
+    .pressure {
+      border-color: var(--amber);
+    }
+
+    .n-dyn { left: 32px; top: 38px; }
+    .n-opg { left: 336px; top: 38px; }
+    .n-aud { left: 640px; top: 38px; }
+    .n-proc { left: 32px; top: 198px; }
+    .n-upt { left: 336px; top: 198px; }
+    .n-frame { left: 640px; top: 198px; }
+    .n-agr { left: 336px; top: 358px; }
+
+    .connector {
+      position: absolute;
+      height: 2px;
+      background: var(--line);
+      transform-origin: 0 50%;
+    }
+
+    .c1 { left: 242px; top: 78px; width: 94px; }
+    .c2 { left: 546px; top: 78px; width: 94px; }
+    .c3 { left: 136px; top: 122px; width: 126px; transform: rotate(62deg); }
+    .c4 { left: 442px; top: 122px; width: 126px; transform: rotate(62deg); }
+    .c5 { left: 650px; top: 282px; width: 132px; transform: rotate(122deg); }
+    .c6 { left: 442px; top: 282px; width: 104px; transform: rotate(90deg); }
+
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .legend-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .swatch {
+      width: 12px;
+      height: 12px;
+      border-radius: 3px;
+      border: 2px solid currentColor;
+    }
+
+    .ladder {
+      display: grid;
+      gap: 10px;
+    }
+
+    .step {
+      border: 1px solid var(--line);
+      border-left: 5px solid var(--blue);
+      border-radius: 8px;
+      padding: 10px 12px;
+      background: #fbfcfd;
+    }
+
+    .step small {
+      color: var(--muted);
+    }
+
+    .module-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(260px, 1fr));
+      gap: 12px;
+    }
+
+    .module-card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 13px;
+      background: #fbfcfd;
+    }
+
+    .module-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .abbr {
+      font-weight: 750;
+      font-size: 15px;
+    }
+
+    .kind {
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .bar {
+      display: flex;
+      height: 12px;
+      overflow: hidden;
+      border-radius: 999px;
+      background: #e8edf3;
+      margin: 9px 0 8px;
+    }
+
+    .bar span {
+      display: block;
+      min-width: 2px;
+    }
+
+    .survive { background: var(--green); }
+    .partial { background: var(--amber); }
+    .out { background: var(--red); }
+
+    .counts {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .heatmap {
+      display: grid;
+      grid-template-columns: 210px repeat(3, minmax(70px, 1fr)) 90px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .cell {
+      padding: 9px 10px;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      min-height: 40px;
+      font-size: 13px;
+      background: #ffffff;
+    }
+
+    .cell:nth-child(5n) {
+      border-right: 0;
+    }
+
+    .head {
+      background: #eef2f7;
+      font-weight: 700;
+    }
+
+    .shade0 { background: #ffffff; color: var(--gray); }
+    .shade1 { background: #edf7f3; }
+    .shade2 { background: #d8efe6; }
+    .shade3 { background: #b9e1d2; }
+    .shade4 { background: #91ceb8; }
+    .shadeP1 { background: #fff5e6; }
+    .shadeP2 { background: #ffe6bd; }
+    .shadeP3 { background: #ffd38d; }
+    .shadeP4 { background: #f4b75f; }
+    .shadeO1 { background: #fcecec; }
+    .shadeO2 { background: #f5cccc; }
+    .shadeO3 { background: #eaa5a5; }
+
+    .lanes {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(280px, 1fr));
+      gap: 14px;
+    }
+
+    .lane {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      background: #fbfcfd;
+    }
+
+    .flow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 32px;
+      padding: 6px 9px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #ffffff;
+      color: var(--ink);
+      font-size: 12px;
+    }
+
+    .arrow {
+      color: var(--muted);
+      align-self: center;
+      font-size: 18px;
+    }
+
+    .note {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 8px;
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.95em;
+    }
+
+    @media (max-width: 1080px) {
+      .metrics, .module-grid, .lanes, .split {
+        grid-template-columns: 1fr;
+      }
+
+      .module-map {
+        min-height: auto;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(220px, 1fr));
+        gap: 12px;
+        padding: 14px;
+      }
+
+      .node {
+        position: static;
+        width: auto;
+      }
+
+      .connector {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Evolutionary DAG Workbench State</h1>
+    <p class="subtitle">
+      Snapshot of the current search space after 34 adversarial passes. This view treats the
+      workbench as a discovery system: scoped modules, pressure zones, held-out evidence, and
+      unearned scores are kept visually separate.
+    </p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Current Scale</h2>
+      <div class="metrics">
+        <div class="metric"><span class="metric-value">49</span><span class="metric-label">phenomenon cards</span></div>
+        <div class="metric"><span class="metric-value">52</span><span class="metric-label">evaluations</span></div>
+        <div class="metric"><span class="metric-value">17</span><span class="metric-label">candidate graphs</span></div>
+        <div class="metric"><span class="metric-value">7</span><span class="metric-label">scoped modules</span></div>
+        <div class="metric"><span class="metric-value">4</span><span class="metric-label">held-out evaluations</span></div>
+        <div class="metric"><span class="metric-value">0</span><span class="metric-label">numeric scores earned</span></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Module Partition</h2>
+      <div class="split">
+        <div>
+          <div class="module-map" aria-label="Current scoped module map">
+            <div class="connector c1"></div>
+            <div class="connector c2"></div>
+            <div class="connector c3"></div>
+            <div class="connector c4"></div>
+            <div class="connector c5"></div>
+            <div class="connector c6"></div>
+
+            <div class="node scoped n-dyn">
+              <strong>DYN</strong>
+              <span>Context-indexed licensing, production, ideology, correction, judgment</span>
+            </div>
+            <div class="node scoped n-opg">
+              <strong>OPG</strong>
+              <span>Opportunity, recoverability, preemption, operator gaps, repair pressure</span>
+            </div>
+            <div class="node scoped n-aud">
+              <strong>AUD</strong>
+              <span>Pronoun/pro-form reference, personhood, audience, social-indexical channel</span>
+            </div>
+            <div class="node scoped n-proc">
+              <strong>PROC</strong>
+              <span>Processing cost, felt naturalness, recoverability, task perturbation</span>
+            </div>
+            <div class="node scoped n-upt">
+              <strong>UPT</strong>
+              <span>Update role, repertoire closure, interjection and clause-type boundaries</span>
+            </div>
+            <div class="node scoped n-frame">
+              <strong>FRAME</strong>
+              <span>Question-answer frame fit and construction-specific dependency licensing</span>
+            </div>
+            <div class="node scoped n-agr">
+              <strong>AGR</strong>
+              <span>Controller identification, feature alignment, notional override, attractors</span>
+            </div>
+          </div>
+          <div class="legend">
+            <span class="legend-item"><span class="swatch" style="color: var(--green)"></span> scoped module</span>
+            <span class="legend-item"><span class="swatch" style="color: var(--amber)"></span> pressure zone</span>
+            <span class="legend-item"><span class="swatch" style="color: var(--gray)"></span> unpromoted candidate</span>
+          </div>
+        </div>
+
+        <div class="ladder">
+          <div class="step"><strong>Seed</strong><br><small>Six seed families remain score-zero and non-privileged.</small></div>
+          <div class="step"><strong>Critique and Mutate</strong><br><small>Adversarial passes add one constraint at a time.</small></div>
+          <div class="step"><strong>Protocol-bound Evaluation</strong><br><small>Cards, contrast cells, requirements, and activated paths.</small></div>
+          <div class="step"><strong>Held-out Check</strong><br><small>Projective pressure without numeric promotion by default.</small></div>
+          <div class="step"><strong>Scope-only Label</strong><br><small>Seven modules survive locally; none becomes a general account.</small></div>
+          <div class="step"><strong>Measurement</strong><br><small>Transparent-relative and pronoun/audience lanes are next.</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Scoped Modules by Evaluation Outcome</h2>
+      <div class="module-grid">
+        <div class="module-card">
+          <div class="module-head"><span class="abbr">OPG</span><span class="kind">scoped</span></div>
+          <h3>Operator gap / opportunity</h3>
+          <div class="bar"><span class="survive" style="width: 15.8%"></span><span class="partial" style="width: 68.4%"></span><span class="out" style="width: 15.8%"></span></div>
+          <p class="counts">19 evaluated card results: 3 survive, 13 partly survive, 3 out of scope. Best for rare/transparent and dependency-gap cases.</p>
+        </div>
+        <div class="module-card">
+          <div class="module-head"><span class="abbr">DYN</span><span class="kind">scoped</span></div>
+          <h3>Context / diachrony</h3>
+          <div class="bar"><span class="survive" style="width: 33.3%"></span><span class="partial" style="width: 40%"></span><span class="out" style="width: 26.7%"></span></div>
+          <p class="counts">15 evaluated card results: 5 survive, 6 partly survive, 4 out of scope. Best for licensing, ideology, correction, and production feedback.</p>
+        </div>
+        <div class="module-card">
+          <div class="module-head"><span class="abbr">AGR</span><span class="kind">scoped</span></div>
+          <h3>Agreement controller / override</h3>
+          <div class="bar"><span class="survive" style="width: 100%"></span></div>
+          <p class="counts">7 evaluated card results: 7 survive. The cleanest scoped module so far, but still score-zero.</p>
+        </div>
+        <div class="module-card">
+          <div class="module-head"><span class="abbr">PROC</span><span class="kind">scoped</span></div>
+          <h3>Processing / naturalness</h3>
+          <div class="bar"><span class="survive" style="width: 40%"></span><span class="partial" style="width: 60%"></span></div>
+          <p class="counts">10 evaluated card results: 4 survive, 6 partly survive. Best for comprehension cost, illusions, and measurement perturbation.</p>
+        </div>
+        <div class="module-card">
+          <div class="module-head"><span class="abbr">FRAME</span><span class="kind">scoped</span></div>
+          <h3>Frame-specific licensing</h3>
+          <div class="bar"><span class="survive" style="width: 40%"></span><span class="partial" style="width: 60%"></span></div>
+          <p class="counts">5 evaluated card results: 2 survive, 3 partly survive. Best for question-answer frame fit and construction-specific dependency effects.</p>
+        </div>
+        <div class="module-card">
+          <div class="module-head"><span class="abbr">AUD</span><span class="kind">scoped</span></div>
+          <h3>Audience / reference tracking</h3>
+          <div class="bar"><span class="survive" style="width: 33.3%"></span><span class="partial" style="width: 66.7%"></span></div>
+          <p class="counts">3 evaluated card results: 1 survives, 2 partly survive. Strongest pressure is the mixed audience-policy cell.</p>
+        </div>
+        <div class="module-card">
+          <div class="module-head"><span class="abbr">UPT</span><span class="kind">scoped</span></div>
+          <h3>Uptake / operator boundary</h3>
+          <div class="bar"><span class="survive" style="width: 75%"></span><span class="partial" style="width: 25%"></span></div>
+          <p class="counts">4 evaluated card results: 3 survive, 1 partly survives. Best for clause-type and interjection boundary cases.</p>
+        </div>
+        <div class="module-card">
+          <div class="module-head"><span class="abbr">Near modules</span><span class="kind" style="color: var(--gray)">unscored</span></div>
+          <h3>SEL / CAT / TASK / RNR / INR / MPR</h3>
+          <div class="bar"><span class="survive" style="width: 35%"></span><span class="partial" style="width: 55%"></span><span class="out" style="width: 10%"></span></div>
+          <p class="counts">Useful but unpromoted candidates. They mark repeated pressures: selection, measurement discipline, noisy-channel repair, and meaning priors.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Coverage Heatmap</h2>
+      <div class="heatmap">
+        <div class="cell head">Module</div>
+        <div class="cell head">Survives</div>
+        <div class="cell head">Partial</div>
+        <div class="cell head">Out of scope</div>
+        <div class="cell head">Prediction tests</div>
+
+        <div class="cell">OPG</div><div class="cell shade3">3</div><div class="cell shadeP4">13</div><div class="cell shadeO3">3</div><div class="cell">2</div>
+        <div class="cell">DYN</div><div class="cell shade4">5</div><div class="cell shadeP3">6</div><div class="cell shadeO3">4</div><div class="cell">4</div>
+        <div class="cell">AGR</div><div class="cell shade4">7</div><div class="cell shade0">0</div><div class="cell shade0">0</div><div class="cell">3</div>
+        <div class="cell">PROC</div><div class="cell shade3">4</div><div class="cell shadeP3">6</div><div class="cell shade0">0</div><div class="cell">0</div>
+        <div class="cell">SEL</div><div class="cell shade2">2</div><div class="cell shadeP3">5</div><div class="cell shadeO1">1</div><div class="cell">0</div>
+        <div class="cell">TASK</div><div class="cell shade3">3</div><div class="cell shadeP2">3</div><div class="cell shadeO2">2</div><div class="cell">0</div>
+        <div class="cell">FRAME</div><div class="cell shade2">2</div><div class="cell shadeP2">3</div><div class="cell shade0">0</div><div class="cell">0</div>
+        <div class="cell">CAT</div><div class="cell shade1">1</div><div class="cell shadeP2">3</div><div class="cell shadeO1">1</div><div class="cell">0</div>
+        <div class="cell">RNR</div><div class="cell shade2">2</div><div class="cell shadeP2">3</div><div class="cell shade0">0</div><div class="cell">0</div>
+        <div class="cell">INR</div><div class="cell shade2">2</div><div class="cell shadeP1">2</div><div class="cell shade0">0</div><div class="cell">0</div>
+        <div class="cell">UPT</div><div class="cell shade3">3</div><div class="cell shadeP1">1</div><div class="cell shade0">0</div><div class="cell">0</div>
+        <div class="cell">AUD</div><div class="cell shade1">1</div><div class="cell shadeP1">2</div><div class="cell shade0">0</div><div class="cell">3</div>
+        <div class="cell">MPR</div><div class="cell shade1">1</div><div class="cell shadeP1">1</div><div class="cell shade0">0</div><div class="cell">0</div>
+      </div>
+      <p class="note">Darker green means more survive-as-module results; darker amber means more partial-survival pressure; red marks explicit out-of-scope failures.</p>
+    </section>
+
+    <section>
+      <h2>Immediate Measurement Lanes</h2>
+      <div class="lanes">
+        <div class="lane">
+          <h3>Transparent-relative opportunity denominator</h3>
+          <p class="note">Tests whether rarity is weak evidence, probative absence, or scoped licensing once opportunity context is checked.</p>
+          <div class="flow">
+            <span class="pill">raw hits</span><span class="arrow">→</span>
+            <span class="pill">false-positive filter</span><span class="arrow">→</span>
+            <span class="pill">checked denominator</span><span class="arrow">→</span>
+            <span class="pill">opportunity-normalized attestation</span><span class="arrow">→</span>
+            <span class="pill">licensing warrant</span>
+          </div>
+        </div>
+        <div class="lane">
+          <h3>Pronoun/pro-form audience-reference design</h3>
+          <p class="note">Tests whether judgments move through reference success, personhood, audience, policy framing, or social-indexical value.</p>
+          <div class="flow">
+            <span class="pill">reference task</span><span class="arrow">→</span>
+            <span class="pill">audience cue</span><span class="arrow">→</span>
+            <span class="pill">policy frame</span><span class="arrow">→</span>
+            <span class="pill">reported acceptability</span><span class="arrow">→</span>
+            <span class="pill">attribution</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -12,7 +12,7 @@ representations about grammaticality. The existing OVMG, detector, operator-stra
 processing-based, and normativity-based models are treated as seed graph families, not as
 conclusions or targets to vindicate.
 
-Thirty-three adversarial passes/synthesis steps have been run. All numeric scores remain zero. Seven
+Thirty-four adversarial passes/synthesis steps have been run. All numeric scores remain zero. Seven
 current modules have `scoped_module` labels tied to protocol-bound evaluations. The original
 scope-only evaluations now include card-level requirements and activated paths. Both held-out CGEL
 evaluations also include card-level requirements and activated paths without authorizing score
@@ -102,6 +102,10 @@ opportunity thresholds.
 The thirty-third pass converted the rare transparent-relative data-pointer lane into an explicit
 opportunity-denominator measurement design. It still does not run new corpus data or authorize score
 movement.
+The thirty-fourth pass added a source-backed measurement-validity card from Kauf et al. (2023) on
+ANN-to-brain similarity. `PROC` and `CAT` partly survive because they enforce measurement-channel
+discipline, while `OPG` is out of scope as a general account. No graph mutation or score movement
+follows.
 An internal state-of-search report now summarizes the current scoped-module partition, evaluation
 ladder, and two live empirical lanes without authorizing score movement.
 
@@ -191,6 +195,7 @@ construct separation, or held-out projectibility, not by fitting a prior paper.
 - source-backed CGEL/local-correction card tranche in `phenomena/cards/`
 - source-backed Gibson processing/dependency card tranche in `phenomena/cards/`
 - local minimal-pair card tranche in `phenomena/cards/`
+- measurement-validity card tranche in `phenomena/cards/`
 - `DISCOVERY_RULES.md`
 - initial phenomenon cards in `phenomena/cards/`
 - graph schema and seed graphs in `graphs/`
@@ -198,7 +203,7 @@ construct separation, or held-out projectibility, not by fitting a prior paper.
 - stdlib validation, linting, and scoring scripts in `scripts/`
 - evaluation summary utility in `scripts/summarize_evaluations.py`
 - source map and pressure test in `notes/`
-- CGEL/Gibson/local correction source registry in `notes/cgel-source-registry.md`
+- CGEL/Gibson/measurement/local correction source registry in `notes/cgel-source-registry.md`
 - conditioning protocol in `notes/conditioning-operationalization-protocol-2026-06-07.md`
 - scoped scoring policy in `notes/scoped-scoring-policy-2026-06-07.md`
 - task-separated feedback synthesis in `notes/seventh-adversarial-pass-synthesis-2026-06-08.md`
@@ -246,13 +251,18 @@ construct separation, or held-out projectibility, not by fitting a prior paper.
   `notes/transparent-relative-opportunity-measurement-design-2026-06-09.md`
 - transparent-relative measurement-design synthesis in
   `notes/thirty-third-adversarial-pass-synthesis-2026-06-09.md`
+- ANN/fMRI measurement-validity synthesis in
+  `notes/thirty-fourth-adversarial-pass-synthesis-2026-06-09.md`
 - state-of-search report with module/evaluation visual maps in
   `notes/state-of-search-report-2026-06-09.md`
+- static state visualization in
+  `visualizations/workbench-state-2026-06-09.html`
 - coverage/discriminator matrix in `notes/coverage-discriminator-matrix-2026-06-08.md`
 - protocol-bound evaluation schema and exploratory evaluations in `evaluations/`
 - held-out CGEL/local-correction evaluations in `evaluations/protocol-tests/`
 - agreement, center-embedding, uptake-boundary, frequent-condemned-form, fused-head,
-  Gibson-backed, local minimal-pair, local operator-contrast, and frame-specific dependency evaluations in
+  Gibson-backed, local minimal-pair, local operator-contrast, frame-specific dependency, and
+  measurement-validity evaluations in
   `evaluations/protocol-tests/`
 - positive and negative validator fixtures in `tests/fixtures/`
 

@@ -1,0 +1,124 @@
+{
+  "id": "category-measurement-discipline-ann-brain-2026-06-09",
+  "target_graph": "graphs/archive/category-measurement-discipline-candidate.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "protocol-bound",
+  "score_decision": "no-score-change",
+  "activated_paths": [
+    {
+      "id": "measurement-task-to-attribution-guard",
+      "phenomenon": "ann-brain-lexical-semantic-predictivity",
+      "contrast_cell": "invalid-grammar-inference",
+      "expected_path_reading": "indeterminate",
+      "prediction": "A measurement task can influence analyst category assignment and grammaticality attribution without directly establishing community licensing.",
+      "edges": [
+        {
+          "source": "measurement_task",
+          "target": "analyst_category_assignment",
+          "type": "causal"
+        },
+        {
+          "source": "analyst_category_assignment",
+          "target": "grammaticality_attribution",
+          "type": "evidential"
+        }
+      ]
+    },
+    {
+      "id": "distributional-evidence-category-not-licensing",
+      "phenomenon": "ann-brain-lexical-semantic-predictivity",
+      "contrast_cell": "content-preserved-high-predictivity",
+      "expected_path_reading": "indeterminate",
+      "prediction": "Representational or distributional evidence may warrant a measurement-side classification, but it should not directly license or delicense a form.",
+      "edges": [
+        {
+          "source": "distributional_category_evidence",
+          "target": "analyst_category_assignment",
+          "type": "evidential"
+        },
+        {
+          "source": "analyst_category_assignment",
+          "target": "grammaticality_attribution",
+          "type": "evidential"
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "phenomenon": "ann-brain-lexical-semantic-predictivity",
+      "result": "partly_survives",
+      "expected_survival_pattern": "The graph should treat ANN/fMRI predictivity as a measurement-channel fact, not as direct evidence about community licensing or grammar-facing category status.",
+      "notes": "Partly survives. CAT has the right measurement-discipline posture, but its current constructs are category-task constructs rather than neural/ANN predictivity constructs. It blocks the bad inference but does not model the benchmark itself.",
+      "requirements": {
+        "required_nodes": [
+          "measurement_task",
+          "task_framing",
+          "distributional_category_evidence",
+          "analyst_category_assignment",
+          "reported_acceptability",
+          "community_licensing",
+          "grammaticality_attribution"
+        ],
+        "required_edges": [
+          {
+            "source": "measurement_task",
+            "target": "analyst_category_assignment",
+            "type": "causal"
+          },
+          {
+            "source": "distributional_category_evidence",
+            "target": "analyst_category_assignment",
+            "type": "evidential"
+          },
+          {
+            "source": "analyst_category_assignment",
+            "target": "grammaticality_attribution",
+            "type": "evidential"
+          },
+          {
+            "source": "community_licensing",
+            "target": "reported_acceptability",
+            "type": "measurement"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "distributional_category_evidence",
+            "target": "community_licensing",
+            "type": "causal"
+          },
+          {
+            "source": "analyst_category_assignment",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "content-preserved-high-predictivity",
+          "axes": {
+            "community": "Native English readers in the Pereira-style fMRI sentence-reading benchmark.",
+            "norm_centre": "Computational neuroscience measurement norm centre.",
+            "genre": "Naturalistic sentence stimuli under perturbation.",
+            "medium": "Written stimuli with fMRI response measurement.",
+            "task_framing": "ANN-to-brain predictivity rather than acceptability or grammaticality judgment.",
+            "speaker_identity": "No speaker identity manipulation."
+          }
+        },
+        {
+          "id": "invalid-grammar-inference",
+          "axes": {
+            "community": "Analysts interpreting ANN/fMRI benchmark results.",
+            "norm_centre": "Workbench construct-discipline norm centre.",
+            "genre": "Methodological interpretation of a benchmark.",
+            "medium": "Research report or model-evaluation discussion.",
+            "task_framing": "Inference from measurement channel to grammar-facing construct.",
+            "speaker_identity": "Analyst cue."
+          }
+        }
+      ]
+    }
+  ]
+}

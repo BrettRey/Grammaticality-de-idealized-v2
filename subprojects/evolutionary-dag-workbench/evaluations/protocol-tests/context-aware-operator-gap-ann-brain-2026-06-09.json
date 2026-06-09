@@ -1,0 +1,118 @@
+{
+  "id": "context-aware-operator-gap-ann-brain-2026-06-09",
+  "target_graph": "graphs/archive/context-aware-operator-gap-candidate.json",
+  "protocol": "notes/conditioning-operationalization-protocol-2026-06-07.md",
+  "status": "protocol-bound",
+  "score_decision": "no-score-change",
+  "activated_paths": [
+    {
+      "id": "recoverability-to-acceptability-only",
+      "phenomenon": "ann-brain-lexical-semantic-predictivity",
+      "contrast_cell": "content-preserved-high-predictivity",
+      "expected_path_reading": "positive",
+      "prediction": "OPG can represent recoverability affecting reported acceptability, but that path is not a path to community licensing.",
+      "edges": [
+        {
+          "source": "semantic_pragmatic_recoverability",
+          "target": "reported_acceptability",
+          "type": "causal"
+        }
+      ]
+    },
+    {
+      "id": "processing-to-acceptability-only",
+      "phenomenon": "ann-brain-lexical-semantic-predictivity",
+      "contrast_cell": "word-order-degraded-high-predictivity",
+      "expected_path_reading": "negative",
+      "prediction": "OPG can represent processing cost lowering reported acceptability, but the Kauf et al. result concerns ANN/fMRI predictivity rather than an operator gap.",
+      "edges": [
+        {
+          "source": "processing_cost",
+          "target": "reported_acceptability",
+          "type": "causal"
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "phenomenon": "ann-brain-lexical-semantic-predictivity",
+      "result": "fails_general_out_of_scope",
+      "expected_survival_pattern": "The graph should not explain ANN/fMRI predictivity through opportunity mass, preemption, or operator-gap licensing unless the card includes a grammar-relevant contrast cell.",
+      "notes": "Out of scope as a general account. OPG has useful anti-collapse paths from recoverability and processing to reported acceptability, but the special-issue result is a measurement-channel result about ANN-to-fMRI similarity. It is not an operator-gap or opportunity/preemption phenomenon.",
+      "requirements": {
+        "required_nodes": [
+          "semantic_pragmatic_recoverability",
+          "processing_cost",
+          "reported_acceptability",
+          "community_licensing",
+          "grammaticality_attribution",
+          "task_framing"
+        ],
+        "required_edges": [
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "reported_acceptability",
+            "type": "causal"
+          },
+          {
+            "source": "processing_cost",
+            "target": "reported_acceptability",
+            "type": "causal"
+          },
+          {
+            "source": "task_framing",
+            "target": "grammaticality_attribution",
+            "type": "causal"
+          },
+          {
+            "source": "community_licensing",
+            "target": "grammaticality_attribution",
+            "type": "evidential"
+          },
+          {
+            "source": "reported_acceptability",
+            "target": "grammaticality_attribution",
+            "type": "evidential"
+          }
+        ],
+        "forbidden_edges": [
+          {
+            "source": "reported_acceptability",
+            "target": "community_licensing",
+            "type": "causal"
+          },
+          {
+            "source": "semantic_pragmatic_recoverability",
+            "target": "community_licensing",
+            "type": "causal"
+          }
+        ]
+      },
+      "contrast_cells": [
+        {
+          "id": "content-preserved-high-predictivity",
+          "axes": {
+            "community": "Native English readers in the Pereira-style fMRI sentence-reading benchmark.",
+            "norm_centre": "Computational neuroscience measurement norm centre.",
+            "genre": "Naturalistic sentence stimuli under perturbation.",
+            "medium": "Written stimuli with fMRI response measurement.",
+            "task_framing": "ANN-to-brain predictivity rather than acceptability or grammaticality judgment.",
+            "speaker_identity": "No speaker identity manipulation."
+          }
+        },
+        {
+          "id": "word-order-degraded-high-predictivity",
+          "axes": {
+            "community": "Native English readers in the Pereira-style fMRI sentence-reading benchmark.",
+            "norm_centre": "Computational neuroscience measurement norm centre.",
+            "genre": "Word-order scrambled perturbation of naturalistic sentences.",
+            "medium": "Written stimuli with fMRI response measurement.",
+            "task_framing": "ANN-to-brain predictivity under degraded word order.",
+            "speaker_identity": "No speaker identity manipulation."
+          }
+        }
+      ]
+    }
+  ]
+}

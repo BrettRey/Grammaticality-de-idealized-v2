@@ -107,6 +107,16 @@ elicitation support.
 | [attitude-complement-selection](cards/attitude-complement-selection.md) | Complement selection, update role, and recoverability | Local minimal pair |
 | [allowed-to-doing-cohort-contrast](cards/allowed-to-doing-cohort-contrast.md) | Cohort-conditioned complement selection | Local minimal pair |
 
+## Measurement-Validity Cards
+
+These cards stress-test what a measurement channel can and cannot license. They are not ordinary
+grammaticality cards unless they contain a grammar-facing contrast cell. Their main role is to stop
+evidence from one channel from being treated as direct evidence for another construct.
+
+| Card | Stress-test role | Current state |
+|---|---|---|
+| [ann-brain-lexical-semantic-predictivity](cards/ann-brain-lexical-semantic-predictivity.md) | ANN/fMRI predictivity vs grammatical licensing, syntax, and operator-value inference | Source-backed measurement-validity |
+
 ## Expansion Targets
 
 - NPI illusions;
