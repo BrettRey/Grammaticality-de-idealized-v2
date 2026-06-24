@@ -20,6 +20,8 @@ This directory is reserved for a confirmatory COCA run testing the `AGR` module.
 - `uncertainty-summary.csv`: Wilson-interval summary for the clean AGR discriminator cells.
 - `ablation-summary.csv`: temporary-variant compression check over the AGR graph against the COCA
   and held-out agreement evaluations.
+- `low-frequency-qn-v2-candidates.csv`: planned output from the denominator-only AGR/List v2 scout
+  selector; discovery-only until a finite-agreement follow-up is separately registered.
 - `coded/bunch-animate-kwic-coding.csv`: row-level coding for the animate `bunch` tranche.
 - `coded/bunch-inanimate-kwic-coding.csv`: row-level coding for the inanimate `bunch` tranche.
 - `coded/majority-minority-kwic-coding.csv`: row-level coding for the majority/minority tranche.
@@ -96,6 +98,21 @@ Rival-facing tranche:
   specific listing baseline in `graphs/archive/agreement-construction-listing-baseline-candidate.json`.
   The first direct-string run returned all zero cells, so this needs broader items or a different
   measurement route before it can pressure either graph.
+- `low-frequency-qn-scout`, a denominator-only v2 redesign registered in
+  `notes/agr-listing-rival-v2-discriminator-boundary-2026-06-09.md`. It may be used to select
+  eligible low-frequency frames, but it is not AGR/LIST evidence.
+
+The v2 scout workflow is:
+
+```bash
+python3 scripts/run_agr_coca_queries.py --cell low-frequency-qn-scout --type list --run
+python3 scripts/select_agr_listing_v2_candidates.py \
+  --cell low-frequency-qn-scout \
+  --output data/agr-coca-projection/low-frequency-qn-v2-candidates.csv
+```
+
+After the candidate CSV is written, freeze the finite-agreement follow-up strings before inspecting
+`are/is/was/were` rows. Do not interpret the denominator scout as evidence.
 
 The filtered target counts for the animate tranche are 71 plural agreement rows and 1 singular
 agreement row across `a bunch of people/kids` with `are/were/is/was`. Five of six raw singular
@@ -148,6 +165,11 @@ The first low-frequency-QN direct-string run returned no matches for all six reg
 (`a smattering of critics`, `a gaggle of tourists`, and `a tranche of voters` with `are/is`). Treat
 that as an inconclusive query-design result, recorded in
 `notes/agr-coca-low-frequency-qn-listing-rival-run-2026-06-09.md`.
+
+The v2 redesign is registered in
+`notes/agr-listing-rival-v2-discriminator-boundary-2026-06-09.md`. Its first phase is
+denominator-only and discovery-only; only a separately frozen finite-agreement follow-up can pressure
+`AGR` or the construction-specific listing baseline.
 
 The measurement audit confirms that the clean discriminator cells are not raw-query artifacts.
 False-positive pressure is low in the animate `bunch`, `majority`, and selected partitive/QN exact

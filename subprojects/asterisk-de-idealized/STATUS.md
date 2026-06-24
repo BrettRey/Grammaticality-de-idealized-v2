@@ -1,7 +1,7 @@
 # STATUS.md - The Asterisk De-idealized
 
 **Created:** 2026-01-24
-**Last updated:** 2026-01-28
+**Last updated:** 2026-06-02
 **Status:** Submitted to lingbuzz (lingbuzz/009713)
 **Parent project:** Grammaticality_de_idealized (MVMG)
 **Target:** Journal of Linguistics "Looking Back, Moving Forward" section
@@ -43,6 +43,10 @@ This paper IS the MVMG presented for a general theoretical linguistics audience.
 - **LBE paper** (now cited): Provides the learning-theoretic Bayesian foundation for C_t trajectories
 - **Varieties paper**: Elaborates the S/A/I conditioning structure for c
 - **HPC book ch 5** (now cited): Provides philosophical foundation for ontology/epistemology distinction; two-layer model (grammaticality → noise → acceptability)
+
+## Next-Touch Note: Operator Value
+
+The paper already cites the operator-stratum paper, but the next revision should make the division of labour sharper. The asterisk paper is the state theory of grammaticality; the operator paper defines the value type whose state is being measured. When examples involve clause structure, tense, agreement, polarity, dependency, or LBE, make clear that `value` means operator value where grammaticality policing is at issue, not any form-meaning relation whatsoever.
 
 ## Build
 

@@ -12,7 +12,7 @@ representations about grammaticality. The existing OVMG, detector, operator-stra
 processing-based, and normativity-based models are treated as seed graph families, not as
 conclusions or targets to vindicate.
 
-Sixty-three adversarial passes/synthesis steps have been run. All numeric scores remain zero. Seven
+Sixty-five adversarial passes/synthesis steps have been run. All numeric scores remain zero. Seven
 current modules have `scoped_module` labels tied to protocol-bound or held-out `scope-only`
 evaluations. The original scope-only evaluations now include card-level requirements and activated
 paths. The held-out CGEL evaluations also include card-level requirements and activated paths
@@ -30,7 +30,8 @@ selection-adjacent dimensions only.
 The held-out CGEL evaluations now include machine-readable `prediction_tests` with pass/fail
 conditions; score-change evaluations now require prediction tests.
 Eight held-out CGEL cards have source-checked contrast examples, and the prediction-test inventory
-now records checked evidence statuses: fifteen `passed`, four `mixed`, and two `inconclusive`.
+now records checked evidence statuses: fifteen `passed`, four `mixed`, and two `inconclusive`, plus
+one explicitly registered `not-run` AGR/List v2 discriminator.
 No graph has a `general_account` score. The current scoring schema includes `projective_power` and
 `theory_preservation_penalty` so held-out prediction and anti-alignment discipline are visible.
 The Gibson source pass added five processing/dependency cards without changing graph machinery:
@@ -353,6 +354,21 @@ The sixty-third pass is recorded in
 low-frequency-QN COCA tranche ran, but all six cells returned no matching records. The result is
 inconclusive and should be treated as a query-design failure, not as support for either AGR or the
 construction-listing rival.
+The sixty-fourth pass is recorded in
+`notes/agr-listing-rival-v2-discriminator-boundary-2026-06-09.md`. It registers a two-phase v2
+AGR/List discriminator: a denominator-only discovery scout over broader low-frequency QN-like
+frames, followed only later by a frozen finite-agreement confirmation tranche. The new selector
+script, `scripts/select_agr_listing_v2_candidates.py`, flags scout frames by predeclared count
+thresholds. The v2 evaluation test is `not-run`; denominator counts alone cannot pressure either
+AGR or the construction-specific listing rival. The first live scout attempt failed on a COCA
+server-error response before writing any raw artifact, so the v2 lane remains not-run.
+The sixty-fifth pass is recorded in
+`notes/collapsed-counterpart-experiment-protocol-2026-06-09.md` and
+`data/module-compression/collapsed-counterpart-queue.csv`. It turns the external critique about
+stratified-ontology bias into a workbench rule: each scoped module should face a deliberately
+collapsed counterpart before stratified construct separation is treated as discovery rather than
+vocabulary. `AGR` already has the first such rival (`agreement-construction-listing-baseline`);
+`ART`, `OPG`, `DYN`, `FDL`, `PROC`, and `UPT` remain queued.
 An internal state-of-search report now summarizes the current scoped-module partition, evaluation
 ladder, the completed transparent-relative Lane A pass, and remaining empirical lanes without
 authorizing score movement.
@@ -471,6 +487,9 @@ construct separation, or held-out projectibility, not by fitting a prior paper.
   `notes/agr-coca-lots-full-filter-attempt-2026-06-09.md`
 - `AGR` partitive/QN fully filtered subset note in
   `notes/agr-coca-partitive-filtered-subset-2026-06-09.md`
+- `AGR` construction-listing v2 discriminator boundary in
+  `notes/agr-listing-rival-v2-discriminator-boundary-2026-06-09.md` and
+  `scripts/select_agr_listing_v2_candidates.py`
 - audience/reference projection scaffold in `data/audience-reference-projection/` and
   `notes/pronoun-audience-projection-scaffold-2026-06-09.md`
 - audience/reference pilot-packet builder in `scripts/build_audience_reference_pilot_packet.py`
@@ -484,6 +503,9 @@ construct separation, or held-out projectibility, not by fitting a prior paper.
 - audience/reference response-validator fixtures in `tests/fixtures/audience-responses/`
 - scoped-module load-bearing compression audit in
   `notes/scoped-module-load-bearing-audit-2026-06-09.md`
+- collapsed-counterpart experiment protocol and queue in
+  `notes/collapsed-counterpart-experiment-protocol-2026-06-09.md` and
+  `data/module-compression/collapsed-counterpart-queue.csv`
 - provisional-node trim note in `notes/provisional-node-trim-2026-06-09.md`
 - compression audit data and runner in `data/module-compression/` and
   `scripts/audit_authorizing_load_bearing.py`
@@ -661,21 +683,24 @@ audience/reference response validation.
    `scripts/validate_audience_reference_responses.py --require-responses` and summarize it with
    `scripts/summarize_audience_reference_responses.py` before evaluation; do not treat the
    simulation-only rows as evidence.
-3. Revise the low-frequency-QN discriminator after the all-zero direct-string COCA run: use broader
-   items, less restrictive frames, a larger corpus, or elicited/judgment materials before claiming
-   AGR has beaten construction-specific listing.
-4. Add a fresh held-out temporal card before giving `temporal-orientation-alignment-candidate` any
+3. Run the denominator-only `low-frequency-qn-scout` only as discovery, select eligible frames with
+   `scripts/select_agr_listing_v2_candidates.py`, then freeze finite-agreement follow-up strings
+   before claiming AGR has beaten construction-specific listing.
+4. Build the next collapsed counterpart from `data/module-compression/collapsed-counterpart-queue.csv`
+   before treating a scoped module as evidence for stratified construct separation. `ART` is the
+   best next target because the audience/reference scaffold already separates response channels.
+5. Add a fresh held-out temporal card before giving `temporal-orientation-alignment-candidate` any
    scoped label; keep temporal orientation distinct from modal temporal inference and from English
    future-tense analysis.
-5. Add one more catenative card only if it distinguishes catenative subtype from cohort-conditioned
+6. Add one more catenative card only if it distinguishes catenative subtype from cohort-conditioned
    production.
-6. Test comparative-illusion cards against combined `CAT` plus noisy-channel interpretations only
+7. Test comparative-illusion cards against combined `CAT` plus noisy-channel interpretations only
    if a future card forces an interaction rather than complementarity.
-7. Test whether `OPG`, `CAT`, and `SEL` stay complementary on richer fused-construction cards before
+8. Test whether `OPG`, `CAT`, and `SEL` stay complementary on richer fused-construction cards before
    adding any fused-head-specific graph.
-8. Calibrate scoped-module score magnitudes after at least one held-out or parameterized evaluation
+9. Calibrate scoped-module score magnitudes after at least one held-out or parameterized evaluation
    pass.
-9. Expand `phenomena/cards/` toward 40-100 cards only after the current representation classes stop
+10. Expand `phenomena/cards/` toward 40-100 cards only after the current representation classes stop
    shifting every pass.
-10. Only after the construct inventory stabilizes, consider whether `pgmpy`, NOTEARS-style methods,
+11. Only after the construct inventory stabilizes, consider whether `pgmpy`, NOTEARS-style methods,
    or empirical causal discovery are useful.

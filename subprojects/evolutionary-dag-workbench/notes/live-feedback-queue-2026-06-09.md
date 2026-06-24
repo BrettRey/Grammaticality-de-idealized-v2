@@ -22,6 +22,9 @@ the first data-bearing chance to test whether a scoped module projects beyond ca
 4. **Edge semantics must stay modest.** Relation profiles and computed path readings are
    pre-registration scaffolding, not full causal modelling. Mixed causal, measurement,
    constitutive, and evidential paths should not be advertised as intervention-licensed DAGs.
+5. **Collapsed counterparts test ontology depth.** Scoped modules need deliberate deflationary
+   rivals, not just seed-family rivals, so stratified construct separation is tested against
+   simpler collapsed accounts.
 
 ## Immediate Marginal Fix Applied
 
@@ -36,3 +39,10 @@ immediate merger, but it names two pressure pairs:
 
 - `FDL` / `UOB`: best future merger test.
 - `OPG` / `DYN`: best overfitting guard.
+
+## Collapsed-Counterpart Queue Added
+
+`notes/collapsed-counterpart-experiment-protocol-2026-06-09.md` and
+`data/module-compression/collapsed-counterpart-queue.csv` record the stronger neutrality test. `AGR`
+now has a construction-specific listing rival; the other scoped modules still need minimal
+collapsed counterparts before stratified construct separation is treated as projective discovery.

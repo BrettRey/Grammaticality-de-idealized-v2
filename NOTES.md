@@ -107,3 +107,11 @@ This could be empirical evidence for the MVMG-style gradient grammaticality mode
 ---
 
 *Notes file created Dec 27, 2025*
+
+---
+
+## Literature: Many Minds podcast (Frank & Lupyan, 2026-03-26)
+- **Syntax learnable fast:** Frank: BabyLMs learn grammaticality "way faster than any of the other hard reasoning challenges." Supports OVMG view that grammaticality is empirically tractable, not inscrutably innate.
+- **Pattern matching:** Lupyan's "Unreasonable Effectiveness of Pattern Matching" (preprint) — jabberwocky recovery by frontier models. Argues pattern matching vs "real thinking" is a false dichotomy. "Human cognition from the most basic to higher levels can be thought of in terms of pattern matching where what varies is the abstractness of the patterns." Connects to OVMG's operator abstraction.
+- **Grammaticality judgments in LLMs:** Lupyan's team has a paper on human-like grammaticality judgments. Lupyan: pushback on Bluesky when he claimed LLMs have learned language — people point to edge-case failures as refutation.
+- See `literature/many-minds-frank-lupyan-2026.md` for full notes + transcript.

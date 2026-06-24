@@ -51,6 +51,20 @@
           "type": "causal"
         }
       ]
+    },
+    {
+      "id": "low-frequency-v2-listing-gap",
+      "phenomenon": "collective-number-transparent-agreement-cgel",
+      "contrast_cell": "low-frequency-qn-v2-generalization",
+      "expected_path_reading": "positive",
+      "prediction": "The listing baseline can make a production prediction for scout-selected low-frequency QNs only after a local preference has been observed or stipulated.",
+      "edges": [
+        {
+          "source": "construction_specific_agreement_preference",
+          "target": "production_probability",
+          "type": "causal"
+        }
+      ]
     }
   ],
   "prediction_tests": [
@@ -80,6 +94,19 @@
       "fail_condition": "The baseline loses if registered low-frequency cells generalize in the AGR-predicted direction without enough local evidence to justify independent listing.",
       "evidence_status": "inconclusive",
       "evidence_note": "Direct-string COCA run in `notes/agr-coca-low-frequency-qn-listing-rival-run-2026-06-09.md` returned no matching records for all six registered cells. This is a query-design failure, not evidence for either AGR or LIST."
+    },
+    {
+      "id": "low-frequency-qn-v2-listing-challenge",
+      "phenomenon": "collective-number-transparent-agreement-cgel",
+      "contrast_cell": "low-frequency-qn-v2-generalization",
+      "activated_paths": [
+        "low-frequency-v2-listing-gap"
+      ],
+      "prediction": "After a denominator-only scout freezes eligible low-frequency frames, the listing baseline should remain weak unless local item preferences are independently established before agreement rows are inspected.",
+      "pass_condition": "The baseline stays live if the scout finds no eligible frames, if follow-up agreement rows remain too sparse, or if selected frames behave idiosyncratically.",
+      "fail_condition": "The baseline loses pressure if several scout-selected low-frequency frames show the AGR-predicted plural or context-conditioned profile before item-specific listing is justified.",
+      "evidence_status": "not-run",
+      "evidence_note": "V2 boundary registered in `notes/agr-listing-rival-v2-discriminator-boundary-2026-06-09.md`. The denominator scout is discovery-only; no finite-agreement follow-up has been frozen or run."
     }
   ],
   "cards": [
@@ -136,6 +163,17 @@
             "genre": "Mixed COCA registers if rows are available; sparse-cell caution required.",
             "medium": "Written corpus transcripts/texts from COCA list and KWIC rows.",
             "task_framing": "Prospective discriminator between AGR generalization and item-specific listing.",
+            "speaker_identity": "Corpus speaker/writer identity as available only through COCA source metadata."
+          }
+        },
+        {
+          "id": "low-frequency-qn-v2-generalization",
+          "axes": {
+            "community": "COCA-attested English production in scout-selected low-frequency or marginal animate plural QN-like frames.",
+            "norm_centre": "Descriptive corpus-attestation frame, not prescriptive judgment.",
+            "genre": "Mixed COCA registers if eligible rows are available; sparse-cell caution required.",
+            "medium": "Written corpus transcripts/texts from COCA list and KWIC rows.",
+            "task_framing": "Prospective two-phase discriminator: denominator-only item selection followed by frozen finite-agreement confirmation.",
             "speaker_identity": "Corpus speaker/writer identity as available only through COCA source metadata."
           }
         }

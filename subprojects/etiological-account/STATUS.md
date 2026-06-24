@@ -2,6 +2,10 @@
 
 **Current state:** Draft complete, 26 pages, clean build
 
+## Next-Touch Note: Operator Gaps
+
+When revising, tie the etiology account explicitly to `../operator-stratum/`. The gaps whose absence matters most are gaps in an operator repertoire, not arbitrary lexical absences. Opportunity mass and preemption stabilize non-licensing where a potential form would have configured public update, role allocation, scope, dependency, or repair. In the DAG, expectation and enforcement should be read as especially visible for operator alternatives because speakers can hold one another accountable for them.
+
 ## 2026-01-29 Session Notes (continued)
 
 - Extensive revision of Figure 1 (TikZ DAG):

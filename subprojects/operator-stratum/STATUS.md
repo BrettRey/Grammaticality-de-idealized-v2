@@ -14,6 +14,14 @@
 - Copy-paste submission metadata retained in `submission/fol-submission-copy-paste.md`
 - Next action: wait for initial editorial evaluation.
 
+### 2026-06-02 Evening Shutdown Notes
+- Main submission-prep commit pushed: `c584972 Prepare FoL anonymous submission package`.
+- Submission-status tracking commit pushed: `65ba5c0 Record FoL submission status`.
+- Website publications/CV update pushed separately: `c51a1ce Update operator stratum submission status`.
+- Central bibliography status update pushed separately: `.house-style` commit `467a560 Update operator stratum bibliography status`.
+- Anonymous package includes PDF, DOCX, and LaTeX source ZIP; identity scans found no author-identifying strings in the anonymous PDF or DOCX.
+- Remaining local caveat: `NOTES-cohn-multimodal.md` is still untracked in this subproject and was intentionally left out of the FoL package.
+
 ### 2026-01-26 Session Notes
 - Revised per Geoff Pullum feedback on title/abstract opacity
 - New title: "Why clause structure is judged like tense and agreement: a coordination account of grammaticality"
