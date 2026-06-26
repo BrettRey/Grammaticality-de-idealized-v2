@@ -1,18 +1,26 @@
 # STATUS.md - The Operator Stratum
 
 **Created:** 2026-01-24
-**Last updated:** 2026-06-02
-**Status:** Under initial editorial evaluation at *Functions of Language*
+**Last updated:** 2026-06-26
+**Status:** Desk rejected by *Functions of Language* for scope/fit; retargeting needed
 **LingBuzz:** Uploaded 2026-01-25
-**Journal submission:** Submitted to *Functions of Language* 2026-06-02; acknowledgement received, now with editorial team for initial evaluation.
+**Journal submission:** Submitted to *Functions of Language* 2026-06-02; rejected 2026-06-26 as outside the journal's scope.
 **Parent project:** Grammaticality_de_idealized (MVMG)
+
+### 2026-06-26 Functions of Language Decision
+- Article ID: FOL-26063.
+- Submitted title: "Why clause structure is judged like tense and agreement: public-update operators and grammaticality"
+- Decision: rejected by *Functions of Language* as outside the journal's scope.
+- Editor/signatory: Wout Van Praet, Managing Editor.
+- Triage: scope/fit desk rejection only; no substantive referee criticism was provided.
+- Next action: choose a better-fit venue and retarget. Do not treat this as evidence against the argument unless the next venue requires reframing.
 
 ### 2026-06-02 Submission Notes
 - Submitted as: "Why clause structure is judged like tense and agreement: public-update operators and grammaticality"
 - Target journal: *Functions of Language*
 - Anonymous package prepared in `submission/fol-anonymous/`
 - Copy-paste submission metadata retained in `submission/fol-submission-copy-paste.md`
-- Next action: wait for initial editorial evaluation.
+- Outcome: rejected for scope/fit on 2026-06-26.
 
 ### 2026-06-02 Evening Shutdown Notes
 - Main submission-prep commit pushed: `c584972 Prepare FoL anonymous submission package`.

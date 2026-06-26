@@ -5,7 +5,7 @@ Paper: `main.tex`, "Grammaticality de-idealized"
 
 ## Citation And Status Checks
 
-- Confirm the citation form for the companion paper keyed as `reynolds2026operators`: "under review", "in prep", "preprint", or a venue-specific form. Local `refs.bib` currently says: under review at *Functions of Language*; preprint, LingBuzz/009706.
+- Resolved 2026-06-26: cite the companion paper keyed as `reynolds2026operators` as a LingBuzz preprint, not as under review at *Functions of Language*. FoL rejected the submission for scope/fit on 2026-06-26.
 - Keller's invisible-hand explanation is relevant to the emergence framing, but I did not add a citation because no local bib key exists. Add Brett's preferred Keller reference before citing it.
 - Confirm whether `reynolds2026operators` should be cited in text as "companion paper", "Reynolds under review", or a fuller author-year citation.
 

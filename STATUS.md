@@ -1,8 +1,8 @@
 # STATUS.md -- Grammaticality de-idealized
 
 **Current phase:** Framework family / active development
-**Last updated:** 2026-06-09
-**Public/preprint state:** The OVMG family includes LingBuzz subproject preprints for `operator-stratum` and `asterisk-de-idealized`; `operator-stratum` was submitted to *Functions of Language* on 2026-06-02 and is under initial editorial evaluation. Check subproject folders before making public-state claims.
+**Last updated:** 2026-06-26
+**Public/preprint state:** The OVMG family includes LingBuzz subproject preprints for `operator-stratum` and `asterisk-de-idealized`; `operator-stratum` was submitted to *Functions of Language* on 2026-06-02 and desk rejected for scope/fit on 2026-06-26. It is not currently under review. Check subproject folders before making public-state claims.
 **Tracking note:** Root `STATUS.md` created 2026-05-31 from existing `CLAUDE.md`, `NOTES.md`, and `DECISIONS.md`; no source state was changed.
 
 ## Project Shape
@@ -13,7 +13,7 @@ Current subproject map:
 
 | Subproject | Function | State |
 |---|---|---|
-| `operator-stratum/` | What operators are | LingBuzz preprint, 2026-01-25; submitted to *Functions of Language*, 2026-06-02 |
+| `operator-stratum/` | What operators are | LingBuzz preprint, 2026-01-25; *Functions of Language* scope rejection, 2026-06-26; retarget TBD |
 | `asterisk-de-idealized/` | What grammaticality is | LingBuzz preprint, 2026-01-28 |
 | `etiological-account/` | Why gaps emerge and persist | Draft |
 | `feeling-of-ungrammaticality/` | What the feeling is | Seed |
@@ -22,7 +22,7 @@ Current subproject map:
 ## Current Open Threads
 
 1. Powell's contingency/convergence framework is a priority connection but has not been integrated.
-2. The operator-stratum paper still needs citation-form confirmation in `main.tex` (`reynolds2026operators` is currently marked `BRETT-VERIFY`), but the main paper now frames categoricality around role-functional operator contrasts rather than substance-based morphosyntax.
+2. The operator-stratum paper should now be cited as a LingBuzz preprint, not as under review at *Functions of Language*. The main paper still frames categoricality around role-functional operator contrasts rather than substance-based morphosyntax.
 3. Bottom-up norm enforcement should be attributed to Richerson & Boyd 2005 and O'Connor 2019, not Powell.
 4. Transparent free relatives remain an empirical test case for predictions about `F(u)`.
 5. Kuribayashi et al. 2026 should resurface when returning to the predictability/processing-cost gap.

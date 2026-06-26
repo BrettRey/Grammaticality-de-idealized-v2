@@ -29,3 +29,7 @@ Format: `## YYYY-MM-DD` then bullet points with **bold topic** and brief rationa
 - **Normalize cross-paper terminology.** Kept "effective preemption mass" and "opportunity set" as the canonical formal terms. Logged this with `pm-update`; the companion should align to these terms, with "opportunity mass" only as informal shorthand if explicitly defined.
 - **Demote the gender prediction.** Kept gender concord as a boundary case but foregrounded the stronger tests: satiation framing for stable gaps, artificial-language-learning manipulation of opportunity-set size under zero positive evidence, and L2 rejections tracking L1 preemption mass.
 - **Truth-first unification recommendation after Roughdraft review.** Brett clarified that the criterion is the stronger/truer thesis, not preservation of the current architecture. Updated the memo: if near-term readiness is the criterion, keep the hybrid; if truth-first rewrite is allowed, prefer full unification as the next major version (`p=0.63` stronger after rewrite).
+
+## 2026-06-26
+
+- **Treat the FoL outcome as a scope/fit rejection, not a substantive review.** *Functions of Language* rejected the operator-stratum manuscript FOL-26063 as outside scope. No referee criticism was provided, so the bridge-paper argument remains the current working baseline while the project identifies a better-fit venue.
