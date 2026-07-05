@@ -20,10 +20,10 @@ CSV = Path(__file__).resolve().parents[1] / "subprojects/evolutionary-dag-workbe
 
 # Human-readable labels, top-to-bottom in reading order
 LABELS = {
-    "animate_bunch_exact":       "a bunch of + animate pl.",
-    "majority_exact":            "the majority + set (exact)",
-    "majority_audit_augmented":  "the majority + set (audited)",
-    "rest_people_exact":         "the rest of the people",
+    "animate_bunch_exact":       r"$\mathit{a\ bunch\ of}\;+\;\mathrm{animate\ pl.}$",
+    "majority_exact":            r"$\mathit{the\ majority}\;+\;\mathrm{set\ (exact)}$",
+    "majority_audit_augmented":  r"$\mathit{the\ majority}\;+\;\mathrm{set\ (audited)}$",
+    "rest_people_exact":         r"$\mathit{the\ rest\ of\ the\ people}$",
 }
 
 rows = []
@@ -52,7 +52,7 @@ for y, s, lo, hi in zip(ys, shares, los, his):
     ax.plot([s], [y], "o", color=plot_style.COLORS["primary"], ms=6, zorder=3)
 
 ax.set_yticks(ys)
-ax.set_yticklabels([f"{lab}\n(n={n})" for lab, n in zip(labels, ns)], fontsize=8.5)
+ax.set_yticklabels([f"{lab}\n($n$={n})" for lab, n in zip(labels, ns)], fontsize=8.5)
 ax.set_xlim(0, 1)
 ax.set_xlabel("Plural-agreement share (KWIC-filtered), Wilson 95% interval")
 ax.set_ylim(-0.6, len(rows) - 0.2)
