@@ -197,7 +197,7 @@
 \maketitle
 
 \begin{abstract}
-    This paper introduces the Operator-Value Model of Grammaticality (OVMG), a framework for (un)gram\-maticality distinct from grammars focused solely on language production or description. The model treats (un)grammaticality as conditioned stability in form--value relations accepted or rejected within communicative situations, integrating mapping viability, operator-value coherence, population licensing, and speaker-level feelings of anomaly. Previous approaches, including generative grammar, Construction Grammar, and psycholinguistic models, have each captured part of the picture but haven't jointly explained why semantically coherent constructions may nonetheless be deemed ungrammatical, why certain transparent structures remain systematically unentrenched, and why categorical grammaticality clusters where it does. The framework derives categoricality from conventionalized norms, opportunity structure, and preemption dynamics within communicative situations, rather than from structural membership or intuition alone. It earns its keep by projection: it predicts which rejected constructions should soften under repeated exposure and which should resist, how learners should treat zero evidence under different opportunity structures, how early second-language rejections should track first-language preemption, and where community treatment of a form should change discontinuously as licensing crosses a situational threshold.
+    This paper introduces the Operator-Value Model of Grammaticality (OVMG), a framework for (un)gram\-maticality distinct from grammars focused solely on language production or description. The model treats (un)grammaticality as conditioned stability in form--value relations accepted or rejected within communicative situations, integrating mapping viability, operator-value coherence, population licensing, and speaker-level feelings of anomaly. Previous approaches, including generative grammar, Construction Grammar, and psycholinguistic models, have each captured part of the picture but haven't jointly explained why semantically coherent constructions may nonetheless be deemed ungrammatical, why certain transparent structures remain systematically unentrenched, and why categorical grammaticality clusters where it does. The formal core treats grammatical status as a posterior over licensed assemblies: operator-value compatibility is hard (a unification condition, not a weighted penalty), obligatoriness is derived from preemption of zero-marking rather than stipulated per language, and categoricality emerges as bimodality of the population licensing state under preemption and repair dynamics, rather than from structural membership or intuition alone. The subjective phenomenology is a two-channel read-out--anomaly and confidence--which derives the contrast between the confident rejection of preempted gaps and the ineffability of defective paradigm cells. It earns its keep by projection: it predicts which rejected constructions should soften under repeated exposure and which should resist, how learners should treat zero evidence under different opportunity structures, how early second-language rejections should track first-language preemption, where community treatment of a form should change discontinuously as licensing crosses a situational threshold, and where judgment dispersion should rise before means move as a contrast goes moribund.
 \end{abstract}
 
 \noindent\textbf{Keywords:} grammaticality; projectibility; acceptability; preemption; entrenchment; conventionalization; usage-based grammar
@@ -230,12 +230,12 @@ This paper develops that answer as the \textbf{Operator-Value Model of Grammatic
 \begin{enumerate}
 \item \textbf{Profile.} Grammaticality is a conditioned form--value relation, specified by whether an operator value is structurally realizable, coherent, and licensed within a communicative situation (community, dialect, register). This profile is disturbed in distinct ways (no licensable analysis, clashing construals, absent situational licensing, processing overload), so the phenomena traditionally lumped as \enquote{ungrammatical} in (\ref{ex:starting-stars}) fall into separable modes rather than one kind.
 \item \textbf{Projection.} The profile earns its standing by what it lets us predict, not by the mechanisms that hold it together: which rejections should soften under repeated exposure and which resist (\ref{ex:whose}) vs.\ (\ref{ex:lbe}), how faithfully forms transmit, and how they change over time.
-\item \textbf{Support, graded.} The categorical appearance of grammaticality emerges when usage stabilizes the population's licensing state; the subjective feeling of ungrammaticality is a separate, gradient signal, not grammatical status itself.
+\item \textbf{Support, graded.} The categorical appearance of grammaticality emerges when usage stabilizes the population's licensing state; conversational repair supplies a candidate \emph{controller} for that state, testable by its intervention signature (\S\ref{sec:dynamics-revised}); and the subjective feeling of ungrammaticality is a separate, gradient signal--an anomaly--confidence pair--not grammatical status itself.
 \end{enumerate}
 
 Together, the premises explain why the traditions have talked past one another. The profile premise preserves the formal insight that constraints can be systematic while letting categorical and gradient cases share one architecture, in line with \posscite{francis2022} case for building gradience into core grammatical theory. The projection premise keeps the account testable: low-evidence constructions should respond to exposure and framing differently from high-opportunity preempted forms. The support premise explains why formal licensing, processing cost, and subjective feeling can move together without being the same thing.
 
-Section~\ref{sec:previous} traces the impasse in grammaticality theory to the attempt to treat it as one phenomenon. Section~\ref{sec:framework} presents OVMG, defining the three constitutive variables and the recurrent instability modes that route a form to one diagnostic category or another. Section~\ref{sec:formalism} gives the formal core: a state theory that specifies the profile as a population licensing posterior, and a dynamics module that shows how such states arise and stabilize. Together, they derive categoricality from usage rather than stipulating it. Section~\ref{sec:implications} situates the account against generative grammar, Construction Grammar, usage-based, logicality, and relevance-theoretic approaches, and states the predictions. The paper closes with limitations and a research program spanning corpus, experimental, and cross-linguistic methods.
+Section~\ref{sec:previous} traces the impasse in grammaticality theory to the attempt to treat it as one phenomenon. Section~\ref{sec:framework} presents OVMG, defining the constitutive conditions and the recurrent instability modes that route a form to one diagnostic category or another. Section~\ref{sec:formalism} gives the formal core: a state theory that specifies grammatical status as a posterior over licensed assemblies, and a dynamics module (\S\ref{sec:dynamics-new}) that shows how such states arise, stabilize, and--where the repair evidence warrants--are actively maintained. Together they derive categoricality and obligatoriness from usage rather than stipulating them. Section~\ref{sec:implications} situates the account against generative grammar, Construction Grammar, usage-based, logicality, and relevance-theoretic approaches, and states the predictions. The paper closes with limitations and a research program spanning corpus, experimental, and cross-linguistic methods.
 
 \section{The impasse in grammaticality theory}\label{sec:previous}
 
@@ -273,18 +273,19 @@ This utterance is structurally viable and semantically transparent (the intended
 These three problems (structural viability, interpretive coherence, and situational licensing) correspond exactly to the three constitutive variables of the OVMG framework presented in Section~\ref{sec:framework}. Acknowledging them as distinct but interacting components makes it possible to move beyond the impasse of trying to force all grammaticality judgments into a single \enquote{competence} definition or a purely probabilistic usage model.
 
 \section{The Operator-Value Model of Grammaticality}\label{sec:framework}
+\label{sec:operator-values}
 
 The term \term{value} is used here in the Saussurean sense of \mention{valeur} \autocite{saussure1916}: the identity of a linguistic unit is constituted not by intrinsic properties but by its position in a system of contrasts, what it patterns with, what it opposes, and what interpretations it makes available. This isn't feature-value assignment or decision-theoretic value. Throughout, I treat grammatical knowledge as a conditioned \textbf{form--value relation}; when this relation is sufficiently stable in a communicative situation, with a dominant value reliably recoverable and socially licensed, I refer to it informally as an established \textbf{form--value relationship}.
 
 The model's name marks its unit: operator values (closed-paradigm, update-configuring contrasts). A companion operator-stratum paper develops this boundary in full and argues that it follows public-update role rather than expressive substance: tone, particles, word order, inflection, and suprasegmental material all fall within its scope when they realize an operator contrast \autocite{reynolds2026operators}.
 
-Here a self-contained working test suffices, because the concept has to stand on its own inside this paper: it fixes the scope of $K$, the categoricality prediction, and the appendix on Turkish suffix harmony (\S\ref{app:turkish-harmony}).
+Here a self-contained working test suffices, because the concept has to stand on its own inside this paper: it fixes the scope of hard compatibility, the categoricality prediction, and the appendix on Turkish suffix harmony (\S\ref{app:turkish-harmony}).
 
-A contrast is an operator contrast when it meets three conditions jointly: drawn from a \emph{closed} paradigm, \emph{high-opportunity} (the communicative job recurs constantly), and \emph{configured to the public update} (clause type, polarity, tense and aspect anchoring, agreement and role allocation, scope, or reference tracking). Mis-setting such a contrast changes the update instruction even when the intended message is recoverable.
+A contrast is an operator contrast when it meets three conditions jointly: drawn from a \emph{closed} paradigm, \emph{high-opportunity} (the communicative job recurs constantly), and \emph{configured to the public update} (clause type, polarity, tense and aspect anchoring, agreement and role allocation, scope, or reference tracking). Mis-setting such a contrast changes the update instruction even when the intended message is recoverable. The three conditions have formal counterparts in \S\S\ref{sec:formalism}--\ref{sec:dynamics-new}: closure is finiteness of the dimension's value set, opportunity is the niche count $N_t(n,c)$, and update-configuration is a positive expected common-ground divergence $\Delta(d)>0$ from mis-setting the contrast \autocite{reynolds2026operators}.
 
 These conditions exclude cases that \enquote{closed-class}, \enquote{grammaticalized}, or \enquote{high-frequency} alone would admit. A closed-class item that doesn't configure the update, such as a purely stance-marking discourse particle, fails the third condition and is predicted \emph{not} to attract categorical policing; a high-frequency open-class collocation fails the first; and a genuinely update-configuring contrast that's gone low-opportunity, such as a moribund case distinction, fails the second and is predicted to destabilize. The prediction is falsifiable in the direction that matters: a closed, high-opportunity contrast that isn't update-configuring should be policed like style, not like grammar.
 
-The formal architecture rests on three constitutive variables: mapping viability ($\mathsf{map}$), operator-value coherence ($K$), and situational licensing ($C_t$). Together they specify a \term{profile} in the projectibility-first sense: a pattern whose partial observation licenses further expectations \autocite{reynolds2026kindsProjectibilityProfiles}. Their interaction determines grammaticality (\S\ref{sec:formalism}); what the profile projects, and what supports those projections, is the business of \S\ref{sec:formalism} and \S\ref{sec:dynamics-new}. Figure~\ref{fig:profile-spine} lays out this order of explanation, which the rest of the paper fills in. Table~\ref{tab:vars} summarizes these variables; the formal definitions appear in \S\ref{sec:formalism}.
+The formal architecture rests on four constitutive conditions: structural viability, operator-value compatibility, saturation of obligatory dimensions, and situational licensing. Together they specify a \term{profile} in the projectibility-first sense: a pattern whose partial observation licenses further expectations \autocite{reynolds2026kindsProjectibilityProfiles}. Their interaction determines grammaticality (\S\ref{sec:formalism}); what the profile projects, and what supports those projections, is the business of \S\ref{sec:formalism} and \S\ref{sec:dynamics-new}. Figure~\ref{fig:profile-spine} lays out this order of explanation, which the rest of the paper fills in. Table~\ref{tab:vars} summarizes these conditions; the formal definitions appear in \S\ref{sec:formalism}.
 
 \begin{figure}[t]
 \centering
@@ -294,7 +295,7 @@ The formal architecture rests on three constitutive variables: mapping viability
   box/.style={draw, rounded corners=2pt, align=center, inner sep=6pt},
 ]
 \node[box, fill=lsLightGray] (feat) at (0,0)
-  {\textbf{Observed features}\\[3pt] $\mathsf{map}(u,c)$\\ $K(u,c)$\\ $C_t(u,c)$};
+  {\textbf{Conditions}\\[3pt] coverage\\ unification\\ saturation\\ licensing};
 \node[box, draw=lsMidBlue, thick] (prof) at (5,0)
   {\textbf{Profile}\\[3pt] licensing posterior\\ over $(u,c)$};
 \node[box, fill=lsLightGray] (proj) at (10.2,0)
@@ -305,26 +306,27 @@ The formal architecture rests on three constitutive variables: mapping viability
   {\emph{support, graded separately}\\ stabilization (bimodality) $\rightarrow$\\ maintenance (production--repair loop) $\rightarrow$ control (open)};
 \draw[->, gray] (supp) -- (prof);
 \end{tikzpicture}
-\caption{The projectibility-first order of explanation. The three constitutive variables specify a profile (the population licensing posterior) whose partial observation licenses the projections on the right. What stabilizes, maintains, or controls the profile is a separate, graded claim (below), not something inherited from naming the mechanism.}
+\caption{The projectibility-first order of explanation. The constitutive conditions specify a profile (the posterior over licensed assemblies) whose partial observation licenses the projections on the right. What stabilizes, maintains, or controls the profile is a separate, graded claim (below), not something inherited from naming the mechanism.}
 \label{fig:profile-spine}
 \end{figure}
 
 \begin{table}[H]
 \centering
-\begin{tabular}{ll}
+\begin{tabular}{@{}ll@{}}
 \toprule
-Variable & Component \\
+Condition & Component \\
 \midrule
-$\mathsf{map}(u,c)$ & Mapping Viability (Categorical prerequisite) \\
-$K(u,c)$ & Operator-Value Coherence \\
-$C_t(u,c)$ & Situational Licensing (Social convention) \\
+$\mathcal{A}(u,v)\neq\emptyset$ & Structural viability (categorical prerequisite) \\
+$\operatorname{def}(A)$ & Operator-value compatibility (unification) \\
+$\operatorname{sat}(A,c)$ & Saturation of obligatory dimensions (derived, \S\ref{sec:derived-obligatoriness}) \\
+$L_t(A,c)$ & Situational licensing (latent, population-level) \\
 \bottomrule
 \end{tabular}
-\caption{The three constitutive variables of the OVMG framework.}
+\caption{The constitutive conditions of the OVMG framework. Their conjunction, read through the learner's posterior, gives grammatical status (\S\ref{sec:posterior-existence}).}
 \label{tab:vars}
 \end{table}
 
-The formal core needs names for recurrent \term{instability modes}: ways of driving $\mathsf{map}$, $K$, or $C_t$ toward zero, with processing and prescriptive factors modulating how grammatical something \emph{feels} without directly fixing grammatical status.
+The formal core needs names for recurrent \term{instability modes}: ways of defeating coverage, unification, saturation, or licensing, with processing and prescriptive factors modulating how grammatical something \emph{feels} without directly fixing grammatical status.
 
 \subsection{Diagnostic categories}\label{sec:core-components}
 
@@ -387,6 +389,7 @@ These examples show why grammaticality has to be indexed to communicative situat
 
 The stability of form--value relations within speech communities can be empirically modeled, as demonstrated by \textcite{blythe2009speech}. Their utterance selection model treats speech communities as networks where speakers track and reproduce linguistic variants based on their interactions. When applied to dialect formation, these models show how competing linguistic variants spread and eventually stabilize, with initial variant frequency strongly predicting which form will prevail.
 
+\label{sec:community-values}%
 In different languages, different distinctions become conventionalized as grammatically obligatory. These obligatory contrasts reflect historically stabilized patterns in which meaning distinctions are systematically marked. Over time, usage establishes grammatical constructions that reliably signal these distinctions. As a result, what counts as a grammatical necessity in one language may be optional or absent in another.
 
 The progressive aspect provides a useful example. In Standard English, it isn't optional but an obligatory grammatical marker for ongoing, incomplete actions:
@@ -400,7 +403,7 @@ In French, by contrast, the progressive aspect isn't a grammatically mandatory d
 \olang{Elle étudie maintenant.}\\
 `she studies/is studying now'
 \z
-can comfortably describe a currently ongoing action without any need for special morphology. In Standard French, this aspectual distinction isn't conventionalized as an obligatory operator contrast. English grammar treats the contrast as obligatory; French doesn't.
+can comfortably describe a currently ongoing action without any need for special morphology. In Standard French, this aspectual distinction isn't conventionalized as an obligatory operator contrast. English grammar treats the contrast as obligatory; French doesn't. On this account that difference isn't a primitive of either grammar: \S\ref{sec:derived-obligatoriness} derives obligatoriness as the limit of preemption applied to zero-marking, so the English--French contrast is a prediction of the dynamics, not a stipulation they inherit.
 
 The same holds for evidentiality, the grammatical marking of information sources. In Turkish, evidentiality is systematically realized through verb forms and particles that distinguish between directly witnessed events and those inferred or reported:
 \ea
@@ -409,7 +412,7 @@ The same holds for evidentiality, the grammatical marking of information sources
 \z
 In Turkish, evidential distinctions are conventionalized as obligatory operator contrasts. A speaker can't simply omit evidential marking without sounding ungrammatical.
 
-English speakers can say \mention{I heard that he arrived} or \mention{He must have arrived}, but these are optional lexical or modal resources rather than required elements of the grammar. In English, evidential distinctions aren't conventionalized as obligatory operator contrasts.
+English speakers can say \mention{I heard that he arrived} or \mention{He must have arrived}, but these are optional lexical or modal resources rather than required elements of the grammar. In English, evidential distinctions aren't conventionalized as obligatory operator contrasts. The same derivation covers the Turkish case on a different dimension (\S\ref{sec:derived-obligatoriness}).
 
 \textcite{kilani2005} demonstrate this principle systematically in their analysis of verbal morphology across French and other Romance languages. They show how apparently similar verbal systems can grammaticalize quite different semantic distinctions as obligatory. The contrast reflects different conventions about which meaning distinctions are systematically marked. For instance, while both French and Italian mark aspect morphologically, they differ in which aspectual distinctions are grammaticalized versus left to optional lexical expression.
 
@@ -429,15 +432,13 @@ Here, the present perfect construction realizes a current-relevance operator val
 The age example belongs elsewhere:
 \ea[*]{\mention{I have 25 years.} \hfill intended as `I'm 25 years old'}\label{ex:have-years-sem}
 \z
-In English, \mention{have}+\mention{years} is a licensed frame for duration, remaining time, or experience, but ordinary age predication is licensed through a different frame. The intended value is transparent, so the failure isn't a K failure in the narrow sense. It's a licensing failure for an age-predication construction in English, even though cognate-looking frames are licensed in French and Spanish.
+In English, \mention{have}+\mention{years} is a licensed frame for duration, remaining time, or experience, but ordinary age predication is licensed through a different frame. The intended value is transparent, so the failure is not an operator-compatibility failure. It is a licensing failure for an age-predication construction in English, even though cognate-looking frames are licensed in French and Spanish.
 
 Sometimes value incompatibility involves conflicting information-structural requirements:
 \ea[*]{\mention{Who did the lifeguard who saved \_ work in New Jersey?} \hfill\label{ex:lifeguard-sem}\hfill\autocite{cuneogoldberg2023}}\z
 The clash is in information structure: the same participant is simultaneously focused through fronting \mention{who} while being backgrounded by the relative clause construction \autocite{cuneogoldberg2023}.
 
-These examples also delimit the coherence term $K$. $K$ measures whether the best available construal satisfies the grammaticalized operator constraints that are active in the communicative situation. In the energy notation introduced below, those active constraints are the $\phi_j$ terms: tense--aspect anchoring where tense--aspect is obligatory, argument-linking requirements where a construction licenses roles, information-structural requirements where a construction grammatically packages focus or backgrounding, and indexical contrasts only when they've entered a closed accountable repertoire.
-
-This makes $K$ partly derivative of licensing facts at the feature level, keeping arbitrary lexical implausibility out of grammatical incoherence.
+These examples also delimit compatibility. The formal core treats operator-value conflict as failed unification among partial operator assignments: tense--aspect anchoring where tense--aspect is obligatory, argument-linking requirements where a construction licenses roles, information-structural requirements where a construction grammatically packages focus or backgrounding, and indexical contrasts only when they have entered a closed accountable repertoire. This makes compatibility partly derivative of licensing facts at the feature level, keeping arbitrary lexical implausibility out of grammatical incoherence.
 
 \noindent\textsc{Processing constraints.} Language processing engages both dedicated language networks and domain-general cognitive systems \autocite{Fedorenko2024}. When constructions overload these systems, particularly through multiple long-distance dependencies or heavy embedding, they may trigger feelings of ungrammaticality despite being structurally well-formed.
 
@@ -532,9 +533,13 @@ evidence divided among candidate forms, leaving each candidate's posterior low
 in mean but unstable, rather than concentrated near zero.
 
 The phenomenology matches: speakers report not knowing how to say it
-(ineffability), not the confident \enquote{that's wrong} of a preempted gap. The
-satiation-framing prediction also follows: defective cells should behave
-like low-evidence forms, movable under framing, not like preempted gaps.
+(ineffability), not the confident \enquote{that's wrong} of a preempted gap.
+\S\ref{sec:winnerless-cells} derives this profile from the production model
+itself: avoidance absorbs the cell's opportunities, and because avoidance is
+nearly uninformative about any particular candidate, no candidate accumulates
+confident negative evidence either. The satiation-framing prediction follows:
+defective cells should behave like low-evidence forms, movable under framing,
+not like preempted gaps.
 
 \subsection{Diagnosing (un)grammaticality at a glance}
 \label{sec:diag-tree}
@@ -548,7 +553,7 @@ Condition & Canonical outcome\\
 \midrule
 no viable structural analysis &
 \term{nonsense} (\ungram{\mention{Can the have running}})\\[4pt]
-semantic/indexical clash &
+operator-value clash (unification failure) &
 value incompatibility (\ungram{\mention{I've finished it yesterday}})\\[4pt]
 rarely encountered, low certainty &
 community-novel (\mention{friend of whose})\\[4pt]
@@ -563,6 +568,11 @@ grammatical\\
 \bottomrule
 \end{tabular}
 \end{center}
+
+Lexical-semantic oddity without an operator clash (\mention{colorless green
+ideas}) routes to \enquote{grammatical}; its strangeness is a
+construal-plausibility cost in the feeling channel (\S\ref{sec:feeling-new}),
+not a status fact.
 
 
 \subsection{Patterns of (un)grammaticality}\label{sec:patterns}
@@ -614,7 +624,7 @@ Subjective feeling & Metacognitive warning signal & Directly observable:\\
 
 The measurement problem is familiar from other sciences: temperature can't be directly observed but has to be inferred through the behaviour of thermometers. Grammaticality likewise has to be inferred from several measures, with acceptability ratings as one imperfect window. The same caution applies to language-model probabilities: raw string probability by itself doesn't separate grammatical from ungrammatical strings, and minimal-pair probability contrasts are informative only when the intended message is controlled \autocite{HuEtAl2026StringProbability}.
 
-The formal counterpart of this two-layer picture, including what it implies for interpreting the factor analyses that are common in experimental syntax, appears in the formal core (\S\ref{sec:feeling-new}, \S\ref{sec:measurement-C}): because such analyses target the structure of the subjective feeling, not grammatical status directly, a factor counts as evidence about the grammar only when it also shows up in the independent indicators for $C_t$, the population licensing state, and $K$, operator-value coherence.
+The formal counterpart of this two-layer picture, including what it implies for interpreting the factor analyses that are common in experimental syntax, appears in the formal core (\S\ref{sec:feeling-new}, \S\ref{sec:measurement-C}): because such analyses target the structure of the subjective feeling, not grammatical status directly, a factor counts as evidence about the grammar only when it also shows up in the independent indicators for licensing, compatibility, and confidence.
 
 This also explains why satiation and gradient judgments don't automatically threaten categorical status. A construction can remain unlicensed in the community's system while triggering progressively weaker negative responses through familiarization. Conversely, subjective response can remain continuous even when the population licensing state is effectively categorical (\S\ref{sec:emergent-categoricality}). Treating ratings as evidence rather than definition keeps grammatical hypotheses empirically vulnerable without collapsing the linguistic system of a communicative situation into individual responses to it.
 
@@ -687,515 +697,292 @@ Iconicity remains syntactically constrained, though: it occurs in pre-head modif
 
 These motivations (semantic, social, structural, and iconic) can interact and sometimes conflict. While Optimality Theory has productively modeled such competing pressures through ranked constraints \autocite{prince2004}, OVMG views their resolution as arising from usage within communicative situations rather than solely from fixed rankings. The specific weighting of motivations reflects historically established patterns and communicative needs.
 
+
 \section{A formal core: grammaticality as conditioned stability}
 \label{sec:formalism}
 
 The framework separates two explanatory targets:
-(i) a \term{state theory} specifying the conditions under which an utterance type is grammatical
+(i) a \term{state theory} specifying the conditions under which a form--value pair is grammatical
 \emph{for a population in a communicative situation} at time $t$;
 (ii) a \term{dynamics module} specifying how such states tend to arise and persist.
 The state theory specifies what makes a form grammatical at a time; the dynamics module explains how such grammatical states arise, persist, and change. In projectibility terms, the state theory specifies the \term{profile}, while the dynamics module states its \term{support}: what stabilizes the profile and, where the evidence warrants, what maintains it. Support claims come in grades that have to be earned separately. It is one thing to show that a profile stabilizes, another to show that a production--repair loop maintains it, and a still stronger thing to show that some process detects deviations and pushes the profile back. None of those stronger claims is inherited from the framework's name \autocite{reynolds2026kindsProjectibilityProfiles, reynolds2026notEveryStableCluster}.
-In Woodward's interventionist terms, a stabilizer earns that status when an intervention on it
-would change the profile in an invariant, predictable way
-\autocite{woodward2003MakingThingsHappen, woodward2001}.
-Table~\ref{tab:vars2} summarizes the notation.
-
-\begin{table}[H]
-\centering
-\caption{Notation summary}
-\label{tab:vars2}
-\begin{tabular}{@{}p{3.5cm}l@{}}
-\toprule
-Symbol & Interpretation\\
-\midrule
-\multicolumn{2}{l}{\textit{State theory}}\\
-$u$ & Utterance type or candidate token\\
-$g \in \mathcal{H}$ & Construction node in a hierarchy\\
-$c \in \mathcal{C}$ & Conditioning state (situation + norm-centre)\\
-$\mathsf{map}(u,c)$ & Structural viability ($\in\{0,1\}$)\\
-$K(u,c)$ & Operator-value coherence with reject option ($\in[0,1]$)\\
-$C_t(u,c)$ & Situational licensing at time $t$ ($\in[0,1]$)\\
-$\widetilde{G}_t(u,c)$ & Graded stability score ($=\mathsf{map}\cdot K \cdot C_t$)\\[3pt]
-\multicolumn{2}{l}{\textit{Feeling model}}\\
-$F_{i,t}(u,c)$ & Subjective feeling of anomaly\\
-$L(u)$ & Dependency locality cost\\
-$\mathbf{R}_i(u,c)$ & Processing cost vector (interference, locality, surprisal)\\[3pt]
-\multicolumn{2}{l}{\textit{Dynamics} (\S\ref{sec:dynamics-new})}\\
-$N_t(n,c)$ & Number of opportunities for niche $n$ in state $c$\\
-$\rho_t^\star(v\mid n,c)$ & Counterfactual choice probability among analogical candidates\\
-$s_t, e_t, p_t$ & Positive evidence, error evidence, preemption mass\\
-\bottomrule
-\end{tabular}
-\end{table}
+In Woodward's interventionist terms, a stabilizer earns that status when an intervention on it would change the profile in an invariant, predictable way \autocite{woodward2003MakingThingsHappen, woodward2001}.
 
 \subsection{Conditioning structure}
 \label{sec:conditioning}
 
-Let $c\in\mathcal{C}$ be a \term{conditioning state}, a construed communicative situation
-in \posscite{wiese2023} sense, together with whatever norm-centre is treated as relevant.
-Nothing here requires $c$ to be externally given; interlocutors can misalign about $c$,
-and $c$ can be learned, split, and renegotiated over time.
+Let $c\in\mathcal{C}$ be a \term{conditioning state}, a construed communicative situation in \posscite{wiese2023} sense, together with whatever norm-centre is treated as relevant. Nothing here requires $c$ to be externally given; interlocutors can misalign about $c$, and $c$ can be learned, split, and renegotiated over time.
 
-For many purposes it helps to think of $c$ as a bundle that may include
-situational features (activity type, medium, footing), stable baselines tied to
-speaker ascription, and norm-orientation (discourse-community identification),
-but the formalism treats $c$ abstractly as the conditioning variable that selects
-the relevant distribution of form--value relations.
+For many purposes it helps to think of $c$ as a bundle that may include situational features (activity type, medium, footing), stable baselines tied to speaker ascription, and norm-orientation (discourse-community identification), but the formalism treats $c$ abstractly as the conditioning variable that selects the relevant distribution of form--value relations.
+
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabular}{@{}lll@{}}
+\toprule
+\S\S1--2 variable & Formal object (\S3) & The work it did \\
+\midrule
+$\mathsf{map}(u,c)$ & $\mathbf{1}\bigl[\mathcal{A}(u,v)\neq\emptyset\bigr]$ &
+  structural viability: some covering assembly exists \\
+$K(u,c)$, operator part & $\operatorname{def}(A)$: unification &
+  operator-value coherence, now hard \\
+$K(u,c)$, oddness part & plausibility term in $R_i$ (\S\ref{sec:feeling-new}) &
+  content-oddness, now a feeling-channel cost \\
+$C_t(u,c)$ & posterior over $L_t(A,c)$ &
+  situational licensing, now mean \emph{and} concentration \\
+$\widetilde{G}_t=\mathsf{map}\cdot K\cdot C_t$ & $G_t(f,v,c)$: posterior existence &
+  graded status; the old product is a limiting case (\S\ref{sec:posterior-existence}) \\
+$\tau(c)$ & unchanged, \S\ref{sec:decision-readout} & decision-theoretic read-out only \\
+\bottomrule
+\end{tabular}
+\caption{Where the constitutive variables' work lives in the revised core. The prose architecture of \S\S1--2 is unchanged; the formal core carries it on different objects.}
+\label{tab:notation-bridge}
+\end{table}
 
 \subsection{Objects}
 \label{sec:objects}
 
-Let $u$ range over utterance tokens or fine-grained utterance types, with
-structural representation $M(u)$. Let $\sigma(u,c)$ be the utterance-level
-interpretation made available in $c$ (lexical content plus pragmatic enrichment,
-indexical resolution, discourse update, etc.).
+The core's unit is the construction, in the CxG sense of a learned form--value pairing at any grain \parencite{fillmore1988, goldberg1995constructions}. Formally, a \term{construction} $\kappa$ is a pair $(\tau_\kappa, \delta_\kappa)$: a form template with typed slots, and a value contribution mapping slot fillers to content together with a \term{partial operator assignment} $\omega_\kappa$. Nothing here is level-specific: a construction can be the plural cell of a lexeme, a clause pattern, an intonational contour, or a code-mixed frame.
 
-Utterance types inherit licensing from a hierarchy of constructional nodes
-$\mathcal{H}$. A novel token such as \mention{She texted him the address} need
-not have been encountered before; it can still be covered by licensed nodes for
-ditransitive transfer, pronominal object order, and the relevant lexical-class
-relations. Let $A(u)\subset\mathcal{H}$ be the nodes activated by $u$, and let
-$\lambda_g(u,c)$ be non-negative coverage weights with
-$\sum_{g\in A(u)}\lambda_g(u,c)=1$. Each node $g$ has its own licensing
-posterior. A token-level licensing estimate can then be derived by partial
-pooling:
-\begin{equation*}
-C_t(u,c)=\sum_{g\in A(u)}\lambda_g(u,c)\,C_t(g,c).
-\end{equation*}
-The sum is schematic; a similarity kernel over representations would do the
-same work. What matters is that the learner updates constructional regions, not
-only memorized sentence types. This prevents the dynamics from predicting that
-every first-heard sentence has zero licensing.
+Operator assignments live in a space $\Omega$ of partial functions from a dimension set $O(c)$--clause type, polarity, tense--aspect anchoring, role allocation, scope, reference tracking, information-structural packaging--to finite value sets. Which dimensions belong to $O(c)$ is itself conventional: a contrast enters only when the community has conventionalized it as an operator contrast in the sense of \S\ref{sec:operator-values}, so the inventory is community-indexed, as the coherence constraints were before. Two partial assignments \term{unify}, written $\omega \sqcup \omega'$, iff they agree on every dimension where both are defined; otherwise the join is undefined.
 
-The framework distinguishes three state quantities.
+An \term{assembly} $A$ is a finite tree of constructions with all slots filled. Its yield is $\mathrm{form}(A)$; its operator assignment is $\omega(A)=\bigsqcup_{\kappa\in A}\omega_\kappa$, defined iff all contributions unify; its value is $\mathrm{val}(A)$. Three predicates over assemblies carry the old variables' work:
 
-\noindent\textsc{(i) Mapping viability.}
-Let $\mathsf{map}(u,c)\in\{0,1\}$ indicate whether structural analysis can yield at least one well-typed representation for $u$ (category assignment + structural composition) throughout the derivation.
-\begin{equation*}
-\mathsf{map}(u,c)=
-\begin{cases}
-1 & \text{if }\exists \text{ valid analysis } M(u) \text{ yielding } \mu(M)\\
-0 & \text{otherwise.}
-\end{cases}
-\end{equation*}
-$\mathsf{map}$ is prior to \emph{situational licensing} in one specific sense: it registers whether any covering analysis exists at all (word salad and category errors defeat it) while enforcing nothing about whether the covered analysis is licensed in $c$. Situational non-licensing belongs only in $C_t$. But $\mathsf{map}$ isn't pre-conventional; \S\ref{sec:map-clarification} spells out its dependence on the constructional hierarchy, stored wholes included.
+\begin{align}
+\operatorname{def}(A) &= \mathbf{1}\bigl[\omega(A)\ \text{is defined}\bigr]
+  && \text{(compatibility)} \\
+\operatorname{sat}(A,c) &= \mathbf{1}\bigl[\omega(A)\ \text{is total on}\
+  \mathrm{OBL}(c,A)\bigr]
+  && \text{(saturation)} \\
+L_t(A,c) &= \textstyle\bigwedge_{\kappa\in A} z_t(\kappa,c)
+  && \text{(licensing)}
+\end{align}
 
-\noindent\textsc{(ii) Coherence as satisfied concentration of interpretation.}
-Even when $\mathsf{map}(u,c)=1$, interpretation can be unstable: multiple
-incompatible construals may compete, or the best available construal may violate
-an operator constraint. A normalized distribution over ordinary interpretations
-would measure ambiguity but not violation: a single catastrophic construal would
-still receive probability 1. To avoid that bug, the model adds a null outcome
-$\omega_0$ representing rejection or failed operator-value satisfaction. Let
-$\Omega^+(u,c)=\Omega(u,c)\cup\{\omega_0\}$ and fix
-$E(\omega_0;u,c)=\kappa_c$:
-$$
-p(\omega\mid u,c)=
-\frac{e^{-E(\omega;u,c)}}{e^{-\kappa_c}+\sum_{\omega'\in\Omega(u,c)}
-e^{-E(\omega';u,c)}}.
-$$
-$$
-K(u,c)=\max_{\omega\in\Omega(u,c)} p(\omega\mid u,c)\in[0,1].
-$$
-I choose the null-outcome repair because it preserves the probabilistic
-interpretation of $K$. An unnormalized score $e^{-E(\omega^\star)}$ or an
-explicit $K_{\text{peak}}\times K_{\text{satisfaction}}$ decomposition would
-make similar predictions, but the null outcome keeps ambiguity and
-satisfaction in a single race. A good single construal has $E(\omega^\star)\ll
-\kappa_c$ and $K\approx 1$; a transparent but operator-violating construal has
-$E(\omega^\star)\gg\kappa_c$, so probability mass shifts to $\omega_0$ and
-$K\approx 0$.
+Compatibility is hard: there is no weighting an operator clash away. Saturation refers to the obligatory dimensions $\mathrm{OBL}(c,A)$, which are not stipulated per language but derived from the dynamics. A dimension is obligatory exactly when zero-marking assemblies have been preempted to near-zero licensing in every niche where it is at issue (\S\ref{sec:derived-obligatoriness}). English progressive marking and Turkish evidential marking are the worked cases there.
 
-The energy model $E(\omega;u,c)$ is \emph{open-ended}:
-\begin{equation*}
-E(\omega;u,c)=\sum_{j\in\mathcal{J}(c)} w_j\,\phi_j(\omega;u,c),
-\end{equation*}
-where $\mathcal{J}(c)$ includes constraints on grammaticalized features live in
-$c$. In the demonstrations below, I assume a minimal inventory: (1) temporal
-alignment where tense--aspect is grammaticalized, (2) argument-structure
-satisfaction where a construction licenses roles, (3) information-structural
-fit where topic/focus packaging is grammatically specified, and (4) indexical
-consistency only when the contrast belongs to a closed accountable repertoire.
-This criterion makes $K$ partly derivative of licensing facts. A value can
-enter $E$ only after the community has conventionalized it as a grammaticalized
-constraint.
+Licensing is latent. Each construction--situation pair carries an inclusion variable $z_t(\kappa,c)\in\{0,1\}$: whether $\kappa$ belongs to the community repertoire at $c$. Nobody observes $z$; speakers infer it from tokens, structured omissions, and repair, and the learner's posterior is the node-level Beta posterior of \S\ref{sec:update}, with mean $C_t(\kappa,c)$ and concentration $\nu_t(\kappa,c)$. The individual state $\pi_{i,t}$ and the population distribution over it are retained; what changes is only what the posterior now feeds.
 
-This decomposition bridges the narrative diagnostic categories of \S\ref{sec:core-components} to the formal variables. For instance, one can group coherence demands by subsystem, denoting the sum over purely semantic demands as $E_{\text{sem}}$ and over indexical/pragmatic demands as $E_{\text{index}}$, to yield an expositional factorization $K \approx K_{\text{sem}} \cdot K_{\text{index}}$. In practice, the framework assumes that stability depends on the joint concentration of all constraints live in the communicative situation $c$.
-
-\noindent\textsc{(iii) Situational licensing (entrenchment) under conditioning.}
-Each individual $i$ maintains a graded licensing state for $u$ in $c$: a credence
-$\pi_{i,t}(u,c)\in[0,1]$ that $u$ is a community resource there. \S\ref{sec:update}
-models this state as a Beta posterior. The licensing \emph{attitude}
-$\Lambda_{i,t}(u,c)\in\{0,1\}$ (treating the relationship as a legitimate option
-rather than a performance slip or nonce error) is a thresholded read-out of that
-graded state, not a separate primitive.
-
-The population-level licensing state is the distribution of $\pi_{i,t}(u,c)$
-across the population induced by $c$. Its mean,
-\begin{equation*}
-C_t(u,c)=\mathbb{E}_i\bigl[\pi_{i,t}(u,c)\bigr]\in[0,1],
-\end{equation*}
-is the object previously called \enquote{entrenchment}, explicitly
-conditioned on $c$. The population quantified over isn't a separate primitive; it's induced by the norm-centre and communicative situation bundled in $c$.
-
-The mean doesn't exhaust the state. A community in which half the speakers
-confidently license $u$ and half confidently reject it, and a community in which
-every speaker sits at credence one-half, share $C_t=0.5$ but differ in
-dispersion, both across speakers and within each speaker's posterior. Stable
-mixture and shared uncertainty are different conditions with different
-signatures (bimodal versus unimodal individual judgment distributions, high
-versus low within-speaker consistency), and \S\ref{sec:projectible-G} shows that
-some of the model's projections run over exactly that difference. Where only the
-mean matters, I write $C_t$; where concentration matters, I refer to the
-licensing state.
+Partial pooling survives restated. A novel token such as \mention{She texted him the address} need not have been encountered: the assemblies covering it are built from nodes--ditransitive transfer, pronominal object order, the relevant lexical-class relations--each with its own posterior, and the token inherits its status through them. What the learner updates is constructional regions, not memorized sentence types, so first-heard sentences are not predicted to have zero licensing.
 
 \subsection{Grammatical status as a conditioned state property}
+\label{sec:status}
 \label{sec:objective-G}
 
-I write $\mathbb{I}[\cdot]$ for the indicator function:
-$\mathbb{I}[\phi]=1$ if $\phi$ is true and $0$ otherwise.
+\subsubsection{Status as posterior existence}
+\label{sec:posterior-existence}
 
-The state theory distinguishes a graded stability score from a categorical
-membership predicate.
+For a form $f$, value $v$, and conditioning state $c$, let $\mathcal{A}(f,v)$ be the set of assemblies with yield $f$ and value $v$. Grammatical status is the posterior probability that a licensed route to the form--value pair exists:
 
-\subsubsection{A graded stability score}
+\begin{equation}
+G_t(f,v,c)=
+P\Bigl(\,\exists A\in\mathcal{A}(f,v):\;
+\operatorname{def}(A)\wedge\operatorname{sat}(A,c)\wedge L_t(A,c)
+\,\Bigm|\,\mathcal{D}_t\Bigr),
+\label{eq:Gt}
+\end{equation}
 
-Recall that $\mathsf{map}(u,c)\in\{0,1\}$ indicates whether $u$ has at least one
-available structural analysis in conditioning state $c$ that yields a
-well-defined operator value. Let $K(u,c)\in[0,1]$ be coherence as satisfied
-concentration of the interpretation distribution, and let $C_t(u,c)\in[0,1]$ be
-the population licensing rate at time $t$ in $c$.
+\noindent where $\mathcal{D}_t$ is the evidence to date: tokens, structured omissions, repairs, avoidance, and situation cues. Status is a property of a population--situation pair, read through a learner's or an analyst's posterior; the population state it estimates is the distribution of node posteriors induced by $c$, exactly as before. Where value is recoverable from context, I write $G_t(u,c)$ for readability.
 
-Define the graded stability score:
-\begin{equation*}
-\widetilde{G}_t(u,c)=\mathsf{map}(u,c)\cdot C_t(u,c)\cdot K(u,c)\in[0,1].
-\end{equation*}
-This quantity is the workhorse for modeling gradience and for linking the
-state theory to behavioural measures.
+Two remarks keep \eqref{eq:Gt} honest. First, finiteness: for a finite yield and a finite, non-empty-recursive construction inventory (no cycles of null-yield expansions--the standard offline-parsability condition), $\mathcal{A}(f,v)$ is finite, so the existential is a finite disjunction. No tractability escape hatch is needed.
 
-\subsubsection{Projectible use of the graded score}
+Second, the relation to the previous formulation. In the high-precision limit, where every node posterior has concentrated, \eqref{eq:Gt} has the same limiting classification as a weakest-link rule over the best assembly: a licensed, defined, saturated assembly exists or it does not. And under node-independence with a single dominant assembly $A^{\ast}$, the probability factorizes,
+
+\begin{equation}
+G_t(f,v,c)\approx \mathbf{1}\bigl[\operatorname{def}(A^{\ast})\bigr]
+\cdot \mathbf{1}\bigl[\operatorname{sat}(A^{\ast},c)\bigr]
+\cdot \prod_{\kappa\in A^{\ast}} C_t(\kappa,c).
+\end{equation}
+
+\noindent This is why the earlier three-factor product worked as well as it did: it is the single-assembly, independent, high-precision special case of \eqref{eq:Gt}, with structural viability as non-emptiness and hard compatibility folded into $\operatorname{def}$. Away from that limit, \eqref{eq:Gt} replaces weakest-link scoring with a posterior over assembly existence, and the uncertainty it carries is the point.
+
+Where the previous draft also folded content-oddness into coherence--the concentration of construal for cases like \mention{colorless green ideas}--that work now lives in the feeling model's cost vector (\S\ref{sec:feeling-new}). A lexically bizarre but operator-coherent construal leaves $G_t$ untouched and shows up as a plausibility cost in $R_i$: the sentence is grammatical and odd, which is the datum.
+
+\subsubsection{Projectible use of the posterior state}
+\label{sec:projectible-use}
 \label{sec:projectible-G}
 
-$\widetilde{G}_t$ isn't bookkeeping after the real explanation has happened.
-It's a macro-state over which grammaticality projects.
+$G_t$ is not bookkeeping after the real explanation has happened. It is the macro-state over which grammaticality projects--and it is now two-dimensional by construction, so Figure~\ref{fig:state-space} depicts the formal object itself rather than a commentary on a scalar that discards half of it.
 
-Some generalizations run over $\widetilde{G}_t$ as such. Production and repair
-behaviour at time $t+1$ depend partly on $\widetilde{G}_t$:
-\begin{align*}
+Some generalizations run over the posterior mean. Production and repair behaviour at $t+1$ depend partly on $\mathbb{E}[G_t]$:
+
+\begin{align}
 \Pr(\text{produce }u\mid n,c,t) &\propto
-\widetilde{G}_t(u,c)\,\rho_t^\star(u\mid n,c),\\
-\Pr(\text{repair }u\mid c,t) &= r_0+r_1\bigl(1-\widetilde{G}_t(u,c)\bigr),
-\qquad r_1>0.
-\end{align*}
-For these, a low score licenses the same expectations regardless of whether it
-comes from mapping failure, operator-value incoherence, or non-licensing, and
-high-$\widetilde{G}$ forms show the converse profile.
+  \mathbb{E}\bigl[G_t(u,c)\bigr]\;\rho^{\star}_t(u\mid n,c), \\
+\Pr(\text{repair }u\mid c,t) &= r_0+r_1
+  \bigl(1-\mathbb{E}\bigl[G_t(u,c)\bigr]\bigr), \qquad r_1>0.
+\end{align}
 
-Other generalizations need the finer state: the licensing posterior with its
-concentration, not just its mean. Two constructions can share a low
-$C_t$ while differing in how much evidence backs it, and the update rule
-\eqref{eq:beta-update} makes them behave differently under new exposure: a
-diffuse posterior should move with framing and familiarization, while a
-concentrated one shouldn't. Satiation profiles, framing sensitivity
-in preempted-gap cases, and actuation
-(\S\ref{sec:dynamics-new}) are projections over the posterior state.
-This separates the independent relative \mention{whose} (low evidence,
-diffuse posterior) from left-branch extraction (heavy preemption, posterior
-concentrated near zero): the two can approach similar means while projecting
-differently.
+Other generalizations run over the concentration, and they are the diagnostic ones. Two form--value pairs can share a low mean while differing in how much evidence backs it, and the update dynamics make them behave differently under new exposure: a diffuse posterior moves with framing and familiarization; a concentrated one does not. The status regions are:
 
-The feedback loop closes as before. Production and repair generate the later
-evidence streams $s_t$, $e_t$, and $p_t$, so individual behaviour updates
-population licensing, and the resulting population state projects back into
-future production and repair. The projectible generalizations are satiation
-profiles, transmission fidelity, repair rates, and change trajectories: some
-over $\widetilde{G}_t$ as such, some over the posterior state that
-$\widetilde{G}_t$ summarizes.
+\begin{itemize}
+\item \textbf{licensed}: $\mathbb{E}[G_t]\approx1$, $\operatorname{Var}(G_t)\approx0$;
+\item \textbf{excluded}: $\mathbb{E}[G_t]\approx0$, $\operatorname{Var}(G_t)\approx0$--confident rejection, whether by structural failure or by concentrated non-licensing;
+\item \textbf{unsettled}: $\operatorname{Var}(G_t)$ high, in two subtypes--\emph{starved} (low concentration from a sparse opportunity set, as with independent relative \mention{whose}) and \emph{divided} (low concentration despite dense opportunities, from conflicting or absorbed evidence flows, as with defective cells, \S\ref{sec:winnerless-cells}).
+\end{itemize}
 
-Figure~\ref{fig:state-space} makes the two-dimensional state visible. The
-horizontal axis is the licensing mean, which $\widetilde{G}_t$ reads; the
-vertical axis is the posterior's concentration, which it discards. Preempted gaps
-and defective cells share a low mean and separate only on the vertical axis, so
-any account that projects from the mean alone can't tell confident rejection
-from unresolved uncertainty.
+The projectible generalizations are as before--satiation profiles, framing sensitivity, transmission fidelity, repair rates, actuation--but they now run over a state that carries the dimension they turn on. Left-branch extraction and \mention{whose} approach similar means and part on concentration; \mention{amn't} parts from left-branch extraction the same way. The feedback loop closes as before: production and repair generate the later evidence streams, individual behaviour updates population licensing, and the population state projects back into future production and repair.
 
 \begin{figure}[t]
 \centering
 \begin{tikzpicture}[font=\small, >=Stealth]
-% axes
-\draw[->] (0,0) -- (9,0) node[right, font=\footnotesize] {licensing mean $C_t$};
+\draw[->] (0,0) -- (9,0) node[right, font=\footnotesize] {posterior mean $\mathbb{E}[G_t]$};
 \draw[->] (0,0) -- (0,6) node[above, font=\footnotesize, align=center] {posterior\\ concentration};
 \node[font=\footnotesize] at (0.9,-0.35) {0};
 \node[font=\footnotesize] at (8.2,-0.35) {1};
 \node[font=\footnotesize, rotate=90] at (-0.35,1.4) {low};
 \node[font=\footnotesize, rotate=90] at (-0.35,4.6) {high};
-% region nodes
 \node[draw, ellipse, fill=lsMidBlue!12, align=center, inner sep=3pt] (pgap) at (1.9,4.4)
-  {preempted gap\\[1pt] \footnotesize *\mention{Which\dots\ car?}};
+  {preempted gap\\[1pt] \footnotesize \ungram{\mention{Which\dots\ car?}}};
 \node[draw, ellipse, fill=lsMidBlue!12, align=center, inner sep=3pt] (gram) at (6.6,4.4)
-  {grammatical\\[1pt] \footnotesize \mention{Which car\dots?}};
+  {licensed\\[1pt] \footnotesize \mention{Which car\dots?}};
 \node[draw, ellipse, fill=lsLightGray, align=center, inner sep=3pt] (def) at (1.9,1.5)
-  {defective cell\\[1pt] \footnotesize *\mention{amn't}};
+  {winnerless cell\\[1pt] \footnotesize \ungram{\mention{amn't}}};
 \node[draw, ellipse, fill=lsLightGray, align=center, inner sep=3pt] (nov) at (4.3,1.1)
   {community-novel\\[1pt] \footnotesize \textsuperscript{?}\mention{friend of whose}};
-% the collapse: G-tilde reads only x
 \draw[gray, dashed, ->] (pgap) -- (def)
-  node[midway, right, font=\footnotesize, text=gray, align=left] {same $\widetilde{G}_t$,\\ different projection};
+  node[midway, right, font=\footnotesize, text=gray, align=left] {same low mean,\\ different projection};
 \end{tikzpicture}
-\caption{The licensing state has two dimensions, but the mean-product $\widetilde{G}_t$ reads only the horizontal one. Preempted gaps (dense preemption, posterior concentrated near zero) and defective cells (split candidates, posterior low but diffuse) share a licensing mean and part only on concentration, the axis that predicts satiation, framing sensitivity, and actuation.}
+\caption{The posterior status state has two dimensions. Preempted gaps (dense preemption, posterior concentrated near zero) and winnerless cells (transparent candidates, low mean but diffuse evidence) share a low mean and part only on concentration, the axis that predicts satiation, framing sensitivity, and actuation.}
 \label{fig:state-space}
 \end{figure}
 
-\subsubsection{A categorical membership predicate}
+\subsubsection{Categorical talk as posterior concentration}
+\label{sec:categorical-talk}
 
-Communities often treat grammaticality as a constitutive membership fact:
-either a relationship counts as an available resource in $c$ or it doesn't.
-A categorical predicate can be defined by thresholding the graded score:
-\begin{equation*}
-G_t(u,c)=\mathbb{I}\!\left[\widetilde{G}_t(u,c)\ge \tau(c)\right].
-\end{equation*}
-The threshold $\tau(c)$ isn't a hidden grammatical parameter. It's a decision
-criterion associated with the communicative situation: some situations are
-strict about what counts as \enquote{in the repertoire}, others are permissive.
+Communities often treat grammaticality as a membership fact: a relationship counts as an available resource in $c$ or it does not. On the present account, that talk is licensed exactly where the posterior has concentrated--where the licensing state sits near an attractor and $\operatorname{Var}(G_t)\approx0$. Categoricality is a property of the state, not a threshold imposed on it; \S\ref{sec:emergent-categoricality} derives the bimodality that makes the categorical regime the typical one for closed, high-opportunity, update-configuring contrasts. In the contested middle, categorical talk is predicted to be unstable and stakes-sensitive--which is the datum, not a bug.
 
-\subsubsection{A decision-theoretic motivation}
-Suppose a judge in $c$
-is choosing between two labels, $\ell\in\{\textsc{in-repertoire},\textsc{not-in-repertoire}\}$,
-and faces asymmetric losses. Let $L_{\textsc{fa}}(c)$ be the loss of treating an
-item as \textsc{in-repertoire} when it isn't, and $L_{\textsc{fr}}(c)$ the loss
-of treating an item as \textsc{not-in-repertoire} when it belongs there. Under the
-simplifying assumption that $\widetilde{G}_t(u,c)$ is a calibrated signal of
-stability, the optimal rule is to accept $u$ as \textsc{in-repertoire} whenever:
-\begin{equation*}
-\widetilde{G}_t(u,c)\;\ge\;\tau(c)\;=\;\frac{L_{\textsc{fa}}(c)}{L_{\textsc{fa}}(c)+L_{\textsc{fr}}(c)}.
-\end{equation*}
-On this view, $\tau(c)$ is induced by payoff structure: high-stakes institutional
-contexts raise $L_{\textsc{fa}}$ (and thus $\tau$), whereas in-group, low-stakes
-contexts raise $L_{\textsc{fr}}$ (lowering $\tau$).
+\subsubsection{A decision-theoretic read-out}
+\label{sec:decision-readout}
 
-Two clarifications keep the categorical predicate from overclaiming. First,
-calling the status \enquote{objective} means population-level and
-convention-constituted, not judge-independent in any stronger sense. The status
-stands apart from any individual's response the way facts about word meaning or
-currency do; it's worldly in that, given the community's practices, the
-projected relations aren't made available by the analyst's decision to group
-cases together \autocite{reynolds2026kindsProjectibilityProfiles}.
-\term{Conventional status} would be an equally accurate name, and I use the two
-interchangeably below. Second, the threshold's arbitrariness is confined by the
-dynamics: where licensing posteriors are bimodal
-(\S\ref{sec:emergent-categoricality}), $G_t$ is insensitive to the exact value
-of $\tau(c)$ and the categorical predicate does its work; in the contested
-middle, judgments should be unstable and stakes-sensitive, which is a prediction
-rather than an embarrassment. The categorical claim is thus a scoped one: it
-holds where the population state is bimodal and is silent elsewhere.
+The threshold survives, demoted to where it belongs. A judge in $c$ choosing between labels $\ell\in\{\textsc{in-repertoire},\textsc{not-in-repertoire}\}$ under asymmetric losses $L_{\mathrm{fa}}(c)$ and $L_{\mathrm{fr}}(c)$ optimally accepts iff
 
-\subsection[What map does and doesn't do]{What $\mathsf{map}$ does and doesn't do}
+\begin{equation}
+\mathbb{E}\bigl[G_t(u,c)\bigr]\geq \tau(c)
+=\frac{L_{\mathrm{fa}}(c)}{L_{\mathrm{fa}}(c)+L_{\mathrm{fr}}(c)}.
+\end{equation}
+
+$\tau(c)$ does no constitutive work: it is a decision criterion induced by payoff structure, strict in high-stakes institutional contexts, permissive in in-group ones. Where the posterior is bimodal, the read-out is insensitive to the exact value of $\tau(c)$; in the middle, judgments should be unstable and stakes-sensitive. The threshold-discontinuity test of \S\ref{sec:Methodological-Considerations} is untouched, including its distinctive prediction that manipulating stakes moves the location of the discontinuity.
+
+Two clarifications keep the categorical read-out from overclaiming. First, calling the status \enquote{objective} means population-level and convention-constituted, not judge-independent in any stronger sense. The status stands apart from any individual's response the way facts about word meaning or currency do; it is worldly in that, given the community's practices, the projected relations are not made available by the analyst's decision to group cases together \autocite{reynolds2026kindsProjectibilityProfiles}. \term{Conventional status} would be an equally accurate name. Second, the threshold's arbitrariness is confined by the dynamics: where licensing posteriors are bimodal, no point estimate of $\tau(c)$ is needed; in the contested middle, $\tau(c)$ is set by independent stakes cues.
+
+\subsection{What the existential does and doesn't do}
+\label{sec:existential}
 \label{sec:map-clarification}
 
-The mapping predicate $\mathsf{map}(u,c)$ is reserved for genuine
-analyzability failure: cases where no structural analysis is available that
-yields any well-defined operator value in $c$. This gives the only
-categorical failure mode in the representational sense.
+The place of the old mapping predicate is taken by the non-emptiness of $\mathcal{A}(f,v)$: genuine analyzability failure is the case where no assembly covers the string at all, and then $G_t=0$ exactly, from an existential over the empty set. This remains the only failure mode that is categorical in the representational sense.
 
-Analyzability is relative to the constructional hierarchy $\mathcal{H}$, stored
-wholes included, not to productive composition alone. Syntactically anomalous
-idioms make the difference visible: \mention{by and large}, \mention{far be it
-from me}, and \mention{come Monday} have no analysis by the productive syntax of
-English, but they're fully conventional \autocite{fillmore1988}. If
-$\mathsf{map}$ meant \enquote{parsable by general rules}, these would come out
-$\mathsf{map}=0$ and hence ungrammatical, the wrong result. They're covered
-instead by their own stored nodes in $\mathcal{H}$: coverage by some licensed
-node, productive or memorized, is what analyzability means here. The cost of
-this choice is candour about status: $\mathsf{map}$ isn't pre-conventional. What
-it contributes is a different \emph{kind} of failure (no covering node at
-all), not a convention-free one.
+Analyzability is relative to the constructional inventory, stored wholes included, not to productive composition alone. Syntactically anomalous idioms make the difference visible: \mention{by and large}, \mention{far be it from me}, and \mention{come Monday} have no analysis by the productive syntax of English, but they are fully conventional \parencite{fillmore1988}. They are covered by their own stored constructions--coverage by some node, productive or memorized, is what analyzability means here. The cost is the same candour as before: non-emptiness is not pre-conventional. What it contributes is a different kind of failure (no covering assembly at all), not a convention-free one.
 
-Cases that motivate talk of categorical structural exclusion aren't treated here
-as mapping failures. In those cases, the intended analysis is typically
-available as a candidate representation, making
-$\mathsf{map}(u,c)=1$, and the intended construal can be coherent once
-stipulated (so $K(u,c)$ need not be small). What makes the pattern behave
-categorically in the community is instead the licensing term: under the relevant
-conditioning states, the community converges on near-universal non-licensing,
-$C_t(u,c)\approx 0$. This gives the formal counterpart of what earlier drafts
-call \enquote{near-zero entrenchment}.
+The residual clause is gone. The previous draft reserved a case for \enquote{an independent constraint on possible analysis}; the revised core has no work for it. A string with no covering assembly gets $G_t=0$ from the empty existential; a preempted gap gets $G_t\approx0$ from a covering assembly licensed to zero. Both are excluded, and they differ in \emph{why}--no assembly versus licensed-to-zero assembly--a difference with an empirical signature: the first fails under every construal and resists all framing; the second has a transparent construal, resists framing by concentration (\S\ref{sec:projectible-use}), and is predicted to be re-openable only by the actuation route of \S\ref{sec:actuation}. The constitutive core loses the escape hatch and gives up nothing.
 
-\subsubsection{Assigning a failure to \texorpdfstring{$\mathsf{map}$, $K$, or $C_t$}{map, K, or C}}
+Because the existential is over value-matched assemblies, homophonous strings can split by construal. A form with one clashing parse and one coherent parse is grammatical on the coherent value and excluded on the clashing value; ambiguity does not let a failed assembly contaminate a successful one.
+
+\subsubsection{Assigning a failure}
+\label{sec:assigning-failure}
 \label{sec:failure-assignment}
 
-Because $K$'s coherence constraints, the set $\mathcal{J}(c)$, are themselves derivative of licensing
-facts (\S\ref{sec:objects}), the three quantities aren't independent primitives
-but ordered, and the multiplicative form $\mathsf{map}\cdot K\cdot C_t$ has to be
-read with that order in view. The operator inventory conventionalized in $c$
-fixes which features are live in $\mathcal{J}(c)$; only then is a candidate's
-coherence score $K$ well posed; and $C_t$, the population licensing state, records whether the population licenses the
-specific relation. That ordering yields pre-judgment diagnostics for assigning a
-failure, applied before consulting acceptability data. Ask first whether
-any node in $\mathcal{H}$ covers $u$: if none does, the failure is $\mathsf{map}$
-(as in \ungram{\mention{Can the have running}}). If a covering node exists, ask
-whether the best available construal violates a feature already live in
-$\mathcal{J}(c)$: if so, the failure is $K$, as in \ungram{\mention{I've finished
-it yesterday}}, where the perfect's temporal feature is live in English and the
-past adverb violates it. If a covering node exists and the construal violates no
-live feature, but the population withholds the relation for that communicative
-job, the failure is $C_t$, as in \ungram{\mention{I have 25 years}} for age,
-where the \mention{have}+years frame is coherent but unlicensed for that job.
-Each branch is checkable against the independent indicators of
-\S\ref{sec:identification-c} rather than read off the judgment it explains, which
-is what keeps the three-way assignment from reproducing the circularity a pure
-community-verdict account would incur.
+The three-way diagnostic of the previous draft becomes a four-step procedure, applied before consulting acceptability data and checkable against the independent indicators of \S\ref{sec:identification-c} at each step.
+
+Ask first whether any assembly covers $u$: if none does, the failure is structural (\ungram{\mention{Can the have running}}). If a covering assembly exists, ask whether its operator contributions unify: if every covering assembly sets some dimension twice incompatibly, the failure is compatibility (\ungram{\mention{I've finished it yesterday}}--two values on the reference-interval dimension; and the information-structural clash in Cuneo and Goldberg's island example is the same formal object on a different dimension \autocite{CuneoGoldberg2022Islands}). If the contributions unify, ask whether the obligatory dimensions are saturated: if not, the failure is saturation (unmarked progressive in an ongoing-at-issue English niche). Only then does licensing arbitrate: a defined, saturated assembly whose pivotal node the population withholds is a licensing failure (\ungram{\mention{I have 25 years}} for age--the frame is coherent, the value transparent, and the age-predication node sits at $C_t\approx0$ under preemption by the \textsc{be}-frame).
+
+Because the dimension inventory $O(c)$ is itself conventionalized, the ordering point of the previous draft survives: what counts as a compatibility failure in $c$ depends on which contrasts the community has conventionalized, so the steps are ordered, not independent--and each step's verdict is checkable against evidence other than the judgment it explains, which is what keeps the procedure from reproducing the circularity of a pure community-verdict account.
 
 \subsection{Interlocutor misalignment about conditioning}
 \label{sec:misalignment-conditioning}
 
-Because $c$ is construed, interlocutors can disagree about which conditioning state is
-in force.  Let a hearer $h$ maintain a posterior $q_h(c\mid e)$ over conditioning states
-given cues $e$ (situational cues, ascription cues, stance cues, etc.).  Then the hearer's
-expected stability score is
+Because $c$ is construed, interlocutors can disagree about which conditioning state is in force. Let a hearer $h$ maintain a posterior $q_h(c\mid e)$ over conditioning states given cues $e$ (situational cues, ascription cues, stance cues, etc.). Then the hearer's expected status is
 \begin{equation*}
-\widetilde{G}^{(h)}_t(u\mid e)=\sum_{c\in\mathcal{C}} \widetilde{G}_t(u,c)\,q_h(c\mid e).
+\hat{G}^{(h)}_{t}(u\mid e)=\sum_{c\in\mathcal{C}} G_t(u,c)\,q_h(c\mid e).
 \end{equation*}
 
 \subsection{Identifying the conditioning state before prediction}
 \label{sec:identification-c}
 
-The conditioning state $c$ isn't a free parameter to be selected after a
-judgment is observed. For empirical work, $c$ has to be fixed before predicting
-ratings or repair behaviour. The posterior $q_h(c\mid e)$ is the identification
-device: it's estimated from non-judgment cues such as activity type, medium,
-participant roles, speaker ascription, register cues, and overt norm
-orientation. A form like \mention{might could} isn't rescued by
-choosing a sympathetic norm-centre after the fact; the model predicts different
-judgments only when the independent cues make that norm-centre probable.
+The conditioning state $c$ is not a free parameter to be selected after a judgment is observed. For empirical work, $c$ has to be fixed before predicting ratings or repair behaviour. The posterior $q_h(c\mid e)$ is the identification device: it is estimated from non-judgment cues such as activity type, medium, participant roles, speaker ascription, register cues, and overt norm orientation. A form like \mention{might could} is not rescued by choosing a sympathetic norm-centre after the fact; the model predicts different judgments only when the independent cues make that norm-centre probable.
 
-This also blocks a competence/performance redux. $C_t$, the population licensing state, is identified by
-corpus-rate-per-opportunity, elicited production, and repair behaviour, not by
-acceptability ratings alone. $F$, the subjective-feeling variable, is identified by ratings, online measures, and
-self-reports. The model is falsified where these dissociate in the wrong
-direction: if satiation changes later corpus rates for a purportedly preempted gap,
-if repair behaviour tracks prescriptive dissonance rather than licensing, or if
-high-opportunity preempted forms behave like low-evidence uncertainties, the
-state assignment is wrong.
+This also blocks a competence/performance redux. $C_t$, the population licensing state, is identified by corpus-rate-per-opportunity, elicited production, and repair behaviour, not by acceptability ratings alone. $F$, the subjective-feeling variable, is identified by ratings, online measures, and self-reports. The confidence read-out $\Phi$ (\S\ref{sec:feeling-new}) is identified by test--retest stability, framing lability, and explicit confidence ratings, none of which enter the estimation of the licensing posterior itself. The model is falsified where these dissociate in the wrong direction: if satiation changes later corpus rates for a purportedly preempted gap, if repair behaviour tracks prescriptive dissonance rather than licensing, or if high-opportunity preempted forms behave like low-evidence uncertainties, the state assignment is wrong.
 
-Reassignment isn't free, though. Localizing a failed prediction to a narrower
-conditioning state is warranted only when that state is specifiable
-independently of the surviving cases, by activity type, medium, participant
-roles, or norm-orientation fixed before the failures were seen
-\autocite{reynolds2026kindsProjectibilityProfiles}. A partition of $\mathcal{C}$
-redrawn around exactly the successes redescribes failure as success; it doesn't
-rescue the model. Confirmatory studies should register the conditioning
-partition and the estimation protocol for $\rho_t^\star$ (\eg forced-choice
-norming over the competitor set, estimated before the licensing data is touched).
-The corpus checks in this paper are illustrative probes, not registered tests.
-Under that discipline, repeated post-hoc reassignment across future studies
-counts against the framework itself, not just against particular state assignments.
+Reassignment is not free, though. Localizing a failed prediction to a narrower conditioning state is warranted only when that state is specifiable independently of the surviving cases, by activity type, medium, participant roles, or norm-orientation fixed before the failures were seen \autocite{reynolds2026kindsProjectibilityProfiles}. A partition of $\mathcal{C}$ redrawn around exactly the successes redescribes failure as success; it does not rescue the model. Confirmatory studies should register the conditioning partition and the estimation protocol for $\rho_t^\star$ (\eg forced-choice norming over the competitor set, estimated before the licensing data is touched). The corpus checks in this paper are illustrative probes, not registered tests. Under that discipline, repeated post-hoc reassignment across future studies counts against the framework itself, not just against particular state assignments.
 
-Two identification points deserve to be explicit, because a corpus rate
-estimates the product $C_t\cdot\rho_t^\star$ (\S\ref{sec:usage}), not $C_t$
-alone. First, $\rho_t^\star$ has to be estimated from evidence that doesn't
-include the licensing data it later interprets. A forced-choice norming
-task supplies it: present the niche $n$ and the competitor set
-$\mathcal{V}_{n,t}^{\star}$ to a separate sample and record how often each
-variant is chosen when stipulated to be available. That yields
-$\rho_t^\star$ before any corpus rate for $u$ is consulted, so a low rate can be
-diagnosed as non-licensing ($C_t\!\approx\!0$, $\rho_t^\star$ high) rather than
-licensed-but-dispreferred selection ($C_t$ high, $\rho_t^\star\!\approx\!0$).
-Second, $\tau(c)$ isn't fit to the judgments it predicts. Where the licensing
-posterior is bimodal (\S\ref{sec:emergent-categoricality}), $G_t$ is
-insensitive to the exact threshold, so no point estimate of $\tau(c)$ is needed;
-in the contested middle, $\tau(c)$ is set by independent stakes cues
-(institutional versus in-group footing), and the movable-cutoff prediction of
-\S\ref{sec:objective-G} tests it directly: manipulate the stakes and the
-location of any discontinuity should move, which can't happen if $\tau(c)$ were
-merely a curve fitted to the responses.
+Two identification points deserve to be explicit, because a corpus rate estimates the product of licensing and counterfactual choice (\S\ref{sec:usage}), not licensing alone. First, $\rho_t^\star$ has to be estimated from evidence that does not include the licensing data it later interprets. A forced-choice norming task supplies it: present the niche $n$ and the competitor set $\mathcal{V}_{n,t}^{\star}$ to a separate sample and record how often each variant is chosen when stipulated to be available. That yields $\rho_t^\star$ before any corpus rate for $u$ is consulted, so a low rate can be diagnosed as non-licensing ($C_t\!\approx\!0$, $\rho_t^\star$ high) rather than licensed-but-dispreferred selection ($C_t$ high, $\rho_t^\star\!\approx\!0$). Second, $\tau(c)$ is not fit to the judgments it predicts. Where the licensing posterior is bimodal (\S\ref{sec:emergent-categoricality}), $G_t$ is insensitive to the exact threshold, so no point estimate of $\tau(c)$ is needed; in the contested middle, $\tau(c)$ is set by independent stakes cues (institutional versus in-group footing), and the movable-cutoff prediction of \S\ref{sec:decision-readout} tests it directly: manipulate the stakes and the location of any discontinuity should move, which cannot happen if $\tau(c)$ were merely a curve fitted to the responses.
 
 \subsection{The feeling of (un)grammaticality}
+\label{sec:feeling}
 \label{sec:feeling-new}
 
-Let $F_{i,t}(u,c)\in(-1,0]$ be the subjective anomaly signal for individual $i$.
-Model it as a bounded response to an unbounded evidence total. The raw signal
-accumulates low stability, implementation costs, and ideological overlays:
-\begin{align*}
-A_{i,t}(u,c)=
-\alpha\bigl(1-\widetilde{G}^{(h)}_t(u\mid e)\bigr)
-+\mathbf{\gamma}^{\top}\mathbf{R}_{i}(u,c)
-+\delta\,D_i(u,c)
-+\varepsilon_i,\\
-A^+_{i,t}(u,c)&=\max\{A_{i,t}(u,c),0\},\\
-F_{i,t}(u,c)&=-\frac{A^+_{i,t}(u,c)}{1+A^+_{i,t}(u,c)},
-\end{align*}
-where $h=i$ is the hearer processing the signal, and $\widetilde{G}^{(h)}_t$ is the hearer's expected stability score accounting for situational uncertainty (\S\ref{sec:misalignment-conditioning}). The bounded link keeps $F$ in $(-1,0]$ however large the summed costs grow, and the floor at zero encodes the absence of any positive feeling of grammaticality introduced above.
-$\mathbf{R}_{i}(u,c)$ is a vector of processing/repair costs (locality, interference,
-garden-path reanalysis, surprisal, etc.). The locality component $L(u)$ sums over the dependencies $d\in\mathcal{D}(u)$:
+Speakers register putative violations through a metacognitive signal that can diverge from status; the two are identified by different evidence streams (\S\ref{sec:identification-c}). The revision makes the observable phenomenology a pair: a signed anomaly signal and a confidence read-out. The pair is what lets the model derive, rather than assert, the contrast between confident rejection and ineffability.
+
+Let $\hat{G}^{(h)}_{i,t}(u\mid e)$ be hearer $i$'s expected status under situation uncertainty (\S\ref{sec:misalignment-conditioning}). The anomaly signal accumulates low expected status, implementation costs, and ideological overlays:
+
+\begin{align}
+A_{i,t}(u,c) &= \alpha\bigl(1-\hat{G}^{(h)}_{i,t}(u\mid e)\bigr)
+  +\gamma^{\top} R_i(u,c)+\delta\,D_i(u,c)+\varepsilon_i, \\
+F_{i,t}(u,c) &= -\frac{\max\{A_{i,t},0\}}{1+\max\{A_{i,t},0\}}
+  \in (-1,0].
+\end{align}
+
+The bounded link and the floor at zero are as before: there is no positive feeling of grammaticality, only the negative signal registered on deviation. $D_i$ is prescriptive dissonance. The cost vector $R_i$ keeps its processing components--the locality term $L(u)$ with its saturating form, interference, garden-path reanalysis, surprisal--and gains a \term{plausibility} component: the implausibility of the best construal given world knowledge and lexical expectations. That component absorbs the retired coherence machinery's oddness work. \mention{Colorless green ideas sleep furiously} is defined, saturated, and licensed node by node, so $G_t\approx1$; its strangeness enters here, as a construal-plausibility cost, and the sentence comes out grammatical and odd--the datum, with one less primitive.
+
+The locality component can still be written explicitly:
 \begin{equation*}
 L(u)=\sum_{d\in\mathcal{D}(u)}\ell\!\bigl(|d|\bigr),\qquad
 \ell(k)=
   \begin{cases}
     k, & k\le K_{\text{sat}},\\[4pt]
-    K_{\text{sat}}+\beta\,(k-K_{\text{sat}})^{\eta}, & k>K_{\text{sat}}.
+    K_{\text{sat}}+\beta\,(k-K_{\text{sat}})^\eta, & k>K_{\text{sat}}.
   \end{cases}
 \end{equation*}
-Here $|d|$ is the length of dependency $d$ (in intervening discourse referents or words), $K_{\text{sat}}$ is a saturation threshold beyond which additional distance contributes sublinearly, and $\beta,\eta$ (with $0<\eta<1$) control the rate of that sublinear growth. $D_i(u,c)$ is prescriptive dissonance.
+Here $|d|$ is the length of dependency $d$ (in intervening discourse referents or words), $K_{\text{sat}}$ is a saturation threshold beyond which additional distance contributes sublinearly, and $\beta,\eta$ (with $0<\eta<1$) control the rate of that sublinear growth.
 
-\noindent\textsc{Interpretation.} $F=0$ corresponds to a null affect (no anomaly reported), while $F<0$ is a metacognitive warning proportional to the summed evidence of misfiring. The same feeling can arise from different mixtures of causes (structural, procedural, or social).
+The second read-out is confidence. Let $\nu_i(u,c)$ be the concentration of $i$'s posterior over the \emph{pivotal condition}--the conjunct in \eqref{eq:Gt} on which the token's status turns. For structural and compatibility failures the pivotal condition is a fact about the assembly set, so once the relevant inventory is fixed the posterior over it is treated as effectively degenerate: confidence is high by modelling convention, not by a separate learning theorem. For licensing-pivotal tokens, $\nu_i$ is the Beta concentration of the pivotal node's posterior (\S\ref{sec:update}). Define
 
-\noindent\textsc{Measurement strategy.} $F$ can be measured via explicit ratings (mapped monotonically to $(-1,0]$) or implicit probes like N400/P600 magnitudes and self-paced reading slowdowns (proxies for components of $\mathbf{R}_i$).
+\begin{equation}
+\Phi_{i,t}(u,c)=\frac{\nu_i(u,c)}{\nu_i(u,c)+\nu_0}
+\in [0,1),
+\end{equation}
 
-Figure~\ref{fig:g-f-channel} collects the two layers. The discrete, population-level status $G_t$ is filtered through the processing costs $\mathbf{R}_i$, prescriptive dissonance $D_i$, and noise into the gradient, per-speaker feeling $F$ that ratings record. Because the two layers are read from different evidence streams, they can dissociate, which is what makes the account falsifiable (\S\ref{sec:identification-c}).
-
-\begin{figure}[t]
-\centering
-\begin{tikzpicture}[font=\small, >=Stealth,
-  box/.style={draw, rounded corners=2pt, align=center, inner sep=6pt}]
-\node[box, draw=lsMidBlue, thick] (g) at (0,0)
-  {\textbf{Grammatical status}\\[3pt] $G_t(u,c)\in\{0,1\}$\\ \footnotesize discrete, population-level};
-\node[box, fill=lsLightGray] (ch) at (5,0)
-  {\textbf{Channel}\\[3pt] $+\;\mathbf{R}_i$ processing\\ $+\;D_i$ prescriptive\\ $+\;\varepsilon$ noise};
-\node[box] (f) at (10,0)
-  {\textbf{Feeling}\\[3pt] $F_{i,t}(u,c)\in(-1,0]$\\ \footnotesize graded, per-speaker};
-\draw[->, thick] (g) -- (ch);
-\draw[->, thick] (ch) -- (f);
-\node[font=\footnotesize, below=0.15cm of g, align=center] {corpora, production,\\ repair (\S\ref{sec:measurement-C})};
-\node[font=\footnotesize, below=0.15cm of f, align=center] {ratings, eye-tracking,\\ self-report};
-\end{tikzpicture}
-\caption{The two-layer architecture. Objective, discrete grammatical status isn't observed directly; it's filtered through processing costs, prescriptive dissonance, and noise into the gradient feeling that ratings measure. The two layers are identified by different evidence streams, which is what lets them dissociate and so falsify each other (\S\ref{sec:identification-c}).}
-\label{fig:g-f-channel}
-\end{figure}
-
-\subsection[Measurement model for C]{Measurement model for situational licensing ($C_t$)}
-\label{sec:measurement-C}
-
-$C_t(u,c)$, the population licensing state for $u$ in $c$, is latent and is estimated from converging indicators rather than from ratings.
-Let $\mathbf{y}_t(u,c)$ be a vector of observable traces (corpus rate per opportunity,
-elicited production probability, repair probability, and recognition as a legitimate
-resource). Repair probability enters with the sign predicted by
-\S\ref{sec:projectible-G}: resources with low $C_t$ (weak population licensing) should invite repair when
-participants orient to the relevant norm-centre.
-A minimal measurement model is
-\begin{equation*}
-\mathbf{y}_t(u,c)=\mathbf{b}+\boldsymbol{\Lambda}\,\mathrm{logit}\!\bigl(C_t(u,c)\bigr)+\boldsymbol{\epsilon}.
-\end{equation*}
-The logit is well defined because $C_t$ never reaches the boundary: finite Beta updating (\S\ref{sec:update}) keeps the posterior mean strictly interior, so the values written $C_t\!\approx\!0$ or $C_t\!=\!1$ in the prose and the worked examples denote near-boundary posteriors, not literal endpoints.
-
-\noindent\textsc{What factor analysis reveals.} When researchers conduct factor analyses on acceptability ratings, a common approach in experimental syntax, they necessarily target the structure of the subjective feeling, not grammatical status directly. The factors that emerge reflect both genuine grammatical constraints and additional sources of variance that modulate subjective responses without affecting grammatical status, so each maps onto the model's variables only under stated conditions:
+\noindent with $\nu_0$ a scaling constant. The pair $(F,\Phi)$ is the observable phenomenology, and the predictions separate:
 
 \begin{itemize}
-\item \textbf{Operator licensing}: When this factor loads heavily on rejected items and converges with corpus-rate-per-opportunity, elicited production, and repair behaviour, it reflects $C_t$, population licensing.
-\item \textbf{Value coherence}: This factor, including information-structure clashes, belongs to $K$, operator-value coherence, only when it tracks constraints on grammaticalized operator values.
-\item \textbf{Situational entrenchment/frequency}: High-frequency patterns that speakers have conventionalized provide evidence about $C_t$, population licensing, but raw frequency has to be normalized by opportunity set.
-\item \textbf{Sociolinguistic appropriateness}: This factor has mixed status. Indexical clashes can affect $C_t$ when they enter a closed accountable repertoire, but stylistic infelicities typically affect $F$.
-\item \textbf{Processing cost/memory load}: This factor belongs to $F$ unless it feeds back into production, repair, and later licensing through the loop in \S\ref{sec:projectible-G}.
-\item \textbf{Morphophonological well-formedness}: When phonological patterns realize obligatory operator exponents, violations affect $K$ or $C_t$. Otherwise, they influence the subjective response.
+\item \emph{No assembly} (\ungram{\mention{Can the have running}}): $F$ strongly negative, $\Phi\approx1$, under every construal.
+\item \emph{Compatibility failure} (\ungram{\mention{I've finished it yesterday}}): $F$ strongly negative, $\Phi\approx1$; entrenchment of the parts cannot repair it, because unification is hard.
+\item \emph{Preempted gap} (left-branch extraction): $F$ strongly negative, $\Phi$ high--\enquote{that's impossible}; framing-resistant.
+\item \emph{Defective cell} (\ungram{\mention{amn't}}, \mention{pobedit'} \abbr{1sg}): $F$ negative, $\Phi$ low--\enquote{I don't know how to say it}; framing-movable.
+\item \emph{Community-novel} (independent relative \mention{whose}): $F$ weakly negative, $\Phi$ low; framing-movable, with surprisal adding $R$-channel noise.
+\item \emph{Processing overload} (centre embedding): $F$ negative via $R_i$, $\Phi$ moderate; satiation lowers the $R$ contribution, moving $F$ toward zero without touching the licensing posterior.
 \end{itemize}
 
-The methodological upshot is a filter on evidence. Research that aims to uncover the grammar should model a factor only when it also appears in the independent indicators for $C_t$ (population licensing) and $K$ (operator-value coherence); research into judgment behaviour should retain the full factor structure, since the subjective feeling is precisely what predicts how speakers rate sentences presented out of context.
+Optionally, the model can carry an attribution variable: on anomaly detection the hearer infers a source $z\in\{\textsc{unlicensed},\textsc{other-community},\textsc{speaker error},\textsc{noise},\textsc{own overload}\}$, with the posterior over $z$ shaped by $\Phi$ and by the same ascription machinery as $q_h(c\mid e)$. That derives, rather than stipulates, why learner errors and cross-dialect tokens fail to trigger the ungrammaticality feeling--they are attributed to \textsc{other-community} or \textsc{error}--and it gives the misattribution effects of \S\ref{sec:subjective} a formal home. The attribution layer is a measurement refinement, not part of status.
 
-The corpus-rate-per-opportunity indicator is concrete. Figure~\ref{fig:agr-projection} shows one worked case: agreement on collective-partitive subjects (\mention{a bunch of people}, \mention{the majority}), where surface-head number (singular) and notional number (plural) diverge. Counting only subject-position tokens after KWIC filtering (so non-subject false positives are removed) gives a plural-agreement share with a Wilson interval for each cell. The shares sit far above parity in every cell, with the interval width tracking the token count rather than the direction. This gives a licensing estimate for a contested operator contrast read off usage per opportunity instead of ratings: a latent $C_t$ recovered from a converging indicator, with its uncertainty made explicit.
+One falsifier is worth stating here rather than in \S\ref{sec:Methodological-Considerations}: if measured confidence fails to dissociate left-branch extraction from \mention{amn't} at matched mean ratings, the concentration dimension is doing no work and the revision to \eqref{eq:Gt} loses its main empirical payoff.
+
+\subsection{Measurement: four observation channels}
+\label{sec:measurement}
+\label{sec:measurement-C}
+
+Status is latent; it is estimated from converging observation channels, none of which defines it. The revision makes the channels explicit:
+
+\begin{align}
+&P(\text{production}\mid z,n,c)
+  && \text{choice among assemblies in a niche (\S\ref{sec:usage})} \\
+&P(\text{repair}\mid z,\Delta,D,c)
+  && \text{sensitive to operator mis-setting (\S\ref{sec:repair-controller})} \\
+&P(\text{judgment}\mid G_t,R,D,\nu)
+  && \text{the }(F,\Phi)\text{ read-out of \S\ref{sec:feeling-new}} \\
+&P(c\mid\text{cues})
+  && \text{situation inference, }q_h(c\mid e)\text{ (\S\ref{sec:misalignment-conditioning})}
+\end{align}
+
+Production is choice among assemblies, not a direct read of licensing: a corpus rate estimates the product of licensing and counterfactual choice, exactly as in \S\ref{sec:usage}, and the identification discipline of \S\ref{sec:identification-c} (norming $\rho_t^\star$ on independent data before the licensing data is touched) carries over unchanged. Repair enters with the sign predicted in \S\ref{sec:projectible-use} and, in the revised dynamics, with the $\Delta$-sensitivity of the repair stream (\S\ref{sec:repair-controller}). Judgment is a metacognitive read-out, not status; the confidence channel $\Phi$ is identified by test--retest stability, framing lability, and explicit confidence ratings. Situation is inferred from cues, not stipulated after the fact.
+
+The factor-analysis discussion survives with one amendment. Factor analyses of acceptability ratings target the structure of the judgment channel; a factor counts as evidence about the grammar only when it also shows up in the independent indicators for licensing and compatibility. The amendment: judgment studies should now report dispersion and test--retest structure alongside means, because the model's sharpest projections--satiation rank order, framing lability, the gap/cell contrast--run over the concentration that means discard.
+
+The corpus-rate-per-opportunity indicator is concrete. Figure~\ref{fig:agr-projection} shows one worked case: agreement on collective-partitive subjects (\mention{a bunch of people}, \mention{the majority}), where surface-head number (singular) and notional number (plural) diverge. Counting only subject-position tokens after KWIC filtering (so non-subject false positives are removed) gives a plural-agreement share with a Wilson interval for each cell. The shares sit far above parity in every cell, with the interval width tracking the token count rather than the direction. This gives a licensing estimate for a contested operator contrast read off usage per opportunity instead of ratings: a latent licensing posterior recovered from a converging indicator, with its uncertainty made explicit.
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=0.82\textwidth]{fig_agr_projection.pdf}
-\caption{Corpus-rate-per-opportunity as an estimator of $C_t$ for a contested agreement contrast. Plural-agreement share (dot) with Wilson 95\% interval (bar) for collective-partitive subjects in \abbr{coca}, after \abbr{kwic} filtering to subject-position tokens; the dashed line marks parity (no directional preference). Data: \texttt{agr-coca-projection} probe (\mention{bunch}, \mention{majority}/\mention{minority}, and partitive cells). Notional plural dominates in every cell, and the interval widens with the smaller denominators rather than drifting toward parity.}
+\caption{Corpus-rate-per-opportunity as an estimator of licensing for a contested agreement contrast. Plural-agreement share (dot) with Wilson 95\% interval (bar) for collective-partitive subjects in \abbr{coca}, after \abbr{kwic} filtering to subject-position tokens; the dashed line marks parity (no directional preference). Data: \texttt{agr-coca-projection} probe (\mention{bunch}, \mention{majority}/\mention{minority}, and partitive cells). Notional plural dominates in every cell, and the interval widens with the smaller denominators rather than drifting toward parity.}
 \label{fig:agr-projection}
 \end{figure}
 
@@ -1217,28 +1004,30 @@ Cell & pl. & sg. & $N$ & Plural share (Wilson 95\%)\\
 \end{tabular}
 \end{table}
 
-\subsection{Worked examples: deriving status from components}
+\subsection{Worked examples: deriving status from the posterior}
 \label{sec:worked-examples}
 
-The status of the four canonical examples (\S\ref{sec:diag-tree}) can now be defined by computing their component values.
+The canonical examples of \S\ref{sec:diag-tree}, recomputed, with the winnerless cell added. The previous draft asserted its phenomenology and the formal core never touched it; now it is derived.
 
 \begin{enumerate}
-   \item \textbf{\ungram{\mention{Can the have running}}} (Nonsense): 
-   $\mathsf{map}=0$ because structural analysis fails to assign a valid category structure. 
-   Result: $\widetilde{G} = 0$. Status: Ungrammatical.
-   
-   \item \textbf{\ungram{\mention{I've finished it yesterday}}} (Semantic Clash):
-   $\mathsf{map}=1$ (well-formed syntax), $C_t(g,c) \approx 1$ at the level of the component constructions (perfect, past adverbial), but $K \approx 0$ due to the clash between Present Perfect and specific past adverbial (temporal alignment $\phi_{\text{temp}}$ fails).
-   Result: $\widetilde{G} \approx 0$. Status: Ungrammatical.
-   
-   \item \textbf{\marg{\mention{friend of whose}}} (Situationally-Novel):
-   $\mathsf{map}=1$, $K \approx 1$ (perfectly interpretable), but the licensing posterior stays diffuse: the opportunity set $N_t$ is tiny, so preemption mass $p_t$ barely accumulates and the posterior remains near its prior with wide dispersion, meaning \enquote{not established} rather than rejected.
-   Result: $\widetilde{G}$ intermediate, low-confidence. Status: Marginal/Undefined.
+\item \ungram{\mention{Can the have running}} (nonsense). $\mathcal{A}(f,v)=\emptyset$: no covering assembly. $G_t=0$ exactly; $\Phi\approx1$ under every construal. Status: ungrammatical, structurally.
 
-   \item \textbf{\ungram{\mention{Which did you buy car?}}} (Preempted Gap):
-   $\mathsf{map}=1$, $K \approx 1$, but the licensing posterior is driven toward zero and concentrates there. Since $N_t$ is large (questions are frequent) and the counterfactual choice probability $\rho_t^\star$ is high, the effective preemption mass $p_t$ is large, collapsing both the posterior mean and its dispersion (Figure~\ref{fig:posterior-means}).
-   Result: $\widetilde{G} \approx 0$, high-confidence. Status: Categorically Ungrammatical.
+\item \mention{Colorless green ideas sleep furiously}. A covering assembly is defined, saturated, and licensed node by node: $G_t\approx1$. The strangeness is a construal-plausibility cost in $R_i$: $F$ negative, status grammatical. Content-odd, not ill-formed.
+
+\item \ungram{\mention{I've finished it yesterday}} (compatibility failure). Covering assemblies exist, but every one sets the reference-interval dimension twice incompatibly--the perfect's contribution and the deictic adverb's do not unify--so $\operatorname{def}(A)=0$ throughout. $G_t=0$; $\Phi\approx1$. Entrenchment of the component constructions cannot repair it: the clash is outside the licensing terms altogether.
+
+\item \ungram{\mention{I have 25 years}} (licensing failure). Defined and saturated; the value is transparent. The pivotal age-predication node sits at $C_t\approx0$ with high $\nu$, preempted by the \textsc{be}-frame in a dense niche. $\mathbb{E}[G_t]\approx0$, $\Phi$ high. Status: ungrammatical, by concentrated non-licensing.
+
+\item \marg{\mention{friend of whose}} (community-novel). Defined and saturated; the niche is vanishingly sparse, so the pivotal node's posterior sits near its prior with low $\nu$. $\mathbb{E}[G_t]$ intermediate, $\operatorname{Var}(G_t)$ high, $\Phi$ low. Status: unsettled (starved); framing-movable, with surprisal adding $R$-channel noise.
+
+\item \ungram{\mention{Which did you buy car?}} (preempted gap). Defined and saturated; the dedicated discontinuity node--the only activated node covering the determiner--head discontinuity--absorbs preemption mass from every fronting opportunity, and its posterior is driven to zero and concentrates there (\S\ref{sec:update}). $\mathbb{E}[G_t]\approx0$, $\Phi\approx1$. Status: excluded; framing-resistant, non-satiating.
+
+\item \ungram{\mention{amn't}}, \mention{pobedit'} \abbr{1sg} (winnerless cell). The niche is dense and candidate assemblies are transparent, but no candidate accumulates positive evidence--the outside option absorbs production, and because avoidance has low attributability, candidates accumulate little confident negative evidence either (\S\ref{sec:winnerless-cells}). Every candidate's pivotal node has low mean and low $\nu$. $\mathbb{E}[G_t]$ low, $\operatorname{Var}(G_t)$ high, $\Phi$ low. Status: unsettled (divided); phenomenology ineffability, not rejection--same mean as the preempted gap, different concentration, different feeling.
+
+\item \mention{The bread the baker the apprentice helped made is delicious} (processing overload). $G_t$ high; the locality term in $R_i$ is large. $F$ negative, $\Phi$ moderate; satiation and instruction move the $R$ contribution, not the licensing posterior. Status: grammatical, transiently ill-felt.
 \end{enumerate}
+
+Figure~\ref{fig:posterior-means} shows the low-opportunity versus dense-preemption contrast that underwrites several of these classifications.
 
 \begin{figure}[t]
 \centering
@@ -1247,7 +1036,7 @@ The status of the four canonical examples (\S\ref{sec:diag-tree}) can now be def
     width=0.8\textwidth,
     height=7cm,
     xlabel={Experience (steps)},
-    ylabel={Licensing state (posterior mean, 95\% CrI)},
+    ylabel={Licensing posterior (mean, 95\% CrI)},
     xmin=0, xmax=50,
     ymin=0, ymax=1,
     grid=major,
@@ -1276,15 +1065,16 @@ The status of the four canonical examples (\S\ref{sec:diag-tree}) can now be def
 };
 \end{axis}
 \end{tikzpicture}
-\caption{Licensing posteriors under preemption, from a $\mathrm{Beta}(1,1)$ prior with per-step effective preemption mass $0.01$ (rare, blue) versus $5$ (dense preemption, red); lines are posterior means, shaded regions 95\% credible intervals. The contrast is one of kind, not just rate: the rare construction stays near its prior with a credible interval spanning nearly the whole unit interval (indeterminacy), while the dense-preemption posterior both falls and concentrates, collapsing onto confident rejection. The projections in \S\ref{sec:projectible-G} that turn on evidence structure (satiation, framing sensitivity, actuation) run over this dispersion difference, which the means alone don't encode.}
+\caption{Licensing posteriors under preemption, from a $\mathrm{Beta}(1,1)$ prior with per-step effective preemption mass $0.01$ (rare, blue) versus $5$ (dense preemption, red); lines are posterior means, shaded regions 95\% credible intervals. The rare construction stays near its prior with a credible interval spanning nearly the whole unit interval, while the dense-preemption posterior both falls and concentrates. The projections in \S\ref{sec:projectible-use} that turn on evidence structure--satiation, framing sensitivity, actuation--run over this dispersion difference, which means alone do not encode.}
 \label{fig:posterior-means}
 \end{figure}
 
 \section{Dynamics: why the state stabilizes}
 \label{sec:dynamics-new}
 
-The dynamics module explains trajectories of $C_t(u,c)$ (and, in principle,
-refinements of the conditioning partition itself).  It doesn't define grammaticality.
+The dynamics module explains trajectories of construction-level licensing
+posteriors, and in principle refinements of the conditioning partition itself.
+It does not define grammaticality.
 
 \subsection{Niches, competitors, and opportunity sets}
 \label{sec:niches}
@@ -1293,23 +1083,24 @@ Let $n$ index a \term{constructional niche} (a communicative job), and let
 $\mathcal{V}_{n,t}^{\star}$ be the opportunity set: the observed, licensed, and
 analogically generated variants that could plausibly do that job in some
 conditioning states.
-Let $N_t(n,c)$ be the number of opportunities for niche $n$ in conditioning state $c$
-over some time window, and $k_t(v,n,c)$ the observed count of variant
+Let $N_t(n,c)$ be the number of opportunities for niche $n$ in conditioning
+state $c$ over some time window, and $k_t(v,n,c)$ the observed count of variant
 $v\in\mathcal{V}_{n,t}^{\star}$.
 
 The star matters. Preempted gaps and innovations often involve variants with no
 positive tokens. Their counterfactual utilities are still defined because the
 hierarchy $\mathcal{H}$ generates analogical candidates. English learners can
-represent a left-branch extraction candidate by combining interrogative fronting,
-modifier--noun packaging, and question formation, even if no one licenses that
-candidate as an English resource. The same machinery lets a novel but ordinary
-sentence inherit coverage from licensed higher-grain constructions rather than
-being preempted merely because that exact sentence type is new.
+represent a left-branch extraction candidate by combining interrogative
+fronting, modifier--noun packaging, and question formation, even if no one
+licenses that candidate as an English resource. The same machinery lets a novel
+but ordinary sentence inherit coverage from licensed higher-grain constructions
+rather than being preempted merely because that exact sentence type is new.
 
 \subsection{Usage as \texorpdfstring{licensing $\times$ choice}{licensing x choice} among candidates}
 \label{sec:usage}
 
-Separate \term{licensing} from \term{selection}. A variant can be licensed but rarely chosen.
+Separate \term{licensing} from \term{selection}. A variant can be licensed but
+rarely chosen.
 
 Let $\rho_t^\star(v\mid n,c)\in[0,1]$ be the counterfactual probability of
 choosing $v$ if it were available in niche $n$ under $c$. A flexible choice
@@ -1322,104 +1113,180 @@ U_t(v;n,c)=\boldsymbol{\theta}^{\top}\mathbf{f}(v;n,c).
 $$
 
 At the population level, the expected usage rate
-$\pi_t(v\mid n,c)\approx C_t(v,c)\cdot \rho_t^\star(v\mid n,c)$. The
+$\pi_t(v\mid n,c)\approx C_t(v,c)\cdot\rho_t^\star(v\mid n,c)$. The
 counterfactual choice term can be high even when $C_t(v,c)$ is near zero; that
 is exactly the condition under which absence becomes informative.
 
-
-
-\subsection{Dynamics: preemption as effective preemption mass}
+\subsection{Dynamics: evidence streams, weighted omissions, and repair}
+\label{sec:dynamics-revised}
 \label{sec:update}
 
-The core idea is that
-learners update licensing from positive uses of $u$ and from structured
-non-occurrence when $u$ is a plausible competitor and is repeatedly not chosen.
-The update shouldn't treat all \enquote{opportunities} as equally
-informative: absence is evidential only to the extent that $u$ would have had
-non-trivial probability of being chosen if it were licensed.
+The learner represents each construction--situation pair $(\kappa,c)$ with a
+Beta posterior over the latent inclusion variable $z_t(\kappa,c)$
+(\S\ref{sec:objects}). The update runs on discounted counts: with memory
+discount $\delta_m\in(0,1]$, an evidence item at occasion $t_i$ contributes
+$\delta_m^{t-t_i}$ of its weight at time $t$. Setting $\delta_m=1$ recovers
+perfect retention; $\delta_m<1$ gives bounded evidence memory, and it is what
+the destabilization result in \S\ref{sec:destabilization} turns on.
 
-For a target variant $u$ associated with niche $n(u)$, define the \term{effective
-preemption mass} in a time window as the expected number of $u$-tokens that would
-have been produced if $u$ were a licensed competitor:
-\begin{equation*}
-p_t(u,c)
-=\sum_{j=1}^{N_t(n(u),c)}
-\rho_t^\star\!\bigl(u\mid n(u),c\bigr),
-\end{equation*}
-where $N_t(n(u),c)$ is the number of niche opportunities observed in that window.
-This quantity is large only when (i) the opportunity set is large and (ii) $u$
-would have been chosen at non-trivial rates if licensed.
-
-A simple Bayesian learner for licensing represents each construction node
-$(g,c)$ with a Beta posterior $\mathrm{Beta}(a_{g,t},b_{g,t})$, updated by three evidence streams:
-$s_t$ (positive evidence), $e_t$ (error evidence), and $p_t$ (effective preemption mass).
-An observed token or missed opportunity distributes its evidence over activated
-nodes by the coverage weights $\lambda_g(u,c)$:
-\begin{align*}
-a_{g,t+1} &= a_{g,t}+\lambda_g(u,c)s_t(u,c),\\
-b_{g,t+1} &= b_{g,t}+\lambda_g(u,c)\{e_t(u,c)+p_t(u,c)\}.
-\end{align*}
-The implied node-level mean licensing rate is then:
+The streams are positive evidence $s_t$, error evidence $e_t$, and preemption
+mass $p_t$, distributed over activated nodes by the coverage weights:
+\begin{align}
+a_{g,t+1} &= \delta_m a_{g,t}+\lambda_g(u,c)s_t(u,c),\\
+b_{g,t+1} &= \delta_m b_{g,t}+\lambda_g(u,c)
+  \bigl\{e_t(u,c)+p_t(u,c)\bigr\}.
+\end{align}
+The node-level mean and concentration are
 \begin{equation}\label{eq:beta-update}
-C_{t+1}(g,c)=\frac{a_{g,t+1}}{a_{g,t+1}+b_{g,t+1}}.
+C_{t+1}(g,c)=\frac{a_{g,t+1}}{a_{g,t+1}+b_{g,t+1}},
+\qquad
+\nu_{t+1}(g,c)=a_{g,t+1}+b_{g,t+1}.
 \end{equation}
-Token-level $C_t(u,c)$ is obtained by the partial-pooling equation in
-\S\ref{sec:objects}.
 
-The streams themselves are ascription-weighted. The definition of $\Lambda$
-already excludes performance slips and nonce errors, and the conditioning state
-already fixes whose norms are being estimated; making this explicit, each
-token's contribution to $s_t$, $e_t$, or $p_t$ is scaled by the hearer's
-ascription weight: the probability that the token is a competent realization of
-the norms of $c$, given cues about the producer (age, learner status, group
-membership) and about the token (disfluency, self-repair). Child and learner
-errors barely move adult posteriors even in error-dense environments, not
-because they go unheard but because they're attributed to development or
-transfer rather than to the norm-centre. The same machinery as $q_h(c\mid e)$
-does the work: a token is evidence about the norms of whatever conditioning
-state its producer is taken to competently instantiate. Contact-driven change
-(koinéization) then falls out as a shift in ascription weights rather than a
-separate mechanism.
+The ascription weighting is unchanged. Each token's contribution is scaled by
+the hearer's posterior that it is a competent realization of the norms of $c$.
+This is why child and learner errors barely move adult posteriors, and why
+koinéization falls out as a shift in ascription weights rather than a separate
+mechanism.
 
-The two kinds of evidence also attach at different grains. Positive evidence
-distributes over activated nodes by the coverage weights: a heard token confirms
-every construction that covers it. Error and preemption mass instead concentrate
-on the most specific node that individuates the candidate within its niche,
-because that node is what distinctively predicts the missing tokens. In Bayesian
-terms, the likelihood penalty for structured non-occurrence falls on the
-hypothesis that wastes probability mass on sentence types never observed;
-likelihood is a quantitative measure of the weight of implicit negative evidence
-\autocite{PerforsEtAl2011}.
+\noindent\textsc{Weighted omissions.} The previous draft treated absence as
+evidential in proportion to the counterfactual choice probability:
+$p_t=\sum_j\rho_t^\star(u\mid n(u),c)$ over niche opportunities. That was right
+as far as it went, but it went silent on occasions where the niche arose and
+nothing in the candidate set was produced--periphrasis, avoidance,
+repair-in-progress. Counting those as negative evidence would make every
+defective cell collapse into a preempted gap. The fix falls out of inverting
+the production model.
 
-Partial pooling raises an objection. Token-level licensing is a convex sum
-(\S\ref{sec:objects}):
-\[
-C_t(u,c)=\sum_g\lambda_g(u,c)\,C_t(g,c).
-\]
-Left-branch extraction activates the well-licensed nodes for interrogative
-fronting, question formation, and modifier--noun packaging. The sum can look as
-though it should hand the candidate substantial licensing.
+Consider an occasion $i$ where niche $n$ arose and some $v_i\neq u$ was
+produced. The evidential question is how strongly that choice tells against
+$u$'s membership in the repertoire. Under the production model, if $u$ is
+licensed it is chosen with probability $\rho_t^\star(u\mid n,c)$, and the
+remaining probability renormalizes over the alternatives; if $u$ is unlicensed,
+the alternatives carry the full mass. The per-occasion evidence weight for
+non-licensing is therefore
+\begin{equation}
+q_i=1-
+\frac{P(v_i\mid z_u=1,n,c)}{P(v_i\mid z_u=0,n,c)},
+\label{eq:attributability}
+\end{equation}
+the \term{attributability} of the omission.
+
+Two regimes matter. When $v_i$ is an in-repertoire competitor, the
+renormalization gives $q_i=\rho_t^\star(u\mid n,c)$: the old preemption mass is
+recovered exactly, now as the first-order total of per-occasion Bayes factors
+rather than a definition. When $v_i$ is the outside option--periphrasis or
+avoidance, available at fixed utility under both hypotheses--its choice
+probability is nearly the same whether $u$ is licensed or not, provided $u$'s
+counterfactual utility is low or the production rule assigns a face cost to
+weakly licensed forms. The condition is independently estimable from the same
+production data that estimates $\rho_t^\star$: speakers who avoid an exposed
+candidate despite understanding the intended value are treating production
+itself as costly. Then $q_i\approx0$: taking the outside option is nearly
+uninformative about $u$.
+
+A second weight scales for niche identification: $r_i$ is the posterior
+probability that occasion $i$ instantiated a job $u$ would have done at all,
+with the intended value recoverable under $u$. The generalized preemption mass
+is then
+\begin{equation}
+p_t(u,c)=\sum_{i:\,\text{omissions}} r_i q_i\,\delta_m^{t-t_i},
+\label{eq:preemption-mass}
+\end{equation}
+which reduces to the previous draft's $N_t\cdot\rho_t^\star$ when every
+omission is a competitor choice in a clearly identified niche with
+$\delta_m=1$. Neither weight is a free parameter: both are read off the
+production model and the niche posterior. This is what keeps periphrasis from
+counting as confident negative evidence, and so what separates the defective
+cell's low-mean/low-concentration state from the preempted gap's
+low-mean/high-concentration one (\S\ref{sec:winnerless-cells},
+\S\ref{sec:worked-examples}).
+
+\noindent\textsc{The repair stream: a candidate controller.}
+\label{sec:repair-controller}
+The paper's support claims come in grades: stabilization, maintenance, control
+(\S\ref{sec:implications}). The dynamics so far deliver the first two. The
+third needs a process that registers departures from the licensed profile and
+pushes the population back--and conversational repair is the obvious candidate,
+with a formal home.
+
+Let $\Delta(d)$ be the expected common-ground divergence from mis-setting
+operator dimension $d$: the quantitative face of \enquote{update-configuring}
+in the working test of \S\ref{sec:operator-values}. When a token mis-sets $d$,
+other-initiated repair occurs with probability $r(\Delta,\iota)$, increasing
+in $\Delta$ and modulated by footing $\iota$. Each repair event feeds the
+evidence streams: error evidence $e_t$ for the deviant node, positive evidence
+$s_t$ for the repaired-to competitor. Over a window with $N_t(n,c)$
+opportunities, the corrective flow against a deviant convention in niche $n$ is
+\begin{equation}
+\phi_{\mathrm{rep}}(n)=N_t(n,c)\cdot
+P(\text{mis-set})\cdot r(\Delta,\iota),
+\label{eq:repair-flow}
+\end{equation}
+a restoring force whose magnitude scales with the product of opportunity and
+divergence.
+
+In the mean-field dynamics (\S\ref{sec:emergent-categoricality}) this adds a
+term pushing $C_t$ back toward the community's attractor after perturbation.
+That is Woodward's interventionist signature: the repair rate earns controller
+status if an intervention on it changes the profile's return-to-attractor
+behaviour in an invariant, predictable way \parencite{woodward2001,
+woodward2003MakingThingsHappen}. The claim stays graded: what the term
+establishes is a testable candidate controller, not a demonstration that
+grammar is controlled.
+
+Two commitments come with the term. First, the operator/style boundary becomes
+a parameter statement: policing intensity is predicted to scale with
+$N_t\cdot\Delta$, with opportunity estimable from opportunity-annotated
+corpora and $\Delta$ from repair-initiation rates in conversation-analytic
+corpora regressed on annotated update divergence. The \S\ref{sec:operator-values}
+falsifier--a closed, high-opportunity, non-configuring contrast policed like
+grammar--now has a quantitative form: such a contrast has $\Delta\approx0$, so
+its corrective flow collapses to a social-sanction baseline and its licensing
+distribution should stay gradient, policed like style. Second, if repair rates
+track social indexing rather than $\Delta$, the corrective term collapses into
+sociolinguistic policing and the controller claim fails cleanly. Blythe and
+Croft's utterance-selection dynamics remain the $r\equiv0$ special case, so the
+import is conservative \autocite{BlytheCroft2012}.
+
+\noindent\textsc{Grain asymmetry and partial pooling.} The two kinds of
+evidence attach at different grains. Positive evidence distributes over
+activated nodes by the coverage weights: a heard token confirms every
+construction that covers it. Error and preemption mass instead concentrate on
+the most specific node that individuates the candidate within its niche,
+because that node is what distinctively predicts the missing tokens. In
+Bayesian terms, the likelihood penalty for structured non-occurrence falls on
+the hypothesis that wastes probability mass on sentence types never observed;
+likelihood is a quantitative measure of the weight of implicit negative
+evidence \autocite{PerforsEtAl2011}.
+
+Partial pooling raises an objection. Token-level licensing is assembled from
+constructional nodes, so left-branch extraction activates the well-licensed
+nodes for interrogative fronting, question formation, and modifier--noun
+packaging. The sum can look as though it should hand the candidate substantial
+licensing.
 
 The coverage weights block that result. A node contributes to a token's pooled
 licensing only for the properties it actually sanctions, and those parent nodes
 sanction only \emph{contiguous} realizations. None of them covers the
-determiner--head discontinuity that's the distinctive property of
+determiner--head discontinuity that is the distinctive property of
 \ungram{\mention{Which did you buy car?}}; producing that token requires a node
 that licenses a determiner--head arc crossing the verb, and no
-contiguity-preserving node in $\mathcal{H}$ generates one \autocite{reynolds2026lbe}.
+contiguity-preserving node in $\mathcal{H}$ generates one
+\autocite{reynolds2026lbe}.
 
 The parents keep their high licensing, each confirmed by its own abundant
 contiguous tokens, and contribute none of it to the discontinuous token through
 the pooling sum. The dedicated left-branch-extraction node, the only activated
-node that covers the discontinuity, carries near-gating weight for it and absorbs
-the preemption mass from every fronting opportunity where a contiguity-preserving
-competitor wins. The dedicated node is required by the derivation, not
-gerrymandered to force the result.
+node that covers the discontinuity, carries near-gating weight for it and
+absorbs the preemption mass from every fronting opportunity where a
+contiguity-preserving competitor wins. The dedicated node is required by the
+derivation, not gerrymandered to force the result.
 
 This asymmetry also answers an acquisition worry. If token-level licensing were
 just pooled parent licensing, learners should pass through a stage of treating
-left-branch extraction as live. They don't need to: the candidate is generated
-by analogy, so it's on the table with non-zero prior support, but its dedicated
+left-branch extraction as live. They do not need to: the candidate is generated
+by analogy, so it is on the table with non-zero prior support, but its dedicated
 node has no scaffolding of its own, fronting opportunities are dense in the
 input, and each one adds preemption mass. A companion corpus study quantifies
 the evidential situation: across 1{,}228 fronting opportunities in a
@@ -1432,75 +1299,235 @@ fused-head parse, so the discontinuous analysis also loses the parsing race
 \autocite{Culicover_Varaschin_Winkler_2022_Radical}. The non-satiation of
 left-branch extraction, confirmed in a meta-analysis of 25 experiments
 \autocite{Lu2024}, is exactly what a concentrated near-zero posterior predicts
-(\S\ref{sec:projectible-G}).
+(\S\ref{sec:projectible-use}).
 
 \noindent\textsc{Decaying-gain learning and logistic dynamics.} The discrete
 update \eqref{eq:beta-update} is the primary dynamics. Applied to a fixed
-environment (exogenous evidence streams), it's a decaying-gain estimator: the
+environment (exogenous evidence streams), it is a decaying-gain estimator: the
 posterior mean follows a hyperbolic trajectory of the form
-$a_0/(a_0+b_0+\bar{e}\,t)$, as plotted in Figure~\ref{fig:posterior-means}, and
+$a_0/(a_0+b_0+\bar{e}t)$, as plotted in Figure~\ref{fig:posterior-means}, and
 converges without bifurcating.
 
-The logistic approximation $\dot{C}=r(g,c)\,C(1-C)$ arises when the loop in
-\S\ref{sec:projectible-G} is closed: positive evidence is generated by
+The logistic approximation $\dot{C}=r(g,c)C(1-C)$ arises when the loop in
+\S\ref{sec:projectible-use} is closed: positive evidence is generated by
 production at a rate that grows with the current licensing state, while error
-and preemption mass accrue when the target isn't chosen. Replacing those
+and preemption mass accrue when the target is not chosen. Replacing those
 endogenous evidence streams by their expectations yields a logistic drift, with
-$r(g,c)$ a net evidence rate and a gain that's constant under bounded evidence
-memory (decaying otherwise). I use this ODE only for qualitative fixed-point and
-comparative-statics arguments; the fixed points at 0 and 1 belong to the
-closed-loop population dynamics, not to individual open-loop learning.
+$r(g,c)$ a net evidence rate and a gain that is constant under bounded evidence
+memory. I use this ODE only for qualitative fixed-point and comparative-statics
+arguments; the fixed points at 0 and 1 belong to the closed-loop population
+dynamics, not to individual open-loop learning.
 
 \subsection{Emergent categoricality as bimodality}
 \label{sec:emergent-categoricality}
+\label{sec:bimodality-revised}
 
-The sense of \term{emergence} used here is weak and mechanistic. Population-level
-categoricality is derived from learner-level updating, selection, and repair; it
-isn't a label for whatever remains unexplained. This differs from Hopper's
-\enquote{emergent grammar}, where grammar is perpetually provisional
-\autocite{hopper1987}. The present model allows conditioned states with
-near-absorbing attractors.
+The sense of \term{emergence} used here is weak and mechanistic.
+Population-level categoricality is derived from learner-level updating,
+selection, and repair; it is not a label for whatever remains unexplained. This
+differs from Hopper's \enquote{emergent grammar}, where grammar is perpetually
+provisional \autocite{hopper1987}. The present model allows conditioned states
+with near-absorbing attractors.
 
-In the mean-field approximation, $\dot{C}=rC(1-C)$ has fixed points at 0 and 1.
-When $r>0$, positive evidence dominates and the licensing posterior is driven
-toward 1. When $r<0$, error evidence and effective preemption mass dominate and
-the posterior is driven toward 0. Across construction nodes, a community with
-many evidence rates bounded away from zero develops a bimodal
-distribution of $C_t$: most nodes cluster near licensed or non-licensed
-attractors, while only low-evidence or contested nodes remain diffuse.
+In the mean-field approximation, the closed-loop dynamics
+$\dot{C}=rC(1-C)+\kappa_{\mathrm{rep}}\phi_{\mathrm{rep}}(C^{\ast}-C)$
+have attractors at the licensing extremes: when the net evidence rate $r$ is
+positive, positive evidence dominates and the posterior is driven toward 1;
+when negative, error evidence and preemption mass drive it toward 0; and the
+repair flow, where present, steepens the basin around the community's
+convention $C^{\ast}$. Across construction nodes, a community whose evidence
+rates are bounded away from zero develops a bimodal distribution of licensing
+states: most nodes cluster near the attractors, and only low-evidence or
+contested nodes remain diffuse.
 
-This gives the formal sense in which categorical grammaticality emerges. Closure
-raises $\rho_t^\star$ by keeping the competitor set small and role-specific;
-large $N_t(n,c)$ supplies repeated opportunities; their product is the effective
-preemption mass. Closed, high-opportunity, update-critical contrasts are
-exactly the parameter regime in which the licensing posterior becomes
-bimodal. A finite-population stochastic version should strengthen this pattern:
-sampling drift near 0 and 1 makes the boundaries sticky, while middle states
-remain vulnerable to renewed evidence. This connects the present dynamics to
-complex-adaptive and cultural-evolutionary accounts of language change
-\autocite{beckner2009,kirby2014,BlytheCroft2012}, and to invisible-hand
-explanations, where macro-level order emerges as the unintended consequence of
-micro-level choices \autocite{keller1994}.
+The mean-field picture is not a gesture. The occasion-level system--speakers
+sampling from the production rule, hearers updating discounted Beta
+posteriors--is a reinforcement process of Pólya type, and the relevant
+convergence technology is stochastic approximation for urn-type models
+\parencite{pemantle2007}. The signaling-game case, structurally the closest
+analogue, is treated directly: Argiento, Pemantle, Skyrms, and Volkov analyse
+micro-level reinforcement in the two-state case \parencite{argiento2009}, and
+Hu, Skyrms, and Tarrès extend the analysis \parencite{huSkyrmsTarres2011}.
+Under those dynamics, an initial licensing asymmetry between competitors in a
+dense niche is amplified: the favoured variant's posterior concentrates near 1
+and its rivals' near 0, with reversal probability decaying rapidly in the number
+of opportunities.
+
+The claim as it applies here needs stating at its honest strength. What is
+proved is convergence for close analogues; what the paper needs is the same
+result under the present production rule, with the outside option at fixed
+utility and ascription-weighted evidence. I take that transfer to be
+theorem-adjacent--provable with standard stochastic-approximation techniques,
+at roughly $p\approx0.8$--but it has not been carried out, and the bimodality
+claim inherits that status. Two consequences are worth accepting explicitly.
+First, selection intensity scales with $N_t(n,c)\cdot\Delta(d)$:
+update-configuring contrasts in dense niches converge fastest, which is the
+formal sense in which closed, high-opportunity, update-critical contrasts are
+exactly the parameter regime of emergent categoricality. Second, low-$\Delta$
+contrasts face weak selection, so their licensing distributions are predicted
+to stay unimodal and gradient--policed like style, not like grammar--which is
+the \S\ref{sec:operator-values} falsifier again, now derived rather than
+stipulated.
+
+Sampling drift near the extremes makes the boundaries sticky in finite
+populations, while middle states stay vulnerable to renewed evidence. This
+connects the dynamics to complex-adaptive and cultural-evolutionary accounts of
+language change \autocite{beckner2009,kirby2014,BlytheCroft2012}, and to
+invisible-hand explanations, where macro-level order emerges as the unintended
+consequence of micro-level choices \autocite{keller1994}.
+
+\subsection{Derived obligatoriness}
+\label{sec:derived-obligatoriness}
+\label{sec:obligatoriness}
+
+The state theory referred obligatory dimensions to $\mathrm{OBL}(c,A)$
+(\S\ref{sec:objects}) with a promissory note. Here it is paid:
+obligatoriness is not stipulated per language; it is the limit of preemption
+applied to zero-marking.
+
+\begin{quote}
+A dimension $d$ belongs to $\mathrm{OBL}(c,\phi)$ for frame type $\phi$ iff,
+for every niche $n$ in $c$ with $d$ at issue, every assembly leaving $d$ unset
+has licensing driven to $C_t\approx0$.
+\end{quote}
+
+The derivation is the bimodality result applied with zero-marking as the
+disfavoured competitor. In a $d$-at-issue niche, the marked and unmarked
+assemblies compete; where the marked assembly wins every opportunity, the
+zero-marking assembly accumulates preemption mass exactly as any other rival
+does, and its posterior concentrates near zero. A dimension becomes obligatory
+exactly when that has happened in every niche where it is at issue. The claim
+is a corollary, and it inherits the bimodality result's status--conditional on
+that transfer, roughly $p\approx0.85$.
+
+The typological payoff is that \S\ref{sec:community-values}'s descriptions
+convert to predictions. English progressive marking is obligatory because
+simple-present assemblies in ongoing-at-issue niches have been driven to
+near-zero licensing; French zero-marking there has not been, so the dimension
+stays optional, and \mention{Elle étudie maintenant} is fine. Turkish
+evidential marking is the same story on a different dimension. And
+grammaticalization's obligatorification gets a mechanism: a contrast on its way
+to obligatory status is one whose zero-marking competitor is losing dense
+niches one at a time, which predicts the intermediate stage--obligatory in some
+frame types and niches, optional in others--that grammaticalization corpora show.
+
+\subsection{Winnerless cells}
+\label{sec:winnerless-cells}
+\label{sec:winnerless}
+
+Preempted gaps have a winning competitor. Defective paradigm cells do not, and
+the dynamics now say why the difference is stable rather than transitional.
+
+Suppose candidates $f_1,\dots,f_m$ for a dense cell are near-symmetric in
+initial licensing, the outside option (periphrasis, avoidance) has moderate
+fixed utility, and producing a weakly-licensed form carries a face cost. Then
+the production rule routes the cell's opportunities to the outside option: no
+candidate accumulates positive evidence. And here the attributability weighting
+\eqref{eq:attributability} does its work: outside-option choices have
+$q_i\approx0$, so no candidate accumulates much negative evidence either. Every
+candidate sits at low mean and low concentration--a self-maintaining interior
+state, metastable for long times, since escaping it requires some candidate to
+accumulate positive evidence that the avoidance attractor keeps starving it of.
+
+Status, honestly graded: the qualitative mechanism--an avoidance attractor plus
+evidence starvation--is what the winnerless-cell example in
+\S\ref{sec:worked-examples} relies on, and I take it to be robust. The
+metastability claim as stated, persistence for times exponential in population
+size, is a conjecture with strong analogues in evolutionary dynamics, at perhaps
+$p\approx0.6$ as stated and $p\approx0.8$ that the qualitative mechanism
+survives formalization. \posscite{Sims2023Defectiveness} point that the
+maintenance mixture varies across cases--structural uncertainty, lexical
+restriction, learning dynamics, avoidance--survives either way: the model
+supplies the avoidance-and-starvation component and is agnostic about the rest
+of the mixture.
+
+The phenomenological payoff is now a derivation. Defective cells
+(\ungram{\mention{amn't}}, \mention{pobedit'} \abbr{1sg}) show low mean with
+low concentration--\enquote{I don't know how to say it}--where preempted gaps
+show low mean with high concentration--\enquote{that's impossible}. Same mean,
+different concentration, different feeling, read out by $\Phi$
+(\S\ref{sec:feeling-new}). The satiation-framing prediction follows: defective
+cells should behave like low-evidence forms, movable under framing; preempted
+gaps should not \autocite{Broadbent2009Amnt,Pertsova2016RussianGaps,
+ThomsEtAl2025Amnt}.
+
+\subsection{Destabilization of moribund contrasts}
+\label{sec:destabilization}
+
+Bounded memory buys one more result. With discount $\delta_m<1$, the
+equilibrium concentration of a node's posterior is set by the balance of
+evidence inflow against forgetting:
+$\nu^{\ast}=O\bigl(N/(1-\delta_m)\bigr)$, with $N$ the per-window opportunity
+count for the node's niches. If opportunity falls--a case distinction going
+moribund, a niche drying up--equilibrium concentration falls proportionally:
+licensing estimates drift toward their priors, and inter-speaker dispersion
+rises, because individual histories diverge when shared evidence thins. This is
+elementary given the discounted update, and I rate it accordingly
+($p\approx0.9$).
+
+The corollary is a novel, testable leading indicator: for a contrast going
+moribund, judgment \emph{dispersion} across speakers should rise measurably
+before mean judgments or production frequencies move. Dispersion leads; means
+lag. Variation corpora and judgment archives with repeated sampling over
+apparent time are exactly the data that could check it, and
+\S\ref{sec:predictions} states it as a registered prediction.
 
 \subsection{Actuation}
 \label{sec:actuation}
 
-The same dynamics define \term{actuation}: a sign change in the expected evidence balance for licensing. Actuation occurs when the expected positive stream $s_t(u,c)$ begins to outweigh the combined negative streams $e_t(u,c)+p_t(u,c)$ across successive windows, so that the posterior mean $C_{t+1}(u,c)$ in \eqref{eq:beta-update} increases rather than decays. In the mean-field approximation from \S\ref{sec:update}, the net evidence rate $r(u,c)$ becomes positive, yielding the familiar S-curve at the population level.
+The same dynamics define \term{actuation}: a sign change in the expected
+evidence balance for licensing. Actuation occurs when the expected positive
+stream $s_t(u,c)$ begins to outweigh the combined negative streams
+$e_t(u,c)+p_t(u,c)$ across successive windows, so that the posterior mean
+$C_{t+1}(u,c)$ in \eqref{eq:beta-update} increases rather than decays. In the
+mean-field approximation from \S\ref{sec:update}, the net evidence rate
+$r(u,c)$ becomes positive, yielding the familiar S-curve at the population
+level.
 
-The factors that drive such bifurcations align with the motivations discussed in \S\ref{sec:motivations}. Semantic reanalysis may increase utility (and thus $\rho_t^\star$) by making a form--value relation more transparent or useful. Social pressures may shift utilities (prestige effects) or alter the relevant community standard. Structural motivations such as analogical extension can systematically raise licensing probability by borrowing strength from frequent neighbors. Processing innovations may reduce error rates ($e_t$) or locality costs, improving the net evidence balance.
+The factors that drive such bifurcations align with the motivations discussed
+in \S\ref{sec:motivations}. Semantic reanalysis may increase utility (and thus
+$\rho_t^\star$) by making a form--value relation more transparent or useful.
+Social pressures may shift utilities (prestige effects) or alter the relevant
+community standard. Structural motivations such as analogical extension can
+systematically raise licensing probability by borrowing strength from frequent
+neighbors. Processing innovations may reduce error rates ($e_t$) or locality
+costs, improving the net evidence balance.
 
-Individual innovation alone won't do. A few speakers adopting a marginal construction don't guarantee its success; the evidence balance has to shift so that acceptance systematically outweighs rejection across the relevant community. Many sensible innovations fail because they appear before those community conditions are in place.
+Individual innovation alone will not do. A few speakers adopting a marginal
+construction do not guarantee its success; the evidence balance has to shift so
+that acceptance systematically outweighs rejection across the relevant
+community. Many sensible innovations fail because they appear before those
+community conditions are in place.
 
-Near the critical point, small perturbations in community attitudes can trigger rapid shifts between rejection and acceptance. As the balance becomes more strongly positive, the construction moves further from the unstable rejection state, making reversal increasingly unlikely. This produces the characteristic S-curve of documented language changes \autocite{kroch1989}. For constructions in the marginal zone, with near-zero evidence balance, the model predicts heightened sensitivity to external factors and greater cross-community variation. Small or peripheral communities may show volatile behaviour near bifurcation points before a change spreads to larger population centres.
+Near the critical point, small perturbations in community attitudes can trigger
+rapid shifts between rejection and acceptance. As the balance becomes more
+strongly positive, the construction moves further from the unstable rejection
+state, making reversal increasingly unlikely. This produces the characteristic
+S-curve of documented language changes \autocite{kroch1989}. For constructions
+in the marginal zone, with near-zero evidence balance, the model predicts
+heightened sensitivity to external factors and greater cross-community
+variation. Small or peripheral communities may show volatile behaviour near
+bifurcation points before a change spreads to larger population centres.
+
+The destabilization result sharpens the actuation picture at the other end of a
+form's life. Actuation is a sign change in the evidence balance;
+destabilization is a collapse in its concentration. A contrast can lose its
+grip not because negative evidence accumulates but because evidence of any kind
+stops arriving, and the model predicts the two routes are empirically
+distinguishable: actuation moves means along an S-curve with dispersion
+transiently high near the critical point, while moribundity raises dispersion
+first and moves means only as cohorts turn over.
 
 \subsection{Apparent exclusions without independent constraints}
 \label{sec:categorical-without-bans}
 
-When $\mathsf{map}(u,c)=1$ and $K(u,c)$ is high but $C_t(u,c)$ is driven toward zero by
-persistent preemption in a large opportunity set, speakers converge on a sharp,
-non-satiating rejection profile. Additional processing penalties in $\mathbf{R}_i(u,c)$
-(\eg systematic garden-path repair due to an entrenched fused-head construal) can strengthen
-the subjective categoricality without any independent structural constraint being posited.
+When a defined, saturated assembly exists but its pivotal node's licensing
+posterior is driven toward zero and concentrates there under persistent
+preemption in a dense opportunity set, speakers converge on a sharp,
+non-satiating rejection profile. Additional processing penalties in $R_i(u,c)$
+(\eg systematic garden-path repair due to an entrenched fused-head construal)
+can strengthen the subjective categoricality without any independent structural
+constraint being posited.
 
 \section{Theoretical implications}\label{sec:implications}
 
@@ -1574,6 +1601,7 @@ community dynamics and form--value coherence can make those regions reachable
 and persistent.
 
 \subsection{Predictions}
+\label{sec:predictions}
 
 The model's distinctive predictions come from separating positive evidence,
 opportunity structure, and counterfactual choice probability. Cross-linguistic
@@ -1585,16 +1613,19 @@ concord can be policed through paradigm inertia even when its public-update
 value is attenuated \autocite{reynolds2026operators}. The sharper predictions
 concern preempted gaps, artificial learning, and L2 transfer.
 
-\noindent\textsc{Satiation framing.} Repeated exposure should attenuate negative feelings most strongly when a form
-is low-evidence rather than strongly preempted. Independent relative
-\mention{whose}, as in \textsuperscript{?}\ungram{\mention{The packages are still
-here, but Nathan, whose was open, just left.}}, should be sensitive to framing:
-participants told that tokens come from an intentional dialectal, literary, or
-ingroup resource should show more improvement than participants told that the
-same tokens are errors. Left-branch extraction should resist the same treatment
-because its opportunity set is large and its effective preemption mass is high.
-The dependent variables are rating change, later repair behaviour, and elicited
-production.
+\noindent\textsc{Satiation framing, as a rank order.} Framing manipulations are
+prior shifts, and a prior shift moves a posterior in proportion to $1/\nu$--the
+inverse of its concentration. The prediction is therefore not merely
+directional but ordinal across construction types: left-branch extraction
+$\approx$ \ungram{\mention{sheeps}} (nil) $<$ entrenched-but-uncommon
+constructions $<$ independent relative \mention{whose} $\approx$
+\ungram{\mention{amn't}} (largest). Participants told that tokens of a
+low-concentration form come from an intentional dialectal, literary, or ingroup
+resource should show more improvement than participants told the same tokens are
+errors; the same manipulation should leave left-branch extraction unmoved, as
+its non-satiation across 25 experiments already suggests \parencite{Lu2024}.
+The dependent variables are rating change, confidence change ($\Phi$), later
+repair behaviour, and elicited production.
 
 \noindent\textsc{Artificial-language learning.} An artificial-language-learning experiment can hold positive evidence constant
 at zero while manipulating opportunity-set size. Learners could see a system in
@@ -1618,6 +1649,42 @@ constructional hierarchy should shift toward the target norm-centre. This view
 aligns with \posscite{selinker1972} concept of \term{interlanguage}, but gives a
 more specific prediction: transfer is strongest where the L1 has accumulated
 large effective preemption mass.
+
+\noindent\textsc{Dispersion as a leading indicator.} For a contrast going
+moribund, the destabilization result (\S\ref{sec:destabilization}) predicts
+that inter-speaker judgment dispersion rises measurably \emph{before} mean
+judgments or production frequencies move: falling opportunity thins the shared
+evidence, concentrations decay, and individual histories diverge while the
+average still holds. Dispersion leads; means lag. Variation corpora and
+judgment archives with repeated sampling over apparent time can test this
+directly, and the prediction is distinctive: accounts on which decline is
+driven by accumulating negative evidence predict means and dispersion moving
+together.
+
+\noindent\textsc{Policing intensity as a parameter.} The repair stream
+(\S\ref{sec:dynamics-revised}) converts the operator/style boundary from a
+classification into a regression: policing intensity should scale with the
+product of niche opportunity and update divergence, $N_t\cdot\Delta$, with both
+factors independently estimable--opportunity from opportunity-annotated
+corpora, divergence from repair-initiation rates in conversation-analytic
+corpora regressed on annotated update divergence. The \S\ref{sec:operator-values}
+falsifier becomes quantitative: a closed, dense, non-configuring contrast has
+$\Delta\approx0$ and should show style-like policing--a social-sanction baseline
+with gradient, unimodal licensing--however frequent it is. If repair rates
+track social indexing rather than $\Delta$, the corrective term collapses into
+sociolinguistic policing and the controller claim fails.
+
+\noindent\textsc{Change by re-licensing.} Hard unification makes a commitment
+that a weighted-penalty model does not: no amount of entrenchment can offset an
+operator clash, so within-speaker gradience on compatibility failures like
+\ungram{\mention{I've finished it yesterday}} should not exist. If
+perfect-plus-past-adverb combinations spread in a community, change has to
+proceed by \emph{re-licensing}: a perfect
+construction with a different operator contribution enters the repertoire,
+predicting judgment distributions that are bimodal across communities and
+categorical within speakers, not gradual within-speaker cost-reduction. A
+soft-constraint model predicts the opposite signature. Judgment-distribution
+data from the relevant contact varieties decides it.
 
 \noindent\textsc{Intonational operators.} Nothing in the model privileges
 segmental material, so intonational patterns are predicted to count as operator
@@ -1754,7 +1821,7 @@ OVMG doesn't exempt the operator stratum from usage dynamics; it makes those dyn
 
 An alternative perspective, prominent in recent formal semantics, suggests certain types of unacceptability stem from the language faculty itself possessing a deductive system that identifies and filters sentences with logically trivial meanings (tautologies or contradictions) \autocite[cf.][]{del_pinal_logicality_2019, chierchia_logic_2013, fox_economy_2000}. This \enquote{logicality of language} hypothesis attempts to explain, for example, systematic restrictions on quantifiers by arguing the unacceptable cases are \enquote{L-trivial}, meaning their triviality arises solely from the meaning and configuration of logical or closed-class terms (like \mention{every}, \mention{some}, \mention{not}), irrespective of the open-class words (like \mention{student}, \mention{run}) \autocite{gajewski_l-triviality_2009}. A key challenge is explaining why simple tautologies or contradictions (e.g.\, \mention{It's raining and it isn't raining}) are often acceptable. \textcite{del_pinal_logicality_2019} argues against \enquote{Logical Skeletons} (which assume the system ignores open-class word identity) in favour of \enquote{LF+RESCALE}, a view where the system sees standard logical forms but allows optional, context-dependent modulation of open-class terms (e.g.\, interpreting the second \enquote{raining} as \enquote{raining hard}) to yield non-trivial meanings.
 
-OVMG offers a broader account of ungrammaticality. \enquote{Logicality} approaches explain restrictions tied to logical and closed-class vocabulary through L-triviality. OVMG also covers cases less easily reducible to logical contradiction, such as absent form--value relations (\ref{ex:nonsense}), strong deviations from conventional community forms (\ref{ex:sheeps-entrench}), and extreme, unexpected rarity (\ref{ex:whose}). By grounding grammaticality in community-specific conventions and allowing for gradient compatibility ($K(u,c)$) and acceptance ($C_t(u,c)$), OVMG accommodates cross-linguistic variation and degrees of acceptability, which are less central to the L-triviality filter.
+OVMG offers a broader account of ungrammaticality. \enquote{Logicality} approaches explain restrictions tied to logical and closed-class vocabulary through L-triviality. OVMG also covers cases less easily reducible to logical contradiction, such as absent form--value relations (\ref{ex:nonsense}), strong deviations from conventional community forms (\ref{ex:sheeps-entrench}), and extreme, unexpected rarity (\ref{ex:whose}). By grounding grammaticality in community-specific conventions while separating hard compatibility from posterior licensing, OVMG accommodates cross-linguistic variation and degrees of acceptability, which are less central to the L-triviality filter.
 
 LF+RESCALE provides a specific mechanism for acceptable \enquote{trivialities}. OVMG treats those cases as possible products of more general interpretive principles within community norms, without positing a dedicated deductive module or specific operators like RESCALE. It also keeps objective grammatical status separate from subjective processing effects or \enquote{feelings} (\S\ref{sec:feeling-new}). OVMG frames grammaticality as an emergent consequence of communicative practice in the formal sense of \S\ref{sec:emergent-categoricality}, rather than a direct output of logical computation within syntax.
 
@@ -1779,7 +1846,7 @@ Empirically, OVMG requires tests of whether specific form--value relations are s
 
 \section{Limitations and future directions}\label{sec:limitations}
 
-The account has real limits, and each points to work it invites rather than forecloses. One is its reliance on the concept of \enquote{communicative situation}. Speakers move among overlapping contexts that shift with the immediate setting, durable social positions, and the norms they orient to. The account builds in this fluidity, but operationalizing these dimensions, and measuring their influence on grammatical stability, will take more precise methods.
+The account has real limits, and each points to work it invites rather than forecloses. One is its reliance on the concept of \enquote{communicative situation}. Speakers move among overlapping contexts that shift with the immediate setting, durable social positions, and the norms they orient to. The account builds in this fluidity, but operationalizing these dimensions, and measuring their influence on grammatical stability, will take more precise methods. A fourth limit is mathematical candour: the bimodality result that categoricality rests on is proved for close analogues of the present dynamics, not for the present dynamics themselves (\S\ref{sec:emergent-categoricality}), and the framework's central emergence claim inherits that theorem-adjacent status until the transfer is carried out.
 
 A second boundary concerns stylistic variation and individual preference. Most choices that fall within grammatical acceptability are not cases of (un)grammaticality at all. They matter for this account only when they become tied to communicative situations strongly enough to affect licensing, repair, or categorical rejection. The account still has to explain how stylistic preferences become grammatical licensing facts.
 
@@ -1800,10 +1867,10 @@ The development of experimental syntax since the 2000s \autocite{schutze2016} ha
 
 \item \textit{Longitudinal and historical studies:} Diachronic corpora and historical grammars can trace how marginal constructions evolve, testing predictions about which factors lead certain patterns to stabilize, which fade, and which undergo reanalysis. Tracking a community's acceptance of previously dubious constructions over time provides direct evidence for the gradual entrenchment processes posited by the framework.
 
-\item \textit{A threshold-discontinuity test:} The categorical predicate $G_t$ earns
+\item \textit{A threshold-discontinuity test:} The categorical read-out earns
 standing only if community treatment of a form changes \emph{discontinuously} as
-the graded state crosses $\tau(c)$, over and above the smooth effect of
-$\widetilde{G}_t$. That's a regression-discontinuity question. Hearer responses
+the posterior mean crosses $\tau(c)$, over and above the smooth effect of
+$\mathbb{E}[G_t]$. That's a regression-discontinuity question. Hearer responses
 are naturally multinomial (accept, repair, request clarification, sanction), and
 covariate-adjusted local-likelihood estimators for discontinuities in
 multinomial response probabilities exist off the shelf \autocite{Lazzaro2026},
@@ -1816,7 +1883,8 @@ the threshold is thin, so power is scarce exactly where the test bites. The
 design also yields a further distinctive prediction: because $\tau(c)$ is
 decision-theoretic (\S\ref{sec:objective-G}), independently manipulating the
 stakes should move the location of the discontinuity. Smoothness through the
-threshold, by contrast, would leave $G_t$ as bookkeeping over $\widetilde{G}_t$.
+threshold, by contrast, would leave the categorical read-out as bookkeeping over
+the posterior mean.
 \end{enumerate}
 
 Figure~\ref{fig:rd-test} states the test in one picture: the categorical predicate tracks a discontinuity only if community treatment jumps at $\tau(c)$.
@@ -1825,7 +1893,7 @@ Figure~\ref{fig:rd-test} states the test in one picture: the categorical predica
 \centering
 \begin{tikzpicture}[font=\small, >=Stealth]
 \begin{scope}
-  \draw[->] (0,0) -- (4.6,0) node[right, font=\footnotesize] {$\widetilde{G}_t$};
+  \draw[->] (0,0) -- (4.6,0) node[right, font=\footnotesize] {$\mathbb{E}[G_t]$};
   \draw[->] (0,0) -- (0,3) node[above, font=\footnotesize, align=center] {community\\ response};
   \draw[dashed, gray] (2.2,0) -- (2.2,2.8);
   \node[font=\footnotesize, gray] at (2.2,-0.35) {$\tau(c)$};
@@ -1835,7 +1903,7 @@ Figure~\ref{fig:rd-test} states the test in one picture: the categorical predica
   \node[font=\footnotesize, align=center] at (2.3,-1.1) {\textbf{$G_t$ tracks a jump}\\ at $\tau(c)$};
 \end{scope}
 \begin{scope}[xshift=7cm]
-  \draw[->] (0,0) -- (4.6,0) node[right, font=\footnotesize] {$\widetilde{G}_t$};
+  \draw[->] (0,0) -- (4.6,0) node[right, font=\footnotesize] {$\mathbb{E}[G_t]$};
   \draw[->] (0,0) -- (0,3) node[above, font=\footnotesize, align=center] {community\\ response};
   \draw[dashed, gray] (2.2,0) -- (2.2,2.8);
   \node[font=\footnotesize, gray] at (2.2,-0.35) {$\tau(c)$};
@@ -1844,23 +1912,23 @@ Figure~\ref{fig:rd-test} states the test in one picture: the categorical predica
   \node[font=\footnotesize, align=center] at (2.3,-1.1) {\textbf{$G_t$ summarizes}\\ smooth response};
 \end{scope}
 \end{tikzpicture}
-\caption{The threshold-discontinuity test. If categorical grammatical status tracks a discontinuity in the population state, community treatment of a form should change discontinuously as $\widetilde{G}_t$ crosses the situational threshold $\tau(c)$ (left); if the predicate only summarizes the graded score, treatment should vary smoothly through it (right). A covariate-adjusted regression-discontinuity design on multinomial hearer responses \autocite{Lazzaro2026} distinguishes the two.}
+\caption{The threshold-discontinuity test. If categorical grammatical status tracks a discontinuity in the population state, community treatment of a form should change discontinuously as $\mathbb{E}[G_t]$ crosses the situational threshold $\tau(c)$ (left); if the read-out only summarizes the posterior mean, treatment should vary smoothly through it (right). A covariate-adjusted regression-discontinuity design on multinomial hearer responses \autocite{Lazzaro2026} distinguishes the two.}
 \label{fig:rd-test}
 \end{figure}
 
 \section{Conclusion}
 
-Grammaticality, de-idealized, isn't a categorical fact about an ideal speaker in a homogeneous community but a conditioned form--value relation. Its profile, whether an operator value is structurally realizable ($\mathsf{map}$), coherent ($K$), and licensed across the population ($C_t$), is specified relative to a communicative situation and read through a graded licensing posterior. The old competence--performance split becomes two layers with separate evidence streams, a conventional, population-level status and a subjective feeling of anomaly, identified by different measures so that they can falsify each other (\S\ref{sec:identification-c}). Categorical grammaticality is then derived rather than stipulated, an emergent bimodality of the licensing state under preemption (\S\ref{sec:emergent-categoricality}), which leaves independent structural impossibility as a residual case rather than the default explanation.
+Grammaticality, de-idealized, isn't a categorical fact about an ideal speaker in a homogeneous community but a conditioned form--value relation. Its profile--whether some assembly covers the form, whether the assembly's operator contributions unify, whether its obligatory dimensions are saturated, and whether the population licenses its constructions--is specified relative to a communicative situation and read through a posterior that carries concentration as well as mean. The old competence--performance split becomes two layers with separate evidence streams, a conventional, population-level status and a two-channel subjective read-out--anomaly and confidence--identified by different measures so that they can falsify each other (\S\ref{sec:identification-c}). Categorical grammaticality is then derived rather than stipulated, an emergent bimodality of the licensing state under preemption (\S\ref{sec:emergent-categoricality}), which leaves independent structural impossibility as a residual case rather than the default explanation.
 
-What the profile is for is projection. A category earns its standing by supporting expectations licensed by partial observation, not by the mere presence of mechanisms: repair, transmission fidelity, satiation, and trajectories of change, over the licensing state as such, its concentration as well as its mean (\S\ref{sec:projectible-G}). The supporting claims are graded separately. Bimodal dynamics stabilize the profile, and the production--repair loop maintains it. The paper doesn't show a corrective system that detects deviations and restores the profile; that stronger claim stays open. On this account, grammaticality matters because it predicts which forms will be repaired, transmitted, softened by exposure, or resistant to change.
+What the profile is for is projection. A category earns its standing by supporting expectations licensed by partial observation, not by the mere presence of mechanisms: repair, transmission fidelity, satiation, and trajectories of change, over the licensing state as such, its concentration as well as its mean (\S\ref{sec:projectible-use}). The supporting claims are graded separately. Bimodal dynamics stabilize the profile, and the production--repair loop maintains it. The repair stream supplies a candidate corrective system--a process that registers operator mis-settings and pushes the licensing state back--and states the intervention signature that would earn it controller status, along with the finding that would defeat it (\S\ref{sec:dynamics-revised}). The stronger claim is thereby made testable rather than merely left open. On this account, grammaticality matters because it predicts which forms will be repaired, transmitted, softened by exposure, or resistant to change.
 
 These commitments expose the framework to failure. The account predicts that satiation should be more readily inducible for low-evidence constructions than for high-opportunity preempted gaps, that artificial-language learners should distinguish zero evidence from strong preemption, and that early second-language rejections should track first-language preemption mass rather than second-language frequency alone. Most sharply, community treatment of a form should change discontinuously as licensing crosses the situational threshold; otherwise, the categorical predicate adds no explanatory content beyond the graded score (\S\ref{sec:Methodological-Considerations}).
 
-The account doesn't have the simplicity of a one-variable theory. It doesn't reduce grammaticality to a single scalar, a competence--performance split, or a social-pragmatic explanation. Its economy is architectural: the same recurring distinctions (mapping, coherence, licensing, subjective feeling, opportunity structure, and diachronic support) handle cases that otherwise invite separate stories. That economy has to be earned empirically. The variables need independent indicators, and the projections need to fail when those indicators are wrong.
+The account doesn't have the simplicity of a one-variable theory. It doesn't reduce grammaticality to a single scalar, a competence--performance split, or a social-pragmatic explanation. Its economy is architectural: the same recurring distinctions (coverage, compatibility, saturation, licensing, subjective feeling, opportunity structure, and diachronic support) handle cases that otherwise invite separate stories. That economy has to be earned empirically. The conditions need independent indicators, and the projections need to fail when those indicators are wrong.
 
-It also carries a significant memory burden. Speakers need not store every utterance as a separate item, but the account asks them to retain many situation-indexed pairings among forms, operator values, constructional neighbours, opportunity estimates, competitors, and repair histories. That is a large, schematized inventory, not a small rule list with exceptions attached \autocite{bybee2006,bybee2010,goldberg2019}. If linguistic memory is assumed small in advance, stored generalizations get forced into a rule-plus-exception format, and conditioned licensing is misdescribed as residue.
+It also carries a significant memory burden. Speakers need not store every utterance as a separate item, but the account asks them to retain many situation-indexed pairings among forms, operator values, constructional neighbours, opportunity estimates, competitors, and repair histories. That inventory is large, but the revision converts it from a liability acknowledged into the model's data structure: the situation-indexed pairings among forms, values, neighbours, opportunity estimates, competitors, and repair histories are exactly the sufficient statistics the licensing posterior runs on (\S\S\ref{sec:formalism}--\ref{sec:dynamics-new}), and the hierarchical pooling across construction families, lexemes, and situations is what makes the burden estimable rather than merely assumed. If linguistic memory is presumed small in advance, stored generalizations get forced into a rule-plus-exception format, and conditioned licensing is misdescribed as residue.
 
-The program these predictions define is measurement-first. Estimate $C_t$ from converging non-rating indicators (corpus rate per opportunity, elicited production, repair), fix the conditioning state before predicting rather than after, and prioritize cross-linguistic contrasts whose operator status differs, since that's where the account predicts categoricality should form or dissolve. De-idealizing grammaticality trades a tractable idealization for a profile that answers to evidence. It buys a category that predicts: which rejections soften, which forms transmit, and which absences hold.
+The program these predictions define is measurement-first. Estimate licensing from converging non-rating indicators (corpus rate per opportunity, elicited production, repair), fix the conditioning state before predicting rather than after, and prioritize cross-linguistic contrasts whose operator status differs, since that's where the account predicts categoricality should form or dissolve. De-idealizing grammaticality trades a tractable idealization for a profile that answers to evidence. It buys a category that predicts: which rejections soften, which forms transmit, and which absences hold.
 
 \newpage
 \appendix
@@ -1875,25 +1943,20 @@ Only suffixal harmony matters for OVMG, and even there the role is indirect.
 Vowel backness is not a public-update value; plural and past are. In Turkish,
 the exponents of those operators must satisfy suffixal harmony.
 
-\noindent\textsc{Stem-internal vowels: disharmony tolerated.} Loanwords such as \mention{doktor} `doctor' violate backness harmony, but are fully acceptable;
-speakers store the form, and the community-level licensing state remains at $C_t(u,c)\approx 1$ and $K(u,c)\approx 1$.
+\noindent\textsc{Stem-internal vowels: disharmony tolerated.} Loanwords such as \mention{doktor} `doctor' violate backness harmony, but are fully acceptable; speakers store the form, and the community-level licensing state remains near 1.
 
 \ea \label{ex:doktor}
 \gll doktor \\
      doctor\\
 \glt `doctor' (disharmonic stem, grammatical)
 \z
-Because the word contains no malformed operator exponent, the form--value mapping succeeds and
-\begin{equation*}
-\widetilde{G}_t(u,c)=C_t(u,c)\cdot K(u,c)\cdot\mathsf{map}(u,c)\approx 1.
-\end{equation*}
+Because the word contains no malformed operator exponent, a stored construction covers it, the relevant operators unify, and $G_t\approx1$.
 
 \noindent\textsc{Suffixal harmony: operator-exponent requirement.} Inflectional morphemes are lexicalized with an underspecified vowel;
 the correct allomorph has to copy \textsc{[$\pm$back]} (and, for some
 suffixes, \textsc{[$\pm$round]}) from the final stem vowel.
-Using the \enquote{wrong} vowel leaves part of the exponent-selection requirement
-unsatisfied, so the null outcome in the $K$ calculation wins and the word is
-ungrammatical.
+Using the \enquote{wrong} vowel leaves the exponent-selection requirement
+unsatisfied, so no well-typed suffixal assembly covers the intended form.
 
 \ea  \label{ex:kitap-pl}
 \ea[]{\gll kitap-lar\\
@@ -1915,41 +1978,43 @@ ungrammatical.
 \z
 \z
 
-\noindent\textsc{OVMG account.} For the ill-formed *\mention{kitap-ler} and *\mention{gül-du}:
+\noindent\textsc{OVMG account.} For the ill-formed \ungram{\mention{kitap-ler}} and \ungram{\mention{gül-du}}:
 
 \begin{itemize}
-\item \emph{Mapping} succeeds: the plural / past node selects an exponent.
-\item \emph{Compatibility} $K(u,c)\approx 0$: the chosen allomorph fails the
-      harmony condition attached to the exponent, so the plural or past operator
-      lacks a well-formed realization for that stem.
-\item \emph{Situational licensing} $C_t(g,c)\approx 1$ at the node level: the
-      plural and past nodes are licensed for every speaker. What's entrenched is
-      the node, not the ill-formed token; node-level licensing pools to the
-      token by the coverage equation in \S\ref{sec:objects}, and the failure
-      lives in $K$.
+\item The plural and past constructions are licensed at $C_t(\kappa,c)\approx1$
+  for every speaker: what is entrenched is the node, not the ill-formed token.
+\item Their form templates lexicalize an underspecified vowel with a harmony
+  condition: the exponent copies $[\pm\text{back}]$ (and, for some suffixes,
+  $[\pm\text{round}]$) from the final stem vowel. A mismatched allomorph
+  satisfies no template, so no well-typed assembly covers the string:
+  $\mathcal{A}(f,v)=\emptyset$ and $G_t=0$ exactly--a structural failure at
+  exponent selection, with $\Phi\approx1$.
 \end{itemize}
 
-So $G_t(u,c)=0$ and speakers judge the word as categorically wrong, not just
-odd-sounding. By contrast, \mention{doktor} in (\ref{ex:doktor}) keeps $K(u,c)=1$;
-harmony is a phonotactic preference that affects only the phonological
-well-formedness component of $F_{i,t}(u,c)$, not grammaticality.
+So speakers judge the word categorically wrong, not just odd-sounding, and the
+confidence is structural rather than evidential. This puts suffix-harmony errors
+in the same broad status class as word salad--coverage failure--but through a
+different route: a typed exponent-selection template rejects the former, while
+the latter lacks a coherent covering assembly altogether. By contrast,
+\mention{doktor} in (\ref{ex:doktor}) is covered by its own stored node: stem
+disharmony violates no exponent-selection condition, so $G_t\approx1$ and the
+disharmony registers only as a phonological cost in the feeling channel $R_i$
+(\S\ref{sec:feeling-new}).
 
 \noindent\textsc{Localized exceptions.} Some derivational suffixes (e.g.~\mention{-imsi} `-ish') are lexically
-marked \enquote{disharmonic}. Speakers store them, and community-level licensing remains at $C_t(u,c)\approx 1$: no
-exponent condition is violated, so $G_t(u,c)=1$ despite vowel mismatch. Clitic
+marked \enquote{disharmonic}. Speakers store them, and community-level licensing remains near 1: no
+exponent condition is violated, so $G_t\approx1$ despite vowel mismatch. Clitic
 boundaries that start a fresh harmony cycle \autocite{KabakVogel2001} are
 handled the same way: they satisfy the operator-exponent requirement and leave
 harmony to phonology alone.
 
-Turkish suffix harmony errors are therefore grammaticality failures only in this
-indirect sense. They do not mis-set a public-update contrast themselves, but
-they prevent a closed inflectional operator from receiving a well-formed
-exponent. Stem disharmony lowers phonological well-formedness and affects only
-the listener's feeling $F_{i,t}(u,c)$.
-
-A counterexample would be a case where phonology alone produced feelings of
-ungrammaticality without involving an operator contrast or an operator-exponent
-requirement.
+Turkish suffix-harmony errors are therefore grammaticality failures in a precise
+sense: they do not mis-set a public-update contrast themselves, but they leave a
+closed inflectional operator with no well-formed exponent, which is a failure of
+coverage, not of licensing. Stem disharmony lowers phonological well-formedness
+and affects only the feeling channel. A counterexample would be a case where
+phonology alone produced categorical, framing-resistant rejection without any
+operator-exponent requirement in play.
 
 
 \newpage
