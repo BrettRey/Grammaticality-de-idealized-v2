@@ -7,7 +7,7 @@ This file provides guidance to Claude Code when working with this project.
 **Title:** Grammaticality De-idealized: The OVMG Model
 **Author:** Brett Reynolds
 
-This paper develops the Operator-Value Model of Grammaticality (OVMG), formalizing the distinction between objective grammaticality G(u) and subjective feeling of grammaticality F(u).
+This paper develops the Operator-Value Model of Grammaticality (OVMG), formalizing the distinction between population-level grammatical status \(G_t\) and the subjective anomaly-confidence read-out \((F,\Phi)\).
 
 ## Terminology Evolution
 
@@ -31,8 +31,8 @@ The model name has evolved as the theory sharpened:
 The **operator-stratum** subproject defines what operators are. The main paper uses operators as the unit of grammatical signaling.
 
 Key equations:
-- G(u) = C^t(u) · K(u) · map (objective: situational licensing × speaker knowledge × mapping)
-- F(u) = -α(1-G(u)) - γL·L(u) - Pother(u) + η (subjective: includes processing costs, noise)
+- \(G_t(f,v,c)=P(\exists A\in\mathcal{A}(f,v): \operatorname{def}(A)\wedge\operatorname{sat}(A,c)\wedge L_t(A,c)\mid\mathcal{D}_t)\), the posterior existence of a licensed assembly.
+- \(F_{i,t}(u,c)\) is the bounded anomaly signal; \(\Phi_{i,t}(u,c)\) is the confidence read-out derived from posterior concentration.
 
 ## Build System
 
@@ -54,10 +54,10 @@ xelatex LingbuzzPreprint.tex && biber LingbuzzPreprint && xelatex LingbuzzPrepri
 
 ## Cross-Project Connections
 
-- **Grammar_and_emergence**: The OVMG's F(u)/G(u) distinction maps to emergence paper's commutativity question
+- **Grammar_and_emergence**: OVMG's grammatical-status/anomaly-confidence distinction maps to the emergence paper's commutativity question
 - **Grammaticality_as_Kind_Miller**: Companion paper (metaphysics vs methodology framing)
 - **Transparent_free_relatives**: TFRs as empirical test case for gradient grammaticality
-- **HPC book ch 5** ("Discrete from continuous"): Provides philosophical foundation for the G_t vs feeling-of-ungrammaticality distinction. The two-layer model (discrete grammaticality filtered through noise → gradient acceptability) is developed there with hyperreal formalization. Key claim: "The uncertainty is epistemic, not semantic: there is a fact of the matter about where the boundary falls; we just can't determine what it is." Satiation effects are evidence that the mapping is plastic, not that grammar rewrites during an experiment.
+- **HPC book ch 5** ("Discrete from continuous"): Provides philosophical foundation for distinguishing population-level status from subjective read-outs. In the current OVMG paper, the status state carries mean and concentration, while the subjective side is the anomaly-confidence pair \((F,\Phi)\). Satiation and framing effects are evidence about posterior concentration and attribution, not direct evidence that grammar rewrites during an experiment.
 
 ## House Style
 
