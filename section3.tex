@@ -31,7 +31,7 @@ For many purposes it helps to think of $c$ as a bundle that may include situatio
 \toprule
 Expository role & Formal object (\S3) & Work in the formal core \\
 \midrule
-coverage / structural viability & $\mathbf{1}\bigl[\mathcal{A}(u,v)\neq\emptyset\bigr]$ &
+coverage / structural viability & $\mathbf{1}\bigl[\mathcal{A}(f,v)\neq\emptyset\bigr]$ &
   structural viability: some covering assembly exists \\
 operator compatibility & $\operatorname{def}(A)$: unification &
   hard operator-value compatibility \\
@@ -54,13 +54,13 @@ decision threshold & $\tau(c)$, \S\ref{sec:decision-readout} & decision-theoreti
 \label{sec:objects}
 
 Notation is typed as follows. In \S3, $f$ is a form, $v$ is a value, and $u$ is
-used only when the value is recoverable from context. In \S4, a \emph{variant}
-$v\in\mathcal{V}_{n,t}^{\star}$ abbreviates a candidate form--value realization
-for a niche. Constructional nodes are $\kappa$, assemblies are $A$,
+used only when the value is recoverable from context. In \S4, a niche candidate
+is written $x\in\mathcal{V}_{n,t}^{\star}$ and abbreviates a candidate
+form--value realization. Constructional nodes are $\kappa$, assemblies are $A$,
 speaker-level inclusion states are $z_{j,t}$, and population licensing rates are
 $\theta_t$.
 
-The core's unit is the construction, in the CxG sense of a learned form--value pairing at any grain \parencite{fillmore1988, goldberg1995constructions}. Formally, a \term{construction} $\kappa$ is a pair $(\tau_\kappa, \delta_\kappa)$: a form template with typed slots, and a value contribution mapping slot fillers to content together with a \term{partial operator assignment} $\omega_\kappa$. Nothing here is level-specific: a construction can be the plural cell of a lexeme, a clause pattern, an intonational contour, or a code-mixed frame.
+The core's unit is the construction, in the CxG sense of a learned form--value pairing at any grain \parencite{fillmore1988, goldberg1995constructions}. Formally, a \term{construction} $\kappa$ is a pair $(T_\kappa, \mu_\kappa)$: a form template with typed slots, and a value contribution mapping slot fillers to content together with a \term{partial operator assignment} $\omega_\kappa$. Nothing here is level-specific: a construction can be the plural cell of a lexeme, a clause pattern, an intonational contour, or a code-mixed frame.
 
 Operator assignments live in a space $\Omega$ of partial functions from a
 dimension set $O(c)$ to finite value sets. The dimensions include clause type,
@@ -90,8 +90,9 @@ per language but derived from the licensing state. A dimension is obligatory
 exactly when zero-marking assemblies have been preempted to near-zero licensing
 in every niche where it's at issue (\S\ref{sec:derived-obligatoriness}). Thus
 $\operatorname{sat}$ is a derived macro over licensing, not an independent
-primitive. English progressive marking and Turkish evidential marking are the
-worked cases there.
+primitive. For an assembly $A$ of frame type $\varphi(A)$, $\mathrm{OBL}(c,A)$
+abbreviates $\mathrm{OBL}(c,\varphi(A))$. English progressive marking and
+Turkish evidential marking are the worked cases there.
 
 Licensing is latent, and the Beta is typed over a rate rather than a fixed binary
 fact. Let $z_{j,t}(\kappa,c)\in\{0,1\}$ be speaker $j$'s local inclusion state
@@ -119,9 +120,11 @@ that adds linear predictive updating: in the Bernoulli case, linearity of the
 posterior expectation of success in the counts is the binary analogue of
 Johnson's sufficientness postulate in Zabell's generalization
 \parencite{zabell1982}. Its mean is $C_t(\kappa,c)$ and its
-concentration is $\nu_t(\kappa,c)$ as in \S\ref{sec:update}. The individual
-state $\Lambda_{i,t}$ and the population distribution over it supply the
-population-level status state.
+concentration is $\nu_t(\kappa,c)$ as in \S\ref{sec:update}; the linear-in-counts
+update rule and the Beta prior family are one modelling assumption rather than
+two. The vector $\Lambda_{i,t}$ collects speaker $i$'s inclusion states
+$z_{i,t}(\kappa,c)$, and the population distribution over those vectors supplies
+the population-level status state.
 
 Compositional inheritance matters here. A novel token such as \mention{She
 texted him the address} needn't have been encountered: the assemblies covering it
@@ -171,7 +174,11 @@ $G_t^{\theta}(u,c)$ for readability. For a single pivotal node,
 $G_t^{\theta}=\theta_t(\kappa,c)$, so the mean and concentration are literally
 the Beta posterior's mean and concentration.
 
-Two remarks keep \eqref{eq:Gtheta}--\eqref{eq:Gt} honest. First, finiteness: for a finite yield and a finite, non-empty-recursive construction inventory (no cycles of null-yield expansions--the standard offline-parsability condition), $\mathcal{A}(f,v)$ is finite, so the existential is a finite disjunction. No additional tractability stipulation is needed.
+Two scope conditions matter. First, for a finite yield and a finite,
+non-empty-recursive construction inventory (no cycles of null-yield
+expansions--the standard offline-parsability condition), $\mathcal{A}(f,v)$ is
+finite, so the existential is a finite disjunction. No additional tractability
+stipulation is needed.
 
 Second, the relation to simpler heuristics. In the high-precision limit, where
 every node posterior has concentrated, the pair \eqref{eq:Gtheta}--\eqref{eq:Gt}
@@ -194,7 +201,12 @@ compatibility folded into $\operatorname{def}$. Away from that limit,
 \eqref{eq:Gtheta} supplies the existence variable and \eqref{eq:Gt} its
 posterior mean, so uncertainty remains part of the status profile.
 
-A three-factor heuristic can also hide content-oddness inside compatibility--the concentration of construal for cases like \mention{colorless green ideas}. That work lives instead in the subjective read-out's cost vector (\S\ref{sec:feeling-new}). A lexically bizarre but operator-compatible construal leaves $G_t$ untouched and shows up as a plausibility cost in $R_i$: the sentence is grammatical and odd, which is the datum.
+A three-factor heuristic can also hide content-oddness inside compatibility--the
+concentration of construal for cases like \mention{colorless green ideas}. That
+work lives instead in the subjective read-out's cost vector
+(\S\ref{sec:feeling-new}). A lexically bizarre but operator-compatible construal
+does not lower $G_t$ and shows up as a plausibility cost in $R_i$: the
+sentence is grammatical and odd, matching the target contrast.
 
 \subsubsection{Projectible use of the posterior state}
 \label{sec:projectible-use}
@@ -430,7 +442,7 @@ licensing alone. First, $\rho_t^\star$ has to be estimated from evidence that
 doesn't include the licensing data it later interprets. A forced-choice norming
 task supplies it: present the niche $n$ and the competitor set
 $\mathcal{V}_{n,t}^{\star}$ to a separate sample and record how often each
-variant is chosen when stipulated to be available. That yields $\rho_t^\star$
+candidate is chosen when stipulated to be available. That yields $\rho_t^\star$
 before any corpus rate for $u$ is consulted, so a low rate can be diagnosed as
 non-licensing ($C_t\!\approx\!0$, $\rho_t^\star$ high) rather than
 licensed-but-dispreferred selection ($C_t$ high, $\rho_t^\star\!\approx\!0$).
@@ -465,39 +477,44 @@ Speakers register putative violations through a metacognitive signal that can di
 
 Let $\hat{G}^{(h)}_{i,t}(u\mid e)$ be hearer $i$'s expected status under
 situation uncertainty (\S\ref{sec:misalignment-conditioning}). Write
-$R_i(u,e)$ and $D_i(u,e)$ for implementation costs and prescriptive dissonance
-after cue-based situation uncertainty has been integrated. The anomaly signal
+$R_i(u,e)$ and $I_i(u,e)$ for implementation costs and prescriptive dissonance
+after cue-based situation uncertainty has been integrated. The anomaly drive
 accumulates low expected status, implementation costs, and ideological overlays:
 
 \begin{align}
-A_{i,t}(u,e) &= \alpha\bigl(1-\hat{G}^{(h)}_{i,t}(u\mid e)\bigr)
-  +\gamma^{\top} R_i(u,e)+\delta\,D_i(u,e)+\varepsilon_i, \\
-F_{i,t}(u,e) &= -\frac{\max\{A_{i,t},0\}}{1+\max\{A_{i,t},0\}}
+M_{i,t}(u,e) &= \alpha_G\bigl(1-\hat{G}^{(h)}_{i,t}(u\mid e)\bigr)
+  +\gamma^{\top} R_i(u,e)+\delta_I\,I_i(u,e)+\varepsilon_i, \\
+F_{i,t}(u,e) &= -\frac{\max\{M_{i,t},0\}}{1+\max\{M_{i,t},0\}}
   \in (-1,0].
 \end{align}
 
 The bounded link and the floor at zero encode the asymmetry of the signal:
 there's no positive feeling of grammaticality, only the negative signal
-registered on deviation. $D_i$ is prescriptive dissonance. The cost vector
-$R_i$ includes the processing components--the locality term $L(u)$ with its
-saturating form, interference, garden-path reanalysis, surprisal--and a
+registered on deviation. $I_i$ is prescriptive dissonance. The cost vector
+$R_i$ includes the processing components--the locality term
+$\mathcal{L}_{\mathrm{loc}}(u)$ with its saturating form, interference,
+garden-path reanalysis, surprisal--and a
 \term{plausibility} component: the implausibility of the best construal given
 world knowledge and lexical expectations. That component handles content
 oddness without making it a status fact. \mention{Colorless green ideas sleep
 furiously} is defined, saturated, and licensed node by node, so $G_t\approx1$;
 its strangeness enters here, as a construal-plausibility cost, and the sentence
-comes out grammatical and odd--the datum, with one less primitive.
+comes out grammatical and odd, with no extra primitive.
 
 The locality component can still be written explicitly:
 \begin{equation*}
-L(u)=\sum_{d\in\mathcal{D}(u)}\ell\!\bigl(|d|\bigr),\qquad
+\mathcal{L}_{\mathrm{loc}}(u)=
+\sum_{d\in\mathcal{D}_{\mathrm{dep}}(u)}\ell\!\bigl(|d|\bigr),\qquad
 \ell(k)=
   \begin{cases}
     k, & k\le K_{\text{sat}},\\[4pt]
-    K_{\text{sat}}+\beta\,(k-K_{\text{sat}})^\eta, & k>K_{\text{sat}}.
+    K_{\text{sat}}+\beta_L\,(k-K_{\text{sat}})^{\eta_L}, & k>K_{\text{sat}}.
   \end{cases}
 \end{equation*}
-Here $|d|$ is the length of dependency $d$ (in intervening discourse referents or words), $K_{\text{sat}}$ is a saturation threshold beyond which additional distance contributes sublinearly, and $\beta,\eta$ (with $0<\eta<1$) control the rate of that sublinear growth.
+Here $|d|$ is the length of dependency $d$ (in intervening discourse referents or
+words), $K_{\text{sat}}$ is a saturation threshold beyond which additional
+distance contributes sublinearly, and $\beta_L,\eta_L$ (with $0<\eta_L<1$)
+control the rate of that sublinear growth.
 
 The second read-out is confidence. Let $\nu_i(u,e)$ be the concentration of
 $i$'s posterior over the \emph{pivotal condition}--the conjunct in
@@ -554,9 +571,9 @@ which defines it. The observation model has four channels:
 \begin{align}
 &P(\text{production}\mid \theta,n,c)
   && \text{choice among assemblies in a niche (\S\ref{sec:usage})} \\
-&P(\text{repair}\mid \theta,\Delta,D,c)
+&P(\text{repair}\mid \theta,\Delta,I,c)
   && \text{sensitive to operator mis-setting (\S\ref{sec:repair-controller})} \\
-&P(\text{judgment}\mid \hat{G}^{(h)},R,D,\nu)
+&P(\text{judgment}\mid \hat{G}^{(h)},R,I,\nu)
   && \text{the }(F,\Phi)\text{ read-out of \S\ref{sec:feeling-new}} \\
 &P(c\mid\text{cues})
   && \text{situation inference, }q_h(c\mid e)\text{ (\S\ref{sec:misalignment-conditioning})}
