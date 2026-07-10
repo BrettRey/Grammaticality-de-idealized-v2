@@ -31,8 +31,8 @@ The model name has evolved as the theory sharpened:
 The **operator-stratum** subproject defines what operators are. The main paper uses operators as the unit of grammatical signaling.
 
 Key equations:
-- \(G_t(f,v,c)=P(\exists A\in\mathcal{A}(f,v): \operatorname{def}(A)\wedge\operatorname{sat}(A,c)\wedge L_t(A,c)\mid\mathcal{D}_t)\), the posterior existence of a licensed assembly.
-- \(F_{i,t}(u,c)\) is the bounded anomaly signal; \(\Phi_{i,t}(u,c)\) is the confidence read-out derived from posterior concentration.
+- \(G_t^\theta(f,v,c)=P(\exists A\in\mathcal{A}(f,v): \operatorname{def}(A)\wedge\operatorname{sat}(A,c)\wedge L_t(A,c)\mid\boldsymbol{\theta}_t,c)\), the theta-conditional licensed-assembly existence variable; \(G_t(f,v,c)=\mathbb{E}[G_t^\theta(f,v,c)\mid\mathcal{D}_t]\).
+- \(F_{i,t}(u,e)\) is the bounded cue-integrated anomaly signal; \(\Phi_{i,t}(u,e)\) is the confidence read-out derived from posterior concentration.
 
 ## Build System
 
