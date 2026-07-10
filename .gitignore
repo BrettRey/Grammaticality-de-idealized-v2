@@ -31,5 +31,9 @@ __pycache__/
 .python-version
 .venv/
 
+# Lean / Lake
+.lake/
+formalization/.lake/
+
 # macOS
 .DS_Store
