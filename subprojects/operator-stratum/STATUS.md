@@ -1,3 +1,49 @@
+---
+slug: operator-stratum
+kind: paper
+title: 'Why clause structure is judged like tense and agreement: public-update operators and grammaticality'
+stage: complete
+external: rejected
+blocked_on:
+- venue-decision
+updated: 2026-06-26
+source:
+- STATUS.md
+- DECISIONS.md
+- publications.html
+path: papers/retarget/grammaticality-de-idealized/subprojects/operator-stratum
+venue: Functions of Language
+external_id: FOL-26063
+preprints:
+- lingbuzz/009706
+next_action: Choose a better-fit venue and retarget; do not revise on theoretical grounds unless the next
+  venue requires reframing
+notes: 'A subproject of grammaticality-de-idealized with its own STATUS.md, DECISIONS.md, main.tex and
+  submission package; registered separately 2026-07-30 so its desk rejection survives into the registry
+  rather than sitting in a note on the parent block. The parent block (batch-06) covers the main OVMG
+  paper only. `source` paths are relative to the subproject.
+
+  Its own STATUS.md header: "**Status:** Desk rejected by *Functions of Language* for scope/fit; retargeting
+  needed... **LingBuzz:** Uploaded 2026-01-25... **Journal submission:** Submitted to *Functions of Language*
+  2026-06-02; rejected 2026-06-26 as outside the journal''s scope." Article ID FOL-26063, decision signed
+  by Wout Van Praet, Managing Editor. Scope/fit desk rejection only, no referee report.
+
+  external: rejected with a live preprint, following the schema''s rule and the bresnan-dative precedent;
+  the LingBuzz ID is lingbuzz/009706, from publications.html ("Why clause structure is judged like tense
+  and agreement: public-update operators and grammaticality. Preprint. LingBuzz"), and the title there
+  matches the submitted title exactly. stage: complete, since rejection does not change stage and this
+  manuscript was packaged and sent. blocked_on: [venue-decision], from its own DECISIONS.md: "Treat the
+  Functions of Language rejection as a venue-fit signal... No referee report or substantive criticism
+  was provided, so the manuscript should be retargeted rather than revised on theoretical grounds."
+
+  A sibling remains unregistered: subprojects/asterisk-de-idealized, which the parent STATUS.md records
+  as a third LingBuzz subproject preprint in the OVMG family (lingbuzz/009713 per publications.html, "De-idealizing
+  the asterisk: Grammaticality as conditioned stability"). It has a public preprint but no venue event,
+  so it fell outside the four Brett authorised. Candidate for the same treatment.
+
+  '
+---
+
 # STATUS.md - The Operator Stratum
 
 **Created:** 2026-01-24

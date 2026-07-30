@@ -1,3 +1,34 @@
+---
+slug: asterisk-de-idealized
+kind: paper
+title: The Asterisk De-idealized
+stage: complete
+external: preprint
+blocked_on: []
+updated: 2026-06-02
+source:
+- STATUS.md
+path: papers/retarget/grammaticality-de-idealized/subprojects/asterisk-de-idealized
+venue: Journal of Linguistics ("Looking Back, Moving Forward" section, target only)
+preprints:
+- lingbuzz/009713
+next_action: Sharpen the division of labour against the operator-stratum paper, then decide on submission.
+notes: 'Registered 2026-07-30 on Brett''s approval, as the fifth of six nested manuscripts the Phase 0
+  pass found without registry entries. The third LingBuzz subproject preprint in the OVMG family, alongside
+  the main paper and operator-stratum. Its own STATUS.md:4 records "Submitted to lingbuzz (lingbuzz/009713)"
+  and names a target of the Journal of Linguistics "Looking Back, Moving Forward" section, so external
+  is preprint with a target named but no venue event: nothing has been sent. stage complete because a
+  posted manuscript exists; blocked_on empty because nothing external is waiting, and the outstanding
+  work is Brett''s own. That work is recorded at STATUS.md:47-49, a "Next-Touch Note" saying the next
+  revision should sharpen the division of labour against the operator-stratum paper: the asterisk paper
+  is the state theory of grammaticality, the operator paper defines the value type whose state is measured.
+  NOT encoded as a blocker, but worth Brett''s eye: submitting this to the Journal of Linguistics would
+  be a third concurrent JoL item, and english-interjections is already held until LIN-2026-0100 resolves
+  (~Dec 2026) for exactly that reason. Whether the same policy binds here is Brett''s call, not an inference
+  the registry should make. Has its own STATUS.md, so it takes a front-matter block there rather than
+  a STATUS-<slug>.md.'
+---
+
 # STATUS.md - The Asterisk De-idealized
 
 **Created:** 2026-01-24
