@@ -3,7 +3,9 @@
 
 % BRETT-VERIFY/SUBMISSION BLOCKER: this relative house-style preamble path will not
 % survive a standalone submission build; inline or copy the preamble for submission.
-\input{../../../../.house-style/preamble.tex}
+% Depth corrected 2026-08-19: was ../../../../, which pointed at papers/ and had
+% been unbuildable since the papers migration.
+\input{../../../../../.house-style/preamble.tex}
 
 % Add pdftitle
 \hypersetup{pdftitle={Why clause structure is judged like tense and agreement: public-update operators and grammaticality}}
