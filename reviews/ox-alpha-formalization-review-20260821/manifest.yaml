@@ -1,0 +1,105 @@
+run_id: ox-alpha-formalization-review-20260821
+date: 2026-08-21
+project_git_commit: 47d4c61d7eb22400652f3893331a0aaa89431dc7
+target:
+  path: reviews/formalization-second-opinion-20260821.zip
+  sha256: 9993d4cf22fe0213b36463b7dc2cf16141e617a217834aa00bf21ae5350479fb
+codex_second_opinion:
+  path: reviews/formalization-second-opinion-codex-20260821.md
+  sha256: 93305ad7d1e3f4acce57a69fcff64b2590202f4e6f5c377156a997a8584ef6cc
+runs:
+  - reviewer: ox-alpha-cleanroom
+    persona: independent formal-methods and model-fidelity reviewer
+    provider: OpenRouter/Stealth
+    model: stealth/ox-alpha
+    effort: high
+    dependence_cluster: ox-alpha-same-provider-cleanroom-source-only
+    prompt:
+      path: reviews/ox-alpha-formalization-review-20260821/prompt-cleanroom.md
+      sha256: fe18641fee747c44fa08762d69b40834e2f9e0ba8969380c8a0eaf2767253a29
+    input:
+      path: reviews/ox-alpha-formalization-review-20260821/input-cleanroom.txt
+      sha256: 2690d8a2ceca408c2024f48d799734efc71870eb1c4d7ae21cf1b0faaf5264ea
+      words: 41628
+      bytes: 339692
+    output:
+      path: reviews/ox-alpha-formalization-review-20260821/raw-cleanroom.md
+      sha256: 04296a4a509570de2c97f1ac3e5d17cd8f25691fdbce6359d65bc00854345061
+      words: 3371
+      bytes: 26896
+      capped: true
+      note: Reached the configured output cap in the final verification-limits bullet; preserved unchanged and completed by the dependent addendum run.
+    usage:
+      input_tokens: 80296
+      output_tokens: 18000
+      elapsed_seconds: 515.2
+      cost_usd: 0
+  - reviewer: ox-alpha-adjudication
+    persona: refutation-first adjudicator of Claude and Codex reports
+    provider: OpenRouter/Stealth
+    model: stealth/ox-alpha
+    effort: high
+    dependence_cluster: ox-alpha-same-provider-review-informed
+    prompt:
+      path: reviews/ox-alpha-formalization-review-20260821/prompt-adjudication.md
+      sha256: 9b681c4d869b5aed73ba0239242d97625312b9f0caa393198196c11f38c8c1c2
+    input:
+      path: reviews/ox-alpha-formalization-review-20260821/input-adjudication.txt
+      sha256: 797dee5b43ac8dbf9ab87a8bcdec6fb8db33c04e3fe8a47657e470140a2bb549
+      words: 46965
+      bytes: 379545
+    output:
+      path: reviews/ox-alpha-formalization-review-20260821/raw-adjudication.md
+      sha256: 7a0d224f0498e50cdeaaa98b968c14c7068138c16c7ac3a57fbdec146b2e0445
+      words: 3797
+      bytes: 27541
+      capped: false
+    usage:
+      input_tokens: 89660
+      output_tokens: 15506
+      elapsed_seconds: 493.4
+      cost_usd: 0
+  - reviewer: ox-alpha-cleanroom-addendum
+    persona: completion of truncated verification-limits tail only
+    provider: OpenRouter/Stealth
+    model: stealth/ox-alpha
+    effort: medium
+    dependence_cluster: dependent-on-ox-alpha-cleanroom
+    prompt:
+      path: reviews/ox-alpha-formalization-review-20260821/prompt-cleanroom-addendum.md
+      sha256: 17cb20d52d66cd4cc457630b1ddeda382cb610fa1264ce682fe0902476d439cb
+    input:
+      path: reviews/ox-alpha-formalization-review-20260821/raw-cleanroom.md
+      sha256: 04296a4a509570de2c97f1ac3e5d17cd8f25691fdbce6359d65bc00854345061
+    output:
+      path: reviews/ox-alpha-formalization-review-20260821/raw-cleanroom-addendum.md
+      sha256: 90fe9853949f5b408bbbb35c5d9661f156c0fe1567eb746ccc753a619711feb9
+    usage:
+      input_tokens: 6499
+      output_tokens: 557
+      elapsed_seconds: 23.1
+      cost_usd: 0
+  - reviewer: ox-alpha-final-repair-audit
+    persona: refutation-first audit of the implemented formal repair
+    provider: OpenRouter/Stealth
+    model: stealth/ox-alpha
+    effort: high
+    dependence_cluster: ox-alpha-same-provider-current-source-excerpts
+    input:
+      path: reviews/ox-alpha-formalization-review-20260821/input-final-repair-audit.txt
+      sha256: 6ffd3884cc7f3fe32f65c22191715753de61962ccb34cc92813b02221adaab47
+      words: 7609
+      bytes: 63150
+    output:
+      path: reviews/ox-alpha-formalization-review-20260821/final-repair-audit.md
+      sha256: ea876d8290ce851c6923de3469d3caeed26628f962d09de2c812cb7eb2b79b9b
+      words: 568
+      bytes: 3979
+      normalized: true
+      note: Normalized local record of the visible response; not a raw stdout capture.
+    usage:
+      input_tokens: 19170
+      output_tokens: 8563
+      elapsed_seconds: 202.4
+      cost_usd: 0
+    verdict: MATERIAL FORMAL COHERENCE YES

@@ -1,0 +1,6 @@
+name = "ovmg_formalization"
+version = "0.1.0"
+defaultTargets = ["OVMG"]
+
+[[lean_lib]]
+name = "OVMG"

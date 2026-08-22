@@ -4,15 +4,14 @@
 The framework separates two explanatory targets. A \term{state theory} specifies
 the conditions under which a form--value pair is grammatical \emph{for a
 population in a communicative situation} at time $t$; a \term{dynamics module}
-specifies candidate routes by which such states arise, persist, and change.
+explains how such states arise, persist, and change.
 
 In projectibility terms, the state theory specifies the \term{profile}, while
-the dynamics module states candidate \term{support} hypotheses: what could
-stabilize the profile and, where the evidence warrants, maintain it. Support
-claims come in grades.
+the dynamics module states its \term{support}: what stabilizes the profile and,
+where the evidence warrants, what maintains it. Support claims come in grades.
 Stabilization, maintenance by a production--repair loop, and control by a
-deviation-detecting process are distinct claims, each requiring independent
-evidence \autocite{reynolds2026kindsProjectibilityProfiles,
+deviation-detecting process are distinct claims, and none follows from the
+framework's name \autocite{reynolds2026kindsProjectibilityProfiles,
 reynolds2026notEveryStableCluster}.
 In Woodward's interventionist terms, a stabilizer earns that status when an intervention on it changes the profile in an invariant, predictable way \autocite{woodward2003MakingThingsHappen, woodward2001}.
 
@@ -57,14 +56,14 @@ coverage / structural viability & $\mathbf{1}\bigl[\mathcal{A}(f,v)\neq\emptyset
   structural viability: some covering assembly exists \\
 operator compatibility & $\operatorname{def}(A)$: unification &
   hard operator-value compatibility \\
-saturation & $\operatorname{sat}_t(A,c)$ &
+saturation & $\operatorname{sat}(A,c)$ &
   derived saturation of obligatory dimensions \\
 content oddness & plausibility term in $R_i$ (\S\ref{sec:feeling-new}) &
   content-oddness as a subjective cost \\
-situational licensing & population rate $\theta_t$; Beta posterior; $L_t(A,c)$ &
-  population licensing and its evidence state \\
+situational licensing & Beta posterior over $\theta_t$; $L_t(A,c)$ &
+  situational licensing as mean \emph{and} concentration \\
 status profile & $S_t^{\theta}$ population state;
-  $\widehat{S}^{(r)}_t=\mathbb{E}_r[S_t^{\theta}]$ &
+  $\widehat{S}_t=\mathbb{E}[S_t^{\theta}]$ &
   status and its epistemic estimate; simple products are limiting cases
   (\S\ref{sec:posterior-existence}) \\
 decision threshold & $\tau(c)$, \S\ref{sec:decision-readout} & decision-theoretic read-out only \\
@@ -81,7 +80,7 @@ form--value realization. Constructional nodes are $\kappa$, assemblies are $A$,
 speaker-level inclusion states are $z_{j,t}$, and population licensing rates are
 $\theta_t$.
 
-The core's unit is the construction, in the CxG sense of a learned form--value pairing at any grain \citep{fillmore1988, goldberg1995constructions}. Formally, a \term{construction} $\kappa$ is a pair $(T_\kappa, \mu_\kappa)$: a form template with typed slots, and a value contribution mapping slot fillers to content together with a \term{partial operator assignment} $\omega_\kappa$. Nothing here is level-specific: a construction can be the plural cell of a lexeme, a clause pattern, an intonational contour, or a code-mixed frame.
+The core's unit is the construction, in the CxG sense of a learned form--value pairing at any grain \parencite{fillmore1988, goldberg1995constructions}. Formally, a \term{construction} $\kappa$ is a pair $(T_\kappa, \mu_\kappa)$: a form template with typed slots, and a value contribution mapping slot fillers to content together with a \term{partial operator assignment} $\omega_\kappa$. Nothing here is level-specific: a construction can be the plural cell of a lexeme, a clause pattern, an intonational contour, or a code-mixed frame.
 
 Operator contributions live in a typed constraint space $\Omega$ over a
 dimension set $O(c)$. The dimensions include clause type, polarity,
@@ -95,7 +94,7 @@ scope relations, anaphoric dependencies, and information-packaging requirements
 can refine one another without being identical atomic values. Two contributions
 \term{unify}, written $\omega \sqcup \omega'$, iff their conjunction is
 satisfiable in the typed constraint system; otherwise the join is undefined
-($\bot$). Compatibility remains Boolean, but equality of atomic values isn't
+($\bot$). Compatibility remains Boolean, but equality of atomic values is not
 the only way to satisfy it.
 
 An \term{assembly} $A$ is a finite tree of constructions with all slots filled. Its yield is $\mathrm{form}(A)$; its operator assignment is $\omega(A)=\bigsqcup_{\kappa\in A}\omega_\kappa$, defined iff all contributions unify; its value is $\mathrm{val}(A)$. Three predicates over assemblies do the core work:
@@ -103,37 +102,38 @@ An \term{assembly} $A$ is a finite tree of constructions with all slots filled. 
 \begin{align}
 \operatorname{def}(A) &= \mathbf{1}\bigl[\omega(A)\ \text{is defined}\bigr]
   && \text{(compatibility)} \\
-\operatorname{sat}_t(A,c) &= \mathbf{1}\bigl[\omega(A)\ \text{is total on}\
-  \mathrm{OBL}_t(n(A,c),c,A)\bigr]
+\operatorname{sat}(A,c) &= \mathbf{1}\bigl[\omega(A)\ \text{is total on}\
+  \mathrm{OBL}(c,A)\bigr]
   && \text{(saturation)} \\
 L_t(A,c) &= \textstyle\bigwedge_{\kappa\in A} Z_t(\kappa,c)
   && \text{(licensing)}
 \end{align}
 
 Compatibility is hard: there's no weighting an operator clash away. Saturation
-refers to the obligatory dimensions $\mathrm{OBL}_t(n(A,c),c,A)$, which aren't
-stipulated per language. Section~\ref{sec:derived-obligatoriness} derives them
-from a preceding window of population-level, niche-specific zero-marking rates
-and ungated preemption pressure, without using the analyst's posterior or
-saturation itself.
-On this definition, $\operatorname{sat}_t$ is a path-dependent ontic macro rather than an
-independent primitive or an epistemic estimate. For an assembly $A$ of frame
-type $\varphi(A)$ and registered at-issue niche $n(A,c)$,
-$\mathrm{OBL}_t(n(A,c),c,A)$ abbreviates
-$\mathrm{OBL}_t(n(A,c),c,\varphi(A))$. English progressive marking and Turkish
-evidential marking are the worked cases there.
+refers to the obligatory dimensions $\mathrm{OBL}(c,A)$, which aren't stipulated
+per language but derived from the licensing state. A dimension is treated as
+obligatory when zero-marking assemblies have been preempted to near-zero
+licensing, with the tolerance and concentration conditions stated in
+\S\ref{sec:derived-obligatoriness}. Thus
+$\operatorname{sat}$ is a derived macro over licensing, not an independent
+primitive. For an assembly $A$ of frame type $\varphi(A)$, $\mathrm{OBL}(c,A)$
+abbreviates $\mathrm{OBL}(c,\varphi(A))$. English progressive marking and
+Turkish evidential marking are the worked cases there.
 
 Licensing is latent, and the Beta is typed over a rate rather than a fixed binary
 fact. Let $z_{j,t}(\kappa,c)\in\{0,1\}$ be speaker $j$'s local inclusion state
-for construction $\kappa$ in $c$. The population state
-$\theta_t(\kappa,c)\in[0,1]$ is the latent exchangeable licensing-rate
-parameter. For a randomly sampled exchangeable speaker,
+for construction $\kappa$ in $c$. The population state is the exchangeable
+licensing rate
+\[
+\theta_t(\kappa,c)=P_j\!\left(z_{j,t}(\kappa,c)=1\right).
+\]
+For a randomly sampled exchangeable speaker,
 $Z_t(\kappa,c)\mid\theta_t(\kappa,c)\sim
 \mathrm{Bernoulli}(\theta_t(\kappa,c))$ is the predictive inclusion state for
 that speaker, and $L_t(A,c)$ is the event that the sampled speaker licenses all
 nodes in $A$. The definition needs a joint predictive distribution
 over the vector $\{Z_t(\kappa,c):\kappa\in A\}$. Posterior dependence among
-node rates represents epistemic co-uncertainty; it doesn't by itself generate
+node rates represents epistemic co-uncertainty; it does not by itself generate
 co-licensing within a speaker. A tractable joint model introduces a latent lect
 $\ell_i\in\{1,\ldots,H\}$ for speaker $i$:
 \[
@@ -151,28 +151,19 @@ P\!\left(L_t(A,c)=1\mid\boldsymbol{\pi},\boldsymbol{\theta}_t\right)=
 \]
 and the marginal rate used elsewhere is
 $\theta_t(\kappa,c)=\sum_\ell\pi_\ell\theta_{\ell,t}(\kappa,c)$. The
-independent product of marginal node rates is a single-lect limiting
+independent product of marginal node rates is therefore a single-lect limiting
 case, not a general account of assembly prevalence.
 
-No speaker or analyst observes $\theta$ directly. Under exchangeability, de Finetti's
+Nobody observes $\theta$ directly. Under exchangeability, de Finetti's
 representation theorem supplies a mixing measure over $\theta$
-\citep{deFinetti1937}. The Beta family is the conjugate specialization
+\parencite{deFinetti1937}. The Beta family is the conjugate specialization
 that adds linear predictive updating: in the Bernoulli case, linearity of the
 posterior expectation of success in the counts is the binary analogue of
 Johnson's sufficientness postulate in Zabell's generalization
-\citep{zabell1982}. Direct inclusion observations would preserve that
-conjugacy. The choice observations used here don't: a non-target choice has an
-affine likelihood in $\theta$, so its exact finite-window posterior is a Beta
-mixture. Section~\ref{sec:update} uses the Beta family as an
-assumed-density approximation, matching the exact mixture's mean and variance
-after each window. A speaker's filter has mean
-$C^{(i)}_t(\kappa,c)$ and concentration $\nu^{(i)}_t(\kappa,c)$; an analyst can
-use the same family with a different evidence set, producing
-$\widehat C_t$ and $\widehat\nu_t$. The choice likelihood, memory discount, and
-moment projection are distinct modelling commitments. The population
-transition in~\eqref{eq:inclusion-transition} states how speakers' filters can
-alter later inclusion; updating an analyst posterior doesn't alter the
-population. The vector $\Lambda_{i,t}$ collects speaker $i$'s inclusion states
+\parencite{zabell1982}. Its mean is $C_t(\kappa,c)$ and its
+concentration is $\nu_t(\kappa,c)$ as in \S\ref{sec:update}; the linear-in-counts
+update rule and the Beta prior family are one modelling assumption rather than
+two. The vector $\Lambda_{i,t}$ collects speaker $i$'s inclusion states
 $z_{i,t}(\kappa,c)$, and the population distribution over those vectors supplies
 the population-level status state.
 
@@ -193,46 +184,38 @@ the compositional inheritance just described.
 \label{sec:posterior-existence}
 
 For a form $f$, value $v$, and conditioning state $c$, let $\mathcal{A}(f,v)$ be
-the set of assemblies with yield $f$ and value $v$, and let
-$\mathcal Y_{W_t}$ collect the preceding window's population realization rates,
-ungated pressure statistics, and prior obligatoriness state. The population
-state is
+the set of assemblies with yield $f$ and value $v$. The theta-conditional
+population state is
 
 \begin{equation}
 S_t^{\theta}(f,v,c)=
 P\Bigl(\,\exists A\in\mathcal{A}(f,v):\;
-\operatorname{def}(A)\wedge\operatorname{sat}_t(A,c)\wedge L_t(A,c)
-\,\Bigm|\,\boldsymbol{\theta}_t,\mathcal Y_{W_t},c\Bigr),
+\operatorname{def}(A)\wedge\operatorname{sat}(A,c)\wedge L_t(A,c)
+\,\Bigm|\,\boldsymbol{\theta}_t,c\Bigr),
 \label{eq:Gtheta}
 \end{equation}
 
 \noindent the prevalence, among exchangeable speakers in $c$, of at least one
-defined, saturated, licensed route to the form--value pair. The history argument
-is needed because $\operatorname{sat}_t$ inherits its path dependence from
-$\mathrm{OBL}_t$, which is determined
-by the preceding population window and prior convention state rather than by an
-instantaneous estimate.
-Neither a learner nor an analyst observes this population state directly. For
-an epistemic bearer $r$ (a speaker $i$ or an analyst $a$), the estimate is
+defined, saturated, licensed route to the form--value pair. The learner or
+analyst does not observe this population state directly. The epistemic estimate
+is its posterior mean:
 
 \begin{equation}
-\widehat{S}^{(r)}_t(f,v,c)=
-\mathbb{E}_{p_r(\boldsymbol{\theta}_t,\mathcal Y_{W_t}\mid\mathcal{D}_{r,t})}
+\widehat{S}_t(f,v,c)=
+\mathbb{E}_{p(\boldsymbol{\theta}_t\mid\mathcal{D}_t)}
 \!\left[S_t^{\theta}(f,v,c)\right],
 \label{eq:Gt}
 \end{equation}
 
-\noindent where $\mathcal{D}_{r,t}$ is that bearer's evidence to date: tokens,
-structured omissions, repairs, avoidance, and situation cues. Status is the
-population property $S_t^{\theta}$; $\widehat{S}^{(r)}_t$ is a particular
-bearer's estimate of it. For compactness, later predictive equations write
-$G_t$ for the analyst's $\widehat{S}^{(a)}_t$ and $g_{i,t}$ for speaker $i$'s
-$\widehat{S}^{(i)}_t$. Where
+\noindent where $\mathcal{D}_t$ is the evidence to date: tokens, structured
+omissions, repairs, avoidance, and situation cues. Status is the population
+property $S_t^{\theta}$; $\widehat{S}_t$ is a learner's or analyst's current
+estimate of it. For compactness, later equations write $G_t$ for
+$\widehat{S}_t$ where the state/estimate distinction is not at issue. Where
 value is recoverable from context, I write $G_t(u,c)$ and $S_t^{\theta}(u,c)$
 for readability. For a single pivotal node,
-$S_t^{\theta}=\theta_t(\kappa,c)$ when compatibility and saturation are fixed at
-one, so the estimate's mean and concentration are literally the corresponding
-Beta posterior's mean and concentration.
+$S_t^{\theta}=\theta_t(\kappa,c)$, so the estimate's mean and concentration are
+literally the Beta posterior's mean and concentration.
 
 Two scope conditions matter. First, for a finite yield and a finite,
 non-empty-recursive construction inventory (no cycles of null-yield
@@ -249,8 +232,8 @@ within-speaker node-independence approximation, posterior independence across
 nodes, and a single dominant assembly $A^{\ast}$, the mean factorizes,
 
 \begin{equation}
-\widehat{S}^{(r)}_t(f,v,c)\approx \mathbf{1}\bigl[\operatorname{def}(A^{\ast})\bigr]
-\cdot \mathbf{1}\bigl[\operatorname{sat}_t(A^{\ast},c)\bigr]
+\widehat{S}_t(f,v,c)\approx \mathbf{1}\bigl[\operatorname{def}(A^{\ast})\bigr]
+\cdot \mathbf{1}\bigl[\operatorname{sat}(A^{\ast},c)\bigr]
 \cdot \prod_{\kappa\in A^{\ast}} C_t(\kappa,c).
 \end{equation}
 
@@ -266,7 +249,7 @@ A three-factor heuristic can also hide content-oddness inside compatibility--the
 concentration of construal for cases like \mention{colorless green ideas}. That
 work lives instead in the subjective read-out's cost vector
 (\S\ref{sec:feeling-new}). A lexically bizarre but operator-compatible construal
-doesn't lower $S_t^{\theta}$ or its estimate and shows up as a plausibility
+does not lower $S_t^{\theta}$ or its estimate and shows up as a plausibility
 cost in $R_i$: the sentence is grammatical and odd, matching the target
 contrast.
 
@@ -275,32 +258,27 @@ contrast.
 \label{sec:projectible-G}
 
 Grammaticality projects over this posterior state. $G_t$ is compact notation for
-the analyst's estimate $\widehat{S}^{(a)}_t$, the mean of a posterior random
-variable whose dispersion remains available for projection.
-Figure~\ref{fig:state-space} depicts both the estimate and its
-dispersion.
+the estimate $\widehat{S}_t$, the mean of a posterior random variable whose
+dispersion remains available for projection, so
+Figure~\ref{fig:state-space} depicts the epistemic status state rather than a
+commentary on a scalar that discards half of it.
 
-The causal bearers remain speakers and their inclusion or evidence states. A
-speaker's candidate availability gates production, while a hearer's own estimate
-$g_{i,t}$ can enter repair:
+Some generalizations run over the posterior mean. Production and repair behaviour at $t+1$ depend partly on $G_t$:
 
 \begin{align}
-\Pr_i(\text{produce }u\mid n,c,t) &\propto
-  z_i(u,c)e^{U_{i,t}(u;n,c)}, \\
-\Pr_i(\text{repair }u\mid c,t) &=
+\Pr(\text{produce }u\mid n,c,t) &\propto
+  G_t(u,c)\;\rho^{\star}_t(u\mid n,c), \\
+\Pr(\text{repair }u\mid c,t) &=
   \sigma\!\left(\eta_0+\eta_1
-  \bigl(1-g_{i,t}(u,c)\bigr)\,r(\Delta,\iota)\right), \qquad \eta_1>0,
+  \bigl(1-G_t(u,c)\bigr)\,r(\Delta,\iota)\right), \qquad \eta_1>0,
 \end{align}
-\noindent where $z_i(u,c)$ abbreviates availability of a complete route for
-speaker $i$ (expanded in \S\ref{sec:usage}) and $\sigma$ is the logistic link.
+\noindent where $\sigma$ is the logistic link.
 
 \noindent The repair expression is the $\Delta$-sensitive form used in
 \S\ref{sec:repair-controller}; if $\Delta$ and footing are marginalized out, it
-reduces to a monotone reduced form in $1-g_{i,t}$. Aggregate production and
-repair are obtained by integrating over speakers; $G_t$ predicts those rates but
-doesn't cause them. This scopes the controller claim:
+reduces to a monotone reduced form in $1-G_t$. This scopes the controller claim:
 transparent licensing failures with low update divergence should attract only
-baseline understanding-repair and, if stable, be supported mainly by preemption, while
+baseline understanding-repair and be maintained mainly by preemption, while
 operator mis-settings draw the $\Delta$-scaled repair flow; correction rates
 should instead track ascription and prescriptive dissonance.
 
@@ -309,10 +287,8 @@ diagnostic ones. Two form--value pairs can share a low mean while differing in
 how much evidence backs it, and the update dynamics make them behave differently
 under new exposure: a diffuse posterior moves with framing and familiarization;
 a concentrated one doesn't. This epistemic dispersion is
-$\operatorname{Var}(S_t^{\theta}\mid\mathcal{D}_{r,t})$ for epistemic bearer
-$r$. Behavioral predictions use a speaker's $r=i$ posterior; analyst-facing
-estimates use $r=a$. In single-node cases the corresponding concentration is
-the pivotal node's $\nu^{(r)}$.
+$\operatorname{Var}(S_t^{\theta}\mid\mathcal{D}_t)$, or equivalently the
+pivotal node's concentration in single-node cases.
 
 Population heterogeneity is different. A community can have a sharply estimated
 interior $\theta$ because speakers are genuinely split, as with \mention{might
@@ -324,27 +300,23 @@ such a partition exists, the apparent heterogeneity was a mis-specified
 conditioning state. Within-speaker test--retest instability and
 framing lability identify epistemic uncertainty; between-speaker disagreement
 with within-speaker stability identifies heterogeneity. Satiation and framing
-rank order turn on $1/\nu$. For a moribund contrast, falling concentration is
-the direct filter prediction; between-speaker dispersion is a separate,
-conditional outcome whose ordering depends on how histories, priors, networks,
-and cohorts diverge.
+rank order turn on $1/\nu$, while
+moribund-contrast dispersion is measured between speakers because bounded memory
+lets individual histories diverge.
 
-For a single node and epistemic bearer $r$, with
-$\theta\mid\mathcal{D}_{r,t}\sim\mathrm{Beta}(a^{(r)},b^{(r)})$, let
-$C^{(r)}=E[\theta\mid\mathcal{D}_{r,t}]$ and
-$\nu^{(r)}=a^{(r)}+b^{(r)}$. The two dispersions decompose as
+For a single node with
+$\theta\mid\mathcal{D}_t\sim\mathrm{Beta}(a,b)$, let
+$C=E[\theta\mid\mathcal{D}_t]$ and $\nu=a+b$. The two dispersions decompose as
 \begin{align}
-U^{(r)}_{\mathrm{epi}} &= \operatorname{Var}(\theta\mid\mathcal{D}_{r,t})
-  =\frac{C^{(r)}(1-C^{(r)})}{\nu^{(r)}+1},\\
-U^{(r)}_{\mathrm{het}} &= E[\theta(1-\theta)\mid\mathcal{D}_{r,t}]
-  =\frac{C^{(r)}(1-C^{(r)})\nu^{(r)}}{\nu^{(r)}+1}.
+U_{\mathrm{epi}} &= \operatorname{Var}(\theta\mid\mathcal{D}_t)
+  =\frac{C(1-C)}{\nu+1},\\
+U_{\mathrm{het}} &= E[\theta(1-\theta)\mid\mathcal{D}_t]
+  =\frac{C(1-C)\nu}{\nu+1}.
 \end{align}
 Their sum is the predictive variance of a newly sampled speaker's inclusion
-state, $C^{(r)}(1-C^{(r)})$. For assemblies the corresponding quantities are
-$U^{(r)}_{\mathrm{epi}}=\operatorname{Var}(S_t^{\theta}\mid\mathcal{D}_{r,t})$
-and
-$U^{(r)}_{\mathrm{het}}=E[S_t^{\theta}(1-S_t^{\theta})\mid\mathcal{D}_{r,t}]$.
-A
+state, $C(1-C)$. For assemblies the corresponding quantities are
+$U_{\mathrm{epi}}=\operatorname{Var}(S_t^{\theta}\mid\mathcal{D}_t)$ and
+$U_{\mathrm{het}}=E[S_t^{\theta}(1-S_t^{\theta})\mid\mathcal{D}_t]$. A
 preempted gap has low mean, low epistemic uncertainty, and low heterogeneity; a
 sparse form has appreciable epistemic uncertainty; a stably divided community
 has low epistemic uncertainty but high heterogeneity.
@@ -352,12 +324,12 @@ has low epistemic uncertainty but high heterogeneity.
 The status regions are:
 
 \begin{itemize}
-\item \textbf{licensed}: $\widehat S^{(r)}_t\approx1$,
-  $\operatorname{Var}(S_t^{\theta}\mid\mathcal{D}_{r,t})\approx0$;
-\item \textbf{excluded}: $\widehat S^{(r)}_t\approx0$,
-  $\operatorname{Var}(S_t^{\theta}\mid\mathcal{D}_{r,t})\approx0$--confident
+\item \textbf{licensed}: $G_t\approx1$,
+  $\operatorname{Var}(S_t^{\theta}\mid\mathcal{D}_t)\approx0$;
+\item \textbf{excluded}: $G_t\approx0$,
+  $\operatorname{Var}(S_t^{\theta}\mid\mathcal{D}_t)\approx0$--confident
   rejection, whether by structural failure or by concentrated non-licensing;
-\item \textbf{unsettled}: $\operatorname{Var}(S_t^{\theta}\mid\mathcal{D}_{r,t})$
+\item \textbf{unsettled}: $\operatorname{Var}(S_t^{\theta}\mid\mathcal{D}_t)$
   high, in two subtypes--\emph{starved} (low concentration from a sparse
   opportunity set, as with independent relative \mention{whose}) and
   \emph{avoidance-divided} (low concentration despite dense opportunities, from
@@ -367,15 +339,7 @@ The status regions are:
   population rate is interior--stable within speakers, divided across speakers.
 \end{itemize}
 
-The projectible generalizations--satiation profiles, framing sensitivity,
-transmission fidelity, repair rates, actuation--run over a state that carries the
-dimension they turn on. Left-branch extraction and \mention{whose} approach
-similar means and part on concentration; clean defective cells such as
-\mention{pobedit'} \abbr{1sg} part from preempted gaps the same way. The dynamics
-module closes the temporal loop explicitly: production and repair generate later
-speaker evidence, speakers' filters enter the adoption--retention kernel in
-\eqref{eq:inclusion-transition}, and the resulting inclusion states determine
-the next population rate. The analyst posterior only tracks that loop.
+The projectible generalizations--satiation profiles, framing sensitivity, transmission fidelity, repair rates, actuation--run over a state that carries the dimension they turn on. Left-branch extraction and \mention{whose} approach similar means and part on concentration; clean defective cells such as \mention{pobedit'} \abbr{1sg} part from preempted gaps the same way. The feedback loop is closed: production and repair generate the later evidence streams, individual behaviour updates population licensing, and the population state projects back into future production and repair.
 
 Strictly, the object doing the projecting is the licensing profile
 $(G_t,\nu)$ plus independently estimated population heterogeneity, not the
@@ -419,51 +383,50 @@ shown.}
 \label{sec:categorical-talk}
 
 Communities often treat grammaticality as a membership fact: a relationship
-counts as an available resource in $c$ or it doesn't. On this account, a
-speaker's categorical talk is expected where that speaker's posterior has
-concentrated--where the estimated licensing state sits near an attractor and
-$\operatorname{Var}(S_t^{\theta}\mid\mathcal{D}_{i,t})\approx0$. Categoricality is a
-property of the population profile, not a threshold imposed by the analyst.
-Section~\ref{sec:emergent-categoricality} gives conditional dynamics under
-which an independently fixed adoption criterion can yield separated attracting
-regions. In the contested middle, categorical talk is predicted to be unstable
-and stakes-sensitive.
+counts as an available resource in $c$ or it doesn't. On this account, that talk
+is licensed exactly where the posterior has concentrated--where the licensing
+state sits near an attractor and
+$\operatorname{Var}(S_t^{\theta}\mid\mathcal{D}_t)\approx0$. Categoricality is a
+property of the state, not a threshold imposed on it;
+\S\ref{sec:emergent-categoricality} gives the dynamics under which bimodality
+is expected for closed, high-opportunity, update-configuring contrasts. In the
+contested middle, categorical talk is predicted to be unstable and
+stakes-sensitive.
 
 \subsubsection{A decision-theoretic read-out}
 \label{sec:decision-readout}
 
-The response threshold $\tau(c)$ belongs in the read-out. A judge in $c$ chooses between
+The threshold belongs in the read-out. A judge in $c$ chooses between
 \textsc{in-repertoire} and \textsc{not-in-repertoire} under asymmetric losses
 $L_{\mathrm{fa}}(c)$ and $L_{\mathrm{fr}}(c)$. The optimal rule accepts iff
 
 \begin{equation}
-g_{i,t}(u,c)\geq \tau(c)
+G_t(u,c)\geq \tau(c)
 =\frac{L_{\mathrm{fa}}(c)}{L_{\mathrm{fa}}(c)+L_{\mathrm{fr}}(c)}.
 \end{equation}
 
 $\tau(c)$ does no constitutive work: it's a decision criterion induced by payoff
 structure, strict in high-stakes institutional contexts, permissive in in-group
-ones. Where population licensing states are well separated, the read-out is insensitive to the exact
+ones. Where the posterior is bimodal, the read-out is insensitive to the exact
 value of $\tau(c)$; in the middle, judgments should be unstable and
 stakes-sensitive. A decision-layer discontinuity test can probe this read-out,
 but smoothness through $\tau(c)$ wouldn't by itself refute the licensing-state
 theory.
 
-Here \enquote{objective} means population-level and convention-constituted. The status
+Two clarifications keep the categorical read-out from overclaiming. First,
+calling the status \enquote{objective} means population-level and
+convention-constituted, not judge-independent in any stronger sense. The status
 stands apart from any individual's response the way facts about word meaning or
 currency do: given the community's practices, the projected relations aren't
 made available by the analyst's decision to group cases together
 \autocite{reynolds2026kindsProjectibilityProfiles}. \term{Conventional status}
 would be an equally accurate name.
 
-$\tau(c)$ and the adoption criterion
-$q_\kappa$ in~\eqref{eq:posterior-threshold-adoption} have different roles. The former governs a
-judge's response under independently measured stakes; the latter is a causal
-assumption about learning or coordination costs. Where licensing states are
-well separated, the read-out is insensitive to the exact value of $\tau(c)$;
-in the contested middle, $\tau(c)$ is set by independent stakes cues.
+Second, the threshold's arbitrariness is confined by the dynamics. Where
+licensing posteriors are bimodal, no point estimate of $\tau(c)$ is needed; in
+the contested middle, $\tau(c)$ is set by independent stakes cues.
 
-\subsection{The scope of the existential}
+\subsection{What the existential does and doesn't do}
 \label{sec:existential}
 \label{sec:map-clarification}
 
@@ -481,10 +444,10 @@ identifiable, the issue is licensing or compatibility, not coverage. This keeps
 template typing from becoming a way to relabel any concentrated licensing
 failure as structural failure.
 
-Analyzability is relative to the constructional inventory, stored wholes included, not to productive composition alone. Syntactically anomalous idioms make the difference visible: \mention{by and large}, \mention{far be it from me}, and \mention{come Monday} have no analysis by the productive syntax of English, but they're fully conventional \citep{fillmore1988}. They're covered by their own stored constructions--coverage by some node, productive or memorized, is what analyzability means here. The cost is explicit: non-emptiness isn't pre-conventional. What it contributes is a different kind of failure (no covering assembly at all), not a convention-free one.
+Analyzability is relative to the constructional inventory, stored wholes included, not to productive composition alone. Syntactically anomalous idioms make the difference visible: \mention{by and large}, \mention{far be it from me}, and \mention{come Monday} have no analysis by the productive syntax of English, but they're fully conventional \parencite{fillmore1988}. They're covered by their own stored constructions--coverage by some node, productive or memorized, is what analyzability means here. The cost is explicit: non-emptiness isn't pre-conventional. What it contributes is a different kind of failure (no covering assembly at all), not a convention-free one.
 
-A string with no covering assembly gets $G_t=0$ conditional on the inventory;
-a preempted gap gets $G_t\approx0$ from a
+No additional primitive is needed. A string with no covering assembly gets
+$G_t=0$ conditional on the inventory; a preempted gap gets $G_t\approx0$ from a
 covering assembly licensed to zero. Both are excluded, and they differ in
 \emph{why}--no assembly versus licensed-to-zero assembly--a difference with an
 empirical signature: the first fails under every construal and resists all
@@ -521,7 +484,7 @@ Because $c$ is construed, interlocutors can disagree about which conditioning st
 
 The conditioning state $c$ isn't a free parameter to be selected after a judgment is observed. For empirical work, $c$ has to be fixed before predicting ratings or repair behaviour. The posterior $q_h(c\mid e)$ is the identification device, estimated from non-judgment cues such as activity type, medium, participant roles, speaker ascription, register cues, and overt norm orientation. A form like \mention{might could} isn't rescued by choosing a sympathetic norm-centre after the fact; the model predicts different judgments only when the independent cues make that norm-centre probable.
 
-Separate evidence streams identify the licensing and performance layers. $C_t$, the posterior mean of
+This also blocks a competence/performance redux. $C_t$, the posterior mean of
 the population licensing rate, is identified by corpus-rate-per-opportunity,
 elicited production, and repair behaviour, not by acceptability ratings alone.
 $F$, the anomaly signal, is identified by ratings, online measures, and
@@ -543,40 +506,25 @@ $\mathcal{C}$ redrawn around exactly the successes redescribes failure as
 success; it doesn't rescue the model.
 
 Confirmatory studies should register the conditioning partition and the protocol
-for estimating $\rho_t^\star$ and $\widetilde{\rho}_t^\star$ (\eg forced-choice
-norming over the competitor set, with the outside option retained for the latter,
+for estimating $\rho_t^\star$ (\eg forced-choice norming over the competitor set
 before the licensing data is touched). The corpus checks in this paper are
 illustrative probes, not registered tests. Under that discipline, repeated
 post-hoc reassignment across future studies counts against the framework itself,
 not just against particular state assignments.
 
-The same discipline applies to the construction inventory $\mathcal H$, its
-template-to-frame typing, and the mapping from candidate realizations to
-assemblies and pivotal nodes. These choices must be fixed before the target
-judgments or corpus absences are inspected, alongside $c$, $n$,
-$\widetilde{\rho}_t^\star$, and $\tau(c)$. A later inventory change may be a
-legitimate reanalysis, but it must be reported as such rather than treated as if
-the original prediction had survived. The untensed $\mathcal H$ is the
-registered representational inventory for a study, not the set of currently
-licensed constructions: diachronic entry and exit occur through $z_{i,t}$ and
-$\theta_t$. Expanding $\mathcal H$ is a separately reported model revision.
-
 Two identification points follow from the fact that a corpus rate conflates
 availability and counterfactual choice (\S\ref{sec:usage}), not licensing alone.
-First, the relevant counterfactual choice term has to be estimated from evidence that
+First, $\rho_t^\star$ has to be estimated from evidence that
 doesn't include the licensing data it later interprets. A forced-choice norming
 task supplies it: present the niche $n$ and the competitor set
 $\mathcal{V}_{n,t}^{\star}$ to a separate sample and record how often each
-candidate is chosen when stipulated to be available. Candidate-only choice
-yields $\rho_t^\star$; retaining avoidance, periphrasis, and repair-in-progress
-yields the full-choice $\widetilde{\rho}_t^\star$ required by the production and
-omission models. Both are fixed before any corpus rate for $u$ is consulted, so
-a low rate can be diagnosed as non-licensing ($C_t\!\approx\!0$,
-$\widetilde{\rho}_t^\star$ high) rather than licensed-but-dispreferred selection
-($C_t$ high, $\widetilde{\rho}_t^\star\!\approx\!0$).
+candidate is chosen when stipulated to be available. That yields $\rho_t^\star$
+before any corpus rate for $u$ is consulted, so a low rate can be diagnosed as
+non-licensing ($C_t\!\approx\!0$, $\rho_t^\star$ high) rather than
+licensed-but-dispreferred selection ($C_t$ high, $\rho_t^\star\!\approx\!0$).
 
-Second, $\tau(c)$ isn't fit to the judgments it predicts. Where population
-licensing states are well separated (\S\ref{sec:emergent-categoricality}), $G_t$ is insensitive
+Second, $\tau(c)$ isn't fit to the judgments it predicts. Where the licensing
+posterior is bimodal (\S\ref{sec:emergent-categoricality}), $G_t$ is insensitive
 to the exact threshold, so no point estimate of $\tau(c)$ is needed; in the
 contested middle, $\tau(c)$ is set by independent stakes cues (institutional
 versus in-group footing), and the movable-cutoff prediction of
@@ -587,14 +535,12 @@ happen if $\tau(c)$ were merely a curve fitted to the responses.
 The niche $n$ is disciplined in the same way as $c$. Before an absence is counted
 as preemption, the analyst has to specify the communicative job, the recoverable
 intended value, the competitor set, and the outside option without using the
-target's acceptability as the criterion. The counterfactual choice terms
-$\rho_t^\star(u\mid n,c)$ and $\widetilde{\rho}_t^\star(u\mid n,c)$ are then
-normed independently, for example by forced choice under a stipulation that all
-candidates in the set are available, once without and once with the outside
-response.
+target's acceptability as the criterion. The counterfactual choice term
+$\rho_t^\star(u\mid n,c)$ is then normed independently, for example by forced
+choice under a stipulation that all candidates in the set are available.
 
 A low-rate candidate counts as preempted only when $N_t(n,c)$ is large,
-$\widetilde{\rho}_t^\star$ is non-negligible, and omissions are attributable to competitor
+$\rho_t^\star$ is non-negligible, and omissions are attributable to competitor
 choice rather than avoidance; otherwise the same absence is starved or divided.
 Classifications of low-mean cases should be reported with robustness checks
 across at least two plausible niche granularities.
@@ -686,9 +632,7 @@ phenomenology, and the predictions separate:
 \begin{itemize}
 \item \emph{No assembly} (\ungram{\mention{Can the have running}}): $F$ strongly negative, $\Phi\approx1$, under every construal.
 \item \emph{Compatibility failure} (\ungram{\mention{I've finished it yesterday}}): $F$ strongly negative, $\Phi\approx1$; entrenchment of the parts can't repair it, because unification is hard.
-\item \emph{Preempted gap} (left-branch extraction if
-  $\widetilde{\rho}_t^\star$ norms high): $F$ strongly negative, $\Phi$
-  high--\enquote{that's impossible}; framing-resistant.
+\item \emph{Preempted gap} (left-branch extraction if $\rho_t^\star$ norms high): $F$ strongly negative, $\Phi$ high--\enquote{that's impossible}; framing-resistant.
 \item \emph{Defective cell} (\mention{pobedit'} \abbr{1sg}; \ungram{\mention{amn't}} as a borderline case): $F$ negative, $\Phi$ low--\enquote{I don't know how to say it}; framing-movable when the outside option, rather than a winner, absorbs production.
 \item \emph{Community-novel} (independent relative \mention{whose}): $F$ weakly negative, $\Phi$ low; framing-movable, with surprisal adding $R$-channel noise.
 \item \emph{Processing overload} (centre embedding): $F$ negative via $R_i$, $\Phi$ moderate; satiation lowers the $R$ contribution, moving $F$ toward zero without touching the licensing posterior.
@@ -730,17 +674,17 @@ which defines it. The observation model has four channels:
 Production is choice among assemblies, not a direct read of licensing: a corpus
 rate reflects both availability and counterfactual choice, approximated by their
 product in the single-pivotal-node regime described in \S\ref{sec:usage}, and the identification discipline of
-\S\ref{sec:identification-c} (norming $\widetilde{\rho}_t^\star$ on independent data before
+\S\ref{sec:identification-c} (norming $\rho_t^\star$ on independent data before
 the licensing data is touched) applies here. Repair enters with the sign
 predicted in \S\ref{sec:projectible-use} and with the $\Delta$-sensitivity of the
 repair stream (\S\ref{sec:repair-controller}). Judgment is a metacognitive
 read-out, not status; the confidence channel $\Phi$ is identified by
 test--retest stability and explicit confidence ratings, with framing lability
 reserved for confirmation. Situation is inferred from cues, not stipulated after
-the fact. A fit-ready version would have to compose the channels as a joint likelihood over
+the fact. A fitted version composes the channels as a joint likelihood over
 production, repair, judgment, confidence, and situation cues with shared latent
 $\ell_i$, $\Lambda_{i,t}$, $\boldsymbol{\theta}_t$, and $c$, together with $n$
-where it isn't fixed by an independent coding protocol. The situation posterior
+where it is not fixed by an independent coding protocol. The situation posterior
 $q_h(c\mid e)$ is derived from $P(c)P(e\mid c)$ rather than treated as a
 generative observation channel. Identifiability requires at least one
 non-judgment channel for $\boldsymbol{\theta}$, one non-repair estimate of
@@ -761,29 +705,15 @@ shows one worked case: agreement on collective-partitive subjects
 overwhelmingly one-sided, which makes the case useful as an audit trail. Counting
 only subject-position tokens after KWIC filtering (so non-subject false positives
 are removed) gives a plural-agreement share with a Wilson interval for each cell.
-The shares sit far above parity in all four tabulations, which cover three
-constructional cells because the exact and audit-augmented majority rows are
-nested views of one cell. Interval width tracks token count rather than
-direction. The example supplies
-production-choice evidence per opportunity rather than a licensing estimate by
-itself. It bears on licensing only if independent norming shows that the singular
-candidate and the outside option would otherwise have non-negligible choice
-mass; the Wilson intervals quantify sampling uncertainty in the production
-share, not uncertainty about licensing.
+The shares sit far above parity in every cell, with the interval width tracking
+the token count rather than the direction. The example shows how a licensing
+estimate can be read off usage per opportunity rather than ratings, with
+uncertainty made explicit.
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=0.82\textwidth]{fig_agr_projection.pdf}
-\caption{Production-choice evidence for a prescriptively salient agreement
-contrast. Plural-agreement share (dot) with Wilson 95\% interval (bar) for
-collective-partitive subjects in \abbr{coca}, after \abbr{kwic} filtering to
-subject-position tokens; the dashed line marks parity (no directional
-preference). The share is a licensing indicator only conditional on independent
-norming of candidate and outside-option choice. Data:
-\texttt{agr-coca-projection} probe (\mention{bunch},
-\mention{majority}/\mention{minority}, and partitive cells). Notional plural
-dominates in each of the three constructional cells, and the interval widens
-with the smaller denominators rather than drifting toward parity.}
+\caption{Corpus-rate-per-opportunity as an estimator of licensing for a prescriptively salient agreement choice. Plural-agreement share (dot) with Wilson 95\% interval (bar) for collective-partitive subjects in \abbr{coca}, after \abbr{kwic} filtering to subject-position tokens; the dashed line marks parity (no directional preference). Data: \texttt{agr-coca-projection} probe (\mention{bunch}, \mention{majority}/\mention{minority}, and partitive cells). Notional plural dominates in every cell, and the interval widens with the smaller denominators rather than drifting toward parity.}
 \label{fig:agr-projection}
 \end{figure}
 
@@ -808,8 +738,7 @@ Cell & pl. & sg. & $N$ & Plural share (Wilson 95\%)\\
 \subsection{Worked examples: deriving status from the posterior}
 \label{sec:worked-examples}
 
-The examples from \S\ref{sec:diag-tree} show how population status and its
-posterior estimate are related.
+The examples from \S\ref{sec:diag-tree} show how the posterior assigns status.
 The winnerless cell adds the case where concentration carries the phenomenology
 rather than merely labelling it.
 
@@ -819,26 +748,19 @@ rather than merely labelling it.
   $S_t^{\theta}=G_t=0$ up to inventory uncertainty; $\Phi\approx1$ under every
   construal. Status: ungrammatical, structurally.
 
-\item \mention{Colorless green ideas sleep furiously}. A covering assembly is defined, saturated, and licensed node by node: $S_t^\theta\approx1$, with $G_t$ and a typical $g_{i,t}$ tracking it. The strangeness is a construal-plausibility cost in $R_i$: $F$ negative, status grammatical. Content-odd, not ill-formed.
+\item \mention{Colorless green ideas sleep furiously}. A covering assembly is defined, saturated, and licensed node by node: $G_t\approx1$. The strangeness is a construal-plausibility cost in $R_i$: $F$ negative, status grammatical. Content-odd, not ill-formed.
 
 \item \ungram{\mention{I've finished it yesterday}} (compatibility failure). Covering assemblies exist, but every one sets the reference-interval dimension twice incompatibly--the perfect's contribution and the deictic adverb's don't unify--so $\operatorname{def}(A)=0$ throughout. $S_t^{\theta}=G_t=0$; $\Phi\approx1$. Entrenchment of the component constructions can't repair it: the clash is outside the licensing terms altogether.
 
-\item \ungram{\mention{I have 25 years}} (licensing failure). Defined and saturated; the value is transparent. The pivotal age-predication node has $\theta_t\approx0$, tracked by a typical speaker at $C^{(i)}_t\approx0$ with high $\nu^{(i)}$, after preemption by the \textsc{be}-frame in a dense niche. $g_{i,t}\approx0$ and $\Phi$ is high. Status: ungrammatical, by concentrated non-licensing.
+\item \ungram{\mention{I have 25 years}} (licensing failure). Defined and saturated; the value is transparent. The pivotal age-predication node sits at $C_t\approx0$ with high $\nu$, preempted by the \textsc{be}-frame in a dense niche. $G_t\approx0$, $\Phi$ high. Status: ungrammatical, by concentrated non-licensing.
 
-\item \marg{\mention{friend of whose}} (community-novel). Defined and saturated; the niche is vanishingly sparse, so a typical speaker's pivotal-node posterior sits near its prior with low $\nu^{(i)}$. The speaker's $g_{i,t}$ is intermediate, $\operatorname{Var}(S_t^{\theta}\mid\mathcal{D}_{i,t})$ is high, and $\Phi$ is low. Status: unsettled (starved); framing-movable, with surprisal adding $R$-channel noise.
+\item \marg{\mention{friend of whose}} (community-novel). Defined and saturated; the niche is vanishingly sparse, so the pivotal node's posterior sits near its prior with low $\nu$. $G_t$ intermediate, $\operatorname{Var}(S_t^{\theta}\mid\mathcal{D}_t)$ high, $\Phi$ low. Status: unsettled (starved); framing-movable, with surprisal adding $R$-channel noise.
 
-\item \ungram{\mention{Which did you buy car?}} (putative preempted gap).
-Defined and saturated; the dedicated discontinuity node--the only activated node
-covering the determiner--head discontinuity--receives negative evidence from
-fronting opportunities only in proportion to independently normed
-$\widetilde{\rho}_t^\star$. If that full-choice term is high, its posterior is
-driven to zero and concentrates there (\S\ref{sec:update}); if it's low, the
-case belongs closer to starvation. Status assignment requires the niche-norming
-protocol of \S\ref{sec:identification-c}.
+\item \ungram{\mention{Which did you buy car?}} (putative preempted gap). Defined and saturated; the dedicated discontinuity node--the only activated node covering the determiner--head discontinuity--receives negative evidence from fronting opportunities only in proportion to independently normed $\rho_t^\star$. If $\rho_t^\star$ is high, its posterior is driven to zero and concentrates there (\S\ref{sec:update}); if $\rho_t^\star$ is low, the case belongs closer to starvation. Status assignment requires the niche-norming protocol of \S\ref{sec:identification-c}.
 
-\item \mention{pobedit'} \abbr{1sg} (winnerless cell; \ungram{\mention{amn't}} as a mixed case). The niche is dense and candidate assemblies are transparent, but candidate support is weak and no candidate accumulates positive evidence--the outside option absorbs production, and because avoidance has low attributability, candidates accumulate little confident negative evidence either (\S\ref{sec:winnerless-cells}). Given that low support, every candidate's pivotal node has a low speaker-level mean and low $\nu^{(i)}$. The typical $g_{i,t}$ is low, $\operatorname{Var}(S_t^{\theta}\mid\mathcal{D}_{i,t})$ is high, and $\Phi$ is low. Status: unsettled (avoidance-divided); phenomenology ineffability, not rejection--same mean as a preempted gap, different concentration, different feeling.
+\item \mention{pobedit'} \abbr{1sg} (winnerless cell; \ungram{\mention{amn't}} as a mixed case). The niche is dense and candidate assemblies are transparent, but candidate support is weak and no candidate accumulates positive evidence--the outside option absorbs production, and because avoidance has low attributability, candidates accumulate little confident negative evidence either (\S\ref{sec:winnerless-cells}). Given that low support, every candidate's pivotal node has low mean and low $\nu$. $G_t$ low, $\operatorname{Var}(S_t^{\theta}\mid\mathcal{D}_t)$ high, $\Phi$ low. Status: unsettled (avoidance-divided); phenomenology ineffability, not rejection--same mean as a preempted gap, different concentration, different feeling.
 
-\item \mention{The bread the baker the apprentice helped made is delicious} (processing overload). A typical $g_{i,t}$ is high; the locality term in $R_i$ is large. $F$ is negative and $\Phi$ moderate; satiation and instruction move the $R$ contribution, not the licensing posterior. Status: grammatical, transiently ill-felt.
+\item \mention{The bread the baker the apprentice helped made is delicious} (processing overload). $G_t$ high; the locality term in $R_i$ is large. $F$ negative, $\Phi$ moderate; satiation and instruction move the $R$ contribution, not the licensing posterior. Status: grammatical, transiently ill-felt.
 \end{enumerate}
 
 Figure~\ref{fig:posterior-means} shows the low-opportunity versus dense-preemption contrast that underwrites several of these classifications.
@@ -858,57 +780,27 @@ Figure~\ref{fig:posterior-means} shows the low-opportunity versus dense-preempti
     legend pos=north east
 ]
 \addplot[name path=rarehi, draw=none, forget plot] coordinates {
-(0,0.9750) (2,0.9750) (4,0.9750) (6,0.9750) (8,0.9750)
-(10,0.9563) (12,0.9563) (14,0.9563) (16,0.9563) (18,0.9563)
-(20,0.9298) (22,0.9298) (24,0.9298) (26,0.9298) (28,0.9298)
-(30,0.8957) (32,0.8957) (34,0.8957) (36,0.8957) (38,0.8957)
-(40,0.8553) (42,0.8553) (44,0.8553) (46,0.8553) (48,0.8553)
-(50,0.8106)
+(0,0.9750) (2,0.9731) (4,0.9712) (6,0.9692) (8,0.9671) (10,0.9650) (12,0.9629) (14,0.9607) (16,0.9584) (18,0.9561) (20,0.9538) (22,0.9514) (24,0.9489) (26,0.9465) (28,0.9440) (30,0.9414) (32,0.9389) (34,0.9363) (36,0.9336) (38,0.9310) (40,0.9283) (42,0.9256) (44,0.9228) (46,0.9201) (48,0.9173) (50,0.9145)
 };
 \addplot[name path=rarelo, draw=none, forget plot] coordinates {
-(0,0.0250) (2,0.0250) (4,0.0250) (6,0.0250) (8,0.0250)
-(10,0.0160) (12,0.0160) (14,0.0160) (16,0.0160) (18,0.0160)
-(20,0.0103) (22,0.0103) (24,0.0103) (26,0.0103) (28,0.0103)
-(30,0.0068) (32,0.0068) (34,0.0068) (36,0.0068) (38,0.0068)
-(40,0.0046) (42,0.0046) (44,0.0046) (46,0.0046) (48,0.0046)
-(50,0.0032)
+(0,0.0250) (2,0.0245) (4,0.0241) (6,0.0236) (8,0.0232) (10,0.0228) (12,0.0224) (14,0.0220) (16,0.0216) (18,0.0212) (20,0.0209) (22,0.0205) (24,0.0202) (26,0.0199) (28,0.0196) (30,0.0193) (32,0.0190) (34,0.0187) (36,0.0184) (38,0.0182) (40,0.0179) (42,0.0177) (44,0.0174) (46,0.0172) (48,0.0170) (50,0.0167)
 };
 \addplot[blue, fill opacity=0.10, forget plot] fill between[of=rarehi and rarelo];
 \addplot[name path=densehi, draw=none, forget plot] coordinates {
-(0,0.9750) (2,0.5774) (4,0.3298) (6,0.2211) (8,0.1640)
-(10,0.1295) (12,0.1067) (14,0.0906) (16,0.0786) (18,0.0693)
-(20,0.0620) (22,0.0561) (24,0.0511) (26,0.0470) (28,0.0435)
-(30,0.0404) (32,0.0378) (34,0.0355) (36,0.0334) (38,0.0316)
-(40,0.0299) (42,0.0285) (44,0.0271) (46,0.0259) (48,0.0248)
-(50,0.0237)
+(0,0.9750) (1,0.4593) (2,0.2849) (3,0.2059) (4,0.1611) (5,0.1323) (6,0.1122) (7,0.0974) (8,0.0860) (9,0.0771) (10,0.0698) (12,0.0587) (14,0.0506) (16,0.0445) (18,0.0397) (20,0.0359) (22,0.0327) (24,0.0300) (26,0.0278) (28,0.0258) (30,0.0241) (32,0.0227) (34,0.0213) (36,0.0202) (38,0.0191) (40,0.0182) (42,0.0173) (44,0.0166) (46,0.0158) (48,0.0152) (50,0.0146)
 };
 \addplot[name path=denselo, draw=none, forget plot] coordinates {
-(0,0.0250) (2,0.0015) (4,0.0005) (6,0.0002) (8,0.0002)
-(10,0.0001) (12,0.0001) (14,0.0001) (16,0.0001) (18,0.0001)
-(20,0.0000) (22,0.0000) (24,0.0000) (26,0.0000) (28,0.0000)
-(30,0.0000) (32,0.0000) (34,0.0000) (36,0.0000) (38,0.0000)
-(40,0.0000) (42,0.0000) (44,0.0000) (46,0.0000) (48,0.0000)
-(50,0.0000)
+(0,0.0250) (1,0.0042) (2,0.0023) (3,0.0016) (4,0.0012) (5,0.0010) (6,0.0008) (8,0.0006) (10,0.0005) (12,0.0004) (14,0.0004) (16,0.0003) (18,0.0003) (20,0.0003) (22,0.0002) (24,0.0002) (26,0.0002) (28,0.0002) (30,0.0002) (32,0.0002) (34,0.0001) (36,0.0001) (38,0.0001) (40,0.0001) (42,0.0001) (44,0.0001) (46,0.0001) (48,0.0001) (50,0.0001)
 };
 \addplot[red, fill opacity=0.10, forget plot] fill between[of=densehi and denselo];
 \addplot[mark=none, blue, thick] coordinates {
-(0,0.5000) (2,0.5000) (4,0.5000) (6,0.5000) (8,0.5000)
-(10,0.4451) (12,0.4451) (14,0.4451) (16,0.4451) (18,0.4451)
-(20,0.3941) (22,0.3941) (24,0.3941) (26,0.3941) (28,0.3941)
-(30,0.3479) (32,0.3479) (34,0.3479) (36,0.3479) (38,0.3479)
-(40,0.3071) (42,0.3071) (44,0.3071) (46,0.3071) (48,0.3071)
-(50,0.2716)
+(0,0.5000) (2,0.4950) (4,0.4902) (6,0.4854) (8,0.4808) (10,0.4762) (12,0.4717) (14,0.4673) (16,0.4630) (18,0.4587) (20,0.4545) (22,0.4505) (24,0.4464) (26,0.4425) (28,0.4386) (30,0.4348) (32,0.4310) (34,0.4274) (36,0.4237) (38,0.4202) (40,0.4167) (42,0.4132) (44,0.4098) (46,0.4065) (48,0.4032) (50,0.4000)
 };
 \addplot[mark=none, red, thick, dashed] coordinates {
-(0,0.5000) (2,0.1641) (4,0.0818) (6,0.0523) (8,0.0379)
-(10,0.0295) (12,0.0241) (14,0.0204) (16,0.0176) (18,0.0155)
-(20,0.0138) (22,0.0124) (24,0.0113) (26,0.0104) (28,0.0096)
-(30,0.0089) (32,0.0083) (34,0.0078) (36,0.0074) (38,0.0070)
-(40,0.0066) (42,0.0063) (44,0.0060) (46,0.0057) (48,0.0054)
-(50,0.0052)
+(0,0.5000) (1,0.1429) (2,0.0833) (3,0.0588) (4,0.0455) (5,0.0370) (6,0.0312) (7,0.0270) (8,0.0238) (9,0.0213) (10,0.0192) (12,0.0161) (14,0.0139) (16,0.0122) (18,0.0109) (20,0.0098) (22,0.0089) (24,0.0082) (26,0.0076) (28,0.0070) (30,0.0066) (32,0.0062) (34,0.0058) (36,0.0055) (38,0.0052) (40,0.0050) (42,0.0047) (44,0.0045) (46,0.0043) (48,0.0041) (50,0.0040)
 };
 \end{axis}
 \end{tikzpicture}
-\caption{Licensing posteriors under the affine omission likelihood, from a $\mathrm{Beta}(1,1)$ prior. The sparse arm receives one attributable omission every ten steps (five total); the dense arm receives five per step (250 total). Each omission has $d=.495$, derived from equal-utility candidates and outside utility $-4$. Lines are moment-matched posterior means; shading gives 95\% Beta intervals. Sparse evidence leaves a broad posterior even as its mean moves, while dense preemption lowers the mean and raises concentration. Population actuation also requires the transition in~\eqref{eq:inclusion-transition}.}
+\caption{Licensing posteriors under preemption, from a $\mathrm{Beta}(1,1)$ prior with per-step effective preemption mass $0.01$ (rare, blue) versus $5$ (dense preemption, red); lines are posterior means, shaded regions 95\% credible intervals. The rare construction stays near its prior with a credible interval spanning nearly the whole unit interval, while the dense-preemption posterior both falls and concentrates. The projections in \S\ref{sec:projectible-use} that turn on evidence structure--satiation, framing sensitivity, actuation--run over this dispersion difference, which means alone don't encode.}
 \label{fig:posterior-means}
 \end{figure}

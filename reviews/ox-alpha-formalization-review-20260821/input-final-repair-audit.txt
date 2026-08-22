@@ -1,0 +1,960 @@
+# Ox Alpha final refutation audit
+
+You are reviewing selected, line-numbered excerpts from the CURRENT repaired LaTeX source of a formal linguistics/philosophy manuscript. Nothing is sensitive. Do not rely on earlier reviews.
+
+Audit only these issues:
+
+1. Candidate-conditional rho-star versus full-choice rho-tilde-star and the exact omission LLR. Verify that removing the positive omission channel is entailed by the fixed-utility/fixed-other-gates softmax.
+2. Ontic population status versus speaker and analyst estimates, including the population usage factorization, the Beta/adoption bridge, and the decision read-out bearer.
+3. The niche-indexed derived-obligatoriness recurrence: whether raw zero-marking rate and ungated pressure avoid definitional circularity; whether the entry/release thresholds define all hysteresis-band states; whether the initial condition and t-1 recursion are well founded; and whether the English-progressive example can satisfy it without saturation collapsing into licensing.
+4. The stipulated theta cubic and frozen-flow caveat.
+
+Recompute rather than paraphrase. Report only BLOCKER, MAJOR, and genuinely useful MINOR findings, with excerpt line numbers. Do not review prose style, literature, empirical citations, or unrelated sections. Say explicitly when a former defect is now closed. End with a binary verdict: MATERIAL FORMAL COHERENCE YES/NO. Be concise.
+
+# Current source excerpts
+
+   780	rarely chosen.
+   781	
+   782	Let $\rho_t^\star(x\mid n,c)\in[0,1]$ be the candidate-conditional
+   783	counterfactual probability of choosing $x$ if every registered candidate were
+   784	available in niche $n$ under $c$. A flexible choice model is a softmax over
+   785	utilities:
+   786	\[
+   787	\rho_t^\star(x\mid n,c)=
+   788	\frac{e^{U_t(x;n,c)}}{\sum_{x'\in\mathcal{V}_{n,t}^{\star}}e^{U_t(x';n,c)}},
+   789	\qquad
+   790	U_t(x;n,c)=\mathbf{w}^{\top}\mathbf{f}(x;n,c).
+   791	\]
+   792	Because the production model also contains an outside option, the quantity that
+   793	enters a licensing--usage factorization is instead the full-choice share
+   794	\[
+   795	\widetilde{\rho}_t^\star(x\mid n,c)=
+   796	\frac{e^{U_t(x;n,c)}}
+   797	{e^{U_t(\bot;n,c)}+
+   798	 \sum_{x'\in\mathcal{V}_{n,t}^{\star}}e^{U_t(x';n,c)}}.
+   799	\]
+   800	The two coincide only when the outside option has negligible mass. Empirical
+   801	norming therefore has to offer the relevant avoidance, periphrasis, or
+   802	repair-in-progress response as well as the candidate realizations; a
+   803	candidate-only forced choice estimates $\rho_t^\star$, not
+   804	$\widetilde{\rho}_t^\star$.
+   805	
+   806	At the population level, the expected usage rate is
+   807	\[
+   808	\pi_t(x\mid n,c)=
+   809	E_i\!\left[
+   810	\frac{z_i(x,c)e^{U_t(x;n,c)}}
+   811	{e^{U_t(\bot;n,c)}+
+   812	\sum_{x'\in\mathcal{V}_{n,t}^{\star}}z_i(x',c)e^{U_t(x';n,c)}}
+   813	\right],
+   814	\]
+   815	where, for a candidate $x$ with form--value pair $(f_x,v_x)$,
+   816	\[
+   817	z_i(x,c)=\mathbf{1}\!\left[
+   818	\exists A\in\mathcal{A}(f_x,v_x):
+   819	\operatorname{def}(A)\wedge\operatorname{sat}_t(A,c)\wedge
+   820	\bigwedge_{\kappa\in A}z_{i,t}(\kappa,c)
+   821	\right]
+   822	\]
+   823	abbreviates speaker $i$'s availability of a complete licensed route for $x$
+   824	(with the time index suppressed on the left), and $\bot$ is the outside option
+   825	(avoidance, periphrasis, or repair-in-progress). With several required nodes,
+   826	the expectation is evaluated over the joint inclusion model rather than inferred
+   827	from marginal node means alone. When one pivotal availability gate dominates
+   828	and the other gates and full-set choice weights have been normed independently,
+   829	the predictive product
+   830	$\pi_t(x\mid n,c)\approx S_t^\theta(x,c)
+   831	\widetilde{\rho}_t^\star(x\mid n,c)$ is a useful population-level
+   832	approximation. In single-pivotal-node cases this reduces to
+   833	$\theta_t(\kappa_x,c)\widetilde{\rho}_t^\star(x\mid n,c)$, where $\kappa_x$ is
+   834	the node that would realize $x$ in $c$. The corresponding analyst prediction
+   835	replaces $S_t^\theta$ with $G_t$, or $\theta_t$ with $\widehat C_t$, as an
+   836	estimation step; it doesn't identify the ontic usage rate with the estimate.
+   837	The full-choice term can be high even when the population availability is near
+   838	zero, so absence becomes informative under that condition.
+   839	
+   840	\subsection{Dynamics: evidence streams, weighted omissions, and repair}
+   841	\label{sec:update}
+   842	
+   843	Speaker $i$ represents each construction--situation pair $(\kappa,c)$ with a
+   844	Beta filter over the population licensing rate $\theta_t(\kappa,c)$
+   845	(\S\ref{sec:objects}); the analyst may use the same family on a different data
+   846	stream to estimate that population state. The equations below suppress $i$ and
+   847	describe one such filter. With perfect retention, the update is the ordinary
+   848	conjugate filter for exchangeable Bernoulli licensing observations. With memory
+   849	discount $\delta_m\in(0,1]$, an evidence item at occasion $t_i$ contributes
+   850	$\delta_m^{t-t_i}$ of its weight at time $t$. Setting $\delta_m=1$ recovers the
+   851	fixed-parameter posterior; $\delta_m<1$ is a power-discounted dynamic filter for
+   852	a drifting convention \parencite{WestHarrison1997}, which is what the
+   853	destabilization result in \S\ref{sec:destabilization} turns on. With no new
+   854	evidence, the evidence counts decay back toward the fixed baseline prior rather
+   855	than toward the improper $\mathrm{Beta}(0,0)$ limit.
+   856	
+   857	For a target candidate realization $x$, the streams are current-window positive
+   858	evidence $s_t$, error evidence $e_t$, and negative omission innovation $p_t^-$,
+   859	distributed over activated nodes by stream-specific evidence
+   860	weights. Each item is counted once in its arrival window; the recurrence carries
+   861	and discounts the accumulated effective evidence. Discounting therefore applies
+   862	to accumulated evidence, not to either the current-window innovations or the
+   863	baseline prior:
+   864	\begin{align}
+   865	a_{\kappa,c,t+1} &= a^0_{\kappa,c}
+   866	  +\delta_m\bigl(a_{\kappa,c,t}-a^0_{\kappa,c}\bigr)
+   867	  +\lambda^+_\kappa(x,c)s_t(x,c),\\
+   868	b_{\kappa,c,t+1} &= b^0_{\kappa,c}
+   869	  +\delta_m\bigl(b_{\kappa,c,t}-b^0_{\kappa,c}\bigr)
+   870	  +\lambda^-_\kappa(x,c)\bigl\{e_t(x,c)+p_t^-(x,c)\bigr\}.
+   871	\end{align}
+   872	The node-level mean and concentration are
+   873	\begin{equation}\label{eq:beta-update}
+   874	C_{t+1}(\kappa,c)=
+   875	\frac{a_{\kappa,c,t+1}}{a_{\kappa,c,t+1}+b_{\kappa,c,t+1}},
+   876	\qquad
+   877	\nu_{t+1}(\kappa,c)=a_{\kappa,c,t+1}+b_{\kappa,c,t+1}.
+   878	\end{equation}
+   879	
+   880	The evidence terms are effective counts in a generalized-Bayes filter, not
+   881	literal Bernoulli observations of speaker inclusion. Their scale fixes the
+   882	effective sample size and therefore the concentration predictions; applications
+   883	must calibrate that scale against repeated-sampling variance or report
+   884	sensitivity to it.
+   885	
+   886	The filter changes a speaker's evidence state; it does not by itself change the
+   887	population rate. The learner-to-population bridge is an explicit transition
+   888	kernel. Let $C^{(i)}_{\kappa,c,t}$ and $\nu^{(i)}_{\kappa,c,t}$ be speaker $i$'s
+   889	filter summaries, let $\xi_{i,t}$ collect lect, network, and other independently
+   890	specified adoption covariates, and let $\lambda_{i,\kappa}\in[0,1]$ govern
+   891	persistence. Then
+   892	\begin{equation}
+   893	z_{i,t+1}(\kappa,c)\sim\operatorname{Bernoulli}\!\left(
+   894	  (1-\lambda_{i,\kappa})z_{i,t}(\kappa,c)+
+   895	  \lambda_{i,\kappa}h_\kappa(C^{(i)}_{\kappa,c,t},
+   896	    \nu^{(i)}_{\kappa,c,t},\xi_{i,t},c)\right),
+   897	\label{eq:inclusion-transition}
+   898	\end{equation}
+   899	where $h_\kappa\in[0,1]$ is an adoption--retention response fixed independently
+   900	of the outcome being predicted. The persistence term allows stable individual
+   901	lects even when the population is divided. For a finite population of $M$
+   902	speakers, distinguish the empirical prevalence
+   903	\[
+   904	\theta^{(M)}_{t+1}(\kappa,c)=\frac{1}{M}\sum_{i=1}^{M}
+   905	z_{i,t+1}(\kappa,c)
+   906	\]
+   907	from the exchangeable rate $\theta_{t+1}$. Conditional on the current population
+   908	state, the expected empirical prevalence is the average of the transition
+   909	probabilities in~\eqref{eq:inclusion-transition}; in a homogeneous mean-field
+   910	case the realized prevalence fluctuates around that common probability at
+   911	$O_p(M^{-1/2})$. Replacing the average of a nonlinear $h_\kappa$ by its value at
+   912	average covariates is a separate closure approximation whose error depends on
+   913	population heterogeneity, not on the opportunity count $N_t$. Speakers'
+   914	evidence states can therefore mediate population change, while an analyst's
+   915	posterior remains only a measurement of that change.
+   916	
+   917	The two weights encode the grain asymmetry used below. Let $A_x$ be the latent
+   918	covering assembly in the parse of token $x$, rather than an unspecified best
+   919	assembly. Positive evidence spreads according to its parsing posterior,
+   920	\begin{equation*}
+   921	\lambda^+_\kappa=P(\kappa\in A_x\mid x,c,\mathcal{D}_t),
+   922	\end{equation*}
+   923	so a heard token confirms the nodes that plausibly cover it. Error and omission
+   924	evidence attaches by likelihood sensitivity. For the finite activated-node set
+   925	$\mathcal K_x$, put
+   926	\begin{equation*}
+   927	q^-_\kappa=
+   928	\left|
+   929	\frac{\partial\log P(\mathcal{D}_t\mid\theta_t(\kappa,c))}
+   930	{\partial\theta_t(\kappa,c)}
+   931	\right|,
+   932	\qquad
+   933	\lambda^-_\kappa=
+   934	\frac{q^-_\kappa}{\sum_{\kappa'\in\mathcal K_x}q^-_{\kappa'}}.
+   935	\end{equation*}
+   936	The normalized expression applies when the denominator is positive; if every
+   937	sensitivity is zero, the event contributes no negative evidence rather than an
+   938	arbitrarily scaled count. Thus negative mass concentrates where the data would
+   939	have looked different if that node were licensed, while the overall effective
+   940	count remains on the calibration scale stated above.
+   941	
+   942	Ascription weighting applies to all streams. Each token's contribution is scaled by
+   943	the hearer's posterior that it's a competent realization of the norms of $c$.
+   944	That's why child and learner errors barely move adult posteriors, and why
+   945	koinéization falls out as a shift in ascription weights rather than a separate
+   946	mechanism.
+   947	
+   948	\noindent\textsc{Weighted omissions.} A simple preemption rule treats absence as
+   949	evidential in proportion to the full-choice counterfactual probability:
+   950	$p_t^-=\sum_o\widetilde{\rho}_t^\star(x\mid n(x),c)$ over current-window niche
+   951	opportunities $o$. That
+   952	approximation handles ordinary competitor choices but not occasions where the
+   953	niche arose and nothing in the candidate set was produced--periphrasis,
+   954	avoidance, repair-in-progress. Counting those as negative evidence would make
+   955	every defective cell collapse into a preempted gap. The weighting follows from
+   956	inverting the normalized production model.
+   957	
+   958	Consider an occasion $i$ where niche $n$ arose and some $y_i\neq x$ was
+   959	produced. The evidential question is how strongly that choice tells against
+   960	$x$'s membership in the repertoire. The additive evidence supplied by a
+   961	likelihood comparison is the log likelihood ratio
+   962	\begin{equation}
+   963	\ell_i(x)=
+   964	\log P(y_i\mid Z_x=0,n,c)-
+   965	\log P(y_i\mid Z_x=1,n,c),
+   966	\label{eq:attributability}
+   967	\end{equation}
+   968	where $Z_x$ abbreviates availability of a licensed route for $x$. Positive
+   969	$\ell_i$ is evidence against $x$. Under the normalized choice model below,
+   970	holding the other gates and utilities fixed makes $\ell_i\geq0$, so omissions
+   971	have no separate positive-evidence channel:
+   972	\begin{equation}
+   973	p_t^-(x,c) = \sum_{i\in\mathcal{I}_t:\,\text{omission}} r_i\ell_i(x).
+   974	\label{eq:preemption-mass}
+   975	\end{equation}
+   976	where $\mathcal{I}_t$ is the set of occasions in the current update window and
+   977	$[r]_+=\max\{r,0\}$. The niche-identification weight $r_i$ is the posterior
+   978	probability that occasion $i$ instantiated a job $x$ would have done at all,
+   979	with the intended value recoverable under $x$.
+   980	
+   981	Two regimes matter. When $y_i$ is an in-repertoire competitor, let
+   982	\[
+   983	D_{0,i}=e^{U_t(\bot;n,c)}+
+   984	  \sum_{x'\ne x}z_i(x',c)e^{U_t(x';n,c)}
+   985	\]
+   986	be the gated normalizer when $x$ is unavailable, and define the occasion-level
+   987	full-choice share
+   988	\[
+   989	\widetilde{\rho}_{i,t}^\star(x\mid n,c)=
+   990	  \frac{e^{U_t(x;n,c)}}{D_{0,i}+e^{U_t(x;n,c)}}.
+   991	\]
+   992	Holding the other gates fixed, normalized softmax choice then gives the exact
+   993	identity
+   994	\[
+   995	\frac{P(y_i\mid Z_x=1,n,c)}{P(y_i\mid Z_x=0,n,c)}
+   996	  =1-\widetilde{\rho}_{i,t}^\star(x\mid n,c),
+   997	\]
+   998	and hence
+   999	\[
+  1000	\ell_i(x)=-\log\!\bigl(1-\widetilde{\rho}_{i,t}^\star(x\mid n,c)\bigr)
+  1001	  \approx \widetilde{\rho}_{i,t}^\star(x\mid n,c)
+  1002	\]
+  1003	only when the target's full gated mass is small. The old
+  1004	$N_t\cdot\rho_t^\star$ quantity is recovered only in a near-complete gap and
+  1005	under four further conditions: nearly every opportunity is an attributable
+  1006	omission ($r_i\approx1$), the outside option has negligible mass, the other
+  1007	candidate gates match the norming task, and the target mass is small enough for
+  1008	the log expansion. Continued attributable competitor choices can therefore keep
+  1009	supplying evidence against a concentrated gap; reopening it requires an
+  1010	actuation route that changes utilities, gates, or the observed evidence balance.
+  1011	
+  1012	When $y_i$ is the outside option--periphrasis or avoidance, available at fixed
+  1013	utility under both hypotheses--its choice probability is nearly the same whether
+  1014	$x$ is licensed or not, provided $x$'s counterfactual utility is low or the
+  1015	production rule assigns a face cost to weakly licensed forms. The condition is
+  1016	independently estimable from the same production data that estimates
+  1017	$\widetilde{\rho}_t^\star$: speakers who avoid an exposed candidate despite understanding
+  1018	the intended value are treating production itself as costly. Then
+  1019	$\ell_i(x)\approx0$: taking the outside option is nearly uninformative about
+  1020	$x$.
+  1035	from the licensed profile and pushes the population back. Conversational repair
+  1036	is the candidate considered here.
+  1037	
+  1038	Let $\Delta(d)$ be the expected common-ground divergence from mis-setting
+  1039	operator dimension $d$: the quantitative face of \enquote{update-configuring}
+  1040	in the working test of \S\ref{sec:operator-values}. Formally, $\Delta(d)$ is an
+  1041	expected KL divergence between the common-ground posterior induced by the
+  1042	intended value and the posterior induced by the mis-set value, in the same
+  1043	spirit as RSA-style update models \parencite{GoodmanFrank2016}. When a token
+  1044	mis-sets $d$, other-initiated repair occurs with probability $r(\Delta,\iota)$,
+  1045	increasing in $\Delta$ and modulated by footing $\iota$. Each repair event feeds
+  1046	the evidence streams: error evidence $e_t$ for the deviant node, positive
+  1047	evidence $s_t$ for the repaired-to competitor. Over a window with $N_t(n,c)$
+  1048	opportunities, the repair-generated flow against a deviant convention in niche
+  1049	$n$ is
+  1050	\begin{equation}
+  1051	\psi_{\mathrm{rep}}(n)=N_t(n,c)\cdot
+  1052	P(\text{mis-set})\cdot r(\Delta,\iota),
+  1053	\label{eq:repair-flow}
+  1054	\end{equation}
+  1055	whose magnitude is linear in opportunity and increases with divergence through
+  1056	$r$; it needn't be linear in $\Delta$. This
+  1057	scalar is the mean-field contribution generated by repair-weighted positive and
+  1058	error evidence, not a fourth evidence stream in addition to $s_t$ and $e_t$.
+  1059	
+  1060	In the mean-field normal form (\S\ref{sec:emergent-categoricality}), the repair
+  1061	term represents majority enforcement: it increases the evidence flow toward
+  1062	whichever candidate is already modal in the relevant community state. This gives Woodward's
+  1063	interventionist signature: the repair rate earns controller status if an
+  1064	intervention on it changes the profile's return-to-attractor behaviour in an
+  1065	invariant, predictable way \parencite{woodward2001,
+  1066	woodward2003MakingThingsHappen}. The claim stays graded: what the term
+  1067	establishes is a testable candidate controller, not a demonstration that
+  1068	grammar is controlled.
+  1069	
+  1070	Two commitments come with the term. First, the operator/style boundary becomes
+  1071	a parameter statement: policing intensity is predicted to follow
+  1072	$N_t\,P(\text{mis-set})\,r(\Delta,\iota)$, with opportunity estimable from opportunity-annotated
+  1073	corpora and $\Delta$ from comprehension probes or annotated update-divergence
+  1074	tasks that ask what common-ground change the mis-set value would induce. The
+  1075	\S\ref{sec:operator-values}
+  1076	falsifier--a closed, high-opportunity, non-configuring contrast policed like
+  1077	grammar--has a quantitative form: such a contrast has $\Delta\approx0$, so
+  1078	its corrective flow collapses to a social-sanction baseline and its licensing
+  1079	distribution should stay gradient, policed like style. Second, if repair rates
+  1080	track social indexing rather than $\Delta$, the corrective term collapses into
+  1081	sociolinguistic policing and the controller claim fails cleanly. Blythe and
+  1082	Croft's utterance-selection dynamics remain the $r\equiv0$ special case, so the
+  1083	import is conservative \autocite{BlytheCroft2012}.
+  1084	
+  1085	\noindent\textsc{Grain asymmetry and compositional inheritance.} The two kinds of
+  1086	evidence attach at different grains. Positive evidence distributes over
+  1087	activated nodes by the coverage weights: a heard token confirms every
+  1088	construction that covers it. Error and preemption mass instead concentrate on
+  1089	the most specific node that individuates the candidate within its niche,
+  1090	because that node is what distinctively predicts the missing tokens. In
+  1091	Bayesian terms, the likelihood penalty for structured non-occurrence falls on
+  1092	the hypothesis that wastes probability mass on sentence types never observed;
+  1093	likelihood is a quantitative measure of the weight of implicit negative
+  1094	evidence \autocite{PerforsEtAl2011}.
+  1095	
+  1096	Compositional inheritance raises an objection. Token-level licensing is assembled from
+  1097	constructional nodes, so left-branch extraction activates the well-licensed
+  1098	nodes for interrogative fronting, question formation, and modifier--noun
+  1099	packaging. The sum can look as though it should hand the candidate substantial
+  1100	licensing.
+  1101	
+  1102	The coverage weights block that result. A node contributes to a token's pooled
+  1103	licensing only for the properties it actually sanctions, and those parent nodes
+  1104	sanction only \emph{contiguous} realizations. None of them covers the
+  1105	determiner--head discontinuity that defines
+  1106	\ungram{\mention{Which did you buy car?}}; producing that token requires a node
+  1107	that licenses a determiner--head arc crossing the verb, and no
+  1108	contiguity-preserving node in $\mathcal{H}$ generates one
+  1109	\autocite{reynolds2026lbe}.
+  1110	
+  1111	The parents keep their high licensing, each confirmed by its own abundant
+  1112	contiguous tokens, and contribute none of it to the discontinuous token through
+  1113	the pooling sum. The dedicated left-branch-extraction node, the only activated
+  1114	node that covers the discontinuity, carries near-gating weight for it. It absorbs
+  1115	preemption mass only to the extent that the missed opportunities are attributable
+  1116	to competitor choice, which is why the independent $\widetilde{\rho}_t^\star$ norming
+  1117	required in \S\ref{sec:identification-c} is necessary for the assignment.
+  1118	The dedicated node is required by the analysis, not gerrymandered to force the
+  1119	result.
+  1120	
+  1121	This asymmetry also answers an acquisition worry. If token-level licensing were
+  1122	just pooled parent licensing, learners should pass through a stage of treating
+  1123	left-branch extraction as live. They don't need to: the candidate is generated
+  1124	by analogy, so it's on the table with non-zero prior support, but its dedicated
+  1125	node has no scaffolding of its own, fronting opportunities are dense in the
+  1126	input, and each one adds preemption mass.
+  1127	
+  1128	A companion corpus study quantifies
+  1129	one side of the evidential situation: across 1{,}228 fronting opportunities in a
+  1130	sixteen-corpus Universal Dependencies sample, zero genuine determiner--head
+  1131	discontinuities occur (95\% upper bound 0.24\%), while contiguity-preserving
+  1132	alternatives (pied-piping, fused-head construals, and the \mention{big mess}
+  1133	family) occur at measurable rates \autocite{reynolds2026lbe}. Comprehension
+  1134	pushes the same way: a fronted \mention{whose} or \mention{which} defaults to a
+  1135	fused-head parse, so the discontinuous analysis also loses the parsing race
+  1136	\autocite{Culicover_Varaschin_Winkler_2022_Radical}. What remains to be normed
+  1137	is $\widetilde{\rho}_t^\star$: if speakers would rarely choose the discontinuous form even
+  1138	under a permissive stipulation that English allowed it, the absence would support
+  1139	starvation rather than preemption. The predicted non-satiation of left-branch
+  1140	extraction remains a test; \posscite{Lu2024} meta-analysis of
+  1141	satiation in extraction from islands supplies the closest current analogue, not
+  1142	a direct measurement of \abbr{lbe} itself.
+  1143	
+  1144	\noindent\textsc{Open-loop learning and closed-loop dynamics.} The discrete
+  1145	update~\eqref{eq:beta-update} is the primary evidence-state update. With perfect retention
+  1146	($\delta_m=1$) and a fixed environment (exogenous evidence streams), it's the
+  1147	ordinary decaying-gain estimator: the posterior mean follows a hyperbolic
+  1148	trajectory of the form $a_0/(a_0+b_0+\bar{e}t)$, as plotted in
+  1149	Figure~\ref{fig:posterior-means}, and converges without bifurcating. With
+  1150	bounded memory ($\delta_m<1$), it instead behaves as the stationary filter
+  1151	described in \S\ref{sec:emergent-categoricality} and
+  1152	\S\ref{sec:destabilization}.
+  1153	
+  1154	Closing the loop requires both the evidence filter and the population transition
+  1155	in~\eqref{eq:inclusion-transition}: production generates later evidence,
+  1156	speakers' evidence states affect adoption and retention, and the resulting
+  1157	inclusion states determine the next population rate. The full composition is
+  1158	high dimensional. To study its possible sign structure, I stipulate the cubic
+  1159	in~\eqref{eq:cubic-normal-form} as a one-dimensional qualitative normal form;
+  1160	it is not derived from the Beta filter. Its fixed-point and comparative-statics
+  1161	claims are conditional on the composed transition having the represented drift
+  1162	signs.
+  1163	
+  1164	\subsection{Emergent categoricality as bimodality}
+  1165	\label{sec:emergent-categoricality}
+  1166	
+  1167	The sense of \term{emergence} used here is weak and mechanistic.
+  1168	Population-level categoricality is modelled as a possible outcome of
+  1169	learner-level updating, adoption, selection, and repair; it isn't a label for
+  1170	whatever remains unexplained. This
+  1171	differs from Hopper's \enquote{emergent grammar}, where grammar is perpetually
+  1172	provisional \autocite{hopper1987}. The model allows conditioned states
+  1173	with near-absorbing attractors.
+  1174	
+  1175	For a focal candidate in a two-way niche, take the stipulated population normal
+  1176	form
+  1177	\begin{equation}
+  1178	\dot{\theta}=\theta(1-\theta)\bigl[\alpha\theta-\beta+
+  1179	  \chi_{\mathrm{rep}}\bar{\psi}_{\mathrm{rep}}(2\theta-1)\bigr],
+  1180	\label{eq:cubic-normal-form}
+  1181	\end{equation}
+  1182	where $\theta$ is the exchangeable population inclusion rate, not a posterior
+  1183	mean. The bar marks a frozen-flow assumption: the opportunity count,
+  1184	$P(\text{mis-set})$, and repair response in~\eqref{eq:repair-flow} are held at a
+  1185	reference-regime value while the local phase portrait is read. If those terms
+  1186	change materially with $\theta$--as $P(\text{mis-set})$ generically will--the
+  1187	fixed points must instead be obtained from the resulting
+  1188	$\psi_{\mathrm{rep}}(\theta)$. The normal form also applies only
+  1189	where the outside option is bounded away from domination, so candidate-side
+  1190	evidence responds to $\theta$. The boundary terms represent vanishing drift at
+  1191	the endpoints. The bracketed term represents an expected evidence balance:
+  1192	$\alpha\theta$ is positive feedback from production, $\beta$ collects
+  1193	preemption, error, face cost, and outside-option pressure, and the repair term
+  1194	represents majority enforcement. When
+  1195	$0<\theta^\ddagger<1$, with
+  1196	\[
+  1197	\theta^\ddagger=\frac{\beta+\chi_{\mathrm{rep}}\bar{\psi}_{\mathrm{rep}}}
+  1198	{\alpha+2\chi_{\mathrm{rep}}\bar{\psi}_{\mathrm{rep}}},
+  1199	\]
+  1200	the endpoints are attracting and $\theta^\ddagger$ is the separatrix. If the
+  1201	transition kernel's drift has this form, construction nodes whose evidence rates
+  1202	are bounded away from zero should develop a bimodal distribution of population
+  1203	rates: most cluster near the attracting regions, while low-evidence, contested,
+  1204	or outside-option-dominated nodes remain diffuse. The ODE is a stipulated normal
+  1205	form for that population regime; the discrete Beta update remains a speaker- or
+  1206	analyst-level filter, including concentration dynamics absent
+  1207	from~\eqref{eq:cubic-normal-form}.
+  1208	
+  1209	The convergence claim has to match both levels of the model. With perfect
+  1210	retention ($\delta_m=1$), an individual evidence filter is close to
+  1211	reinforcement processes of Pólya type, where stochastic approximation supplies
+  1212	relevant techniques \parencite{pemantle2007}. The signaling-game case,
+  1213	structurally the closest analogue, is treated directly by Argiento, Pemantle,
+  1214	Skyrms, and Volkov \parencite{argiento2009}, with an extension by Hu, Skyrms,
+  1215	and Tarrès \parencite{huSkyrmsTarres2011}. Those results do not establish
+  1216	convergence of the composed population transition
+  1217	in~\eqref{eq:inclusion-transition}; that requires a specified $h_\kappa$.
+  1218	
+  1219	With bounded memory ($\delta_m<1$), the learner filters have constant gain, so
+  1220	the decreasing-gain analogues no longer prove almost-sure convergence even at
+  1221	that level. The population-level formal target is a stationary distribution for
+  1222	the composed transition concentrated near the normal form's attracting regions,
+  1223	with escape times and residual dispersion set by opportunity, persistence, and
+  1224	memory: high-$N$ contrasts should sit tightly near the extremes, while low-$N$
+  1225	or outside-option-dominated contrasts remain diffuse. That claim is a proof
+  1226	obligation rather than a theorem here.
+  1227	
+  1228	The operator-specific prediction also needs its scope stated.
+  1229	Equation~\eqref{eq:cubic-normal-form} can be bistable even when the repair term is zero
+  1230	if the baseline feedback parameters $\alpha$ and $\beta$ are strong enough.
+  1231	Therefore the operator/style boundary is not derived from the cubic alone. The
+  1232	OVMG claim is conditional: selection intensity must scale with independently
+  1233	estimated opportunity and update divergence, so that $\alpha$, $\beta$, or the
+  1234	repair contribution are weak for low-$\Delta$ contrasts and strong for
+  1235	contrasts with high $N_t(n,c)P(\text{mis-set})r(\Delta,\iota)$. Under that condition, dense,
+  1236	update-configuring contrasts concentrate fastest, while low-$\Delta$ contrasts
+  1237	remain more gradient and are policed like style. If a closed, dense,
+  1238	non-configuring contrast shows the same bimodal licensing and repair profile,
+  1239	the operator-specific part of the account fails.
+  1240	
+  1241	Bounded memory adds a quantitative residual: even near an attractor, dispersion
+  1242	should scale with opportunity and forgetting, roughly with the effective
+  1243	concentration supplied by the discounted evidence filter.
+  1244	
+  1245	Sampling drift near the extremes makes the boundaries sticky in finite
+  1248	and actuation (\S\ref{sec:actuation}): a state can persist for long periods and
+  1249	then move quickly once the evidence balance or outside-option utility changes.
+  1250	This connects the dynamics to complex-adaptive and cultural-evolutionary
+  1251	accounts of language change \autocite{beckner2009,kirby2014,BlytheCroft2012},
+  1252	and to invisible-hand explanations, where macro-level order emerges as the
+  1253	unintended consequence of micro-level choices \autocite{keller1994}.
+  1254	
+  1255	\subsection{Derived obligatoriness}
+  1256	\label{sec:derived-obligatoriness}
+  1257	
+  1258	The state theory defines saturation relative to the obligatory dimensions
+  1259	$\mathrm{OBL}_t(n,c,A)$ (\S\ref{sec:objects}), where $n=n(A,c)$ is the
+  1260	registered at-issue niche. Those dimensions aren't stipulated per language,
+  1261	but neither are they defined by an analyst's estimate. Let
+  1262	$\mathcal{A}_0(d,n,\phi,c)$ be the finite, independently fixed class of defined
+  1263	assemblies of frame type $\phi$ that realize niche $n$ while leaving $d$ unset.
+  1264	For $A$ in that class, define the population's \term{raw zero-marking rate}
+  1265	\[
+  1266	R_s^0(A,n,c)=P_j\!\left(\text{speaker $j$ realizes a $d$-at-issue opportunity
+  1267	in $(n,c)$ with $A$ at $s$}\right).
+  1268	\]
+  1269	This is a realized population statistic, not the licensing predicate $L_s$ and
+  1270	not a status estimate. The same simple-present nodes can have high licensing in
+  1271	a habitual niche while their zero-marked realization rate is near zero in an
+  1272	ongoing-at-issue niche. The definition thus neither mistakes general node
+  1273	availability for niche-specific zero marking nor builds saturation into its own
+  1274	input.
+  1275	
+  1276	Let $W_t=[t-W,t)$ be a preceding convention-individuating window, and let
+  1277	$\Pi_{W_t}(A,d,n,c)$ be the realized pressure against $A$ there: $d$-at-issue
+  1278	opportunities in which a marked competitor wins, weighted by the independently
+  1279	normed full-choice share $\widetilde\rho^\star$. This weight is ungated; it
+  1280	doesn't use $\operatorname{sat}_s$ or $\mathrm{OBL}_s$. Outside-option choices
+  1281	don't contribute. Write $E_t(d,n,\phi,c)$ for the entry condition that, for
+  1282	every $A\in\mathcal A_0(d,n,\phi,c)$,
+  1283	\[
+  1284	\sup_{s\in W_t}R_s^0(A,n,c)<\epsilon_0
+  1285	\qquad\text{and}\qquad
+  1286	\Pi_{W_t}(A,d,n,c)\geq\pi_0.
+  1287	\]
+  1288	Write $X_t(d,n,\phi,c)$ for the release condition that, for some such $A$,
+  1289	\[
+  1290	\inf_{s\in W_t}R_s^0(A,n,c)>\epsilon_1
+  1291	\qquad\text{or}\qquad
+  1292	\Pi_{W_t}(A,d,n,c)\leq\pi_1,
+  1293	\]
+  1294	where $\epsilon_1>\epsilon_0$ and $\pi_1<\pi_0$. Given an initial convention
+  1295	state $\mathrm{OBL}_{t_0}$ fixed independently of the target interval, the
+  1296	path-dependent macro is
+  1297	\[
+  1298	d\in\mathrm{OBL}_t(n,c,\phi)
+  1299	\quad\Longleftrightarrow\quad
+  1300	E_t(d,n,\phi,c)\ \lor\
+  1301	\bigl[d\in\mathrm{OBL}_{t-1}(n,c,\phi)\land
+  1302	\neg X_t(d,n,\phi,c)\bigr].
+  1303	\]
+  1304	
+  1305	The entry clauses say that every zero-marking realization has persistently
+  1306	disappeared under dense, attributable competition rather than because the niche
+  1307	was starved or an outside option absorbed a winnerless cell. The release clauses
+  1308	require sustained recovery or a clear pressure lapse. The two pairs of
+  1309	thresholds leave a hysteresis band in which the preceding state persists; they
+  1310	don't leave membership undefined. The timescale and thresholds are
+  1311	community-indexed model parameters fixed independently of the contrast being
+  1312	classified. The initial condition and strict temporal descent make the
+  1313	recursion well founded: realized outputs and ungated pressure in $W_t$, together
+  1314	with $\mathrm{OBL}_{t-1}$, determine $\mathrm{OBL}_t$;
+  1315	$\mathrm{OBL}_t$ determines $\operatorname{sat}_t$; and saturation then enters
+  1316	$S_t^\theta$. Status is consequently a functional of the recent population
+  1317	history, not just of instantaneous $\boldsymbol{\theta}_t$.
+  1318	
+  1319	Posterior concentration belongs only to identification. An analyst counts $d$
+  1320	as identified as obligatory when the posterior upper bound for every relevant
+  1321	$R_s^0(A,n,c)$ lies below $\epsilon_0$, the estimated pressure clears $\pi_0$, and the
+  1322	effective evidence meets a preregistered $\nu_{\min}$. Those conditions warrant
+  1323	an inference about $\mathrm{OBL}_t$; they don't constitute it. Identification of
+  1324	release analogously requires posterior evidence for $X_t$, not an isolated
+  1325	innovation or a point estimate inside either hysteresis band.
+  1326	
+  1327	The proposed mechanism is the population transition plus preemption applied to
+  1328	zero-marking. In a $d$-at-issue niche, marked and unmarked assemblies compete;
+  1329	where the marked assembly repeatedly wins, speakers' filters and later inclusion
+  1330	states can drive the raw zero-marking rate down. The normal form shows one
+  1331	possible phase portrait for that process, while the stationary-distribution
+  1332	claim remains a proof obligation rather than part of the definition of
+  1333	obligatoriness.
+  1334	
+  1335	The typological payoff is that \S\ref{sec:community-values}'s descriptions
+  1336	convert to predictions. On the proposed diagnosis, English progressive marking
+  1337	is obligatory because simple-present assemblies in ongoing-at-issue niches have
+  1338	persistently low raw zero-marking rates under a winning marked competitor; French
+  1339	zero-marking there hasn't, so the dimension stays optional, and
+  1340	\mention{Elle étudie maintenant} is fine. Turkish evidential marking is the
+  1341	same kind of hypothesis on a different dimension. Grammaticalization's
+  1342	obligatorification receives a candidate mechanism: a contrast on its way
+  1343	to obligatory status is one whose zero-marking competitor is losing dense
+  1344	niches one at a time, which predicts an intermediate stage--obligatory in some
+  1345	frame types and niches, optional in others--that grammaticalization corpora are
+  1346	positioned to test.
+  1347	
+  1348	\subsection{Winnerless cells}
+  1349	\label{sec:winnerless-cells}
+  1350	
+  1795	
+  1796	OVMG preserves CxG's systematic treatment of constructions while adding a prediction about which constructional contrasts attract categorical policing. The relevant contrasts are those whose closure and opportunity structure drive the licensing posterior toward the bimodal regimes in \S\ref{sec:emergent-categoricality}. That lets CxG's continuum of constructions coexist with a non-arbitrary explanation of why some violations are heard as grammar and others as style, stance, or appropriateness.
+  1797	
+  1798	\subsection{Relationship to usage-based approaches}\label{sec:usage-based}
+  1799	
+  1800	OVMG shares with usage-based approaches (UBA) \autocite{bybee2006, bybee2007frequency, bybee2010} the idea that linguistic knowledge develops from patterns of actual language use rather than from an autonomous formal system. Both perspectives reject the notion that grammaticality can be reduced to abstract rules operating independently of meaning and context.
+  1801	
+  1802	Several pieces of the formal core come directly from this tradition. The
+  1803	speaker/population split restates \posscite{schmid2020} separation of
+  1804	\term{entrenchment}, the cognitive reorganization of a speaker's knowledge, from
+  1805	\term{conventionalization}, the social establishment of a community's
+  1806	regularities. Here $z_{j,t}(\kappa,c)$ gives speaker-level inclusion states, and
+  1807	$\theta_t(\kappa,c)$ gives the population licensing rate; a speaker or analyst
+  1808	tracks it with a distinct posterior mean. The proposed population transition is motivated by
+  1809	\posscite{croft2000} utterance-selection theory, in which variants are
+  1810	replicated and selected within a community; the S-curve pattern the normal form represents
+  1811	are already worked out in that lineage \autocite{BlytheCroft2012}.
+  1812	
+  1813	Frequency per opportunity is likewise not new: it's the core of
+  1814	\posscite{Stefanowitsch_2006_NegativeEvidence} case that corpora contain
+  1815	negative evidence, where a form counts as \enquote{significantly absent} rather
+  1816	than \enquote{accidentally absent} only once its observed frequency is weighed
+  1817	against the frequency expected given its opportunities. Variationist
+  1818	sociolinguistics has normalized by opportunity since Labov's principle of
+  1819	accountability \autocite{labov1972}.
+  1820	
+  1821	OVMG adds their joint formalization and a prediction. The
+  1822	licensing-versus-selection factorization
+  1823	$\pi_t\approx S_t^\theta\cdot\widetilde{\rho}_t^\star$--or
+  1824	$\theta_t(\kappa,c)\cdot\widetilde{\rho}_t^\star$ in single-pivotal-node cases--turns Croft's
+  1825	replication-versus-selection into an estimable product. The gated preemption mass
+  1826	$p_t^-=\sum_{i\in\mathcal I_t} r_i\ell_i$ reduces to
+  1827	$N_t\cdot\widetilde{\rho}_t^\star$ as a first-order approximation when the
+  1828	target is nearly always omitted, niche identification is nearly certain, the
+  1829	outside option is negligible, the other gates are stable, and the target's full
+  1830	choice mass is small in the competitor regime, putting a
+  1831	quantity on the absence that \citeauthor{Stefanowitsch_2006_NegativeEvidence}
+  1832	left open, since he showed how to establish that a form is significantly absent
+  1833	but stressed that significant absence \enquote{does not, in itself, provide any
+  1834	clues as to why}. Licensing-versus-selection is exactly that missing clue: a
+  1835	significantly absent form may be unlicensed ($S_t^\theta\approx0$, or pivotal
+  1948	with practice while production and repair indicators remain stable, the effect
+  1949	belongs to the implementation-cost channel rather than to the licensing
+  1950	posterior.
+  1951	
+  1952	\item \emph{Sociolinguistic fieldwork:} Investigations in communities with distinct dialects or multilingual practices can clarify how social and pragmatic motivations shape grammatical stability. Elicitation tasks and careful comparisons across speech communities can confirm that what counts as grammatical depends on local norms rather than universal principles.
+  1953	
+  1954	\item \emph{Longitudinal and historical studies:} Diachronic corpora and historical grammars can trace how marginal constructions evolve, testing predictions about which factors lead certain patterns to stabilize, which fade, and which undergo reanalysis. Tracking a community's licensing of previously dubious constructions over time provides direct evidence for the gradual dynamics posited by the framework.
+  1955	
+  1956	\item \emph{A decision-layer discontinuity check:} The threshold $\tau(c)$ is a
+  1957	read-out parameter, not a constitutive boundary. A discontinuity in response type
+  1958	near $\tau(c)$ would test the decision layer: whether asymmetric losses shift
+  1959	hearers from acceptance to repair, request for clarification, or sanction,
+  1960	over and above the smooth effect of their own $g_{i,t}$. The general design is a
+  1961	regression-discontinuity problem \autocite{LeeLemieux2010,CalonicoCattaneoTitiunik2014};
+  1962	multinomial and covariate-adjusted versions are the needed extension
+  1963	\autocite{Lazzaro2026}. In a confirmatory test, $\tau(c)$ has to be estimated
+  1964	and registered before the outcome data is touched, and the bimodality model
+  1965	(\S\ref{sec:emergent-categoricality}) predicts thin support near the threshold.
+  1966	Smoothness through $\tau(c)$ would weaken the proposed decision-layer switch,
+  1967	not the licensing-state theory itself.
+  1968	\end{enumerate}
+  1969	
+  1970	Figure~\ref{fig:rd-test} states the decision-layer check in one picture: a discontinuity is evidence for a response switch at $\tau(c)$, while a smooth curve is evidence that the read-out tracks the posterior mean continuously.
+  1971	
+  1972	\begin{figure}[t]
+  1973	\centering
+  1974	\begin{tikzpicture}[font=\small, >=Stealth]
+  1975	\begin{scope}
+  1976	  \draw[->] (0,0) -- (4.6,0) node[right, font=\footnotesize] {$g_{i,t}$};
+  1977	  \draw[->] (0,0) -- (0,3) node[above, font=\footnotesize, align=center] {judge\\ response};
+  1978	  \draw[dashed, gray] (2.2,0) -- (2.2,2.8);
+  1979	  \node[font=\footnotesize, gray] at (2.2,-0.35) {$\tau(c)$};
+  1980	  \draw[very thick, lsMidBlue] (0.3,0.4) -- (2.2,0.4);
+  1981	  \draw[very thick, lsMidBlue] (2.2,2.4) -- (4.2,2.4);
+  1982	  \draw[dotted, lsMidBlue] (2.2,0.4) -- (2.2,2.4);
+  1983	  \node[font=\footnotesize, align=center] at (2.3,-1.1) {\textbf{response switches}\\ at $\tau(c)$};
+  1984	\end{scope}
+  1985	\begin{scope}[xshift=7cm]
+  1986	  \draw[->] (0,0) -- (4.6,0) node[right, font=\footnotesize] {$g_{i,t}$};
+  1987	  \draw[->] (0,0) -- (0,3) node[above, font=\footnotesize, align=center] {judge\\ response};
+  1988	  \draw[dashed, gray] (2.2,0) -- (2.2,2.8);
+  1989	  \node[font=\footnotesize, gray] at (2.2,-0.35) {$\tau(c)$};
+  1990	  \draw[very thick, lsMidBlue, smooth, samples=60, domain=0.3:4.2]
+  1991	    plot (\x, {0.4 + 2.0/(1+exp(-2.2*(\x-2.2)))});
+  1992	  \node[font=\footnotesize, align=center] at (2.3,-1.1) {\textbf{$g_{i,t}$ predicts}\\ smooth response};
+  1993	\end{scope}
+  1994	\end{tikzpicture}
+  1995	\caption{The decision-layer discontinuity check. If asymmetric losses induce a response switch, judge $i$'s treatment of a form should change discontinuously as the judge's $g_{i,t}$ crosses the situational threshold $\tau(c)$ (left); if the read-out tracks that posterior mean continuously, treatment should vary smoothly through it (right). A regression-discontinuity design on multinomial hearer responses targets this decision layer, not the constitutive status state itself.}
+  1996	\label{fig:rd-test}
+  1997	\end{figure}
+  1998	
+  1999	\section{Conclusion}
+  2000	
+    95	\term{unify}, written $\omega \sqcup \omega'$, iff their conjunction is
+    96	satisfiable in the typed constraint system; otherwise the join is undefined
+    97	($\bot$). Compatibility remains Boolean, but equality of atomic values is not
+    98	the only way to satisfy it.
+    99	
+   100	An \term{assembly} $A$ is a finite tree of constructions with all slots filled. Its yield is $\mathrm{form}(A)$; its operator assignment is $\omega(A)=\bigsqcup_{\kappa\in A}\omega_\kappa$, defined iff all contributions unify; its value is $\mathrm{val}(A)$. Three predicates over assemblies do the core work:
+   101	
+   102	\begin{align}
+   103	\operatorname{def}(A) &= \mathbf{1}\bigl[\omega(A)\ \text{is defined}\bigr]
+   104	  && \text{(compatibility)} \\
+   105	\operatorname{sat}_t(A,c) &= \mathbf{1}\bigl[\omega(A)\ \text{is total on}\
+   106	  \mathrm{OBL}_t(n(A,c),c,A)\bigr]
+   107	  && \text{(saturation)} \\
+   108	L_t(A,c) &= \textstyle\bigwedge_{\kappa\in A} Z_t(\kappa,c)
+   109	  && \text{(licensing)}
+   110	\end{align}
+   111	
+   112	Compatibility is hard: there's no weighting an operator clash away. Saturation
+   113	refers to the obligatory dimensions $\mathrm{OBL}_t(n(A,c),c,A)$, which aren't
+   114	stipulated per language. Section~\ref{sec:derived-obligatoriness} derives them
+   115	from a preceding window of population-level, niche-specific zero-marking rates
+   116	and ungated preemption pressure, without using the analyst's posterior or
+   117	saturation itself.
+   118	Thus $\operatorname{sat}_t$ is a path-dependent ontic macro rather than an
+   119	independent primitive or an epistemic estimate. For an assembly $A$ of frame
+   120	type $\varphi(A)$ and registered at-issue niche $n(A,c)$,
+   121	$\mathrm{OBL}_t(n(A,c),c,A)$ abbreviates
+   122	$\mathrm{OBL}_t(n(A,c),c,\varphi(A))$. English progressive marking and Turkish
+   123	evidential marking are the worked cases there.
+   124	
+   125	Licensing is latent, and the Beta is typed over a rate rather than a fixed binary
+   126	fact. Let $z_{j,t}(\kappa,c)\in\{0,1\}$ be speaker $j$'s local inclusion state
+   127	for construction $\kappa$ in $c$. The population state
+   128	$\theta_t(\kappa,c)\in[0,1]$ is the latent exchangeable licensing-rate
+   129	parameter. For a randomly sampled exchangeable speaker,
+   130	$Z_t(\kappa,c)\mid\theta_t(\kappa,c)\sim
+   131	\mathrm{Bernoulli}(\theta_t(\kappa,c))$ is the predictive inclusion state for
+   132	that speaker, and $L_t(A,c)$ is the event that the sampled speaker licenses all
+   133	nodes in $A$. The definition needs a joint predictive distribution
+   134	over the vector $\{Z_t(\kappa,c):\kappa\in A\}$. Posterior dependence among
+   135	node rates represents epistemic co-uncertainty; it does not by itself generate
+   136	co-licensing within a speaker. A tractable joint model introduces a latent lect
+   137	$\ell_i\in\{1,\ldots,H\}$ for speaker $i$:
+   138	\[
+   139	\ell_i\sim\mathrm{Categorical}(\boldsymbol{\pi}),\qquad
+   140	z_{i,t}(\kappa,c)\mid\ell_i=\ell\sim
+   141	\mathrm{Bernoulli}\!\left(\theta_{\ell,t}(\kappa,c)\right).
+   142	\]
+   143	Conditional independence across nodes within a lect is still an approximation;
+   144	an explicit within-lect joint can replace it where constructional kin cluster
+   145	more tightly. Under this tractable version,
+   146	\[
+   147	P\!\left(L_t(A,c)=1\mid\boldsymbol{\pi},\boldsymbol{\theta}_t\right)=
+   148	\sum_{\ell=1}^{H}\pi_\ell\prod_{\kappa\in A}
+   149	\theta_{\ell,t}(\kappa,c),
+   150	\]
+   151	and the marginal rate used elsewhere is
+   152	$\theta_t(\kappa,c)=\sum_\ell\pi_\ell\theta_{\ell,t}(\kappa,c)$. The
+   153	independent product of marginal node rates is therefore a single-lect limiting
+   154	case, not a general account of assembly prevalence.
+   155	
+   156	No speaker or analyst observes $\theta$ directly. Under exchangeability, de Finetti's
+   157	representation theorem supplies a mixing measure over $\theta$
+   158	\parencite{deFinetti1937}. The Beta family is the conjugate specialization
+   159	that adds linear predictive updating: in the Bernoulli case, linearity of the
+   160	posterior expectation of success in the counts is the binary analogue of
+   161	Johnson's sufficientness postulate in Zabell's generalization
+   162	\parencite{zabell1982}. A speaker's filter has mean
+   163	$C^{(i)}_t(\kappa,c)$ and concentration $\nu^{(i)}_t(\kappa,c)$; an analyst can
+   164	use the same family with a different evidence set, producing
+   165	$\widehat C_t$ and $\widehat\nu_t$. The linear-in-counts update rule and the Beta
+   166	prior family are one modelling assumption rather than two. The population
+   167	transition in~\eqref{eq:inclusion-transition} states how speakers' filters can
+   168	alter later inclusion; updating an analyst posterior doesn't alter the
+   169	population. The vector $\Lambda_{i,t}$ collects speaker $i$'s inclusion states
+   170	$z_{i,t}(\kappa,c)$, and the population distribution over those vectors supplies
+   171	the population-level status state.
+   172	
+   173	Compositional inheritance matters here. A novel token such as \mention{She
+   174	texted him the address} needn't have been encountered: the assemblies covering it
+   175	are built from nodes--ditransitive transfer, pronominal object order, the relevant
+   176	lexical-category relations--each with its own posterior, and the token inherits its
+   177	status through them. What the learner updates is constructional regions, not
+   178	memorized sentence types, so first-heard sentences aren't predicted to have zero
+   179	licensing. Actual statistical pooling would require hierarchical hyperpriors
+   180	over construction families, lexemes, and situations; this core needs only
+   181	the compositional inheritance just described.
+   182	
+   183	\subsection{Grammatical status as a conditioned state property}
+   184	\label{sec:objective-G}
+   185	
+   186	\subsubsection{Status and its posterior estimate}
+   187	\label{sec:posterior-existence}
+   188	
+   189	For a form $f$, value $v$, and conditioning state $c$, let $\mathcal{A}(f,v)$ be
+   190	the set of assemblies with yield $f$ and value $v$, and let
+   191	$\mathcal Y_{W_t}$ collect the preceding window's population realization rates,
+   192	ungated pressure statistics, and prior obligatoriness state. The population
+   193	state is
+   194	
+   195	\begin{equation}
+   196	S_t^{\theta}(f,v,c)=
+   197	P\Bigl(\,\exists A\in\mathcal{A}(f,v):\;
+   198	\operatorname{def}(A)\wedge\operatorname{sat}_t(A,c)\wedge L_t(A,c)
+   199	\,\Bigm|\,\boldsymbol{\theta}_t,\mathcal Y_{W_t},c\Bigr),
+   200	\label{eq:Gtheta}
+   201	\end{equation}
+   202	
+   203	\noindent the prevalence, among exchangeable speakers in $c$, of at least one
+   204	defined, saturated, licensed route to the form--value pair. The history argument
+   205	is needed because $\mathrm{OBL}_t$, hence $\operatorname{sat}_t$, is determined
+   206	by the preceding population window and prior convention state rather than by an
+   207	instantaneous estimate.
+   208	Neither a learner nor an analyst observes this population state directly. For
+   209	an epistemic bearer $r$ (a speaker $i$ or an analyst $a$), the estimate is
+   210	
+   211	\begin{equation}
+   212	\widehat{S}^{(r)}_t(f,v,c)=
+   213	\mathbb{E}_{p_r(\boldsymbol{\theta}_t,\mathcal Y_{W_t}\mid\mathcal{D}_{r,t})}
+   214	\!\left[S_t^{\theta}(f,v,c)\right],
+   215	\label{eq:Gt}
+   216	\end{equation}
+   217	
+   218	\noindent where $\mathcal{D}_{r,t}$ is that bearer's evidence to date: tokens,
+   219	structured omissions, repairs, avoidance, and situation cues. Status is the
+   220	population property $S_t^{\theta}$; $\widehat{S}^{(r)}_t$ is a particular
+   221	bearer's estimate of it. For compactness, later predictive equations write
+   222	$G_t$ for the analyst's $\widehat{S}^{(a)}_t$ and $g_{i,t}$ for speaker $i$'s
+   223	$\widehat{S}^{(i)}_t$. Where
+   224	value is recoverable from context, I write $G_t(u,c)$ and $S_t^{\theta}(u,c)$
+   225	for readability. For a single pivotal node,
+   295	transparent licensing failures with low update divergence should attract only
+   296	baseline understanding-repair and, if stable, be supported mainly by preemption, while
+   297	operator mis-settings draw the $\Delta$-scaled repair flow; correction rates
+   298	should instead track ascription and prescriptive dissonance.
+   299	
+   300	Other generalizations run over epistemic concentration, and they're the
+   301	diagnostic ones. Two form--value pairs can share a low mean while differing in
+   302	how much evidence backs it, and the update dynamics make them behave differently
+   303	under new exposure: a diffuse posterior moves with framing and familiarization;
+   304	a concentrated one doesn't. This epistemic dispersion is
+   305	$\operatorname{Var}(S_t^{\theta}\mid\mathcal{D}_{r,t})$ for epistemic bearer
+   306	$r$. Behavioral predictions use a speaker's $r=i$ posterior; analyst-facing
+   307	estimates use $r=a$. In single-node cases the corresponding concentration is
+   308	the pivotal node's $\nu^{(r)}$.
+   309	
+   310	Population heterogeneity is different. A community can have a sharply estimated
+   311	interior $\theta$ because speakers are genuinely split, as with \mention{might
+   312	could} in a mixed community. That state has low epistemic variance but high
+   313	between-speaker disagreement. The interior estimate counts as genuine
+   314	heterogeneity only when no independently specifiable refinement of $c$
+   315	(\S\ref{sec:identification-c}) splits the population toward the attractors; if
+   316	such a partition exists, the apparent heterogeneity was a mis-specified
+   317	conditioning state. Within-speaker test--retest instability and
+   318	framing lability identify epistemic uncertainty; between-speaker disagreement
+   319	with within-speaker stability identifies heterogeneity. Satiation and framing
+   320	rank order turn on $1/\nu$, while
+   321	moribund-contrast dispersion is measured between speakers because bounded memory
+   322	lets individual histories diverge.
+   323	
+   324	For a single node and epistemic bearer $r$, with
+   325	$\theta\mid\mathcal{D}_{r,t}\sim\mathrm{Beta}(a^{(r)},b^{(r)})$, let
+   326	$C^{(r)}=E[\theta\mid\mathcal{D}_{r,t}]$ and
+   327	$\nu^{(r)}=a^{(r)}+b^{(r)}$. The two dispersions decompose as
+   328	\begin{align}
+   329	U^{(r)}_{\mathrm{epi}} &= \operatorname{Var}(\theta\mid\mathcal{D}_{r,t})
+   330	  =\frac{C^{(r)}(1-C^{(r)})}{\nu^{(r)}+1},\\
+   331	U^{(r)}_{\mathrm{het}} &= E[\theta(1-\theta)\mid\mathcal{D}_{r,t}]
+   332	  =\frac{C^{(r)}(1-C^{(r)})\nu^{(r)}}{\nu^{(r)}+1}.
+   333	\end{align}
+   334	Their sum is the predictive variance of a newly sampled speaker's inclusion
+   335	state, $C^{(r)}(1-C^{(r)})$. For assemblies the corresponding quantities are
+   336	$U^{(r)}_{\mathrm{epi}}=\operatorname{Var}(S_t^{\theta}\mid\mathcal{D}_{r,t})$
+   337	and
+   338	$U^{(r)}_{\mathrm{het}}=E[S_t^{\theta}(1-S_t^{\theta})\mid\mathcal{D}_{r,t}]$.
+   339	A
+   340	preempted gap has low mean, low epistemic uncertainty, and low heterogeneity; a
+   341	sparse form has appreciable epistemic uncertainty; a stably divided community
+   342	has low epistemic uncertainty but high heterogeneity.
+   343	
+   344	The status regions are:
+   345	
+   346	\begin{itemize}
+   347	\item \textbf{licensed}: $\widehat S^{(r)}_t\approx1$,
+   348	  $\operatorname{Var}(S_t^{\theta}\mid\mathcal{D}_{r,t})\approx0$;
+   349	\item \textbf{excluded}: $\widehat S^{(r)}_t\approx0$,
+   350	  $\operatorname{Var}(S_t^{\theta}\mid\mathcal{D}_{r,t})\approx0$--confident
+   351	  rejection, whether by structural failure or by concentrated non-licensing;
+   352	\item \textbf{unsettled}: $\operatorname{Var}(S_t^{\theta}\mid\mathcal{D}_{r,t})$
+   353	  high, in two subtypes--\emph{starved} (low concentration from a sparse
+   354	  opportunity set, as with independent relative \mention{whose}) and
+   355	  \emph{avoidance-divided} (low concentration despite dense opportunities, from
+   356	  conflicting or absorbed evidence flows, as with defective cells,
+   357	  \S\ref{sec:winnerless-cells});
+   358	\item \textbf{heterogeneous}: posterior concentration high but the estimated
+   359	  population rate is interior--stable within speakers, divided across speakers.
+   360	\end{itemize}
+   361	
+   362	The projectible generalizations--satiation profiles, framing sensitivity,
+   363	transmission fidelity, repair rates, actuation--run over a state that carries the
+   364	dimension they turn on. Left-branch extraction and \mention{whose} approach
+   365	similar means and part on concentration; clean defective cells such as
+   405	actuation. Stable between-speaker heterogeneity is a separate dimension, not
+   406	shown.}
+   407	\label{fig:state-space}
+   408	\end{figure}
+   409	
+   410	\subsubsection{Categorical talk as posterior concentration}
+   411	\label{sec:categorical-talk}
+   412	
+   413	Communities often treat grammaticality as a membership fact: a relationship
+   414	counts as an available resource in $c$ or it doesn't. On this account, a
+   415	speaker's categorical talk is expected where that speaker's posterior has
+   416	concentrated--where the estimated licensing state sits near an attractor and
+   417	$\operatorname{Var}(S_t^{\theta}\mid\mathcal{D}_{i,t})\approx0$. Categoricality is a
+   418	property of the state, not a threshold imposed on it;
+   419	\S\ref{sec:emergent-categoricality} gives the dynamics under which bimodality
+   420	is expected for closed, high-opportunity, update-configuring contrasts. In the
+   421	contested middle, categorical talk is predicted to be unstable and
+   422	stakes-sensitive.
+   423	
+   424	\subsubsection{A decision-theoretic read-out}
+   425	\label{sec:decision-readout}
+   426	
+   427	The threshold belongs in the read-out. A judge in $c$ chooses between
+   428	\textsc{in-repertoire} and \textsc{not-in-repertoire} under asymmetric losses
+   429	$L_{\mathrm{fa}}(c)$ and $L_{\mathrm{fr}}(c)$. The optimal rule accepts iff
+   430	
+   431	\begin{equation}
+   432	g_{i,t}(u,c)\geq \tau(c)
+   433	=\frac{L_{\mathrm{fa}}(c)}{L_{\mathrm{fa}}(c)+L_{\mathrm{fr}}(c)}.
+   434	\end{equation}
+   435	
+   640	the concentration of $i$'s posterior over the \emph{pivotal condition}--the
+   641	conjunct in~\eqref{eq:Gtheta} on which the token's status turns--after cue-based
+   642	situation uncertainty has been integrated. Conditional on an independently fixed
+   643	$c$, write $\nu_i(u,c)$; if the pivotal condition differs across
+   644	high-probability conditioning states, the observable confidence read-out follows
+   645	the modal condition and treats the remaining mixture as lower confidence. For
+   646	structural and compatibility failures the pivotal condition is a fact about the
+   647	assembly set, so once the relevant inventory is fixed that posterior is treated
+   648	as effectively degenerate: confidence is high by modelling convention, not by a
+   649	separate learning theorem. For licensing-pivotal tokens, $\nu_i$ is the Beta
+   650	concentration of the pivotal node's posterior (\S\ref{sec:update}).
+   651	
+   652	Evidence confidence, the quantity that predicts framing lability, is
+   653	\begin{equation}
+   654	\Phi^{\mathrm{ev}}_{i,t}(u,e)=\frac{\nu_i(u,e)}{\nu_i(u,e)+\nu_0}
+   655	\in [0,1),
+   656	\end{equation}
+   657	\noindent with $\nu_0$ a scaling constant. Confidence in a binary
+   658	\textsc{in-repertoire}/\textsc{not-in-repertoire} verdict also depends on where
+   659	the posterior mass lies relative to the decision threshold:
+   660	\begin{equation}
+   661	\Phi^{\mathrm{dec}}_{i,t}(u,e)=
+   662	\max\!\left\{
+   663	P\!\left(S_t^{\theta}(u,c^\ast)\ge\tau(c^\ast)\mid\mathcal{D}_{i,t},e\right),
+   664	P\!\left(S_t^{\theta}(u,c^\ast)<\tau(c^\ast)\mid\mathcal{D}_{i,t},e\right)
+   665	\right\}.
+   666	\label{eq:phi-dec}
+   667	\end{equation}
+   668	A sharply estimated interior population split has high
+   669	$\Phi^{\mathrm{ev}}$ but low decision confidence if its mass lies near
+   670	$\tau(c)$. Here $c^\ast$ is the modal conditioning state under $q_h(c\mid e)$;
+   804	rather than merely labelling it.
+   805	
+   806	\begin{enumerate}
+   807	\item \ungram{\mention{Can the have running}} (nonsense).
+   808	  $\mathcal{A}(f,v)=\emptyset$: no covering assembly in the fixed inventory.
+   809	  $S_t^{\theta}=G_t=0$ up to inventory uncertainty; $\Phi\approx1$ under every
+   810	  construal. Status: ungrammatical, structurally.
+   811	
+   812	\item \mention{Colorless green ideas sleep furiously}. A covering assembly is defined, saturated, and licensed node by node: $S_t^\theta\approx1$, with $G_t$ and a typical $g_{i,t}$ tracking it. The strangeness is a construal-plausibility cost in $R_i$: $F$ negative, status grammatical. Content-odd, not ill-formed.
+   813	
+   814	\item \ungram{\mention{I've finished it yesterday}} (compatibility failure). Covering assemblies exist, but every one sets the reference-interval dimension twice incompatibly--the perfect's contribution and the deictic adverb's don't unify--so $\operatorname{def}(A)=0$ throughout. $S_t^{\theta}=G_t=0$; $\Phi\approx1$. Entrenchment of the component constructions can't repair it: the clash is outside the licensing terms altogether.
+   815	
+   816	\item \ungram{\mention{I have 25 years}} (licensing failure). Defined and saturated; the value is transparent. The pivotal age-predication node has $\theta_t\approx0$, tracked by a typical speaker at $C^{(i)}_t\approx0$ with high $\nu^{(i)}$, after preemption by the \textsc{be}-frame in a dense niche. $g_{i,t}\approx0$ and $\Phi$ is high. Status: ungrammatical, by concentrated non-licensing.
+   817	
+   818	\item \marg{\mention{friend of whose}} (community-novel). Defined and saturated; the niche is vanishingly sparse, so a typical speaker's pivotal-node posterior sits near its prior with low $\nu^{(i)}$. The speaker's $g_{i,t}$ is intermediate, $\operatorname{Var}(S_t^{\theta}\mid\mathcal{D}_{i,t})$ is high, and $\Phi$ is low. Status: unsettled (starved); framing-movable, with surprisal adding $R$-channel noise.
+   819	
+   820	\item \ungram{\mention{Which did you buy car?}} (putative preempted gap).
+   821	Defined and saturated; the dedicated discontinuity node--the only activated node
+   822	covering the determiner--head discontinuity--receives negative evidence from
+   823	fronting opportunities only in proportion to independently normed
+   824	$\widetilde{\rho}_t^\star$. If that full-choice term is high, its posterior is
+   825	driven to zero and concentrates there (\S\ref{sec:update}); if it is low, the
+   826	case belongs closer to starvation. Status assignment requires the niche-norming
+   827	protocol of \S\ref{sec:identification-c}.
+   828	
+   829	\item \mention{pobedit'} \abbr{1sg} (winnerless cell; \ungram{\mention{amn't}} as a mixed case). The niche is dense and candidate assemblies are transparent, but candidate support is weak and no candidate accumulates positive evidence--the outside option absorbs production, and because avoidance has low attributability, candidates accumulate little confident negative evidence either (\S\ref{sec:winnerless-cells}). Given that low support, every candidate's pivotal node has a low speaker-level mean and low $\nu^{(i)}$. The typical $g_{i,t}$ is low, $\operatorname{Var}(S_t^{\theta}\mid\mathcal{D}_{i,t})$ is high, and $\Phi$ is low. Status: unsettled (avoidance-divided); phenomenology ineffability, not rejection--same mean as a preempted gap, different concentration, different feeling.
+   830	
+   831	\item \mention{The bread the baker the apprentice helped made is delicious} (processing overload). A typical $g_{i,t}$ is high; the locality term in $R_i$ is large. $F$ is negative and $\Phi$ moderate; satiation and instruction move the $R$ contribution, not the licensing posterior. Status: grammatical, transiently ill-felt.
+   832	\end{enumerate}
+   833	
+   834	Figure~\ref{fig:posterior-means} shows the low-opportunity versus dense-preemption contrast that underwrites several of these classifications.
+   835	
