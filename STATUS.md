@@ -5,7 +5,7 @@ title: Grammaticality de-idealized
 stage: complete
 external: preprint
 blocked_on: []
-updated: 2026-08-22
+updated: 2026-08-23
 source:
 - STATUS.md
 - PORTFOLIO.md
@@ -29,10 +29,10 @@ notes: 'Title ("Grammaticality de-idealized") matches main.tex''s \title and STA
 ---
 
 # STATUS.md -- Grammaticality de-idealized
-<!-- SUMMARY: OVMG main paper live as a preprint; multi-model formal repair implemented and verified · status: preprint live, formal-repair pass complete · updated: 2026-08-22 -->
+<!-- SUMMARY: OVMG main paper live as a preprint; local bifurcation result integrated with conditional scope · status: preprint live, integration complete · updated: 2026-08-23 -->
 
-**Current phase:** Main paper posted as preprint / formal repair, venue selection, and closed-loop stress test complete
-**Last updated:** 2026-08-22
+**Current phase:** Main paper posted as preprint / local bifurcation result integrated at reader and formal levels
+**Last updated:** 2026-08-23
 **Public/preprint state:** `Grammaticality de-idealized` is live on LingBuzz as `lingbuzz/010118`. Upload artifact: `Reynolds_2026_Grammaticality_de-idealized.pdf` generated from `main.pdf` on 2026-07-05. The OVMG family also includes LingBuzz subproject preprints for `operator-stratum` and `asterisk-de-idealized`; `operator-stratum` was submitted to *Functions of Language* on 2026-06-02 and desk rejected for scope/fit on 2026-06-26. It is not currently under review. Check subproject folders before making public-state claims.
 **Tracking note:** Root `STATUS.md` created 2026-05-31 from existing `CLAUDE.md`, `NOTES.md`, and `DECISIONS.md`; no source state was changed.
 
@@ -64,6 +64,7 @@ Current subproject map:
 10. The §4 dynamics are now explicitly a coherent model with proof obligations, not a closed derivation: bounded-memory bimodality, winnerless-cell metastability, and separated population licensing regimes are conditional claims.
 11. The August 22 likelihood repair and regenerated closed-loop audit are now stated in the manuscript: low/high separation is conditional on the adoption response and informative observation, while heterogeneous priors alone make normalized dispersion lag the mean after opportunity loss. Final review should police threshold circularity and keep repair outside the maintenance/control warrant.
 12. The operator-stratum definition now requires closure plus a paradigm-level public-update role. Opportunity modulates concentration rather than membership; categorical constructional licensing remains broader. Future edits should preserve the separate questions of constructional licensing, operator membership, value selection, and exponent licensing.
+13. The full expected-window closure has a numerically verified local cusp under effective evidence inflow and the independently supplied adoption threshold. The formal result, deterministic slowing, two-control hysteresis, and failed finite-population variance/autocorrelation gate are reported in the supplement. The main paper states only the reader-facing, conditional loss-versus-recovery prediction and contains no bifurcation mathematics or terminology.
 
 ## Known Local State
 
@@ -73,10 +74,55 @@ Specific watchpoints:
 
 1. **Submission-bearing source:** `main.tex`, `reader-model-and-dynamics.tex`, the `refs.bib` link to the central bibliography, and the figure assets `figures/fig_agr_projection.pdf` and `trident.jpg`. The separate formal artifact consists of `supplement.tex`, `formal-notation.tex`, `section3.tex`, `formal-dynamics.tex`, `simulate_dynamics.py`, and `simulation_data.dat`. The Lean files are a structural sanity check, not evidence establishing the empirical model. `CLAUDE.md`, `STATUS.md`, and `DECISIONS.md` are project guidance and records, not submission files.
 2. **Generated artifacts:** `main.pdf` is the current rendered manuscript and `main.xdv` is an intermediate build artifact. `Reynolds_2026_Grammaticality_de-idealized.pdf` is the July 5 LingBuzz upload artifact and should not be mistaken for the repaired manuscript.
-3. **Deliberate review provenance:** the August 21 zip, extracted review bundle, Codex/Opus/Aristotle reports, and `reviews/ox-alpha-formalization-review-20260821/` preserve prompts, inputs, outputs, hashes, and audits. Retain them locally; none belongs in a journal upload unless specifically requested.
+3. **Deliberate review provenance:** the August 21 zip, extracted review bundle, Codex/Opus/Aristotle reports, `reviews/ox-alpha-formalization-review-20260821/`, and `reviews/catastrophe-diagnostics-ox-alpha-20260823/` preserve prompts, inputs, outputs, hashes, and audits. Retain them locally; none belongs in a journal upload unless specifically requested.
 4. **Local planning and literature workspace:** the July 10 formal-dynamics and reader-bridge notes, July 14 Cognition intake notes, and later source hooks are research records rather than manuscript source. The many `subprojects/etiological-account/literature/` files remain local literature workspace by default.
 5. **Independent operational drift:** the absolute-path fixes in the etiological and evolutionary-DAG scripts, the verified Nefdt--Ladyman source-hook line, and `subprojects/operator-stratum/main.pdf` are separate work. Preserve them but exclude them from a root-paper submission or commit unless deliberately grouped.
 6. A pre-revision safety copy of `main.tex` from 2026-06-09 is in `notes/main-2026-06-09-pre-review-revision.tex`.
+
+### 2026-08-23 Session Notes
+
+- Ox Alpha independently reproduced the full map's declared base fixed points,
+  rejected the proposed rare-niche U-shaped Beta regime, and recommended a
+  bounded continuation. Its one-control fold at $q=.5$ reproduced near
+  opportunity inflow $.654741$; its coarse two-control search left a cusp
+  unresolved.
+- Independent local continuation found the missed codimension-two cusp near
+  $(\theta,c,q)=(.370957,.479156,.552048)$. The triple-root residual, non-zero
+  cubic term, non-zero unfolding determinant, and full-Jacobian center/transverse
+  eigenvalue conditions pass. Nearby controls yield one versus three fixed
+  points, and five-start evidence solves agree to below $10^{-8}$.
+- Ox Alpha's post-run refutation audit independently recomputed the derivatives,
+  unfolding determinant, full-map eigenvalues, one-versus-three fixed-point
+  neighborhood, and static folds, and returned `CUSP RESULT: CONFIRMED`. It also
+  confirmed that the stochastic criterion fails on its own terms and that the
+  one-shape-below-one result does not rehabilitate the rare-niche U-shape claim.
+- Deterministic slowing is strong: on the lower branch the dominant spectral
+  radius rises from $.964802$ to $.995641$, predicted relaxation time from 28
+  to 229 windows, and measured pulse recovery from 82 to 288 windows. A slow
+  two-control cycle converges toward the two static fold locations.
+- The finite-population early-warning criterion fails rather than being rescued:
+  autocorrelation rises from $.9152$ to $.9854$ through the $1.1\times$ fold
+  distance, but at $1.02\times$ all 24 runs escape and only four usable
+  pre-escape segments remain; variance and autocorrelation are not monotone.
+- The Beta side claim remains rejected. Quiet evidence returns to
+  $\operatorname{Beta}(1,1)$ and no checked state has both shapes below one.
+  Dense negative-evidence branches can have one moment-matched shape below one
+  (minimum $a=.931365$), producing one-sided boundary mass that remains encoded
+  by mean plus concentration. No variance clamp bound in any checked cell.
+- Reproducible implementation and results live in `tools/ovmg-tools` at
+  `experiments/run-bifurcation-diagnostics.mjs` and
+  `results/bifurcation-diagnostics.json`. All 328 companion checks pass. The
+  result JSON has SHA-256
+  `8bd38cab97ed52cbeac474361f6a03c7cecbb767eb81a26ebb23f9ff3feac6c0`.
+  The Lean sources remain unchanged. No canon update is warranted by this
+  project-specific numerical result.
+- Integrated the result at two levels after author approval. The main paper now
+  explains the history-dependent prediction in ordinary language: communities
+  under the same current external conditions can occupy different stable
+  licensing states, and matched loss and recovery trajectories should cross
+  different boundaries. The supplement states the local derivative,
+  eigenvalue, one-versus-three-root, hysteresis, and stochastic-failure checks.
+  The unsupported scalar cubic was removed.
 
 ### 2026-08-22 Session Notes
 

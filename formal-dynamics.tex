@@ -433,12 +433,21 @@ $F(X^\ast)=X^\ast$; their local stability is governed by the full Jacobian,
 where $\rho$ is spectral radius. This criterion retains the slow evidence
 directions that a scalar population equation discards.
 
-A reduced crossing plot remains useful for location. Holding $\theta$ fixed,
-let $(a^\ast(\theta),b^\ast(\theta))$ be the stationary evidence state and put
+A reduced crossing plot remains useful for location. Let $\eta$ be expected
+opportunity inflow per step before observation and let $q$ be the adoption
+threshold. Holding $\theta$ fixed, let
+$(a^\ast_{\eta}(\theta),b^\ast_{\eta}(\theta))$ be the stationary evidence state
+and put
 \[
-H(\theta)=h_\kappa(a^\ast(\theta),b^\ast(\theta)).
+H_{\eta,q}(\theta)=
+h_{\kappa,q}(a^\ast_{\eta}(\theta),b^\ast_{\eta}(\theta)),
+\qquad
+R(\theta;\eta,q)=H_{\eta,q}(\theta)-\theta.
 \]
-Crossings of $H(\theta)$ and the diagonal locate candidate equilibria. They do
+Here $h_{\kappa,q}(a,b)$ abbreviates
+$h_\kappa(a/(a+b),a+b;q)$ from
+\eqref{eq:posterior-threshold-adoption}.
+Zeros of $R$ locate candidate equilibria. They do
 not supply return times: the scalar derivative can differ sharply from the
 dominant eigenvalue of~\eqref{eq:full-map-stability} when evidence is slow.
 The unstable interior crossing is denoted $\theta^\ddagger$ below.
@@ -467,15 +476,76 @@ They provide neither an empirical fit nor a stationary-distribution result. The
 exact grid, seeds, approximation diagnostics, and artifact hash are archived
 with the companion software.
 
-A cubic normal form,
+\noindent\textsc{Local bifurcation diagnostic.} The full expected-window closure
+has a codimension-two cusp of fixed points if
 \begin{equation}
-\dot{\theta}=\theta(1-\theta)(\alpha\theta-\beta)
-\label{eq:cubic-normal-form}
+R=\partial_\theta R=\partial^2_\theta R=0,
+\qquad
+\partial^3_\theta R\neq0,
+\qquad
+\det
+\begin{pmatrix}
+\partial_\eta R & \partial_q R \\
+\partial_{\theta\eta}R & \partial_{\theta q}R
+\end{pmatrix}
+\neq0,
+\label{eq:cusp-conditions}
 \end{equation}
-summarizes an endpoint-absorbing, large-concentration limit. Finite-concentration
-responses generally put their attracting points inside the unit interval, and
-the cubic omits the evidence-state eigenmodes; the full map carries
-the explanatory claim.
+provided the full map has one unit eigenvalue and stable transverse
+eigenvalues. These are local fixed-point conditions; they neither introduce a
+potential nor invoke a global catastrophe classification.
+
+Numerical continuation under the utilities, observation probability, memory,
+and inclusion-update rate specified above, while varying $\eta$ and $q$, locates
+the point
+\[
+(\theta_c,\eta_c,q_c)=(.370957,.479156,.552048),
+\qquad
+(a_c,b_c)=(1.798418,2.039839).
+\]
+The effective observed inflow is $.287494$. At the reported differentiation
+scale, the first two state derivatives of $R$ are below $3\times10^{-8}$ in
+absolute value, $\partial^3_\theta R=-7.2843$, and the unfolding determinant
+is $2.3345$. The full-map eigenvalues are $1.000000031$, $.961496$, and
+$.883699$; step-size audits preserve the non-zero third derivative and
+determinant.
+
+A nearby point inside the cusp wedge has fixed points at
+$\theta\approx.253,.370,.505$, with stable outer points and an unstable middle
+point; a point outside has one stable fixed point near $.230$. Five stationary
+evidence solves from distinct initial states agree to within $10^{-8}$.
+
+A quasi-static two-control cycle also distinguishes this geometry from a steep
+single-valued response. Holding one local control coordinate fixed and sweeping
+the other produces two static folds, at local biases $-.001041$ and $.000901$.
+As the dwell time at each control value rises from 1{,}000 to 10{,}000 map
+iterations, the directional jumps converge toward those folds.
+
+The same current external controls can support different stable licensing
+states when the retained evidence state differs. An empirical application would
+have to estimate effective exposure and the adoption threshold without fitting
+them to the transition points being explained.
+
+\noindent\textsc{Slowing and its failed stochastic proxy.} At $q=.5$, the
+lower-branch fold occurs at $\eta=.654741$. As the deterministic state approaches
+that fold from $2.5$ to $1.02$ times the fold inflow, the dominant spectral
+radius rises from $.964802$ to $.995641$, its implied relaxation time rises from
+28 to 229 windows, and measured pulse recovery rises from 82 to 288 windows.
+This establishes deterministic slowing in the expected closure.
+
+It doesn't establish a usable stochastic early-warning signal. In the
+finite-population diagnostic, each of four fold distances had 24 runs with 240
+speakers over 3{,}000 steps. Median detrended variance and lag-one
+autocorrelation rose through the $1.1$ condition, but 23 of 24 paths escaped
+there. At $1.02$, all paths escaped, only four supplied a usable pre-escape
+segment, and both summaries fell. The preregistered monotonicity and
+minimum-replicate gates fail.
+
+That diagnostic also uses one opportunity per step with observation probability
+set to effective inflow; other opportunity--observation factorizations remain
+untested. The local
+bifurcation and deterministic hysteresis survive this failure, but no general
+observable early-warning prediction follows.
 
 The convergence claim has to match both levels of the model. With perfect
 retention ($\delta_m=1$), an individual evidence filter is close to
@@ -497,7 +567,8 @@ low-opportunity or outside-option-dominated contrasts remain diffuse. That claim
 obligation rather than a theorem here.
 
 The operator-specific prediction also needs its scope stated. Neither the full
-map nor its cubic limit derives the operator-specific response boundary. The OVMG claim is
+map nor the local bifurcation diagnostic derives the operator-specific response
+boundary. The OVMG claim is
 conditional: adoption criteria and selection intensity have to vary with
 independently estimated switching or coordination costs, opportunity, and
 update divergence. Under that condition, dense, update-configuring contrasts

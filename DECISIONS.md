@@ -127,3 +127,39 @@ Format: `## YYYY-MM-DD` then bullet points with **bold topic** and brief rationa
 - **Treat the posterior trajectory as a reproducible affine-likelihood example.** `simulate_dynamics.py` now implements the exact finite Beta mixture and one moment projection after each declared step; `simulation_data.dat` drives the figure directly. The data hash is recorded in the supplement. The old pseudo-count script and hard-coded coordinates are superseded.
 - **Freeze Lean at the strengthened structural-correspondence scope.** Aristotle-assisted additions now exercise each operator-membership conjunct, all value/exponent combinations, constructional and exponent licensing failures, zero opportunity, and non-vacuous saturation. The layer remains explicitly unable to establish linguistic inputs or stochastic population claims.
 - **Keep canon unchanged for the document split.** The main/supplement boundary is a manuscript-presentation decision. The two portfolio-wide level distinctions already canonized remain the relevant theoretical updates; no new theory-level canon entry is warranted by moving mathematics.
+
+## 2026-08-23
+
+- **Record a local cusp in the full expected-window closure, without adopting
+  catastrophe theory.** Ox Alpha first confirmed the rare-niche Beta claim was
+  wrong and located a one-control fold, but its coarse two-control search missed
+  the codimension-two point. Independent replay solves the local conditions at
+  approximately $(\theta,c,q)=(0.370957,0.479156,0.552048)$: the fixed-point
+  residual and its first two state derivatives vanish, the cubic term and
+  two-control unfolding determinant are non-zero, and the full Jacobian has one
+  unit eigenvalue with two stable transverse eigenvalues. This licenses a local
+  cusp-bifurcation description of the conditional closure, not Thom
+  classification, a global potential, or an empirical claim about language.
+- **Keep the stochastic precursor claim failed and separate.** Deterministic
+  spectral radius and pulse-recovery time rise toward the fold, and slow
+  two-control sweeps converge toward distinct directional jumps. The
+  preregistered finite-population variance/autocorrelation criterion fails at
+  the closest condition because all 24 runs escape the shallow basin and only
+  four usable pre-escape segments remain. Do not promote deterministic slowing
+  into a general observable early-warning claim.
+- **Do not add the result to the main paper or canon.** It is project-specific
+  and does not change the reader-facing linguistic thesis. The formal supplement
+  is the only plausible manuscript destination, after a bounded exposition
+  pass that reports the stochastic failure and removes any implication that the
+  scalar cubic captures the full map's interior three-root geometry. The main
+  and supplement sources were not edited during this simulation pass.
+- **Integrate the import, not the formal label, into the main paper.** After
+  reviewing the result's significance, add the conditional loss-versus-recovery
+  prediction to the reader-facing change section: identical current external
+  conditions can support different stable licensing states because retained
+  evidence differs, and genuine hysteresis predicts distinct transition points
+  in matched forward and reverse trajectories. Keep the cusp conditions,
+  numerical diagnostics, deterministic slowing, and failed stochastic gate in
+  the formal supplement. Remove the scalar cubic, which cannot represent the
+  verified interior three-root geometry. This presentation decision does not
+  warrant a canon update.
