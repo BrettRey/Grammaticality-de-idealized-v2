@@ -87,6 +87,18 @@
 \usepackage{xcolor}
 \definecolor{linkmaroon}{RGB}{128, 0, 32}
 
+\newif\ifanonymous
+\ifdefined\anonymoussubmission
+  \anonymoustrue
+\else
+  \anonymousfalse
+\fi
+\ifanonymous
+  \newcommand{\pdfauthorfield}{}
+\else
+  \newcommand{\pdfauthorfield}{Brett Reynolds}
+\fi
+
 \usepackage{hyperref}
 \hypersetup{
     colorlinks=true,
@@ -95,8 +107,8 @@
     citecolor=linkmaroon,
     urlcolor=linkmaroon,
     pdftitle={Grammaticality de-idealized: Formal supplement},
-    pdfauthor={Brett Reynolds},
-    pdfkeywords={grammaticality, projectibility, acceptability, preemption, entrenchment, conventionalization, usage-based grammar},
+    pdfauthor={\pdfauthorfield},
+    pdfkeywords={grammaticality, projectibility, acceptability, preemption, entrenchment, conventionalization},
 }
 \usepackage{orcidlink}
 
@@ -116,15 +128,6 @@
 \newcommand{\abbr}[1]{\textsc{#1}}
 \usepackage{marvosym}
 \newcommand{\crossmark}{\textsubscript{\Cross}}
-\newcommand{\aidisclosure}[1]{%
-  \par\medskip
-  \noindent{\small\textsc{AI use.}\enspace The large language models #1 served as
-  drafting and editing aids throughout the preparation of this paper. I remain
-  responsible for all theoretical claims, arguments, errors, and interpretive
-  choices.\par}%
-  \medskip
-}
-
 % ===========================
 % MATHS AND SYMBOLS
 % ===========================
@@ -200,13 +203,18 @@
 
 
 \usepackage{xr-hyper}
-\externaldocument[M-]{main}
+\externaldocument[M-]{grammaticality-de-idealized}
 
 \title{Grammaticality de-idealized\\[0.4em]\large Formal supplement}
-\author{Brett Reynolds \orcidlink{0000-0003-0073-7195}\\
-  Humber Polytechnic \& University of Toronto\\
-  \href{mailto:brett.reynolds@humber.ca}{brett.reynolds@humber.ca}}
-\date{\today}
+\ifanonymous
+  \author{}
+  \date{}
+\else
+  \author{Brett Reynolds \orcidlink{0000-0003-0073-7195}\\
+    Humber Polytechnic \& University of Toronto\\
+    \href{mailto:brett.reynolds@humber.ca}{brett.reynolds@humber.ca}}
+  \date{\today}
+\fi
 
 \begin{document}
 \maketitle
@@ -226,12 +234,6 @@ the argument.
 \noindent\textbf{Companion paper:} \emph{Grammaticality de-idealized}. Section
 and example references that point outside this document refer to the main paper.
 
-\aidisclosure{Claude, ChatGPT/Codex, Gemini, DeepSeek, and Ox Alpha}
-\noindent{\small Aristotle provided formalization assistance. Model outputs used
-in adversarial review or formalization were checked, where applicable, by
-independent recomputation, local proof replay, or executable tests.\par}
-\medskip
-
 \tableofcontents
 \newpage
 
@@ -240,6 +242,58 @@ independent recomputation, local proof replay, or executable tests.\par}
 \input{section3}
 
 \input{formal-dynamics}
+
+\section{Decision-layer discontinuity design}
+\label{sec:decision-layer-discontinuity}
+
+A community or task can place a practical boundary on a graded estimate of
+licensing. A sudden change in response type near an independently estimated
+boundary would test whether asymmetric losses shift hearers from acceptance to
+repair, clarification, or sanction beyond the smooth effect of their own
+estimate. The general design is a regression-discontinuity problem
+\autocite{LeeLemieux2010,CalonicoCattaneoTitiunik2014}; multinomial and
+covariate-adjusted versions are the needed extension \autocite{Lazzaro2026}. In
+a confirmatory test, the boundary has to be estimated and registered before the
+outcome data is inspected. A smooth response would weaken the decision-layer
+switch, not the licensing-state theory itself.
+
+Figure~\ref{fig:rd-test} states the decision-layer check in one picture: a
+discontinuity is evidence for a response switch at a practical boundary, while
+a smooth curve is evidence that the overt response tracks estimated licensing
+continuously.
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[font=\small, >=Stealth]
+\begin{scope}
+  \draw[->] (0,0) -- (4.6,0) node[right, font=\footnotesize] {estimated licensing};
+  \draw[->] (0,0) -- (0,3) node[above, font=\footnotesize, align=center] {judge\\ response};
+  \draw[dashed, gray] (2.2,0) -- (2.2,2.8);
+  \node[font=\footnotesize, gray] at (2.2,-0.35) {decision boundary};
+  \draw[very thick, lsMidBlue] (0.3,0.4) -- (2.2,0.4);
+  \draw[very thick, lsMidBlue] (2.2,2.4) -- (4.2,2.4);
+  \draw[dotted, lsMidBlue] (2.2,0.4) -- (2.2,2.4);
+  \node[font=\footnotesize, align=center] at (2.3,-1.1) {\textbf{response switches}\\ at the boundary};
+\end{scope}
+\begin{scope}[xshift=7cm]
+  \draw[->] (0,0) -- (4.6,0) node[right, font=\footnotesize] {estimated licensing};
+  \draw[->] (0,0) -- (0,3) node[above, font=\footnotesize, align=center] {judge\\ response};
+  \draw[dashed, gray] (2.2,0) -- (2.2,2.8);
+  \node[font=\footnotesize, gray] at (2.2,-0.35) {decision boundary};
+  \draw[very thick, lsMidBlue] (0.3,0.5)
+    .. controls (1.2,0.5) and (1.7,0.8) .. (2.2,1.4)
+    .. controls (2.7,2.0) and (3.2,2.4) .. (4.2,2.4);
+  \node[font=\footnotesize, align=center] at (2.3,-1.1) {\textbf{licensing estimate predicts}\\ smooth response};
+\end{scope}
+\end{tikzpicture}
+\caption{The decision-layer discontinuity check. If asymmetric losses induce a
+response switch, a judge's treatment of a form should change abruptly as the
+judge's estimated licensing crosses the practical boundary (left); if the
+read-out tracks that estimate continuously, treatment should vary smoothly
+through it (right). A regression-discontinuity design on multinomial hearer
+responses targets this decision layer, not the constitutive status state itself.}
+\label{fig:rd-test}
+\end{figure}
 
 \section{Executable simulation and likelihood audit}
 \label{sec:executable-audit}
@@ -256,7 +310,7 @@ The release test suite contains 328 checks: 27 legacy provenance fixtures, 46
 occasion-simulation smoke checks, 57 revised-engine checks, 18 conditional
 observation-shell checks, and 180 closed-loop checks. A clean regeneration of
 the declared sweep produced SHA-256
-\nolinkurl{54f359dab7d63fb05bb7acdc19067d8698f73e62d1402ba27e147043ec275963}.
+\nolinkurl{ebfa2a75064bfbbff72d1798a04cea65dff211ac3cf9f567f596ba527ed48679}.
 The independently reproducible data for Figure~\ref{fig:posterior-means} have
 SHA-256
 \begin{center}
@@ -299,13 +353,18 @@ normalized onset calculation are stored with the machine-readable sweep.
 The Lean development is a deliberately narrow structural sanity check. It
 formalizes the constraint algebra, non-empty assemblies, coverage,
 compatibility, saturation, node-level licensing, and the distinction among
-speaker, population, and posterior read-outs. The operator-stratum extension
-formalizes closed and update-configuring contrasts, value-correct versus
+speaker, population, and posterior read-outs. The operator paper first
+identifies paradigms categorically for the comparison and then assigns each one
+a graded public-update profile. The Lean extension uses a thinner structural
+surrogate: finite enumerability represents closure, and the existence of two
+update-distinct values represents a non-zero public-update contribution. It
+doesn't encode a recurring domain, semantic frame, obligatory value selection,
+or the magnitude of the operator profile. The extension checks value-correct versus
 wrong-value tokens, licensed versus excluded exponents, and the bridge showing
 that an operator-neutral construction can contribute a compatible analysis
-without thereby being licensed. It doesn't formalize the statistical
-likelihoods, population dynamics, repair probabilities, or empirical
-identification assumptions developed above.
+without thereby being licensed. It doesn't formalize empirical paradigm
+identification, operator profiling, causal attribution, statistical likelihoods, population
+dynamics, repair probabilities, or empirical identification assumptions.
 
 \begin{table}[htbp]
 \centering
@@ -318,13 +377,14 @@ Lean result & Manuscript claim checked \\
 \path{distinct_values_of_updateConfiguring} & An update-configuring
 contrast contains genuinely distinct eligible values, rather than one value
 written twice. \\
-\path{isSituatedOperator_withProfile} & Replacing opportunity, licensing,
-or categoricality data leaves operator membership unchanged. \\
-\path{operator_with_no_opportunity} & A contrast can retain operator
-membership even when its current opportunity count is zero. \\
-Three independent failure witnesses & Closure, conventional establishment,
-and update configuration are each necessary for operator membership. \\
-Four operator/licensing witnesses & Operator/non-operator and categorically
+\path{isSituatedOperator_withProfile} & In the sharpened interface, replacing
+opportunity, licensing, or categoricality data leaves the structural surrogate
+unchanged by construction. \\
+\path{operator_with_no_opportunity} & A contrast can satisfy the structural
+surrogate even when its current opportunity count is zero. \\
+Three independent failure witnesses & Each conjunct of the structural surrogate
+is logically necessary; this doesn't establish an empirical boundary. \\
+Four surrogate/licensing witnesses & Surrogate-positive/negative and categorically
 licensed/unlicensed are jointly consistent in all four combinations. \\
 \path{value_and_exponent_independent} & Correct versus wrong value and
 licensed versus excluded exponent occur in all four combinations. \\
@@ -341,8 +401,9 @@ Paired non-vacuous saturation witnesses & When a dimension is genuinely
 obligatory, supplying it yields saturation and omitting it blocks saturation. \\
 \bottomrule
 \end{tabular}
-\caption{Scope of the machine-checked correspondence. These are logical
-interface checks, not empirical classifications of the motivating examples.}
+\caption{Scope of the machine-checked correspondence. These are logical checks
+of a partial structural interface, not a formalization of empirical paradigm
+identification, graded operator profiles, or classification of the motivating examples.}
 \label{tab:lean-correspondence}
 \end{table}
 

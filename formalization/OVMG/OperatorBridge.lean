@@ -2,7 +2,7 @@ import OVMG.Core
 import OVMG.OperatorStratum
 
 /-!
-# Bridge between OVMG status and operator membership
+# Bridge between OVMG status and the partial operator-interface surrogate
 
 The main OVMG status scaffold and the operator-stratum interface answer
 different questions. This module checks their composition. In particular, an
@@ -316,7 +316,7 @@ theorem regularExponentAssembly_status : regularExponentSpeakerStatus := by
   subst hkEq
   trivial
 
-/-- The value/exponent failure is located precisely: operator membership,
+/-- The value/exponent failure is located precisely within the partial surrogate:
 value correctness, coverage, compatibility, and saturation all hold; exponent
 licensing and speaker status fail; the same licensing relation licenses the
 regular exponent. -/

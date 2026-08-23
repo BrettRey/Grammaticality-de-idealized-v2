@@ -1,0 +1,3 @@
+Saved to `reviews/submission-strategy-ox-alpha-20260823/ox-alpha-final.md` (~300 words).
+
+**Stagger withdrawn; recommend parallel week-0 submission.** No candidate benefit passes the challenge's test: the framework record is already established by the public, cross-cited preprints; a *Linguistics* desk outcome transmits nothing usable to a *Language Sciences* submission (neither branch changes it); the early-warning channel is low-probability and mostly covered by the existing tripwire; and JL exclusivity is enforced by ladder rule, not timing. What survives: reciprocal citation and disclosure from day one, the redundancy tripwire, never both manuscripts at JL at once, and no revision before an editor asks.

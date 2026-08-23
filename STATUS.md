@@ -12,13 +12,14 @@ source:
 - grammaticality-de-idealized.tex
 preprints:
 - lingbuzz/010118
-next_action: Prepare an anonymous submission package for Linguistics while
-  preserving the model's conditional empirical scope
+next_action: Review and upload the verified anonymous Glossa package; record a
+  submission event only after the journal receives it
 notes: 'Title ("Grammaticality de-idealized") matches grammaticality-de-idealized.tex''s \title and STATUS.md''s own usage ("`Grammaticality
   de-idealized` is live on LingBuzz as `lingbuzz/010118`"). CLAUDE.md''s fuller internal label ("Grammaticality
   De-idealized: The OVMG Model") is a working/internal frame name, not the manuscript title, and is not
   in conflict with the sources used. The operator-stratum subproject (within this same directory) was
-  itself desk rejected by Functions of Language on 2026-06-26 and is separately unretargeted. CHANGED
+  itself desk rejected by Functions of Language on 2026-06-26 and now has an approved Theoretical
+  Linguistics presubmission-query route. CHANGED
   by ADJUDICATION 2026-07-30: operator-stratum now has its own registry entry in batch-10.yaml, with `path`
   pointing at subprojects/operator-stratum, per the v2 rule that the registry unit is the manuscript rather
   than the directory. Brett authorised that specifically so the Functions of Language desk rejection would
@@ -29,9 +30,9 @@ notes: 'Title ("Grammaticality de-idealized") matches grammaticality-de-idealize
 ---
 
 # STATUS.md -- Grammaticality de-idealized
-<!-- SUMMARY: OVMG main paper live as a preprint; reader-facing clarity pass and conditional bifurcation integration complete · status: preprint live, revision complete · updated: 2026-08-23 -->
+<!-- SUMMARY: OVMG main paper live as a preprint; Glossa revision and anonymous reviewer package verified · status: package ready, not submitted · updated: 2026-08-23 -->
 
-**Current phase:** Main paper posted as preprint / reader-facing clarity revision complete
+**Current phase:** Main paper posted as preprint / anonymous *Glossa* package verified and ready, not submitted
 **Last updated:** 2026-08-23
 **Public/preprint state:** `Grammaticality de-idealized` is live on LingBuzz as `lingbuzz/010118`. Upload artifact: `Reynolds_2026_Grammaticality_de-idealized.pdf` generated from `main.pdf` on 2026-07-05. The OVMG family also includes LingBuzz subproject preprints for `operator-stratum` and `asterisk-de-idealized`; `operator-stratum` was submitted to *Functions of Language* on 2026-06-02 and desk rejected for scope/fit on 2026-06-26. It is not currently under review. Check subproject folders before making public-state claims.
 **Tracking note:** Root `STATUS.md` created 2026-05-31 from existing `CLAUDE.md`, `NOTES.md`, and `DECISIONS.md`; no source state was changed.
@@ -44,7 +45,7 @@ Current subproject map:
 
 | Subproject | Function | State |
 |---|---|---|
-| `operator-stratum/` | What operators are | LingBuzz preprint, 2026-01-25; *Functions of Language* scope rejection, 2026-06-26; theoretically revised 2026-08-22; retarget TBD |
+| `operator-stratum/` | Paradigm structure, operator profiles, and repair locus | LingBuzz preprint, 2026-01-25; *Functions of Language* scope rejection, 2026-06-26; paradigm/profile revision 2026-08-23; *Theoretical Linguistics* query approved but pending reassessment |
 | `asterisk-de-idealized/` | What grammaticality is | LingBuzz preprint, 2026-01-28 |
 | `etiological-account/` | Why gaps emerge and persist | Draft |
 | `feeling-of-ungrammaticality/` | What the feeling is | Seed |
@@ -63,8 +64,9 @@ Current subproject map:
 9. The July 10 formal revision replaced the older `G_t^\theta`/posterior-existence wording with `S_t^\theta` population status plus `\widehat{S}_t` estimate. Future edits should preserve the state/estimate distinction unless deliberately revising the ontology.
 10. The §4 dynamics are now explicitly a coherent model with proof obligations, not a closed derivation: bounded-memory bimodality, winnerless-cell metastability, and separated population licensing regimes are conditional claims.
 11. The August 22 likelihood repair and regenerated closed-loop audit are now stated in the manuscript: low/high separation is conditional on the adoption response and informative observation, while heterogeneous priors alone make normalized dispersion lag the mean after opportunity loss. Final review should police threshold circularity and keep repair outside the maintenance/control warrant.
-12. The operator-stratum definition now requires closure plus a paradigm-level public-update role. Opportunity modulates concentration rather than membership; categorical constructional licensing remains broader. Future edits should preserve the separate questions of constructional licensing, operator membership, value selection, and exponent licensing.
+12. The operator companion now identifies paradigms structurally before assigning a graded, independently measured operator profile. “Operator stratum” is informal shorthand rather than thresholded membership. Its sole confirmatory claim is the held-out profile-by-error-locus interaction; future edits should preserve the separate questions of constructional licensing, paradigm identification, public-update profile, value selection, and exponent licensing.
 13. The full expected-window closure has a numerically verified local cusp under effective evidence inflow and the independently supplied adoption threshold. The formal result, deterministic slowing, two-control hysteresis, and failed finite-population variance/autocorrelation gate are reported in the supplement. The main paper states only the reader-facing, conditional loss-versus-recovery prediction and contains no bifurcation mathematics or terminology.
+14. The approved venue route is *Glossa* for the main paper and a *Theoretical Linguistics* presubmission query for the operator paper, with *Lingua* as its immediate fallback. The main paper's safety cut, current-literature bridge, disclosure alignment, anonymization, supplements, and reproducibility archive are complete and verified; no submission event has occurred. The query remains gated by its venue-local differentiation and roughly 100-word abstract. See `submission/venue-decision-2026-08-23.md` and `subprojects/operator-stratum/submission/venue-decision-2026-08-23.md`.
 
 ## Known Local State
 
@@ -81,6 +83,11 @@ Specific watchpoints:
 
 ### 2026-08-23 Session Notes
 
+- Brett approved *Glossa* as the main paper's first venue and a
+  *Theoretical Linguistics* presubmission query for the operator paper, with
+  *Lingua* as its immediate fallback. The query need not wait for the main
+  paper's desk outcome. Both routes retain the prerequisites in their linked
+  venue-decision records; no manuscript or package work began at approval.
 - Ox Alpha independently reproduced the full map's declared base fixed points,
   rejected the proposed rare-niche U-shaped Beta regime, and recommended a
   bounded continuation. Its one-control fold at $q=.5$ reproduced near
@@ -116,6 +123,11 @@ Specific watchpoints:
   `8bd38cab97ed52cbeac474361f6a03c7cecbb767eb81a26ebb23f9ff3feac6c0`.
   The Lean sources remain unchanged. No canon update is warranted by this
   project-specific numerical result.
+- The Glossa packaging replay exposed stale closed-loop output after two
+  approximation diagnostics were added to the generator. Regeneration left the
+  substantive results unchanged and produced the current SHA-256
+  `ebfa2a75064bfbbff72d1798a04cea65dff211ac3cf9f567f596ba527ed48679`;
+  the formal supplement and anonymous reproducibility archive now use it.
 - Integrated the result at two levels after author approval. The main paper now
   explains the history-dependent prediction in ordinary language: communities
   under the same current external conditions can occupy different stable
@@ -123,6 +135,23 @@ Specific watchpoints:
   different boundaries. The supplement states the local derivative,
   eigenvalue, one-versus-three-root, hysteresis, and stochastic-failure checks.
   The unsupported scalar cubic was removed.
+- Reconciled the main paper with the operator companion's revised architecture:
+  categorical paradigm identification precedes graded public-update profiling,
+  while constructional licensing, value selection, exponent licensing, and
+  causal attribution remain separate. Repair locus is the principal held-out
+  operator-specific discriminator.
+- Used the Elicit assessment as an originality and framing stress test, not as
+  evidence. The paper now concedes precedents for its individual ingredients,
+  claims originality for their integrated projectible architecture and
+  dissociating predictions, and presents the dynamics as a conditional
+  support-and-change module rather than an empirically validated population
+  mechanism.
+- Completed and verified the anonymous *Glossa* reviewer package: a 28-page,
+  mathematics-free main paper; 38-page formal supplement; 4-page Turkish
+  supplement; and anonymous reproducibility archive. All builds, citations,
+  archive manifests, 328 executable checks, the full diagnostics, Lean build,
+  axiom audit, anonymity scan, and page-by-page visual inspection pass. The
+  package is ready but has not been submitted.
 
 ### 2026-08-22 Session Notes
 
@@ -148,7 +177,7 @@ Specific watchpoints:
 - A dominant outside option produces weak evidence without endpoint concentration in the declared high-utility cell. Low and high coupled states both return after their inclusion components alone are perturbed. The programmed majority-repair intervention is classified only as a wiring check, not independent support for a controller claim.
 - In the opportunity-loss arm, heterogeneous priors make speaker evidence-mean dispersion grow sharply, but the mean reaches 25% and 50% of its eventual move first. The result is a conditional counterexample to heterogeneity alone being sufficient for the manuscript's dispersion-leading prediction; it is not an empirical language result or a judgment simulation.
 - Exact parameters, seeds, diagnostics, replicate summaries, and the Ox Alpha refutation audit are preserved under `tools/ovmg-tools/results/` and `tools/ovmg-tools/reviews/`; full paths are deterministically regenerable. All 316 repaired checks pass, and two regenerations of the sweep produced SHA-256 `54f359dab7d63fb05bb7acdc19067d8698f73e62d1402ba27e147043ec275963`. The simulation did not require a dynamics proof; the structural Lean layer was subsequently strengthened only at the operator/status interface.
-- Revised the companion operator-stratum paper after independent Ox Alpha and Claude Fable reviews plus a targeted level/category audit. Membership now depends on closure and paradigm-level public update; opportunity count, categoricality, and satiation are modulators or corollaries.
+- Revised the companion operator-stratum paper around Nørgård-Sørensen and Heltoft's paradigm scaffold after Ox Alpha and targeted attribution, level, and source audits. Paradigm identification is categorical, public-update contribution is a graded operator profile, and the held-out profile-by-error-locus interaction is the sole confirmatory claim.
 - Replaced the grammar/style binary throughout the family. The main paper now predicts repair locus: update-oriented repair for mis-set operator values, form correction for value-intact exponent or construction errors, and stance-directed responses for many indexical mismatches.
 - Reclassified *le hiver* as a value-intact operator-exponent case and *depend of* as a head-specific complement-construction case. Complementation is represented as schematic category/function licensing with lexically narrowed realization.
 - Added two canon entries: world state/evidence/estimate/read-out are separate bearers; recruitment/synchronic membership/population persistence are separate claims.
@@ -202,9 +231,9 @@ Specific watchpoints:
 
 ## Next-Touch Note: Operator Ecology
 
-- Treat `subprojects/operator-stratum/` as the bridge paper for the whole family, not a side paper. It defines one functionally distinct stratum within grammaticality: closed paradigms with a public-update role.
-- Map the grammaticality variables independently of membership: `map` asks whether an assembly covers the form--value pair; `K` asks whether its grammatical contributions unify; and `C_t` tracks constructional licensing, including categorical non-operator conventions. Operator membership is established separately by closure and paradigm-level public update.
-- This should guide the main OVMG paper, the asterisk paper, the etiology branch, the feeling branch, the Miller revision path, LBC, and Varieties. It replaces a substance-based claim about morphosyntax with testable differences in comprehension and repair while leaving grammaticality broader than the operator stratum.
+- Treat `subprojects/operator-stratum/` as the bridge paper for the whole family, not a side paper. It identifies grammatical paradigms using an inherited structural scaffold, assigns independently measured public-update profiles, and tests whether those profiles predict repair locus.
+- Map the grammaticality variables independently: `map` asks whether an assembly covers the form--value pair; `K` asks whether its grammatical contributions unify; and `C_t` tracks constructional licensing, including categorical low-profile conventions. None identifies a paradigm or determines its operator profile.
+- This should guide the main OVMG paper, the asterisk paper, the etiology branch, the feeling branch, the Miller revision path, LBC, and Varieties. It replaces a substance-based claim about morphosyntax with a falsifiable, held-out profile-by-error-locus interaction while leaving grammaticality broader than the informal operator stratum.
 
 ## 2026-07-14 Secondary Literature Hook: Iaia and Tavano (2026)
 
@@ -216,13 +245,13 @@ When returning to the predictability/processing-cost gap, consider this as backg
 
 ## Next Actions
 
-1. Prepare an anonymous *Linguistics* submission package from `grammaticality-de-idealized.tex`, `reader-model-and-dynamics.tex`, `refs.bib`, and the cited figures. Offer `supplement.pdf` as a separate formal supplement; keep review records, Lean sources, and project-management files outside the upload unless the editor asks for them.
+1. Review and upload the verified anonymous *Glossa* package in `submission/`. Record the prediction-ledger and public status event only after the journal receives the submission; keep review records and project-management files outside the upload.
 2. Retry the LingBuzz keyword correction on `lingbuzz/010118` when the service recovers: `conventionaliz- ation` -> `conventionalization`.
 3. Keep the strengthened Lean layer frozen as a structural sanity check unless referee feedback supplies a concrete reason to extend it.
-4. If the *Linguistics* route fails, reassess venue-specific framing before retargeting. The revised 11,200-word manuscript is now within the 15,000-word limits of *Journal of Linguistics* and *Glossa*.
+4. If the *Glossa* route fails, consider *Linguistics* after `LING.2026.0069` resolves; consider *Journal of Linguistics* only after `LIN-2026-0100` resolves.
 5. If returning to the etiology paper, keep the corrected Richerson & Boyd/O'Connor mechanism separate from Powell's contingency/convergence framework.
 6. If returning to the new DAG workbench, expand the phenomenon-card archive, enrich seed graphs, and run adversarial critique before treating any graph family as strong.
-7. Choose a better-fit venue for the revised operator-stratum manuscript and prepare a new venue-specific package rather than reusing the 2026 Functions of Language submission files.
+7. Add the venue-local differentiation and roughly 100-word abstract for the operator paper, then send the approved *Theoretical Linguistics* presubmission query. If declined, prepare a new *Lingua* package rather than reusing the 2026 *Functions of Language* files.
 
 ## Related reading — Cognition 2026 intake (2026-07-14)
 Sources routed from a *Cognition* 2026 batch. Central index: `literature/cognition-2026-intake.md`. Verify claims/citations before use.

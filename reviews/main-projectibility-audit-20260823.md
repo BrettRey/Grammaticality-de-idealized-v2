@@ -1,6 +1,6 @@
-# Projectibility audit after the main/supplement split
+# Projectibility audit after the Glossa and operator-alignment pass
 
-Date: 2026-08-22 (America/Toronto)
+Date: 2026-08-23 (America/Toronto)
 
 ## Overall verdict
 
@@ -18,6 +18,7 @@ candidate explanations requiring intervention evidence.
 | Projection target declared | Green | The introduction and profile-spine figure name repair, transmission, exposure/satiation, and change as targets. |
 | Inquiry and warrant | Green | Independent indicators, controls, and falsifiers are stated; adverse simulation results are retained. |
 | Non-triviality | Green | The category predicts more than redescribing acceptance: framing rank orders, omission informativeness, repair locus, transfer, and moribundity can fail separately. |
+| Identification, profiling, and attribution | Green | Categorical paradigm identification and the graded operator profile are separated from the stronger claim that public-update contribution causes a distinctive repair profile. A matched low-profile paradigm can defeat that attribution without erasing the paradigm or its descriptive profile. |
 | Warrant/world-side separation | Green | Population state, bearer evidence, estimate, and subjective read-out are kept distinct. |
 | Stability versus causal order | Green | Stability is not treated as proving maintenance, control, or a homeostatic mechanism. |
 | Maintainer/controller language | Green | Repair is a candidate maintainer/controller; removal and deviation-sensitive intervention tests are required. |

@@ -3,18 +3,23 @@ import Std
 /-!
 # Operator-stratum interface
 
-This module formalizes the type and level distinctions defended in the
-operator-stratum paper. It does not infer linguistic membership from judgment
-data. Instead, it makes the membership conditions explicit and proves that
-operator membership, opportunity, categorical licensing, value correctness,
-and exponent licensing can vary independently in the combinations claimed by
-the paper.
+This module checks type and level distinctions used at the interface between
+OVMG and the operator-stratum paper. Paradigm identification is categorical for
+the paper's comparison, and the operator profile is graded. The Boolean predicate
+below is a partial core-interface surrogate used only where the formal scaffold needs a discrete
+inventory. It does not infer paradigm status, operator profile, or causal
+attribution from judgment data. Instead, it proves
+that this surrogate, opportunity, categorical licensing, value correctness, and
+exponent licensing can vary independently in the combinations claimed.
 
-`Closed` is a fixed-analysis enumerability condition. It does not formalize the
-empirical question whether a living lexical inventory permits innovation.
-`UpdateConfiguring` is extensional: two eligible values have different effects
-on an abstract public-update state somewhere. Whether a linguistic contrast
-has that effect is supplied by empirical analysis, not proved here.
+`Closed` is a fixed-analysis enumerability surrogate, not a complete test of the
+recurring domain, semantic frame, or obligatory selection needed to identify a
+living paradigm.
+`UpdateConfiguring` is only a non-vacuity condition: two eligible values have
+different effects on an abstract public-update state somewhere. It does not
+measure the magnitude or ordinary-use reach of that contribution. Whether and
+how strongly an identified paradigm has that contribution is supplied by
+empirical analysis, not proved here.
 -/
 
 namespace OVMG
@@ -43,14 +48,23 @@ def UpdateConfiguring
   ∃ v₁ v₂ c s,
     P.eligible v₁ ∧ P.eligible v₂ ∧ P.update v₁ c s ≠ P.update v₂ c s
 
-/-- Operator membership belongs to the contrast, not to a token. It requires a
-closed value set, independent conventionality, and an extensional public-update
-role. -/
-def IsOperator
+/-- This partial core-interface predicate belongs to the contrast, not to a
+token. It requires Boolean surrogates for closure, independent conventionality,
+and a non-vacuous public-update role, but it omits other empirical requirements
+for paradigm identification and operator profiling. -/
+def IsCoreOperator
     {Value : Type uValue} {Ctx : Type uCtx} {Update : Type uUpdate}
     (conventional : Contrast Value Ctx Update -> Prop)
     (P : Contrast Value Ctx Update) : Prop :=
   Closed P ∧ conventional P ∧ UpdateConfiguring P
+
+/-- Backwards-compatible internal name. This abbreviation denotes the partial
+core-interface surrogate, not the paper's full paradigm/profile architecture. -/
+abbrev IsOperator
+    {Value : Type uValue} {Ctx : Type uCtx} {Update : Type uUpdate}
+    (conventional : Contrast Value Ctx Update -> Prop)
+    (P : Contrast Value Ctx Update) : Prop :=
+  IsCoreOperator conventional P
 
 theorem distinct_values_of_updateConfiguring
     {Value : Type uValue} {Ctx : Type uCtx} {Update : Type uUpdate}
@@ -62,14 +76,14 @@ theorem distinct_values_of_updateConfiguring
   subst v₂
   exact hUpdate rfl
 
-/-! ## Licensing profiles stay outside membership -/
+/-! ## Licensing profiles stay outside the core-interface surrogate -/
 
 /-- A deliberately small profile sufficient to state the independence claims.
 It is a coarse logical interface, not the paper's posterior state: `licensed`
 and `categorical` collapse graded means, concentrations, and unsettled regions
 to Boolean verdicts solely so the operator/licensing independence claims can be
 checked. `categorical` records concentration of that verdict, not operator
-membership. -/
+categorization. -/
 structure LicensingProfile where
   opportunity : Nat
   licensed : Bool
@@ -95,8 +109,8 @@ def SituatedContrast.withProfile
   { S with profile := profile }
 
 /-- Changing opportunity, concentration, or the licensing verdict cannot by
-itself change operator membership: those fields are absent from its definition.
--/
+itself change the sharpened classification: those fields are absent from its
+definition. -/
 @[simp] theorem isSituatedOperator_withProfile
     {Value : Type uValue} {Ctx : Type uCtx} {Update : Type uUpdate}
     {conventional : Contrast Value Ctx Update -> Prop}
@@ -321,7 +335,7 @@ theorem wrong_value_can_change_update :
   · simp [WrongValue, wrongValueToken]
   · simp [UpdateResult, binaryOperatorContrast, wrongValueToken]
 
-/-! ### Each conjunct of `IsOperator` is load-bearing
+/-! ### Each conjunct of the `IsOperator` core-interface surrogate is necessary
 
 For each condition there is a contrast satisfying the other two and failing
 that one. `constantContrast` above witnesses failure of
@@ -333,7 +347,7 @@ only checks here that the conjunct is not idle. -/
 def neverConventional (_ : Contrast BinaryValue Unit BinaryUpdate) : Prop :=
   False
 
-/-- Closure and update configuration alone do not give membership. -/
+/-- Closure and update configuration alone do not give the core classification. -/
 theorem binaryOperator_fails_operator_by_convention_only :
     Closed binaryOperatorContrast ∧
       UpdateConfiguring binaryOperatorContrast ∧
@@ -374,7 +388,7 @@ theorem openValueContrast_updateConfiguring :
   refine ⟨0, 1, (), .initial, trivial, trivial, ?_⟩
   simp [openValueContrast]
 
-/-- Conventionality and update configuration alone do not give membership:
+/-- Conventionality and update configuration alone do not give the core classification:
 an unbounded value set defeats the closure condition. -/
 theorem openValueContrast_fails_operator_by_closure_only :
     ¬ Closed openValueContrast ∧

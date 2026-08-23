@@ -130,6 +130,18 @@ Format: `## YYYY-MM-DD` then bullet points with **bold topic** and brief rationa
 
 ## 2026-08-23
 
+- **Retarget the main paper to *Glossa*.** Brett approved *Glossa* as the first
+  venue after the 700--1,000-word safety cut, current-literature bridge,
+  disclosure alignment, and anonymization. *Linguistics* becomes the first
+  conditional fallback once `LING.2026.0069` resolves; *Journal of Linguistics*
+  remains unavailable while `LIN-2026-0100` is live. Record:
+  `submission/venue-decision-2026-08-23.md`.
+- **Query *Theoretical Linguistics* for the operator paper, with *Lingua* as
+  the immediate fallback.** Complete the venue-local differentiation and
+  roughly 100-word abstract before querying. The query need not wait for the
+  main paper's *Glossa* desk outcome because it is neither a submission nor a
+  competing venue for the same paper. Record:
+  `subprojects/operator-stratum/submission/venue-decision-2026-08-23.md`.
 - **Record a local cusp in the full expected-window closure, without adopting
   catastrophe theory.** Ox Alpha first confirmed the rare-niche Beta claim was
   wrong and located a one-control fold, but its coarse two-control search missed
@@ -183,3 +195,17 @@ Format: `## YYYY-MM-DD` then bullet points with **bold topic** and brief rationa
   internally inconsistent ordering proposal were rejected. The result is a
   31-page, approximately 11,200-word, mathematics-free main paper whose formal
   commitments and projectibility constraints remain intact.
+- **Supersede binary operator membership across the paper family.** The operator companion now inherits a structural paradigm-admission scaffold from Nørgård-Sørensen and Heltoft, assigns an independently measured graded public-update profile, and treats “operator stratum” only as informal shorthand. The explanatory claim belongs to the held-out profile-by-error-locus interaction, not to the descriptive category or the within-paradigm error contrast.
+- **Make integration and dissociation the main paper's originality claim.** Do
+  not claim that coverage, licensing, repair, processing, frequency, or
+  population variation is individually unprecedented. The contribution is the
+  projectibility-first architecture that keeps population profiles, individual
+  and analyst evidence, subjective read-out, and causal supports separate and
+  connects them to dissociating predictions and explicit failure conditions.
+  Repair locus carries the operator-specific attribution claim; the dynamics
+  remain a conditional support-and-change module.
+- **Mark the anonymous *Glossa* package ready, not submitted.** The 28-page
+  main paper, 38-page formal supplement, 4-page Turkish supplement, and
+  reproducibility archive have passed build, citation, anonymity, manifest,
+  executable-model, Lean, and visual checks. Do not add a prediction-ledger or
+  public submission event until the journal receives the files.

@@ -1,0 +1,2437 @@
+Grammaticality de-idealized
+Formal supplement
+
+Abstract
+This supplement gives the mathematical specification underlying the Operator-Value
+Model of Grammaticality. It separates the population state from speaker and analyst estimates,
+defines the observation and updating interfaces, states the conditional population dynamics, records the simulation contract, and maps the paper’s structural claims to machine-checked Lean
+theorems. The main paper presents the linguistic argument, predictions, and failure conditions
+without formal notation. The supplement is designed to make every quantitative commitment
+inspectable without making that notation a prerequisite for reading the argument.
+
+Companion paper: Grammaticality de-idealized. Section and example references that point outside
+this document refer to the main paper.
+Contents
+Notation, types, and fixed parameters
+
+3
+
+1 A formal core: grammaticality as conditioned stability
+1.1 Conditioning structure . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+1.2 Objects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+1.3 Grammatical status as a conditioned state property . . . . . . . . . . . . . . . . .
+1.3.1 Status and its posterior estimate . . . . . . . . . . . . . . . . . . . . . .
+1.3.2 Projectible use of the posterior state . . . . . . . . . . . . . . . . . . . .
+1.3.3 Categorical talk as posterior concentration . . . . . . . . . . . . . . . . .
+1.3.4 A decision-theoretic read-out . . . . . . . . . . . . . . . . . . . . . . . .
+1.4 The scope of the existential . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+1.4.1 Assigning a failure . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+1.5 Interlocutor misalignment about conditioning . . . . . . . . . . . . . . . . . . .
+1.6 Identifying the conditioning state before prediction . . . . . . . . . . . . . . . .
+1.7 The feeling of (un)grammaticality . . . . . . . . . . . . . . . . . . . . . . . . . .
+1.8 Measurement: four observation channels . . . . . . . . . . . . . . . . . . . . . .
+1.9 Worked examples: deriving status from the posterior . . . . . . . . . . . . . . . .
+
+7
+7
+8
+10
+10
+11
+13
+14
+14
+15
+15
+15
+17
+18
+20
+
+1
+
+CONTENTS
+
+2
+
+2
+
+Dynamics: candidate routes to stabilization
+2.1 Niches, competitors, and opportunity sets . . . . . . . . . . . . . . . . . . . . .
+2.2 Usage as licensing × choice among candidates . . . . . . . . . . . . . . . . . . .
+2.3 Dynamics: evidence streams, weighted omissions, and repair . . . . . . . . . . . .
+2.4 Conditional emergence of separated regimes . . . . . . . . . . . . . . . . . . . .
+2.5 Derived obligatoriness . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2.6 Winnerless cells . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2.7 Destabilization of moribund contrasts . . . . . . . . . . . . . . . . . . . . . . .
+2.8 Actuation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2.9 Apparent exclusions from concentrated non-licensing . . . . . . . . . . . . . . .
+
+21
+21
+22
+23
+27
+30
+31
+32
+32
+33
+
+3
+
+Decision-layer discontinuity design
+
+33
+
+4
+
+Executable simulation and likelihood audit
+
+34
+
+5
+
+Machine-checked structural correspondence
+
+35
+
+CONTENTS
+
+3
+
+Notation, types, and fixed parameters
+This register is part of the model specification. It states the type and role of every recurring symbol
+before the derivations use it. A quantity called fixed is to be measured, normed, or registered independently of the outcome it helps predict; it isn’t silently fitted to that outcome. A quantity called
+latent is a world-side state inferred through an observation model. A posterior quantity belongs to
+a named epistemic bearer–speaker or analyst–and can’t be substituted for the corresponding latent
+state.
+Several letters are overloaded only with explicit adornment or arguments. In particular, F , H,
+R, X, π, and ρ name distinct objects below; ℓi is a lect, ℓj (x) and ℓomit
+i,t (x) are omission diagnostics,
+and ℓ(k) is a locality function; d can index an operator dimension or dependency while dj is an omission contrast; c is a conditioning state while ck is a mixture coefficient; and r can be an epistemic
+bearer while rj and r(∆, ι) are attribution and repair functions. The table flags each use. Time is
+discrete except in the optional cubic normal form. All probabilities and rates lie in [0, 1] unless stated
+otherwise.
+Symbol
+
+Type or domain
+
+Indices, bearers, and linguistic objects
+t, s, t0
+discrete times
+Wt = [t − W, t)
+
+finite time window
+
+i, j
+
+speakers
+
+r ∈ {i, a}
+
+epistemic bearer
+
+c∈C
+
+conditioning state
+
+n
+ϕ, φ(A)
+
+niche identifier
+frame type, frame function
+
+d
+
+operator dimension
+
+f, v, u
+
+form, value, token
+
+x, x′ , y
+
+candidate realizations
+
+κ
+
+constructional node
+
+A
+
+finite assembly
+
+ℓi
+
+lect state
+
+Constraint structure and state theory
+O(c)
+finite dimension set
+
+Meaning and status
+Current time, a time inside a window, and the
+independently fixed initial time.
+Preceding convention-individuating window of fixed
+width W .
+i usually marks the focal speaker; j indexes a sampled
+population member or observation.
+A speaker i or analyst a whose evidence licenses a
+posterior estimate.
+Construed communicative situation and norm centre; C
+is its state space.
+Independently specified communicative job.
+Constructional frame and the frame type of assembly A,
+used to type zero-marking alternatives and obligatoriness.
+A community-indexed contrast dimension; not an
+exponent.
+f is a form, v its intended value, and u a token notation
+used only when v is recoverable.
+Form–value candidates in a niche; y is the observed
+choice.
+Licensing-bearing identity of a typed construction or
+sign.
+Complete typed assembly of constructions; its linguistic
+representation may be richer than the fields projected
+into the model.
+Latent lect component for speaker i; H is the finite
+number of lect components.
+Operator dimensions conventionalized for conditioning
+state c; examples in the text are illustrative, not
+exhaustive.
+continued on next page
+
+CONTENTS
+
+4
+
+Symbol
+
+Type or domain
+
+Meaning and status
+
+Ω
+
+typed constraint space
+
+ωκ , ω(A)
+
+partial constraints
+
+⊔, ⊥
+
+partial join, failure
+
+H
+
+construction hierarchy
+
+A(f, v)
+A0 (d, n, ϕ, c)
+
+finite assembly set
+finite assembly class
+
+def(A)
+satt (A, c)
+
+Boolean predicate
+Boolean predicate
+
+OBLt (n, c, ϕ)
+
+dimension set
+
+zi,t (κ, c)
+
+binary latent state
+
+Zt (κ, c)
+
+predictive binary state
+
+θt (κ, c)
+
+latent population rate
+
+π
+
+simplex vector
+
+Lt (A, c)
+Λi,t
+Stθ (f, v, c)
+
+predictive event
+state vector
+latent population state
+
+YWt
+
+population history
+
+Dr,t
+(r)
+Sbt
+Gt , gi,t
+
+bearer evidence
+posterior mean
+posterior means
+
+bt
+Ct , C
+(r)
+
+posterior means
+
+(r)
+
+positive concentrations
+
+(r)
+
+posterior variance
+
+Uhet
+
+(r)
+
+expected Bernoulli variance
+
+τ (c)
+
+fixed decision parameter
+
+Space in which partial operator contributions can refine
+or conflict.
+Operator contribution of node κ and the unified
+contribution of assembly A.
+Constraint unification and undefined/inconsistent
+result. The same glyph ⊥ later denotes the typed outside
+option when it appears as a choice argument.
+Independently specified inheritance structure that
+generates analogical candidates.
+Complete assemblies with yield f and value v.
+Independently fixed defined assemblies that realize niche
+n in frame ϕ while leaving dimension d unset.
+Whether the operator constraints in A unify.
+Whether A supplies every dimension that the prior
+population history makes obligatory.
+Path-dependent ontic obligatoriness macro, determined
+from prior realized population behaviour and prior
+convention state.
+Whether speaker i includes construction κ in the
+repertoire for c at t.
+Inclusion of a newly sampled exchangeable speaker,
+conditional on population parameters.
+Exchangeable population licensing rate for construction
+κ.
+Lect-mixture weights; distinct from the usage rate πt
+below.
+A sampled speaker includes every node required by A.
+Speaker i’s vector of constructional inclusion states.
+Prevalence of at least one defined, saturated, licensed
+assembly route.
+Realization rates, pressure statistics, and prior
+obligatoriness state in the preceding window.
+Evidence available to bearer r through time t.
+Bearer r’s estimate of the population status state.
+Compact names for the analyst’s and speaker i’s status
+estimates.
+Bearer-specific and analyst means for a pivotal
+construction’s licensing rate.
+Evidence concentration for the corresponding posterior
+estimate.
+Epistemic uncertainty about the population state for
+bearer r.
+Predicted between-speaker heterogeneity; not posterior
+uncertainty.
+Situation-specific read-out boundary determined by
+losses; not part of constitutive status.
+
+νt , νbt
+Uepi
+
+Opportunity, choice, and observation
+
+continued on next page
+
+CONTENTS
+
+5
+
+Symbol
+
+Type or domain
+
+Meaning and status
+
+⋆
+Vn,t
+
+finite candidate set
+
+Nt (n, c)
+
+non-negative count
+
+kt (x, n, c)
+Ut (x; n, c)
+Ui,t (u; n, c)
+f, w
+
+non-negative count
+real utility
+real utility
+feature vector, weights
+
+⊥
+
+outside-option realization
+
+ρ⋆t
+
+candidate-only probability
+
+ρe⋆t
+
+full-choice probability
+
+πt (x | n, c)
+
+latent usage rate
+
+rj
+
+attribution probability
+
+ℓj (x)
+
+log likelihood ratio
+
+ℓomit
+i,t (x)
+
+log likelihood ratio
+
+dj
+
+probability contrast
+
+st , m t
+
+current-window counts
+
+at , b t
+a0 , b 0
+et , ebt
+a
+
+positive filter shapes
+fixed positive shapes
+discounted shapes
+
+δm
+
+fixed memory parameter
+
+ck
+
+non-negative coefficient
+
+µt+1 , vt+1
+
+exact moments
+
+λi,κ
+
+fixed persistence weight
+
+hκ
+
+adoption response
+
+qκ
+
+fixed adoption criterion
+
+ξi,t
+
+covariate vector
+
+M
+
+positive integer
+
+Attested, hierarchically constructible, and analogically
+generated candidates for niche n; the star marks inclusion
+of zero-token candidates.
+Opportunities for niche n in state c during the current
+window.
+Observed choices of candidate x in that window.
+Population-level counterfactual choice utility.
+Speaker-specific counterpart of the choice utility.
+Choice predictors and their fixed or independently
+estimated coefficients.
+Avoidance, periphrasis, silence, or repair in progress;
+typed separately from constraint failure.
+Counterfactual share when every registered candidate is
+available and the outside option is omitted.
+Counterfactual share when the outside option is
+included; it enters the licensing–choice approximation.
+Population probability of producing candidate x in the
+niche; distinct from lect weights π.
+Independently coded probability that occasion j is
+genuinely an opportunity for the target.
+Information diagnostic comparing an observed
+non-target choice under target absence and presence.
+Speaker-indexed normalized-softmax omission
+diagnostic for target x.
+Attribution-weighted omission informativeness used in
+the likelihood.
+Target choices and non-target choices entering the
+current update exactly once.
+Parameters of the bearer-specific Beta approximation.
+Baseline prior parameters.
+Accumulated evidence after discounting and before the
+current window.
+Retention of accumulated evidence; one means no
+forgetting.
+Bernstein-expansion coefficient for the affine omission
+product.
+Mean and variance of the finite Beta mixture before
+moment projection.
+Rate at which evidence can alter speaker i’s next
+inclusion state.
+Independently specified probability of adoption or
+retention from evidence and covariates.
+Switching or coordination cost used by the
+posterior-threshold response.
+Independently specified lect, network, cohort, and
+adoption covariates.
+Finite population size; distinct from anomaly drive Mi,t
+below.
+continued on next page
+
+CONTENTS
+
+6
+
+Symbol
+
+Type or domain
+
+Meaning and status
+
+(M )
+θt
+
+empirical finite-population
+rate
+positive normalizer
+
+Realized proportion of the M speakers who include the
+focal construction.
+Gated full-choice denominator when the target is
+unavailable.
+
+D0,i
+
+Repair, read-out, and situation inference
+∆(d)
+non-negative divergence
+
+ι
+rupd , rform
+r(∆, ι)
+
+footing covariates
+repair probabilities
+repair response
+
+σ
+η0 , η 1
+
+logistic link
+real coefficients
+
+ψupd , ψform
+
+expected exposures
+
+e
+
+observed situation cues
+
+qh (c | e)
+Ri (u, e)
+
+hearer posterior
+non-negative cost vector
+
+Ii (u, e)
+Mi,t
+
+non-negative scalar
+real anomaly drive
+
+Fi,t
+
+value in (−1, 0]
+
+αG , γ, δI
+
+fixed read-out weights
+
+εi
+Lloc
+
+noise term
+non-negative cost
+
+Ddep , |d|
+
+dependency set, length
+
+Ksat , βL , ηL
+
+fixed locality parameters
+
+Φev , Φdec
+ν0
+ζ
+
+confidence read-outs
+positive scale
+attribution category
+
+Population dynamics and obligatoriness
+Xt = (θt , at , bt )
+coupled state
+Mθ
+
+deterministic operator
+
+F (Xt )
+
+deterministic map
+
+JF
+
+Jacobian matrix
+
+Expected change to the common-ground posterior when
+operator dimension d is mis-set; estimated from
+independent comprehension probes.
+Interactional factors conditioning repair.
+Update-oriented repair and value-intact form correction.
+Generic repair-targeting response to update divergence
+and footing.
+Link used in the speaker-level repair read-out.
+Repair-read-out intercept and positive sensitivity to
+estimated non-licensing.
+Window-level update-oriented and form-oriented repair
+opportunities.
+Evidence from which a hearer infers the conditioning
+state.
+Hearer h’s situation ascription given cues.
+Processing, recovery, surprisal, and plausibility costs after
+situation uncertainty is integrated.
+Prescriptive or ideological dissonance.
+Weighted combination of low expected status,
+implementation costs, dissonance, and noise.
+Bounded signed anomaly read-out; distinct from the
+population map F below.
+Contributions of expected status, implementation costs,
+and dissonance.
+Speaker-level residual in the anomaly read-out.
+Dependency-locality component of implementation
+cost.
+Dependencies in a token and the registered length of
+each.
+Saturation point, scale, and sublinear exponent for long
+dependencies.
+Evidence confidence and confidence in a binary decision.
+Fixed concentration scale in evidence confidence.
+Inferred source of anomaly: local non-licensing, other
+community, speaker error, noise, or own overload.
+Population rate and evidence-filter shapes for the focal
+candidate.
+Expected-window likelihood update holding the
+population rate fixed.
+Composed mean-field population-and-evidence
+transition; distinct from anomaly Fi,t .
+Local linearization of the full map.
+continued on next page
+
+1 A FORMAL CORE: GRAMMATICALITY AS CONDITIONED STABILITY
+
+Symbol
+
+Type or domain
+
+Meaning and status
+
+ρ(JF )
+
+spectral radius
+
+H(θ)
+
+scalar crossing function
+
+θ‡
+
+interior boundary
+
+α, β
+Rs0 (A, n, c)
+
+positive constants
+realized population rate
+
+ΠW t
+
+realized pressure
+
+Et , X t
+
+Boolean conditions
+
+ϵ0 , ϵ 1
+
+registered rate thresholds
+
+π0 , π 1
+
+registered pressure thresholds
+
+νmin
+
+registered evidence floor
+
+Stability diagnostic; unrelated to the choice shares
+bearing a star.
+Adoption response after the evidence state is allowed to
+settle at fixed population rate.
+Population coordinate of the unstable basin boundary in
+the declared numerical regime.
+Coefficients of the optional cubic normal form only.
+Raw zero-marking rate; neither licensing nor an analyst
+estimate.
+Attributable marked-competitor pressure in the
+preceding window, weighted by full-choice shares and
+excluding outside-option choices.
+Entry and release conditions for obligatoriness; the
+argument list distinguishes release Xt from the coupled
+state above.
+Entry and release cutoffs with the release threshold
+strictly higher.
+Entry and release cutoffs with the release threshold
+strictly lower.
+Minimum effective concentration for an analyst to
+identify obligatoriness; it warrants an ontic claim but
+doesn’t constitute it.
+
+7
+
+Local quantities used for a single equation are defined immediately before or after that equation.
+If a recurring symbol isn’t in this register and lacks a local definition, that absence is a specification
+error rather than an invitation to infer its meaning from convention.
+1
+
+A formal core: grammaticality as conditioned stability
+The framework separates two explanatory targets. A state theory specifies the conditions under
+which a form–value pair is grammatical for a population in a communicative situation at time t; a
+dynamics module specifies candidate routes by which such states arise, persist, and change.
+The distinction matters because the account is projectibility-first. Its primary payoff is a family of inferences: observing part of a grammaticality profile should license expectations about repair,
+transmission, exposure, and change in cases not used to define the profile. The state theory specifies
+the world-side pattern over which those projections run. The dynamics module then states candidate support hypotheses about what could stabilize that pattern and, where the evidence warrants,
+maintain it. Support claims come in grades. Stabilization, maintenance by a production–repair loop,
+and control by a deviation-detecting process are distinct claims, each requiring independent evidence
+(Reynolds, 2026a, 2026b). In Woodward’s interventionist terms, a stabilizer earns that status when
+an intervention on it changes the profile in an invariant, predictable way (Woodward, 2001, 2003).
+1.1 Conditioning structure
+Let c ∈ C be a conditioning state, a construed communicative situation in Wiese’s (2023) sense,
+together with whatever norm-centre is treated as relevant. Nothing here requires c to be externally
+given; interlocutors can misalign about c, and c can be learned, split, and renegotiated over time.
+
+1 A FORMAL CORE: GRAMMATICALITY AS CONDITIONED STABILITY
+
+8
+
+For many purposes it helps to think of c as a bundle that may include situational features (activity
+type, medium, footing), stable baselines tied to speaker ascription, and norm-orientation (discoursecommunity identification), but the formalism treats c abstractly as the conditioning variable that
+selects the relevant distribution of form–value relations.
+1.2 Objects
+Before introducing the notation, here is the ordinary-language picture. An assembly is a candidate
+way of building a form–value pair out of learned patterns. The model asks four questions about it:
+is there a way to build it at all? Do the grammatical instructions contributed by its parts fit together?
+Are the instructions that this situation requires actually supplied? And does the relevant community
+treat the patterns involved as available resources? A negative answer can arise at any of these points.
+Difficulty of processing, implausibility of the construal, and prescriptive dissonance are different:
+they can make an otherwise licensed assembly feel bad without changing its status.
+The table maps that sequence onto the formal core. The prose that follows first describes constructions and assemblies, then distinguishes the community state from the evidence-based estimate
+of it. Readers need not retain the symbols on first pass: grammatical status tracks whether a population has an assembly that passes all four questions in a situation, while the evidence also records how
+settled that estimate is.
+Expository role
+coverage / structural
+viability
+operator compatibility
+saturation
+content oddness
+situational licensing
+status profile
+decision threshold
+
+Formal object (§3)
+
+
+1 A(f, v) ̸= ∅
+def(A): unification
+satt (A, c)
+plausibility term in Ri (§1.7)
+population rate θt ; Beta
+posterior; Lt (A, c)
+Stθ population state;
+(r)
+Sbt = Er [Stθ ]
+τ (c), §1.3.4
+
+Work in the formal core
+structural viability: some covering
+assembly exists
+hard operator-value compatibility
+derived saturation of obligatory
+dimensions
+content-oddness as a subjective cost
+population licensing and its evidence
+state
+status and its epistemic estimate; simple
+products are limiting cases (§1.3.1)
+decision-theoretic read-out only
+
+Table 2: Where the expository roles from the opening sections live in the formal core. The formal
+implementation uses assemblies, unification, licensing posteriors, and decision read-outs.
+The typed notation register preceding this section defines every recurring symbol and fixed parameter. Local quantities that occur in only one derivation are defined where they enter. The register
+is authoritative when a familiar letter has more than one explicitly marked role.
+The core’s linguistic unit is the construction, in the CxG sense of a learned typed association
+at any grain (Fillmore et al., 1988; Goldberg, 1995; Sag, 2012). Following the richer Sign-Based
+Construction Grammar perspective, a construction can constrain phonology, syntax, semantics, discourse context, and relations among daughter signs. This richer object isn’t reducible to a bare form–
+meaning pair. The quantitative model uses a task-specific projection of that richer object: a typed
+form template, content contribution, partial operator constraint ωκ , frame and niche tags, and a con-
+
+1 A FORMAL CORE: GRAMMATICALITY AS CONDITIONED STABILITY
+
+9
+
+structional identity κ on which licensing is defined. Any additional SBCG fields remain available to
+the coverage and typing system even when the statistical dynamics don’t inspect them. Nothing here
+is level-specific: a construction can be the plural cell of a lexeme, a clause pattern, an intonational
+contour, or a code-mixed frame.
+Operator contributions live in a typed constraint space Ω over a dimension set O(c). Illustrative
+dimensions are clause type, polarity, tense–aspect anchoring, role allocation, scope, reference tracking, and information-packaging instructions; this isn’t an exhaustive inventory. Which dimensions
+belong to O(c) is itself conventional: a contrast enters only when the community has conventionalized it as an operator contrast in the sense of §3.2, so the inventory is community-indexed. Atomic
+feature–value assignments are a useful special case, but the general object is a constraint structure:
+tense intervals, scope relations, anaphoric dependencies, and information-packaging requirements
+can refine one another without being identical atomic values. Two contributions unify, written
+ω ⊔ ω ′ , iff their conjunction is satisfiable in the typed constraint system; otherwise the join is undefined (⊥). Compatibility remains Boolean, but equality of atomic values isn’t the only way to
+satisfy it.
+An assembly A is a finite tree
+F of constructions with all slots filled. Its yield is form(A); its
+operator assignment is ω(A) = κ∈A ωκ , defined iff all contributions unify; its value is val(A).
+Three predicates over assemblies do the core work:
+
+
+def(A) = 1 ω(A) is defined
+
+
+satt (A, c) = 1 ω(A) is total on OBLt (n(A, c), c, A)
+V
+Lt (A, c) = κ∈A Zt (κ, c)
+
+(compatibility)
+
+(1)
+
+(saturation)
+(licensing)
+
+(2)
+(3)
+
+Compatibility is hard: there’s no weighting an operator clash away. Saturation refers to the obligatory dimensions OBLt (n(A, c), c, A), which aren’t stipulated per language. Section 2.5 derives
+them from a preceding window of population-level, niche-specific zero-marking rates and ungated
+preemption pressure, without using the analyst’s posterior or saturation itself. On this definition,
+satt is a path-dependent ontic macro rather than an independent primitive or an epistemic estimate.
+For an assembly A of frame type φ(A) and registered at-issue niche n(A, c), OBLt (n(A, c), c, A)
+abbreviates OBLt (n(A, c), c, φ(A)). English progressive marking and Turkish evidential marking
+are the worked cases there.
+Licensing is latent, and the Beta is typed over a rate rather than a fixed binary fact. Let
+zj,t (κ, c) ∈ {0, 1} be speaker j’s local inclusion state for construction κ in c. The population
+state θt (κ, c) ∈ [0, 1] is the latent exchangeable licensing-rate parameter. For a randomly sampled
+exchangeable speaker, Zt (κ, c) | θt (κ, c) ∼ Bernoulli(θt (κ, c)) is the predictive inclusion state
+for that speaker, and Lt (A, c) is the event that the sampled speaker licenses all nodes in A. The
+definition needs a joint predictive distribution over the vector {Zt (κ, c) : κ ∈ A}. Posterior
+dependence among node rates represents epistemic co-uncertainty; it doesn’t by itself generate
+co-licensing within a speaker. A tractable joint model introduces a latent lect ℓi ∈ {1, . . . , H} for
+speaker i:
+ℓi ∼ Categorical(π),
+
+zi,t (κ, c) | ℓi = ℓ ∼ Bernoulli(θℓ,t (κ, c)) .
+
+1 A FORMAL CORE: GRAMMATICALITY AS CONDITIONED STABILITY
+
+10
+
+Conditional independence across nodes within a lect is still an approximation; an explicit within-lect
+joint can replace it where constructional kin cluster more tightly. Under this tractable version,
+P (Lt (A, c) = 1 | π, θ t ) =
+
+H
+X
+ℓ=1
+
+πℓ
+
+Y
+
+θℓ,t (κ, c),
+
+κ∈A
+
+P
+
+and the marginal rate used elsewhere is θt (κ, c) =
+ℓ πℓ θℓ,t (κ, c). The independent product of
+marginal node rates is a single-lect limiting case, not a general account of assembly prevalence.
+No speaker or analyst observes θ directly. Under exchangeability, de Finetti’s representation theorem supplies a mixing measure over θ (de Finetti, 1937). The Beta family is the conjugate specialization that adds linear predictive updating: in the Bernoulli case, linearity of the posterior expectation
+of success in the counts is the binary analogue of Johnson’s sufficientness postulate in Zabell’s generalization (Zabell, 1982). Direct inclusion observations would preserve that conjugacy. The choice
+observations used here don’t: a non-target choice has an affine likelihood in θ, so its exact finitewindow posterior is a Beta mixture. Section 2.3 uses the Beta family as an assumed-density approximation, matching the exact mixture’s mean and variance after each window. A speaker’s filter has
+(i)
+(i)
+mean Ct (κ, c) and concentration νt (κ, c); an analyst can use the same family with a different evidbt and νbt . The choice likelihood, memory discount, and moment projection are
+ence set, producing C
+distinct modelling commitments. The population transition in (26) states how speakers’ filters can
+alter later inclusion; updating an analyst posterior doesn’t alter the population. The vector Λi,t collects speaker i’s inclusion states zi,t (κ, c), and the population distribution over those vectors supplies
+the population-level status state.
+Compositional inheritance matters here. A novel token such as She texted him the address needn’t
+have been encountered: the assemblies covering it are built from nodes–ditransitive transfer, pronominal object order, the relevant lexical-category relations–each with its own posterior, and the token
+inherits its status through them. What the learner updates is constructional regions, not memorized
+sentence types, so first-heard sentences aren’t predicted to have zero licensing. Actual statistical pooling would require hierarchical hyperpriors over construction families, lexemes, and situations; this
+core needs only the compositional inheritance just described.
+1.3 Grammatical status as a conditioned state property
+1.3.1 Status and its posterior estimate
+For a form f , value v, and conditioning state c, let A(f, v) be the set of assemblies with yield f and
+value v, and let YWt collect the preceding window’s population realization rates, ungated pressure
+statistics, and prior obligatoriness state. The population state is
+Stθ (f, v, c) = P
+
+
+
+∃A ∈ A(f, v) : def(A) ∧ satt (A, c) ∧ Lt (A, c)
+
+
+
+θ t , YWt , c ,
+
+(4)
+
+the prevalence, among exchangeable speakers in c, of at least one defined, saturated, licensed route to
+the form–value pair. The history argument is needed because satt inherits its path dependence from
+OBLt , which is determined by the preceding population window and prior convention state rather
+than by an instantaneous estimate. Neither a learner nor an analyst observes this population state
+directly. For an epistemic bearer r (a speaker i or an analyst a), the estimate is
+
+1 A FORMAL CORE: GRAMMATICALITY AS CONDITIONED STABILITY
+
+11
+
+
+
+(r)
+Sbt (f, v, c) = Epr (θt ,YWt |Dr,t ) Stθ (f, v, c) ,
+
+(5)
+
+where Dr,t is that bearer’s evidence to date: tokens, structured omissions, repairs, avoidance, and
+(r)
+situation cues. Status is the population property Stθ ; Sbt is a particular bearer’s estimate of it. For
+(a)
+(i)
+compactness, later predictive equations write Gt for the analyst’s Sbt and gi,t for speaker i’s Sbt .
+Where value is recoverable from context, I write Gt (u, c) and Stθ (u, c) for readability. For a single
+pivotal node, Stθ = θt (κ, c) when compatibility and saturation are fixed at one, so the estimate’s
+mean and concentration are literally the corresponding Beta posterior’s mean and concentration.
+Two scope conditions matter. First, for a finite yield and a finite, non-empty-recursive construction inventory (no cycles of null-yield expansions–the standard offline-parsability condition), A(f, v)
+is finite, so the existential is a finite disjunction. No additional tractability stipulation is needed.
+Second, the relation to simpler heuristics. In the high-precision limit, where every node posterior has concentrated, the pair (4)–(5) has the same limiting classification as a weakest-link rule
+over the best assembly: a licensed, defined, saturated assembly exists or it doesn’t. And under a singlelect, within-speaker node-independence approximation, posterior independence across nodes, and a
+single dominant assembly A∗ , the mean factorizes,
+
+ 
+ Y
+(r)
+Ct (κ, c).
+(6)
+Sbt (f, v, c) ≈ 1 def(A∗ ) · 1 satt (A∗ , c) ·
+κ∈A∗
+
+A three-factor product heuristic can work in easy cases as the single-assembly, independent, highprecision special case of (4)–(5), with structural viability as non-emptiness and hard compatibility
+folded into def. Away from that limit, (4) supplies the population state and (5) its posterior mean, so
+uncertainty remains part of the status profile rather than being folded into the mean.
+A three-factor heuristic can also hide content-oddness inside compatibility–the concentration of
+construal for cases like colorless green ideas. That work lives instead in the subjective read-out’s cost
+vector (§1.7). A lexically bizarre but operator-compatible construal doesn’t lower Stθ or its estimate
+and shows up as a plausibility cost in Ri : the sentence is grammatical and odd, matching the target
+contrast.
+1.3.2 Projectible use of the posterior state
+Grammaticality projects over this posterior state. Gt is compact notation for the analyst’s estimate
+(a)
+Sbt , the mean of a posterior random variable whose dispersion remains available for projection. Figure 1 depicts both the estimate and its dispersion.
+The causal bearers remain speakers and their inclusion or evidence states. A speaker’s candidate
+availability gates production, while a hearer’s own estimate gi,t can enter repair:
+Pr(produce u | n, c, t) ∝ zi (u, c)eUi,t (u;n,c) ,
+i
+
+
+
+Pr(repair u | c, t) = σ η0 + η1 1 − gi,t (u, c) r(∆, ι) ,
+i
+
+(7)
+η1 > 0,
+
+(8)
+
+where zi (u, c) abbreviates availability of a complete route for speaker i (expanded in §2.2) and σ is
+the logistic link.
+
+1 A FORMAL CORE: GRAMMATICALITY AS CONDITIONED STABILITY
+
+12
+
+The repair expression is the ∆-sensitive form used in §2.3; if ∆ and footing are marginalized out, it
+reduces to a monotone reduced form in 1 − gi,t . Aggregate production and repair are obtained by
+integrating over speakers; Gt predicts those rates but doesn’t cause them. This scopes the controller
+claim: licensing failures with readily recoverable intended updates but low update divergence should
+attract only baseline understanding-repair and, if stable, be supported mainly by preemption, while
+operator mis-settings draw the ∆-scaled repair flow; correction rates should instead track ascription
+and prescriptive dissonance.
+Other generalizations run over epistemic concentration, and they’re the diagnostic ones. Two
+form–value pairs can share a low mean while differing in how much evidence backs it, and the update
+dynamics make them behave differently under new exposure: a diffuse posterior moves with framing
+and familiarization; a concentrated one doesn’t. This epistemic dispersion is Var(Stθ | Dr,t ) for
+epistemic bearer r. Behavioral predictions use a speaker’s r = i posterior; analyst-facing estimates
+use r = a. In single-node cases the corresponding concentration is the pivotal node’s ν (r) .
+Population heterogeneity is different. A community can have a sharply estimated interior θ because speakers are genuinely split, as with might could in a mixed community. That state has low
+epistemic variance but high between-speaker disagreement. The interior estimate counts as genuine
+heterogeneity only when no independently specifiable refinement of c (§1.6) splits the population toward the attractors; if such a partition exists, the apparent heterogeneity was a mis-specified conditioning state. Within-speaker test–retest instability and framing lability identify epistemic uncertainty;
+between-speaker disagreement with within-speaker stability identifies heterogeneity. Satiation and
+framing rank order turn on 1/ν. For a moribund contrast, falling concentration is the direct filter
+prediction; between-speaker dispersion is a separate, conditional outcome whose ordering depends
+on how histories, priors, networks, and cohorts diverge.
+For a single node and epistemic bearer r, with θ | Dr,t ∼ Beta(a(r) , b(r) ), let C (r) = E[θ | Dr,t ]
+and ν (r) = a(r) + b(r) . The two dispersions decompose as
+C (r) (1 − C (r) )
+,
+ν (r) + 1
+C (r) (1 − C (r) )ν (r)
+(r)
+Uhet = E[θ(1 − θ) | Dr,t ] =
+.
+ν (r) + 1
+Uepi = Var(θ | Dr,t ) =
+(r)
+
+(9)
+(10)
+
+Their sum is the predictive variance of a newly sampled speaker’s inclusion state, C (r) (1 − C (r) ). For
+(r)
+(r)
+assemblies the corresponding quantities are Uepi = Var(Stθ | Dr,t ) and Uhet = E[Stθ (1−Stθ ) | Dr,t ].
+A preempted gap has low mean, low epistemic uncertainty, and low heterogeneity; a sparse form has
+appreciable epistemic uncertainty; a stably divided community has low epistemic uncertainty but
+high heterogeneity.
+The status regions are:
+(r)
+– licensed: Sbt ≈ 1, Var(Stθ | Dr,t ) ≈ 0;
+(r)
+– excluded: Sbt ≈ 0, Var(Stθ | Dr,t ) ≈ 0–confident rejection, whether by structural failure or by
+concentrated non-licensing;
+– unsettled: Var(Stθ | Dr,t ) high, in two subtypes–starved (low concentration from a sparse opportunity set, as with independent relative whose) and avoidance-divided (low concentration despite
+dense opportunities, from conflicting or absorbed evidence flows, as with defective cells, §2.6);
+
+1 A FORMAL CORE: GRAMMATICALITY AS CONDITIONED STABILITY
+
+13
+
+high
+
+posterior
+concentration
+
+preempted gap
+
+licensed
+
+*Which… car?
+
+Which car…?
+
+low
+
+same low mean,
+different projection
+
+winnerless cell
+
+pobedit’ 1sg community-novel
+?
+friend of whose
+
+0
+
+1
+
+posterior mean Gt = E[Stθ ]
+
+Figure 1: The epistemic status state has two dimensions. Preempted gaps (dense preemption, posterior concentrated near zero) and winnerless cells (readily identifiable candidates with weak support,
+low mean but diffuse evidence) share a low mean and part on concentration, the axis that predicts
+satiation, framing sensitivity, and actuation. Stable between-speaker heterogeneity is a separate dimension, not shown.
+– heterogeneous: posterior concentration high but the estimated population rate is interior–stable
+within speakers, divided across speakers.
+The projectible generalizations–satiation profiles, framing sensitivity, transmission fidelity, repair
+rates, actuation–run over a state that carries the dimension they turn on. Left-branch extraction and
+whose approach similar means and part on concentration; clean defective cells such as pobedit’ 1sg
+part from preempted gaps the same way. The dynamics module closes the temporal loop explicitly:
+production and repair generate later speaker evidence, speakers’ filters enter the adoption–retention
+kernel in (26), and the resulting inclusion states determine the next population rate. The analyst
+posterior only tracks that loop.
+Strictly, the object doing the projecting is the licensing profile (Gt , ν) plus independently estimated population heterogeneity, not the bare predicate grammatical. The classical predicate names
+the high-mean, high-concentration region of that profile. It projects only those expectations that
+don’t turn on concentration or heterogeneity; it doesn’t by itself predict processing cost, production
+frequency, language-model string probability, typological comparanda, or transfer across conditioning states without the situation posterior qh (c | e).
+1.3.3 Categorical talk as posterior concentration
+Communities often treat grammaticality as a membership fact: a relationship counts as an available resource in c or it doesn’t. On this account, a speaker’s categorical talk is expected where that
+speaker’s posterior has concentrated–where the estimated licensing state sits near an attractor and
+Var(Stθ | Di,t ) ≈ 0. Categoricality is a property of the population profile, not a threshold imposed
+by the analyst. Section 2.4 gives conditional dynamics under which an independently fixed adoption
+
+1 A FORMAL CORE: GRAMMATICALITY AS CONDITIONED STABILITY
+
+14
+
+criterion can yield separated attracting regions. In the contested middle, categorical talk is predicted
+to be unstable and stakes-sensitive.
+1.3.4 A decision-theoretic read-out
+The response threshold τ (c) belongs in the read-out. A judge in c chooses between in-repertoire
+and not-in-repertoire under asymmetric losses Lfa (c) and Lfr (c). The optimal rule accepts iff
+gi,t (u, c) ≥ τ (c) =
+
+Lfa (c)
+.
+Lfa (c) + Lfr (c)
+
+(11)
+
+τ (c) does no constitutive work: it’s a decision criterion induced by payoff structure, strict in
+high-stakes institutional contexts, permissive in in-group ones. Where population licensing states
+are well separated, the read-out is insensitive to the exact value of τ (c); in the middle, judgments
+should be unstable and stakes-sensitive. A decision-layer discontinuity test can probe this read-out,
+but smoothness through τ (c) wouldn’t by itself refute the licensing-state theory.
+Here “objective” means population-level and convention-constituted. The status stands apart
+from any individual’s response the way facts about word meaning or currency do: given the community’s practices, the projected relations aren’t made available by the analyst’s decision to group
+cases together (Reynolds, 2026a). Conventional status would be an equally accurate name.
+τ (c) and the adoption criterion qκ in (27) have different roles. The former governs a judge’s
+response under independently measured stakes; the latter is a causal assumption about learning or
+coordination costs. Where licensing states are well separated, the read-out is insensitive to the exact
+value of τ (c); in the contested middle, τ (c) is set by independent stakes cues.
+1.4 The scope of the existential
+Structural coverage is the non-emptiness of A(f, v): genuine analyzability failure is the case where
+no assembly covers the string at all. Conditional on a fixed inventory, Stθ = Gt = 0 from an existential over the empty set. With inventory uncertainty, the value is zero up to whatever posterior
+mass remains on an unobserved stored construction. Empty coverage is the categorical failure mode
+generated by structural failure alone.
+A condition belongs in a form template only when violating it makes the intended value unrecoverable or the exponent unidentifiable as an instance of the construction. If the intended value is
+recoverable and the exponent is identifiable, the issue is licensing or compatibility, not coverage. This
+keeps template typing from becoming a way to relabel any concentrated licensing failure as structural
+failure.
+Analyzability is relative to the constructional inventory, stored wholes included, not to productive composition alone. Syntactically anomalous idioms make the difference visible: by and large, far
+be it from me, and come Monday have no analysis by the productive syntax of English, but they’re fully
+conventional (Fillmore et al., 1988). They’re covered by their own stored constructions–coverage by
+some node, productive or memorized, is what analyzability means here. The cost is explicit: nonemptiness isn’t pre-conventional. What it contributes is a different kind of failure (no covering assembly at all), not a convention-free one.
+A string with no covering assembly gets Gt = 0 conditional on the inventory; a preempted gap
+gets Gt ≈ 0 from a covering assembly licensed to zero. Both are excluded, and they differ in why–no
+
+1 A FORMAL CORE: GRAMMATICALITY AS CONDITIONED STABILITY
+
+15
+
+assembly versus licensed-to-zero assembly–a difference with an empirical signature: the first fails under every construal and resists all framing once the relevant inventory is fixed; the second has a readily
+recoverable construal, resists framing by concentration (§1.3.2), and is predicted to be re-openable
+only by the actuation route of §2.8. The constitutive core stays minimal without losing the distinction.
+Because the existential is over value-matched assemblies, homophonous strings can split by construal. A form with one clashing parse and one compatible parse is grammatical on the compatible
+value and excluded on the clashing value; ambiguity doesn’t let a failed assembly contaminate a successful one.
+1.4.1 Assigning a failure
+The result is a four-step diagnostic procedure, applied before consulting acceptability data and checkable against the independent indicators of §1.6 at each step.
+Ask first whether any assembly covers u: if none does, the failure is structural (*Can the have
+running). If a covering assembly exists, ask whether its operator contributions unify: if every covering assembly sets some dimension twice incompatibly, the failure is compatibility (*I’ve finished it
+yesterday–two values on the reference-interval dimension; and the information-packaging clash in
+Cuneo and Goldberg’s island example is the same formal object on a different dimension (Cuneo &
+Goldberg, 2022)).
+If the contributions unify, ask whether the obligatory dimensions are saturated: if not, the failure
+is saturation (unmarked progressive in an ongoing-at-issue English niche). Only then does licensing
+arbitrate: a defined, saturated assembly whose pivotal node the population withholds is a licensing
+failure (*I have 25 years for age–the assembly is compatible, the intended value is recoverable, and the
+age-predication node sits at Ct ≈ 0 under preemption by the be-frame).
+Because the dimension inventory O(c) is itself conventionalized, what counts as a compatibility
+failure in c depends on which contrasts the community has conventionalized. The steps are ordered,
+not independent–and each step’s verdict is checkable against evidence other than the judgment it
+explains, which is what keeps the procedure from reproducing the circularity of a pure communityverdict account.
+1.5 Interlocutor misalignment about conditioning
+Because c is construed, interlocutors can disagree about which conditioning state is in force. Let a
+hearer h maintain a posterior qh (c | e) over conditioning states given cues e (situational cues, ascription cues, stance cues, etc.). Then the hearer’s expected status is
+X
+(h)
+Ĝt (u | e) =
+Gt (u, c) qh (c | e).
+c∈C
+
+1.6 Identifying the conditioning state before prediction
+The conditioning state c isn’t a free parameter to be selected after a judgment is observed. For empirical work, c has to be fixed before predicting ratings or repair behaviour. The posterior qh (c | e) is the
+identification device, estimated from non-judgment cues such as activity type, medium, participant
+roles, speaker ascription, register cues, and overt norm orientation. A form like might could isn’t rescued by choosing a sympathetic norm-centre after the fact; the model predicts different judgments
+only when the independent cues make that norm-centre probable.
+
+1 A FORMAL CORE: GRAMMATICALITY AS CONDITIONED STABILITY
+
+16
+
+Separate evidence streams identify the licensing and performance layers. Ct , the posterior mean of
+the population licensing rate, is identified by corpus-rate-per-opportunity, elicited production, and
+repair behaviour, not by acceptability ratings alone. F , the anomaly signal, is identified by ratings,
+online measures, and self-reports. The confidence read-out Φ (§1.7) is identified by test–retest stability and explicit confidence ratings, neither of which enters the estimation of the licensing posterior
+itself. Framing lability is a confirmatory outcome, not an identifying input. The model is falsified
+where these dissociate in the wrong direction: if satiation changes later corpus rates for a purportedly
+preempted gap, if repair behaviour tracks prescriptive dissonance rather than licensing, or if highopportunity preempted forms behave like low-evidence uncertainties, the state assignment is wrong.
+Reassignment is constrained. Localizing a failed prediction to a narrower conditioning state is
+warranted only when that state is specifiable independently of the surviving cases, by activity type,
+medium, participant roles, or norm-orientation fixed before the failures were seen (Reynolds, 2026a).
+A partition of C redrawn around exactly the successes redescribes failure as success; it doesn’t rescue
+the model.
+Confirmatory studies should register the conditioning partition and the protocol for estimating
+⋆
+ρt and ρe⋆t (e.g. forced-choice norming over the competitor set, with the outside option retained
+for the latter, before the licensing data is touched). The corpus checks in this paper are illustrative
+probes, not registered tests. Under that discipline, repeated post-hoc reassignment across future studies counts against the framework itself, not just against particular state assignments.
+The same discipline applies to the construction inventory H, its template-to-frame typing, and
+the mapping from candidate realizations to assemblies and pivotal nodes. These choices have to be
+fixed before the target judgments or corpus absences are inspected, alongside c, n, ρe⋆t , and τ (c). A
+later inventory change may be a legitimate reanalysis, but it has to be reported as such rather than
+treated as if the original prediction had survived. The untensed H is the registered representational
+inventory for a study, not the set of currently licensed constructions: diachronic entry and exit occur
+through zi,t and θt . Expanding H is a separately reported model revision.
+Two identification points follow from the fact that a corpus rate conflates availability and counterfactual choice (§2.2), not licensing alone. First, the relevant counterfactual choice term has to be
+estimated from evidence that doesn’t include the licensing data it later interprets. A forced-choice
+⋆
+to a separate sample and
+norming task supplies it: present the niche n and the competitor set Vn,t
+record how often each candidate is chosen when stipulated to be available. Candidate-only choice
+yields ρ⋆t ; retaining avoidance, periphrasis, and repair-in-progress yields the full-choice ρe⋆t required by
+the production and omission models. Both are fixed before any corpus rate for u is consulted, so a
+low rate can be diagnosed as non-licensing (Ct ≈ 0, ρe⋆t high) rather than licensed-but-dispreferred
+selection (Ct high, ρe⋆t ≈ 0).
+Second, τ (c) isn’t fit to the judgments it predicts. Where population licensing states are well
+separated (§2.4), Gt is insensitive to the exact threshold, so no point estimate of τ (c) is needed; in
+the contested middle, τ (c) is set by independent stakes cues (institutional versus in-group footing),
+and the movable-cutoff prediction of §1.3.4 tests the decision layer directly: manipulate the stakes
+and the location of any response-type switch should move, which can’t happen if τ (c) were merely a
+curve fitted to the responses.
+The niche n is disciplined in the same way as c. Before an absence is counted as preemption, the
+analyst has to specify the communicative job, the recoverable intended value, the competitor set, and
+
+1 A FORMAL CORE: GRAMMATICALITY AS CONDITIONED STABILITY
+
+17
+
+the outside option without using the target’s acceptability as the criterion. The counterfactual choice
+terms ρ⋆t (u | n, c) and ρe⋆t (u | n, c) are then normed independently, for example by forced choice
+under a stipulation that all candidates in the set are available, once without and once with the outside
+response.
+A low-rate candidate counts as preempted only when Nt (n, c) is large, ρe⋆t is non-negligible, and
+omissions are attributable to competitor choice rather than avoidance; otherwise the same absence
+is starved or divided. Classifications of low-mean cases should be reported with robustness checks
+across at least two plausible niche granularities.
+1.7 The feeling of (un)grammaticality
+Speakers register putative violations through a metacognitive signal that can diverge from status; the
+two are identified by different evidence streams (§1.6). The observable phenomenology is modeled as
+a pair: a signed anomaly signal and a confidence read-out. The pair is what lets the model distinguish
+confident rejection from ineffability.
+(h)
+Let Ĝi,t (u | e) be hearer i’s expected status under situation uncertainty (§1.5). Write Ri (u, e)
+and Ii (u, e) for implementation costs and prescriptive dissonance after cue-based situation uncertainty has been integrated. The anomaly drive accumulates low expected status, implementation
+costs, and ideological overlays:
+
+(h)
+Mi,t (u, e) = αG 1 − Ĝi,t (u | e) + γ ⊤ Ri (u, e) + δI Ii (u, e) + εi ,
+max{Mi,t , 0}
+Fi,t (u, e) = −
+∈ (−1, 0].
+1 + max{Mi,t , 0}
+
+(12)
+(13)
+
+The bounded link and the floor at zero encode the asymmetry of the signal: there’s no positive feeling of grammaticality, only the negative signal registered on deviation. Ii is prescriptive dissonance.
+The cost vector Ri includes the processing components–the locality term Lloc (u) with its saturating
+form, interference, garden-path reanalysis, surprisal–and a plausibility component: the implausibility of the best construal given world knowledge and lexical expectations. That component handles
+content oddness without making it a status fact. Colorless green ideas sleep furiously is defined, saturated, and licensed node by node, so Gt ≈ 1; its strangeness enters here, as a construal-plausibility
+cost, and the sentence comes out grammatical and odd, with no extra primitive.
+The locality component can still be written explicitly:
+(
+X
+k,
+k ≤ Ksat ,
+
+Lloc (u) =
+ℓ |d| ,
+ℓ(k) =
+Ksat + βL (k − Ksat )ηL , k > Ksat .
+d∈Ddep (u)
+Here |d| is the length of dependency d (in intervening discourse referents or words), Ksat is a saturation threshold beyond which additional distance contributes sublinearly, and βL , ηL (with 0 <
+ηL < 1) control the rate of that sublinear growth.
+The second read-out is confidence. Two quantities matter. Let νi (u, e) be the concentration of
+i’s posterior over the pivotal condition–the conjunct in (4) on which the token’s status turns–after
+cue-based situation uncertainty has been integrated. Conditional on an independently fixed c, write
+νi (u, c); if the pivotal condition differs across high-probability conditioning states, the observable
+
+1 A FORMAL CORE: GRAMMATICALITY AS CONDITIONED STABILITY
+
+18
+
+confidence read-out follows the modal condition and treats the remaining mixture as lower confidence. For structural and compatibility failures the pivotal condition is a fact about the assembly set,
+so once the relevant inventory is fixed that posterior is treated as effectively degenerate: confidence is
+high by modelling convention, not by a separate learning theorem. For licensing-pivotal tokens, νi is
+the Beta concentration of the pivotal node’s posterior (§2.3).
+Evidence confidence, the quantity that predicts framing lability, is
+Φev
+i,t (u, e) =
+
+νi (u, e)
+∈ [0, 1),
+νi (u, e) + ν0
+
+(14)
+
+with ν0 a scaling constant. Confidence in a binary in-repertoire/not-in-repertoire verdict
+also depends on where the posterior mass lies relative to the decision threshold:
+
+
+
+θ
+∗
+∗
+θ
+∗
+∗
+Φdec
+.
+(15)
+i,t (u, e) = max P St (u, c ) ≥ τ (c ) | Di,t , e , P St (u, c ) < τ (c ) | Di,t , e
+A sharply estimated interior population split has high Φev but low decision confidence if its mass lies
+near τ (c). Here c∗ is the modal conditioning state under qh (c | e); residual situation uncertainty
+lowers the effective confidence as described above. In the prose below, Φ names the relevant observed
+confidence read-out: decision confidence for explicit verdicts, evidence confidence for framing and
+familiarization predictions. The pair (F, Φ) is the observable phenomenology, and the predictions
+separate:
+– No assembly (*Can the have running): F strongly negative, Φ ≈ 1, under every construal.
+– Compatibility failure (*I’ve finished it yesterday): F strongly negative, Φ ≈ 1; entrenchment of
+the parts can’t repair it, because unification is hard.
+– Preempted gap (left-branch extraction if ρe⋆t norms high): F strongly negative, Φ high–“that’s impossible”; framing-resistant.
+– Defective cell (pobedit’ 1sg; *amn’t as a borderline case): F negative, Φ low–“I don’t know how to
+say it”; framing-movable when the outside option, rather than a winner, absorbs production.
+– Community-novel (independent relative whose): F weakly negative, Φ low; framing-movable, with
+surprisal adding R-channel noise.
+– Processing overload (centre embedding): F negative via Ri , Φ moderate; satiation lowers the R
+contribution, moving F toward zero without touching the licensing posterior.
+Optionally, the model can carry an attribution variable: on anomaly detection the hearer infers
+a source ζ ∈ {unlicensed, other-community, speaker error, noise, own overload},
+with the posterior over ζ shaped by Φ and by the same ascription machinery as qh (c | e). That
+gives a measurement route for why learner errors and cross-dialect tokens fail to trigger the same anomaly signal–they’re attributed to other-community or error–and it gives the misattribution
+effects of §5.6 a formal home. The attribution layer is a measurement refinement, not part of status.
+A direct falsifier follows: if measured confidence fails to dissociate preempted gaps from clean
+winnerless cells such as pobedit’ 1sg at matched mean ratings, posterior concentration has no independent empirical role in the model.
+1.8 Measurement: four observation channels
+Status is latent; it’s estimated from converging observation channels, none of which defines it. The
+observation model has four channels:
+
+1 A FORMAL CORE: GRAMMATICALITY AS CONDITIONED STABILITY
+
+19
+
+choice among assemblies in a niche (§2.2)
+sensitive to operator mis-setting (§2.3)
+
+(16)
+(17)
+
+P (productioni | Λi,t , n, c)
+P (repairi | Λi,t , ∆, I, c)
+
+P (judgmenti | Ĝ(h) , Ri , Ii , νi , τ ) the (F, Φ) read-out of §1.7
+(18)
+P (e | c), P (c)
+cue generation and situation prior; qh (c | e) follows by Bayes
+(19)
+Production is choice among assemblies, not a direct read of licensing: a corpus rate reflects both
+availability and counterfactual choice, approximated by their product in the single-pivotal-node regime described in §2.2, and the identification discipline of §1.6 (norming ρe⋆t on independent data
+before the licensing data is touched) applies here. Repair enters with the sign predicted in §1.3.2 and
+with the ∆-sensitivity of the repair stream (§2.3). Judgment is a metacognitive read-out, not status;
+the confidence channel Φ is identified by test–retest stability and explicit confidence ratings, with
+framing lability reserved for confirmation. Situation is inferred from cues, not stipulated after the
+fact. A fit-ready version would have to compose the channels as a joint likelihood over production,
+repair, judgment, confidence, and situation cues with shared latent ℓi , Λi,t , θ t , and c, together with
+n where it isn’t fixed by an independent coding protocol. The situation posterior qh (c | e) is derived
+from P (c)P (e | c) rather than treated as a generative observation channel. Identifiability requires
+at least one non-judgment channel for θ, one non-repair estimate of ∆, and independently specified
+niches, candidate sets, and assembly availability.
+Factor analyses of acceptability ratings target the structure of the judgment channel; a factor
+counts as evidence about the grammar only when it also shows up in the independent indicators
+for licensing and compatibility. Judgment studies should report dispersion and test–retest structure
+alongside means, because the model’s sharpest projections–satiation rank order, framing lability, the
+gap/cell contrast–run over the concentration that means discard.
+The corpus-rate-per-opportunity indicator is concrete. Figure 2 shows one worked case: agreement on collective-partitive subjects (a bunch of people, the majority), where surface-head number (singular) and notional number (plural) diverge. The usage pattern is overwhelmingly one-sided, which
+makes the case useful as an audit trail. Counting only subject-position tokens after KWIC filtering
+(so non-subject false positives are removed) gives a plural-agreement share with a Wilson interval for
+each cell. The shares sit far above parity in all four tabulations, which cover three constructional cells
+because the exact and audit-augmented majority rows are nested views of one cell. Interval width
+tracks token count rather than direction. The example supplies production-choice evidence per opportunity rather than a licensing estimate by itself. It bears on licensing only if independent norming
+shows that the singular candidate and the outside option would otherwise have non-negligible choice
+mass; the Wilson intervals quantify sampling uncertainty in the production share, not uncertainty
+about licensing.
+Table 3 makes the figure auditable: exact filtered cell counts, so the estimate can be checked rather
+than taken on trust.
+
+1 A FORMAL CORE: GRAMMATICALITY AS CONDITIONED STABILITY
+
+20
+
+parity
+
+a bunch of + animate pl.
+(n=72)
+the majority + set (exact)
+(n=105)
+the majority + set (audited)
+(n=142)
+the rest of the people
+(n=14)
+0.0
+
+0.2
+
+0.4
+
+0.6
+
+0.8
+
+1.0
+
+Plural-agreement share (KWIC-filtered), Wilson 95% interval
+
+Figure 2: Production-choice evidence for a prescriptively salient agreement contrast. Pluralagreement share (dot) with Wilson 95% interval (bar) for collective-partitive subjects in coca, after
+kwic filtering to subject-position tokens; the dashed line marks parity (no directional preference).
+The share is a licensing indicator only conditional on independent norming of candidate and outsideoption choice. Data: agr-coca-projection probe (bunch, majority/minority, and partitive cells).
+Notional plural dominates in each of the three constructional cells, and the interval widens with the
+smaller denominators rather than drifting toward parity.
+Table 3: Filtered agreement cells behind Figure 2. Counts are kwic-filtered subject-position tokens
+in coca; “pl.” and “sg.” are plural- and singular-agreement targets. The surface-head baseline predicts
+singular; the observed share is plural.
+Cell
+
+pl. sg.
+
+a bunch of + animate pl.
+71
+the majority + set (exact)
+105
+the majority + set (audited) 142
+the rest of the people
+14
+
+1
+0
+0
+0
+
+N
+
+Plural share (Wilson 95%)
+
+72 0.986 (0.925–0.998)
+105 1.000 (0.965–1.000)
+142 1.000 (0.974–1.000)
+14 1.000 (0.785–1.000)
+
+1.9 Worked examples: deriving status from the posterior
+The examples from §3.9 show how population status and its posterior estimate are related. The winnerless cell adds the case where concentration carries the phenomenology rather than merely labelling
+it.
+1. *Can the have running (nonsense). A(f, v) = ∅: no covering assembly in the fixed inventory.
+Stθ = Gt = 0 up to inventory uncertainty; Φ ≈ 1 under every construal. Status: ungrammatical,
+structurally.
+2. Colorless green ideas sleep furiously. A covering assembly is defined, saturated, and licensed node
+by node: Stθ ≈ 1, with Gt and a typical gi,t tracking it. The strangeness is a construal-plausibility
+cost in Ri : F negative, status grammatical. Content-odd, not ill-formed.
+3. *I’ve finished it yesterday (compatibility failure). Covering assemblies exist, but every one sets the
+reference-interval dimension twice incompatibly–the perfect’s contribution and the deictic ad-
+
+2
+
+DYNAMICS: CANDIDATE ROUTES TO STABILIZATION
+
+21
+
+verb’s don’t unify–so def(A) = 0 throughout. Stθ = Gt = 0; Φ ≈ 1. Entrenchment of the
+component constructions can’t repair it: the clash is outside the licensing terms altogether.
+4. *I have 25 years (licensing failure). Defined and saturated; the intended value is recoverable. The
+(i)
+pivotal age-predication node has θt ≈ 0, tracked by a typical speaker at Ct ≈ 0 with high ν (i) ,
+after preemption by the be-frame in a dense niche. gi,t ≈ 0 and Φ is high. Status: ungrammatical,
+by concentrated non-licensing.
+5. ?friend of whose (community-novel). Defined and saturated; the niche is vanishingly sparse, so
+a typical speaker’s pivotal-node posterior sits near its prior with low ν (i) . The speaker’s gi,t is
+intermediate, Var(Stθ | Di,t ) is high, and Φ is low. Status: unsettled (starved); framing-movable,
+with surprisal adding R-channel noise.
+6. *Which did you buy car? (putative preempted gap). Defined and saturated; the dedicated discontinuity node–the only activated node covering the determiner–head discontinuity–receives
+negative evidence from fronting opportunities only in proportion to independently normed ρe⋆t .
+If that full-choice term is high, its posterior is driven to zero and concentrates there (§2.3); if it’s
+low, the case belongs closer to starvation. Status assignment requires the niche-norming protocol
+of §1.6.
+7. pobedit’ 1sg (winnerless cell; *amn’t as a mixed case). The niche is dense and candidate assemblies have readily recoverable values, but candidate support is weak and no candidate accumulates
+positive evidence–the outside option absorbs production, and because avoidance has low attributability, candidates accumulate little confident negative evidence either (§2.6). Given that low
+support, every candidate’s pivotal node has a low speaker-level mean and low ν (i) . The typical gi,t
+is low, Var(Stθ | Di,t ) is high, and Φ is low. Status: unsettled (avoidance-divided); phenomenology ineffability, not rejection–same mean as a preempted gap, different concentration, different
+feeling.
+8. The bread the baker the apprentice helped made is delicious (processing overload). A typical gi,t is
+high; the locality term in Ri is large. F is negative and Φ moderate; satiation and instruction move
+the R contribution, not the licensing posterior. Status: grammatical, transiently ill-felt.
+Figure 3 shows the low-opportunity versus dense-preemption contrast that underwrites several
+of these classifications.
+2
+
+Dynamics: candidate routes to stabilization
+The dynamics module explains trajectories of construction-level licensing posteriors, and in principle
+refinements of the conditioning partition itself. It doesn’t define grammaticality.
+2.1 Niches, competitors, and opportunity sets
+⋆
+Let n index a constructional niche (a communicative job), and let Vn,t
+be the opportunity set:
+the attested, hierarchically constructible, and analogically generated candidate realizations that could
+plausibly do that job in some conditioning states. Membership in this set doesn’t presuppose that a
+candidate is licensed. Let Nt (n, c) be the number of opportunities for niche n in conditioning state c
+⋆
+.
+during the current window Wt , and kt (x, n, c) the observed count of candidate realization x ∈ Vn,t
+The star matters. Preempted gaps and innovations often involve candidates with no positive
+tokens. Their counterfactual utilities are still defined because the hierarchy H generates analogical
+candidates. English learners can represent a left-branch extraction candidate by combining interrogative fronting, modifier–noun packaging, and question formation, even if no one licenses that can-
+
+DYNAMICS: CANDIDATE ROUTES TO STABILIZATION
+
+Licensing posterior (mean, 95% CrI)
+
+2
+
+1
+
+22
+
+Rare (sparse opportunities)
+Dense preemption
+
+0.8
+0.6
+0.4
+0.2
+0
+
+0
+
+5
+
+10
+
+15
+
+20
+25
+30
+Experience (steps)
+
+35
+
+40
+
+45
+
+50
+
+Figure 3: Licensing posteriors under the affine omission likelihood, from a Beta(1, 1) prior. The
+sparse arm receives one attributable omission every ten steps (five total); the dense arm receives a
+batch of five per step (250 total). Each omission has d = .495, derived from equal-utility candidates
+and outside utility −4. After each step, the exact finite mixture is projected to a Beta distribution by
+matching its first two moments. Lines show posterior means; shading gives 95% Beta intervals. Sparse
+evidence leaves a broad posterior even as its mean moves, while dense preemption lowers the mean
+and raises concentration. The data is generated by simulate_dynamics.py; population actuation also
+requires the transition in (26).
+didate as an English resource. The same machinery lets a novel but ordinary sentence inherit coverage
+from licensed higher-grain constructions rather than being preempted merely because that exact sentence type is new.
+2.2 Usage as licensing × choice among candidates
+Separate licensing from selection. A candidate can be licensed but rarely chosen.
+Let ρ⋆t (x | n, c) ∈ [0, 1] be the candidate-conditional counterfactual probability of choosing x
+if every registered candidate were available in niche n under c. A flexible choice model is a softmax
+over utilities:
+ρ⋆t (x | n, c) = P
+
+eUt (x;n,c)
+,
+Ut (x′ ;n,c)
+⋆ e
+x′ ∈Vn,t
+
+Ut (x; n, c) = w⊤ f(x; n, c).
+
+Because the production model also contains an outside option, the quantity that enters a licensing–
+usage factorization is instead the full-choice share
+ρe⋆t (x | n, c) =
+
+eUt (x;n,c)
+P
+.
+Ut (x′ ;n,c)
+eUt (⊥;n,c) + x′ ∈Vn,t
+⋆ e
+
+The two coincide only when the outside option has negligible mass. Empirical norming has to offer
+the relevant avoidance, periphrasis, or repair-in-progress response as well as the candidate realizations;
+a candidate-only forced choice estimates ρ⋆t , not ρe⋆t .
+
+2
+
+DYNAMICS: CANDIDATE ROUTES TO STABILIZATION
+
+23
+
+At the population level, the expected usage rate is
+"
+#
+zi (x, c)eUt (x;n,c)
+πt (x | n, c) = Ei Ut (⊥;n,c) P
+,
+′
+Ut (x′ ;n,c)
+e
++ x′ ∈Vn,t
+⋆ zi (x , c)e
+where, for a candidate x with form–value pair (fx , vx ),
+"
+zi (x, c) = 1 ∃A ∈ A(fx , vx ) : def(A) ∧ satt (A, c) ∧
+
+^
+
+#
+zi,t (κ, c)
+
+κ∈A
+
+abbreviates speaker i’s availability of a complete licensed route for x (with the time index suppressed
+on the left), and ⊥ is the outside option (avoidance, periphrasis, or repair-in-progress). A candidate realization appears once in the softmax: if several assemblies license the same realization, the
+existential above aggregates them into the single gate zi (x, c) rather than adding separate choice
+masses. With several required nodes, the expectation is evaluated over the joint inclusion model
+rather than inferred from marginal node means alone. When one pivotal availability gate dominates and the other gates and full-set choice weights have been normed independently, the predictive
+product πt (x | n, c) ≈ Stθ (x, c)e
+ρ⋆t (x | n, c) is a useful population-level approximation. In singlepivotal-node cases this reduces to θt (κx , c)e
+ρ⋆t (x | n, c), where κx is the node that would realize x in
+bt , as an estimation step; it
+c. The corresponding analyst prediction replaces Stθ with Gt , or θt with C
+doesn’t identify the ontic usage rate with the estimate. The full-choice term can be high even when
+the population availability is near zero, so absence becomes informative under that condition.
+2.3 Dynamics: evidence streams, weighted omissions, and repair
+Speaker i represents each construction–situation pair (κ, c) with a Beta filter over the population
+licensing rate θt (κ, c) (§1.2); the analyst may use the same family on a different data stream. The Beta
+is exact after direct Bernoulli inclusion observations, but the observable data here are gated choices.
+A target choice supplies a factor proportional to θ; a non-target choice supplies an affine factor in θ.
+The resulting finite-window posterior is generally a Beta mixture. The bounded filter below projects
+that exact mixture back to Beta by matching its first two moments.
+Discount accumulated evidence before applying the new window. For baseline prior Beta(a0 , b0 )
+and memory δm ∈ (0, 1], put
+e
+at = a0 + δm (at − a0 ),
+
+ebt = b0 + δm (bt − b0 ).
+
+(20)
+
+A quiet filter returns to its stated prior. The recurrence discounts the accumulated state, and the
+current window enters once. Setting δm = 1 gives a fixed-parameter filter, while δm < 1 is an
+assumed-density dynamic filter for a drifting convention (West & Harrison, 1997).
+Consider a non-target outcome yj ̸= x. Let
+ℓj (x) = log P (yj | Zx = 0, n, c) − log P (yj | Zx = 1, n, c)
+
+(21)
+
+be its omission log likelihood ratio, used here as an information diagnostic. The update itself uses
+the probability-space contrast below. With rj ∈ [0, 1] the independently coded probability that the
+occasion is attributable to the target niche, define
+
+
+P (yj | Zx = 1, n, c)
+d j = rj 1 −
+∈ [0, 1].
+(22)
+P (yj | Zx = 0, n, c)
+
+2
+
+DYNAMICS: CANDIDATE ROUTES TO STABILIZATION
+
+24
+
+Marginalizing the latent availability state Zx ∼ Bernoulli(θ) gives, up to a constant independent of
+θ,
+P (yj | θ, n, c) ∝ 1 − dj θ.
+Attribution scales dj in probability space: with probability 1 − rj the event is uninformative, and
+with probability rj it carries the full counterfactual contrast.
+If the window contains st target choices and mt non-target choices, its exact posterior kernel
+after (20) is
+mt
+Y
+e
+(23)
+pt+1 (θ) ∝ θaet −1+st (1 − θ)bt −1 (1 − dj θ).
+j=1
+
+The affine product has the Bernstein expansion
+mt
+Y
+
+(1 − dj θ) =
+
+j=1
+
+mt
+X
+
+ck θk (1 − θ)mt −k ,
+
+k=0
+
+where c0 = 1 and ck
+= ck + (1 − dj+1 )ck−1 , with out-of-range coefficients zero. Hence (23)
+is exactly a mixture of at most mt + 1 Betas,
+(0)
+
+(j+1)
+
+(j)
+
+(j)
+
+Beta(e
+at + st + k, ebt + mt − k),
+with normalized weights proportional to the corresponding ck times the Beta normalizer. Let µt+1
+and vt+1 be that mixture’s exact mean and variance. The bounded assumed-density step is
+µt+1 (1 − µt+1 )
+− 1,
+vt+1
+at+1
+Ct+1 =
+.
+at+1 + bt+1
+νt+1 =
+
+at+1 = µt+1 νt+1 ,
+
+bt+1 = (1 − µt+1 )νt+1 ,
+
+(24)
+(25)
+
+This projection preserves the exact first two posterior moments but not, in general, higher moments.
+Its approximation error is part of the model audit. Direct target observations, dj = 0, and dj = 1
+recover the relevant conjugate limits.
+The equations describe one pivotal availability gate. If a token’s parse or niche attribution is
+uncertain, that uncertainty is marginalized in its likelihood before dj is calculated. A multi-node
+target requires the joint inclusion model from §1.2; one omission LLR can’t be split into independent
+node failure counts.
+(i)
+Population change enters through an explicit learner-to-population transition kernel. Let Cκ,c,t
+(i)
+and νκ,c,t be speaker i’s filter summaries, let ξi,t collect lect, network, and other independently specified adoption covariates, and let λi,κ ∈ [0, 1] govern persistence. Then
+
+
+(i)
+(i)
+zi,t+1 (κ, c) ∼ Bernoulli (1 − λi,κ )zi,t (κ, c) + λi,κ hκ (Cκ,c,t , νκ,c,t , ξi,t , c) ,
+(26)
+where hκ ∈ [0, 1] is an adoption–retention response fixed independently of the outcome being predicted. The numerical analysis below uses
+hκ (C, ν; qκ ) = P (θ ≥ qκ | C, ν),
+
+(27)
+
+2
+
+DYNAMICS: CANDIDATE ROUTES TO STABILIZATION
+
+25
+
+which can be read as posterior sampling against an adoption criterion. qκ has to be fixed from independently measured switching or coordination costs, while concentration supplies the response’s
+curvature. This causal transition parameter is distinct from the judge’s non-constitutive read-out
+threshold τ (c) in §1.3.4. A logistic response to C − qκ remains a reduced-form sensitivity analysis
+only when its slope is independently estimated. The persistence term allows stable individual lects
+even when the population is divided. For a finite population of M speakers, distinguish the empirical
+prevalence
+M
+1 X
+(M )
+θt+1 (κ, c) =
+zi,t+1 (κ, c)
+M i=1
+from the exchangeable rate θt+1 . Conditional on the current population state, the expected empirical
+prevalence is the average of the transition probabilities in (26); in a homogeneous mean-field case
+the realized prevalence fluctuates around that common probability at Op (M −1/2 ). Replacing the
+average of a nonlinear hκ by its value at average covariates is a separate closure approximation whose
+error depends on population heterogeneity, not on the opportunity count Nt . Speakers’ evidence
+states can mediate population change, while an analyst’s posterior remains only a measurement of
+that change. Counterfactual informativeness. When yi is an in-repertoire competitor, let
+X
+′
+D0,i = eUt (⊥;n,c) +
+zi (x′ , c)eUt (x ;n,c)
+x′ ̸=x
+
+be the gated normalizer when x is unavailable, and define the occasion-level full-choice share
+ρe⋆i,t (x | n, c) =
+
+eUt (x;n,c)
+.
+D0,i + eUt (x;n,c)
+
+Holding the other gates fixed, normalized softmax choice then gives the exact identity
+P (yi | Zx = 1, n, c)
+= 1 − ρe⋆i,t (x | n, c),
+P (yi | Zx = 0, n, c)
+and hence
+
+
+ℓomit
+e⋆i,t (x | n, c) ≈ ρe⋆i,t (x | n, c)
+i,t (x) = − log 1 − ρ
+
+only when the target’s full gated mass is small. The common Nt · ρ⋆t score is recovered as a small-mass
+information approximation in a near-complete gap and under four further conditions: nearly every
+opportunity is an attributable omission (ri ≈ 1), the outside option has negligible mass, the other
+candidate gates match the norming task, and the target mass is small enough for the log expansion.
+Continued attributable competitor choices can keep supplying evidence against a concentrated gap;
+reopening it requires an actuation route that changes utilities, gates, or the observed likelihood.
+When yi is the outside option–periphrasis or avoidance, available at fixed utility under both
+hypotheses–the same denominator identity applies. Its choice is nearly uninformative only when the
+target’s full counterfactual mass ρe⋆i,t is small, which requires x’s utility to be low relative to the candidate set and the outside option. That condition is independently estimable from the same norming
+task. Then ℓomit
+i,t (x) ≈ 0.
+
+2
+
+DYNAMICS: CANDIDATE ROUTES TO STABILIZATION
+
+26
+
+When candidate support is weak, the affine contrast lets periphrasis remain weak evidence against
+any one candidate. This separates the defective cell’s low-concentration state from the preempted
+gap’s high-concentration state (§2.6, §1.9).
+The repair stream: a candidate controller. The paper’s support claims come in grades:
+stabilization, maintenance, control (§6). The transition and full map below specify candidate conditions for stabilization; showing that it or the proposed loop supports an actual linguistic profile
+requires longitudinal or intervention evidence. Control needs the stronger result that a process registers departures from the licensed profile and pushes the population back. Conversational repair is
+the candidate considered here.
+Let ∆(d) be the expected common-ground divergence from mis-setting operator dimension d:
+the quantitative face of “update-configuring” in the working test of §3.2. Formally, ∆(d) is an expected KL divergence between the common-ground posterior induced by the intended value and the
+posterior induced by the mis-set value, in the same spirit as RSA-style update models (Goodman &
+Frank, 2016). When a token mis-sets d, update-oriented repair occurs with probability rupd (∆, ι),
+increasing in ∆ and modulated by footing ι. A different stream targets a value-intact exponent or
+construction whose licensing evidence has concentration ν; write its probability as rform (ν, ι). Over
+a window with Nt (n, c) opportunities, the two candidate repair exposures are
+ψupd (n) = Nt (n, c) P (wrong value) rupd (∆, ι),
+ψform (n) = Nt (n, c) P (value intact, form excluded) rform (ν, ι).
+
+(28)
+
+The first magnitude increases with divergence through rupd ; the second can remain high when ∆ ≈ 0
+because the intended update is intact while the form is strongly excluded. These are candidate repair
+exposures, not yet derived terms in the likelihood-consistent filter.
+The numerical results in §2.4 supply no evidence for the repair hypothesis; the companion software’s programmed repair comparison is only a diagnostic. Repair earns controller status under
+Woodward’s interventionist criterion if an intervention on it changes the profile’s return-to-attractor
+behaviour in an invariant, predictable way (Woodward, 2001, 2003). Until then, repair remains a
+testable candidate controller.
+Two commitments follow. First, the account predicts a distribution over repair targets, not a binary grammar/style split. Opportunity is estimable from opportunity-annotated corpora; ∆ comes
+from comprehension probes fixed before the repair data is inspected; and ν comes from the independent licensing evidence. A closed, dense contrast with ∆ ≈ 0 may still be categorically excluded
+through constructional or exponent licensing, and may attract form correction. What it should lack
+is the update-oriented repair profile predicted by rupd . Second, if that repair profile tracks social indexing rather than ∆ after the other factors are held fixed, the proposed operator-directed controller
+fails cleanly. Blythe and Croft’s utterance-selection dynamics remain the no-repair special case, so
+the import is conservative (Blythe & Croft, 2012).
+Grain asymmetry and compositional inheritance. Positive and negative evidence can bear
+on different constructional grains. A heard token supports the activated constructions that sanction
+its observed properties. An attributable omission instead bears on the complete candidate-level route
+that would have made the missing realization available. In Bayesian terms, the likelihood penalty
+for structured non-occurrence falls on a hypothesis that wastes choice probability on unobserved
+sentence types (Perfors et al., 2011).
+
+2
+
+DYNAMICS: CANDIDATE ROUTES TO STABILIZATION
+
+27
+
+Compositional inheritance raises an objection. Token-level licensing is assembled from constructional nodes, so left-branch extraction activates the well-licensed nodes for interrogative fronting,
+question formation, and modifier–noun packaging. Their independent support might then seem to
+make the discontinuous candidate available.
+That result doesn’t follow from the status definition. Availability requires a complete licensed
+route, and those parent nodes sanction only contiguous realizations. None of them covers the
+determiner–head discontinuity that defines *Which did you buy car?; producing that token requires
+a node that licenses a determiner–head arc crossing the verb, and no contiguity-preserving node in
+H generates one (Reynolds, 2026c).
+The parents can retain high licensing on the strength of their abundant contiguous tokens
+without licensing the discontinuous route. If the grammar posits a dedicated left-branch-extraction
+node, its licensing has to be estimated separately. Attributable omissions then bear on the candidatelevel gate only to the extent that competitors would have been chosen instead, which is why the
+independent ρe⋆t norming required in §1.6 is necessary. This asymmetry also answers an acquisition
+worry. If token-level licensing were just pooled parent licensing, learners should pass through a stage
+of treating left-branch extraction as live. They don’t need to: the candidate is generated by analogy,
+so it’s on the table with non-zero prior support, but its dedicated node has no scaffolding of its own,
+fronting opportunities are dense in the input, and each one adds preemption mass.
+The quantitative model in this supplement updates a candidate-level pivotal gate. It doesn’t yet
+define fractional evidence allocation across all activated nodes or a numerical pooling rule. Evidence
+distribution through a construction hierarchy remains a further modelling problem; the equations
+here don’t settle it.
+A companion corpus study quantifies one side of the evidential situation: across 1,228 fronting
+opportunities in a sixteen-corpus Universal Dependencies sample, zero genuine determiner–head discontinuities occur (95% upper bound 0.24%), while contiguity-preserving alternatives (pied-piping,
+fused-head construals, and the big mess family) occur at measurable rates (Reynolds, 2026c). Comprehension pushes the same way: a fronted whose or which defaults to a fused-head parse, so the discontinuous analysis also loses the parsing race (Culicover et al., 2022). What remains to be normed is
+ρe⋆t : if speakers would rarely choose the discontinuous form even under a permissive stipulation that
+English allowed it, the absence would support starvation rather than preemption. The predicted
+non-satiation of left-branch extraction remains a test; Lu et al.’s (2024) meta-analysis of satiation in
+extraction from islands supplies the closest current analogue, not a direct measurement of lbe itself.
+Open-loop learning and closed-loop dynamics. The discrete update (25) changes an
+evidence state in a fixed exogenous environment. Figure 3 shows the resulting evidential difference
+between sparse and dense attributable omissions. Population bifurcation requires the transition
+in (26): inclusion gates production, production supplies later choice evidence, and speaker filters
+affect later adoption and retention.
+2.4 Conditional emergence of separated regimes
+The sense of emergence used here is weak and mechanistic: population-level categoricality is a
+possible outcome of learner updating, adoption, and selection. This differs from Hopper’s “emergent
+grammar”, where grammar is perpetually provisional (Hopper, 1987).
+For a homogeneous focal candidate, let Xt = (θt , at , bt ) and let Mθt (at , bt ) = (a′t , b′t ) be the
+deterministic expected-window version of the discounted likelihood update in (23). It uses the ex-
+
+2
+
+DYNAMICS: CANDIDATE ROUTES TO STABILIZATION
+
+28
+
+pected target and non-target counts implied by the gated-choice model and moment-matches the
+resulting power-likelihood posterior. The composed mean-field map is
+F (Xt ) = ((1 − λ)θt + λhκ (a′t , b′t ), a′t , b′t ) .
+
+(29)
+
+This expected-window closure is a deterministic diagnostic of the finite-population stochastic process, whose transition kernel remains (26). Fixed points satisfy F (X ∗ ) = X ∗ ; their local stability is
+governed by the full Jacobian,
+ρ(JF (X ∗ )) < 1,
+(30)
+where ρ is spectral radius. This criterion retains the slow evidence directions that a scalar population
+equation discards.
+A reduced crossing plot remains useful for location. Let η be expected opportunity inflow per
+step before observation and let q be the adoption threshold. Holding θ fixed, let (a∗η (θ), b∗η (θ)) be
+the stationary evidence state and put
+Hη,q (θ) = hκ,q (a∗η (θ), b∗η (θ)),
+
+R(θ; η, q) = Hη,q (θ) − θ.
+
+Here hκ,q (a, b) abbreviates hκ (a/(a + b), a + b; q) from (27). Zeros of R locate candidate equilibria.
+They do not supply return times: the scalar derivative can differ sharply from the dominant eigenvalue
+of (30) when evidence is slow. The unstable interior crossing is denoted θ‡ below.
+The numerical analysis uses a specified two-candidate cell: equal candidate utilities, outside utility −4, twelve opportunities per step, observation probability .6, memory .96, inclusion-update rate
+.08, a uniform Beta baseline, and qκ = .5. Under the posterior-threshold response in (27), the deterministic closure has stable fixed points effectively at 0 and 1 and an unstable crossing at θ‡ ≈ .493.
+The corresponding spectral radii are .961, 1.087, and .971. A logistic reduced form with slope 8 has
+stable fixed points near .024 and .968 around an unstable crossing near .489; slope 4 has only one
+stable interior fixed point. A proportional response likewise has one interior fixed point. Thus the
+independently specified adoption response supplies the nonlinearity.
+Finite-population runs preserve that scope result. Across 36 seeded runs of 320 steps initialized at
+.1, .5, and .9, the posterior-threshold and slope-8 responses both passed the declared basin-separation
+and endpoint criteria; the proportional response didn’t. A dominant outside option (U (⊥) = 5)
+produced weak evidence and no endpoint concentration. Moderate inclusion-only and evidencestate perturbations returned to both attracting regions. These runs establish existence and scope for
+the declared process. They provide neither an empirical fit nor a stationary-distribution result. The
+exact grid, seeds, approximation diagnostics, and artifact hash are archived with the companion software.
+Local bifurcation diagnostic. The full expected-window closure has a codimension-two cusp
+of fixed points if
+
+
+∂η R ∂ q R
+2
+3
+R = ∂θ R = ∂θ R = 0,
+∂θ R ̸= 0,
+det
+̸= 0,
+(31)
+∂θη R ∂θq R
+provided the full map has one unit eigenvalue and stable transverse eigenvalues. These are local fixedpoint conditions; they neither introduce a potential nor invoke a global catastrophe classification.
+
+2
+
+DYNAMICS: CANDIDATE ROUTES TO STABILIZATION
+
+29
+
+Numerical continuation under the utilities, observation probability, memory, and inclusionupdate rate specified above, while varying η and q, locates the point
+(θc , ηc , qc ) = (.370957, .479156, .552048),
+
+(ac , bc ) = (1.798418, 2.039839).
+
+The effective observed inflow is .287494. At the reported differentiation scale, the first two state
+derivatives of R are below 3 × 10−8 in absolute value, ∂θ3 R = −7.2843, and the unfolding determinant is 2.3345. The full-map eigenvalues are 1.000000031, .961496, and .883699; step-size audits
+preserve the non-zero third derivative and determinant.
+A nearby point inside the cusp wedge has fixed points at θ ≈ .253, .370, .505, with stable outer
+points and an unstable middle point; a point outside has one stable fixed point near .230. Five stationary evidence solves from distinct initial states agree to within 10−8 .
+A quasi-static two-control cycle also distinguishes this geometry from a steep single-valued response. Holding one local control coordinate fixed and sweeping the other produces two static folds,
+at local biases −.001041 and .000901. As the dwell time at each control value rises from 1,000 to
+10,000 map iterations, the directional jumps converge toward those folds.
+The same current external controls can support different stable licensing states when the retained
+evidence state differs. An empirical application would have to estimate effective exposure and the
+adoption threshold without fitting them to the transition points being explained.
+Slowing and its failed stochastic proxy. At q = .5, the lower-branch fold occurs at η =
+.654741. As the deterministic state approaches that fold from 2.5 to 1.02 times the fold inflow, the
+dominant spectral radius rises from .964802 to .995641, its implied relaxation time rises from 28 to
+229 windows, and measured pulse recovery rises from 82 to 288 windows. This establishes deterministic slowing in the expected closure.
+It doesn’t establish a usable stochastic early-warning signal. In the finite-population diagnostic,
+each of four fold distances had 24 runs with 240 speakers over 3,000 steps. Median detrended variance
+and lag-one autocorrelation rose through the 1.1 condition, but 23 of 24 paths escaped there. At
+1.02, all paths escaped, only four supplied a usable pre-escape segment, and both summaries fell. The
+preregistered monotonicity and minimum-replicate gates fail.
+That diagnostic also uses one opportunity per step with observation probability set to effective
+inflow; other opportunity–observation factorizations remain untested. The local bifurcation and deterministic hysteresis survive this failure, but no general observable early-warning prediction follows.
+The convergence claim has to match both levels of the model. With perfect retention (δm =
+1), an individual evidence filter is close to reinforcement processes of Pólya type, where stochastic
+approximation supplies relevant techniques (Pemantle, 2007). The signaling-game case, structurally
+the closest analogue, is treated directly by Argiento, Pemantle, Skyrms, and Volkov (Argiento et al.,
+2009), with an extension by Hu, Skyrms, and Tarrès (Hu et al., 2011). Those results don’t establish
+convergence of the composed population transition in (26); that requires a specified hκ .
+With bounded memory (δm < 1), the learner filters have constant gain, so the decreasing-gain
+analogues no longer prove almost-sure convergence even at that level. The population-level formal
+target is a stationary distribution for the composed transition concentrated near the full map’s attracting regions, with escape times and residual dispersion set by opportunity, persistence, and memory:
+high-opportunity contrasts should sit tightly near the extremes, while low-opportunity or outsideoption-dominated contrasts remain diffuse. That claim is a proof obligation rather than a theorem
+here.
+
+2
+
+DYNAMICS: CANDIDATE ROUTES TO STABILIZATION
+
+30
+
+The operator-specific prediction also needs its scope stated. Neither the full map nor the local
+bifurcation diagnostic derives the operator-specific response boundary. The OVMG claim is conditional: adoption criteria and selection intensity have to vary with independently estimated switching
+or coordination costs, opportunity, and update divergence. Under that condition, dense, updateconfiguring contrasts may concentrate faster.
+Low ∆ doesn’t by itself imply gradient licensing: a construction or exponent can be categorically
+excluded by dense competitor evidence without being an operator. The operator-specific claim is
+instead about comprehension and repair type. If a closed, dense, non-configuring contrast shows the
+same update-confusion and update-oriented repair profile as a matched operator contrast, that part
+of the account fails.
+Bounded memory adds a quantitative residual: even near an attractor, dispersion should scale
+with opportunity and forgetting, roughly with the effective concentration supplied by the discounted
+evidence filter.
+Sampling drift near the extremes makes the boundaries sticky in finite populations, while middle
+states stay vulnerable to renewed evidence. The same escape-time logic connects winnerless-cell metastability (§2.6) and actuation (§2.8): a state can persist for long periods and then move quickly once
+the observation likelihood or outside-option utility changes. This connects the dynamics to complexadaptive and cultural-evolutionary accounts of language change (Beckner et al., 2009; Blythe & Croft,
+2012; Kirby et al., 2014), and to invisible-hand explanations, where macro-level order emerges as the
+unintended consequence of micro-level choices (Keller, 1994).
+2.5 Derived obligatoriness
+The state theory defines saturation relative to the obligatory dimensions OBLt (n, c, A) (§1.2), where
+n = n(A, c) is the registered at-issue niche. Those dimensions are path-dependent population properties, estimated separately by an analyst. Let A0 (d, n, ϕ, c) be the finite, independently fixed class
+of defined assemblies of frame type ϕ that realize niche n while leaving d unset. For A in that class,
+define the population’s raw zero-marking rate
+Rs0 (A, n, c) = Pj (speaker j realizes a d-at-issue opportunity in (n, c) with A at s) .
+This realized population statistic is distinct from the licensing predicate Ls and from a status estimate.
+The same simple-present nodes can have high licensing in a habitual niche while their zero-marked
+realization rate is near zero in an ongoing-at-issue niche. General node availability, niche-specific zero
+marking, and saturation remain separate quantities.
+Let Wt = [t − W, t) be a preceding convention-individuating window, and let ΠWt (A, d, n, c)
+be the realized pressure against A there: d-at-issue opportunities in which a marked competitor wins,
+weighted by the independently normed full-choice share ρe⋆ . This weight is ungated; it doesn’t use
+sats or OBLs . Outside-option choices don’t contribute. Write Et (d, n, ϕ, c) for the entry condition
+that, for every A ∈ A0 (d, n, ϕ, c),
+sup Rs0 (A, n, c) < ϵ0
+
+and
+
+ΠWt (A, d, n, c) ≥ π0 .
+
+s∈Wt
+
+Write Xt (d, n, ϕ, c) for the release condition that, for some such A,
+inf Rs0 (A, n, c) > ϵ1
+
+s∈Wt
+
+or
+
+ΠWt (A, d, n, c) ≤ π1 ,
+
+2
+
+DYNAMICS: CANDIDATE ROUTES TO STABILIZATION
+
+31
+
+where ϵ1 > ϵ0 and π1 < π0 . Given an initial convention state OBLt0 fixed independently of the
+target interval, the path-dependent macro is
+
+
+d ∈ OBLt (n, c, ϕ) ⇐⇒ Et (d, n, ϕ, c) ∨ d ∈ OBLt−1 (n, c, ϕ) ∧ ¬Xt (d, n, ϕ, c) .
+The entry clauses say that every zero-marking realization has persistently disappeared under dense,
+attributable competition rather than because the niche was starved or an outside option absorbed
+a winnerless cell. The release clauses require sustained recovery or a clear pressure lapse. The two
+pairs of thresholds leave a hysteresis band in which the preceding state persists. The timescale and
+thresholds are community-indexed model parameters fixed independently of the contrast being classified. The initial condition and strict temporal descent make the recursion well founded: realized
+outputs and ungated pressure in Wt , together with OBLt−1 , determine OBLt ; OBLt determines satt ;
+and saturation then enters Stθ . This makes status a functional of the recent population history, not
+just of instantaneous θ t .
+An analyst identifies d as obligatory when the posterior upper bound for every relevant
+Rs0 (A, n, c) lies below ϵ0 , the estimated pressure clears π0 , and the effective evidence meets a
+preregistered νmin . Those conditions warrant an inference about the population property OBLt .
+Identification of release analogously requires posterior evidence for Xt across the registered window.
+The proposed mechanism is the population transition plus preemption applied to zero-marking.
+In a d-at-issue niche, marked and unmarked assemblies compete; where the marked assembly repeatedly wins, speakers’ filters and later inclusion states can drive the raw zero-marking rate down.
+The full map shows one possible phase portrait for that process, while the stationary-distribution
+claim remains a proof obligation rather than part of the definition of obligatoriness.
+The typological payoff is that §5.2’s descriptions convert to predictions. On the proposed diagnosis, English progressive marking is obligatory because simple-present assemblies in ongoing-atissue niches have persistently low raw zero-marking rates under a winning marked competitor; French
+zero-marking there hasn’t, so the dimension stays optional, and Elle étudie maintenant is fine. Turkish evidential marking is the same kind of hypothesis on a different dimension. Grammaticalization’s
+obligatorification receives a candidate mechanism: a contrast on its way to obligatory status is one
+whose zero-marking competitor is losing dense niches one at a time, which predicts an intermediate
+stage–obligatory in some frame types and niches, optional in others–that grammaticalization corpora
+are positioned to test.
+2.6 Winnerless cells
+Preempted gaps have a winning competitor. Defective paradigm cells don’t, and the dynamics explain
+how the difference can be stable rather than transitional.
+Suppose candidates f1 , . . . , fm for a dense cell have weak analogical support, the outside option
+(periphrasis, avoidance) has moderate fixed utility, and producing a weakly licensed form carries a
+face cost. Then the production rule routes the cell’s opportunities to the outside option: no candidate accumulates positive evidence. The omission likelihood matters here: outside-option choices
+have ℓomit
+i,t (x) ≈ 0, so no candidate accumulates much negative evidence either. Evidence starvation
+alone preserves the prior. The low-mean/low-concentration profile requires an additional independently motivated ingredient–low priors for unsupported analogical candidates, weak diffuse negative
+evidence, a hierarchical prior over defective cells, or a latent cell-level state such as “no candidate is
+
+2
+
+DYNAMICS: CANDIDATE ROUTES TO STABILIZATION
+
+32
+
+established”. Given such an ingredient, avoidance keeps every candidate at low mean and low concentration, because escaping the state requires some candidate to accumulate positive evidence that
+the outside option keeps starving it of.
+The claim has two strengths. The winnerless-cell example in §1.9 relies on the qualitative mechanism: an avoidance attractor plus evidence starvation, with low prior support or weak diffuse negative evidence supplying the low mean. The stronger metastability claim, persistence for times exponential in population size, remains a conjecture with analogues in evolutionary dynamics. Sims’s
+(2023) point that the maintenance mixture varies across cases–structural uncertainty, lexical restriction, learning dynamics, avoidance–is compatible with this narrower claim: the model supplies the
+avoidance-and-starvation component and is agnostic about the rest of the mixture.
+The phenomenological contrast is represented by the resulting evidence profile. Clean defective cells (pobedit’ 1sg, with *amn’t depending on niche granularity) show low mean with low
+concentration–“I don’t know how to say it”–where preempted gaps show low mean with high
+concentration–“that’s impossible”. Same mean, different concentration, different feeling, read out
+by Φ (§1.7). The satiation-framing prediction follows: defective cells should behave like low-evidence
+forms, movable under framing; preempted gaps shouldn’t (Broadbent, 2009; Pertsova, 2016; Thoms
+et al., 2025).
+2.7 Destabilization of moribund contrasts
+Bounded memory yields one more result. With discount δm < 1, the equilibrium concentration of a node’s posterioris set by the balance of evidence inflow against forgetting: ν ∗ ≈
+ν0 + O Nt (n, c)/(1 − δm ) , with Nt (n, c) the per-window opportunity count for the node’s
+niche and ν0 = a0 + b0 the baseline concentration. If opportunity falls–a case distinction going
+moribund, a niche drying up–equilibrium concentration falls toward the baseline. With no further
+evidence, means drift toward the baseline prior under (25); with sparse, idiosyncratic evidence,
+individual histories can diverge. Falling excess concentration is the direct consequence and the
+primary preregistrable precursor; increasing test–retest instability is a behavioral proxy only if it is
+independently validated against concentration.
+Prior heterogeneity alone doesn’t make dispersion lead the mean. If, after a shared evidence
+stream disappears,
+Ci,t = wt mi + (1 − wt )CE ,
+where mi is speaker i’s baseline-prior mean, CE is the former common evidence mean, and wt rises
+toward one, movement of the population mean is linear in wt while between-speaker variance is
+wt2 Var(mi ). On a common fraction-of-eventual-change scale, dispersion lags. The companion simulation reproduces this ordering at both 25% and 50% progress. Dispersion-leading decline remains a
+conditional hypothesis requiring a faster heterogeneity source, such as cohort replacement, unequal
+network opportunity loss, heterogeneous retention, or a specified judgment mapping.
+2.8 Actuation
+In a bistable cell of the full map, actuation is movement of the coupled population-and-evidence
+state across the basin boundary whose population coordinate is θ‡ . A utility change, new target evidence, altered outside-option mass, or a social change in qκ can move the state across that boundary.
+Speakers’ filters then alter adoption and retention through (26). An analyst posterior should track
+
+3
+
+DECISION-LAYER DISCONTINUITY DESIGN
+
+33
+
+the population movement with a lag; motion in its mean isn’t itself actuation. No S-shaped time
+course follows without specifying the full perturbation and the slow evidence state.
+The factors that drive such bifurcations align with the motivations discussed in §4.2. Semantic
+reanalysis may increase utility (and thus ρe⋆t ) by making a form–value relation easier to interpret or
+more useful. Social pressures may shift utilities (prestige effects) or alter the relevant community
+standard. Structural motivations such as analogical extension can systematically raise licensing probability by borrowing strength from frequent neighbors. Processing innovations may reduce error
+rates or locality costs, changing either the observation likelihood or later adoption.
+Individual innovation is insufficient. A few speakers adopting a marginal construction don’t
+guarantee its success; the likelihood and transition have to shift so that inclusion is systematically
+favoured across the relevant community. Many sensible innovations fail because they appear before
+those community conditions are in place.
+Near the separatrix, small perturbations in community attitudes can trigger rapid shifts between
+exclusion and licensing. As the state moves further past θ‡ , reversal becomes increasingly unlikely.
+The full map can represent the S-curves documented in some language changes (Kroch, 1989). For
+constructions in the marginal zone, with the population state near θ‡ , the model predicts heightened
+sensitivity to external factors and greater cross-community variation. Small or peripheral communities may show volatile behaviour near bifurcation points before a change spreads to larger population
+centres.
+The destabilization result sharpens the actuation picture at the other end of a form’s life. Actuation is crossing a separatrix; destabilization is a collapse in concentration. A contrast can lose its
+grip when evidence of any kind stops arriving, without accumulating negative evidence; the model
+predicts the two routes are empirically distinguishable: actuation crosses a basin boundary in the
+coupled state; moribundity first removes evidence confidence and need not cross that boundary until later population turnover. Judgment dispersion may lead only under the additional heterogeneity
+mechanisms named above.
+2.9 Apparent exclusions from concentrated non-licensing
+When a defined, saturated assembly exists but its pivotal node’s licensing posterior is driven toward zero and concentrates there under persistent preemption in a niche with many observed
+opportunities, speakers converge on a sharp, non-satiating rejection profile. Additional processing
+penalties in Ri (u, c) (e.g. systematic garden-path repair due to an entrenched fused-head construal)
+can strengthen the subjective categoricality without any independent structural constraint being
+posited.
+3
+
+Decision-layer discontinuity design
+A community or task can place a practical boundary on a graded estimate of licensing. A sudden
+change in response type near an independently estimated boundary would test whether asymmetric
+losses shift hearers from acceptance to repair, clarification, or sanction beyond the smooth effect of
+their own estimate. The general design is a regression-discontinuity problem (Calonico et al., 2014;
+Lee & Lemieux, 2010); multinomial and covariate-adjusted versions are the needed extension (Lazzaro, 2026). In a confirmatory test, the boundary has to be estimated and registered before the outcome data is inspected. A smooth response would weaken the decision-layer switch, not the licensingstate theory itself.
+
+4
+
+EXECUTABLE SIMULATION AND LIKELIHOOD AUDIT
+judge
+response
+
+34
+
+judge
+response
+
+decision boundary
+response switches
+at the boundary
+
+estimated licensing
+
+decision boundary
+
+estimated licensing
+
+licensing estimate predicts
+smooth response
+
+Figure 4: The decision-layer discontinuity check. If asymmetric losses induce a response switch, a
+judge’s treatment of a form should change abruptly as the judge’s estimated licensing crosses the
+practical boundary (left); if the read-out tracks that estimate continuously, treatment should vary
+smoothly through it (right). A regression-discontinuity design on multinomial hearer responses targets this decision layer, not the constitutive status state itself.
+Figure 4 states the decision-layer check in one picture: a discontinuity is evidence for a response
+switch at a practical boundary, while a smooth curve is evidence that the overt response tracks estimated licensing continuously.
+4
+
+Executable simulation and likelihood audit
+The reference implementation keeps three artifacts distinct. The revised engine implements the
+normalized gated-choice likelihood, exact affine finite-window posterior, and moment projection.
+The conditional scoring shell checks observation-channel calculations but isn’t presented as a sharedlatent joint likelihood. The closed-loop stress test composes speaker-specific evidence filters with the
+explicit adoption–retention transition. None is a fit to linguistic data.
+The release test suite contains 328 checks: 27 legacy provenance fixtures, 46 occasionsimulation smoke checks, 57 revised-engine checks, 18 conditional observation-shell checks,
+and 180 closed-loop checks. A clean regeneration of the declared sweep produced SHA-256
+ebfa2a75064bfbbff72d1798a04cea65dff211ac3cf9f567f596ba527ed48679. The independently
+reproducible data for Figure 3 have SHA-256
+2a15f8f517df3aae9555447d200b17dce7b68d9121bb3982900ea5be108200ef.
+
+The qualitative outcomes match the scope claims above:
+– the proportional adoption response has one stable interior fixed point, while the posteriorthreshold response and sufficiently steep logistic response have two stable outer regions around
+an unstable interior crossing;
+– a dominant outside option leaves weak evidence and fails the endpoint criterion;
+– moderate inclusion-state and evidence-state perturbations return to both declared basins within
+the simulated horizon; and
+
+5
+
+MACHINE-CHECKED STRUCTURAL CORRESPONDENCE
+
+35
+
+– after opportunities cease, heterogeneous priors alone make the evidence mean complete both the
+quarter-way and halfway portions of its eventual move before between-speaker variance does in
+every one of 36 runs.
+The separate bifurcation diagnostic has SHA-256
+8bd38cab97ed52cbeac474361f6a03c7cecbb767eb81a26ebb23f9ff3feac6c0.
+
+It verifies the local cusp conditions and rate-convergent deterministic hysteresis reported in Section 2.4. Its finite-population variance/autocorrelation gate fails and is retained as a negative result
+rather than used as an early-warning prediction.
+The opportunity-loss result is adverse to an earlier, stronger dispersion-leading claim and is retained as such. The programmed repair comparison is only a wiring check; it supplies no maintenance
+or control warrant. Exact parameters, seeds, replicate summaries, full-map eigenvalues, approximation diagnostics, and the normalized onset calculation are stored with the machine-readable sweep.
+5
+
+Machine-checked structural correspondence
+The Lean development is a deliberately narrow structural sanity check. It formalizes the constraint
+algebra, non-empty assemblies, coverage, compatibility, saturation, node-level licensing, and the
+distinction among speaker, population, and posterior read-outs. The operator-stratum extension
+formalizes closed and update-configuring contrasts, value-correct versus wrong-value tokens, licensed versus excluded exponents, and the bridge showing that an operator-neutral construction can
+contribute a compatible analysis without thereby being licensed. It doesn’t formalize the statistical
+likelihoods, population dynamics, repair probabilities, or empirical identification assumptions
+developed above.
+The authoritative sources are formalization/OVMG/Core.lean, OperatorStratum.lean, and
+OperatorBridge.lean. The local release audit requires a clean lake build, a source scan for proof
+shortcuts, and replay of AxiomAudit.lean. The theorem statements are conditional on the supplied
+construction inventory, conventionality predicate, constraint algebra, obligatoriness interface, and
+licensing relation. Lean checks their composition; it can’t establish that a linguistic analyst chose the
+right empirical inputs.
+
+5
+
+MACHINE-CHECKED STRUCTURAL CORRESPONDENCE
+
+Lean result
+
+Manuscript claim checked
+
+distinct_values_of_
+updateConfiguring
+isSituatedOperator_withProfile
+
+An update-configuring contrast contains genuinely distinct
+eligible values, rather than one value written twice.
+Replacing opportunity, licensing, or categoricality data leaves
+operator membership unchanged.
+A contrast can retain operator membership even when its
+current opportunity count is zero.
+Closure, conventional establishment, and update
+configuration are each necessary for operator membership.
+Operator/non-operator and categorically licensed/unlicensed
+are jointly consistent in all four combinations.
+Correct versus wrong value and licensed versus excluded
+exponent occur in all four combinations.
+Selecting the wrong value can change the public-update result
+in an update-configuring contrast.
+Empty operator contribution supplies compatibility only; it
+doesn’t license constructional nodes or yield grammatical
+status.
+A non-operator complementation-shaped case and a
+value-intact excluded-exponent case can both be covered,
+compatible, and saturated while failing status through node
+licensing; changing that licensing condition alone restores
+status in the paired witnesses.
+When a dimension is genuinely obligatory, supplying it yields
+saturation and omitting it blocks saturation.
+
+operator_with_no_opportunity
+
+Three independent failure witnesses
+Four operator/licensing witnesses
+value_and_exponent_independent
+wrong_value_can_change_update
+neutral_compatibility_does_not_
+supply_licensing
+
+Concrete bridge witnesses
+
+Paired non-vacuous saturation
+witnesses
+
+36
+
+Table 4: Scope of the machine-checked correspondence. These are logical interface checks, not empirical classifications of the motivating examples.
+
+REFERENCES
+
+37
+
+References
+Argiento, R., Pemantle, R., Skyrms, B., & Volkov, S. (2009). Learning to signal: Analysis of a microlevel reinforcement model. Stochastic Processes and their Applications, 119(2), 373–390. https:
+//doi.org/10.1016/j.spa.2008.02.014
+Beckner, C., Blythe, R., Bybee, J. L., Christiansen, M. H., Croft, W., Ellis, N. C., Holland, J., Ke,
+J., Larsen-Freeman, D., & Schoenemann, T. (2009). Language is a complex adaptive system:
+Position paper. Language Learning, 59(s1), 1–26. https://doi.org/10.1111/j.1467-9922.
+2009.00533.x
+Blythe, R. A., & Croft, W. (2012). S-curves and the mechanisms of propagation in language change.
+Language, 88(2), 269–304. https://doi.org/10.1353/lan.2012.0027
+Broadbent, J. M. (2009). The *amn’t gap: The view from West Yorkshire. Journal of Linguistics, 45(2),
+251–284. https://doi.org/10.1017/S0022226709005696
+Calonico, S., Cattaneo, M. D., & Titiunik, R. (2014). Robust nonparametric confidence intervals
+for regression-discontinuity designs. Econometrica, 82(6), 2295–2326. https://doi.org/10.
+3982/ECTA11757
+Culicover, P. W., Varaschin, G., & Winkler, S. (2022). The radical unacceptability hypothesis: Accounting for unacceptability without universal constraints. Languages, 7(2), 96. https://doi.
+org/10.3390/languages7020096
+Cuneo, N., & Goldberg, A. E. (2022). Islands effects without extraction: The discourse function of
+constructions predicts island status. Proceedings of the 44th Annual Conference of the Cognitive Science Society, 44, 3030–3037. Retrieved April 11, 2026, from https://escholarship.org/
+uc/item/1w83v9mm
+de Finetti, B. (1937). La prévision: Ses lois logiques, ses sources subjectives. Annales de l’Institut Henri
+Poincaré, 7(1), 1–68. https://www.numdam.org/item/AIHP_1937__7_1_1_0/
+Fillmore, C. J., Kay, P., & O’Connor, M. C. (1988). Regularity and idiomaticity in grammatical constructions: The case of let alone. Language, 64(3), 501–538. https : / / doi . org / 10 . 2307 /
+414531
+Goldberg, A. E. (1995). Constructions: A Construction Grammar approach to argument structure. University of Chicago Press.
+Goodman, N. D., & Frank, M. C. (2016). Pragmatic language interpretation as probabilistic inference. Trends in Cognitive Sciences, 20(11), 818–829. https://doi.org/10.1016/j.tics.2016.08.
+005
+Hopper, P. J. (1987). Emergent grammar. Proceedings of the Thirteenth Annual Meeting of the Berkeley Linguistics Society, 139–157. https://doi.org/10.3765/bls.v13i0.1834
+Hu, Y., Skyrms, B., & Tarrès, P. (2011). Reinforcement learning in signaling game.
+Keller, R. (1994). On language change: The invisible hand in language [Translated by Brigitte Nerlich]. Routledge.
+Kirby, S., Griffiths, T., & Smith, K. (2014). Iterated learning and the evolution of language. Current
+Opinion in Neurobiology, 28, 108–114. https://doi.org/10.1016/j.conb.2014.07.014
+Kroch, A. S. (1989). Reflexes of grammar in patterns of language change. Language Variation and
+Change, 1(3), 199–244. https://doi.org/10.1017/S0954394500000168
+
+REFERENCES
+
+38
+
+Lazzaro, J. C. (2026). Nonlinear regression discontinuity designs with covariates [Job-market paper,
+University of Wisconsin–Madison; version of 15 April 2026]. Retrieved July 1, 2026, from
+https://econ.wisc.edu/staff/lazzaro-john/
+Lee, D. S., & Lemieux, T. (2010). Regression discontinuity designs in economics. Journal of Economic
+Literature, 48(2), 281–355. https://doi.org/10.1257/jel.48.2.281
+Lu, J., Frank, M., & Degen, J. (2024). A meta-analysis of syntactic satiation in extraction from islands.
+Glossa Psycholinguistics, 3(1), 1–33. https://doi.org/10.5070/g60111425
+Pemantle, R. (2007). A survey of random processes with reinforcement. Probability Surveys, 4, 1–79.
+https://doi.org/10.1214/07-PS094
+Perfors, A., Tenenbaum, J. B., & Regier, T. (2011). The learnability of abstract syntactic principles.
+Cognition, 118(3), 306–338. https://doi.org/10.1016/j.cognition.2010.11.001
+Pertsova, K. (2016). Transderivational relations and paradigm gaps in Russian verbs. Glossa: a journal
+of general linguistics, 1(1), Article 13, 1–34. https://doi.org/10.5334/gjgl.59
+Reynolds, B. (2026a). Kinds as projectibility profiles: Support grades and demotion rules [Manuscript
+archived at PhilArchive, 14 June 2026]. https://philarchive.org/rec/REYKAP-2
+Reynolds, B. (2026b). Not every stable cluster is homeostatic: Stability, network order, and control in
+projectible kinds [Manuscript archived at PhilArchive, 1 June 2026]. https://philarchive.org/
+rec/REYNES
+Reynolds, B. (2026c). Why English doesn’t extract left branches (yet) [Preprint, LingBuzz/009708].
+https://ling.auf.net/lingbuzz/009708
+Sag, I. A. (2012). Sign-Based Construction Grammar: An informal synopsis. In H. C. Boas & I. A.
+Sag (Eds.), Sign-Based Construction Grammar (pp. 69–202). CSLI Publications.
+Sims, A. D. (2023). Defectiveness. In P. Ackema, S. Bendjaballah, E. Bonet & A. Fábregas (Eds.), The
+Wiley Blackwell companion to morphology (pp. 1–33). Wiley. https : / / doi . org / 10 . 1002 /
+9781119693604.morphcom022
+Thoms, G., Adger, D., Heycock, C., Jamieson, E., & Smith, J. (2025). Explaining microvariation
+using the Tolerance Principle: Plugging the amn’t gap. Journal of Linguistics, 61(2), 369–396.
+https://doi.org/10.1017/S0022226724000203
+West, M., & Harrison, J. (1997). Bayesian forecasting and dynamic models (2nd ed.). Springer. https:
+//doi.org/10.1007/b98971
+Wiese, H. (2023). Grammatical systems without language borders: Lessons from free-range language.
+Language Science Press. https://doi.org/10.5281/zenodo.10276182
+Woodward, J. (2001). Law and explanation in Biology: Invariance is the kind of stability that matters.
+Philosophy of Science, 68(1), 1–20. https://doi.org/10.1086/392863
+Woodward, J. (2003). Making things happen: A theory of causal explanation. Oxford University Press.
+https://doi.org/10.1093/0195155270.001.0001
+Zabell, S. L. (1982). W. e. johnson’s “sufficientness” postulate. The Annals of Statistics, 10(4), 1090–
+1099. https://doi.org/10.1214/aos/1176345975
+
+

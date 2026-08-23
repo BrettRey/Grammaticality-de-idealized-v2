@@ -25,25 +25,30 @@ It formalizes:
 - distinct bounded types for anomaly, evidence confidence, and decision
   confidence.
 
-Two further modules cover the operator stratum:
+Two further modules check a partial interface to the operator stratum. The paper
+identifies paradigms categorically for its comparison and then assigns them a
+graded operator profile. This interface is a Boolean surrogate for logical
+independence proofs:
 
-- `OVMG/OperatorStratum.lean`: operator membership as a property of a contrast
-  (closed eligible-value set, conventionality, extensional public-update role),
-  with proofs that membership is independent of opportunity and of the
-  categorical licensing verdict, that each membership condition is
-  load-bearing, and that selected-value correctness and exponent licensing
-  vary independently. Its Boolean `LicensingProfile` is only a coarse verdict
-  interface for those independence proofs; it does not represent posterior
-  means, concentration, or the paper's unsettled regions;
+- `OVMG/OperatorStratum.lean`: a partial predicate over a contrast (finite
+  eligible-value set, conventionality, non-vacuous extensional public-update
+  role), with proofs that the predicate is independent of opportunity and the
+  categorical licensing verdict, that each conjunct is necessary, and that
+  selected-value correctness and exponent licensing vary independently. Its
+  Boolean `LicensingProfile` is only a coarse interface for those proofs; it
+  does not represent a recurring domain, semantic frame, obligatory value
+  selection, graded operator profile, posterior means, concentration, or
+  unsettled regions;
 - `OVMG/OperatorBridge.lean`: the composition of that interface with the status
   scaffold, including the fact that an assembly contributing only the empty
   constraint is hard-compatible, while speaker status can still fail through
   constructional node non-licensing alone.
 
-`Closed` is enumerability at a fixed analytical time slice, not a claim that a
-living inventory forbids innovation. `UpdateConfiguring` is extensional and
-conventionality is a parameter, so whether a linguistic contrast qualifies is
-supplied by empirical analysis rather than proved here.
+`Closed` is enumerability at a fixed analytical time slice, not a complete
+paradigm test. `UpdateConfiguring` is a non-vacuity witness rather than a measure
+of public-update contribution, and conventionality is a parameter. Empirical
+paradigm identification, operator profiling, and causal attribution are
+therefore supplied by linguistic analysis rather than proved here.
 
 `obl` and `supplies` remain primitive parameters at a fixed time slice. Lean
 does not derive ontic obligatoriness, model its temporal evolution, or certify

@@ -1,0 +1,107 @@
+Grammaticality de-idealized
+Supplementary File 2: Turkish vowel harmony and operator-exponent realization
+
+Abstract
+This supplement develops the Turkish vowel-harmony case for the Operator-Value Model
+of Grammaticality. It distinguishes lexical disharmony inside stems from the licensing of inflectional operator exponents, and describes how a borrowed form can move from narrow situational licensing to ordinary lexical storage without making stem disharmony a productive inflectional pattern.
+
+Companion paper: Grammaticality de-idealized.
+
+1
+
+Turkish vowel harmony and operator-exponent realization
+
+Turkish illustrates a sharp distinction between lexical disharmony inside stems and allomorphic
+harmony on inflectional suffixes.1 OVMG treats suffixal harmony as operator-exponent licensing and
+stem disharmony as lexical licensing. Vowel backness isn’t a public-update value; plural and past are.
+In Turkish, the exponents of those operators have to satisfy suffixal harmony.
+Stem-internal vowels: disharmony tolerated. Loanwords such as doktor ‘doctor’ violate
+backness harmony, but are fully acceptable; speakers store the form, and the community licenses it
+consistently.
+(1)
+
+doktor
+doctor
+‘doctor’ (disharmonic stem, grammatical)
+
+Because the word contains no malformed operator exponent, a stored construction covers it, the
+relevant operators unify, and the word is licensed.
+Such forms can begin with narrow licensing in borrowing, quotation, or bilingual situations
+whose participants share access to the foreign expression. Repeated adoption and retention can extend an item beyond that niche until speakers store it as an ordinary lexeme. The result is item-specific
+licensing of doktor. Stem disharmony doesn’t become a productive pattern, and the suffixal harmony
+requirements remain unchanged.
+1
+
+See (Kabak & Vogel, 2001; Sezer, 1981) for discussion of the phonology and (Arık, 2015) for experimental evidence
+on native judgments.
+
+1
+
+Turkish vowel harmony
+
+2
+
+Suffixal harmony: operator-exponent licensing. Inflectional morphemes are lexicalized
+with an underspecified vowel; the licensed allomorph copies stem backness and, for some suffixes,
+rounding. Using the “wrong” vowel doesn’t make the intended value unrecoverable: speakers can
+identify -ler as a plural exponent and -du as a past exponent. What fails is licensing of that exponent
+choice in a dense operator-exponent niche.
+(2)
+
+a.
+
+kitap-lar
+book-pl.back
+‘books’ (harmonic, grammatical)
+b. * kitap-ler
+book-pl.front
+intended ‘books’ (suffix harmony violation)
+
+(3)
+
+a.
+
+gül-dü
+laugh-pst.front.round
+‘s/he laughed’ (harmonic, grammatical)
+b. * gül-du
+laugh-pst.back.round
+intended ‘s/he laughed’ (suffix harmony violation)
+
+OVMG account. For the ill-formed *kitap-ler and *gül-du:
+– The plural and past constructions are securely licensed at the population level. The mismatched
+exponent choice isn’t licensed.
+– The mismatched allomorph is still identifiable as an intended exponent, so the token is covered
+by a candidate operator-exponent assembly. But its exponent-choice node is almost universally excluded by overwhelming preemption from harmonic suffix choices across the many plural and past
+opportunities. The result is concentrated non-licensing and high confidence, not empty coverage.
+Repeated suffix opportunities support the same allomorphic choice, yielding confident categorical rejection. This keeps suffix-harmony errors apart from word salad. *Can the have running lacks
+a covering assembly; *kitap-ler has a recoverable intended value and an identifiable exponent, but the
+exponent choice is almost universally excluded. By contrast, doktor in (1) is covered by its own stored
+node: stem disharmony violates no operator-exponent licensing condition, so the word remains licensed and the disharmony registers only as a phonological cost in the subjective read-out (§3.6).
+Localized exceptions. Some derivational suffixes (e.g. -imsi ‘-ish’) are lexically marked “disharmonic”. Speakers store them, and community licensing remains consistent: no exponent condition
+is violated, so the form remains licensed despite vowel mismatch. Clitic boundaries that start a fresh
+harmony cycle (Kabak & Vogel, 2001) are handled the same way: they satisfy the operator-exponent
+requirement and leave harmony to phonology alone.
+Turkish suffix-harmony errors are grammaticality failures in a precise sense: they don’t mis-set a
+public-update contrast themselves, but they choose an unlicensed exponent for a closed inflectional
+operator in a dense niche. Stem disharmony lowers phonological well-formedness and affects only the
+subjective cost vector. A counterexample to the operator-specific response claim would be a matched
+phonological contrast with no operator-exponent role that produced the same update-confusion and
+update-oriented repair profile.
+
+Turkish vowel harmony
+
+3
+
+Abbreviations
+pl: plural; pst: past; sg: singular.
+
+References
+Arık, E. (2015). An experimental study of Turkish vowel harmony. Poznań Studies in Contemporary
+Linguistics, 51(3), 359–374. https://doi.org/10.1515/psicl-2015-0014
+Kabak, B., & Vogel, I. (2001). The phonological word and stress assignment in Turkish. Phonology,
+18(3), 315–360. https://doi.org/10.1017/s0952675701004201
+Sezer, E. (1981). Vowel harmony in Turkish: Evidence for feature weighting. In D. I. Slobin & K.
+Zimmer (Eds.), Linguistic studies in Turkish and Turkic (pp. 213–235). John Benjamins.
+
+
