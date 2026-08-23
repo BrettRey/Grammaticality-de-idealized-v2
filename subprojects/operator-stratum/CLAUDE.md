@@ -10,7 +10,7 @@ This paper argues that grammaticality judgments target a specific kind of value:
 ## Build
 
 ```bash
-xelatex main.tex && biber main && xelatex main.tex
+xelatex operator-stratum.tex && biber operator-stratum && xelatex operator-stratum.tex
 ```
 
 Uses EB Garamond font. Bibliography is self-contained in `refs.bib`.

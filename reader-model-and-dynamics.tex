@@ -1,10 +1,11 @@
 \section{From an utterance to a grammaticality profile}
 \label{sec:formalism}
+\label{sec:framework}
 
-The preceding section supplied diagnostic labels. This section states the model
-they belong to without asking the reader to learn its mathematical
-representation. The full specification, derivations, simulations, and notation
-are in the formal supplement. The main idea is simple: a grammaticality claim
+The opening examples show why one acceptability scale can't do all the work.
+This section states the model in ordinary language; the formal supplement gives
+the specification, derivations, simulations, and notation. The main idea is
+simple: a grammaticality claim
 compresses several answers about a form--value pairing in a particular
 community and situation. The answers can come apart, and their pattern matters
 more than any single score.
@@ -39,6 +40,42 @@ divided population into internally stable groups, the original conditioning
 state was underspecified. If no such partition does, the disagreement is a
 genuine population fact.
 
+\subsection{Operator values and public update}
+\label{sec:operator-values}
+
+The term \term{value} has the Saussurean sense of \mention{valeur}: a linguistic
+unit is identified by what it contrasts with, what it patterns with, and which
+interpretations it makes available \autocite{saussure1916}. It doesn't mean a
+feature assignment or decision-theoretic value. OVMG treats grammatical
+knowledge as conditioned form--value relations at multiple levels of grain.
+
+Some grammatical contrasts do more than distinguish expressions. They help
+determine how an utterance enters the conversational record: whether it counts
+as an assertion or question, who did what to whom, when it holds, what follows
+from it, and which referents or commitments later contributions can take up.
+OVMG calls these \term{operator values} and their contribution a
+\term{public-update role}.
+
+An operator contrast meets two conditions. Its values form a small, closed
+paradigm, and the paradigm has a public-update role across its ordinary occasions
+of use. Clause type, polarity, tense and aspect anchoring, agreement and role
+allocation, scope, and reference tracking are illustrative rather than
+exhaustive cases. The test applies to the paradigm, not to the information
+carried by every token. Tone, particles, word order, inflection, and
+suprasegmental material can realize operator contrasts
+\autocite{reynolds2026operators}.
+
+Operator membership is narrower than grammaticality. A frequent collocation or
+head-specific complement construction can be categorically licensed or excluded
+without becoming an operator. Conversely, a moribund case distinction can
+remain an operator while evidence for its licensing becomes less settled.
+Opportunity density affects that evidence, not operator membership. The
+operator hypothesis has its own falsifier: after closure, opportunity, and
+competitor strength are matched, a contrast without a public-update role should
+not produce the same update confusion and update-oriented repair profile as one
+with such a role. If it does, public-update role adds no explanatory boundary
+beyond constructional licensing and entrenchment.
+
 \subsection{Four constitutive questions}
 \label{sec:objects}
 
@@ -65,10 +102,9 @@ of the intended form and value passes four tests.
 
 \item \textbf{Saturation: are the contrasts required in this niche supplied?}
   A community can come to treat overt marking of a distinction as obligatory.
-  On this account, obligatoriness isn't simply listed in advance. It's the
-  historical result of situations in which an unmarked alternative repeatedly
-  loses to an overtly marked one. A moribund distinction can later cease to be
-  obligatory.
+  On this account, obligatoriness is the historical result of situations in
+  which an unmarked alternative repeatedly loses to an overtly marked one. A
+  moribund distinction can later cease to be obligatory.
 
 \item \textbf{Licensing: are the constructions used in the analysis established
   resources here?} A form can be analyzable, interpretable, and internally
@@ -113,7 +149,10 @@ reasons. One speaker may have little evidence either way; another community may
 be sharply divided between stable users and stable non-users. The first is
 epistemic uncertainty and should be sensitive to framing and new exposure. The
 second is population heterogeneity and should instead appear as stable
-between-speaker disagreement. Mean ratings alone erase the difference.
+between-speaker disagreement. OVMG calls the amount and consistency of evidence
+behind an estimate its \term{evidence concentration}: high concentration means
+that the estimate is well settled for or against licensing, not merely that its
+average is high. Mean ratings alone erase these differences.
 
 The model also distinguishes uncertainty about the constructional inventory
 from uncertainty about licensing. If analysts don't know whether a productive
@@ -150,13 +189,39 @@ fails to predict held-out repair, exposure, transmission, or change, the
 projection has to be narrowed, split, or abandoned. It can't be rescued by
 redrawing the speech-community boundary after the responses are known.
 
-The supporting explanation is deliberately weaker than a claim of
-self-regulation. A stable profile might be the residue of history, the result of
-ongoing transmission, or the effect of an active corrective process. OVMG calls
-these stabilization, maintenance, and control, respectively. Evidence for one
-doesn't establish the next. In particular, repair is only a candidate
-controller until intervention shows that a deviation is registered and that the
-response helps restore the threatened higher-level relation.
+Stabilization, maintenance, and control are distinct explanatory claims. A
+stable profile might be the residue of history, the result of ongoing
+transmission, or the effect of an active corrective process. Evidence for one
+doesn't establish the next. Repair remains a candidate controller
+until intervention shows that a deviation is registered and that the response
+helps restore the threatened higher-level relation.
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[
+  font=\small,
+  >=Stealth,
+  box/.style={draw, rounded corners=2pt, align=center, inner sep=6pt},
+]
+\node[box, fill=lsLightGray] (feat) at (0,0)
+  {\textbf{Conditions}\\[3pt] coverage\\ compatibility\\ saturation\\ licensing};
+\node[box, draw=lsMidBlue, thick] (prof) at (5,0)
+  {\textbf{Profile}\\[3pt] population state\\ plus evidence-based estimate};
+\node[box, fill=lsLightGray] (proj) at (10.2,0)
+  {\textbf{Licensed projections}\\[3pt] repair, transmission,\\ satiation, change};
+\draw[->, thick] (feat) -- node[above, font=\footnotesize] {specify} (prof);
+\draw[->, thick] (prof) -- node[above, font=\footnotesize] {license} (proj);
+\node[box, fill=white, draw=gray, font=\footnotesize, below=0.75cm of prof] (supp)
+  {\emph{candidate supports, tested separately}\\ stabilization; maintenance; control};
+\draw[->, gray] (supp) -- (prof);
+\end{tikzpicture}
+\caption{The projectibility-first order of explanation. The constitutive
+conditions specify a licensed-assembly population profile. Evidence about that
+profile, including how settled the evidence is and how much speakers differ,
+licenses the projections on the right. Stabilization, maintenance, and control
+are separate world-side hypotheses (below), each requiring its own evidence.}
+\label{fig:profile-spine}
+\end{figure}
 
 \subsection{Status and the feeling of status}
 \label{sec:decision-readout}
@@ -238,10 +303,11 @@ option have been independently normed.
 
 \subsection{The opening examples revisited}
 \label{sec:worked-examples}
+\label{sec:diag-tree}
 
 The profile now gives the opening asterisks different explanations. The results
 are summarized in Table~\ref{tab:reader-profiles}; the labels describe the
-pivotal condition rather than mutually exclusive sentence types.
+decisive condition rather than mutually exclusive sentence types.
 
 \begin{table}[htbp]
 \centering
@@ -250,7 +316,7 @@ pivotal condition rather than mutually exclusive sentence types.
   >{\raggedright\arraybackslash}p{0.24\textwidth}
   >{\raggedright\arraybackslash}p{0.38\textwidth}@{}}
 \toprule
-Case & Pivotal diagnosis & Expected profile \\
+Case & Decisive diagnosis & Expected profile \\
 \midrule
 \ungram{\mention{Can the have running}} & no covering analysis & confident rejection across construals \\
 \mention{Colorless green ideas sleep furiously} & licensed but implausible content & grammatical status with content oddness \\
@@ -304,22 +370,31 @@ update. These events enter one shared model but aren't interchangeable counts.
 
 \subsection{Learning and population change}
 \label{sec:update}
+\label{sec:change-mechanisms}
+\label{sec:motivations}
 
 An individual updates an estimate when evidence arrives. The population changes
-only when that evidence alters later inclusion, production, learning, or
-transmission. This distinction is central. Updating an evidence-based estimate
-can make beliefs more precise; it can't make speakers adopt or abandon a
-construction. The formal dynamics add an explicit adoption-and-retention process
-whose costs have to be motivated independently.
+when that evidence alters later inclusion, production, learning, or
+transmission. Updating an evidence-based estimate can make beliefs more precise;
+adoption and abandonment require a further population process. The formal
+dynamics specify that process, whose costs have to be motivated independently.
 
-That process is intentionally conditional. Under some settings, weakly
-supported constructions tend to disappear and strongly supported ones tend to
-persist, producing separated population patterns. Under other settings, the
-same learning rule yields a single interior pattern rather than separated
-outer patterns.
-The model doesn't derive categorical grammar from exposure alone.
-It identifies the extra assumptions under which categorical-looking regimes can
-emerge and makes those assumptions available for empirical challenge.
+Depending on the adoption and retention settings, weakly supported constructions
+may disappear while strongly supported ones persist, producing separated
+population patterns. Other settings yield a single interior pattern from the
+same learning rule. Categorical-looking regimes depend on
+empirically challengeable assumptions beyond exposure.
+
+Familiar motivations for change enter through those assumptions rather than as
+alternative definitions of grammaticality. Semantic reanalysis can make a new
+form--value relation usable, as in the development of the \mention{going to}
+futurate. Social indexing can change adoption and retention, as in the retreat
+of the French \olang{passé simple} from ordinary conversation. Processing
+economy, analogy, and iconicity can likewise alter opportunities and choices.
+Optimality Theory has productively represented competing pressures as ranked
+constraints \autocite{prince2004}; OVMG instead asks how independently motivated
+changes in opportunity, preference, adoption, or retention alter a community's
+licensing profile.
 
 \subsection{What the simulations establish}
 \label{sec:emergent-categoricality}
@@ -332,13 +407,11 @@ patterns are possible when the adoption response, opportunity structure,
 memory, and competition are jointly strong enough. They also show that the
 separation disappears when those conditions are removed.
 
-This conditional mechanism result isn't an empirical fit or a theorem that all
-languages polarize. The model doesn't yet establish the exact long-run
-behaviour of bounded-memory populations or how long they remain in one regime.
-Nor do
-the simulations currently model networked exposure, cohort replacement, or all
-channels through a single shared underlying state. The supplement reports these
-open proof and identification obligations alongside the successful checks.
+The simulations leave open the exact long-run behaviour of bounded-memory
+populations, how long they remain in one regime, and how networked exposure or
+cohort replacement affects them. They also leave the observation channels to be
+connected through a single shared underlying state. The supplement reports
+these proof and identification obligations alongside the successful checks.
 
 \subsection{Repair as a candidate maintainer or controller}
 \label{sec:repair-controller}
@@ -346,8 +419,8 @@ open proof and identification obligations alongside the successful checks.
 Repair can feed back into later learning, but different repairs do different
 work. Some secure understanding without endorsing the local form. Some replace
 an exponent but leave the intended operator value intact. Some correct an
-operator mis-setting that would otherwise change who is committed to what,
-when, or with which discourse status. Overt correction can also reflect
+operator mis-setting that would otherwise change the assignment, timing, or
+discourse status of commitments. Overt correction can also reflect
 prescriptive or identity policing rather than a threat to the update.
 
 The operator hypothesis predicts a selective response profile. Once closure,
@@ -379,6 +452,9 @@ model can't infer obligatoriness from the analyst's present uncertainty or
 from the absence of data. Once established, obligatoriness also doesn't vanish
 with the first contrary token; recovery has to persist before the convention
 changes.
+The proposal would be weakened by a contrast that became obligatory despite a
+well-attested niche in which unmarked alternatives hadn't repeatedly lost, or
+that ceased to be obligatory without a prior loss of evidential support.
 
 \noindent\textsc{Winnerless cells.}
 \label{sec:winnerless-cells}
@@ -406,17 +482,15 @@ prediction; population dispersion is conditional.
 \label{sec:categorical-without-bans}
 Small changes in opportunity, competitor strength, analogy, repair, or social
 ascription can move a construction across a boundary between long-run regimes.
-That supplies candidate actuation routes without pretending to predict the
-historical trigger from the state theory alone. At the other extreme, persistent
+These inputs supply candidate actuation routes; identifying a historical trigger
+requires independent diachronic evidence. At the other extreme, persistent
 preemption in a dense niche can generate a highly concentrated rejection even
 when a compatible analysis remains available. Apparent categorical exclusions
 don't always require an additional structural ban; they require
 independent evidence that the niche was rich, the target was a live candidate,
 and a competitor repeatedly won.
 
-The dynamics section's empirical burden is now visible without the equations.
-The account succeeds only if independently measured opportunities, alternatives,
-repair types, evidence histories, and adoption costs predict the distinct
-trajectories. The formal supplement supplies the quantitative claims and
-reproducible simulation contract; the main paper keeps their linguistic meaning
-and their failure conditions in view.
+The dynamics succeed only if independently measured opportunities,
+alternatives, repair types, evidence histories, and adoption costs predict the
+distinct trajectories. The formal supplement supplies the quantitative claims
+and reproducible simulation contract.

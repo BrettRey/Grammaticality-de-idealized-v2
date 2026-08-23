@@ -82,7 +82,7 @@ The paper already cites the operator-stratum paper, but the next revision should
 ## Build
 
 ```bash
-xelatex main.tex && biber main && xelatex main.tex
+xelatex asterisk-de-idealized.tex && biber asterisk-de-idealized && xelatex asterisk-de-idealized.tex
 ```
 
 Uses parent project's refs.bib via symlink.

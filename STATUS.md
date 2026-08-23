@@ -9,12 +9,12 @@ updated: 2026-08-23
 source:
 - STATUS.md
 - PORTFOLIO.md
-- main.tex
+- grammaticality-de-idealized.tex
 preprints:
 - lingbuzz/010118
 next_action: Prepare an anonymous submission package for Linguistics while
   preserving the model's conditional empirical scope
-notes: 'Title ("Grammaticality de-idealized") matches main.tex''s \title and STATUS.md''s own usage ("`Grammaticality
+notes: 'Title ("Grammaticality de-idealized") matches grammaticality-de-idealized.tex''s \title and STATUS.md''s own usage ("`Grammaticality
   de-idealized` is live on LingBuzz as `lingbuzz/010118`"). CLAUDE.md''s fuller internal label ("Grammaticality
   De-idealized: The OVMG Model") is a working/internal frame name, not the manuscript title, and is not
   in conflict with the sources used. The operator-stratum subproject (within this same directory) was
@@ -29,9 +29,9 @@ notes: 'Title ("Grammaticality de-idealized") matches main.tex''s \title and STA
 ---
 
 # STATUS.md -- Grammaticality de-idealized
-<!-- SUMMARY: OVMG main paper live as a preprint; local bifurcation result integrated with conditional scope · status: preprint live, integration complete · updated: 2026-08-23 -->
+<!-- SUMMARY: OVMG main paper live as a preprint; reader-facing clarity pass and conditional bifurcation integration complete · status: preprint live, revision complete · updated: 2026-08-23 -->
 
-**Current phase:** Main paper posted as preprint / local bifurcation result integrated at reader and formal levels
+**Current phase:** Main paper posted as preprint / reader-facing clarity revision complete
 **Last updated:** 2026-08-23
 **Public/preprint state:** `Grammaticality de-idealized` is live on LingBuzz as `lingbuzz/010118`. Upload artifact: `Reynolds_2026_Grammaticality_de-idealized.pdf` generated from `main.pdf` on 2026-07-05. The OVMG family also includes LingBuzz subproject preprints for `operator-stratum` and `asterisk-de-idealized`; `operator-stratum` was submitted to *Functions of Language* on 2026-06-02 and desk rejected for scope/fit on 2026-06-26. It is not currently under review. Check subproject folders before making public-state claims.
 **Tracking note:** Root `STATUS.md` created 2026-05-31 from existing `CLAUDE.md`, `NOTES.md`, and `DECISIONS.md`; no source state was changed.
@@ -72,11 +72,11 @@ The working tree remains dirty, but its provenance was classified on 2026-08-21.
 
 Specific watchpoints:
 
-1. **Submission-bearing source:** `main.tex`, `reader-model-and-dynamics.tex`, the `refs.bib` link to the central bibliography, and the figure assets `figures/fig_agr_projection.pdf` and `trident.jpg`. The separate formal artifact consists of `supplement.tex`, `formal-notation.tex`, `section3.tex`, `formal-dynamics.tex`, `simulate_dynamics.py`, and `simulation_data.dat`. The Lean files are a structural sanity check, not evidence establishing the empirical model. `CLAUDE.md`, `STATUS.md`, and `DECISIONS.md` are project guidance and records, not submission files.
-2. **Generated artifacts:** `main.pdf` is the current rendered manuscript and `main.xdv` is an intermediate build artifact. `Reynolds_2026_Grammaticality_de-idealized.pdf` is the July 5 LingBuzz upload artifact and should not be mistaken for the repaired manuscript.
+1. **Submission-bearing source:** `grammaticality-de-idealized.tex`, `reader-model-and-dynamics.tex`, the `refs.bib` link to the central bibliography, and the figure assets `figures/fig_agr_projection.pdf` and `trident.jpg`. The separate formal artifact consists of `supplement.tex`, `formal-notation.tex`, `section3.tex`, `formal-dynamics.tex`, `simulate_dynamics.py`, and `simulation_data.dat`. The Lean files are a structural sanity check, not evidence establishing the empirical model. `CLAUDE.md`, `STATUS.md`, and `DECISIONS.md` are project guidance and records, not submission files.
+2. **Generated artifacts:** `grammaticality-de-idealized.pdf` is the current rendered manuscript. XeLaTeX intermediates are local build products and aren't tracked. `Reynolds_2026_Grammaticality_de-idealized.pdf` is the July 5 LingBuzz upload artifact and should not be mistaken for the repaired manuscript.
 3. **Deliberate review provenance:** the August 21 zip, extracted review bundle, Codex/Opus/Aristotle reports, `reviews/ox-alpha-formalization-review-20260821/`, and `reviews/catastrophe-diagnostics-ox-alpha-20260823/` preserve prompts, inputs, outputs, hashes, and audits. Retain them locally; none belongs in a journal upload unless specifically requested.
 4. **Local planning and literature workspace:** the July 10 formal-dynamics and reader-bridge notes, July 14 Cognition intake notes, and later source hooks are research records rather than manuscript source. The many `subprojects/etiological-account/literature/` files remain local literature workspace by default.
-5. **Independent operational drift:** the absolute-path fixes in the etiological and evolutionary-DAG scripts, the verified Nefdt--Ladyman source-hook line, and `subprojects/operator-stratum/main.pdf` are separate work. Preserve them but exclude them from a root-paper submission or commit unless deliberately grouped.
+5. **Independent operational drift:** the absolute-path fixes in the etiological and evolutionary-DAG scripts, the verified Nefdt--Ladyman source-hook line, and `subprojects/operator-stratum/operator-stratum.pdf` are separate work. Preserve them but exclude them from a root-paper submission or commit unless deliberately grouped.
 6. A pre-revision safety copy of `main.tex` from 2026-06-09 is in `notes/main-2026-06-09-pre-review-revision.tex`.
 
 ### 2026-08-23 Session Notes
@@ -152,11 +152,13 @@ Specific watchpoints:
 - Replaced the grammar/style binary throughout the family. The main paper now predicts repair locus: update-oriented repair for mis-set operator values, form correction for value-intact exponent or construction errors, and stance-directed responses for many indexical mismatches.
 - Reclassified *le hiver* as a value-intact operator-exponent case and *depend of* as a head-specific complement-construction case. Complementation is represented as schematic category/function licensing with lexically narrowed realization.
 - Added two canon entries: world state/evidence/estimate/read-out are separate bearers; recruitment/synchronic membership/population persistence are separate claims.
-- Split the manuscript at the reader/formal boundary. The 46-page main paper now contains no inline or displayed mathematics and presents the model, dynamics, simulations, and falsifiers in ordinary linguistic prose. The 37-page standalone supplement contains the notation register, all formal definitions and derivations, the executable audit, and the Lean correspondence.
+- Split the manuscript at the reader/formal boundary. After the subsequent clarity pass, the 31-page main paper contains no inline or displayed mathematics and presents the model, dynamics, simulations, and falsifiers in ordinary linguistic prose. The 37-page standalone supplement contains the notation register, all formal definitions and derivations, the executable audit, and the Lean correspondence.
 - Ox Alpha's post-split audit judged the main-paper linguistic architecture sound, the Lean meaningful as scoped, and the cross-artifact correspondence consistent. Its substantive objection to undefined hierarchical coverage weights was accepted: the supplement now makes the candidate-level scope explicit instead of claiming an unimplemented pooling rule.
 - Repaired the posterior-figure provenance. `simulate_dynamics.py` now implements the declared affine omission likelihood and per-step moment projection; `simulation_data.dat` drives the plot directly and has SHA-256 `2a15f8f517df3aae9555447d200b17dce7b68d9121bb3982900ea5be108200ef`.
 - Strengthened the Lean correspondence with Aristotle-assisted operator, conventionality, value/exponent, licensing, and non-vacuous saturation witnesses. Local `lake build` and `AxiomAudit.lean` replay pass; the formalization remains a structural interface audit rather than stochastic verification.
 - Projectibility audit result: green across projection targets, warrant/world separation, non-triviality, maintainer/controller discipline, bearer/scale, scope, prospective revision, and conclusion strength. The strongest justified world-side claim remains conditional stabilization; repair maintenance and control require intervention evidence.
+- Completed a manuscript-wide reader pass after architecture and regression reviews by Claude Fable and Ox Alpha, followed by an editorial scar-tissue pass. The paper now gives the reader the full state theory and dynamics before the extended diagnostics, consolidates repeated analyses, and states key technical ideas in ordinary linguistic prose. The revision reduced the main paper from 47 to 31 pages and from roughly 17,900 to 11,200 words while preserving the independently fixed conditioning, population-state/evidence distinction, opportunity and outside-option assumptions, conditional hysteresis prediction, and explicit failure conditions.
+- Final validation: `latexmk grammaticality-de-idealized.tex` succeeds; all citations resolve; `texcount` reports no inline or displayed mathematics; the house-style audit has only advisory or false-positive findings; and every page of the rendered PDF was visually inspected. Review decisions and pass records are under `reviews/` and `notes/passes/`.
 
 ### 2026-08-21 Session Notes
 
@@ -214,10 +216,10 @@ When returning to the predictability/processing-cost gap, consider this as backg
 
 ## Next Actions
 
-1. Prepare an anonymous *Linguistics* submission package from `main.tex`, `reader-model-and-dynamics.tex`, `refs.bib`, and the cited figures. Offer `supplement.pdf` as a separate formal supplement; keep review records, Lean sources, and project-management files outside the upload unless the editor asks for them.
+1. Prepare an anonymous *Linguistics* submission package from `grammaticality-de-idealized.tex`, `reader-model-and-dynamics.tex`, `refs.bib`, and the cited figures. Offer `supplement.pdf` as a separate formal supplement; keep review records, Lean sources, and project-management files outside the upload unless the editor asks for them.
 2. Retry the LingBuzz keyword correction on `lingbuzz/010118` when the service recovers: `conventionaliz- ation` -> `conventionalization`.
 3. Keep the strengthened Lean layer frozen as a structural sanity check unless referee feedback supplies a concrete reason to extend it.
-4. If the *Linguistics* route fails on length or framing, do not send the same 24,500-word manuscript to *Journal of Linguistics* or *Glossa*; first produce a distinct <=15,000-word version.
+4. If the *Linguistics* route fails, reassess venue-specific framing before retargeting. The revised 11,200-word manuscript is now within the 15,000-word limits of *Journal of Linguistics* and *Glossa*.
 5. If returning to the etiology paper, keep the corrected Richerson & Boyd/O'Connor mechanism separate from Powell's contingency/convergence framework.
 6. If returning to the new DAG workbench, expand the phenomenon-card archive, enrich seed graphs, and run adversarial critique before treating any graph family as strong.
 7. Choose a better-fit venue for the revised operator-stratum manuscript and prepare a new venue-specific package rather than reusing the 2026 Functions of Language submission files.

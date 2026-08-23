@@ -39,7 +39,7 @@ Key equations:
 
 ```bash
 # Full build (use XeLaTeX or LuaLaTeX, not pdfLaTeX)
-xelatex main.tex && biber main && xelatex main.tex && xelatex main.tex
+xelatex grammaticality-de-idealized.tex && biber grammaticality-de-idealized && xelatex grammaticality-de-idealized.tex && xelatex grammaticality-de-idealized.tex
 
 # Lingbuzz preprint version
 xelatex LingbuzzPreprint.tex && biber LingbuzzPreprint && xelatex LingbuzzPreprint.tex
@@ -47,7 +47,7 @@ xelatex LingbuzzPreprint.tex && biber LingbuzzPreprint && xelatex LingbuzzPrepri
 
 ## Key Files
 
-- `main.tex` - Main document
+- `grammaticality-de-idealized.tex` - Main document
 - `LingbuzzPreprint.tex` - Lingbuzz submission version
 - `refs.bib` - Bibliography
 - `NOTES.md` - Working notes and external feedback

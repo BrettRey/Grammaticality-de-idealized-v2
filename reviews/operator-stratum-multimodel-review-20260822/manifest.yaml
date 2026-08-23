@@ -1,0 +1,64 @@
+review_id: operator-stratum-multimodel-review-20260822
+date: 2026-08-22
+target: subprojects/operator-stratum/main.tex
+git_commit_at_start: 2cd14273f67142742c4be3e520624478a427ea48
+baseline_source_sha256: 8bb5fa79b1cfda33ffd7f2c145647c0cccf29ac576e47501e88a7c013888ab0b
+frozen_rendering:
+  file: source-operator-rendering.md
+  sha256: f87ea6b5262a21f319ddf9870a4d44b334d3cd4b1f3b0f17649efbaf2e4eca44
+reviewers:
+  - id: fable-cleanroom
+    model: Claude Fable
+    context: frozen operator manuscript only; an injected subproject instruction file was explicitly disregarded
+    prompt: prompt-fable-cleanroom.md
+    prompt_sha256: a91d015364736f32d840ed26c52d0d62efcee6688a0a567f4ec2eedb4af8ba1c
+    output: raw-fable-cleanroom.md
+    output_sha256: aa44f2ba6eb91c87fa0338fea13ada4f18f4edc0c8a8a87d4cbd898dc9d18c9b
+    usage: not reported by the Claude CLI
+  - id: ox-cleanroom
+    model: Ox Alpha
+    context: frozen operator manuscript only
+    prompt: prompt-ox-cleanroom.md
+    prompt_sha256: 4c5fa8a771cc0bec7fbf1596f8f0255e56fc0353f5fe4eb9e9364195c0d40db1
+    output: raw-ox-cleanroom.md
+    output_sha256: 8b9884c303ad3138471f2fa3ac01c02d7af03b9630898ce204a53eb121a6cc82
+    usage:
+      input_tokens: 14497
+      output_tokens: 10640
+      wall_seconds: 325.1
+  - id: fable-informed
+    model: Claude Fable
+    context: operator manuscript, parent main.tex, and section3.tex
+    prompt: prompt-fable-informed.md
+    prompt_sha256: 87e127cd592626c7919e386a54c1ff41c2cafc6823f9b0284f0cef3657b2d812
+    output: raw-fable-informed.md
+    output_sha256: dc1e647e91b89b2469adb0803c74a96db8d41943678391cf1323fb1fc3143df9
+    usage: not reported by the Claude CLI
+  - id: ox-adjudication
+    model: Ox Alpha
+    context: frozen manuscript, companion commitments, and all earlier reviews
+    prompt: prompt-ox-adjudication.md
+    prompt_sha256: c1e0d8467c4d537d42a2bdbe8e35d71a0dc089355b7226939193c94b07230706
+    input: input-ox-adjudication.md
+    input_sha256: c4842e587e18a44a03d2c1d2ee14a94c0cb07c0108714ea5b553dbda3615a581
+    output: raw-ox-adjudication.md
+    output_sha256: af82db4a123b56f3b331224c945659b0ed8bea9a3dd147ef6c59cd560cf81218
+    usage:
+      input_tokens: 30549
+      output_tokens: 10355
+      wall_seconds: 359.1
+  - id: ox-level-category-followup
+    model: Ox Alpha
+    context: targeted excerpts on complementation, le hiver, depend of, and the proposed dimensional analysis
+    prompt: prompt-ox-level-category-followup.md
+    prompt_sha256: c612709f65e3c3867c7ead040a910084e5ba2fd1a74126d44325ed5bd48fdb13
+    input: input-ox-level-category-followup.md
+    input_sha256: c794f4d97a1f6729348c2628e54e67d27615dfc9b3bfad4a7f0167093fea7365
+    output: raw-ox-level-category-followup.md
+    output_sha256: e78add423a8ab69b3ed85d964b563a5302699bcc2cf968b11da89254051f1af3
+    usage:
+      input_tokens: 20196
+      output_tokens: 3793
+      wall_seconds: 211.9
+adjudication: synthesis.md
+raw_outputs_preserved: true

@@ -163,3 +163,23 @@ Format: `## YYYY-MM-DD` then bullet points with **bold topic** and brief rationa
   the formal supplement. Remove the scalar cubic, which cannot represent the
   verified interior three-root geometry. This presentation decision does not
   warrant a canon update.
+- **Give every live paper a descriptive entrypoint and standardize numbered
+  mentions.** Rename the four generic `main.tex` sources and their canonical
+  PDFs after their paper or stable subproject slug. Remove the tracked root XDV
+  intermediate. In numbered linguistic examples, use `\mention{}` for the
+  object-language expression, including each aligned surface token on a `\gll`
+  line; keep glosses, free translations, speaker labels, citations, and notes
+  roman. Frozen review inputs and historical logs retain the filenames that
+  were accurate when they were written.
+- **Rebuild the main paper around the explanatory dependency order.** External
+  architecture and regression reviews by Claude Fable and Ox Alpha converged
+  on the same core defect: the model arrived only after several applications
+  and partial paraphrases. The revised paper now presents the problem, the
+  complete reader-facing state theory, and the complete dynamics before the
+  extended diagnostics. Repeated age, independent-*whose*, LBE, and dative
+  analyses were consolidated. The accepted regression objections concerned
+  undefined terms, stale pointers, two missing failure conditions, and several
+  pockets of formal leakage; the initial Ox Alpha word-count estimate and its
+  internally inconsistent ordering proposal were rejected. The result is a
+  31-page, approximately 11,200-word, mathematics-free main paper whose formal
+  commitments and projectibility constraints remain intact.

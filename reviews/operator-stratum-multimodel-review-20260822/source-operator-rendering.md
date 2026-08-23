@@ -1,0 +1,1058 @@
+**Keywords:** grammaticality, operator stratum, public update,
+information-theoretic, licensing, preemption, clausal architecture
+
+# The puzzle: why “grammar” picks out some things and not others
+
+The asterisk is selective. Some mismatches are treated as
+straightforward errors of “grammar”, often with an accompanying sense
+that there’s nothing to debate: wrong agreement, illicit clausal
+morphosyntax, incompatible tense–aspect morphology, missing obligatory
+evidentials, or mis-selected question particles in systems where such
+particles are required. Other mismatches are treated as infelicities of
+social positioning: an accent that indexes the wrong stance, a style
+that fails to fit the activity type, a form that sounds “too formal” or
+“too intimate”. Still other mismatches are treated as mere lexical
+choice: suboptimal perhaps, but not illicit.[^1]
+
+A familiar temptation is to reduce this to a contrast between
+“structure” and “use”: morphosyntax counts as grammar; accent and
+lexical choice don’t.[^2] But this gloss is neither typologically
+adequate nor explanatory. Many languages use prosody or tone as
+obligatory exponents of grammatical contrasts . Many grammatical
+categories aren’t universal: a language may lack tense or number while
+sustaining robust categorical judgments elsewhere. And some lexical
+items enter operator contrasts, with constraints indistinguishable from
+inflectional morphology .
+
+The core question is not why morphosyntax is insulated from meaning, but
+why some form–value relations become non-negotiable infrastructure,
+policed as membership facts, while others remain negotiable resources
+for stance, identity, and content selection.
+
+The argument developed here is that this difference tracks a difference
+in : what a contrast does in a system, what it rules in or out for
+uptake.[^3] Consider polarity: choosing over affirmative changes what
+inferences are licensed and what responses are relevant. Or clause type:
+a question particle vs. a declarative ending changes what kind of move
+the utterance counts as. These contrasts are recruited as . Once
+recruited into closed paradigms with large opportunity sets, policing
+attaches to the integrity of the paradigm. This matters because the most
+familiar grammar errors need not mis-set an update instruction: \*
+selects the right past-tense value but the wrong exponent; a
+gender-concord error can be locally redundant but still policed. The
+paper’s claim is therefore not that every grammar correction reports a
+failed update. Rather, update-critical contrasts are the entry point
+into the regime whose maintenance dynamics make paradigm membership
+categorical.
+
+# Why some contrasts are publicly accountable
+
+The starting point is a deliberately non-idealized view of grammar. A
+community’s linguistic system isn’t merely a set of strings or
+derivations, but a repertoire of conventionalized form–value relations
+that enable coordination in interaction.
+
+Consider two misfires. In the first, a speaker produces a clause with
+the wrong tense or a mismatched agreement marker; the hearer responds
+“Wait, who did what?” or “Did you mean X or Y?” Repair targets the
+structure: the update couldn’t go through. In the second, a speaker uses
+an accent or register that doesn’t fit the setting; the hearer
+understands the utterance perfectly but reacts to the speaker’s social
+positioning: “Why are you talking like that?” Uptake succeeds; what’s
+targeted is stance or persona, not the move itself.
+
+This contrast reflects what I’ll call . The relevant sense of public
+update is the one captured by work on common ground and grounding:
+interlocutors don’t merely produce signals; they attempt to make
+commitments mutually recognizable and mutually ratifiable . Some aspects
+of linguistic form are publicly accountable in this sense; others
+aren’t.
+
+Repair practices make this selectivity visible. When an utterance isn’t
+understood, or is understood under a suspect analysis, interlocutors
+systematically mobilize repair mechanisms . These mechanisms presuppose
+that some dimensions of form are designed to be recognizably “the same
+thing” across tokens and across speakers, because they’re the dimensions
+on which the interactional work turns.
+
+Public accountability isn’t the same as public consequence. Indexical
+meaning is real and systematic, but it’s typically tolerated as
+variable, defeasible, and contextually negotiable. Accent and style are
+central to social meaning, but they aren’t normally treated as licensing
+conditions on what an utterance can “count as” in the way that
+clause-typing, polarity, or evidential marking can be . Lexical choice
+is similarly accountable in an ethical or epistemic sense (one can be
+challenged for using a slur, or for choosing a misleading term), but
+that accountability differs from “this form isn’t in the repertoire”.
+
+If is always relational and contrastive, the relevant question is which
+contrasts a community treats as foundational for public update in
+interaction. Those contrasts constitute what I’ll call the .
+
+# The operator stratum
+
+## The operator-stratum hypothesis
+
+Public-update operators are restricted form–value relations that signal
+what kind of move a speaker is making and how that move is to be taken
+up. I use the label narrowly: not as a taxonomy of everything called an
+operator, and not as a claim that every formal operator in a grammar has
+the same interactional role. The proposal is a hypothesis about which
+form–value relations fall under the accountability regime targeted by
+grammaticality judgments. The starting point is not the judgment itself,
+but two independently observable dimensions: what kind of update the
+relation licenses, and how the relation is organized in the community’s
+repertoire.
+
+<span class="smallcaps">(i) Public update condition.</span> The relation
+conventionally contributes to how an utterance updates shared
+commitments or allocates interactional roles (call it common-ground
+bookkeeping), but in a specific way: it supplies an *instruction* for
+the update, constraining what counts as an appropriate next move .
+Clause-type, illocutionary force, and evidential anchoring are paradigm
+cases: they tell hearers how to file the contribution. In ’s terms, many
+operator contrasts are structuring updates rather than ordinary
+common-ground additions: they configure the discourse context in which
+at-issue content can be entered, challenged, or elaborated. A vivid
+adjective or slang term, by contrast, contributes content but doesn’t
+supply an update instruction in this sense.
+
+Operationally, a contrast supplies an update instruction iff
+manipulating it, while holding payload constant, shifts the distribution
+over next-turn types in conversational corpora. A clause-type
+manipulation should alter rates of answers, acknowledgements, refusals,
+counter-questions, or challenges. A purely lexical substitution may
+alter topic or affect, but it doesn’t by itself reset the update type.
+This test is imperfect, because corpora encode activity type and
+participant status, but it gives condition (i) an empirical target
+independent of the analyst’s judgment.
+
+The condition identifies licensed update types rather than successful
+updates. Truth-conditional assessment evaluates whether a licensed
+update succeeds; contextual anchoring can determine which operator value
+is licensed. A speaker can say of a false situation: the assertion fails
+epistemically, but affirmative polarity and declarative force are
+licensed. By contrast, selects a past-time anchor; \* missets the tense
+value in varieties where finite past morphology is obligatory.
+
+Contextual anchoring is constrained. Context selects among independently
+licensed operator values, constructional frames, and ellipsis patterns;
+it doesn’t create a form–value relation ad hoc. can succeed as an
+elliptical reply to “How long do you have left?” because the frame
+supplies the relevant duration. The same reply to “How old are you?”
+fails in ordinary English because age is expressed through the frame,
+not because the hearer lacks the intended meaning.
+
+<span class="smallcaps">(ii) Repertoire condition.</span> The relation
+belongs to a restricted, conventionalized contrast set whose values are
+recurrently selected in describable structural environments, whose
+alternatives are mutually exclusive in those environments, and whose
+extension is not freely innovated token by token. Tense paradigms,
+agreement systems, and complementiser inventories are paradigm cases.
+Idioms and fixed collocations are near misses: they may be rigid, but
+they don’t serve as combinatorial values in a contrastive system.[^4]
+
+Repeated use matters because it turns a licensing pattern into an
+expectation. Speakers encounter comparable contexts in which a
+restricted choice set is available: one operator value is selected,
+incompatible values are excluded, and the pattern projects forward to
+future tokens. That recurrence explains how speakers can detect operator
+mismatches without making detector output one of the membership
+conditions. Stability alone remains insufficient: phonotactics,
+collocations, and enregistered styles can be stable over time while
+falling outside the operator stratum unless they also satisfy the public
+update condition.
+
+The two conditions do different causal work. The public-update condition
+is a recruitment condition: it explains why a contrast enters the region
+of grammar where sharp policing can develop. The repertoire condition is
+a maintenance condition: once a contrast is closed, recurrent, and
+supported by a large opportunity set, policing can attach to paradigm
+integrity itself. That’s why value-intact exponent errors can be
+corrected categorically even when the intended update is recoverable.
+
+This split yields two dissociation predictions. First, policing can
+persist after synchronic update value attenuates, as in grammatical
+gender and noun-class concord. Second, update-relevant resources that
+have not entered closed paradigms should not be policed as grammar:
+performatives, many discourse markers, and most interjections can
+configure uptake without becoming membership facts.
+
+Operator contrasts can be morphological, syntactic, phonological,
+prosodic, gestural, or lexical in form. What matters is their
+conventional role: they supply closed-system values for interpretation
+and interaction. Morphology and clausal architecture are privileged
+*where they instantiate operator contrasts*, not because they form a
+separate module.
+
+The term is continuous with, but not identical to, its use in Role and
+Reference Grammar, Functional Grammar, and Functional Discourse Grammar.
+That tradition treats categories such as aspect, tense, modality,
+negation, and illocutionary force as operators over layers of clause
+structure, and it provides a structural-functional inventory of operator
+categories and scopal domains . The operator-stratum account shifts the
+explanandum. It asks why mismatches in some such form–value relations
+are experienced and policed as grammaticality mismatches.
+Operator-stratum membership here is therefore not only a scopal or
+morphosyntactic relation, but a role in public accountability: the
+operator value supplies a conventional instruction for update, uptake,
+commitment allocation, or role tracking.
+
+Operators are intensely contrastive, but at a different functional level
+than phonemes. Phonemic value is primarily discriminative: its semiotic
+job is to keep signs apart. Operator value is contrastive at the level
+of interactional control: it selects a publicly accountable instruction
+for public update (clause type, polarity, evidential anchoring, and so
+on). Both are paradigmatic, but they make different contributions to the
+system.
+
+Analogically, operators are header-like rather than payload-like. They
+specify how an utterance is to be taken up (what move it counts as,
+who’s committed to what, how subsequent contributions are constrained)
+rather than contributing the conceptual substance of what’s being
+communicated. This yields three strata of linguistic infrastructure:
+expression-shape constraints that make an utterance recognizable as a
+token of the system, operator paradigms that configure public update and
+maintain closed repertoires, and payload resources that contribute
+negotiable content or stance. Their mismatch profiles differ
+accordingly. Expression-shape mismatches block recognizability;
+operator-paradigm mismatches invite form-targeted correction; payload
+mismatches invite negotiation.
+
+| **Stratum** | **Contribution** | **Mismatch profile** | **Example** |
+|:---|:---|:---|:---|
+| Expression-shape | Recognizable token | “Not a word” | phonotactics |
+| Operator paradigm | Update instruction; paradigm integrity | form-targeted correction | tense/agreement |
+| Payload | Content/stance | Negotiation, not rejection | lexical mismatch |
+
+Three strata of linguistic infrastructure and their characteristic
+mismatch profiles. {#tab:strata}
+
+The central puzzle concerns the middle stratum: why clausal architecture
+clusters with tense, number, and agreement as a target of grammaticality
+talk, rather than with accent or lexical choice. The answer developed
+below is that clausal architecture behaves “like grammar” when it
+packages operator values for update, role allocation, and uptake.
+
+## Boundary cases
+
+Public consequence isn’t enough for operator-stratum membership. Many
+forms affect participant commitments, how they’re evaluated, or what
+repairs are available. The operator claim is narrower: a form–value
+relation is an operator contrast only when it both configures a
+public-update instruction and belongs to a restricted, accountable
+repertoire.
+Table <a href="#tab:boundary-cases" data-reference-type="ref"
+data-reference="tab:boundary-cases">2</a> makes the boundary explicit.
+
+| **Case** | **Public?** | **Restricted?** | **Update instruction?** | **Predicted mismatch profile** |
+|:---|:---|:---|:---|:---|
+| Tense/evidential marker | yes | yes | yes | repair targeting operator value |
+| Question particle | yes | yes | yes | uptake-role confusion |
+| Value-intact exponent error | yes | yes | historically/recruited | form-targeted paradigm repair |
+| Slur/taboo item | yes | partly | no, except as social act | sanction of act or speaker |
+| Proper-name misselection | yes | open-ish | no | referential repair |
+| Phonotactic mismatch | yes | yes | no | recognizability problem |
+| Register mismatch | yes | gradient | usually no | stance or social evaluation |
+| Interjection token | yes | partly | sometimes | uptake configuration without operator-stratum membership |
+| French determiner allomorphy | yes | yes | recruited/edge | form-selection mismatch at a stratum boundary |
+
+Boundary cases for public-update operators. Public consequence alone
+doesn’t define operator-stratum membership. {#tab:boundary-cases}
+
+Four boundary cases show why both conditions are needed.
+
+Slurs satisfy the public-consequence test but usually fail the operator
+test. A racial slur used as a vocative, or a misogynistic slur used as a
+predicate, can radically alter the social action performed and can make
+the speaker answerable for that action. But the utterance normally
+remains structurally fileable as an address, assertion, accusation, or
+description. The problem is that the move is morally or socially
+impermissible, not that the hearer lacks an instruction for how to
+update the discourse. The predicted response is therefore sanction of
+the act or speaker, not repair of an operator value.
+
+Interjections sit closer to the operator stratum. They can configure
+uptake, stance, attention, repair, or floor management . In the English
+cases discussed by , can mark a change in epistemic state, can initiate
+repair, can acknowledge or continue a turn, can delay while holding the
+floor, and can display surprise or assessment.
+
+But many interjection tokens are not selected from a closed set of
+mutually exclusive values in the way tense, polarity, or clause type
+are. They can be repeated, stretched, blended, innovated, or substituted
+without producing a categorical licensing failure. In those cases, an
+odd interjection may disturb uptake or stance without leaving the
+utterance outside the operator repertoire. If an interjection-like form
+is conventionalized into a closed, distributionally accountable
+paradigm, it can enter the operator stratum; the point is that uptake
+configuration alone is not enough.
+
+French \* tests the other side of the boundary. The mismatch isn’t
+generic phonology or accent. It fails morphophonological allomorph
+selection inside a closed determiner/clitic repertoire: before
+vowel-initial , the expected alternant is . That repertoire also
+participates in reference setting, so the case lies at the
+expression-shape/operator boundary. The asterisk is warranted because a
+closed form-selection pattern has been violated; the lesson is that a
+superficially phonological mismatch can attract grammaticality talk when
+it’s embedded in an accountable repertoire.
+
+The same classification applies to \* and \*. In such cases the intended
+value may be intact: the speaker selected past time, or selected the
+relevant lexical relation, and the listener usually recovers the
+intended update. The correction is nonetheless categorical because the
+error violates a maintained paradigm or a closed form-selection
+dependency. The repair profile is therefore “you mean ” or “you mean ”,
+not “what did you say?”
+
+## Diagnostics
+
+The operator stratum can be diagnosed empirically across languages.
+
+<span class="smallcaps">Paradigmatic closure.</span> Operator contrasts
+typically occupy relatively small, enumerable paradigms: polarity
+contrasts, evidential sets, tense–aspect systems, agreement paradigms,
+switch-reference markers, question particles, complementiser
+inventories, and so on. Open-class lexical sets don’t behave this way.
+
+<span class="smallcaps">Broad scope.</span> Operator contrasts typically
+configure the update potential of an utterance as a whole, affecting
+argument linking, scope, clause type, and what responses are licensed.
+In public-update terms: they constrain which next moves are relevant
+(clause type), who’s committed to what (evidential anchoring, argument
+structure), and how the contribution can be challenged or elaborated
+(dependency structure, polarity).
+
+<span class="smallcaps">Opportunity sets and effective
+preemption.</span> Many operator contexts are encountered constantly in
+ordinary interaction, which produces strong preemption dynamics. Large
+opportunity sets can police wrong values, as with a tense mismatch, but
+they can also police value-intact form selection. Because is everywhere,
+\* is excluded from the past-tense paradigm; because wins every time, \*
+is excluded from the governed-dependency pattern. The error is paradigm
+integrity, not failed recognizability.
+
+Left-branch extraction illustrates the division of labour with the
+companion paper. English speakers repeatedly need to ask about a
+modifier–noun package, and occupies that interrogative modifier–noun
+niche while \* remains systematically untaken . This paper explains why
+that interrogative construction is a policed niche; the companion’s
+preemption dynamics explain why the variant is out of it. A competitor
+that systematically wins in a large opportunity set quickly drives a
+rival option toward non-licensing .[^5] Where the opportunity set is
+smaller, the same kinds of contrasts may still belong to the operator
+stratum, but categoricality and effective-preemption effects are
+predicted to be weaker and more register-bound.
+
+<span class="smallcaps">Neurocognitive separation in response profile,
+not in module.</span> The proposal is compatible with domain-general
+accounts of prediction and error signalling, but it predicts that
+operator mismatches should systematically elicit distinct response
+profiles from conceptual anomalies, because operator mismatches
+interfere with the mapping from form to public update, rather than
+merely producing a surprising concept combination. This aligns with
+well-known ERP dissociations between semantic incongruity and
+morphosyntactic anomaly without implying that syntax is autonomous.
+
+Closure, scope, and opportunity structure identify operator contrasts
+independently. Categorical judgments, repair profiles, and
+neurocognitive response profiles are predicted ways those contrasts
+should behave, not membership criteria. Because the diagnostics track
+contribution rather than substance, a grammaticalized contrast can
+become relevant to grammaticality talk even when the exponent is tonal,
+prosodic, or gestural.
+
+# Why clausal architecture belongs to the operator stratum
+
+Clausal architecture is often discussed as if it were a matter of
+arranging words. That’s an English-biased picture. Cross-linguistically,
+clausal architecture is realized through diverse operator exponents:
+affix order in polysynthetic systems, templatic morphology, clitic
+clusters, tone melodies, nonmanual marking, rigid word order, flexible
+order coupled with case, and various mixtures. The relevant
+generalization is not linearization but operator packaging.
+
+The thesis is narrower than “all syntax belongs to the operator
+stratum”. Clausal architecture belongs with tense and agreement when it
+realizes publicly accountable operator contrasts: clause type, argument
+linking, dependency scope, and reference tracking. Some syntactic
+constraints may instead reflect expression-shape regularities,
+processing limits, or constructional conventionalization. The syntax
+most readily experienced as grammatical mismatch is predicted to be
+operator-rich, but not every syntactic asterisk is an operator mismatch.
+
+The relevant stability is projectible rather than merely frequent . In
+clause typing, argument linking, dependency scope, and reference
+tracking, speakers encounter recurrent environments in which a small set
+of values is available, one value is selected, and incompatible
+alternatives are excluded. That projectible licensing profile is what
+makes a local clausal mismatch feel like a failure in the shared
+repertoire rather than an isolated processing difficulty or pragmatic
+misfire.
+
+Clausal architecture packages operator contrasts in at least four
+domains.
+
+<span class="smallcaps">Clause type and response space.</span>
+Interrogatives, imperatives, declaratives, and related types encode
+different update potentials and different norms for what counts as a
+relevant next move. The contrast is interactionally basic, and languages
+grammaticalize interrogatives using heterogeneous resources (particles,
+morphology, intonation, or combinations) . Where a language requires an
+interrogative exponent for the intended question, declarative morphology
+leaves the addressee to decide whether to answer or merely acknowledge;
+the intended public update is unsettled.
+
+<span class="smallcaps">Argument linking and participant roles.</span>
+Clausal organization encodes which participant is presented as actor,
+undergoer, experiencer, and so on. The particular implementation varies
+typologically, but the operator contrast is projectible: it constrains
+the space of recoverable role assignments, and it does so in a publicly
+accountable way. If the wrong role assignment is signalled, the hearer
+tracks the wrong participant as agent or patient, derailing downstream
+inference.
+
+<span class="smallcaps">Dependency management and scope.</span> Relative
+clauses, complement structures, and long-distance dependencies aren’t
+simply compositional ornaments. They package how information is nested,
+attributed, and scoped. If scope relations are unclear, the hearer
+doesn’t know what the speaker is committed to vs. merely reporting or
+considering; these are conditions on what an utterance publicly commits
+to and how it can be challenged . Ordinary English complement choice
+makes the point: presents the embedded proposition as available for
+commitment, opens a question, and \* misselects the complement type for
+the intended update. Put differently, grammaticality asks more than
+whether dependency arrows can be drawn; it asks whether the dependency
+configuration implements a licensed update in the relevant operator
+repertoire .
+
+<span class="smallcaps">Reference tracking across clauses.</span> Many
+languages treat cross-clausal coherence as an operator contrast.
+Switch-reference is a textbook case: a morphosyntactic system signals
+whether the subject of one clause is the same as or different from that
+of another . A wrong marker licenses the wrong tracking relation or
+leaves tracking unresolved, which can derail the whole multi-clause
+sequence. The key point here isn’t the particular pivot (which varies)
+but the fact that a community can grammaticalize the tracking problem as
+operator value.
+
+To illustrate the form of the claim, consider Amele, a Papuan language
+in which dependent switch-reference verbs in clause chains mark whether
+the relevant argument is maintained or changed across adjacent clauses .
+Roberts’s examples contrast forms such as
+“come-<span class="smallcaps">ss.seq</span>-1<span class="smallcaps">sg.nom</span>”
+and
+“come-<span class="smallcaps">ds.seq</span>-1<span class="smallcaps">sg.nom</span>”
+before a final tense-marked verb. The operator contrast isn’t “a content
+word”; it supplies a clause-linking operator value. Operator mismatches
+are predicted to be treated as structural mismatches: the wrong marker
+licenses the wrong clause-linking update, or leaves the intended update
+unresolved.
+
+A second, different kind of illustration comes from Japanese
+sentence-final particles. In many registers, conventionally marks
+interrogative force, while declaratives are unmarked or carry other
+particles; intonation interacts with these choices, and colloquial
+speech allows more variation . The particle doesn’t add much conceptual
+content. Rather, it helps determine what kind of move the utterance
+counts as, how it’s to be taken up, and what responses are licensed. The
+relevant point is membership in a clause-typing repertoire, not
+automatic failure. An omitted isn’t ungrammatical just because an
+interrogative interpretation is intended: it may yield a declarative
+construal, a colloquial intonation-marked question, or some other
+licensed move. becomes relevant to ungrammaticality only where the
+repertoire makes a particular value obligatory, excludes a competing
+value, or blocks a combination with other particles, intonation, or
+morphosyntax. In that sense, it illustrates how a small,
+conventionalized contrast can belong to grammar because it configures
+public update, while still leaving room for register-sensitive and
+construction-specific variation.
+
+Together, the Amele and Japanese cases separate two claims that are
+easily conflated. Some clausal operators generate clear structural
+mismatches when the wrong value is selected; others, like , show
+operator membership without automatic failure. In both cases, clausal
+architecture matters because it packages values for public update, not
+because syntax is insulated from interaction.
+
+A familiar morphosyntactic reflex of the operator/payload partition is
+the complement–modifier contrast. Many head–dependent relations are
+publicly accountable because they fix argument linking, attribution, or
+scopal organization; these are complement-like in the relevant sense
+even when their exponents are PP- or clause-sized. English shows the
+operator-like side: supplies a place value the construction requires,
+while \* leaves the clausal instruction incomplete. By contrast, uses a
+PP to enrich payload; omitting it changes content but doesn’t break the
+clausal instruction.
+
+This recasts some so-called obligatory adjuncts as cases where a
+construction conventionalizes an operator contrast whose value needs to
+be supplied overtly or implicitly. It also predicts that some
+modifier-shaped material (negation, focus particles, degree operators)
+will pattern with the operator stratum where their licensing conditions
+make one value obligatory or exclude another, despite not looking
+“argumental”.[^6]
+
+# Why tense and number behave similarly without being universal
+
+On this account, tense and number behave “like grammar” in languages
+where they’re operator contrasts, and are irrelevant to grammaticality
+talk where they’re not grammaticalized. This avoids a common slippage
+between “salience in familiar European languages” and “cross-linguistic
+necessity” .
+
+Tense marking is an especially transparent example. Where tense is
+grammaticalized, it’s an operator contrast for temporal anchoring and
+public update, and operator mismatches are often treated as licensing
+failures . Where tense isn’t grammaticalized, temporal anchoring is
+managed through other operator contrasts (aspect, evidential access,
+discourse particles) and through contextual inference. The proposal
+predicts that speakers in the latter case shouldn’t experience missing
+tense marking as “ungrammatical”, because there’s no operator contrast
+to mismatch.
+
+Number behaves analogously. In languages where number is obligatory in
+agreement or nominal morphology, it’s part of the operator repertoire
+for tracking reference in public commitments, and a number mismatch is a
+paradigmatic licensing failure. In languages where number is optional or
+limited, other contrasts fill the reference-tracking role, and number
+mismatches have different status .
+
+Operator repertoires vary across languages; where grammaticality
+judgments track licensing failures, they target operator contrasts
+*wherever those contrasts occur*.
+
+# Gender and noun-class concord as a hard case
+
+Gender and noun-class concord are the limiting case for the account.
+With many inanimate nouns, a gender mismatch has little or no synchronic
+update value: \* normally doesn’t leave the hearer wondering which
+object is meant, what move was made, or what response is licensed. Yet
+it’s policed as a central grammar error in languages where gender
+concord is obligatory .
+
+That pattern would be hard to explain if public-update value were a
+token-by-token policing condition. The recruitment/maintenance split
+predicts it. Gender and noun-class systems plausibly enter the operator
+region through reference tracking, especially in discourse environments
+where concord helps maintain or recover anaphoric dependencies. But once
+the system is closed, recurrent, and supported by a large opportunity
+set, the maintained target is paradigm integrity. A wrong concord
+exponent can be corrected even when the local referent is obvious.
+
+This does not make “update instruction” vacuous. The Mahowald-style
+point is local redundancy, not global irrelevance: agreement can be
+locally redundant in most clauses while remaining crucial in the
+minority where lexical semantics, animacy, or discourse expectations
+underdetermine reference . The account therefore doesn’t say that any
+channel-stabilizing covariation is an operator. It says that
+update-relevant contrasts can be recruited, and that closed paradigms
+can then outlive the synchronic value of many tokens.
+
+The operational prediction is sharp. Manipulating gender on inanimate
+nouns while holding payload constant should often produce no measurable
+shift in next-turn type distribution. If such cases still attract
+categorical correction, the synchronic version of the theory is
+falsified. The recruitment/maintenance version predicts that result:
+attenuated update value plus persistent paradigm policing.
+
+# Why accent and lexical choice are usually different
+
+Accent and lexical choice typically have different kinds of value.
+
+## Indexical value and negotiability
+
+Accent, style, and register contribute indexical value: they position
+speakers relative to social categories, stances, and activity types .
+Indexical value is often rich and structured, but it isn’t typically
+implemented as a small closed paradigm with obligatory selection
+conditions tied to public update. It’s negotiable in ways operators
+aren’t. Interlocutors can reinterpret an accent shift as play,
+accommodation, quotation, or stance work without treating it as a
+licensing failure. The accountability regime is different: style can be
+challenged, but it isn’t ordinarily policed as “not in the repertoire”.
+
+Indexicality can be obligatory in social practice without becoming an
+operator licensing condition. Much indexical meaning is
+*meta-pragmatic*: it becomes salient through social ideologies and
+enregisterment processes . That makes it both powerful and variable, but
+it rarely supplies an operator value that has to be selected for the
+utterance to count as a recognized move.
+
+## Conceptual value and open classes
+
+Open-class lexical items primarily contribute conceptual content, and
+the system is designed to be expansible and to tolerate innovation.
+Lexical choice can be infelicitous, misleading, or socially harmful, but
+it’s seldom treated as a failure of combinatorial licensing. Lexical
+innovation is one of the routine mechanisms by which communities extend
+their repertoire, and it typically proceeds without the categorical
+judgment profile associated with operator mismatches.
+
+“Open-endedness” has two dimensions that matter here. Lexical
+inventories are open in the sense of expandable type-sets: innovation is
+normal and the system tolerates new entries. Compositional semantics is
+open-ended in a different sense: unbounded productivity from combining a
+finite stock. Operators lack the first kind of openness (paradigmatic
+closure is one of the diagnostics), but they participate fully in the
+second: operator values compose with payload. Negation scopes,
+evidentials anchor commitments, and clause type constrains response
+space. Because the inventory is closed and the contribution is
+control-like, the community can stabilize sharp licensing expectations
+around them.
+
+That difference explains why “wrong word” and “wrong clausal form” often
+feel qualitatively different even when both are understood. A wrong
+operator value threatens the public recognizability of the intended
+update; a non-optimal lexical choice typically doesn’t.
+
+## Cross-substance operators
+
+Operator status is a role, not a substance. Phonological material can be
+an operator exponent, and lexical items can enter operator contrasts
+when they grammaticalize.
+
+Systems in which tone marks tense, focus, or polarity are paradigmatic
+cases of phonological material realizing operator value, and they should
+attract operator-directed repair where the relevant value is obligatory
+or mutually exclusive . Intonational contours that conventionalize
+clause type are operator exponents; when they’re required or
+exclusionary, they should pattern like question particles rather than
+like accent . This aligns with work on rising declaratives and
+intonational commitments, where intonational tunes modify context-update
+functions rather than merely colouring pronunciation .
+
+Signed languages make the same point in another modality. In American
+Sign Language, a yes/no question can be marked by nonmanual cues such as
+brow raise over the relevant clause. The operator value is carried by
+scopal nonmanual marking, not by a segmental word, but it still
+configures clause type and response space .
+
+Lexical items can enter operator contrasts through grammaticalization.
+Paradigms shrink, content fades, and licensing constraints emerge . Many
+“lexical” items already participate in operator contrasts without
+diachronic grammaticalization: function words, particles, auxiliaries,
+complementizers, and polarity items occupy restricted paradigms, show
+distributional licensing, take broad scope, and attract repair
+sensitivity. English preposition selection illustrates the split. Some
+prepositions participate in strictly licensed head-dependent relations
+that set argument linking; others remain payload choices whose selection
+depends on spatial or conceptual content. They’re lexical in form but
+operator-like when they occupy the first role.
+
+Phonotactics sharpens this point. Phonotactic constraints are
+repertoire-like: they’re conventionalized, relatively stable, and
+mismatches are often treated categorically (“not a possible word”). But
+they don’t satisfy the public-update condition. What they regulate is
+whether a token can be recognized as a well-formed expression-shape, not
+whether it specifies an update instruction correctly. The metalinguistic
+reaction profile is correspondingly different: operator mismatches
+invite “you can’t say that (as a move)”; expression-shape mismatches
+invite “that’s not a word / what did you say?”; lexical and pragmatic
+mismatches preserve recognizability but invite negotiation about
+content, stance, or appropriateness.
+
+## An information-theoretic frame
+
+Operators don’t usually add much payload content in themselves; they set
+parameters for decoding the rest. Once an utterance is marked
+interrogative, subsequent material is processed as the content of a
+question rather than an assertion. Polarity reverses the inferential
+contribution of material in its scope. Case and agreement constrain role
+assignment. The issue isn’t that operators always reduce more entropy
+than lexical items. Open-class predicates such as and can massively
+reshape continuations too.
+
+The distinctive point is codebook control.[^7] Operator values determine
+how downstream material is decoded: assertion vs. question,
+self-commitment vs. attributed commitment, one role assignment
+vs. another, one scopal configuration vs. another. A wrong header can
+corrupt interpretation of everything in its scope. A wrong payload item
+typically causes local additive damage: the hearer repairs or negotiates
+that item while preserving the surrounding update frame .
+
+This explains a puzzle: grammatical marking is often locally
+redundant.[^8] show that across 30 languages, subjecthood in simple
+transitive clauses can usually be inferred from lexical content alone.
+Overt grammatical cues are redundant in a majority of everyday cases,
+but crucial for the minority where lexical semantics doesn’t settle the
+roles (reversible events, non-prototypical assignments). Operators can
+be locally redundant but globally update-relevant. Their contribution
+isn’t to maximize information in each occurrence, but to stabilize a
+codebook whose values remain available when context, lexical semantics,
+or discourse expectations underdetermine the update.
+
+The same logic explains why grammatical material can be phonetically
+reduced. High-frequency, high-predictability items (often function
+words[^9] and inflections) undergo reduction precisely because context
+carries the load . Operators can tolerate variable realization without
+losing operator-stratum membership, because what matters is their role
+in a small, closed paradigm, not the phonetic stability of their
+exponents.
+
+This information-theoretic picture connects directly to opportunity
+structure. Dense exposure stabilizes effective-preemption dynamics and
+sharpens licensing boundaries . Once a community converges on a small,
+high-frequency codebook paradigm, deviations become easier to detect and
+sanction. The new processing prediction is globality: operator errors
+should trigger broader reanalysis signatures for material in scope,
+while payload errors should concentrate repair around the offending
+item.
+
+# Typological consequences: what varies is which contrasts enter the operator stratum
+
+The operator stratum is a comparative concept: it identifies an
+interactional role that can be realized by different structures in
+different languages . Typological diversity then concerns which
+contrasts enter that role, not whether English categories are universal.
+
+Four domains are particularly instructive.
+
+## Instructive domains of variation
+
+<span class="smallcaps">Evidentiality and epistemic authority.</span> If
+evidentiality is obligatory and closed-paradigm in a language, then
+evidential mismatches should pattern like tense or agreement mismatches:
+categorical judgments, repair targeting the operator value . Where
+evidentiality isn’t grammaticalized, similar meanings are available
+through lexical or periphrastic means, but they can be challenged as
+deceptive or inappropriate without being treated as structurally
+illicit. The diagnostic is whether the mismatch changes the licensed
+update or merely raises questions about the speaker’s reliability.
+
+<span class="smallcaps">Egophoricity and perspective management.</span>
+If a language grammaticalizes perspective or ego-involvement as a closed
+paradigm, then perspective mismatches should pattern like agreement
+mismatches where the paradigm makes one value obligatory or excludes
+another: repair targets the operator value. Tibetic languages and others
+have been argued to do exactly this . Regardless of the preferred
+analysis, these contrasts are prime candidates for operator-stratum
+membership: they govern whose epistemic position is encoded as the
+relevant anchor for a clause’s update potential.
+
+Where languages do *not* recruit perspective into the operator stratum,
+similar meanings remain expressible but are policed differently, as
+pragmatic misalignment rather than licensing failure.
+
+<span class="smallcaps">Phonological exponents vs. accent.</span> If
+tone marks tense, aspect, or polarity in a language, then tonal
+mismatches should pattern like morphosyntactic mismatches when the
+intended operator value is fixed by the construction or context, not
+like accent shifts. That prediction makes tonal languages a crucial test
+case . A language may distinguish tense values primarily through tonal
+melodies on the verb (one pattern for remote past, another for recent
+past), with minimal segmental differentiation between the forms.
+
+A concrete case is Ngwi, a West-Coastal Bantu language whose
+Tense–Aspect–Mood–Polarity system includes grammatical tone in a compact
+set of verbal conjugations . In such systems, tone isn’t merely phonetic
+dress on a segmental form; it can be part of how an operator value is
+realized. A speaker who produces the wrong tone in these contexts need
+not be heard as merely “accented”; they may instead be heard as having
+selected the wrong tense, aspect, mood, or polarity operator value,
+inviting repair of the “did you mean X or Y?” type. This contrasts with
+sociolinguistic variation in the same languages, where tonal realization
+may shift to index region or age without affecting the operator value.
+The diagnostic: does the mismatch change what move was made, or just who
+made it?
+
+<span class="smallcaps">Switch-reference as instruction.</span>
+Switch-reference systems exemplify how clausal architecture can package
+an operator contrast beyond simple word order. In Amele, for example, a
+dependent verb in a clause chain can mark same-subject
+vs. different-subject linkage before the final tense-marked verb .
+
+<div class="xlist">
+
+(instruction: keep same participant active) (instruction: switch
+participant role)
+
+</div>
+
+This marker choice is an explicit instruction for reference tracking: it
+constrains the assignment of participant roles in the upcoming
+increment. An operator mismatch (using the same-subject marker when the
+subjects are different) disrupts reference assignment and clause
+linkage; repair targets reference tracking, not stance or style.
+
+## The boundary case: T/V and grammaticalized social deixis
+
+If an indexical distinction like addressee status becomes obligatory and
+paradigmatically closed, then some mismatches should pattern less like
+free register choice and more like operator mismatches. T/V distinctions
+(honorific pronouns and agreement) test this prediction . French and ,
+for instance, can be negotiated in some relationships but tightly
+policed in institutional ones. They encode social positioning (indexical
+value), but in many languages they’re paradigmatically closed and
+morphologically integrated. The resulting overlap is expected: a wrong
+form may be socially sanctionable as address behaviour and structurally
+repairable as the wrong operator value. This illustrates the channel
+without collapsing it: an indexical contrast takes on operator value
+only when it’s recruited into the closed-set infrastructure of public
+update.
+
+# Grammaticality judgments as a social technology
+
+If grammatical licensing judgments characteristically target operator
+value, then grammaticality judgment practices are themselves a social
+technology: a way of policing the operator repertoire of a communicative
+situation. Three variables organize this policing.
+
+The is which contrasts exist and what values they conventionally take:
+the inventory of operator contrasts available in the community. The is
+which of those contrasts are treated as “in play” in a given register,
+activity type, or genre: formal written registers may activate operator
+contrasts (e.g. subjunctive marking) that are dormant in casual speech.
+The is how strictly departures are treated given participant roles and
+expectations: L2 learners, children, and visitors to an unfamiliar
+dialect region may be evaluated against the locally active operator
+stratum, but participant roles calibrate expectations about competence,
+affiliation, and repair.
+
+Situation/ascription/identification conditioning gives these profiles
+their social architecture. The immediate situation selects the activity,
+medium, footing, and task; speaker ascription supplies durable social
+baselines such as region, generation, institutional role, or learner
+status; and identification tracks the norm-centre participants orient to
+as relevant. These dimensions condition both which operator repertoires
+are available and how strictly departures are policed. A form can
+therefore be fully licensed for participants oriented to one norm-centre
+and non-licensed for participants oriented to another, without either
+side being confused about its form or meaning . Negative concord
+illustrates the point: is licensed in some English repertoires and
+policed in standardized-school repertoires, even when the intended
+negative meaning is transparent.
+
+These profiles help explain why grammaticality policing exists and what
+sustains it. Grammatical conventions are community property: they’re the
+stabilized solutions that allow rapid coordination under uncertainty .
+demonstrates that such coordination problems drive communities to
+converge on categorical signals that effectively solve local problems
+but readily entrench arbitrary exclusions. But this coordination story
+shouldn’t be confused with naive instrumentalism. As emphasizes,
+speakers don’t have to get grammar right in order to be understood;
+there’s very little pressure to comply for strictly communicative
+reasons.[^10] The relevant commitment is practice-constitutive:
+participating in a linguistic practice makes speakers answerable to its
+constraints , but this doesn’t entail moral obligation, and public
+accountability is indexed to expected competence.
+
+Repair fits the same pattern. It treats some departures as requiring
+correction and others as negotiable . Operator-paradigm mismatches sit
+at the intersection: they make the form publicly correctable, even when
+the intended update is locally recoverable.
+
+This framing also clarifies why categoricality is common but not
+inevitable. Some operator contrasts are heavily conventionalized,
+supported by large opportunity sets, and tightly constrained, which
+makes non-licensing stable and judgments sharp. Others have smaller
+opportunity sets or are contested across overlapping norm centres, which
+makes judgments more variable. The key claim is that *wherever
+categoricality emerges*, it should cluster around operator value.
+
+Speakers frequently label accent or dialect choices as “bad grammar” to
+enforce social hierarchies. The operator stratum helps distinguish
+first-order operator-paradigm mismatches from second-order ideological
+policing without denying either. Overt correction is rare in both cases,
+but the target differs. In repair after an operator-paradigm mismatch,
+the utterance form is targeted: “you mean ”, “you mean ”, “did you mean
+the past form?” The update may still be recoverable. In ideological
+policing, the speaker is targeted while the update remains intact: the
+utterance is understood, but the reaction targets the person’s social
+index .
+
+Slurs and taboo words remain boundary cases for the same reason. They’re
+publicly accountable in a strong sense, but the typical sanction targets
+an impermissible action rather than a defective update instruction. The
+same surface reaction, “you can’t say that”, can therefore block a
+social move or reject a linguistic instrument.
+
+The analysis addresses what triggers grammaticality talk, not how such
+talk is socially deployed. The operator stratum provides material for
+language ideology, but that doesn’t make the stratum ideology-free or
+judgments politically neutral. Who speaks for “the community”? Who gets
+to police the repertoire, and with what consequences for whom? Those are
+questions about the social life of grammaticality talk, not about its
+target.
+
+The target of operator-directed grammaticality talk isn’t identical to
+the output of a judgment task. The target, in these cases, is paradigm
+licensing: whether a form belongs to the recruited and maintained
+operator repertoire. Felt ungrammaticality is detector output: a
+speaker-level response that can be sharpened or blurred by processing
+difficulty, familiarity, social penalty, task design, and metalinguistic
+training. Good detectors track the target often enough to be useful, but
+they aren’t the target itself .
+
+# Predictions and research strategies
+
+The proposal generates tractable empirical predictions across
+subdisciplines, which is part of its point: it’s meant to be usable by
+typologists, sociolinguists, psycholinguists, and interaction analysts.
+
+<span class="smallcaps">(1) Repair asymmetries.</span> Overt repair is
+rare overall, but when it does occur, operator mismatches should show a
+different profile from indexical mismatches. The prediction is not
+incomprehension. Many agreement, gender, tense, and exponent errors are
+locally redundant. The prediction is form-targeted repair: exposed or
+embedded other-correction of the form, value, or paradigm slot, without
+the hearer acting as if the whole utterance failed .
+
+Cross-linguistically, the targets of repair should correlate with what’s
+grammaticalized. Operationally: in annotated conversational corpora,
+code operator-paradigm mismatches (tense, agreement, switch-reference,
+concord, obligatory particles) separately from indexical mismatches
+(accent shifts, register mismatches). Operator-paradigm cases should
+attract “you mean X” or “isn’t it X?” repairs; indexical cases should
+attract person-targeted responses, stance negotiation, accommodation, or
+sanction. The prediction is conditional on accountability profiles:
+dialect differences, L2 status, institutional role, and task format all
+affect whether correction is licensed.
+
+<span class="smallcaps">(2) Satiation asymmetries.</span> Repetition
+should attenuate anomaly responses more readily for non-operator
+mismatches and for low-entrenchment operator contrasts than for operator
+gaps with large opportunity sets and strong effective preemption. This
+follows from the role of effective preemption in stabilizing
+non-licensing , and connects to experimental work on syntactic satiation
+. Operationally: in acceptability judgment tasks with repeated exposure,
+operator mismatches in large opportunity sets (e.g., subject–verb
+agreement in obligatory contexts or English left-branch extraction)
+should resist satiation, while pragmatic oddities and low-frequency
+operator mismatches should show steeper improvement curves.
+
+<span class="smallcaps">(3) Phonological-exponent effects.</span> In
+languages where tone or intonation is an operator exponent, operator
+mismatches should elicit judgment and processing profiles more similar
+to morphosyntactic anomalies than to accent shifts, consistent with the
+idea that the relevant factor is operator value, not segmental content .
+This isn’t a novelty claim: already report a P600-like response to one
+class of temporal-agreement violation in Akan, where time reference is
+expressed through grammatical tone.
+
+Operationally: compare ERP responses to tonal tense mismatches,
+segmental agreement mismatches, and sociophonetic accent shifts. The
+prediction is that tonal operator errors and segmental operator errors
+share a response profile more than either shares one with accent shifts,
+while still allowing language-specific latency, distribution, and
+asymmetry effects. It’s a response-profile prediction, not a claim that
+any single ERP component uniquely diagnoses operator mismatch.
+
+<span class="smallcaps">(4) Sociolinguistic stratification without
+grammaticalization.</span> Accent and register differences should show
+systematic indexical fields and enregisterment dynamics , but the
+metalinguistic categorization as “grammar” should be predicted to arise
+mainly when the indexical resource becomes part of a closed operator
+contrast set (e.g. a grammaticalized honorific agreement paradigm, not
+merely polite lexical choice).
+
+<span class="smallcaps">(5) Processing signatures as responses to
+operator mismatch.</span> ERP and related measures should distinguish
+operator errors from conceptual anomalies in ways that are consistent
+with their different roles in public update, without requiring a modular
+syntax/semantics division or a one-to-one mapping between mismatch type
+and component . Operator errors should more often trigger global
+reanalysis of material in scope; payload errors should more often
+trigger local repair or lexical-semantic integration costs.
+
+The disconfirmation condition is equally important. If closed operator
+errors and matched payload errors produce the same repair targets, the
+same scope of reanalysis, and the same processing profile after
+controlling for surprisal, frequency, prosody, and task demands, then
+the account loses its empirical contrast.
+
+None of these predictions presupposes a particular formal architecture.
+They presuppose only that communities conventionalize a subset of
+contrasts as operator contrasts for public update.
+
+# Conclusion
+
+The motivating puzzle was why clausal architecture is treated as
+“grammar” in much the same way as tense or number marking is, while
+accent and much lexical choice are treated differently. The answer is
+that grammaticality talk tracks a difference in value and in regime.
+Expression-shape constraints make utterances recognizable as tokens of
+the system; payload resources contribute negotiable content or stance;
+operator paradigms are recruited because they configure public update,
+allocate participant roles, and constrain uptake.
+
+Clausal architecture belongs to the operator stratum when it packages
+clause typing, argument linking, dependency management, or cross-clausal
+coherence. Tense and number contrasts belong there where they’re
+grammaticalized as operator contrasts. Phonological, gestural, and
+lexical material can also enter the stratum when they take on the same
+role. The boundary is functional rather than substance-based, but the
+policing mechanism is maintenance of a closed paradigm, not
+token-by-token measurement of update value.
+
+Operators can attract categorical policing because they behave like
+protocol headers rather than payload content. They set the codebook for
+material in their scope. A wrong header can corrupt interpretation
+globally, while a wrong payload item usually causes local additive
+damage. Within a maintained paradigm, even value-intact exponent errors
+can therefore be corrected as membership failures.
+
+The asterisk is evidence, not a definition. Where it tracks an operator
+paradigm, it can mark a missing value, a wrong value, or a value-intact
+exponent that violates paradigm integrity. The argument claims stable,
+projectible operator repertoires, not corrective-control mechanisms in
+the stronger homeostatic sense . The payoff is a cross-linguistic
+account of why “what counts as grammar” varies with which contrasts a
+community recruits and maintains, while grammaticality talk still has a
+principled target.
+
+# Acknowledgements
+
+The argument grew from an observation by Jamie Ramsden about French
+determiner allomorphy, the kind of expression-shape/operator boundary
+case discussed above. The large language models Claude Opus 4.5, ChatGPT
+5.2 Pro, and GPT-5.5 served as drafting and editing aids throughout the
+preparation of the manuscript. I’m responsible for all theoretical
+claims, arguments, errors, and interpretive choices.
+
+[^1]: Speakers do label accent and dialect variation as “bad grammar”
+    for social reasons, but the interactional repair profile differs, a
+    point taken up in
+    §<a href="#sec:social-technology" data-reference-type="ref"
+    data-reference="sec:social-technology">9</a>.
+
+[^2]: Introductory diagrams draw a reassuring boundary; languages then
+    spend the rest of the semester crossing it.
+
+[^3]: Here has the Saussurean sense of : the identity of a linguistic
+    unit is constituted by its position in a system of contrasts (what
+    it patterns with, what it opposes, what interpretations it makes
+    available). It isn’t to be confused with feature-value assignment or
+    decision-theoretic value.
+
+[^4]: These conditions and the coordination pressures that sustain them
+    are mutually constitutive; actual form–value relations approximate
+    them to varying degrees.
+
+[^5]: The effect is Bayesian: the strength of the inference against the
+    absent form tracks the frequency with which the licensed competitor
+    occupies the relevant operator context.
+
+[^6]: Nothing here hinges on a particular complement/adjunct diagnostic;
+    the point is that dependencies that supply operator values and
+    payload-enriching dependencies tend to diverge in repair profile and
+    licensing expectations.
+
+[^7]: Different linguistic subsystems trade off contrast-set size,
+    within-type variability, and contextual predictability differently.
+    Phonemes have a small contrast set but high within-category
+    variability (the classic “lack of invariance” problem ). Lexemes
+    occupy a huge contrast set but manage it by distributing information
+    across sequences and context; word length tracks average information
+    content better than raw frequency .
+
+[^8]: Engineers call this redundancy; linguists call it agreement.
+
+[^9]: Here, is reserved for its sense in *The Cambridge Grammar of the
+    English Language*: the syntactic role an element plays (determiner,
+    modifier, complement, etc.) or the established term . What operators
+    *do* (their semiotic work) is referred to as their .
+
+[^10]: This empirical fact has not noticeably reduced the market for
+    usage advice.

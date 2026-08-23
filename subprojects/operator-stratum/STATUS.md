@@ -6,7 +6,7 @@ stage: complete
 external: rejected
 blocked_on:
 - venue-decision
-updated: 2026-06-26
+updated: 2026-08-22
 source:
 - STATUS.md
 - DECISIONS.md
@@ -16,9 +16,9 @@ venue: Functions of Language
 external_id: FOL-26063
 preprints:
 - lingbuzz/009706
-next_action: Choose a better-fit venue and retarget; do not revise on theoretical grounds unless the next
-  venue requires reframing
-notes: 'A subproject of grammaticality-de-idealized with its own STATUS.md, DECISIONS.md, main.tex and
+next_action: Choose a better-fit venue and retarget from the theoretically revised manuscript; preserve
+  the four-way licensing/operator/value/exponent distinction
+notes: 'A subproject of grammaticality-de-idealized with its own STATUS.md, DECISIONS.md, operator-stratum.tex and
   submission package; registered separately 2026-07-30 so its desk rejection survives into the registry
   rather than sitting in a note on the parent block. The parent block (batch-06) covers the main OVMG
   paper only. `source` paths are relative to the subproject.
@@ -47,11 +47,20 @@ notes: 'A subproject of grammaticality-de-idealized with its own STATUS.md, DECI
 # STATUS.md - The Operator Stratum
 
 **Created:** 2026-01-24
-**Last updated:** 2026-06-26
-**Status:** Desk rejected by *Functions of Language* for scope/fit; retargeting needed
+**Last updated:** 2026-08-22
+**Status:** Desk rejected by *Functions of Language* for scope/fit; theoretically revised; retargeting needed
 **LingBuzz:** Uploaded 2026-01-25
 **Journal submission:** Submitted to *Functions of Language* 2026-06-02; rejected 2026-06-26 as outside the journal's scope.
-**Parent project:** Grammaticality_de_idealized (MVMG)
+**Parent project:** Grammaticality_de_idealized (OVMG)
+
+### 2026-08-22 Theoretical and clarity revision
+- Ox Alpha and Claude Fable independently reviewed the manuscript, followed by an Ox Alpha level/category audit.
+- Operator membership now has two conditions only: a closed paradigm and a paradigm-level public-update role. Opportunity count modulates evidence concentration and categoricality; it does not define membership.
+- Constructional licensing, operator membership, value selection, and exponent licensing are treated as intersecting dimensions rather than exclusive strata.
+- *Le hiver* is analyzed as a value-intact operator-exponent error; *depend of* as a head-specific complement-construction error. Categorical correction no longer diagnoses operator membership or a grammar/style binary.
+- Historical recruitment is a diachronic support hypothesis rather than a synchronic membership condition. Population persistence requires adoption and retention, not learner updating alone.
+- The principal tests now concern repair locus, paradigm-level contribution despite token redundancy, and cross-substance operator profiles. Satiation and opportunity effects are entrenchment corollaries rather than operator diagnostics.
+- `latexmk -xelatex operator-stratum.tex` builds the revised manuscript with no missing citations or references.
 
 ### 2026-06-26 Functions of Language Decision
 - Article ID: FOL-26063.
@@ -87,49 +96,50 @@ notes: 'A subproject of grammaticality-de-idealized with its own STATUS.md, DECI
 
 Argues that grammaticality judgments target a specific kind of value: **operator value**. Form-value relations belong to the operator stratum when they:
 1. Conventionally contribute to public update (commitments, roles, scope)
-2. Are part of a stable, closed-paradigm repertoire
+2. Are part of a small, closed conventional paradigm
 
 ## Core Argument
 
-- Clause structure behaves "like grammar" because it IS a system of operators (clause typing, argument linking, dependency management, reference tracking)
-- Tense/number behave like grammar WHERE they are grammaticalised as operators
-- Accent/lexical choice are different because they contribute indexical/conceptual value that is negotiable, not publicly accountable in the same way
-- BUT: phonology and lexicon CAN enter the operator stratum when grammaticalised (tone, question intonation, sign-language nonmanuals)
+- Clause structure belongs to the operator stratum where it packages clause type, argument linking, dependency scope, or reference tracking.
+- Categorical grammaticality is broader: community-specific constructions can be licensed or excluded without an operator contrast.
+- Tense and number qualify where languages grammaticalize them as closed paradigms with a public-update role.
+- Accent and lexical choice usually contribute indexical or conceptual value, but phonological, lexical, and gestural material can realize operator values.
 
-## Connection to MVMG
+## Connection to OVMG
 
-This paper develops what MVMG calls "value" in its formal model:
-- MVMG's `C_t` (licensing) = entrenchment in the operator stratum
-- MVMG's `map` (structural viability) = whether something can be an operator at all
-- MVMG's `K` (interpretive coherence) = whether operator values cohere
+This paper develops the boundary around what OVMG calls an operator value:
+- `map` asks whether an assembly covers the form--value pair; it does not diagnose operator membership.
+- `K` asks whether grammatically encoded operator contributions unify.
+- `C_t` tracks constructional licensing more broadly, including categorical non-operator conventions.
+- The repair module distinguishes update-oriented repair from correction of an exponent or construction.
 
-The operator stratum paper explains WHY some form-value relations get policed as grammar: they function as public coordination infrastructure.
+The operator paper explains why some grammatical contrasts configure public update while leaving grammaticality as a whole broader than the operator stratum.
 
 ## Connection to Bayesian family
 
-- **LBE paper**: Opportunity frequency + preemption dynamics → explains how operator gaps stabilize
+- **LBE paper**: Opportunity frequency + preemption dynamics explain a constructional gap; operator membership remains an independent question
 - **Varieties paper**: S/A/I conditioning → explains how operator repertoires vary by situation/ascription/identification
-- **This paper**: Defines what operators ARE and why they're special
+- **This paper**: Defines operator membership and its narrower response predictions
 
 ## Diagnostics Proposed
 
 1. Paradigmatic closure (small enumerable sets)
-2. Broad scope (clause-wide consequences)
-3. High opportunity mass (strong preemption)
-4. Repair sensitivity ("you can't say that" vs style negotiation)
-5. ERP dissociation (P600 vs N400 profiles)
+2. Paradigm-level public-update contribution, tested independently through comprehension or uptake probes
+3. Opportunity count and competitor strength as modulators of licensing concentration
+4. Repair locus: update value, exponent, construction, or social stance
+5. Cross-substance comparison with opportunity and frequency matched
 
 ## Predictions
 
-1. Repair asymmetries (operator vs indexical mismatches)
-2. Satiation asymmetries (high-opportunity gaps resist satiation)
-3. Phonological operators behave like morphosyntax
-4. Processing signatures track operator failure, not module boundaries
+1. Repair targets follow the error locus
+2. Paradigm-level update contribution survives locally redundant tokens
+3. Tonal, prosodic, gestural, and segmental operator values share matched response profiles
+4. A closed, dense contrast with near-zero public-update contribution falsifies the boundary if it produces the same update-confusion profile as an operator
 
 ## Build
 
 ```bash
-xelatex main.tex && biber main && xelatex main.tex
+latexmk -xelatex operator-stratum.tex
 ```
 
 Uses EB Garamond font, self-contained refs.bib via filecontents.

@@ -17,7 +17,7 @@ The paper was announced as "in preparation" at the end of the asterisk paper (li
 ## Build
 
 ```bash
-xelatex main.tex && biber main && xelatex main.tex
+xelatex etiological-account.tex && biber etiological-account && xelatex etiological-account.tex
 ```
 
 Uses parent project's `refs.bib` via symlink.

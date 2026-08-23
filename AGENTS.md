@@ -1,13 +1,13 @@
 # Repository Guidelines
 
 ## Project Structure & Module Organization
-- Root contains LaTeX sources (`main.tex`, `main-old.tex`, topic-focused sections like `OldSection2.tex`, `LingbuzzPreprint.tex`, `Bourdieu.tex`, `ERP.tex`) plus shared references in `refs.bib`.
+- Root contains the canonical `grammaticality-de-idealized.tex`, older or topic-focused LaTeX sources such as `main-old.tex`, `OldSection2.tex`, `LingbuzzPreprint.tex`, `Bourdieu.tex`, and `ERP.tex`, plus shared references in `refs.bib`.
 - Supporting assets live beside sources (e.g., `cgisf.pdf`, `trident.jpg`); keep new figures in the repository root unless a dedicated `figures/` folder is created.
 - Analytical prototype lives in `validate_entrenchment_measurement.py` for factor-analysis simulations; no package layout is used.
 
 ## Build, Test, and Development Commands
-- Build primary paper PDF: `latexmk main.tex` (uses XeLaTeX via `.latexmkrc` and reruns as needed). Clean aux files: `latexmk -c`.
-- One-off compilation, if needed for diagnosis: `xelatex main.tex && biber main && xelatex main.tex && xelatex main.tex`.
+- Build primary paper PDF: `latexmk grammaticality-de-idealized.tex` (uses XeLaTeX via `.latexmkrc` and reruns as needed). Clean aux files: `latexmk -c`.
+- One-off compilation, if needed for diagnosis: `xelatex grammaticality-de-idealized.tex && biber grammaticality-de-idealized && xelatex grammaticality-de-idealized.tex && xelatex grammaticality-de-idealized.tex`.
 - Run the simulation script: `python3 validate_entrenchment_measurement.py` (requires NumPy, pandas, scikit-learn, SciPy, matplotlib).
 
 ## Coding Style & Naming Conventions
@@ -17,7 +17,7 @@
 - Python: PEP 8 defaults; meaningful variable names; keep scripts executable via `python3 file.py`.
 
 ## Testing Guidelines
-- For LaTeX, ensure `latexmk main.tex` completes without errors; scan the log for undefined references or missing figures.
+- For LaTeX, ensure `latexmk grammaticality-de-idealized.tex` completes without errors; scan the log for undefined references or missing figures.
 - For the simulation, confirm `python3 validate_entrenchment_measurement.py` runs cleanly and reports RMSE/Correlation; update dependencies in comments if you add imports.
 - No formal unit tests exist; if you add analysis code, include a minimal reproducible example or sanity checks in the script.
 

@@ -1,7 +1,7 @@
 # Grammaticality de-idealized
 
 This repository is an active research workspace for Brett Reynolds's grammaticality
-projects. The canonical root manuscript is `main.tex`. Other root `.tex` files are
+projects. The canonical root manuscript is `grammaticality-de-idealized.tex`. Other root `.tex` files are
 older drafts, exploratory pieces, preprint sources, talks, or side materials unless
 explicitly documented otherwise.
 
@@ -12,7 +12,8 @@ notes describe the model as evolving from MMMG/MVMG terminology toward OVMG
 
 ## Repository Map
 
-- `main.tex`: canonical root manuscript source.
+- `grammaticality-de-idealized.tex`: canonical root manuscript source.
+- `grammaticality-de-idealized.pdf`: current rendered root manuscript.
 - `refs.bib`: shared bibliography for the root manuscript family.
 - `LingbuzzPreprint.tex`: older Lingbuzz preprint source, kept for provenance.
 - `subprojects/`: related paper-shaped and exploratory subprojects.
@@ -25,16 +26,16 @@ The root manuscript uses `fontspec`, so build with XeLaTeX. The repository inclu
 `.latexmkrc`, making this the canonical command:
 
 ```bash
-latexmk main.tex
+latexmk grammaticality-de-idealized.tex
 ```
 
 For manual diagnosis:
 
 ```bash
-xelatex main.tex
-biber main
-xelatex main.tex
-xelatex main.tex
+xelatex grammaticality-de-idealized.tex
+biber grammaticality-de-idealized
+xelatex grammaticality-de-idealized.tex
+xelatex grammaticality-de-idealized.tex
 ```
 
 Clean generated LaTeX files with:
@@ -67,7 +68,7 @@ python3 validate_entrenchment_measurement.py
 
 This is not yet a clean reproducible release. The repository intentionally contains
 working notes, older drafts, and subprojects that preserve research history. Treat
-`main.tex` as the canonical root manuscript and check `STATUS.md` plus subproject
+`grammaticality-de-idealized.tex` as the canonical root manuscript and check `STATUS.md` plus subproject
 status files before making public-state claims.
 
 Generated PDFs and build artifacts are not necessarily canonical release artifacts
