@@ -25,11 +25,33 @@ It formalizes:
 - distinct bounded types for anomaly, evidence confidence, and decision
   confidence.
 
+Two further modules cover the operator stratum:
+
+- `OVMG/OperatorStratum.lean`: operator membership as a property of a contrast
+  (closed eligible-value set, conventionality, extensional public-update role),
+  with proofs that membership is independent of opportunity and of the
+  categorical licensing verdict, that each membership condition is
+  load-bearing, and that selected-value correctness and exponent licensing
+  vary independently. Its Boolean `LicensingProfile` is only a coarse verdict
+  interface for those independence proofs; it does not represent posterior
+  means, concentration, or the paper's unsettled regions;
+- `OVMG/OperatorBridge.lean`: the composition of that interface with the status
+  scaffold, including the fact that an assembly contributing only the empty
+  constraint is hard-compatible, while speaker status can still fail through
+  constructional node non-licensing alone.
+
+`Closed` is enumerability at a fixed analytical time slice, not a claim that a
+living inventory forbids innovation. `UpdateConfiguring` is extensional and
+conventionality is a parameter, so whether a linguistic contrast qualifies is
+supplied by empirical analysis rather than proved here.
+
 `obl` and `supplies` remain primitive parameters at a fixed time slice. Lean
 does not derive ontic obligatoriness, model its temporal evolution, or certify
 that a proposed supply relation is linguistically correct. The constraint laws
 are likewise assumptions on the supplied algebra; concrete non-vacuity
-witnesses show that those assumptions are jointly satisfiable.
+witnesses show that those assumptions are jointly satisfiable. Paired
+saturation witnesses exercise both supply and failure when a unit dimension is
+genuinely obligatory, alongside the explicit no-obligation boundary case.
 
 It intentionally does **not** formalize the Section 4 stochastic claims.
 The corrected discounted update, normalized gated choice, omission likelihood,
@@ -48,4 +70,5 @@ Build:
 ```bash
 cd formalization
 lake build
+lake env lean AxiomAudit.lean
 ```

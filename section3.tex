@@ -6,10 +6,14 @@ the conditions under which a form--value pair is grammatical \emph{for a
 population in a communicative situation} at time $t$; a \term{dynamics module}
 specifies candidate routes by which such states arise, persist, and change.
 
-In projectibility terms, the state theory specifies the \term{profile}, while
-the dynamics module states candidate \term{support} hypotheses: what could
-stabilize the profile and, where the evidence warrants, maintain it. Support
-claims come in grades.
+The distinction matters because the account is projectibility-first. Its
+primary payoff is a family of inferences: observing part of a grammaticality
+profile should license expectations about repair, transmission, exposure, and
+change in cases not used to define the profile. The state theory specifies the
+world-side pattern over which those projections run. The dynamics module then
+states candidate \term{support} hypotheses about what could stabilize that
+pattern and, where the evidence warrants, maintain it. Support claims come in
+grades.
 Stabilization, maintenance by a production--repair loop, and control by a
 deviation-detecting process are distinct claims, each requiring independent
 evidence \autocite{reynolds2026kindsProjectibilityProfiles,
@@ -74,21 +78,32 @@ decision threshold & $\tau(c)$, \S\ref{sec:decision-readout} & decision-theoreti
 \label{tab:notation-bridge}
 \end{table}
 
-Notation is typed as follows. In \S3, $f$ is a form, $v$ is a value, and $u$ is
-used only when the value is recoverable from context. In \S4, a niche candidate
-is written $x\in\mathcal{V}_{n,t}^{\star}$ and abbreviates a candidate
-form--value realization. Constructional nodes are $\kappa$, assemblies are $A$,
-speaker-level inclusion states are $z_{j,t}$, and population licensing rates are
-$\theta_t$.
+The typed notation register preceding this section defines every recurring
+symbol and fixed parameter. Local quantities that occur in only one derivation
+are defined where they enter. The register is authoritative when a familiar
+letter has more than one explicitly marked role.
 
-The core's unit is the construction, in the CxG sense of a learned form--value pairing at any grain \citep{fillmore1988, goldberg1995constructions}. Formally, a \term{construction} $\kappa$ is a pair $(T_\kappa, \mu_\kappa)$: a form template with typed slots, and a value contribution mapping slot fillers to content together with a \term{partial operator assignment} $\omega_\kappa$. Nothing here is level-specific: a construction can be the plural cell of a lexeme, a clause pattern, an intonational contour, or a code-mixed frame.
+The core's linguistic unit is the construction, in the CxG sense of a learned
+typed association at any grain \citep{fillmore1988,
+goldberg1995constructions,sag2012sign}. Following the richer Sign-Based
+Construction Grammar perspective, a construction can constrain phonology,
+syntax, semantics, discourse context, and relations among daughter signs. This
+richer object isn't reducible to a bare form--meaning pair. The quantitative model
+uses a task-specific projection of that richer object: a typed form template,
+content contribution, partial operator constraint $\omega_\kappa$, frame and
+niche tags, and a constructional identity $\kappa$ on which licensing is
+defined. Any additional SBCG fields remain available to the coverage and typing
+system even when the statistical dynamics don't inspect them. Nothing here is
+level-specific: a construction can be the plural cell of a lexeme, a clause
+pattern, an intonational contour, or a code-mixed frame.
 
 Operator contributions live in a typed constraint space $\Omega$ over a
-dimension set $O(c)$. The dimensions include clause type, polarity,
+dimension set $O(c)$. Illustrative dimensions are clause type, polarity,
 tense--aspect anchoring, role allocation, scope, reference tracking, and
-information-packaging instructions. Which dimensions belong to $O(c)$ is itself
+information-packaging instructions; this isn't an exhaustive inventory. Which
+dimensions belong to $O(c)$ is itself
 conventional: a contrast enters only when the community has conventionalized it
-as an operator contrast in the sense of \S\ref{sec:operator-values}, so the
+as an operator contrast in the sense of \S\ref{M-sec:operator-values}, so the
 inventory is community-indexed. Atomic feature--value assignments are a useful
 special case, but the general object is a constraint structure: tense intervals,
 scope relations, anaphoric dependencies, and information-packaging requirements
@@ -299,7 +314,7 @@ speaker $i$ (expanded in \S\ref{sec:usage}) and $\sigma$ is the logistic link.
 reduces to a monotone reduced form in $1-g_{i,t}$. Aggregate production and
 repair are obtained by integrating over speakers; $G_t$ predicts those rates but
 doesn't cause them. This scopes the controller claim:
-transparent licensing failures with low update divergence should attract only
+licensing failures with readily recoverable intended updates but low update divergence should attract only
 baseline understanding-repair and, if stable, be supported mainly by preemption, while
 operator mis-settings draw the $\Delta$-scaled repair flow; correction rates
 should instead track ascription and prescriptive dissonance.
@@ -407,7 +422,7 @@ without the situation posterior $q_h(c\mid e)$.
   node[midway, right, font=\footnotesize, text=gray, align=left] {same low mean,\\ different projection};
 \end{tikzpicture}
 \caption{The epistemic status state has two dimensions. Preempted gaps (dense
-preemption, posterior concentrated near zero) and winnerless cells (transparent
+preemption, posterior concentrated near zero) and winnerless cells (readily identifiable
 candidates with weak support, low mean but diffuse evidence) share a low mean and part on
 concentration, the axis that predicts satiation, framing sensitivity, and
 actuation. Stable between-speaker heterogeneity is a separate dimension, not
@@ -476,7 +491,7 @@ the categorical failure mode generated by structural failure alone.
 
 A condition belongs in a form template only when violating it makes the intended
 value unrecoverable or the exponent unidentifiable as an instance of the
-construction. If the intended value is transparent and the exponent is
+construction. If the intended value is recoverable and the exponent is
 identifiable, the issue is licensing or compatibility, not coverage. This keeps
 template typing from becoming a way to relabel any concentrated licensing
 failure as structural failure.
@@ -488,7 +503,7 @@ a preempted gap gets $G_t\approx0$ from a
 covering assembly licensed to zero. Both are excluded, and they differ in
 \emph{why}--no assembly versus licensed-to-zero assembly--a difference with an
 empirical signature: the first fails under every construal and resists all
-framing once the relevant inventory is fixed; the second has a transparent
+framing once the relevant inventory is fixed; the second has a readily recoverable
 construal, resists framing by concentration (\S\ref{sec:projectible-use}), and
 is predicted to be re-openable only by the actuation route of
 \S\ref{sec:actuation}. The constitutive core stays minimal without losing the
@@ -504,7 +519,7 @@ The result is a four-step diagnostic procedure, applied before consulting accept
 
 Ask first whether any assembly covers $u$: if none does, the failure is structural (\ungram{\mention{Can the have running}}). If a covering assembly exists, ask whether its operator contributions unify: if every covering assembly sets some dimension twice incompatibly, the failure is compatibility (\ungram{\mention{I've finished it yesterday}}--two values on the reference-interval dimension; and the information-packaging clash in Cuneo and Goldberg's island example is the same formal object on a different dimension \autocite{CuneoGoldberg2022Islands}).
 
-If the contributions unify, ask whether the obligatory dimensions are saturated: if not, the failure is saturation (unmarked progressive in an ongoing-at-issue English niche). Only then does licensing arbitrate: a defined, saturated assembly whose pivotal node the population withholds is a licensing failure (\ungram{\mention{I have 25 years}} for age--the assembly is compatible, the value transparent, and the age-predication node sits at $C_t\approx0$ under preemption by the \textsc{be}-frame).
+If the contributions unify, ask whether the obligatory dimensions are saturated: if not, the failure is saturation (unmarked progressive in an ongoing-at-issue English niche). Only then does licensing arbitrate: a defined, saturated assembly whose pivotal node the population withholds is a licensing failure (\ungram{\mention{I have 25 years}} for age--the assembly is compatible, the intended value is recoverable, and the age-predication node sits at $C_t\approx0$ under preemption by the \textsc{be}-frame).
 
 Because the dimension inventory $O(c)$ is itself conventionalized, what counts as a compatibility failure in $c$ depends on which contrasts the community has conventionalized. The steps are ordered, not independent--and each step's verdict is checkable against evidence other than the judgment it explains, which is what keeps the procedure from reproducing the circularity of a pure community-verdict account.
 
@@ -552,10 +567,10 @@ not just against particular state assignments.
 
 The same discipline applies to the construction inventory $\mathcal H$, its
 template-to-frame typing, and the mapping from candidate realizations to
-assemblies and pivotal nodes. These choices must be fixed before the target
+assemblies and pivotal nodes. These choices have to be fixed before the target
 judgments or corpus absences are inspected, alongside $c$, $n$,
 $\widetilde{\rho}_t^\star$, and $\tau(c)$. A later inventory change may be a
-legitimate reanalysis, but it must be reported as such rather than treated as if
+legitimate reanalysis, but it has to be reported as such rather than treated as if
 the original prediction had survived. The untensed $\mathcal H$ is the
 registered representational inventory for a study, not the set of currently
 licensed constructions: diachronic entry and exit occur through $z_{i,t}$ and
@@ -702,7 +717,7 @@ by $\Phi$ and by the same ascription machinery as $q_h(c\mid e)$. That gives a
 measurement route for why learner errors and cross-dialect tokens fail to
 trigger the same anomaly signal--they're attributed to \textsc{other-community}
 or \textsc{error}--and it gives the misattribution effects of
-\S\ref{sec:subjective} a formal home. The attribution layer is a measurement
+\S\ref{M-sec:subjective} a formal home. The attribution layer is a measurement
 refinement, not part of status.
 
 A direct falsifier follows: if measured confidence fails to dissociate preempted
@@ -808,7 +823,7 @@ Cell & pl. & sg. & $N$ & Plural share (Wilson 95\%)\\
 \subsection{Worked examples: deriving status from the posterior}
 \label{sec:worked-examples}
 
-The examples from \S\ref{sec:diag-tree} show how population status and its
+The examples from \S\ref{M-sec:diag-tree} show how population status and its
 posterior estimate are related.
 The winnerless cell adds the case where concentration carries the phenomenology
 rather than merely labelling it.
@@ -823,7 +838,7 @@ rather than merely labelling it.
 
 \item \ungram{\mention{I've finished it yesterday}} (compatibility failure). Covering assemblies exist, but every one sets the reference-interval dimension twice incompatibly--the perfect's contribution and the deictic adverb's don't unify--so $\operatorname{def}(A)=0$ throughout. $S_t^{\theta}=G_t=0$; $\Phi\approx1$. Entrenchment of the component constructions can't repair it: the clash is outside the licensing terms altogether.
 
-\item \ungram{\mention{I have 25 years}} (licensing failure). Defined and saturated; the value is transparent. The pivotal age-predication node has $\theta_t\approx0$, tracked by a typical speaker at $C^{(i)}_t\approx0$ with high $\nu^{(i)}$, after preemption by the \textsc{be}-frame in a dense niche. $g_{i,t}\approx0$ and $\Phi$ is high. Status: ungrammatical, by concentrated non-licensing.
+\item \ungram{\mention{I have 25 years}} (licensing failure). Defined and saturated; the intended value is recoverable. The pivotal age-predication node has $\theta_t\approx0$, tracked by a typical speaker at $C^{(i)}_t\approx0$ with high $\nu^{(i)}$, after preemption by the \textsc{be}-frame in a dense niche. $g_{i,t}\approx0$ and $\Phi$ is high. Status: ungrammatical, by concentrated non-licensing.
 
 \item \marg{\mention{friend of whose}} (community-novel). Defined and saturated; the niche is vanishingly sparse, so a typical speaker's pivotal-node posterior sits near its prior with low $\nu^{(i)}$. The speaker's $g_{i,t}$ is intermediate, $\operatorname{Var}(S_t^{\theta}\mid\mathcal{D}_{i,t})$ is high, and $\Phi$ is low. Status: unsettled (starved); framing-movable, with surprisal adding $R$-channel noise.
 
@@ -836,7 +851,7 @@ driven to zero and concentrates there (\S\ref{sec:update}); if it's low, the
 case belongs closer to starvation. Status assignment requires the niche-norming
 protocol of \S\ref{sec:identification-c}.
 
-\item \mention{pobedit'} \abbr{1sg} (winnerless cell; \ungram{\mention{amn't}} as a mixed case). The niche is dense and candidate assemblies are transparent, but candidate support is weak and no candidate accumulates positive evidence--the outside option absorbs production, and because avoidance has low attributability, candidates accumulate little confident negative evidence either (\S\ref{sec:winnerless-cells}). Given that low support, every candidate's pivotal node has a low speaker-level mean and low $\nu^{(i)}$. The typical $g_{i,t}$ is low, $\operatorname{Var}(S_t^{\theta}\mid\mathcal{D}_{i,t})$ is high, and $\Phi$ is low. Status: unsettled (avoidance-divided); phenomenology ineffability, not rejection--same mean as a preempted gap, different concentration, different feeling.
+\item \mention{pobedit'} \abbr{1sg} (winnerless cell; \ungram{\mention{amn't}} as a mixed case). The niche is dense and candidate assemblies have readily recoverable values, but candidate support is weak and no candidate accumulates positive evidence--the outside option absorbs production, and because avoidance has low attributability, candidates accumulate little confident negative evidence either (\S\ref{sec:winnerless-cells}). Given that low support, every candidate's pivotal node has a low speaker-level mean and low $\nu^{(i)}$. The typical $g_{i,t}$ is low, $\operatorname{Var}(S_t^{\theta}\mid\mathcal{D}_{i,t})$ is high, and $\Phi$ is low. Status: unsettled (avoidance-divided); phenomenology ineffability, not rejection--same mean as a preempted gap, different concentration, different feeling.
 
 \item \mention{The bread the baker the apprentice helped made is delicious} (processing overload). A typical $g_{i,t}$ is high; the locality term in $R_i$ is large. $F$ is negative and $\Phi$ moderate; satiation and instruction move the $R$ contribution, not the licensing posterior. Status: grammatical, transiently ill-felt.
 \end{enumerate}
@@ -857,58 +872,22 @@ Figure~\ref{fig:posterior-means} shows the low-opportunity versus dense-preempti
     legend entries={Rare (sparse opportunities), Dense preemption},
     legend pos=north east
 ]
-\addplot[name path=rarehi, draw=none, forget plot] coordinates {
-(0,0.9750) (2,0.9750) (4,0.9750) (6,0.9750) (8,0.9750)
-(10,0.9563) (12,0.9563) (14,0.9563) (16,0.9563) (18,0.9563)
-(20,0.9298) (22,0.9298) (24,0.9298) (26,0.9298) (28,0.9298)
-(30,0.8957) (32,0.8957) (34,0.8957) (36,0.8957) (38,0.8957)
-(40,0.8553) (42,0.8553) (44,0.8553) (46,0.8553) (48,0.8553)
-(50,0.8106)
-};
-\addplot[name path=rarelo, draw=none, forget plot] coordinates {
-(0,0.0250) (2,0.0250) (4,0.0250) (6,0.0250) (8,0.0250)
-(10,0.0160) (12,0.0160) (14,0.0160) (16,0.0160) (18,0.0160)
-(20,0.0103) (22,0.0103) (24,0.0103) (26,0.0103) (28,0.0103)
-(30,0.0068) (32,0.0068) (34,0.0068) (36,0.0068) (38,0.0068)
-(40,0.0046) (42,0.0046) (44,0.0046) (46,0.0046) (48,0.0046)
-(50,0.0032)
-};
+\addplot[name path=rarehi, draw=none, forget plot]
+  table[x=step,y=sparse_hi] {simulation_data.dat};
+\addplot[name path=rarelo, draw=none, forget plot]
+  table[x=step,y=sparse_lo] {simulation_data.dat};
 \addplot[blue, fill opacity=0.10, forget plot] fill between[of=rarehi and rarelo];
-\addplot[name path=densehi, draw=none, forget plot] coordinates {
-(0,0.9750) (2,0.5774) (4,0.3298) (6,0.2211) (8,0.1640)
-(10,0.1295) (12,0.1067) (14,0.0906) (16,0.0786) (18,0.0693)
-(20,0.0620) (22,0.0561) (24,0.0511) (26,0.0470) (28,0.0435)
-(30,0.0404) (32,0.0378) (34,0.0355) (36,0.0334) (38,0.0316)
-(40,0.0299) (42,0.0285) (44,0.0271) (46,0.0259) (48,0.0248)
-(50,0.0237)
-};
-\addplot[name path=denselo, draw=none, forget plot] coordinates {
-(0,0.0250) (2,0.0015) (4,0.0005) (6,0.0002) (8,0.0002)
-(10,0.0001) (12,0.0001) (14,0.0001) (16,0.0001) (18,0.0001)
-(20,0.0000) (22,0.0000) (24,0.0000) (26,0.0000) (28,0.0000)
-(30,0.0000) (32,0.0000) (34,0.0000) (36,0.0000) (38,0.0000)
-(40,0.0000) (42,0.0000) (44,0.0000) (46,0.0000) (48,0.0000)
-(50,0.0000)
-};
+\addplot[name path=densehi, draw=none, forget plot]
+  table[x=step,y=dense_hi] {simulation_data.dat};
+\addplot[name path=denselo, draw=none, forget plot]
+  table[x=step,y=dense_lo] {simulation_data.dat};
 \addplot[red, fill opacity=0.10, forget plot] fill between[of=densehi and denselo];
-\addplot[mark=none, blue, thick] coordinates {
-(0,0.5000) (2,0.5000) (4,0.5000) (6,0.5000) (8,0.5000)
-(10,0.4451) (12,0.4451) (14,0.4451) (16,0.4451) (18,0.4451)
-(20,0.3941) (22,0.3941) (24,0.3941) (26,0.3941) (28,0.3941)
-(30,0.3479) (32,0.3479) (34,0.3479) (36,0.3479) (38,0.3479)
-(40,0.3071) (42,0.3071) (44,0.3071) (46,0.3071) (48,0.3071)
-(50,0.2716)
-};
-\addplot[mark=none, red, thick, dashed] coordinates {
-(0,0.5000) (2,0.1641) (4,0.0818) (6,0.0523) (8,0.0379)
-(10,0.0295) (12,0.0241) (14,0.0204) (16,0.0176) (18,0.0155)
-(20,0.0138) (22,0.0124) (24,0.0113) (26,0.0104) (28,0.0096)
-(30,0.0089) (32,0.0083) (34,0.0078) (36,0.0074) (38,0.0070)
-(40,0.0066) (42,0.0063) (44,0.0060) (46,0.0057) (48,0.0054)
-(50,0.0052)
-};
+\addplot[mark=none, blue, thick]
+  table[x=step,y=sparse_mean] {simulation_data.dat};
+\addplot[mark=none, red, thick, dashed]
+  table[x=step,y=dense_mean] {simulation_data.dat};
 \end{axis}
 \end{tikzpicture}
-\caption{Licensing posteriors under the affine omission likelihood, from a $\mathrm{Beta}(1,1)$ prior. The sparse arm receives one attributable omission every ten steps (five total); the dense arm receives five per step (250 total). Each omission has $d=.495$, derived from equal-utility candidates and outside utility $-4$. Lines are moment-matched posterior means; shading gives 95\% Beta intervals. Sparse evidence leaves a broad posterior even as its mean moves, while dense preemption lowers the mean and raises concentration. Population actuation also requires the transition in~\eqref{eq:inclusion-transition}.}
+\caption{Licensing posteriors under the affine omission likelihood, from a $\mathrm{Beta}(1,1)$ prior. The sparse arm receives one attributable omission every ten steps (five total); the dense arm receives a batch of five per step (250 total). Each omission has $d=.495$, derived from equal-utility candidates and outside utility $-4$. After each step, the exact finite mixture is projected to a Beta distribution by matching its first two moments. Lines show posterior means; shading gives 95\% Beta intervals. Sparse evidence leaves a broad posterior even as its mean moves, while dense preemption lowers the mean and raises concentration. The data is generated by \texttt{simulate\_dynamics.py}; population actuation also requires the transition in~\eqref{eq:inclusion-transition}.}
 \label{fig:posterior-means}
 \end{figure}

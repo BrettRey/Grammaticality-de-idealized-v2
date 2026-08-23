@@ -1,52 +1,113 @@
 #!/usr/bin/env python3
+"""Reproduce the trajectories in Figure ``posterior-means``.
+
+The prior is Beta(1, 1). Each attributable omission contributes the affine
+likelihood factor ``1 - d * theta`` with ``d = .495``. The sparse arm receives
+one omission after each block of ten steps; the dense arm receives a batch of
+five omissions at every step. After each step, the exact finite Beta mixture
+is projected back to a Beta distribution by matching its first two moments,
+exactly as specified in equation ``beta-update`` of the formal supplement.
+
+Requires SciPy. Reproduce with::
+
+    python3 simulate_dynamics.py > simulation_data.dat
 """
-Deterministic licensing-posterior trajectories for Figure `posterior-means`.
 
-Beta(1,1) prior updated by a constant per-step effective preemption mass p
-(the b-parameter grows by p each step; no positive evidence). Two regimes:
-
-    rare : p = 0.01  (tiny opportunity set -> posterior stays near prior, wide)
-    gap  : p = 5.00  (dense preemption   -> posterior falls AND concentrates)
-
-Emits the posterior mean and the 2.5% / 97.5% quantiles of Beta(1, 1 + p*t),
-the exact coordinates hard-coded in the figure's pgfplots block. The point of
-the figure is the *dispersion* contrast, not only the mean, so the credible
-band is part of the output, not an afterthought.
-
-Reproduce:  python3 simulate_dynamics.py > simulation_data.dat
-"""
+from math import exp, lgamma
 import sys
 
+from scipy.stats import beta as beta_distribution
+
+
 STEPS = 50
-REGIMES = {"rare": 0.01, "gap": 5.0}
-A0, B0 = 1.0, 1.0
+D = 0.495
+A0 = 1.0
+B0 = 1.0
 
 
-def beta_quantile_a1(b, q):
-    """Quantile of Beta(1, b): F(x) = 1 - (1-x)**b, so x = 1 - (1-q)**(1/b)."""
-    return 1.0 - (1.0 - q) ** (1.0 / b)
+def beta_function(a, b):
+    """Return B(a, b), evaluated through log-gamma for numerical stability."""
+    return exp(lgamma(a) + lgamma(b) - lgamma(a + b))
 
 
-def trajectory(p):
-    rows = []
-    for t in range(STEPS):
-        a, b = A0, B0 + p * t
-        mean = a / (a + b)
-        lo = beta_quantile_a1(b, 0.025)
-        hi = beta_quantile_a1(b, 0.975)
-        rows.append((t, mean, lo, hi))
+def affine_omission_update(a, b, omission_count, d=D):
+    """Moment-project ``Beta(a,b) * (1-d*theta)**m`` to Beta."""
+    if omission_count == 0:
+        return a, b
+
+    # In the Bernstein basis, (1-d*theta)^m is a positive sum of terms
+    # theta^k (1-theta)^(m-k). Build those coefficients one omission at a time.
+    coefficients = [1.0]
+    for _ in range(omission_count):
+        next_coefficients = [0.0] * (len(coefficients) + 1)
+        for k, coefficient in enumerate(coefficients):
+            next_coefficients[k] += coefficient
+            next_coefficients[k + 1] += (1.0 - d) * coefficient
+        coefficients = next_coefficients
+
+    components = []
+    normalizer = 0.0
+    for k, coefficient in enumerate(coefficients):
+        component_a = a + k
+        component_b = b + omission_count - k
+        weight = coefficient * beta_function(component_a, component_b)
+        components.append((weight, component_a, component_b))
+        normalizer += weight
+
+    mean = 0.0
+    second_moment = 0.0
+    for weight, component_a, component_b in components:
+        probability = weight / normalizer
+        total = component_a + component_b
+        mean += probability * component_a / total
+        second_moment += (
+            probability
+            * component_a
+            * (component_a + 1.0)
+            / (total * (total + 1.0))
+        )
+
+    variance = second_moment - mean * mean
+    concentration = mean * (1.0 - mean) / variance - 1.0
+    return mean * concentration, (1.0 - mean) * concentration
+
+
+def summarize(a, b):
+    """Return mean and central 95% interval for a Beta distribution."""
+    mean = a / (a + b)
+    lower = beta_distribution.ppf(0.025, a, b)
+    upper = beta_distribution.ppf(0.975, a, b)
+    return mean, lower, upper
+
+
+def trajectories():
+    """Return sparse and dense summaries for steps zero through ``STEPS``."""
+    sparse_a, sparse_b = A0, B0
+    dense_a, dense_b = A0, B0
+    rows = [(0, summarize(sparse_a, sparse_b), summarize(dense_a, dense_b))]
+
+    for step in range(1, STEPS + 1):
+        sparse_batch = 1 if step % 10 == 0 else 0
+        sparse_a, sparse_b = affine_omission_update(
+            sparse_a, sparse_b, sparse_batch
+        )
+        dense_a, dense_b = affine_omission_update(dense_a, dense_b, 5)
+        rows.append(
+            (step, summarize(sparse_a, sparse_b), summarize(dense_a, dense_b))
+        )
     return rows
 
 
 def main():
-    traj = {name: trajectory(p) for name, p in REGIMES.items()}
     out = sys.stdout
-    out.write("step\trare_mean\trare_lo\trare_hi\tgap_mean\tgap_lo\tgap_hi\n")
-    for t in range(STEPS):
-        r, g = traj["rare"][t], traj["gap"][t]
+    out.write(
+        "step\tsparse_mean\tsparse_lo\tsparse_hi"
+        "\tdense_mean\tdense_lo\tdense_hi\n"
+    )
+    for step, sparse, dense in trajectories():
         out.write(
-            f"{t}\t{r[1]:.4f}\t{r[2]:.4f}\t{r[3]:.4f}"
-            f"\t{g[1]:.4f}\t{g[2]:.4f}\t{g[3]:.4f}\n"
+            f"{step}\t{sparse[0]:.4f}\t{sparse[1]:.4f}\t{sparse[2]:.4f}"
+            f"\t{dense[0]:.4f}\t{dense[1]:.4f}\t{dense[2]:.4f}\n"
         )
 
 

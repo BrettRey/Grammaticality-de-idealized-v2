@@ -1,0 +1,353 @@
+% !TEX TS-program = xelatex
+\documentclass[12pt,letterpaper]{article}
+
+% ===========================
+% HOUSE STYLE PREAMBLE
+% ===========================
+\usepackage{fontspec}
+
+\setmainfont{EB Garamond}[
+  Numbers=OldStyle,
+  Ligatures=TeX,
+]
+
+% IPA fallback font
+\newfontfamily\ipafont{Charis SIL}
+\newcommand{\ipa}[1]{{\ipafont #1}}
+
+% Lining figures when needed (tables, years in isolation)
+\providecommand{\liningnums}[1]{{\addfontfeatures{Numbers=Lining}#1}}
+
+% Monospace
+\setmonofont{Inconsolata}[Scale=MatchLowercase]
+
+% ===========================
+% PAGE LAYOUT
+% ===========================
+\usepackage[
+  letterpaper,
+  inner=1.25in,
+  outer=1in,
+  top=1in,
+  bottom=1.25in,
+  marginparwidth=0.6in,
+]{geometry}
+
+\usepackage[british]{babel}
+\usepackage[final]{microtype}
+
+% ===========================
+% HEADINGS
+% ===========================
+\usepackage{titlesec}
+
+% Section: small caps, number in margin
+\titleformat{\section}
+  {\normalfont\scshape}
+  {\llap{\thesection\quad}}
+  {0pt}
+  {}
+
+% Subsection: small caps sentence case
+\titleformat{\subsection}
+  {\normalfont\scshape}
+  {\thesubsection\quad}
+  {0pt}
+  {}
+
+% Subsubsection: upright
+\titleformat{\subsubsection}
+  {\normalfont}
+  {\thesubsubsection\quad}
+  {0pt}
+  {}
+
+% Spacing
+\titlespacing*{\section}{0pt}{2ex plus 1ex minus .2ex}{1ex plus .2ex}
+\titlespacing*{\subsection}{0pt}{1.5ex plus 1ex minus .2ex}{0.5ex plus .2ex}
+\titlespacing*{\subsubsection}{0pt}{1ex plus 0.5ex minus .1ex}{0.3ex plus .1ex}
+
+% ===========================
+% RUNNING HEADS
+% ===========================
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\scshape\leftmark}
+\fancyhead[R]{\small\thepage}
+\fancyfoot{}
+\setlength{\headheight}{13.6pt}
+\setlength{\emergencystretch}{2em}
+\addtolength{\topmargin}{-1.6pt}
+\renewcommand{\headrulewidth}{0pt}
+
+% ===========================
+% COLORS & HYPERLINKS
+% ===========================
+\usepackage{xcolor}
+\definecolor{linkmaroon}{RGB}{128, 0, 32}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=linkmaroon,
+    filecolor=linkmaroon,
+    citecolor=linkmaroon,
+    urlcolor=linkmaroon,
+    pdftitle={Grammaticality de-idealized: Formal supplement},
+    pdfauthor={Brett Reynolds},
+    pdfkeywords={grammaticality, projectibility, acceptability, preemption, entrenchment, conventionalization, usage-based grammar},
+}
+\usepackage{orcidlink}
+
+% ===========================
+% QUOTATIONS
+% ===========================
+\usepackage[style=american]{csquotes}
+\MakeOuterQuote{"}
+
+% ===========================
+% SEMANTIC MACROS
+% ===========================
+\newcommand{\term}[1]{\textsc{#1}}
+\newcommand{\mention}[1]{\textit{#1}}
+\newcommand{\mentionh}[1]{⟨#1⟩}
+\newcommand{\olang}[1]{\textit{#1}}
+\newcommand{\abbr}[1]{\textsc{#1}}
+\usepackage{marvosym}
+\newcommand{\crossmark}{\textsubscript{\Cross}}
+\newcommand{\aidisclosure}[1]{%
+  \par\medskip
+  \noindent{\small\textsc{AI use.}\enspace The large language models #1 served as
+  drafting and editing aids throughout the preparation of this paper. I remain
+  responsible for all theoretical claims, arguments, errors, and interpretive
+  choices.\par}%
+  \medskip
+}
+
+% ===========================
+% MATHS AND SYMBOLS
+% ===========================
+\usepackage{amsmath,amssymb}
+
+% ===========================
+% LINGUISTIC EXAMPLES
+% ===========================
+
+
+% Judgement markers (TEXT-MODE SAFE)
+\newcommand{\judgesep}{\kern-0.15em}
+\newcommand{\ungram}[1]{*\judgesep#1}
+\newcommand{\marg}[1]{\textsuperscript{?}\judgesep#1}
+\newcommand{\odd}[1]{\#\judgesep#1}
+
+% ===========================
+% LISTS
+% ===========================
+\usepackage{enumitem}
+\setlist{nosep, leftmargin=*}
+\setlist[enumerate]{label=\arabic*.}
+\setlist[itemize]{label=--}
+
+% ===========================
+% TABLES & FIGURES
+% ===========================
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{needspace}
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+
+% ===========================
+% BIBLIOGRAPHY
+% ===========================
+\usepackage[backend=biber,style=apa,natbib=true,doi=true,isbn=false,url=true]{biblatex}
+\addbibresource{refs.bib}
+
+% Possessive citation
+\newcommand{\posscite}[1]{\citeauthor{#1}'s (\citeyear{#1})}
+
+% ===========================
+% UTILITIES
+% ===========================
+\usepackage{xspace}
+\newcommand{\eg}{e.g.\,\xspace}
+\newcommand{\ie}{i.e.\,\xspace}
+\newcommand{\etc}{etc.\xspace}
+
+% ===========================
+% DOCUMENT SPECIFIC PACKAGES
+% ===========================
+% Required for posterior plots
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepgfplotslibrary{fillbetween}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,shapes,positioning,fit,backgrounds}
+\definecolor{lsLightGray}{RGB}{240,240,240}
+\definecolor{lsMidBlue}{RGB}{0,114,178}
+\usepackage{rotating}
+
+% ===========================
+% LINGUISTIC EXAMPLES (Must be last)
+% ===========================
+\usepackage{langsci-gb4e}
+\makeatletter
+\@ifundefined{noautomath}{}{\noautomath}
+\makeatother
+
+
+\usepackage{xr-hyper}
+\externaldocument[M-]{main}
+
+\title{Grammaticality de-idealized\\[0.4em]\large Formal supplement}
+\author{Brett Reynolds \orcidlink{0000-0003-0073-7195}\\
+  Humber Polytechnic \& University of Toronto\\
+  \href{mailto:brett.reynolds@humber.ca}{brett.reynolds@humber.ca}}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This supplement gives the mathematical specification underlying the
+Operator-Value Model of Grammaticality. It separates the population state from
+speaker and analyst estimates, defines the observation and updating interfaces,
+states the conditional population dynamics, records the simulation contract,
+and maps the paper's structural claims to machine-checked Lean theorems. The
+main paper presents the linguistic argument, predictions, and failure conditions
+without formal notation. The supplement is designed to make every quantitative
+commitment inspectable without making that notation a prerequisite for reading
+the argument.
+\end{abstract}
+
+\noindent\textbf{Companion paper:} \emph{Grammaticality de-idealized}. Section
+and example references that point outside this document refer to the main paper.
+
+\aidisclosure{Claude, ChatGPT/Codex, Gemini, DeepSeek, and Ox Alpha}
+\noindent{\small Aristotle provided formalization assistance. Model outputs used
+in adversarial review or formalization were checked, where applicable, by
+independent recomputation, local proof replay, or executable tests.\par}
+\medskip
+
+\tableofcontents
+\newpage
+
+\input{formal-notation}
+
+\input{section3}
+
+\input{formal-dynamics}
+
+\section{Executable simulation and likelihood audit}
+\label{sec:executable-audit}
+
+The reference implementation keeps three artifacts distinct. The revised
+engine implements the normalized gated-choice likelihood, exact affine
+finite-window posterior, and moment projection. The conditional scoring shell
+checks observation-channel calculations but isn't presented as a shared-latent
+joint likelihood. The closed-loop stress test composes speaker-specific
+evidence filters with the explicit adoption--retention transition. None is a
+fit to linguistic data.
+
+The release test suite contains 316 checks: 27 legacy provenance fixtures, 46
+occasion-simulation smoke checks, 57 revised-engine checks, 18 conditional
+observation-shell checks, and 168 closed-loop checks. A clean regeneration of
+the declared sweep produced SHA-256
+\nolinkurl{54f359dab7d63fb05bb7acdc19067d8698f73e62d1402ba27e147043ec275963}.
+The independently reproducible data for Figure~\ref{fig:posterior-means} have
+SHA-256
+\begin{center}
+\small\nolinkurl{2a15f8f517df3aae9555447d200b17dce7b68d9121bb3982900ea5be108200ef}.
+\end{center}
+The qualitative outcomes match the scope claims above:
+
+\begin{itemize}
+\item the proportional adoption response has one stable interior fixed point,
+  while the posterior-threshold response and sufficiently steep logistic
+  response have two stable outer regions around an unstable interior crossing;
+\item a dominant outside option leaves weak evidence and fails the endpoint
+  criterion;
+\item moderate inclusion-state and evidence-state perturbations return to both
+  declared basins within the simulated horizon; and
+\item after opportunities cease, heterogeneous priors alone make the evidence
+  mean complete both the quarter-way and halfway portions of its eventual move
+  before between-speaker variance does in every one of 36 runs.
+\end{itemize}
+
+The final result is adverse to an earlier, stronger dispersion-leading claim
+and is retained as such. The programmed repair comparison is only a wiring
+check; it supplies no maintenance or control warrant. Exact parameters, seeds,
+replicate summaries, full-map eigenvalues, approximation diagnostics, and the
+normalized onset calculation are stored with the machine-readable sweep.
+
+\section{Machine-checked structural correspondence}
+\label{sec:lean-correspondence}
+
+The Lean development is a deliberately narrow structural sanity check. It
+formalizes the constraint algebra, non-empty assemblies, coverage,
+compatibility, saturation, node-level licensing, and the distinction among
+speaker, population, and posterior read-outs. The operator-stratum extension
+formalizes closed and update-configuring contrasts, value-correct versus
+wrong-value tokens, licensed versus excluded exponents, and the bridge showing
+that an operator-neutral construction can contribute a compatible analysis
+without thereby being licensed. It doesn't formalize the statistical
+likelihoods, population dynamics, repair probabilities, or empirical
+identification assumptions developed above.
+
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.33\textwidth}
+  >{\raggedright\arraybackslash}p{0.57\textwidth}@{}}
+\toprule
+Lean result & Manuscript claim checked \\
+\midrule
+\path{distinct_values_of_updateConfiguring} & An update-configuring
+contrast contains genuinely distinct eligible values, rather than one value
+written twice. \\
+\path{isSituatedOperator_withProfile} & Replacing opportunity, licensing,
+or categoricality data leaves operator membership unchanged. \\
+\path{operator_with_no_opportunity} & A contrast can retain operator
+membership even when its current opportunity count is zero. \\
+Three independent failure witnesses & Closure, conventional establishment,
+and update configuration are each necessary for operator membership. \\
+Four operator/licensing witnesses & Operator/non-operator and categorically
+licensed/unlicensed are jointly consistent in all four combinations. \\
+\path{value_and_exponent_independent} & Correct versus wrong value and
+licensed versus excluded exponent occur in all four combinations. \\
+\path{wrong_value_can_change_update} & Selecting the wrong value can
+change the public-update result in an update-configuring contrast. \\
+\path{neutral_compatibility_does_not_supply_licensing} & Empty operator
+contribution supplies compatibility only; it doesn't license constructional
+nodes or yield grammatical status. \\
+Concrete bridge witnesses & A non-operator complementation-shaped case and a
+value-intact excluded-exponent case can both be covered, compatible, and
+saturated while failing status through node licensing; changing that licensing
+condition alone restores status in the paired witnesses. \\
+Paired non-vacuous saturation witnesses & When a dimension is genuinely
+obligatory, supplying it yields saturation and omitting it blocks saturation. \\
+\bottomrule
+\end{tabular}
+\caption{Scope of the machine-checked correspondence. These are logical
+interface checks, not empirical classifications of the motivating examples.}
+\label{tab:lean-correspondence}
+\end{table}
+
+The authoritative sources are \path{formalization/OVMG/Core.lean},
+\path{OperatorStratum.lean}, and \path{OperatorBridge.lean}. The local
+release audit requires a clean \texttt{lake build}, a source scan for proof
+shortcuts, and replay of \texttt{AxiomAudit.lean}. The theorem statements are
+conditional on the supplied construction inventory, conventionality predicate,
+constraint algebra, obligatoriness interface, and licensing relation. Lean
+checks their composition; it can't establish that a linguistic analyst chose
+the right empirical inputs.
+
+\clearpage
+\begin{sloppypar}
+\printbibliography[title=References]
+\end{sloppypar}
+
+\end{document}

@@ -1,0 +1,159 @@
+\section*{Notation, types, and fixed parameters}
+\addcontentsline{toc}{section}{Notation, types, and fixed parameters}
+\label{sec:notation-register}
+
+This register is part of the model specification. It states the type and role
+of every recurring symbol before the derivations use it. A quantity called
+\emph{fixed} is to be measured, normed, or registered independently of the
+outcome it helps predict; it isn't silently fitted to that outcome. A quantity
+called \emph{latent} is a world-side state inferred through an observation
+model. A \emph{posterior} quantity belongs to a named epistemic bearer--speaker
+or analyst--and can't be substituted for the corresponding latent state.
+
+Several letters are overloaded only with explicit adornment or arguments. In
+particular, $F$, $H$, $R$, $X$, $\pi$, and $\rho$ name distinct objects below;
+$\ell_i$ is a lect, $\ell_j(x)$ and $\ell^{\mathrm{omit}}_{i,t}(x)$ are
+omission diagnostics, and $\ell(k)$ is a locality function; $d$ can index an
+operator dimension or dependency while
+$d_j$ is an omission contrast; $c$ is a conditioning state while $c_k$ is a
+mixture coefficient; and $r$ can be an epistemic bearer while $r_j$ and
+$r(\Delta,\iota)$ are attribution and repair functions. The table flags each
+use. Time is discrete except in the optional cubic normal form. All
+probabilities and rates lie in $[0,1]$ unless stated otherwise.
+
+\footnotesize
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.18\textwidth}
+  >{\raggedright\arraybackslash}p{0.25\textwidth}
+  >{\raggedright\arraybackslash}p{0.48\textwidth}@{}}
+\toprule
+Symbol & Type or domain & Meaning and status \\
+\midrule
+\endfirsthead
+\toprule
+Symbol & Type or domain & Meaning and status \\
+\midrule
+\endhead
+\midrule
+\multicolumn{3}{r}{\emph{continued on next page}}\\
+\endfoot
+\bottomrule
+\endlastfoot
+
+\multicolumn{3}{@{}l}{\textsc{Indices, bearers, and linguistic objects}}\\[2pt]
+$t,s,t_0$ & discrete times & Current time, a time inside a window, and the independently fixed initial time. \\
+$W_t=[t-W,t)$ & finite time window & Preceding convention-individuating window of fixed width $W$. \\
+$i,j$ & speakers & $i$ usually marks the focal speaker; $j$ indexes a sampled population member or observation. \\
+$r\in\{i,a\}$ & epistemic bearer & A speaker $i$ or analyst $a$ whose evidence licenses a posterior estimate. \\
+$c\in\mathcal C$ & conditioning state & Construed communicative situation and norm centre; $\mathcal C$ is its state space. \\
+$n$ & niche identifier & Independently specified communicative job. \\
+$\phi,\varphi(A)$ & frame type, frame function & Constructional frame and the frame type of assembly $A$, used to type zero-marking alternatives and obligatoriness. \\
+$d$ & operator dimension & A community-indexed contrast dimension; not an exponent. \\
+$f,v,u$ & form, value, token & $f$ is a form, $v$ its intended value, and $u$ a token notation used only when $v$ is recoverable. \\
+$x,x',y$ & candidate realizations & Form--value candidates in a niche; $y$ is the observed choice. \\
+$\kappa$ & constructional node & Licensing-bearing identity of a typed construction or sign. \\
+$A$ & finite assembly & Complete typed assembly of constructions; its linguistic representation may be richer than the fields projected into the model. \\
+$\ell_i$ & lect state & Latent lect component for speaker $i$; $H$ is the finite number of lect components. \\
+
+\multicolumn{3}{@{}l}{\textsc{Constraint structure and state theory}}\\[2pt]
+$O(c)$ & finite dimension set & Operator dimensions conventionalized for conditioning state $c$; examples in the text are illustrative, not exhaustive. \\
+$\Omega$ & typed constraint space & Space in which partial operator contributions can refine or conflict. \\
+$\omega_\kappa,\omega(A)$ & partial constraints & Operator contribution of node $\kappa$ and the unified contribution of assembly $A$. \\
+$\sqcup,\bot$ & partial join, failure & Constraint unification and undefined/inconsistent result. The same glyph $\bot$ later denotes the typed outside option when it appears as a choice argument. \\
+$\mathcal H$ & construction hierarchy & Independently specified inheritance structure that generates analogical candidates. \\
+$\mathcal A(f,v)$ & finite assembly set & Complete assemblies with yield $f$ and value $v$. \\
+$\mathcal A_0(d,n,\phi,c)$ & finite assembly class & Independently fixed defined assemblies that realize niche $n$ in frame $\phi$ while leaving dimension $d$ unset. \\
+$\operatorname{def}(A)$ & Boolean predicate & Whether the operator constraints in $A$ unify. \\
+$\operatorname{sat}_t(A,c)$ & Boolean predicate & Whether $A$ supplies every dimension that the prior population history makes obligatory. \\
+$\mathrm{OBL}_t(n,c,\phi)$ & dimension set & Path-dependent ontic obligatoriness macro, determined from prior realized population behaviour and prior convention state. \\
+$z_{i,t}(\kappa,c)$ & binary latent state & Whether speaker $i$ includes construction $\kappa$ in the repertoire for $c$ at $t$. \\
+$Z_t(\kappa,c)$ & predictive binary state & Inclusion of a newly sampled exchangeable speaker, conditional on population parameters. \\
+$\theta_t(\kappa,c)$ & latent population rate & Exchangeable population licensing rate for construction $\kappa$. \\
+$\boldsymbol\pi$ & simplex vector & Lect-mixture weights; distinct from the usage rate $\pi_t$ below. \\
+$L_t(A,c)$ & predictive event & A sampled speaker includes every node required by $A$. \\
+$\Lambda_{i,t}$ & state vector & Speaker $i$'s vector of constructional inclusion states. \\
+$S_t^\theta(f,v,c)$ & latent population state & Prevalence of at least one defined, saturated, licensed assembly route. \\
+$\mathcal Y_{W_t}$ & population history & Realization rates, pressure statistics, and prior obligatoriness state in the preceding window. \\
+$\mathcal D_{r,t}$ & bearer evidence & Evidence available to bearer $r$ through time $t$. \\
+$\widehat S_t^{(r)}$ & posterior mean & Bearer $r$'s estimate of the population status state. \\
+$G_t,g_{i,t}$ & posterior means & Compact names for the analyst's and speaker $i$'s status estimates. \\
+$C_t^{(r)},\widehat C_t$ & posterior means & Bearer-specific and analyst means for a pivotal construction's licensing rate. \\
+$\nu_t^{(r)},\widehat\nu_t$ & positive concentrations & Evidence concentration for the corresponding posterior estimate. \\
+$U_{\mathrm{epi}}^{(r)}$ & posterior variance & Epistemic uncertainty about the population state for bearer $r$. \\
+$U_{\mathrm{het}}^{(r)}$ & expected Bernoulli variance & Predicted between-speaker heterogeneity; not posterior uncertainty. \\
+$\tau(c)$ & fixed decision parameter & Situation-specific read-out boundary determined by losses; not part of constitutive status. \\
+
+\multicolumn{3}{@{}l}{\textsc{Opportunity, choice, and observation}}\\[2pt]
+$\mathcal V_{n,t}^{\star}$ & finite candidate set & Attested, hierarchically constructible, and analogically generated candidates for niche $n$; the star marks inclusion of zero-token candidates. \\
+$N_t(n,c)$ & non-negative count & Opportunities for niche $n$ in state $c$ during the current window. \\
+$k_t(x,n,c)$ & non-negative count & Observed choices of candidate $x$ in that window. \\
+$U_t(x;n,c)$ & real utility & Population-level counterfactual choice utility. \\
+$U_{i,t}(u;n,c)$ & real utility & Speaker-specific counterpart of the choice utility. \\
+$\mathbf f,\mathbf w$ & feature vector, weights & Choice predictors and their fixed or independently estimated coefficients. \\
+$\bot$ & outside-option realization & Avoidance, periphrasis, silence, or repair in progress; typed separately from constraint failure. \\
+$\rho_t^\star$ & candidate-only probability & Counterfactual share when every registered candidate is available and the outside option is omitted. \\
+$\widetilde\rho_t^\star$ & full-choice probability & Counterfactual share when the outside option is included; it enters the licensing--choice approximation. \\
+$\pi_t(x\mid n,c)$ & latent usage rate & Population probability of producing candidate $x$ in the niche; distinct from lect weights $\boldsymbol\pi$. \\
+$r_j$ & attribution probability & Independently coded probability that occasion $j$ is genuinely an opportunity for the target. \\
+$\ell_j(x)$ & log likelihood ratio & Information diagnostic comparing an observed non-target choice under target absence and presence. \\
+$\ell^{\mathrm{omit}}_{i,t}(x)$ & log likelihood ratio & Speaker-indexed normalized-softmax omission diagnostic for target $x$. \\
+$d_j$ & probability contrast & Attribution-weighted omission informativeness used in the likelihood. \\
+$s_t,m_t$ & current-window counts & Target choices and non-target choices entering the current update exactly once. \\
+$a_t,b_t$ & positive filter shapes & Parameters of the bearer-specific Beta approximation. \\
+$a^0,b^0$ & fixed positive shapes & Baseline prior parameters. \\
+$\widetilde a_t,\widetilde b_t$ & discounted shapes & Accumulated evidence after discounting and before the current window. \\
+$\delta_m$ & fixed memory parameter & Retention of accumulated evidence; one means no forgetting. \\
+$c_k$ & non-negative coefficient & Bernstein-expansion coefficient for the affine omission product. \\
+$\mu_{t+1},v_{t+1}$ & exact moments & Mean and variance of the finite Beta mixture before moment projection. \\
+$\lambda_{i,\kappa}$ & fixed persistence weight & Rate at which evidence can alter speaker $i$'s next inclusion state. \\
+$h_\kappa$ & adoption response & Independently specified probability of adoption or retention from evidence and covariates. \\
+$q_\kappa$ & fixed adoption criterion & Switching or coordination cost used by the posterior-threshold response. \\
+$\xi_{i,t}$ & covariate vector & Independently specified lect, network, cohort, and adoption covariates. \\
+$M$ & positive integer & Finite population size; distinct from anomaly drive $M_{i,t}$ below. \\
+$\theta_t^{(M)}$ & empirical finite-population rate & Realized proportion of the $M$ speakers who include the focal construction. \\
+$D_{0,i}$ & positive normalizer & Gated full-choice denominator when the target is unavailable. \\
+
+\multicolumn{3}{@{}l}{\textsc{Repair, read-out, and situation inference}}\\[2pt]
+$\Delta(d)$ & non-negative divergence & Expected change to the common-ground posterior when operator dimension $d$ is mis-set; estimated from independent comprehension probes. \\
+$\iota$ & footing covariates & Interactional factors conditioning repair. \\
+$r_{\mathrm{upd}},r_{\mathrm{form}}$ & repair probabilities & Update-oriented repair and value-intact form correction. \\
+$r(\Delta,\iota)$ & repair response & Generic repair-targeting response to update divergence and footing. \\
+$\sigma$ & logistic link & Link used in the speaker-level repair read-out. \\
+$\eta_0,\eta_1$ & real coefficients & Repair-read-out intercept and positive sensitivity to estimated non-licensing. \\
+$\psi_{\mathrm{upd}},\psi_{\mathrm{form}}$ & expected exposures & Window-level update-oriented and form-oriented repair opportunities. \\
+$e$ & observed situation cues & Evidence from which a hearer infers the conditioning state. \\
+$q_h(c\mid e)$ & hearer posterior & Hearer $h$'s situation ascription given cues. \\
+$R_i(u,e)$ & non-negative cost vector & Processing, recovery, surprisal, and plausibility costs after situation uncertainty is integrated. \\
+$I_i(u,e)$ & non-negative scalar & Prescriptive or ideological dissonance. \\
+$M_{i,t}$ & real anomaly drive & Weighted combination of low expected status, implementation costs, dissonance, and noise. \\
+$F_{i,t}$ & value in $(-1,0]$ & Bounded signed anomaly read-out; distinct from the population map $F$ below. \\
+$\alpha_G,\boldsymbol\gamma,\delta_I$ & fixed read-out weights & Contributions of expected status, implementation costs, and dissonance. \\
+$\varepsilon_i$ & noise term & Speaker-level residual in the anomaly read-out. \\
+$\mathcal L_{\mathrm{loc}}$ & non-negative cost & Dependency-locality component of implementation cost. \\
+$\mathcal D_{\mathrm{dep}},|d|$ & dependency set, length & Dependencies in a token and the registered length of each. \\
+$K_{\mathrm{sat}},\beta_L,\eta_L$ & fixed locality parameters & Saturation point, scale, and sublinear exponent for long dependencies. \\
+$\Phi^{\mathrm{ev}},\Phi^{\mathrm{dec}}$ & confidence read-outs & Evidence confidence and confidence in a binary decision. \\
+$\nu_0$ & positive scale & Fixed concentration scale in evidence confidence. \\
+$\zeta$ & attribution category & Inferred source of anomaly: local non-licensing, other community, speaker error, noise, or own overload. \\
+
+\multicolumn{3}{@{}l}{\textsc{Population dynamics and obligatoriness}}\\[2pt]
+$X_t=(\theta_t,a_t,b_t)$ & coupled state & Population rate and evidence-filter shapes for the focal candidate. \\
+$\mathcal M_\theta$ & deterministic operator & Expected-window likelihood update holding the population rate fixed. \\
+$F(X_t)$ & deterministic map & Composed mean-field population-and-evidence transition; distinct from anomaly $F_{i,t}$. \\
+$J_F$ & Jacobian matrix & Local linearization of the full map. \\
+$\rho(J_F)$ & spectral radius & Stability diagnostic; unrelated to the choice shares bearing a star. \\
+$H(\theta)$ & scalar crossing function & Adoption response after the evidence state is allowed to settle at fixed population rate. \\
+$\theta^\ddagger$ & interior boundary & Population coordinate of the unstable basin boundary in the declared numerical regime. \\
+$\alpha,\beta$ & positive constants & Coefficients of the optional cubic normal form only. \\
+$R_s^0(A,n,c)$ & realized population rate & Raw zero-marking rate; neither licensing nor an analyst estimate. \\
+$\Pi_{W_t}$ & realized pressure & Attributable marked-competitor pressure in the preceding window, weighted by full-choice shares and excluding outside-option choices. \\
+$E_t,X_t$ & Boolean conditions & Entry and release conditions for obligatoriness; the argument list distinguishes release $X_t$ from the coupled state above. \\
+$\epsilon_0,\epsilon_1$ & registered rate thresholds & Entry and release cutoffs with the release threshold strictly higher. \\
+$\pi_0,\pi_1$ & registered pressure thresholds & Entry and release cutoffs with the release threshold strictly lower. \\
+$\nu_{\min}$ & registered evidence floor & Minimum effective concentration for an analyst to identify obligatoriness; it warrants an ontic claim but doesn't constitute it. \\
+\end{longtable}
+\normalsize
+
+Local quantities used for a single equation are defined immediately before or
+after that equation. If a recurring symbol isn't in this register and lacks a
+local definition, that absence is a specification error rather than an
+invitation to infer its meaning from convention.

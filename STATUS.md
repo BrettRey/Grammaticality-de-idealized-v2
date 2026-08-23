@@ -44,7 +44,7 @@ Current subproject map:
 
 | Subproject | Function | State |
 |---|---|---|
-| `operator-stratum/` | What operators are | LingBuzz preprint, 2026-01-25; *Functions of Language* scope rejection, 2026-06-26; retarget TBD |
+| `operator-stratum/` | What operators are | LingBuzz preprint, 2026-01-25; *Functions of Language* scope rejection, 2026-06-26; theoretically revised 2026-08-22; retarget TBD |
 | `asterisk-de-idealized/` | What grammaticality is | LingBuzz preprint, 2026-01-28 |
 | `etiological-account/` | Why gaps emerge and persist | Draft |
 | `feeling-of-ungrammaticality/` | What the feeling is | Seed |
@@ -54,15 +54,16 @@ Current subproject map:
 
 1. LingBuzz metadata still needs one manual correction: `conventionaliz- ation` should be `conventionalization` in the keyword list for `lingbuzz/010118`. Both LingBuzz domains returned HTTP 502 on 2026-08-21, so the live field could not be checked or edited; the manuscript and PDF metadata already use the correct spelling.
 2. Powell's contingency/convergence framework is a priority connection but has not been integrated.
-3. The operator-stratum paper should now be cited as a LingBuzz preprint, not as under review at *Functions of Language*. The main paper still frames categoricality around role-functional operator contrasts rather than substance-based morphosyntax.
+3. The operator-stratum paper should now be cited as a LingBuzz preprint, not as under review at *Functions of Language*. The main paper separates the operator-specific comprehension and repair predictions from the broader licensing dynamics that produce categoricality.
 4. Bottom-up norm enforcement should be attributed to Richerson & Boyd 2005 and O'Connor 2019, not Powell.
 5. Transparent free relatives remain an empirical test case for predictions about `F(u)`.
 6. Kuribayashi et al. 2026 should resurface when returning to the predictability/processing-cost gap.
 7. `subprojects/evolutionary-dag-workbench/` is now the non-commitment workspace for exploring rival grammaticality DAGs. Existing OVMG, detector, operator-value, Miller, usage-heavy, processing-heavy, and normativity-heavy models should be treated as seed graphs and counterexample sources, not conclusions.
 8. The unification proposal collapsing `map`, `K`, and `C_t` into a single licensing hierarchy is deliberately not implemented. After Roughdraft review, the memo now recommends full unification if the criterion is the stronger/truer thesis rather than near-term readiness.
 9. The July 10 formal revision replaced the older `G_t^\theta`/posterior-existence wording with `S_t^\theta` population status plus `\widehat{S}_t` estimate. Future edits should preserve the state/estimate distinction unless deliberately revising the ontology.
-10. The §4 dynamics are now explicitly a coherent model with proof obligations, not a closed derivation: bounded-memory bimodality, winnerless-cell metastability, and operator-specific categoricality are conditional claims.
+10. The §4 dynamics are now explicitly a coherent model with proof obligations, not a closed derivation: bounded-memory bimodality, winnerless-cell metastability, and separated population licensing regimes are conditional claims.
 11. The August 22 likelihood repair and regenerated closed-loop audit are now stated in the manuscript: low/high separation is conditional on the adoption response and informative observation, while heterogeneous priors alone make normalized dispersion lag the mean after opportunity loss. Final review should police threshold circularity and keep repair outside the maintenance/control warrant.
+12. The operator-stratum definition now requires closure plus a paradigm-level public-update role. Opportunity modulates concentration rather than membership; categorical constructional licensing remains broader. Future edits should preserve the separate questions of constructional licensing, operator membership, value selection, and exponent licensing.
 
 ## Known Local State
 
@@ -70,7 +71,7 @@ The working tree remains dirty, but its provenance was classified on 2026-08-21.
 
 Specific watchpoints:
 
-1. **Submission-bearing source:** `main.tex`, `section3.tex`, the `refs.bib` link to the central bibliography, and the figure assets `figures/fig_agr_projection.pdf` and `trident.jpg`. The August 21 formal repair also changed `formalization/OVMG/Core.lean` and `formalization/README.md`; those files are a structural sanity check, not evidence establishing the empirical model. `CLAUDE.md`, `STATUS.md`, and `DECISIONS.md` are project guidance and records, not submission files.
+1. **Submission-bearing source:** `main.tex`, `reader-model-and-dynamics.tex`, the `refs.bib` link to the central bibliography, and the figure assets `figures/fig_agr_projection.pdf` and `trident.jpg`. The separate formal artifact consists of `supplement.tex`, `formal-notation.tex`, `section3.tex`, `formal-dynamics.tex`, `simulate_dynamics.py`, and `simulation_data.dat`. The Lean files are a structural sanity check, not evidence establishing the empirical model. `CLAUDE.md`, `STATUS.md`, and `DECISIONS.md` are project guidance and records, not submission files.
 2. **Generated artifacts:** `main.pdf` is the current rendered manuscript and `main.xdv` is an intermediate build artifact. `Reynolds_2026_Grammaticality_de-idealized.pdf` is the July 5 LingBuzz upload artifact and should not be mistaken for the repaired manuscript.
 3. **Deliberate review provenance:** the August 21 zip, extracted review bundle, Codex/Opus/Aristotle reports, and `reviews/ox-alpha-formalization-review-20260821/` preserve prompts, inputs, outputs, hashes, and audits. Retain them locally; none belongs in a journal upload unless specifically requested.
 4. **Local planning and literature workspace:** the July 10 formal-dynamics and reader-bridge notes, July 14 Cognition intake notes, and later source hooks are research records rather than manuscript source. The many `subprojects/etiological-account/literature/` files remain local literature workspace by default.
@@ -100,7 +101,16 @@ Specific watchpoints:
   16 is superseded by the likelihood-consistent results above.
 - A dominant outside option produces weak evidence without endpoint concentration in the declared high-utility cell. Low and high coupled states both return after their inclusion components alone are perturbed. The programmed majority-repair intervention is classified only as a wiring check, not independent support for a controller claim.
 - In the opportunity-loss arm, heterogeneous priors make speaker evidence-mean dispersion grow sharply, but the mean reaches 25% and 50% of its eventual move first. The result is a conditional counterexample to heterogeneity alone being sufficient for the manuscript's dispersion-leading prediction; it is not an empirical language result or a judgment simulation.
-- Exact parameters, seeds, diagnostics, replicate summaries, and the Ox Alpha refutation audit are preserved under `tools/ovmg-tools/results/` and `tools/ovmg-tools/reviews/`; full paths are deterministically regenerable. All 316 repaired checks pass, and two regenerations of the sweep produced SHA-256 `54f359dab7d63fb05bb7acdc19067d8698f73e62d1402ba27e147043ec275963`. Lean remains frozen and unchanged.
+- Exact parameters, seeds, diagnostics, replicate summaries, and the Ox Alpha refutation audit are preserved under `tools/ovmg-tools/results/` and `tools/ovmg-tools/reviews/`; full paths are deterministically regenerable. All 316 repaired checks pass, and two regenerations of the sweep produced SHA-256 `54f359dab7d63fb05bb7acdc19067d8698f73e62d1402ba27e147043ec275963`. The simulation did not require a dynamics proof; the structural Lean layer was subsequently strengthened only at the operator/status interface.
+- Revised the companion operator-stratum paper after independent Ox Alpha and Claude Fable reviews plus a targeted level/category audit. Membership now depends on closure and paradigm-level public update; opportunity count, categoricality, and satiation are modulators or corollaries.
+- Replaced the grammar/style binary throughout the family. The main paper now predicts repair locus: update-oriented repair for mis-set operator values, form correction for value-intact exponent or construction errors, and stance-directed responses for many indexical mismatches.
+- Reclassified *le hiver* as a value-intact operator-exponent case and *depend of* as a head-specific complement-construction case. Complementation is represented as schematic category/function licensing with lexically narrowed realization.
+- Added two canon entries: world state/evidence/estimate/read-out are separate bearers; recruitment/synchronic membership/population persistence are separate claims.
+- Split the manuscript at the reader/formal boundary. The 46-page main paper now contains no inline or displayed mathematics and presents the model, dynamics, simulations, and falsifiers in ordinary linguistic prose. The 37-page standalone supplement contains the notation register, all formal definitions and derivations, the executable audit, and the Lean correspondence.
+- Ox Alpha's post-split audit judged the main-paper linguistic architecture sound, the Lean meaningful as scoped, and the cross-artifact correspondence consistent. Its substantive objection to undefined hierarchical coverage weights was accepted: the supplement now makes the candidate-level scope explicit instead of claiming an unimplemented pooling rule.
+- Repaired the posterior-figure provenance. `simulate_dynamics.py` now implements the declared affine omission likelihood and per-step moment projection; `simulation_data.dat` drives the plot directly and has SHA-256 `2a15f8f517df3aae9555447d200b17dce7b68d9121bb3982900ea5be108200ef`.
+- Strengthened the Lean correspondence with Aristotle-assisted operator, conventionality, value/exponent, licensing, and non-vacuous saturation witnesses. Local `lake build` and `AxiomAudit.lean` replay pass; the formalization remains a structural interface audit rather than stochastic verification.
+- Projectibility audit result: green across projection targets, warrant/world separation, non-triviality, maintainer/controller discipline, bearer/scale, scope, prospective revision, and conclusion strength. The strongest justified world-side claim remains conditional stabilization; repair maintenance and control require intervention evidence.
 
 ### 2026-08-21 Session Notes
 
@@ -121,7 +131,7 @@ Specific watchpoints:
 - Replaced atomic partial-function operator assignments with typed constraint unification, added explicit within-speaker joint-distribution caveats, and introduced epistemic-vs-population-heterogeneity variance decomposition.
 - Split confidence into evidence confidence `\Phi^{ev}` and decision confidence `\Phi^{dec}`, so concentrated interior community division no longer masquerades as a confident binary verdict.
 - Rebuilt §4's production/update/omission machinery: normalized gated-choice production, baseline-preserving discounted Beta update, generalized-Bayes effective-count caveat, and log-likelihood omission evidence with `p_t^-`/`p_t^+` instead of `q_i`.
-- Demoted overstrong dynamics language: bounded-memory bimodality is a stationary-distribution target; operator-specific categoricality depends on independently estimated `N_t\cdot\Delta`; winnerless cells need low support/weak diffuse negative evidence in addition to avoidance; moribund dispersion needs heterogeneous priors/networks/recent histories.
+- Demoted overstrong dynamics language: bounded-memory bimodality is a stationary-distribution target; separated licensing depends on independently estimated opportunity structure and adoption response, while public-update divergence enters the repair prediction rather than categoricality; winnerless cells need low support or weak diffuse negative evidence in addition to avoidance; moribund dispersion needs heterogeneous priors, networks, or recent histories.
 - Added a reader-facing bridge at the start of §3.2: it gives the four assembly questions in ordinary language before the notation, then distinguishes community state from evidence-based estimate. The notation table now follows the bridge; page flow was visually checked on pp. 19--21.
 - Refreshed the Lean scaffold and the separate `ovmg-tools` v2 core: typed constraint compatibility, speaker-level assembly status, latent lects, multi-node candidate-to-node availability, and a toy joint likelihood now share one interpretation. The implementation is an executable correctness layer, not a fitted empirical model; scalable inference remains conditional on an independently fixed contrast and coding protocol.
 - Verification: `latexmk -silent main.tex` passed; targeted greps found no old `G_t^\theta`, `q_i`, inline `p\approx`, or binary-Beta scar tissue; `git diff --check` passed. Remaining log messages are routine EB Garamond font substitution and over/underfull boxes.
@@ -137,16 +147,16 @@ Specific watchpoints:
 ## 2026-06-09 Revision Session
 
 - Revised `main.tex` against the referee-style review: K now uses a null/reject outcome; `I have 25 years` is consistently treated as age-frame non-licensing; productivity is handled by hierarchical constructional partial pooling; `rho_t^\star` is defined over analogically generated candidates; `\widetilde{G}_t` now projects into production, repair, satiation, transmission, and change trajectories.
-- Reworked the CxG/UBA comparison sections to match the companion paper's functional boundary: categorical grammaticality clusters around closed-paradigm, high-opportunity, update-critical contrasts rather than morphosyntax as a substance class.
+- Reworked the CxG/UBA comparison sections to match the companion paper's functional boundary: categorical licensing follows opportunity and competitor evidence, while operator status predicts the narrower comprehension and repair profile.
 - Added weak/mechanistic emergence only where tied to the formalism: categoricality is bimodality in the stationary distribution of licensing posteriors, with Hopper's "emergent grammar" explicitly distinguished.
 - Added `notes/BRETT-VERIFY-2026-06-09.md` for companion citation form, Keller reference selection, and the unresolved "objective grammaticality" vs "conventional status" terminology choice.
-- Build check: `latexmk -xelatex main.tex` succeeds and writes `main.pdf` (44 pages). Remaining warnings are routine overfull boxes, EB Garamond bold substitution, one float placement adjustment, and repeated `xdvipdfmx` duplicate destination warnings for table/figure anchors.
+- Final build check: `latexmk main.tex` succeeds and writes `main.pdf` (67 pages), with no overfull boxes, undefined references, or missing citations.
 
 ## Next-Touch Note: Operator Ecology
 
-- Treat `subprojects/operator-stratum/` as the bridge paper for the whole family, not a side paper. The core generalization is that grammaticality judgments target **operator value**: closed, public-update repertoires that configure commitments, roles, scope, reference, and repair.
-- Map this back onto the grammaticality variables explicitly: `map` asks whether a form can host operator value at all; `K` asks whether the operator values cohere; `C_t` asks whether the operator value is licensed and entrenched under opportunity and preemption.
-- This should guide the main OVMG paper, the asterisk paper, the etiology branch, the feeling branch, the Miller revision path, LBC, and Varieties. It prevents the family from saying merely that morphosyntax is special; morphosyntax is special where it realizes public coordination infrastructure.
+- Treat `subprojects/operator-stratum/` as the bridge paper for the whole family, not a side paper. It defines one functionally distinct stratum within grammaticality: closed paradigms with a public-update role.
+- Map the grammaticality variables independently of membership: `map` asks whether an assembly covers the form--value pair; `K` asks whether its grammatical contributions unify; and `C_t` tracks constructional licensing, including categorical non-operator conventions. Operator membership is established separately by closure and paradigm-level public update.
+- This should guide the main OVMG paper, the asterisk paper, the etiology branch, the feeling branch, the Miller revision path, LBC, and Varieties. It replaces a substance-based claim about morphosyntax with testable differences in comprehension and repair while leaving grammaticality broader than the operator stratum.
 
 ## 2026-07-14 Secondary Literature Hook: Iaia and Tavano (2026)
 
@@ -158,12 +168,13 @@ When returning to the predictability/processing-cost gap, consider this as backg
 
 ## Next Actions
 
-1. Prepare an anonymous *Linguistics* submission package from `main.tex`, `section3.tex`, `refs.bib`, and the cited figures; keep the review records, Lean sources, and project-management files outside the upload unless the editor asks for them.
+1. Prepare an anonymous *Linguistics* submission package from `main.tex`, `reader-model-and-dynamics.tex`, `refs.bib`, and the cited figures. Offer `supplement.pdf` as a separate formal supplement; keep review records, Lean sources, and project-management files outside the upload unless the editor asks for them.
 2. Retry the LingBuzz keyword correction on `lingbuzz/010118` when the service recovers: `conventionaliz- ation` -> `conventionalization`.
-3. Keep the Lean layer frozen as a structural sanity check unless referee feedback supplies a concrete reason to extend it.
+3. Keep the strengthened Lean layer frozen as a structural sanity check unless referee feedback supplies a concrete reason to extend it.
 4. If the *Linguistics* route fails on length or framing, do not send the same 24,500-word manuscript to *Journal of Linguistics* or *Glossa*; first produce a distinct <=15,000-word version.
 5. If returning to the etiology paper, keep the corrected Richerson & Boyd/O'Connor mechanism separate from Powell's contingency/convergence framework.
 6. If returning to the new DAG workbench, expand the phenomenon-card archive, enrich seed graphs, and run adversarial critique before treating any graph family as strong.
+7. Choose a better-fit venue for the revised operator-stratum manuscript and prepare a new venue-specific package rather than reusing the 2026 Functions of Language submission files.
 
 ## Related reading — Cognition 2026 intake (2026-07-14)
 Sources routed from a *Cognition* 2026 batch. Central index: `literature/cognition-2026-intake.md`. Verify claims/citations before use.

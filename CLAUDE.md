@@ -7,7 +7,7 @@ This file provides guidance to Claude Code when working with this project.
 **Title:** Grammaticality De-idealized: The OVMG Model
 **Author:** Brett Reynolds
 
-This paper develops the Operator-Value Model of Grammaticality (OVMG), formalizing the distinction between population-level grammatical status \(G_t\) and the subjective anomaly-confidence read-out \((F,\Phi)\).
+This paper develops the Operator-Value Model of Grammaticality (OVMG), distinguishing the population licensed-assembly state \(S_t^\theta\), its posterior estimate \(\widehat{S}_t\) (abbreviated \(G_t\) where harmless), and the subjective anomaly-confidence read-out \((F,\Phi)\).
 
 ## Terminology Evolution
 
@@ -31,8 +31,9 @@ The model name has evolved as the theory sharpened:
 The **operator-stratum** subproject defines what operators are. The main paper uses operators as the unit of grammatical signaling.
 
 Key equations:
-- \(G_t^\theta(f,v,c)=P(\exists A\in\mathcal{A}(f,v): \operatorname{def}(A)\wedge\operatorname{sat}(A,c)\wedge L_t(A,c)\mid\boldsymbol{\theta}_t,c)\), the theta-conditional licensed-assembly existence variable; \(G_t(f,v,c)=\mathbb{E}[G_t^\theta(f,v,c)\mid\mathcal{D}_t]\).
+- \(S_t^\theta(f,v,c)=P(\exists A\in\mathcal{A}(f,v): \operatorname{def}(A)\wedge\operatorname{sat}(A,c)\wedge L_t(A,c)\mid\boldsymbol{\theta}_t,c)\), the population prevalence of a licensed assembly; \(\widehat{S}_t(f,v,c)=\mathbb{E}[S_t^\theta(f,v,c)\mid\mathcal{D}_t]\).
 - \(F_{i,t}(u,e)\) is the bounded cue-integrated anomaly signal; \(\Phi_{i,t}(u,e)\) is the confidence read-out derived from posterior concentration.
+- Multi-node assembly prevalence requires a joint model of speaker inclusion states (for example, a latent-lect mixture); it is not generally the product of marginal node means.
 
 ## Build System
 
