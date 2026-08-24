@@ -45,7 +45,7 @@ Current subproject map:
 
 | Subproject | Function | State |
 |---|---|---|
-| `operator-stratum/` | Paradigm structure, operator profiles, and repair locus | LingBuzz preprint, 2026-01-25; *Functions of Language* scope rejection, 2026-06-26; paradigm/profile revision 2026-08-23; *Theoretical Linguistics* query approved but pending reassessment |
+| `operator-stratum/` | Selective fault attribution, grammatical-choice profiles, and downstream operator repair | LingBuzz preprint, 2026-01-25; *Functions of Language* scope rejection, 2026-06-26; selective-grammaticality reconstruction 2026-08-24; venue route pending reassessment |
 | `asterisk-de-idealized/` | What grammaticality is | LingBuzz preprint, 2026-01-28 |
 | `etiological-account/` | Why gaps emerge and persist | Draft |
 | `feeling-of-ungrammaticality/` | What the feeling is | Seed |
@@ -64,7 +64,7 @@ Current subproject map:
 9. The July 10 formal revision replaced the older `G_t^\theta`/posterior-existence wording with `S_t^\theta` population status plus `\widehat{S}_t` estimate. Future edits should preserve the state/estimate distinction unless deliberately revising the ontology.
 10. The §4 dynamics are now explicitly a coherent model with proof obligations, not a closed derivation: bounded-memory bimodality, winnerless-cell metastability, and separated population licensing regimes are conditional claims.
 11. The August 22 likelihood repair and regenerated closed-loop audit are now stated in the manuscript: low/high separation is conditional on the adoption response and informative observation, while heterogeneous priors alone make normalized dispersion lag the mean after opportunity loss. Final review should police threshold circularity and keep repair outside the maintenance/control warrant.
-12. The operator companion now identifies paradigms structurally before assigning a graded, independently measured operator profile. “Operator stratum” is informal shorthand rather than thresholded membership. Its sole confirmatory claim is the held-out profile-by-error-locus interaction; future edits should preserve the separate questions of constructional licensing, paradigm identification, public-update profile, value selection, and exponent licensing.
+12. The operator companion now profiles candidate form--value assembly relations before observing fault labels. Its primary claim concerns held-out selective fault attribution; intermediate or changing profiles supply a moving-edge claim. Strict paradigms gate the narrower downstream public-update-profile-by-value/realization repair comparison. Future edits should preserve P1 → P2 → P3 and the separate questions of conditioning, coverage, compatibility, saturation, licensing, paradigm identity, value, realization, and response cause.
 13. The full expected-window closure has a numerically verified local cusp under effective evidence inflow and the independently supplied adoption threshold. The formal result, deterministic slowing, two-control hysteresis, and failed finite-population variance/autocorrelation gate are reported in the supplement. The main paper states only the reader-facing, conditional loss-versus-recovery prediction and contains no bifurcation mathematics or terminology.
 14. The approved venue route is *Glossa* for the main paper and a *Theoretical Linguistics* presubmission query for the operator paper, with *Lingua* as its immediate fallback. The main paper's safety cut, current-literature bridge, disclosure alignment, anonymization, supplements, and reproducibility archive are complete and verified; no submission event has occurred. The query remains gated by its venue-local differentiation and roughly 100-word abstract. See `submission/venue-decision-2026-08-23.md` and `subprojects/operator-stratum/submission/venue-decision-2026-08-23.md`.
 
@@ -88,7 +88,8 @@ Specific watchpoints:
   *Lingua* as its immediate fallback. The query need not wait for the main
   paper's desk outcome. Both routes retain the prerequisites in their linked
   venue-decision records; no manuscript or package work began at approval.
-- Ox Alpha independently reproduced the full map's declared base fixed points,
+- A preview model with no disclosed developer or underlying-model identity,
+  presented as Ox Alpha, independently reproduced the full map's declared base fixed points,
   rejected the proposed rare-niche U-shaped Beta regime, and recommended a
   bounded continuation. Its one-control fold at $q=.5$ reproduced near
   opportunity inflow $.654741$; its coarse two-control search left a cusp
@@ -152,6 +153,13 @@ Specific watchpoints:
   archive manifests, 328 executable checks, the full diagnostics, Lean build,
   axiom audit, anonymity scan, and page-by-page visual inspection pass. The
   package is ready but has not been submitted.
+- Replaced the bare Ox Alpha name in the AI declaration with an archival
+  description: its undisclosed developer and underlying-model identity, its
+  historical display label, and the August 2026 route records. The formal audit
+  manifest identifies OpenRouter/Stealth, and the accompanying synthesis says
+  the route was invoked through ORX; a later review header records OpenCode
+  Zen, without a retained independent provider receipt. The
+  rebuilt disclosure page remains unclipped and legible.
 
 ### 2026-08-22 Session Notes
 
@@ -177,9 +185,9 @@ Specific watchpoints:
 - A dominant outside option produces weak evidence without endpoint concentration in the declared high-utility cell. Low and high coupled states both return after their inclusion components alone are perturbed. The programmed majority-repair intervention is classified only as a wiring check, not independent support for a controller claim.
 - In the opportunity-loss arm, heterogeneous priors make speaker evidence-mean dispersion grow sharply, but the mean reaches 25% and 50% of its eventual move first. The result is a conditional counterexample to heterogeneity alone being sufficient for the manuscript's dispersion-leading prediction; it is not an empirical language result or a judgment simulation.
 - Exact parameters, seeds, diagnostics, replicate summaries, and the Ox Alpha refutation audit are preserved under `tools/ovmg-tools/results/` and `tools/ovmg-tools/reviews/`; full paths are deterministically regenerable. All 316 repaired checks pass, and two regenerations of the sweep produced SHA-256 `54f359dab7d63fb05bb7acdc19067d8698f73e62d1402ba27e147043ec275963`. The simulation did not require a dynamics proof; the structural Lean layer was subsequently strengthened only at the operator/status interface.
-- Revised the companion operator-stratum paper around Nørgård-Sørensen and Heltoft's paradigm scaffold after Ox Alpha and targeted attribution, level, and source audits. Paradigm identification is categorical, public-update contribution is a graded operator profile, and the held-out profile-by-error-locus interaction is the sole confirmatory claim.
-- Replaced the grammar/style binary throughout the family. The main paper now predicts repair locus: update-oriented repair for mis-set operator values, form correction for value-intact exponent or construction errors, and stance-directed responses for many indexical mismatches.
-- Reclassified *le hiver* as a value-intact operator-exponent case and *depend of* as a head-specific complement-construction case. Complementation is represented as schematic category/function licensing with lexically narrowed realization.
+- Reconstructed the companion operator-stratum paper around its initiating question: why interpretable deviations are assigned to grammatical rather than lexical, phonological, orthographic, stylistic, pragmatic, or social fault domains. Candidate form--value assembly relations receive frozen grammatical-choice profiles; strict Nørgård-Sørensen--Heltoft paradigms gate only the narrower downstream operator study. The projections now run P1 selective attribution, P2 moving-edge attribution, then P3 public-update profile by value/realization repair locus.
+- Replaced the grammar/style binary throughout the family. The companion distinguishes the linguistic target of a response from processing, schooling, frequency, stigma, and other causes of that response.
+- Reclassified *le hiver* as a medium-sensitive morphophonological-realization interface, not concord, a wrong-value case, or operator evidence. *Depend of* is a layered complement chain: schematic function and category choice at higher links, with lexically narrowed preposition licensing at the lowest link.
 - Added two canon entries: world state/evidence/estimate/read-out are separate bearers; recruitment/synchronic membership/population persistence are separate claims.
 - Split the manuscript at the reader/formal boundary. After the subsequent clarity pass, the 31-page main paper contains no inline or displayed mathematics and presents the model, dynamics, simulations, and falsifiers in ordinary linguistic prose. The 37-page standalone supplement contains the notation register, all formal definitions and derivations, the executable audit, and the Lean correspondence.
 - Ox Alpha's post-split audit judged the main-paper linguistic architecture sound, the Lean meaningful as scoped, and the cross-artifact correspondence consistent. Its substantive objection to undefined hierarchical coverage weights was accepted: the supplement now makes the candidate-level scope explicit instead of claiming an unimplemented pooling rule.
@@ -231,9 +239,9 @@ Specific watchpoints:
 
 ## Next-Touch Note: Operator Ecology
 
-- Treat `subprojects/operator-stratum/` as the bridge paper for the whole family, not a side paper. It identifies grammatical paradigms using an inherited structural scaffold, assigns independently measured public-update profiles, and tests whether those profiles predict repair locus.
+- Treat `subprojects/operator-stratum/` as the bridge paper for the whole family, not a side paper. It asks which independently profiled form--value assembly relations attract grammatical rather than neighbouring fault attributions; strict paradigms and public-update profiles then support the narrower repair-locus test.
 - Map the grammaticality variables independently: `map` asks whether an assembly covers the form--value pair; `K` asks whether its grammatical contributions unify; and `C_t` tracks constructional licensing, including categorical low-profile conventions. None identifies a paradigm or determines its operator profile.
-- This should guide the main OVMG paper, the asterisk paper, the etiology branch, the feeling branch, the Miller revision path, LBC, and Varieties. It replaces a substance-based claim about morphosyntax with a falsifiable, held-out profile-by-error-locus interaction while leaving grammaticality broader than the informal operator stratum.
+- This should guide the main OVMG paper, the asterisk paper, the etiology branch, the feeling branch, the Miller revision path, LBC, and Varieties. It replaces a substance-based claim about morphosyntax with two ordered tests: assembly profile to held-out fault attribution, then public-update profile to repair locus within eligible paradigms.
 
 ## 2026-07-14 Secondary Literature Hook: Iaia and Tavano (2026)
 
