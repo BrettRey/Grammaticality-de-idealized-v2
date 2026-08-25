@@ -1,7 +1,7 @@
 ---
 slug: operator-stratum
 kind: paper
-title: 'Why some interpretable deviations count as ungrammatical: grammatical-choice profiles and public-update consequences'
+title: 'Why some interpretable deviations count as ungrammatical: linguistic norms and levels of explanation'
 stage: complete
 external: rejected
 blocked_on: []
@@ -15,14 +15,14 @@ venue: Functions of Language
 external_id: FOL-26063
 preprints:
 - lingbuzz/009706
-next_action: Brett review of the verified selective-grammaticality reconstruction before revisiting venue packaging
+next_action: Brett review of the constitutive reconstruction before any Linguistics and Philosophy packaging
 notes: 'A subproject of grammaticality-de-idealized with its own STATUS.md, DECISIONS.md, operator-stratum.tex and
   submission package; registered separately 2026-07-30 so its desk rejection survives into the registry
   rather than sitting in a note on the parent block. The parent block (batch-06) covers the main OVMG
   paper only. `source` paths are relative to the subproject.
 
-  Its own STATUS.md header: "**Status:** Desk rejected by *Functions of Language* for scope/fit; theoretically
-  revised; *Theoretical Linguistics* query approved and in preparation... **LingBuzz:** Uploaded 2026-01-25... **Journal submission:** Submitted to *Functions of Language*
+  Its own STATUS.md header: "**Status:** Desk rejected by *Functions of Language* for scope/fit; reconstructed
+  for possible *Linguistics and Philosophy* submission; reader review next... **LingBuzz:** Uploaded 2026-01-25... **Journal submission:** Submitted to *Functions of Language*
   2026-06-02; rejected 2026-06-26 as outside the journal''s scope." Article ID FOL-26063, decision signed
   by Wout Van Praet, Managing Editor. Scope/fit desk rejection only, no referee report.
 
@@ -46,10 +46,27 @@ notes: 'A subproject of grammaticality-de-idealized with its own STATUS.md, DECI
 
 **Created:** 2026-01-24
 **Last updated:** 2026-08-24
-**Status:** Desk rejected by *Functions of Language* for scope/fit; theoretically revised; *Theoretical Linguistics* query approved and in preparation
+**Status:** Desk rejected by *Functions of Language* for scope/fit; reconstructed for possible *Linguistics and Philosophy* submission; reader review next
 **LingBuzz:** Uploaded 2026-01-25
 **Journal submission:** Submitted to *Functions of Language* 2026-06-02; rejected 2026-06-26 as outside the journal's scope.
 **Parent project:** Grammaticality_de_idealized (OVMG)
+
+### 2026-08-24 Final philosophical revision
+- Made the architecture consistent as five bearers and six explanatory questions: norm constitution, token conformity, semantic or pragmatic consequence, response target, response cause, and epistemic warrant.
+- Added independent criteria for individuating assembly relations. Recurrence, contrastive opposition, substitution, omission, embedding, and predictive distribution must favour a relational grain over a stored whole; mixed analyses require independent evidence and distinct counterfactual predictions for every proposed layer.
+- Allowed epistemic and repertoire-level indeterminacy rather than using “partly grammatical” or a mixed analysis to rescue the ontology. The `depend on`--`heavy rain` comparison now states both the initial analysis and the evidence that would reverse it.
+- Delimited the target as public, repertoire-relative grammatical status while allowing related individual, idiolectal, and model-relative targets. Formal derivability and individual competence no longer transfer automatically to a public norm.
+- Separated spontaneous assembly-directed attribution from explicit grammar labels, restricted Abrusán-style defeat to the explanatory level it addresses, and aligned the value-error terminology throughout.
+- Used Claude Fable and an unnamed preview model for bounded ideation on relation grain. Their suggestions were independently adjudicated; response-based criteria were rejected as circular, while convergent recurrence, substitution, predictive surplus, reversal conditions, and honest indeterminacy informed the revision.
+- The final working master is 6,334 texcount words with a 176-word abstract and a 17-page PDF. XeLaTeX/Biber builds cleanly with 35 resolved citation keys, no data-model errors, no undefined citations or references, and no overfull boxes. All pages were visually inspected. Brett's reader review remains the next gate before an anonymous *Linguistics and Philosophy* package is prepared.
+
+### 2026-08-24 Constitutive reconstruction for *Linguistics and Philosophy*
+- Rebuilt the paper around status constitution: grammaticality is a token's norm-relative conformity to socially sustained relations that organize recurrent form--value assembly in a scoped repertoire. Token status, semantic or pragmatic consequence, public response, and epistemic access are separate levels.
+- Made the assembly-role profile an evidential representation rather than the norm itself. Held-out attribution and repair predictions constrain the ontology but do not constitute grammatical status.
+- Defined the grammar--phonology boundary functionally. Pure phonotactics constrains possible sound shape independently of constructional values and is excluded from grammar. Phonological material enters grammatical assembly when it realizes or is conditioned by a grammatical choice.
+- Distinguished internal value incompatibility from external semantic or pragmatic misapplication and from a production choice that fails to express an intended message. Only the first is a candidate grammatical fault merely by virtue of the value relation.
+- Reorganized the literature around constitutive alternatives: Boye and Harder are the central opponent; Nørgård-Sørensen and Heltoft supply the strict paradigm scaffold; Abrusán supplies the nearest semantic-boundary account. The discourse-consequence and repair programme is now a downstream application.
+- The 17-page source builds without undefined citations, undefined references, or overfull boxes. The remaining underfull warnings are in narrow table cells and are non-blocking. The next gate is Brett's reader review before venue packaging.
 
 ### 2026-08-24 Selective-grammaticality reconstruction
 - Superseded the repair-centred framing recorded below. The paper again owns its initiating question: why some interpretable deviations are classified as grammatical rather than lexical, phonological, orthographic, stylistic, pragmatic, or social.
@@ -138,32 +155,35 @@ notes: 'A subproject of grammaticality-de-idealized with its own STATUS.md, DECI
 
 ## Summary
 
-Asks why one interpretable deviation is classified as grammatical while another
-is treated as lexical, phonological, orthographic, stylistic, pragmatic, or
-social. The paper proposes that speakers fallibly track the relation that
-failed in a community's inventory of conventional form--meaning pairings.
-Candidate form--value assembly relations receive independently evidenced,
-graded grammatical-choice profiles. Public-update profiling and repair form a
-narrower downstream hypothesis within that broader answer.
+Asks why one interpretable deviation is grammatically defective while another
+is lexical, phonological, orthographic, stylistic, pragmatic, or social. The
+paper proposes that grammatical status is a token's conformity to a socially
+sustained norm internal to recurrent form--value assembly in a scoped
+repertoire. Assembly-role profiles, grammar labels, corrections, and repairs
+are different kinds of fallible evidence about that status and its downstream
+consequences; none is its truth-maker.
 
 ## Core Argument
 
-- Grammar consists centrally of conventional form--meaning pairings, but
-  pairing and systemhood alone do not distinguish grammar from the lexicon or
-  social meaning. The relevant bearer is a candidate assembly relation.
-- The grammatical-choice profile has three blocks: semiotic/constructional
-  assembly, contrastive choice architecture, and conditioned community
-  licensing. These are placed from positive evidence before fault labels are
-  inspected.
+- A grammatical norm is a practice-dependent but response-independent standard
+  that relates signs, exponents, or values within recurrent constructions. A
+  token's conformity to that relation constitutes its grammatical status.
+- Candidate signs, constructions, and relations are individuated from
+  recurrence, opposition, substitution, omission, embedding, and predictive
+  distribution before fault labels are inspected. A mixed analysis is licensed
+  only when every proposed layer has independent evidence and predictive work.
+- The assembly-role profile is an epistemic representation of a norm's
+  organization, social scope, and evidential support. It is not the norm itself.
 - Strict Nørgård-Sørensen--Heltoft paradigms anchor a strong core. Layered,
   partly lexicalized, and moving constructional relations account for graded
-  boundaries without redefining misses after the fact.
+  boundaries, but indeterminate evidence can yield an indeterminate grain.
 - Selecting a poor but licensed word, style, accent, or social act can preserve
   the relevant assembly and direct trouble instead toward content, situation,
   persona, or conduct.
-- Public-update profile is a separate coordinate for eligible paradigms, not a
-  definition of grammar. It predicts the narrower value-versus-realization
-  repair-locus difference.
+- The public repertoire is the main target, while individual competence and
+  formal derivability remain related but distinct objects. A discourse-
+  consequence profile is a separate coordinate for eligible paradigms and
+  predicts a narrower value-versus-realization repair-locus difference.
 
 ## Connection to OVMG
 
@@ -188,7 +208,7 @@ dynamics:
 
 ## Diagnostics Proposed
 
-1. Grammatical-choice profiling of neutral candidate dependencies, using
+1. Assembly-role profiling of neutral candidate dependencies, using
    assembly, choice architecture, and conditioned licensing evidence
 2. Frozen fault-target coding across assembly, content, expression shape,
    orthography, situational fit, social act, mixed, and unresolved responses
@@ -202,15 +222,17 @@ dynamics:
 
 ## Predictions
 
-1. **P1, primary:** stronger frozen grammatical-choice profiles predict more
-   consistent grammar-directed attribution in held-out interpretable deviations.
+1. **P1, primary:** stronger frozen assembly-role profiles predict more
+   consistent spontaneous assembly-directed attribution in held-out
+   interpretable deviations. Explicit grammar labels are a separate response.
 2. **P2:** independently intermediate or changing profiles predict more variable
    attribution and directed movement among grammar, lexicon, and style.
 3. **P3, downstream:** across eligible paradigms, a stronger frozen
    public-update profile predicts a larger wrong-value versus
    value-preserving-realization difference in update-directed repair.
-4. Each projection has a prospective defeat condition; a descriptive profile
-   may survive without rescuing its failed prediction.
+4. Each prediction has a prospective defeat condition. More fundamentally, the
+   constitutive account fails if assembly role cannot distinguish the boundary
+   cases without recycling the labels it is meant to explain.
 
 ## Build
 

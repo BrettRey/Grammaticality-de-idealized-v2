@@ -6,11 +6,11 @@
 \setlength{\emergencystretch}{2em}
 
 \hypersetup{
-  pdftitle={Why some interpretable deviations count as ungrammatical: grammatical-choice profiles and public-update consequences},
-  pdfkeywords={grammaticality, form-meaning pairing, grammatical choice, operator profile, public update, repair}
+  pdftitle={Why some interpretable deviations count as ungrammatical: linguistic norms and levels of explanation},
+  pdfkeywords={grammaticality, linguistic norms, form-meaning assembly, fault attribution, semantic repair, discourse}
 }
 
-\title{Why some interpretable deviations count as ungrammatical:\\grammatical-choice profiles and public-update consequences}
+\title{Why some interpretable deviations count as ungrammatical:\\linguistic norms and levels of explanation}
 \author{Brett Reynolds \orcidlink{0000-0003-0073-7195}\\Humber Polytechnic \& University of Toronto}
 \date{\today}
 
@@ -18,43 +18,27 @@
 \maketitle
 
 \begin{abstract}
-Why can an intelligible deviation be classified as ungrammatical in one case,
-but as odd meaning, bad wording, accent, style, or social conduct in another?
-I propose that such classifications fallibly track the relation that failed in
-a community's inventory of conventional form--meaning pairings. A grammatical
-choice isn't merely any conventional system: it recurs at a constructional
-choice site, relates expression to a language-specific value or function, and
-is constrained by a community licensing pattern. Strict paradigms are a strong
-case, but construction-sized and partly lexicalized relations create graded and
-moving edges. A token can lack a viable analysis, combine incompatible values,
-leave an obligatory contrast unsupplied, select the wrong paradigm value, or
-use an unlicensed realization. By contrast, a poor lexical, stylistic, or social
-choice may preserve the relevant form--meaning pairings and instead mis-select
-content, persona, situation, or conduct. Production, substitution, omission,
-semantic, and distributional evidence can place these relations without using
-the fault labels to be predicted. The primary claim is prospective:
-stronger independently assigned \term{grammatical-choice profiles} should
-predict more consistent grammar-directed attribution in held-out cases. Within
-that architecture, a graded public-update profile identifies one consequential
-subset. Building on Heltoft and N{\o}rg{\aa}rd-S{\o}rensen, I predict that its
-strength increases the difference in update-directed repair between wrong-value
-and value-preserving-realization errors. Abrus\'an's semantic-repairability
-account, Boye and Harder's discursive secondary status, processing, schooling,
-and sanction remain live alternatives. Either projection can fail without
-turning the other into a definitional success.
+Why can an interpretable deviation be grammatically defective in one case but
+instead count as semantic anomaly, poor wording, accent, style, or social
+impropriety in another? I argue that grammaticality is a token's norm-relative
+status under socially sustained relations that organize recurrent form--value
+assembly in a scoped repertoire. Recurrent practice supplies normativity; a
+relation's construction-internal role supplies grammar-specificity. This separates
+six questions: what constitutes a grammatical norm, whether a token conforms,
+what semantic or pragmatic consequence follows, what a public response targets,
+what causes that response, and what warrants the analyst's answers. Candidate
+signs and relations are individuated from recurrence, contrastive opposition,
+substitution, and predictive distribution rather than grammar labels. A mixed
+analysis is warranted only when each component relation has independent evidence;
+where the evidence or the repertoire leaves the grain unsettled, the result remains
+indeterminate. An assembly-role profile is evidence about a norm, not the norm
+itself, and judgments, repairs, and sanctions are fallible responses rather than
+truth-makers. Semantic repairability and discourse consequences can explain
+particular downstream classifications without defining grammatical status.
 \end{abstract}
 
 \smallskip
-\noindent \textbf{Keywords:} grammaticality; form--meaning pairing; grammatical choice; operator profile; public update; repair
-
-\smallskip
-\noindent\footnotesize\textit{Version note.} An earlier version posted as
-LingBuzz/009706 proposed a broader coordination account of selective
-grammaticality. This article replaces its categorical operator-stratum
-taxonomy with a graded profile over independently identified form--value
-assembly relations and
-recasts repair as a downstream test of a broader account of selective
-grammatical classification.\normalsize
+\noindent \textbf{Keywords:} grammaticality; linguistic norm; form--value assembly; fault attribution; semantic repair; discourse consequence
 
 \aidisclosure{Claude Opus 4.5 and Claude Fable; a preview model with no
 disclosed developer or underlying-model identity, accessed through OpenCode Zen
@@ -62,519 +46,733 @@ in August 2026; ChatGPT 5.2 Pro; and GPT-5.5}
 
 
 \section{The selective-classification problem}
+\label{sec:problem}
 
-The initiating example looks too small to carry a theory. In ordinary connected
-Reference French, \olang{hiver} `winter' begins with \term{h muet}, so the
-singular definite article undergoes obligatory elision: \olang{l'hiver}, not
-*\olang{le hiver} \citep{boersma2007,simonenkocarlier2020}. Yet the deviant form
-remains readily interpretable. \olang{Le} still expresses masculine singular
-definiteness; what fails is its conventional morphophonological realization.
-The deviation is neither a wrong referent nor a wrong definiteness value. Nor is
-it merely any French-accent difference. The realization relation belongs to the
-article construction, and that location makes the example a candidate
-grammatical form error.
+In ordinary connected Reference French, \olang{hiver} `winter' begins with
+\term{h muet}, and the singular definite article undergoes elision:
+\olang{l'hiver}, not *\olang{le hiver}
+\citep{boersma2007,simonenkocarlier2020}. The deviant form remains easy
+to understand. \olang{Le} still presents the noun phrase as masculine, singular,
+and definite; the problem lies in how that article is realized before this class
+of noun. The deviation is neither a wrong referent nor a failure to communicate
+definiteness. It also need not be treated as a general defect in French sound
+shape. The disputed relation belongs to the realization of the article
+construction.
 
-This case generated the paper's question. Why do some interpretable departures
-count as grammar, while others count as semantic anomaly, poor wording,
-pronunciation, style, or social conduct? The contrast can't be reduced to
-meaninglessness: *\olang{le hiver}, *\mention{goed}, and many agreement errors
-are transparent. Nor can it be reduced to expressive substance. Tone,
-intonation, word order, gesture, and segmental morphology can all realize
-grammatical contrasts, while segmental differences can also mark accent or
-style. An asterisk records a classification; it doesn't yet explain that
-classification.
+This small example poses a general question. Why do some interpretable departures
+count as grammar while others count as semantic anomaly, poor wording,
+pronunciation, spelling, style, or social conduct? Meaninglessness can't mark the
+boundary: *\olang{le hiver}, *\mention{goed}, and many agreement errors are
+transparent. Expressive substance can't mark it either. Tone, intonation, word
+order, gesture, and segmental morphology can realize grammatical contrasts, while
+the same substances can distinguish words, accents, and styles. An asterisk records
+a classification; it doesn't yet explain that classification.
 
-Two questions are often run together. \term{Source attribution} asks what
-caused a negative response: grammatical knowledge, processing load, frequency,
-schooling, social evaluation, or something else. \term{Target classification}
-asks what the respondent treats as having failed: a construction, a grammatical
-value, its realization, lexical content, style, stance, or the social act. The
-acceptability literature's source-ambiguity problem concerns the first question
-\citep{hofmeisteretal2013source,leivadawestergaard2020}. This paper asks
-how the second can be predicted without reading the answer from the response it
-is meant to explain.
+Six questions have to be separated. \term{Status
+constitution} asks what makes a conventional relation grammatical rather than
+lexical, phonological, graphic, stylistic, pragmatic, or social. \term{Token
+application} asks whether a particular token conforms to that relation.
+\term{Semantic or pragmatic consequence} asks what happens to composition,
+reference, force, commitment, or continuity.
+\term{Target attribution} asks what a respondent treats as having failed.
+\term{Response causation} asks why that respondent rejected, corrected,
+accommodated, ignored, or sanctioned the token. \term{Epistemic justification}
+asks what evidence warrants the analyst's answers. The questions concern five
+bearers because target and cause are distinct questions about the same public
+response.
 
-The proposed answer begins from a familiar but insufficient observation:
-grammar consists centrally of conventional pairings between expression and
-content or function, at grains ranging from words to abstract constructions
-\citep{goldberg1995constructions,sag2012sign}. Phonemic contrasts ordinarily
-keep expressions apart rather than pairing each contrast with a meaning;
-orthography ordinarily maps graphic forms to linguistic expressions. But the
-pairing criterion alone can't separate grammar from the lexicon or from social
-meaning. A word and an enregistered style also pair form with value.
+This paper begins with status constitution. Within a scoped repertoire,
+a grammatical norm is a socially sustained relation among signs, exponents, or
+values in a recurrent construction. Such a norm supplies standards for whether
+material instantiates a token of that construction.
 
-The decisive question is relational: \emph{which relation does the
-departure fail?} Selecting an inapposite but otherwise licensed word preserves
-that word's form--meaning pairing; a register mismatch can preserve both the
-proposition and the social value conventionally indexed by the form. Trouble is
-then directed at chosen content, situational fit, persona, or conduct. A
-grammatical departure instead compromises the conventional assembly of
-form--meaning relations: an analysis is unavailable, grammatical instructions
-conflict, an obligatory contrast is missing, a construction is excluded, a
-paradigm value is mis-selected, or an intended value receives an unlicensed
-realization. Lexical and social material can enter grammar when recruited
-into such a constructional relation; morphology, tone, or word order doesn't
-count as grammar merely by virtue of its substance.
+A lexical convention can
+instead establish the identity and content of a sign; phonotactics can constrain
+permissible sound shapes; orthography
+can represent an independently identified expression; and a usage norm can govern
+which licensed expression or persona fits an occasion. These roles can overlap,
+and their boundaries can be layered or unstable. Their differences are functional,
+not differences of substance or social importance.
 
-This answer would be circular if \enquote{grammatical relation} were assigned
-from the same asterisks and corrections it later explained. I propose
-a graded \term{grammatical-choice profile}, assigned from independent evidence:
-semiotic and constructional assembly, contrastive choice architecture, and
-conditioned community licensing. These properties are neither a classical
-checklist nor a synonym for \enquote{system}.
-They order candidate relations for a prospective claim: higher independently
-assigned profiles should predict more consistent grammar-directed fault
-attribution in held-out cases. A stable failure defeats or splits that claim;
-it can't be repaired by moving the category edge after the labels are seen.
+This answer is norm-relative without making whatever people approve correct by
+definition. The paper targets public, repertoire-relative grammatical status,
+specified by community, activity, medium, and period. Such status is sustained in
+linguistic practice, but isn't identical to frequency, an explicit rule, a
+majority vote, or any one speaker's knowledge. Individual systems and formal
+grammars supply related targets whose conclusions don't transfer automatically to
+the public repertoire.
 
-Strict paradigms in the sense developed by N{\o}rg{\aa}rd-S{\o}rensen and
-Heltoft occupy one strong region of this profile space. Constructional licensing
-supplies another, often layered, route. Within either route, a token may fail at
-the level of coverage, compatibility, saturation, community licensing, value,
-or realization. This imports the main separations of OVMG without importing its
-population dynamics: OVMG distinguishes the status of a candidate from the
-evidence available to a speaker and from the resulting experience or label
-\citep{reynolds2026ovmg}. This paper asks what kind of linguistic target
-that label purports to identify.
+The account uses an \term{assembly-role profile} only as an epistemic
+instrument. Production, interpretation, substitution, omission, productivity,
+contrast structure, and distribution across a scoped repertoire provide evidence
+about how a candidate relation is organized. The estimate can be uncertain or
+wrong. Grammar labels, corrections, and repairs are withheld when constructing it
+because those responses are later evidence about whether speakers track the norm
+and what consequences its failure has. Held-out prediction constrains the account;
+it doesn't constitute grammatical status.
 
-Public-update function then contributes a narrower projection rather than a
-definition of grammar. A graded \term{public-update profile} measures how
-strongly a paradigm's values conventionally configure move type, commitment or
-source, discourse continuity, and response relevance. A wrong
-switch-reference value can change which participant is carried forward; a
-malformed realization of the same intended value need not. The
-\term{operator-profile hypothesis} predicts that this value--realization
-difference in update-directed repair grows with a profile assigned before
-held-out responses are coded. *\olang{le hiver} matters precisely because it
-shows why this operator-specific claim can't define grammaticality: the
-definite value survives even though its realization is excluded.
+Two held-out predictions supply that constraint. An assembly role estimated without
+response labels should predict more consistent spontaneous attribution to
+expression assembly in held-out cases than matched lexical, phonotactic,
+representational, and deployment norms. Explicit grammar labels provide a further
+response measure and can diverge from assembly-directed attribution. Among
+independently identified grammatical paradigms, a
+separate discourse-consequence profile should predict the repair-locus difference
+between internal value conflicts and value-preserving realization failures.
 
-The paper thus proposes three separable projections. The primary one concerns
-selective fault attribution across grammatical, lexical, phonological,
-orthographic, stylistic, pragmatic, and social targets. The second concerns
-variable and moving attribution at intermediate or changing edges. The third
-concerns the downstream consequences of wrong values within a subset of
-grammar. Repeated
-opportunities and competitor strength can explain why a transparent form
-becomes sharply excluded \citep{reynolds2026ovmg}; they don't by themselves
-decide which relation failed or where subsequent trouble will be directed.
+The argument proceeds from objects to evidence. Section~\ref{sec:levels}
+separates the explanatory levels. Section~\ref{sec:norms} develops the ontology
+of grammatical norms and compares it with paradigmatic and discursive-status
+accounts. Section~\ref{sec:failure} distinguishes ways in which a token can fail.
+Section~\ref{sec:semantics} locates semantic and pragmatic explanations, and
+Section~\ref{sec:boundaries} tests the account against boundary cases.
+Section~\ref{sec:method} states the empirical consequences and conditions under
+which the proposal should be rejected or divided.
 
-Section~\ref{sec:prior-constraints} positions that test against the closest
-partial answers. Sections~\ref{sec:architecture} and
-\ref{sec:profiles} develop the choice profile and the operator-specific
-coordinate. Section~\ref{sec:comparisons} develops worked comparisons.
-The final sections compare rival predictors and state held-out designs in which
-each projection can fail.
 
-\section{Prior constraints and live alternatives}
-\label{sec:prior-constraints}
+\section{Five levels, six explanatory questions}
+\label{sec:levels}
 
-Abrus\'an's programme is the closest precedent in problem shape.
-\textcite[329--331, 344--348]{abrusan2019} asks why failed interpretation can
-produce semantic anomaly, pragmatic infelicity, or ungrammaticality.
-\textcite{abrusanetal2021shift} develop an answer in terms of semantic
-repairability: local conflicts involving lower-level, context-shiftable types
-can leave a recoverable predication, whereas conflicts involving constitutive
-high-level types can be nonlocal and resist meaning-preserving shift. The type
-architecture and shift predictions are independently motivated, yielding a
-real explanation of one classification boundary. Its native explanandum is
-semantic anomaly and the semantically or pragmatically analyzed subset of
-ungrammaticality. It doesn't purport to classify article elision, suppletive
-allomorphy, constructional exclusion, accent, or social sanction.
-
-The source-ambiguity literature supplies a complementary constraint. A low
-rating doesn't reveal whether grammar, processing, interpretation, or
-contextualization produced it \citep{hofmeisteretal2013source}; grammaticality
-and acceptability can dissociate in both directions
-\citep{leivadawestergaard2020}. In functional terms, grammaticality concerns
-fit to relatively stable conventional knowledge rather than acceptability in
-one act of use, but corpus distributions, processing measures, and judgments
-are all indirect evidence for that knowledge
-\citep[12--20]{poulsen2012grammaticality}. No single response may be
-used both to locate a fault and to explain why the fault was located there.
-
-Coseriu provides a deeper historical precedent for differentiated fault
-domains. His system--norm--speech distinction separates functional
-possibilities, customary social realization, and individual production, while
-later presentations distinguish congruence, idiomatic correctness, and
-situational appropriateness \citep{coseriu1952,pardollibrer2021,sotovergara2022}.
-This paper doesn't rediscover differentiated evaluation. It asks which
-independently measurable properties predict a particular allocation in later
-behaviour.
-
-Construction Grammar supplies the broad semiotic ontology. Words, idioms,
-partly filled patterns, and abstract constructions are conventional
-form--meaning pairings rather than outputs of a grammar divided cleanly from a
-lexicon \citep{goldberg1995constructions,sag2012sign}. That inheritance rules
-out an easy substance boundary, but it leaves the present question open. A
-licensed word can be badly chosen without its pairing failing; a construction
-can be unlicensed even when its content is transparent. The distinction to be
-explained concerns relations and fault targets inside a structured
-inventory, not between meaningful words and meaningless syntax.
-
-Heltoft's work is the closest positive scaffold. His analyses distinguish
-grammaticality from comprehensibility and treat mood, word order, particles,
-and other paradigms as resources for illocutionary and interlocutionary
-organization
-\citep{heltoft1981intersubjectivity,heltoft2005modality,hansenheltoft2011gds,jakobsenheltoft2012paradigm}.
-\textcite{norgardsorensenheltoft2015} generalize the paradigm architecture:
-bounded alternatives occupy a recurring domain and contrast within a
-language-specific semantic frame. Their architecture reaches beyond
-morphology, and their Danish V2 analysis already joins paradigm structure to
-assertivity. This paper adopts that scaffold. It doesn't claim that either
-paradigms or interactional grammar are new. Their additional marked--unmarked
-asymmetry anchors the strict paradigmatic core considered below. It neither
-defines all grammar nor warrants an inference from paradigmhood to categorical
-judgment. Less bounded, construction-sized, or item-restricted relations can
-share some of the profile without satisfying the full paradigm definition.
-
-Boye and Harder are the principled alternative, not a minor comparison. They
-treat closed paradigms and obligatoriness as incidental to grammatical status;
-conventional ancillarity and discursive secondary status are constitutive, with
-focusability and addressability as diagnostics \citep{boyeharder2012}. Their
-account directly competes with the grammatical-choice profile as an account of
-status. Its diagnostics can also compete with the public-update profile in the
-narrower repair study. If discursive secondary status predicts held-out fault
-attribution or subsumes the proposed repair interaction, the corresponding new
-profile hasn't earned an additional explanatory role.
-
-\begin{table}[ht]
-\centering
-\scriptsize
-\setlength{\tabcolsep}{3pt}
-\begin{tabular}{@{}p{0.20\linewidth}p{0.25\linewidth}p{0.25\linewidth}p{0.22\linewidth}@{}}
-\toprule
-\textbf{Programme} & \textbf{Native explanandum} & \textbf{Independent predictor} & \textbf{Residual question here} \\
-\midrule
-Abrus\'an and colleagues & semantic anomaly, pragmatic infelicity, and semantically driven ungrammaticality & type level, locality, and meaning shift & form, construction, style, and social-act targets \\
-Coseriu & system, normal realization, speech, and evaluative domains & functional opposition and norm-relative realization & held-out allocation and gradience of token faults \\
-Construction Grammar & learned inventory across lexicon and syntax & conventional form--meaning pairings at multiple grains & why one licensed pairing is badly chosen while another pairing relation fails \\
-Heltoft and N{\o}rg{\aa}rd-S{\o}rensen & language-specific grammatical paradigms and their content & domain, frame, bounded alternatives, obligatory choice, markedness & graded extension beyond strict paradigms and held-out attribution \\
-Boye and Harder & grammatical status and grammaticalization & discursive secondary status & comparison with choice profile and repair locus \\
-Source ambiguity and functional acceptability & causes of ratings and evidence for stable conventional knowledge & triangulated grammar, processing, and context measures & target classification rather than response cause \\
-\bottomrule
-\end{tabular}
-\caption{The closest partial answers. The final column states a difference in
-scope or design, not a defect in the predecessor.}
-\label{tab:predecessors}
-\end{table}
-
-Interactional grammar and repair research shows that grammar is a resource for
-sequential action and supplies coding precedents for downstream trouble and correction
-\citep{foxetal1996repair,muntiglventola2010,dingemanseblythedirksmeyer2014}.
-Update semantics and clausal-operator accounts supply the dimensions of move,
-commitment, and response potential used below
-\citep{stalnaker2002,farkasbruce2010,murray2014update,hengeveldmackenzie2008fdg,bentleyetal2023rrg}.
-Neither literature already contains the two frozen comparisons proposed here:
-from a graded choice profile to fault-domain attribution, and from the
-public-update coordinate to the value--realization repair difference. That
-residual claim is architectural and methodological, not the discovery that
-grammar is semiotic, paradigmatic, or interactionally consequential.
-
-\section{Cross-level architecture}
-\label{sec:architecture}
-
-The neutral bearer of the proposal is a candidate \term{form--value assembly
-relation} in a conditioned community repertoire. Calling the bearer a
-\enquote{grammatical system} would assume the classification to be explained;
-calling it merely a \enquote{system} would include vowel inventories,
-orthographies, politeness routines, and practices of apologizing. A candidate
-relation instead specifies an expression, a semantic or relational value, the
-larger construction in which they combine, and the community and situations in
-which the dependency is claimed to hold.
-
-Its \term{grammatical-choice profile} records three blocks:
-
-\begin{enumerate}
-  \item \term{Semiotic and constructional assembly}: conventional coupling
-    between expression and semantic, relational, or structural value, recurring
-    at a specifiable site in larger expressions.
-  \item \term{Choice architecture}: alternatives organized in a
-    language-specific domain and frame, with their boundedness and conditioned
-    requirements on selection, omission, or realization recorded.
-  \item \term{Conditioned licensing}: the relation's position and generality in
-    a multi-grain constructional chain, and the concentration of its use across
-    the declared community, situations, medium, and period.
-\end{enumerate}
-
-Public-update contribution is measured alongside this structural profile in
-\S\ref{sec:profiles}; it isn't smuggled into every grammatical classification.
-No block is a disguised judgment score. Positive production distributions,
-substitution and omission contrasts, semantic interpretation, productivity,
-and opportunity-normalized licensing evidence place the candidate before the
-fault labels, corrections, or repairs to be predicted are inspected. A
-descriptive grammar contributes only through evidence of those relations, not
-by lending the study its prior use of \enquote{grammatical}. The theoretical
-paper proposes no universal scalar; concrete studies have to preregister ordinal or
-pairwise comparisons, or a composite and its weighting rule.
-
-The profile is deliberately graded. A strict paradigm has a recurring domain,
-a language-specific frame, a bounded set of alternatives, obligatory value
-selection in the domain, and marked--unmarked organization
-\citep[262--263]{norgardsorensenheltoft2015}. It anchors a strong
-region of the space. A productive constructional dependency may be less
-bounded; an item-specific complement restriction may sit deep in a grammatical
-licensing chain while resembling lexical collocation at its narrowest link.
-These needn't be equal cases, and neither has to be excluded by a
-classical definition before its projections are tested. Hansen and Heltoft's
-own grammar permits prototype and radial organization
-\citep[vol.~1, 39--41]{hansenheltoft2011gds}.
-
-Three kinds of gradience need to remain distinct. The worldly dependency can have
-an intermediate profile; evidence for its placement can be uncertain; and a
-speaker or institution can issue a sharp or hesitant label. A categorical
-classroom correction doesn't prove a strong grammatical profile, and uncertain
-evidence doesn't prove a fuzzy system. Profiles and category edges can also
-move across communities, activities, media, and time. Those changes are part of
-the claim's scope, not exceptions to be hidden after a miss.
-
-OVMG supplies a second decomposition at the token level. Once a candidate
-analysis and its conditioning situation are fixed, \term{coverage} asks whether
-an analysis exists; \term{compatibility} whether its grammatical instructions
-can jointly hold; \term{saturation} whether required contrasts have values; and
-\term{licensing} whether the community supports the construction and
-realization. Population status, evidence available to a speaker or analyst, and
-the resulting subjective read-out remain separate \citep{reynolds2026ovmg}.
-This paper uses those distinctions to locate a possible fault without
-reproducing OVMG's dynamics.
-
-\begin{table}[ht]
-\centering
-\scriptsize
-\setlength{\tabcolsep}{3pt}
-\begin{tabular}{@{}p{0.19\linewidth}p{0.24\linewidth}p{0.31\linewidth}p{0.18\linewidth}@{}}
-\toprule
-\textbf{Question} & \textbf{Bearer} & \textbf{Possible failure} & \textbf{Example} \\
-\midrule
-Conditioning & Candidate plus situation and norm centre & wrong repertoire or context has been assumed & formal/informal contrast \\
-Coverage & Proposed constructional analysis & no viable assembly of the supplied material & *\mention{Can the have running?} \\
-Compatibility & Values in a covered analysis & independently supplied instructions conflict & *\mention{I've finished it yesterday} \\
-Saturation & Obligatory contrast in a covered analysis & required value remains unsupplied & omitted obligatory marker \\
-Licensing & Construction or realization in a repertoire & transparent candidate is conventionally excluded & *\mention{depend of}; *\olang{le hiver} \\
-Value selection & Token of an identified paradigm & licensed competitor selects the wrong value here & same vs.\ different subject \\
-Non-assembly target & Licensed sign or social act & content, spelling, stance, persona, situation, or conduct is at issue & register mismatch \\
-\bottomrule
-\end{tabular}
-\caption{Cross-level diagnostic questions. Value and realization specify loci
-inside the broader compatibility and licensing questions. A response can target
-more than one row, and its cause is separate.}
-\label{tab:strata}
-\end{table}
-
-The primary projective claim, \term{selective fault attribution}, now has a
-non-trivial form. For candidate dependencies in a declared community,
-situation, medium, and period, a stronger profile assigned without attribution
-evidence should predict more consistent grammar-directed classification of
-held-out interpretable deviations. Frequency, processing load, semantic
-repairability, discursive secondary status, schooling, and sanction are rival
-predictors. Before a concrete study, the minimum useful improvement and
-uncertainty rule has to be declared. If the profile adds no held-out reach, it's
-demoted or split; the misses may not be excluded by redescribing the relation
-after the responses are seen.
-
-The account predicts attribution; respondents can still classify incorrectly.
-An institutional grammar label can target a weakly
-profiled shibboleth, while an unprimed speaker can treat a strong but changing
-dependency as lexical or stylistic. The proposal predicts a robust core,
-layered interfaces, and moving edges rather than exceptionless agreement.
-
-This makes *\olang{le hiver} informative. Its definite, masculine, singular values
-remain recoverable. The failure is the unelided realization inside an ordinary
-French determiner phrase, not the selection of a different value. The analysis
-is deliberately neutral between deriving \olang{l'} by vowel deletion and
-treating it as an allomorph: both locate the error in morphophonological
-realization rather than concord \citep{boersma2007}. The example establishes
-neither a wrong value, the containing system's paradigm status, nor its
-public-update profile. It functions instead as an interface test. Spoken schwa retention,
-written non-elision, learner speech, and a deliberate pause can make different
-dependencies and norm centres salient, so the account permits mixed
-phonological, orthographic, learner, or grammatical-form attribution. In OVMG
-terms, the intended definite assembly is covered, compatible, and saturated;
-the disputed relation is realization licensing in the specified environment.
-
-Repeated opportunities help explain why such a transparent failure can be
-sharp. Once the domain and alternatives are independently specified, a small
-competitor set allows evidence to concentrate quickly on the licensed option.
-OVMG develops that licensing and preemption account
-\citep{reynolds2026ovmg}. Information theory can quantify the resulting
-uncertainty reduction, but it can't discover the grammatical alternatives or
-decide which fault domain a community recognizes. The linguistic codebook is an
-input to that calculation, not its output \citep{shannon1948,coverthomas2006}.
-
-For the narrower operator-profile comparison below, study eligibility is
-categorical even though grammaticality isn't. A candidate paradigm has to have
-bounded alternatives, a recurring domain, a shared frame, and obligatory value
-selection; markedness is recorded, with a strict five-criterion sensitivity
-analysis. This gate prevents an open set from entering a value--realization
-experiment merely because some members matter to interaction. It's a design
-rule for that comparison, not a definition of grammar.
-
-\section{Public-update profiles}
-\label{sec:profiles}
-
-Fault location doesn't yet predict what a hearer will do with the trouble. An
-identified paradigm receives a graded profile for the extent to which
-its values conventionally configure four aspects of public update: move type,
-commitment holder or source, discourse-participant or referent continuity, and
-response relevance \citep{stalnaker2002,farkasbruce2010,murray2014update}. The
-components form a vector, not four additional membership conditions. Clause
-type, evidential anchoring, and switch-reference are strong candidates;
-neither thematic-role assignment nor formal obligatoriness is sufficient on its own.
-
-The profile belongs to the paradigm across its ordinary occasions of use, not
-to the information carried by every token. An agreement marker can be redundant
-in one clause and decisive in another. Licensed update type also differs from
-truth or success: a false assertion is still an assertion, while a wrong
-same-subject value can redirect reference tracking even when the speaker's
-intention is recoverable.
-
-Within identified paradigms, a \term{wrong-value} error changes the grammatical
-choice. A \term{value-preserving-realization} error retains that choice but uses
-an excluded exponent or surface form. The \term{operator-profile hypothesis}
-states that, for paradigms in a specified community and activity range that
-independently support both error types, a stronger frozen profile predicts a
-larger held-out difference in update-directed repair between them. The
-within-paradigm contrast checks the manipulation; the cross-paradigm interaction
-is the explanatory claim.
-
-The bridge is a conditional claim about sufficient repair. When trouble is
-detected and participants pursue mutual understanding, a response can target
-the lowest locus whose correction settles the public record. A wrong value in a
-high-profile paradigm can leave move type, commitment, reference continuity, or
-response relevance unsettled; correcting surface form alone may be
-insufficient. When the intended value is independently recoverable and only its
-realization is excluded, supplying the licensed form can settle the trouble
-without renegotiating the update. This doesn't make overt repair inevitable.
-Accommodation, high recoverability, non-response, mishearing, and person-directed
-sanction are counterpressures and remain in the outcome space.
-
-The information-theoretic intuition concerns a code's organization, not merely
-token surprisal. Recurrent constrained choices create redundancy: a hearer can
-recover the intended value precisely because the licensed competitors make the
-deviation easy to detect. Recoverability doesn't show that the
-violated relation carries no grammatical information. Public-update profiling
-asks a different counterfactual question: how much would choosing another
-licensed value change the move, commitment, continuity, or relevant response
-space? Entropy or divergence can summarize that change only after linguistic
-analysis supplies the alternatives \citep{shannon1948,coverthomas2006}.
-
-I retain \term{operator stratum} only as shorthand for the higher-profile region
-of this ordering. It introduces no threshold or second membership category.
-Repair and comprehension are outcomes, never profile criteria. A high-profile
-paradigm may be accommodated, ignored, sanctioned, or corrected only in form;
-those responses count against the hypothesis rather than licensing a post-hoc
-redescription.
-
-Opportunity remains distinct. It affects how concentrated the evidence for a
-licensed realization becomes, not whether a contrast is a paradigm or how
-strongly its values configure public update. Likewise, historical recruitment
-is a separate question. Grammaticalization research documents the recruitment
-of material into grammatical and discourse functions, often through
-paradigmatic reorganization
-\citep{hoppertraugott2003,lehmann2015grammaticalization,waltereit2011discourse,degandeversvermeul2015,jakobsenheltoft2012paradigm}.
-It doesn't establish that public-update work preferentially creates paradigms,
-and diachronic conjecture can't rescue a failed synchronic prediction.
-
-Expressive substance is also independent. Morphology, word order, particles,
-tone, intonation, and nonmanual marking can all realize values in identified
-paradigms. Phonemic systems can be tightly organized while serving primarily to
-distinguish expressions; open interjectional resources can strongly configure
-uptake without forming a bounded paradigm \citep{ameka1992}. Paradigm structure,
-public-update profile, and expressive substance answer different questions.
-
-\section{Worked comparisons and boundary anchors}
-\label{sec:comparisons}
-
-The architecture needs examples that keep value and realization apart. It also
-needs boundary anchors that expose rather than stipulate the proposed category
-edge. Table~\ref{tab:boundary-cases} records candidate analyses and attributions;
-none is an observed result.
-
-\begin{table}[ht]
-\centering
-\scriptsize
-\setlength{\tabcolsep}{3pt}
-\begin{tabular}{@{}p{0.19\linewidth}p{0.25\linewidth}p{0.25\linewidth}p{0.23\linewidth}@{}}
-\toprule
-\textbf{Case} & \textbf{Failed dependency} & \textbf{Profile expectation} & \textbf{Candidate attribution} \\
-\midrule
-Wrong paradigm value & value selection in a recurring domain & strong where strict paradigm criteria hold & grammar/value; possibly update \\
-*\olang{le hiver} & conditioned article realization & construction-embedded but phonology- and medium-sensitive & grammatical form, phonology, or orthography \\
-*\mention{goed} & past realization for one lexeme & inflectional choice plus item-specific licensing & grammatical form or word form \\
-*\mention{depend of} $+$ \textsc{obj} & item-restricted link in a complement chain & grammatical at higher links, collocational at narrowest link & construction or wording \\
-Register or accent mismatch & situational fit of a licensed indexical value & form--value coupling without necessary assembly failure & style, persona, or social norm \\
-Misspelling & graphic realization of a linguistic expression & representation relation normally preserves linguistic assembly & orthography \\
-\bottomrule
-\end{tabular}
-\caption{Boundary anchors for selective attribution. Profile expectations have to
-be fixed independently; the final column is a prediction, not a classification
-criterion.}
-\label{tab:boundary-cases}
-\end{table}
-
-The French example remains the motivating realization case, but it isn't a
-concord case and supplies no wrong-value counterpart. *\mention{Goed} is
-parallel at a coarser, lexeme-specific grain: the past value survives while the
-established exponent \mention{went} displaces the productive default.
-*\mention{Depend of} is layered. Complementation selects a function; that
-function constrains a phrasal category; the PP option introduces an
-item-restricted preposition choice. The higher links have strong schematic and
-assembly profiles, whereas the final \mention{depend}--\mention{on} restriction
-approaches lexical collocation. Mixed construction-versus-wording attribution
-would support the layered analysis rather than count as noise.
-Sharp correction of any of the three would by itself establish neither the
-source profile nor a high operator profile.
-
-\subsection{Amele finite tense}
-
-Amele supplies the strongest source-grounded template presently available. Its
-finite verb paradigm distinguishes present, today past, and yesterday past; the
-grammar also states temporal co-occurrence restrictions and gives the
-morphophonological derivations of the forms
-\citep[226--232, 380--385]{roberts1987}. Holding the verb `come' and first-person
-singular subject constant yields the comparison in
-Table~\ref{tab:amele-tense}.
+The word \enquote{grammaticality} is used for objects at several levels. A formal
+theory licenses a representation; a community sustains a linguistic norm; a token
+conforms or fails to conform; a speaker issues a judgment; and an experimenter
+records a rating. Treating these as measurements of one latent yes--no property
+hides the dependence relations that need explanation. Table~\ref{tab:levels}
+separates the principal bearers.
 
 \begin{table}[ht]
 \centering
 \small
-\begin{tabular}{@{}p{0.22\linewidth}p{0.30\linewidth}p{0.38\linewidth}@{}}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}p{0.18\linewidth}p{0.27\linewidth}p{0.47\linewidth}@{}}
 \toprule
-\textbf{Condition} & \textbf{Amele form} & \textbf{Analysis} \\
+\textbf{Level} & \textbf{Bearer} & \textbf{Question} \\
 \midrule
-Licensed target & \olang{Ija hu-g-a} & `I came today/have come' \\
-Wrong value & \olang{Ija hu-g-an} & licensed yesterday-past form in an unambiguously earlier-today context \\
-Preserved value, wrong realization & *\olang{Ija ho-ig-a} & today-past and 1sg material retained, but obligatory vowel coalescence fails \\
+Norm architecture & a recurrent form--value relation in a scoped repertoire & what makes the relation grammatical rather than lexical, phonological, graphic, stylistic, or social? \\
+Token status & a token relative to that relation & which relation, if any, does the token fail to instantiate? \\
+Semantic or pragmatic consequence & the interpreted utterance or communicative act & what happens to composition, reference, force, commitment, continuity, or response possibilities? \\
+Public response & a judgment, correction, repair, accommodation, or sanction & what did this person or institution target? What caused that response? \\
+Epistemic access & corpora, elicitation, substitutions, judgments, repairs, and models & what warrants the analyst's claims about the other levels? \\
 \bottomrule
 \end{tabular}
-\caption{A proposed Amele finite-tense comparison. The final form is derived
-from the published morphophonology and requires speaker validation.}
-\label{tab:amele-tense}
+\caption{Levels that a theory of selective grammaticality has to keep distinct.}
+\label{tab:levels}
 \end{table}
 
-The value error substitutes a licensed competitor from the same tense
-paradigm. The realization error retains the today-past suffix \olang{-a} and
-first-person singular material but fails the derivation
-\olang{/ho+ig+a/ $\rightarrow$ [huga]}. Roberts independently stars a comparable
-nonapplication or misordering outcome elsewhere in the finite paradigm, which
-supports the analysis without supplying a judgment for this exact item
-\citep[380--385]{roberts1987}. The result is a theoretically clean
-template, not a ready-made experimental result. A future use has to validate the
-constructed form, equate perceptual distance, and avoid the flexible nighttime
-boundary between today and yesterday past.
+The levels are connected, but they don't form a single causal chain. At the time
+of an utterance, a norm constrains token status, and token status can affect
+interpretation and response. Processing load, mishearing, task demands, schooling,
+stigma, and institutional authority can also affect response without altering the
+token's grammatical status. Over longer periods, production, accommodation,
+correction, and sanction can help maintain or change the repertoire. That
+diachronic feedback doesn't make a particular response the truth-maker of the
+norm to which it reacts.
 
-Nothing in the grammatical label assigns the tense paradigm a high profile.
-Study B Stage~1b has to determine how strongly its values alter temporal anchoring,
-commitment, or response relevance. The worked case establishes that value and
-realization can be manipulated separately.
+\begin{figure}[ht]
+\centering
+\scriptsize
+\begin{tabular}{c@{\quad}c@{\quad}c@{\quad}c@{\quad}c@{\quad}c@{\quad}c}
+Norm architecture & $\longrightarrow$ & Token status & $\longrightarrow$ &
+Consequence & $\longrightarrow$ & Response \\
+&&&&&& $\uparrow$ \\
+&&&&&& {\scriptsize processing, task, schooling, stigma, authority}
+\end{tabular}
+\vspace{0.6em}
 
-\subsection{Amele switch-reference}
+{\footnotesize Corpora, elicitation, formal analyses, judgments, and repairs provide
+fallible evidence about different links.}
+\caption{The main explanatory dependencies. Recurrent practice and response can
+feed back into norm architecture over historical time, but token-level response is
+not constitutive of status.}
+\label{fig:levels}
+\end{figure}
 
-The sequential switch-reference paradigm provides a second template. Amele
-distinguishes same-subject (SS) and different-subject (DS) linkage on a medial
-verb, with separate person--number sets and vowel harmony in the DS marker
-\citep[239--240, 298--300, 371]{roberts1987}. For a second-person subject
-followed by a third-person subject, the comparison is:
+Each level also calls for a different kind of explanation. A \term{constitutive
+explanation} says what makes a relation a grammatical norm and what makes a token
+defective relative to it. A \term{functional explanation} says what work the
+relation does in assembling expressions or organizing discourse. A semantic or
+pragmatic explanation says why an attempted combination is coherent, anomalous,
+repairable, or consequential.
+
+An attributional explanation identifies which relation a public response treats
+as failed. A causal explanation says why a particular person reacted. An epistemic
+justification says why an analyst should believe any of these claims. Predictive
+success can strengthen that justification, but a
+black-box classifier of the word \enquote{grammar} wouldn't thereby supply the
+constitutive explanation.
+
+The source-ambiguity literature establishes the need for this separation at the
+response level. \textcite{hofmeisteretal2013source} show that a low acceptability
+rating doesn't identify whether grammar, processing, interpretation, or
+contextualization caused it. \textcite{leivadawestergaard2020} likewise document
+dissociations between acceptability and grammaticality. These are constraints on
+the use of judgments as evidence. They don't by themselves determine which
+worldly relation a respondent is trying to classify.
+
+Nor does a formal derivation settle the matter. A theory can undergenerate a
+community-licensed pattern or generate one that the target repertoire doesn't
+sustain. Conversely, a descriptive grammar may record a robust relation without
+explaining why it belongs to grammar rather than a neighbouring domain.
+\textcite[12--20]{poulsen2012grammaticality} treats corpus distributions,
+processing measures, and judgments as indirect evidence for relatively stable
+conventional knowledge. The linguistic object, its representation, and the
+evidence for it remain separate even when a good theory brings them into alignment.
+
+
+\section{What makes a norm grammatical?}
+\label{sec:norms}
+
+The proposal starts from a broad semiotic inventory but individuates norms by
+their roles. \textcite{goldberg1995constructions} and \textcite{sag2012sign} treat
+words, idioms, partly filled patterns, and abstract constructions as conventional
+form--meaning pairings. This ontology prevents an easy grammar--lexicon split:
+both a word and a schematic construction pair expression with content. It also
+makes the present question unavoidable. What distinguishes the relations that
+constitute grammatical assembly from other conventions in the same inventory?
+
+\subsection{Practice-dependent, response-independent standards}
+
+A linguistic norm is more than a frequent event type. It supplies a standard
+against which novel or disputed tokens can conform or fail to conform. Low-token-
+frequency constructions can be securely licensed, while frequent innovations can
+remain restricted or unstable. A norm needn't be explicitly represented as a
+rule, prescribed by an institution, morally obligatory, or identically stored by
+every speaker. It's socially sustained when production and interpretation
+converge on a relation, participants rely on it in forming and understanding new
+tokens, and counterfactual substitutions or omissions make systematic differences
+within a scoped repertoire.
+
+\textcite{coseriu1952} supplies a precedent. His distinction among
+system, norm, and speech separates functional possibilities, customary social
+realization, and individual production. Later presentations also distinguish
+congruence, idiomatic correctness, and situational appropriateness
+\citep{pardollibrer2021,sotovergara2022}. This account inherits the idea
+that correctness relative to a historical language and appropriateness in a
+situation are different evaluative relations. It adds a question that Coseriu's
+distinctions don't settle on their own: which role within the linguistic
+repertoire makes the relevant norm grammatical?
+
+The paper explicates public repertoire status for conventional fault attribution
+and descriptive grammar. Other legitimate targets for \enquote{grammaticality}
+remain. Psycholinguistic accounts can model individual
+competence and innovations not yet sustained more widely. A formal grammar can
+model an idiolect or a public variety. In each case, derivability establishes
+status relative to that model and target; it doesn't by itself establish public
+licensing. Conversely, speakers can
+reliably follow a public relation without consciously representing, correcting,
+or institutionally enforcing it. Individual, model-relative, and public claims
+can inform one another, but none is a proxy for the others
+\citep{poulsen2012grammaticality,leivadawestergaard2020}.
+
+The answer is functional. A grammatical norm relates already individuated signs,
+exponents, or values within recurrent constructions. It can govern the filling of
+a constructional position, the selection or combination of relational values, the
+satisfaction of an obligatory contrast, or the realization of a selected value.
+These standards are internal to whether the material instantiates a token of that
+construction.
+
+Other norms can instead establish the identity of a sign, constrain
+its possible sound shape, map it into writing, or govern the deployment of an
+already licensed expression. Words and phrases can both host the relevant
+relations. The functional contrast separates establishing or shaping a linguistic
+sign from relating signs, exponents, or values in a recurrent constructional token.
+
+The functional distinction has to be justified independently of the labels it's
+expected to predict. The justification has four parts. First, the motivating
+contrasts are relational: the same degree of interpretability and the same
+expressive substance can receive different classifications depending on what the
+departure disrupts. Second, a constructional inventory already contains lexical
+signs, phonological forms, and social-indexical resources. Being conventional or
+meaningful doesn't by itself establish grammatical status. A further
+role is needed for relations that organize those resources into recurrent
+expression types, within or above the word.
+
+Third, that role supports a counterfactual test. Hold lexical identities, the
+intended constructional values, and the situation of use fixed. If changing the
+candidate relation changes whether the material instantiates the recurrent
+construction, the relation contributes to grammatical assembly. If the change
+affects only possible sound shape, graphic representation, or situational fit, a
+neighbouring norm is at issue. Finally, recurrent reliance on the relation within
+a scoped practice makes this constructional standard a norm rather than a one-off
+regularity.
+
+I offer this as a functional explication of grammatical status, not a deduction
+from social recurrence alone. The practice premise supplies normativity: it explains
+how the relation can set a standard for tokens without being identical to any
+one judgment. The constructional premise supplies grammar-specificity: it locates
+the standard in relations among signs, exponents, or values rather than in sign
+identity, sound shape, graphic representation, or situational deployment. Neither
+premise suffices by itself. Their conjunction earns the name \enquote{grammatical}
+only if it covers clear grammatical cases and locates the disputed cases without
+using the labels to be explained.
+
+The test need not force every case into one box. Lexical valence can partly
+determine whether an argument construction is licensed, and item-specific
+allomorphy can realize a grammatical value. Such cases contain more than one
+relation. What the test forbids is inferring the relation from a respondent's
+preferred metalinguistic word. Its independent inputs are sign identity,
+conventional value, constructional role, and scope.
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}p{0.19\linewidth}p{0.36\linewidth}p{0.36\linewidth}@{}}
+\toprule
+\textbf{Norm type} & \textbf{Governing role} & \textbf{Characteristic fault} \\
+\midrule
+Grammatical assembly & signs, exponents, or values are related within recurrent constructions & a constructional relation, selected value, obligatory contrast, or licensed realization fails \\
+Lexical sign identity and content & a conventional sign has an identity and contributes lexical content & a sign is unknown, malformed as a lexeme, or poorly selected for the intended content \\
+Phonological form formation & sound, syllable, prosodic, or possible word-form shape & expression shape fails without a constructional value relation failing \\
+Graphic representation & an independently identified linguistic expression is represented in writing & spelling or graphic convention fails while linguistic assembly remains intact \\
+Usage and social deployment & a licensed expression, repertoire, persona, or act fits an occasion & assembly succeeds but situational or social fit fails \\
+Institutional metalinguistic classification & a school, editor, or prestige institution applies a correctness category & the label can accurately or inaccurately target any preceding relation \\
+\bottomrule
+\end{tabular}
+\caption{Functional norm types. The rows can intersect in one token rather than
+partitioning expressive substances.}
+\label{tab:norm-types}
+\end{table}
+
+Table~\ref{tab:norm-types} excludes pure phonotactics from grammar in the target
+sense. A pure phonotactic norm constrains the well-formedness of a sound shape
+independently of any contrast among constructional values. A phonological relation
+enters grammatical assembly only when conditioned by, or when realizing, a
+grammatical choice. Tone can realize tense or clause type; a harmony pattern can
+form part of the realization of a switch-reference value; and allomorphy can
+realize a determiner or inflectional value. What matters is the role of the
+relation, not whether its exponent is segmental, tonal, gestural, or absent.
+
+The distinction also permits mixed cases. An item-specific complement restriction
+can participate in a grammatical valence construction and in lexical knowledge
+about a particular head. An honorific system can organize a recurrent
+constructional choice while also indexing persona and relationship. A spelling
+contrast can become grammatically relevant if a writing system conventionally
+uses it to realize a grammatical value. These intersections don't show that all
+linguistic norms are grammatical. They show that grammatical status belongs to a
+relation in a role and scope, not to a substance or word considered in isolation.
+
+\subsection{Individuating the assembly relation}
+\label{sec:individuation}
+
+The phrase \enquote{already individuated} doesn't mean already classified as
+lexical or grammatical. A candidate sign is supported when a form--value
+contribution recurs across combinations; a bound exponent can instead be identified
+by recurrent opposition to other realizations in the same conditioned position. A
+candidate construction is supported when a distribution and interpretation recur
+under substitution, omission, or embedding. These criteria identify possible relata and
+sites without using judgments about which fault domain they belong to.
+
+A relational analysis then has to predict more than the stored identity of a
+larger sign. Its participants recur or contrast independently, and varying one of
+them reveals a dependency over an independently motivated position, value, or
+class. The proposed decomposition should also predict behaviour in further
+substitutions, derived forms, or constructional environments that wasn't used to
+posit it. Structural separability, productivity, and preservation of contribution
+across frames can all supply such evidence. None is necessary on its own: a
+construction can be item-restricted or contain fixed material.
+
+A whole-sign analysis is favoured when the supposed parts don't preserve their
+contributions outside the expression and the proposed internal relation predicts
+nothing beyond an item list. The relevant grain is comparative. Competing
+whole-sign and relational analyses are evaluated by how much independently observed
+distribution and interpretation they capture without adding a dependency solely
+for the disputed case. If the evidence supports both analyses equally, the grain
+is epistemically indeterminate. If speakers or situations sustain different
+organizations, the repertoire itself is unsettled at the declared scope. Neither
+result licenses an automatic verdict of \enquote{partly grammatical}.
+
+Mixed analyses face a stricter requirement. Each recovered relation has to be
+attested outside the response being explained and has to make a distinct
+counterfactual prediction. Inflection inside an idiom, for example, can be
+separated from the idiom's lexical identity only where the inflectional relation
+recurs elsewhere and predicts changes within the idiom. Positing one grammatical
+and one lexical layer merely because respondents divide their labels would add no
+independent structure and is forbidden by the account.
+
+English complementation and collocation illustrate the procedure. In
+\mention{depend on an answer}, the verb, complement role, and complement fillers
+recur independently; related forms such as
+\mention{dependence on} and \mention{dependent on} preserve the head-specific
+preposition. This supports a licensing chain from argument role, through phrasal
+category, to an item-restricted realization. The higher links project across
+complement fillers and constructions, while the final \mention{on} restriction
+remains close to lexical knowledge.
+
+In \mention{heavy rain}, both words and the adjective--noun construction are also
+independently supported. Replacing \mention{heavy} with \mention{strong}
+can leave modification and ordinary composition intact while producing a less
+conventional lexical combination. On that analysis, the construction is licensed
+and the collocation is poor.
+
+The comparison can reverse. If \mention{depend on}
+behaves only as an unanalyzable stored expression and projects to no further
+frames, the constructional chain loses support. If \mention{heavy} develops into
+a bleached intensity exponent over an independently supported class of nouns, its
+selection acquires an assembly role. The analysis is fixed from these distributional
+and interpretive facts before corrections or grammar labels are examined.
+
+\subsection{Paradigms, constructional chains, and discursive status}
+
+Strict paradigms provide a strong case of grammatical assembly.
+\textcite{norgardsorensenheltoft2015} characterize a grammatical paradigm through
+a recurring domain, a language-specific semantic frame, a bounded set of
+alternatives, obligatory choice in the domain, and marked--unmarked organization.
+The architecture extends beyond inflection to word order and constructional
+syntax. \textcite{hansenheltoft2011gds} likewise allow prototype and radial
+organization within their account of Danish grammar. These analyses show how a
+repertoire can organize a set of values and their realizations without reducing
+grammar to segmental morphology.
+
+Paradigmhood doesn't define all grammar on this account. Constructional
+dependencies can be productive without a closed set of values, and item-specific
+links can form the lowest part of a more schematic licensing chain. The
+assembly-norm account places these relations by asking what they contribute to
+the formation of constructional tokens. Bounded alternatives, obligatoriness,
+and markedness are powerful ways of organizing that role, not universal
+conditions on it.
+
+\textcite{boyeharder2012} offer the principal constitutive alternative. They make
+conventional ancillarity and discursive secondary status central to grammatical
+status, with focusability and addressability as diagnostics; closed paradigms and
+obligatoriness are incidental. Their proposal and this account agree that
+surface substance and simple frequency don't define grammar.
+
+They disagree about
+the identity condition. On the assembly account, an expression can be
+discursively prominent yet grammatical if it fills a recurrent constructional
+role, and an ancillary expression can remain non-grammatical when it doesn't
+participate in such assembly. Discursive secondary status may prove a better
+general account. The dispute has to be decided by the range and organization of
+cases each analysis explains, not by entering the two labels into a regression and
+calling the higher coefficient constitutive.
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}p{0.20\linewidth}p{0.31\linewidth}p{0.41\linewidth}@{}}
+\toprule
+\textbf{Account} & \textbf{Constitutive centre} & \textbf{Pressure point} \\
+\midrule
+Strict paradigm architecture & bounded alternatives in a recurring domain and semantic frame, obligatory selection, and markedness & construction-sized and item-restricted dependencies that lack a strict paradigm \\
+Boye--Harder & conventional ancillarity and discursive secondary status & grammatically organized expressions that remain addressable or discourse-prominent \\
+Assembly norm & socially sustained form--value organization internal to recurrent constructional tokens & lexical valence, morphophonology, and social-indexical constructions that occupy mixed roles \\
+\bottomrule
+\end{tabular}
+\caption{Three constitutive proposals. Their diagnostics can supply evidence, but
+the dispute concerns what grammatical status consists in.}
+\label{tab:constitutive-accounts}
+\end{table}
+
+\subsection{Gradience and epistemic profiles}
+
+Grammatical status can be layered without making evidence, reality, and judgment
+equally fuzzy. A relation may participate only partly in a constructional chain,
+be item-restricted, compete with a more open lexical choice, or be conventional in
+one activity and unstable in another. This variation is world-side gradience in the role and
+scope of the norm. Evidence for the relation can independently be strong or weak.
+A respondent can independently issue a categorical or hesitant label. A sharp
+schoolroom correction doesn't prove a sharply grammatical relation, just as
+uncertain corpus evidence doesn't prove a fuzzy norm.
+
+An assembly-role profile is the analyst's estimate of the first of these objects.
+It records evidence about three questions: whether form and value are coupled at a
+constructional site, how alternatives and selection are organized, and how the
+relation is licensed across the declared repertoire. Production, interpretation,
+substitution, omission, productivity, and opportunity-normalized distribution
+bear on those questions. A descriptive grammar contributes through the evidence
+it reports, not by lending the analysis its prior category label.
+
+The profile keeps grounds, indicators, and outcomes separate. Assembly role is
+the proposed constitutive basis;
+choice architecture organizes the relation; community licensing fixes its social
+existence and scope; distributional patterns provide evidence and can help
+stabilize the practice; formal analyses represent it; and judgments or repairs are
+fallible downstream evidence. This ordering is what permits the paper to say that
+a respondent can be wrong rather than merely outvoted.
+
+
+\section{How tokens fail linguistic norms}
+\label{sec:failure}
+
+Once a candidate norm and its scope have been identified, token application asks
+which relation the token fails. Several questions that are often compressed into
+one asterisk should be distinguished.
+
+The rows don't form a sequence through which every token passes. Coverage,
+compatibility, saturation, value selection, realization, and licensing locate
+different possible relations between a token and a scoped repertoire. They also
+separate two senses of \enquote{form error}. A string can violate pure
+phonotactics, in which case its expression shape is the target. Or the repertoire
+can exclude a phonological form as the realization of a grammatical value, in
+which case a grammatical assembly relation is at issue.
+
+Value errors require particular care. Three cases have to remain separate.
+
+\begin{enumerate}
+  \item An \term{internal value incompatibility} arises when linguistic material
+    in the token supplies values that conflict: agreement features disagree, a
+    temporal construction conflicts with an overt temporal specification, or a
+    switch-reference marker conflicts with the represented subjects of its clause
+    chain. This can be a grammatical failure.
+  \item In \term{external value misapplication}, a licensed grammatical value is
+    successfully encoded but is false, misleading, or inappropriate for the
+    described situation. A yesterday-past form used for an event that actually
+    happened today need not be ungrammatical.
+  \item In a \term{message-selection error}, a speaker chooses a grammatical
+    competitor that doesn't express the intended message. The production is
+    mistaken, but the resulting expression can remain grammatical.
+\end{enumerate}
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}p{0.17\linewidth}p{0.31\linewidth}p{0.28\linewidth}p{0.16\linewidth}@{}}
+\toprule
+\textbf{Question} & \textbf{Possible failure} & \textbf{Illustration} & \textbf{Primary locus} \\
+\midrule
+Conditioning & the wrong repertoire, activity, medium, or period has been assumed & formal versus informal usage & scope \\
+Coverage & no viable constructional assembly analyzes the supplied material & *\mention{Can the have running?} & construction \\
+Compatibility & linguistically supplied instructions conflict & *\mention{These books is useful} & internal value relation \\
+Saturation & an obligatory contrast or constructional role remains unsupplied & omitted obligatory marker or argument & assembly \\
+Value selection & a constructional competitor conflicts with another linguistically supplied value & same-subject marker with distinct represented subjects & internal value relation \\
+Realization & the intended constructional value is preserved but its exponent or surface form is excluded & *\olang{le hiver}; *\mention{goed} & grammatical form \\
+Constructional licensing & a transparent combination is absent from the scoped repertoire & *\mention{depend of} $+$ \textsc{obj} & valence or collocation \\
+Non-assembly target & linguistic assembly succeeds but content, spelling, persona, situation, or conduct is at issue & register mismatch; misspelling & neighbouring norm \\
+\bottomrule
+\end{tabular}
+\caption{Token-level questions. A single response can target more than one row,
+and the cause of that response remains a separate question.}
+\label{tab:token-failures}
+\end{table}
+
+Of these three value cases, only internal incompatibility establishes a
+grammatical fault by itself. The distinction
+follows from the constitutive account: grammaticality concerns conformity to the
+relations that assemble the linguistic token, not direct correspondence between
+that token and the world or the speaker's private intention. Semantic and pragmatic
+theories are needed to explain those further relations.
+
+Selecting a poor but licensed word supplies the lexical analogue. The sign keeps
+its conventional identity and meaning, and the surrounding construction can be
+well formed; the selected content is simply inapt. A register mismatch can
+likewise preserve the proposition and the form's conventional social-indexical
+value while deploying that value in an unsuitable situation. These choices may be
+serious, accountable, or sharply sanctioned. Their social importance doesn't
+move the failed relation into grammatical assembly.
+
+
+\section{What semantic and pragmatic explanations explain}
+\label{sec:semantics}
+
+Semantic and pragmatic theory enter the architecture twice. First, the content of
+a grammatical relation can be semantic, relational, or discourse-organizing.
+Tense, definiteness, evidential source, clause type, reference continuity, and
+commitment can all be values organized by recurrent constructional choices.
+Second, semantic or pragmatic theory can explain what happens when an attempted
+combination conflicts, remains underspecified, invites coercion, or alters a
+conversation. The first role helps specify the norm; the second explains a
+consequence of conformity or failure.
+
+\subsection{Semantic repairability}
+
+\textcite[329--331, 344--348]{abrusan2019} asks why failed interpretation can
+produce semantic anomaly, pragmatic infelicity, or ungrammaticality.
+\textcite{abrusanetal2021shift} develop a substantive answer in terms of type
+level, locality, and semantic shift. Local conflicts involving lower-level,
+context-shiftable types can leave a recoverable predication, whereas conflicts
+involving constitutive high-level types can be nonlocal and resist
+meaning-preserving repair. Because the type architecture and shift possibilities
+are independently motivated, the account explains rather than merely relabels an
+important classification boundary.
+
+Its scope is also informative. Semantic repairability can explain cases in which
+composition or interpretation supplies the trouble. It doesn't by itself
+determine whether French article non-elision, a suppletive past form, a
+phonotactic violation, or a spelling error belongs to grammar. Those cases can be
+transparent precisely because semantic composition has largely succeeded. The
+assembly account and the repairability account overlap where
+grammatical norms organize semantic composition, but neither reduces to the
+other.
+
+In its native domain, Abrus\'an's analysis can defeat an assembly-based
+explanation of the response or classification if type level and shiftability
+already account for it. The constitutive ontology is challenged only if the
+same resources also explained what makes the failed relation grammatical.
+
+This division avoids making semantics external to grammar. A tense construction
+is grammatical partly because it conventionally assembles temporal value; a
+semantic theory explains that value. If two linguistically encoded temporal
+instructions conflict, semantic theory may also explain the anomaly. What it does
+not establish without a further premise is whether the convention that assembled
+those instructions belongs to grammar, lexical semantics, or a pragmatic practice.
+
+\subsection{Discourse consequences without a unitary public state}
+
+Some grammatical choices conventionally configure discourse as well as
+propositional content. \textcite{heltoft1981intersubjectivity} separates
+grammaticality from comprehensibility in his treatment of epistemic verbs, and
+\textcite{heltoft2005modality} distinguishes mood's illocutionary role from the
+interlocutionary role of dialogic particles. \textcite{hansenheltoft2011gds} and
+\textcite{jakobsenheltoft2012paradigm} extend the connection between paradigmatic
+organization and discourse function.
+Interactional research likewise treats grammar as a resource for sequential action
+and repair \citep{foxetal1996repair,muntiglventola2010,dingemanseblythedirksmeyer2014}.
+These traditions show that grammatical organization can have public
+consequences. They don't make those consequences criteria for grammatical
+membership.
+
+Nor should the consequences be represented as one scalar public record.
+\textcite{bary2025speechacts} argues that common belief, discourse commitment,
+and real performative change have to be separated. \textcite{simons2025availability}
+argues more radically that information appropriately used in interpretation need
+not be common ground and that a single body of information shouldn't serve as
+both the background to and target of speech acts. The account is
+compatible with either view. A \term{discourse-consequence profile} records a
+vector: effects on move type, commitment holder or source, discourse-participant
+or referent continuity, and response relevance. It assumes no unitary public state
+and no universal weights among the components.
+
+This profile describes a function of an independently identified grammatical
+choice. It isn't part of the definition of grammar. Clause type,
+evidential anchoring, and switch-reference are plausible high-consequence cases;
+ordinary allomorphy isn't. Interjections can strongly reshape uptake without
+forming grammatical paradigms \citep{ameka1992}. Conversely, a grammatical
+agreement marker can be locally redundant even if its paradigm contributes to
+reference tracking across other occasions of use.
+
+Where a paradigm independently supports both an internal value incompatibility
+and a value-preserving realization failure,
+the former should more often prompt clarification of force, commitment, role, or
+reference, while the latter should more often prompt form correction that preserves
+the intended discourse effect. Across paradigms, that difference should increase
+with the independently estimated discourse-consequence profile. The resulting
+hypothesis concerns repair locus downstream of grammatical status.
+
+The information-theoretic intuition also belongs at the consequence level.
+Constrained alternatives create redundancy: a hearer may recover an intended
+value because the licensed competitors make the deviation detectable. Entropy or
+divergence can quantify how much choosing another value would alter a response
+space only after linguistic analysis supplies the alternatives
+\citep{shannon1948,coverthomas2006}. Information theory doesn't discover which
+alternatives form a grammatical paradigm, whether a token fails a form--value
+relation, or why a community treats that failure as accountable. The codebook is
+an input to the calculation, not its output.
+
+
+\section{Boundary cases as tests of the ontology}
+\label{sec:boundaries}
+
+The boundary cases test whether the functional roles in Table~\ref{tab:norm-types}
+can be assigned from the organization of the relation before a respondent's label
+is known. Table~\ref{tab:boundary-cases} states the relevant contrasts.
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}p{0.16\linewidth}p{0.28\linewidth}p{0.25\linewidth}p{0.23\linewidth}@{}}
+\toprule
+\textbf{Case} & \textbf{Candidate relation} & \textbf{Neighboring analysis} & \textbf{What would decide} \\
+\midrule
+*\olang{le hiver} & conditioned realization of the definite-article construction & general phonological form formation or graphic convention & construction specificity, medium, lexical grouping, and elision distribution \\
+*\mention{goed} & realization of past value in an inflectional choice & lexeme-specific word form & productivity of the tense construction and item-specific pre-emption \\
+*\mention{depend of} & head-specific link in a complement and valence chain & lexical collocation & argument role, phrasal category, head restriction, and substitution pattern \\
+Register or honorific mismatch & grammaticalized form--social-value choice or licensed social-indexical sign & situational deployment of an already licensed value & recurrence, constructional domain, alternative set, and whether assembly succeeds \\
+Misspelling & graphic representation of a linguistic expression & grammatical realization in a writing-specific construction & whether the graphic contrast represents a sign or realizes a constructional value \\
+Selectional anomaly & constructional compatibility relation & lexical-semantic or world-knowledge conflict & conventional locality, productivity, type level, and semantic repairability \\
+\bottomrule
+\end{tabular}
+\caption{Adversarial boundary cases. The final column identifies evidence to be
+fixed independently of grammar labels and repairs.}
+\label{tab:boundary-cases}
+\end{table}
+
+\subsection{French article realization and pure phonotactics}
+
+The French example tests the distinction between form formation and grammatical
+realization. The intended definite, masculine, singular value is recoverable in
+*\olang{le hiver}. On the candidate analysis, the failure lies in selecting an
+unelided article realization in a determiner construction before an \term{h
+muet} noun. The analysis is neutral between deriving \olang{l'} through vowel
+deletion and treating it as an allomorph; both make the alternation part of article
+realization rather than a definiteness or concord error
+\citep{boersma2007,simonenkocarlier2020}.
+
+The grammatical conclusion doesn't follow merely from adjacent vowels. A general
+phonotactic ban would constrain expression shape without organizing a
+constructional value and would be phonological on this account.
+French elision is a candidate grammatical-form relation because its distribution
+is tied to a restricted class of function words and to the realization of their
+constructional values.
+
+Speech, writing, deliberate pausing, learner production,
+and the contrast between \term{h muet} and \term{h aspir\'e} can make
+phonological, orthographic, lexical, or grammatical relations differently salient.
+If independent evidence shows that respondents are reacting only to a general
+phonological constraint, the grammatical analysis loses; the surface string does
+not decide the issue.
+
+\subsection{Inflection, complementation, and lexical knowledge}
+
+*\mention{Goed} preserves the past value while using a productive exponent where
+the scoped repertoire supplies the lexeme-specific realization \mention{went}.
+Its claim to grammatical status comes from the role of the relation in realizing
+tense, not from the fact that the output is a word. The item-specific restriction
+also makes the case partly lexical. A theory that calls the error purely
+grammatical or purely lexical without representing those two relations loses the
+point of the example.
+
+*\mention{Depend of} applies the licensing chain developed in
+Section~\ref{sec:individuation}. A complement construction introduces an argument
+relation; that relation constrains a phrasal category; and the particular head
+restricts the preposition. The higher links are schematic assembly relations,
+while the final \mention{depend}--\mention{on} restriction approaches lexical
+collocation. Mixed attribution is informative only when compared with that
+independently specified chain.
+
+The lexicon more generally contains conventional form--meaning pairings. Choosing an
+ill-fitting licensed word normally preserves the word's identity and the larger
+construction. Selectional restrictions and valence frames become harder because
+lexical content can constrain how a construction is assembled. Abrus\'an's type
+and shift diagnostics help determine whether a semantic conflict is doing the
+work; constructional recurrence and substitution show whether a conventional
+assembly relation is also present.
+
+\subsection{Deployment, representation, and grammaticalization}
+
+Register, accent, and Japanese polite/plain style can be highly systematic and
+socially consequential \citep{agha2007,eckert2012,cook2008speechstyle,ide2005}.
+A mismatch may instantiate the form's conventional social value
+perfectly and fail only because that value is unsuitable for the occasion. In that
+case, assembly has succeeded and deployment is the fault. An honorific or style
+contrast can move toward grammatical assembly when a repertoire organizes it as a
+recurrent constructional choice with a domain, alternatives, and conditioned
+selection. The account doesn't exclude pragmatic or social content from grammar in advance.
+
+Orthography normally maps graphic forms to linguistic expressions. A misspelling
+can leave the relevant linguistic assembly intact. The boundary shifts
+where a writing system uses a graphic contrast to realize a constructional value.
+The medium doesn't determine the norm type; the relation's functional role
+does.
+
+These possibilities are also diachronic. Grammaticalization can recruit lexical or
+pragmatic material into constructional and paradigmatic organization
+\citep{hoppertraugott2003,lehmann2015grammaticalization,waltereit2011discourse,degandeversvermeul2015,jakobsenheltoft2012paradigm}.
+Historical origin doesn't fix present status. The relevant question is which role
+the relation occupies in the scoped repertoire now.
+
+\subsection{A discourse-consequence application}
+
+Amele switch-reference illustrates the narrower distinction between an internal
+value conflict and a value-preserving realization failure. \textcite[239--240,
+298--300, 371]{roberts1987} describes a sequential paradigm contrasting
+same-subject (SS) and different-subject (DS) linkage on medial verbs, with
+person--number marking and vowel harmony in the DS form. For a second-person
+subject followed by a third-person subject, Table~\ref{tab:amele-sr} gives a
+candidate comparison.
 
 \begin{table}[ht]
 \centering
@@ -584,428 +782,149 @@ followed by a third-person subject, the comparison is:
 \textbf{Condition} & \textbf{Amele form} & \textbf{Analysis} \\
 \midrule
 Licensed target & \olang{Hina ho-co-m sab je-i-a} & `You came and he ate the food' (DS) \\
-Wrong value & *\olang{Hina h-u-me-g sab je-i-a} & licensed 2sg SS form with a different following subject \\
-Preserved value, wrong realization & *\olang{Hina ho-ce-m sab je-i-a} & DS and 2sg material retained, but the DS vowel is disharmonic after \olang{ho-} \\
+Internal value conflict & *\olang{Hina h-u-me-g sab je-i-a} & licensed 2sg SS form conflicts with the distinct represented subject of the following clause \\
+Preserved value, realization failure & *\olang{Hina ho-ce-m sab je-i-a} & DS and 2sg material are retained, but the DS vowel is disharmonic after \olang{ho-} \\
 \bottomrule
 \end{tabular}
 \caption{A proposed Amele switch-reference comparison. Both starred sentences
-require validation in the intended clause-chain context.}
+require speaker validation in the intended clause-chain context.}
 \label{tab:amele-sr}
 \end{table}
 
-Here the wrong-value token changes the tracking instruction, while the
-disharmonic token preserves DS. The grammar directly supports the licensed SS
-and DS forms and the harmony relation, but it doesn't print the exact
-*\olang{ho-ce-m} stimulus. SS/DS choice is also sensitive to agentivity,
-clause level, time, place, world, and pragmatic deixis. Those factors have to be
-frozen rather than treated as noise. Because SS and DS use different
-person--number material, the two error conditions also differ in more than one
-segment; perceptual salience belongs in the design.
+The first error condition is grammatical only if the subject information is
+linguistically represented in the clause chain and the SS value conflicts with
+it. A speaker who merely intends a different continuation after producing a
+well-formed SS chain has made a message-selection error instead. The realization
+condition preserves DS but violates the harmony relation described for its form.
 
-Switch-reference is a plausible high-continuity profile, but that expectation
-isn't a score. A separate profiling partition has to establish whether changing
-SS to DS alters reference continuity and downstream response options. The
-worked comparison shows what an eligible case would look like and where its
-remaining evidential risks lie.
+Because SS and DS choice is sensitive to agentivity, clause level, time, place,
+world, and pragmatic deixis, those factors can't be inferred from subject identity
+alone. The published grammar also doesn't print the exact disharmonic stimulus.
+The comparison is a source-grounded template that requires validation, not an
+empirical result.
 
-\subsection{Neighboring targets and moving edges}
+If the internal conflict is established, the two failures support different
+discourse predictions. An SS/DS conflict can unsettle reference continuity; a
+disharmonic realization need not. Whether participants direct repair to reference
+or form remains a separate causal and empirical question. The ontology permits
+this cross-level inference; it isn't evidence used to
+define the switch-reference relation as grammatical.
 
-Gender and noun-class concord stress-test the paradigm-level analysis. A token
-such as *\olang{le table} may leave the intended referent obvious while violating
-obligatory French concord. Local redundancy doesn't show that the containing
-paradigm lacks a reference-tracking role, but neither does categorical correction
-prove that it has one \citep{corbett1991,mahowaldetal2023}. Independent profiling
-has to compare contexts in which lexical semantics already fixes the referent
-with contexts in which concord changes participant tracking.
 
-Accent, register, and Japanese polite/plain style supply low-profile or
-non-paradigm comparisons only after their conditioned repertoires are specified
-\citep{agha2007,eckert2012,cook2008speechstyle,ide2005}. Their deviations can be
-highly accountable while targeting stance, persona, or institutional norms.
-The form can express exactly the social value conventionally associated with it
-and still be wrong for the occasion. In that case the pairing has succeeded;
-situational fit is the target. But an honorific or T/V contrast that acquires a
-recurring domain, bounded alternatives, and conditioned selection can move
-toward the grammatical core. The theory has to allow that result rather than
-assigning indexical meaning outside grammar by stipulation.
+\section{Methodological consequences and defeat conditions}
+\label{sec:method}
 
-Phonology and orthography sharpen the same point. A phonemic contrast ordinarily
-serves sign discrimination rather than pairing each segment with a meaning. A
-spelling system ordinarily maps graphic forms to linguistic expressions. Their
-departures can leave the relevant linguistic form--value assembly
-intact. Morphophonology and grammatical tone cross the boundary when a
-phonological contrast realizes a constructional or paradigm value. *\olang{le
-hiver} is informative because respondents may locate the same surface departure
-at that interface differently across speech, writing, learner correction, and
-deliberate pauses.
+The ontology changes what counts as evidence. A study can't identify a
+grammatical norm from the same grammar labels it later claims to explain. It first
+specifies a candidate relation and scope from positive production, interpretation,
+substitution, omission, productivity, constructional embedding, contrast
+organization, and distribution. The resulting assembly-role profile is an estimate
+with visible components and uncertainty, not a universal score. Only then are new
+tokens or a disjoint corpus partition examined for judgments, corrections, repairs,
+or sanctions.
 
-The lexicon contains semiotic pairings. Words are form--meaning pairings, but
-choosing an ill-fitting licensed word normally preserves its pairing and the
-larger assembly. Selectional restrictions, valence frames, and item-specific
-complement patterns create intermediate cases when lexical material constrains
-how a construction is assembled. *\mention{Depend of} is useful only
-if the licensing chain is specified in advance; calling it simply lexical or
-grammatical would throw away the prediction.
+This order doesn't make judgments irrelevant. It prevents them from doing two
+incompatible jobs at once. Open descriptions and spontaneous corrections should
+precede forced choices among \enquote{grammar}, \enquote{wording}, \enquote{style},
+and related labels. A construction-directed response isn't automatically
+grammar-directed because lexical constructions are part of the boundary at issue.
+Mixed and unresolved responses remain visible. Explicit schoolroom terminology
+is analyzed separately from the relation a respondent appears to target.
 
-These interfaces motivate the second broad projection, \term{moving-edge
-attribution}. Independently measured changes in recurrence, constructional
-embedding, boundedness, conditioned selection, or population concentration
-should predict movement and increased variation among grammatical, lexical, and
-stylistic attributions. The source profile may change historically or differ
-across activities; those comparisons require separately declared populations
-and periods. Schooling is a rival cause: an institution can preserve a grammar
-label after spontaneous production and licensing have shifted. Unprimed
-attribution and explicit schoolroom classification have to be measured
-separately.
+The comparison set has to challenge the constitutive distinction. It should include
+strict paradigms, productive constructions, value-preserving realization failures,
+item-specific licensing chains, pure phonotactic and orthographic departures,
+poor but licensed lexical choices, social-indexical mismatches, and violations of
+social acts. The items should remain interpretable. If the assembly analysis is
+adjusted after the responses are known, the test has collapsed back into an account
+of labeling.
 
-Interjections and slurs make the converse point: a resource can reshape uptake
-or social action without entering a bounded grammatical paradigm
-\citep{ameka1992}. These cases prevent public consequence from becoming a
-shortcut to either grammatical-choice or public-update profile.
+Rival explanations operate at different levels. Semantic repairability may explain
+classifications where composition fails. Boye and Harder's discursive secondary
+status may better identify grammatical norms. Frequency, surprisal, perceptual
+salience, and processing can cause low ratings or rapid correction. Schooling,
+stigma, participant role, and institutional authority can cause grammar-directed
+labels or person-directed sanction. Activity, medium, register, community, and
+period fix the population of the claim rather than serving as a bag of statistical
+controls. A good design restricts or matches these causes where possible and states
+which remaining comparison is identified.
 
-\section{Incremental predictor comparison}
-\label{sec:predictor-comparison}
+Three empirical consequences then become available. First, relations estimated to
+occupy the grammatical assembly role more fully and robustly should elicit more
+consistent spontaneous assembly-directed attribution in held-out cases than
+lexical, phonotactic, representational, deployment, and social-act controls.
+Explicit grammar labels should correlate with that attribution, but the correlation
+is a further response-level prediction and may be weakened by schooling or local
+metalinguistic practice.
 
-The nearest predictors have to be compared within their native scope rather
-than forced into a winner-take-all theory of language. Table~\ref{tab:predictors}
-states what each can directly predict in the proposed study.
+Second, independently layered or changing relations should produce variable or
+moving boundaries among grammar, lexicon, phonology, and style. Third, among
+paradigms that independently support both error types, a stronger
+discourse-consequence profile should increase the difference in update-directed
+repair between internal value conflicts and value-preserving realization failures.
 
-\begin{table}[ht]
-\centering
-\scriptsize
-\setlength{\tabcolsep}{3pt}
-\begin{tabular}{@{}p{0.19\linewidth}p{0.23\linewidth}p{0.26\linewidth}p{0.24\linewidth}@{}}
-\toprule
-\textbf{Predictor} & \textbf{Applicability gate} & \textbf{Direct prediction} & \textbf{Probative result} \\
-\midrule
-Abrus\'an: type level, locality, shiftability & semantic or pragmatic analysis of the anomaly & whether local meaning repair preserves a coherent predication & explains semantic targets and absorbs apparent profile effects \\
-Boye--Harder: discursive secondary status & expression stands in the relevant syntagmatic relation & grammatical status and associated focusability/addressability pattern & secondary status predicts attribution beyond the choice profile or repair beyond paradigm structure \\
-Grammatical-choice profile & independently profiled form--value assembly relation & consistency and domain of grammar-directed attribution & incremental held-out allocation beyond frequency, processing, schooling, and sanction \\
-Public-update profile & independently identified paradigm with both error types & value/realization difference in update-directed repair grows with profile & incremental interaction after status rivals and licensing variables are represented \\
-\bottomrule
-\end{tabular}
-\caption{Scope-fair predictor comparison. An N/A case is outside a predictor's
-native explanandum, not evidence against it.}
-\label{tab:predictors}
-\end{table}
+These predictions are evidential consequences, not definitions. The constitutive
+account fails if its functional roles can't place phonotactics, lexical identity,
+representation, deployment, and mixed constructional cases without relying on the
+responses to be explained. Its empirical reach fails if independently estimated
+assembly organization adds no stable held-out expectation about fault attribution
+or boundary movement beyond semantic repairability, discursive secondary status,
+processing, schooling, and sanction. The discourse application fails if the
+independently estimated consequence profile doesn't predict the repair-locus
+difference in an identifying comparison.
 
-Abrus\'an's account may fully explain items whose apparent grammaticality is a
-semantic composition failure. Boye and Harder may better identify grammatical
-status generally. The grammatical-choice profile earns its broader role only
-if its independently measured architecture predicts held-out target allocation.
-The operator profile earns its narrower role only if it then adds reach for the
-consequences of value errors. A broad interpretive-consequence measure also has to
-be allowed to subsume it: if any consequential contrast predicts repair equally
-well, the specifically public-update attribution fails.
+Some outcomes are inconclusive rather than favourable or fatal. A corpus of
+corrections is selected for occasions on which someone corrected, so it can't by
+itself estimate how a community classifies all comparable tokens. Naturally
+occurring internal value conflicts and realization failures may also be too sparse
+or uneven for the repair comparison. Such data can test search procedures, coding,
+and candidate analyses without being promoted into a confirmatory result. The
+account earns support only from comparisons whose norm evidence and outcome
+evidence are separable in practice.
 
-\section{Held-out tests and defeat conditions}
-\label{sec:identifying-operators}
-
-The theoretical answer generates three projections. \term{Selective fault
-attribution} is primary: the independently assigned grammatical-choice profile
-should predict whether held-out trouble is directed at grammar. \term{Moving-edge
-attribution} predicts greater variation and migration among grammar, lexicon,
-and style where the source profile is intermediate or changing. The
-\term{operator-profile hypothesis} is downstream: among eligible paradigms,
-public-update profile should predict the repair difference between wrong values
-and value-preserving realization errors. The first two address the question in
-the title; the third tests one proposed consequence within grammar.
-
-Freezing the source profiles isn't enough. The outcome codebook also has to be
-fixed before responses are inspected. Prospective elicitation and corpora with
-disjoint profiling and outcome partitions can implement the same inferential
-order.
-
-\textsc{Study A, Stage 1: choice profiling.} Candidate dependencies are sampled
-without first sorting them into grammatical and non-grammatical bins. For each
-declared community, situation, medium, and period, production and descriptive
-evidence specify the expression--value relation, constructional site,
-contrastive frame, alternatives, selection and omission restrictions,
-licensing chain, productivity, and population distribution. Negative labels,
-corrections, repair, and the held-out items are withheld. Profile components
-remain visible; a scalar or ordinal summary, weighting rule, missing-data rule,
-and uncertainty treatment are fixed for the particular study rather than
-declared universal.
-
-Published descriptions count only through their underlying positive evidence:
-attested production, substitution and omission contrasts, conventional
-interpretation, productivity, and distribution across independently specified
-opportunities. A grammarian's asterisk or category label is attribution evidence
-and can't be recycled as source-profile evidence.
-
-The comparison set should include strong paradigms and constructions,
-value-preserving realization dependencies such as past-tense exponence,
-item-restricted constructional chains, open lexical choices, phonological and
-orthographic relations, indexical or stylistic pairings, and social-act cases.
-The deviations have to remain interpretable. Frequency, perceptual distance,
-processing load, task framing, schooling, and sanction are restricted, matched,
-or represented as rival predictors. Boye--Harder diagnostics and
-Abrus\'an-inspired semantic repairability are measured only in the domains where
-their theories apply.
-
-\textsc{Study A, Stage 2: frozen attribution.} New items, speakers, or a disjoint
-corpus partition are first coded for the apparent target: assembly relation,
-selected content, expression shape, spelling, situational or indexical fit,
-social act, mixed target, or unresolved trouble. A construction-directed
-response isn't automatically grammar-directed, because lexical constructions
-are part of the boundary to be explained. Open descriptions or repairs should
-precede forced labels so that a classroom vocabulary isn't built into the
-response. Explicit use of \enquote{grammar} is a separate, norm-sensitive
-outcome. Compound responses remain compound, and reliability and uncertainty
-are reported.
-
-The primary test asks whether the frozen choice profile improves held-out
-spontaneous assembly-directed attribution, and separately explicit grammar
-labels, over the declared rivals by at least the prospectively chosen useful
-margin. The moving-edge test asks whether
-independently intermediate or changing profiles predict greater attributional
-variation and the declared direction of movement. A miss defeats or splits the
-corresponding claim. In particular, sharp school-taught labels with weak source
-profiles support institutional transmission as a cause of the read-out, not a
-post-hoc upgrade of the relation.
-
-\textsc{Study B, Stage 1a: strict-paradigm identification.} For the narrower
-operator comparison, descriptive and corpus evidence first specifies the
-conditioned repertoire, recurring domain, alternatives, and semantic frame. It
-then tests whether the set is closed and whether a value has to be selected
-whenever the domain applies. Sharp judgments, correction, and the later repair
-task are withheld. Tense--aspect systems, agreement paradigms,
-switch-reference markers, interrogative particles, and complementizer
-inventories are candidates, not presumed cases. This triangulation implements
-Poulsen's caution: widespread production is strong evidence for a construction,
-but nonoccurrence, rare production, processing cost, and acceptability each
-underdetermine stable conventional knowledge when considered alone
-\citep[15--20]{poulsen2012grammaticality}.
-
-Closure requires a bounded value inventory that exhausts the choices found in the specified domain across additional corpus samples and, where needed, consultant elicitation. Productive new exponents can realize existing values; a productive route to new values, or an open residual \enquote{other} response, defeats closure. The conditioned repertoire and stopping rule are fixed before the outcome task.
-
-Obligatory selection requires every independently accepted token in the domain to receive one value from that inventory. A zero realization counts only where its distribution contrasts with overt members in the same frame and independently changes the frame interpretation. Mere lack of an overt form doesn't establish a zero value; it may instead show that the proposed domain isn't active.
-
-Dropping N{\o}rg{\aa}rd-S{\o}rensen and Heltoft's markedness criterion enlarges the possible comparison set. Each study reports the primary four-criterion analysis and a sensitivity analysis restricted to paradigms that also show their marked--unmarked asymmetry. A result that disappears in the strict subset supports only the relaxed comparison and can't be attributed to their full architecture.
-
-\textsc{Study B, Stage 1b: operator profiling.} For each identified paradigm, preregister the update variables its values might affect: move type, commitment holder or source, discourse-participant or referent continuity, and response relevance. A separate sample or corpus partition supplies minimal value contrasts while holding at-issue content as constant as the language permits. Classification, interpretation, or independently coded distributional measures estimate how much changing the value changes each component.
-
-Stage~1b yields a four-component vector. A concrete study may preregister an
-ordinal comparison or a scalar summary, but the theory supplies no universal
-weights. Zero effects remain visible rather than being dropped as
-\enquote{inapplicable}; indicator coding, scaling, missing-data rules, contexts,
-and uncertainty aggregation are frozen before repair outcomes are inspected.
-
-Profiling evidence stops at the target utterance. It can include blinded coding
-of its conventional move type, commitment source, reference continuity, and
-licensed response potential, or comprehension probes that classify those
-properties. It can't include negative judgments, trouble reports, correction
-wording, repair initiation, or the observed next turn. If Stage~2 uses
-interactional outcomes, disjoint next-turn samples aren't independent profiling
-evidence. This exclusion is stricter than holding out items from the same task.
-
-This step has an information-theoretic interpretation only after the linguistic
-codebook has been specified. Entropy reduction or divergence among response
-options judged compatible with an utterance can quantify how strongly a value
-constrains possible updates
-\citep{shannon1948,coverthomas2006}; it can't determine whether the alternatives
-form a grammatical paradigm or whether a departure is normatively classified as
-an error. Information theory measures a consequence of the supplied value
-contrast. It doesn't supply system membership, fault locus, or social
-accountability, and token surprisal remains a separate covariate.
-
-Study B Stage~2 uses a different task format and new items, such as open next-turn
-responses, production repair, or a held-out interactional corpus partition. Two
-theoretical rivals are measured in Study B Stage~1. The first is a semantic-repairability
-index motivated by Abrus\'an and colleagues: blinded coders assess whether
-at-issue content, predicate--argument structure, and event identity can be
-recovered through a local meaning shift, together with the locality and
-independently diagnosed type level of the conflict, without the four update
-labels or a repair prompt \citep{abrusan2019,abrusanetal2021shift}. The second is
-Boye and Harder's discursive-secondary-status diagnostics. The component scores
-of semantic repairability remain visible rather than being hidden in a single
-post-hoc scale. The analysis reports both rivals' correlations with the operator
-profile before fitting the confirmatory model. If the design can't distinguish
-these predictors at the achieved support, the study is non-identifying: it
-confirms neither the operator attribution nor its failure. Broad scope and
-interpersonal consequence are insufficient on their own.
-
-Abrus\'an's measure is N/A, not zero, where no independent semantic type or
-composition conflict exists. Pure realization and ordinary licensing failures
-thereby fall outside that theory's scope. Boye--Harder diagnostics directly
-address grammatical status; their use as a predictor of next-turn repair is an
-explicit extension rather than a test of their account as a whole.
-
-Sharing conceptual dimensions doesn't make the outcome definitional. Stage~1b
-classifies what a value conventionally configures; Stage~2 asks whether a
-respondent directs trouble there. A high-profile wrong value can be accommodated,
-ignored, sanctioned, or met with form-only correction. Such responses remain in
-the denominator and count against the predicted repair-locus difference.
-
-\textsc{Design covariates.} Opportunity is the number of occasions on which a paradigm value and its competitors could plausibly have been selected. Exponent frequency, surprisal, constructional frame, phonetic salience, processing load, schooling or norm exposure, and social sanction are measured separately. Wherever possible, restriction and matching handle these item- or token-level variables before estimation. The confirmatory model isn't a regression on the whole list: it contains the frozen profile, error locus, their interaction, the two pre-specified theoretical rivals at their appropriate levels, and only adjustments retained by a prospective design simulation. These are design commitments, not controls the theoretical paper claims already to have achieved. Opportunity predicts the concentration of licensing evidence, not paradigm status or operator profile \citep{reynolds2026ovmg}.
-
-Correction is socially organized, so response cause can't be inferred from
-response wording. Activity, medium, register, participant role, learner status,
-schooling, and the norm centre made relevant in the interaction are specified
-before sampling \citep{cameron2012verbalhygiene}. A form-focused correction can
-be caused by institutional authority; an update-directed repair can arise from
-ordinary mishearing. The outcome code locates the apparent target, while the
-design variables address causes. Mixing incompatible norm centres changes the
-population target rather than merely adding noise.
-
-\textsc{Study B, Stage 2: frozen outcomes.} Before coding held-out responses, define \term{update confusion}, \term{update-directed repair}, \term{form correction}, \term{constructional correction}, \term{social sanction}, and \term{unresolved trouble}. Update-directed repair targets move type, commitment, discourse-participant or referent continuity, or response relevance; form correction supplies a licensed realization and preserves the intended update. Double-code ambiguous responses and report reliability rather than forcing every case into one bin. The confirmatory comparison includes only paradigms for which independent evidence supports both a genuine value mismatch and a plausible value-preserving realization mismatch; the design can't manufacture the latter merely to retain a paradigm. Eligibility and its relation to expressive substance are reported before profiling. The confirmatory claim concerns this eligible population, not paradigms for which a value-preserving control is unavailable. Those paradigms require a separately labelled extension with a different form or constructional control.
-
-One cross-paradigm interaction supplies the sole confirmatory test for Study B: does the wrong-value versus value-preserving-realization difference in update-directed repair increase with the frozen operator profile after the pre-specified restrictions, matches, and limited adjustments? The within-paradigm difference is a manipulation check, repair locus is the primary outcome, and held-out comprehension is secondary. Repeated responses don't substitute for independent paradigms when estimating this interaction. Before calling a study confirmatory, design simulation has to show that the planned paradigm sample can distinguish the minimum effect from zero at the declared uncertainty threshold. An underpowered or non-identifying corpus analysis is a pilot and licenses neither confirmation nor failure. In an adequately powered identifying study, an absent or smaller interaction defeats the operator-profile hypothesis even if paradigm descriptions and operator profiles remain useful.
-
-\textsc{Projective declarations and revision rules.} Study A projects from a
-frozen choice profile to grammar-directed attribution for held-out candidate
-dependencies in the declared community, situation, medium, and period. Its
-moving-edge component projects from independently intermediate or changing
-profiles to attributional variation or migration across declared groups or
-times. Study B projects from the frozen profile of an eligible paradigm to its
-held-out wrong-value--realization difference in update-directed repair. Each
-study declares a minimum useful effect and uncertainty threshold. The
-prospective comparisons, rival measures, and separation of tasks supply the
-warrant; they aren't part of the world-side profiles. Failure retires or splits
-the corresponding attribution for that scope. A preregistered narrower analysis
-may be reported as a different claim, but it doesn't rescue the broader one
-\citep{Goodman1955,reynolds2026notEveryStableCluster}.
-
-No newly recruited participant sample is logically required for an initial
-pilot. Existing correction, interactional, learner, metalinguistic, and usage
-data can be divided into disjoint profiling and outcome partitions,
-supplemented by descriptive grammars and independent distributional evidence.
-Such corpora are selected records of when people correct, but they aren't clean
-samples of community classification. Naturally occurring wrong-value and
-realization errors may also be too sparse or unevenly distributed for
-identification. A corpus study can validate search, profile placement,
-eligibility, and coding procedures without being promoted into a test the data
-can't support.
-
-\section{Predictions and research strategies}
-\label{sec:predictions}
-
-The paper makes three prospective claims, all conditional on the pre-outcome
-identification and coding stages in \S\ref{sec:identifying-operators}. The first
-two answer the selective-classification question; the third isolates the
-operator-specific consequence.
-
-\textsc{(1) Selective fault attribution.} Independently stronger
-grammatical-choice profiles should produce more consistent grammar-directed
-attribution for held-out interpretable deviations. The comparison isn't
-\enquote{grammar versus random bad sentences}. It has to include licensed but
-poor lexical choices, phonological and orthographic deviations, situationally
-misplaced indexical values, social-act violations, constructional failures,
-wrong paradigm values, and value-preserving realization errors. The prediction
-fails if frequency, processing, schooling, sanction, semantic repairability, or
-discursive secondary status supplies the useful allocation and the choice
-profile doesn't.
-
-\textsc{(2) Moving-edge attribution.} Independently intermediate and changing
-profiles should produce greater variability and directed migration among
-grammar, lexicon, and style attributions. An item-specific restriction embedded
-in a constructional chain should be less consistently grammar-directed than a
-schematic obligatory dependency but more so than an open collocation, other
-conditions matched. Across a declared period, a weakening dependency should
-lose spontaneous grammar-directed attribution as recurrence, embedding, or
-licensing concentration declines. Persistent classroom labels may lag; that
-lag supports institutional transmission as a response cause, not continued
-strength of the source profile.
-
-\textsc{(3) The operator-profile-by-error-locus interaction.} Conversation favours self-repair over other-correction: other-correction is dispreferred, while other-initiation of repair is common and usually gives the original speaker an opportunity to repair \citep{schegloffjeffersonsacks1977,dingemanseetal2015repair}. Within each eligible identified paradigm, wrong-value items should disproportionately produce clarification of force, commitment, role, or reference; value-preserving realization errors should disproportionately produce form correction with the intended update retained. That within-paradigm difference checks the manipulation. The confirmatory coefficient is its interaction with the independently assigned operator profile across eligible paradigms.
-
-A higher correction rate for high-profile paradigms is too weak a prediction. *\mention{Depend of} $+$ \textsc{obj} can elicit \enquote{you mean X} through constructional licensing, and a socially marked form can elicit person-targeted sanction. The confirmatory outcome is the locus of the response, not correction rate alone. Cross-linguistic repair research supplies broader coding precedents but not validation of the proposed interaction; Fox and colleagues specifically code same-turn syntactic self-repair rather than the held-out next-turn categories used here \citep{foxetal1996repair,dingemanseblythedirksmeyer2014,dingemanseetal2015repair}. Adult interaction with little formal-school correction can reduce one prescriptive rival, but dialect, learner status, institutional role, and task format remain measured accountability conditions.
-
-Two stress tests concern Claim~3. \textsc{Local redundancy.} In gender, agreement, and reference-tracking systems, a manipulation can leave one token's interpretation unchanged while the paradigm remains informative across its opportunities. After Study B Stage~1b has assigned the profile, held-out contexts should show token-level null effects where lexical semantics already determines the referent and positive effects where reference is underdetermined. The local null is predicted; reassigning the profile after seeing it isn't permitted. A low-profile paradigm that produces the same value-versus-realization repair difference as a high-profile paradigm counts against the hypothesis.
-
-\textsc{Expressive substance.} Where tone, intonation, or nonmanual marking realizes values in an identified paradigm and both mismatch types are independently supported, the same profile-by-error-locus interaction should appear after opportunity, frequency, and perceptual salience are matched \citep{hyman2011,ladd2008}. \textcite{tsiwahetal2021} report a P600-like response to one temporal-agreement violation in Akan, where time reference is expressed through grammatical tone; this prediction concerns the broader matched repair profile, not a unique ERP component. Compare tonal tense mismatches, segmental tense or agreement mismatches, and sociophonetic tone shifts. Wrong values may prompt reanalysis of material in scope; value-preserving realization errors should concentrate correction on the form. This interaction is more specific than the familiar contrast between morphosyntactic and conceptual anomaly \citep{kutashillyard1980,osterhoutholcomb1992,friederici2011}.
-
-The failure conditions belong to the contribution statement. The general answer
-fails if the frozen choice profile adds no useful held-out prediction of fault
-attribution. The moving-edge claim fails if independently ordered or changing
-profiles don't predict attributional variation or direction. In an adequately
-powered identifying study, the operator-profile hypothesis adds no explanatory
-value if the frozen profile doesn't predict the held-out
-value-versus-realization repair difference after the pre-specified design
-restrictions, semantic repairability, and discursive secondary status. Source
-descriptions and component profiles may remain useful; the failed projection
-doesn't. Inseparable rivals or insufficient independent cases make a study
-inconclusive, not supportive by default.
-
-The same inferential order applies whether a test uses new elicitation or
-disjoint partitions of existing corpora: profile candidate dependencies; where
-relevant, identify strict paradigms and public-update effects; freeze rivals and
-outcome codes; and only then inspect the held-out attributions or repairs.
 
 \section{Conclusion}
 
-Why, then, does one interpretable deviation count as ungrammatical while another
-doesn't? The proposed answer is that speakers imperfectly track the relation
-that failed. Grammar consists centrally of conventional form--meaning pairings,
-but neither conventionality, pairing, nor systemhood is sufficient. The
-grammatical core consists of relations used recurrently to assemble expressions:
-constructions, relational values, obligatory choices, and their licensed
-realizations. Strict paradigms anchor that core; construction-sized and
-item-restricted dependencies produce layered cases. Selecting a poor but
-licensed word, style, accent, or social act can instead preserve the relevant
-assembly and make content, situational fit, persona, or conduct the fault target.
+Why does one interpretable deviation count as ungrammatical while another does
+not? The answer proposed here begins with the relation that constitutes the norm.
+A grammatical norm is a socially sustained standard relating signs, exponents,
+or values within recurrent constructions in a scoped repertoire. A token is
+grammatically defective when it fails that relation. Recoverability doesn't erase
+the fault, and a negative response doesn't
+create it.
 
-That's a graded, scoped answer rather than an exceptionless definition. A
-candidate relation receives a profile from form--value coupling, recurrence,
-contrastive choice architecture, and conditioned community licensing without
-using the labels to be predicted. A stronger
-profile is then expected to support more consistent grammar-directed attribution
-in held-out cases. The worldly profile, our uncertainty about it, and the
-sharpness of a respondent's label remain distinct. Edges can also move with
-community, activity, medium, and time.
+Other linguistic norms govern different roles. Lexical conventions establish sign
+identity and content; phonotactics constrains form shape; orthography ordinarily
+represents an independently identified expression; and usage norms govern the
+deployment of licensed resources. The boundaries don't partition substances.
+Phonological material can realize grammar, pragmatic values can become organized
+in paradigms, and item-specific knowledge can form part of a constructional chain.
+Mixed cases are expected, but each proposed layer has to recur or contrast
+independently and predict substitutions, derived forms, or environments.
+If unitary and relational analyses remain equally supported, the grain is
+indeterminate; a mixed label can't rescue the ontology.
 
-The motivating French example makes the point precisely. In ordinary connected
-Reference French, *\olang{le hiver} preserves referent, definiteness, number, and
-gender while using an unelided realization before an \term{h muet} noun. The
-dependency is morphophonological, but it's embedded in article realization.
-That makes grammatical-form attribution plausible without turning the item into
-a concord or wrong-value case. It also makes the example a genuine interface:
-speech, writing, pausing, learner correction, and norm centre can shift
-attribution toward phonology, orthography, or grammatical realization. Those
-possibilities test the profile account rather than disappearing by definition.
+The explanatory levels remain distinct. Semantic repairability explains an
+important subset of anomaly classifications. Discourse theory explains how some
+grammatical values affect move type, commitment, continuity, and response
+relevance. Processing and social theories explain why speakers detect, tolerate,
+correct, stigmatize, or misclassify tokens. Formal grammars and assembly-role
+profiles represent the relevant relations; they don't constitute them.
 
-OVMG contributes the token-level and epistemic decomposition. Coverage,
-compatibility, saturation, and licensing locate distinct possible failures;
-population status, evidence, and subjective read-out aren't one variable.
-Opportunity and strong competitors can explain why a transparent
-value-preserving realization becomes sharply excluded. They don't decide the
-fault label from frequency alone, and institutional teaching or stigma can make
-the label mis-track the source profile.
+The motivating French case now has a precise role. *\olang{Le hiver} preserves
+definiteness and reference but uses an excluded realization of the article
+construction on the candidate analysis. It counts as a grammatical-form error only
+if that constructional relation, rather than pure phonotactics or graphic
+convention, is what fails in the scoped repertoire. That conditional is a strength:
+the theory can be wrong about the case without redefining grammar to save it.
 
-Public-update contribution adds a narrower claim. Among independently identified
-paradigms, values differ in how strongly they configure move type, commitment,
-reference continuity, and response relevance. Across paradigms that genuinely
-support both error types, a stronger frozen public-update profile is predicted
-to increase the difference in update-directed repair between wrong values and
-value-preserving realization errors. That projection explains neither
-*\olang{le hiver} nor grammar as a whole.
-
-The proposal is cumulative. Abrus\'an and colleagues explain one major boundary
-through type level, locality, and semantic shiftability. Coseriu supplies a
-longstanding architecture of system, norm, speech, and evaluative domains.
-Heltoft shows how paradigmatic grammar organizes illocutionary and
-interlocutionary relations, while N{\o}rg{\aa}rd-S{\o}rensen and Heltoft provide
-the domain--frame scaffold adopted here. Boye and Harder's discursive secondary
-status remains a principled alternative predictor. The residual contribution is
-not a new ingredient but a cross-level decomposition and three prospective
-comparisons that can distinguish their reach.
-
-The proposal can lose in three ways. If the frozen
-grammatical-choice profile doesn't improve held-out fault attribution beyond
-semantic repairability, discursive secondary status, frequency, processing,
-schooling, and sanction, the general answer fails or has to be split. If
-independently intermediate or changing profiles don't predict variable or
-moving attribution, the boundary claim fails. If the public-update profile does
-not predict the held-out value--realization repair difference in an identifying
-study, the operator-specific attribution fails. Descriptive analyses may
-survive each result; they may not be used to rename a failed projection as
-success.
-
-Clausal architecture remains important because it can host paradigms for clause
-type, commitment, scope, and reference tracking. Tone, gesture, particles, word
-order, and inflection can realize those values. None of this makes every
-constraint on a clause high-profile, and the stronger historical suggestion
-that public-update work preferentially recruits paradigms remains unconfirmed.
+The methodological consequence is equally direct. Evidence about a norm, token
+status, semantic or pragmatic consequence, target attribution, and response cause
+have to be allowed to disagree. Independent profiling and held-out response are ways
+to test whether the proposed ontology has reach, not substitutes for the ontology.
+If assembly role can't distinguish the difficult boundary cases without recycling
+their labels, the constitutive answer fails and the narrower theory of
+metalinguistic attribution is all that remains.
 
 \section*{Acknowledgements}
 

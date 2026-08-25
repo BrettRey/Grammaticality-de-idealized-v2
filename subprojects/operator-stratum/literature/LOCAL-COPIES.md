@@ -41,6 +41,8 @@ than using unofficial full-book mirrors.
 | `wiltschko2025selftalk` | `wiltschko-2025-grammar-self-talk.pdf`; `.md` sidecar | Open-access repository PDF and converted Markdown | https://doi.org/10.1515/tl-2024-2024 |
 | `krifka2025selftalk` | `krifka-2025-self-talk-syntactic-structure.pdf`; `.md` sidecar | Publisher open-access PDF supplied locally and converted Markdown, read in full | https://doi.org/10.1515/tl-2025-2015 |
 | `levinson2026speechacts` | `levinson-2026-speech-acts-context-change.pdf`; `.md` sidecar | Author/institutional repository PDF and converted Markdown | https://doi.org/10.1515/tl-2026-2001 |
+| `bary2025speechacts` | `bary-2025-speech-acts-common-ground-commitments.pdf`; `.md` sidecar | Publisher open-access PDF and layout-preserving text extraction, read in full | https://doi.org/10.1007/s10988-025-09434-y |
+| `simons2025availability` | `simons-2025-availability-without-common-ground.pdf`; `.md` sidecar | Publisher open-access PDF and layout-preserving text extraction, read in full | https://doi.org/10.1007/s10988-024-09426-4 |
 
 Verification notes:
 
