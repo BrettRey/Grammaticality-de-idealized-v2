@@ -1,0 +1,31 @@
+review_id: operator-stratum-oa-fable-review-20260825
+date: 2026-08-25
+target: subprojects/operator-stratum/operator-stratum.tex
+venue: Linguistics and Philosophy
+git_commit_at_start: c32c52f6c021b92b86144590c18326f7c26471b0
+source_sha256: 55112169098ae18107e795137e8dbc1d83227be0256ba5571aa12149fb506c8b
+shared_prompt: prompt.md
+shared_prompt_sha256: 847689d093ca343a21e2f477deee11ced75b97e74b630459be568145b809c9de
+reviewers:
+  - id: ox-alpha
+    model: stealth/ox-alpha
+    provider: OpenRouter/Stealth
+    dependence_cluster: shared-prompt-clean-room
+    output: raw-ox-alpha.md
+    output_sha256: 9f149fffc0b20cde2d2123d20dd9c6eb90f3f53432a209f6bba65f5b77b54b96
+  - id: fable
+    model: Claude Fable
+    provider: Anthropic
+    dependence_cluster: shared-prompt-clean-room
+    output: raw-fable.md
+    output_sha256: 806bff48b4129c95ceb67a70af5e65cf4b14e974d2b6f44c5134bb7edabe87e9
+  - id: ox-alpha-oconnor-style
+    model: stealth/ox-alpha
+    provider: OpenRouter/Stealth
+    dependence_cluster: named-perspective-prompt
+    prompt: prompt-ox-oconnor.md
+    prompt_sha256: 79be451dc395003fdc8748f75efb71a18e00ac03de2340c932fc180a0745a6e6
+    output: raw-ox-oconnor.md
+    output_sha256: f6def229db5a2033017bf437aaa396d5b98b3c40ae0145e5acff43b32e64a8d1
+synthesis: synthesis.md
+synthesis_sha256: a6ac34ae8e5a7faf510acc095bb3e8bf5aed19c9603d07ed6faac4be056260bb
