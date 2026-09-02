@@ -4,35 +4,33 @@ kind: paper
 title: 'Why some interpretable deviations count as ungrammatical: linguistic norms and levels of explanation'
 stage: complete
 external: rejected
-blocked_on: []
-updated: 2026-08-24
+blocked_on: [brett-decision, venue-decision]
+updated: 2026-09-02
 source:
 - STATUS.md
 - DECISIONS.md
 - publications.html
 path: papers/retarget/grammaticality-de-idealized/subprojects/operator-stratum
-venue: Functions of Language
-external_id: FOL-26063
+venue: Linguistics and Philosophy
+external_id: LING-D-26-00197
 preprints:
 - lingbuzz/009706
-next_action: Brett review of the constitutive reconstruction before any Linguistics and Philosophy packaging
+next_action: Choose a successor venue through a fresh venue-decision record after the Linguistics and Philosophy desk rejection of 2026-09-02; no retargeting package work before that record exists. Watch for the Springer Transfer Desk email promised within 48 hours and treat its suggestions as a list to check, not a recommendation.
 notes: 'A subproject of grammaticality-de-idealized with its own STATUS.md, DECISIONS.md, operator-stratum.tex and
-  submission package; registered separately 2026-07-30 so its desk rejection survives into the registry
+  submission package; registered separately 2026-07-30 so its venue history survives into the registry
   rather than sitting in a note on the parent block. The parent block (batch-06) covers the main OVMG
   paper only. `source` paths are relative to the subproject.
 
-  Its own STATUS.md header: "**Status:** Desk rejected by *Functions of Language* for scope/fit; reconstructed
-  for possible *Linguistics and Philosophy* submission; reader review next... **LingBuzz:** Uploaded 2026-01-25... **Journal submission:** Submitted to *Functions of Language*
-  2026-06-02; rejected 2026-06-26 as outside the journal''s scope." Article ID FOL-26063, decision signed
-  by Wout Van Praet, Managing Editor. Scope/fit desk rejection only, no referee report.
+  Submitted to *Linguistics and Philosophy* on 2026-08-26 as LING-D-26-00197. The earlier *Functions of
+  Language* submission (FOL-26063) was rejected on 2026-06-26 as outside scope, without a referee report.
+  The LingBuzz preprint remains live as lingbuzz/009706 under the paper''s earlier title. The exact
+  submitted snapshot and the later source-audit delta are recorded in
+  `submission/linguistics-and-philosophy/SUBMITTED-2026-08-26.md`.
 
-  external: rejected with a live preprint, following the schema''s rule and the bresnan-dative precedent;
-  the LingBuzz ID is lingbuzz/009706, from publications.html ("Why clause structure is judged like tense
-  and agreement: public-update operators and grammaticality. Preprint. LingBuzz"), and the title there
-  matches the submitted title exactly. stage: complete, since rejection does not change stage and this
-  manuscript was packaged and sent. The venue-decision gate was cleared on 2026-08-23: Brett approved
-  a *Theoretical Linguistics* presubmission query, with *Lingua* as the immediate fallback. The query
-  remains subject to the recorded current-debate and short-abstract prerequisites.
+  Desk rejected by *Linguistics and Philosophy* on 2026-09-02, seven days after submission, by editor
+  decision with no referee report and no stated reason. Second desk rejection for this paper. Decision
+  letter summarized in `submission/linguistics-and-philosophy/DECISION-2026-09-02.md`. Successor venue
+  undecided.
 
   A sibling remains unregistered: subprojects/asterisk-de-idealized, which the parent STATUS.md records
   as a third LingBuzz subproject preprint in the OVMG family (lingbuzz/009713 per publications.html, "De-idealizing
@@ -45,11 +43,67 @@ notes: 'A subproject of grammaticality-de-idealized with its own STATUS.md, DECI
 # STATUS.md - The Operator Stratum
 
 **Created:** 2026-01-24
-**Last updated:** 2026-08-24
-**Status:** Desk rejected by *Functions of Language* for scope/fit; reconstructed for possible *Linguistics and Philosophy* submission; reader review next
+**Last updated:** 2026-09-02
+**Status:** Desk rejected by *Linguistics and Philosophy* on 2026-09-02 (LING-D-26-00197, submitted 2026-08-26); successor venue undecided
 **LingBuzz:** Uploaded 2026-01-25
 **Journal submission:** Submitted to *Functions of Language* 2026-06-02; rejected 2026-06-26 as outside the journal's scope.
 **Parent project:** Grammaticality_de_idealized (OVMG)
+
+### 2026-09-02 Linguistics and Philosophy decision
+- Rejected by editor decision, relayed by the Springer editorial office: the
+  manuscript "is not suitable for publication in Linguistics and Philosophy."
+  No referee report, no stated reason. Seven days from submission to decision.
+- Springer's Transfer Desk email with journal suggestions is promised within
+  48 hours.
+- Record: `submission/linguistics-and-philosophy/DECISION-2026-09-02.md`. The
+  submitted 27-page package stays archived as the L&P baseline.
+- Next: a fresh venue-decision record before any repackaging. Second desk
+  rejection for this paper (FoL 2026-06-26, scope; L&P 2026-09-02, no reason).
+
+### 2026-08-26 Linguistics and Philosophy submission
+- Submitted to *Linguistics and Philosophy* on 2026-08-26 as manuscript
+  LING-D-26-00197.
+- The uploaded review manuscript was `submission/linguistics-and-philosophy/lp-anonymous.pdf`,
+  the 27-page anonymous package built on 2026-08-26 at 10:02. Preserve it as the
+  submitted version.
+- The working master subsequently reached 28 pages and 45 cited works after the
+  final source-grounding pass. Those later changes were not included in the uploaded
+  manuscript. They include the OQLF source for French *h muet*, the Pullum quotation,
+  exact locators and quotations for central sources, and several narrowed or corrected
+  source attributions.
+- These changes do not alter the paper's central thesis or architecture. If a revision
+  is invited, rebuild the anonymous manuscript, editable-source archive, and portal
+  materials from the current master before responding.
+
+### 2026-08-25 Final manuscript gates and venue decision
+- Brett approved *Linguistics and Philosophy* as the target for the reconstructed
+  article, superseding the earlier *Theoretical Linguistics* query plan. Decision
+  record: `submission/venue-decision-2026-08-25-linguistics-and-philosophy.md`.
+- Ox Alpha and Claude Fable 5 independently returned `READY AFTER MINOR FIXES`.
+  The accepted fixes were implemented: source verification, Pullum's normativity
+  precedent, asterisk convention, metadata consistency, figure/table anchoring,
+  and a precise outcome-blind sense of evidential independence.
+- Page-specific claims were rechecked against Roberts, Boersma, Boye and Harder,
+  Abrusán, Poulsen, Nørgård-Sørensen and Heltoft, Coppock and Staum, Bary,
+  Simons, Heltoft, Pullum, and Simonenko and Carlier. The Amele contrast remains
+  explicitly a constructed, unvalidated template.
+- Final exact-text gates are green: 12,055 words by the pass board; 191-word
+  abstract; six keywords; 44 cited sources; 27-page XeLaTeX/Biber PDF; no missing
+  citations, undefined references, Biber warnings, or overfull boxes; all pages
+  visually inspected with embedded fonts.
+- The 2026-08-26 cited-source intake now supplies a permanent usable local source
+  for all 44 cited works: 41 exact/full copies and three complete later-edition
+  surrogates (Goodman 1955, Chomsky 1995, and Saussure 1916). The exact 1987
+  Croom Helm *Amele* scan is complete, structurally sound, and visually checked at
+  the manuscript's page locators.
+- The submission package is complete in
+  `submission/linguistics-and-philosophy/`: identity-free review PDF, separate
+  title page and declarations, a self-contained source archive that rebuilds from
+  a clean temporary directory, portal metadata, and an optional privacy-scrubbed
+  DOCX fallback. The PDFs passed visual inspection. The DOCX passed structural,
+  textual, cross-reference, citation, and privacy checks; full Word rendering
+  wasn't available because LibreOffice is not installed and Word's scripted PDF
+  export did not complete.
 
 ### 2026-08-24 Final philosophical revision
 - Made the architecture consistent as five bearers and six explanatory questions: norm constitution, token conformity, semantic or pragmatic consequence, response target, response cause, and epistemic warrant.

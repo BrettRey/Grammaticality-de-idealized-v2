@@ -2,6 +2,42 @@
 
 Append-only record of project decisions. Keep entries short and date-stamped.
 
+## 2026-09-02
+
+- **Record the *Linguistics and Philosophy* desk rejection and reopen the venue
+  question.** LING-D-26-00197 was rejected by editor decision on 2026-09-02,
+  seven days after submission, with no referee report and no stated reason.
+  No successor venue is chosen; the next step is a fresh venue-decision record,
+  not a repackaging. The submitted 27-page package stays archived as the L&P
+  baseline.
+
+## 2026-08-26
+
+- **Submit the reconstructed paper to *Linguistics and Philosophy*.** The paper
+  was submitted as LING-D-26-00197. The journal now replaces *Functions of
+  Language* as the live external venue.
+- **Preserve the uploaded manuscript and carry the later source-audit delta into
+  any revision.** The submitted file was the 27-page anonymous package built at
+  10:02, before the working master acquired the final OQLF source, Pullum
+  quotation, precise locators, and narrowed attributions. These changes don't
+  alter the central thesis, so Brett chose not to replace the submission. The
+  exact delta is recorded in
+  `submission/linguistics-and-philosophy/SUBMITTED-2026-08-26.md`.
+
+## 2026-08-25
+
+- **Prepare the reconstructed paper for *Linguistics and Philosophy*.** Brett
+  approved the venue direction after the constitutive reconstruction and final
+  reader review. This supersedes the 2026-08-23 *Theoretical Linguistics*
+  presubmission-query plan. The live package requirements are double-blind review,
+  a separate title page and declarations, a 150–250-word abstract, four to six
+  keywords, and editable files. Record:
+  `submission/venue-decision-2026-08-25-linguistics-and-philosophy.md`.
+- **Stop broad manuscript revision.** Ox Alpha and Claude Fable 5 independently
+  returned `READY AFTER MINOR FIXES`; accepted findings were source-verified and
+  implemented. Further participant-study operationalization belongs to companion
+  empirical work unless a referee later makes it necessary.
+
 ## 2026-06-26
 
 - **Treat the Functions of Language rejection as a venue-fit signal.** Article FOL-26063 was rejected on 2026-06-26 because the manuscript was judged outside the journal's scope. No referee report or substantive criticism was provided, so the manuscript should be retargeted rather than revised on theoretical grounds.
