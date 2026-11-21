@@ -153,3 +153,7 @@ The earlier calculations cover [choice at different payoffs](payoff.py),
 [learning from the exposure histories](shared_history.py) and
 [paired judgment and production](joint_measurement.py). The last calculation
 regenerates [the synthetic design results](joint_measurement_results.json).
+
+The [English perfect comparison](english-perfect-contrast.md) takes the question
+into British conversation, screens *yesterday* reports in BNC Baby and tests
+what can be inferred from form choice and a listener’s choice of temporal anchor.
