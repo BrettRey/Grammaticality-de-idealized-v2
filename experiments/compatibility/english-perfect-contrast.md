@@ -48,6 +48,11 @@ Park the two-goal form-choice comparison as an architectural test. The English e
 
 The [listener follow-up](listener-anchor.md) crosses a post-report cue with independent anchor controls, tests the resulting prediction on the second cue, and gives an exact attention-based duplicate.
 
+The [spoken development cases](spoken-perfect-development.md) recover positive
+reports missed by the first-person screen, including a dated completion with
+the manuscript's verb *finish*. They trace what the interlocutors say next
+and derive the common weekday prediction of two different analyses.
+
 ## Replay
 
 ```sh
