@@ -36,11 +36,18 @@ rules. They agree on every training scene; only the readout on the new
 trajectory differs. This probes sensitivity to an interruption. A strategy
 that tracks which cabinet was unlocked can also produce the continuity
 pattern. The result is specific to the miniature language.
+
+The earlier/later lists isolate the time word on a single lock-unlock-lock
+log. Both test words have occurred only with Q; exposure to P uses a third
+time word. Within a history and list version, randomize which word is used
+on the single primary probe. Compare later minus earlier endorsement,
+standardizing over versions. These lists form a separate design.
 """
 
 import argparse
 from collections import Counter
 from dataclasses import dataclass
+from itertools import combinations
 import json
 from random import Random
 
@@ -51,7 +58,8 @@ from shared_history import HISTORIES, TRUTH_SLIP, observed, posterior
 
 ARMS = {"restricted": "P only while still locked", "split": "P equally often after reopening"}
 PATHS = ("continuous", "reopened", "restored")
-WINDOWS = {"morning": (9, 11), "afternoon": (13, 15)}
+NAMED_WINDOWS = {"earlier": "morning", "later": "afternoon"}
+WINDOWS = {"morning": (9, 11), "midday": (11, 13), "afternoon": (13, 15)}
 COLORS = ("blue", "green", "orange")
 
 
@@ -62,8 +70,14 @@ class Event:
     action: str
 
 
+TWO_LOCKS = (Event(10, "target", "locks"), Event(12, "target", "unlocks"),
+             Event(14, "target", "locks"))
+
+
 def trajectory(window, path):
     """Only 'other' is locked initially. Events are the complete change log."""
+    if path == "twice":
+        return TWO_LOCKS
     unlock, relock = {
         "continuous": ("other", "other"),
         "reopened": ("target", "spare"),
@@ -83,6 +97,10 @@ def readings(events, window, rule):
     target_events = [e for e in events if e.cabinet == "target"]
     if rule == "endpoint":
         return broad and target_events[-1].action == "locks", broad
+    if rule == "ever-unlocked":
+        return broad and all(e.action != "unlocks" for e in target_events), broad
+    if rule == "last-lock":
+        return broad and target_events[-1] in eligible, broad
     if rule == "continuity":
         uninterrupted = any(all(later.action != "unlocks" for later in target_events
                                 if later.hour > event.hour) for event in eligible)
@@ -109,6 +127,17 @@ def make_list(arm, probe, version):
     trained, held = ("morning", "afternoon") if version % 2 else ("afternoon", "morning")
     times = dict(zip(("morning", "afternoon"),
                      ("vek", "nif") if version % 4 < 2 else ("nif", "vek")))
+    primary_path = probe
+    example_windows = list(times)
+    checked_windows = [held]
+    if probe in NAMED_WINDOWS:
+        trained, held = "midday", NAMED_WINDOWS[probe]
+        times[trained] = "lom"
+        if version % 2:
+            example_windows.reverse()
+        example_windows.append(trained)
+        checked_windows = example_windows[:2]
+        primary_path = "twice"
     particles = {"P": "pa", "Q": "ti"}
     if (version // 4 + version % 2) % 2:
         particles = {"P": "ti", "Q": "pa"}
@@ -129,13 +158,19 @@ def make_list(arm, probe, version):
         }
 
     tutorial = []
-    for window in WINDOWS:
+    for window in example_windows:
         for path in ("continuous", "reopened"):
             tutorial.append({"example": trial(101 + len(tutorial), window, path, "Q"),
                              "true": True})
     for path in ("continuous", "reopened"):
         tutorial.append({"example": trial(101 + len(tutorial), trained, path, "P", bare=True),
                          "true": path == "continuous"})
+    checks = []
+    for window in checked_windows:
+        checks.append({"scene": trial(26 + len(checks), window, "reopened", "Q"),
+                       "expected_truth": True})
+        checks.append({"scene": trial(26 + len(checks), trained, "reopened", "Q",
+                                      say_window=window), "expected_truth": False})
     return {
         "instructions": (
             "Each log lists every change to the locks at one site. At the start only "
@@ -148,15 +183,48 @@ def make_list(arm, probe, version):
         "familiarization_with_feedback": tutorial,
         "training": [trial(i, trained, path, particle)
                      for i, (particle, path) in enumerate(exposure_schedule(arm, version), 1)],
-        "primary": {"scene": trial(25, held, probe, "P"),
+        "primary": {"scene": trial(25, held, primary_path, "P"),
                     "question": "Is this speaker's description of the target cabinet true?",
                     "responses": ["true", "false"]},
-        "post_probe_checks": [
-            {"scene": trial(26, held, "reopened", "Q"), "expected_truth": True},
-            {"scene": trial(27, trained, "reopened", "Q", say_window=held),
-             "expected_truth": False},
-        ],
+        "post_probe_checks": checks,
     }
+
+
+def verify_word_pair(arm, version):
+    earlier, later = (make_list(arm, probe, version) for probe in ("earlier", "later"))
+    early_word, *rest = earlier["primary"]["scene"]["utterance"].split()
+    late_word, *late_rest = later["primary"]["scene"]["utterance"].split()
+    assert (early_word, late_word) == (earlier["time_words"]["morning"],
+                                       earlier["time_words"]["afternoon"])
+    assert rest == late_rest
+    training = [x["utterance"].split() for x in earlier["training"]]
+    assert all(words[0] == earlier["time_words"]["midday"] for words in training)
+    examples = [x["example"]["utterance"].split()
+                for x in earlier["familiarization_with_feedback"]]
+    for word in (early_word, late_word):
+        familiar = [words for words in examples if words[0] == word]
+        assert len(familiar) == 2 and all(words[-1] != rest[-1] for words in familiar)
+    # Equality of the complete lists after replacing the one test word.
+    earlier["primary"]["scene"]["utterance"] = " ".join([late_word, *rest])
+    assert earlier == later
+
+
+def verify_lock_rules():
+    # Every subset of nine possible change times, with either initial state.
+    hours = range(8, 17)
+    for size in range(len(hours) + 1):
+        for change_times in combinations(hours, size):
+            for actions in (("locks", "unlocks"), ("unlocks", "locks")):
+                log = [Event(hour, "target", actions[i % 2])
+                       for i, hour in enumerate(change_times)]
+                for window in WINDOWS:
+                    assert (readings(log, window, "last-lock")[0]
+                            == readings(log, window, "continuity")[0])
+    for window in NAMED_WINDOWS.values():
+        later = window == "afternoon"
+        assert readings(TWO_LOCKS, window, "continuity") == (later, True)
+        assert readings(TWO_LOCKS, window, "ever-unlocked") == (False, True)
+        assert readings(TWO_LOCKS, window, "endpoint") == (True, True)
 
 
 def verify_lists():
@@ -177,6 +245,7 @@ def verify_lists():
             assert primary["utterance"] not in {x["utterance"] for x in lists[0]["training"]}
             assert primary["utterance"] not in {
                 x["example"]["utterance"] for x in lists[0]["familiarization_with_feedback"]}
+            verify_word_pair(arm, v)
     for window in WINDOWS:
         for path in PATHS:
             events = trajectory(window, path)
@@ -189,8 +258,17 @@ def verify_lists():
                     locked.remove(event.cabinet)
             assert readings(events, window, "continuity") == (path == "continuous", True)
             assert readings(events, window, "endpoint") == (path != "reopened", True)
+            if path in ("continuous", "reopened"):
+                for rule in ("ever-unlocked", "last-lock", "endpoint"):
+                    assert readings(events, window, rule) == readings(events, window, "continuity")
             for wrong in WINDOWS.keys() - {window}:
                 assert readings(events, wrong, "continuity") == (False, False)
+
+
+def endorsement(a, b, mass, events, window, rule):
+    narrow, broad = readings(events, window, rule)
+    availability = a * ((1 - b) * narrow + b * broad)
+    return np.sum(mass * observed(availability, TRUTH_SLIP))
 
 
 def predictions():
@@ -201,15 +279,20 @@ def predictions():
         for rule in ("continuity", "endpoint"):
             rates = []
             for path in PATHS:
-                narrow, broad = readings(trajectory("morning", path), "morning", rule)
-                availability = a * ((1 - b) * narrow + b * broad)
-                rates.append(np.sum(mass * observed(availability, TRUTH_SLIP)))
+                rates.append(endorsement(a, b, mass, trajectory("morning", path), "morning", rule))
             restored[arm, rule] = rates[-1]
             print(f"{arm:10s} {rule:10s} " + " ".join(f"{rate:.4f}" for rate in rates))
     print("Restored B, split minus restricted (percentage points):")
     for rule in ("continuity", "endpoint"):
         effect = restored["split", rule] - restored["restricted", rule]
         print(f"{rule:10s} {100 * effect:+.2f}")
+    print("Same scene, two locks: earlier P(true), later P(true), later minus earlier (points)")
+    for arm, history_name in ARMS.items():
+        a, b, mass, _ = posterior("hard", HISTORIES[history_name])
+        for rule in ("continuity", "ever-unlocked", "endpoint", "last-lock"):
+            early, late = (endorsement(a, b, mass, TWO_LOCKS, w, rule)
+                           for w in NAMED_WINDOWS.values())
+            print(f"{arm:10s} {rule:14s} {early:.4f} {late:.4f} {100 * (late - early):+.2f}")
 
 
 if __name__ == "__main__":
@@ -218,9 +301,10 @@ if __name__ == "__main__":
     args = parser.parse_args()
     if args.list is None:
         verify_lists()
+        verify_lock_rules()
         predictions()
     else:
         arm, probe, v = args.list
-        if arm not in ARMS or probe not in PATHS or v not in map(str, range(16)):
-            parser.error("choose restricted/split, continuous/reopened/restored, and 0..15")
+        if arm not in ARMS or probe not in (*PATHS, *NAMED_WINDOWS) or v not in map(str, range(16)):
+            parser.error("choose restricted/split, continuous/reopened/restored/earlier/later, and 0..15")
         print(json.dumps(make_list(arm, probe, int(v)), indent=2))
