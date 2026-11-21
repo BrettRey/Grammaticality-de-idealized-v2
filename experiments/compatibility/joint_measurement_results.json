@@ -1,0 +1,652 @@
+{
+  "seed": 20261121,
+  "replications": 4000,
+  "payoff_share": 0.5,
+  "transfer_range": [
+    0.8,
+    1.0
+  ],
+  "history": "P equally often after reopening",
+  "split_history_moments": {
+    "mean_g": 0.3299648656082735,
+    "mean_g_squared": 0.13865592339170263
+  },
+  "cell_order": [
+    "reject_other",
+    "reject_P",
+    "endorse_other",
+    "endorse_P"
+  ],
+  "no_carryover_witnesses": {
+    "fixed_third": {
+      "shared": [
+        0.61,
+        0.04,
+        0.18999999999999997,
+        0.16
+      ],
+      "independent": [
+        0.52,
+        0.13,
+        0.27999999999999997,
+        0.07
+      ]
+    },
+    "split_history": {
+      "shared": [
+        0.61295583042874,
+        0.04007579052381385,
+        0.1885599800475369,
+        0.15840839899990924
+      ],
+      "independent": [
+        0.5354757088310288,
+        0.11755591212152505,
+        0.2660401016452481,
+        0.08092827740219805
+      ]
+    }
+  },
+  "results": [
+    {
+      "scenario": {
+        "label": "shared gate or shared personal threshold",
+        "sharing": 1,
+        "slip_range": [
+          0.02,
+          0.08
+        ],
+        "carry": [
+          0.25,
+          0.05
+        ],
+        "target_extra_production_slip": 0.0
+      },
+      "families": 12,
+      "learners_per_condition_order_family": 8,
+      "learners": 576,
+      "discordance_excess": {
+        "population_reference": -2.5493172498417417e-21,
+        "mean_estimate": -4.267999281907675e-05,
+        "median_95ci_half_width": 0.03572699179368196,
+        "coverage": 0.95475,
+        "positive_95ci": 0.01625,
+        "negative_95ci": 0.029
+      },
+      "production_excess": {
+        "population_reference": 2.663736487670023e-19,
+        "mean_estimate": -0.0003183467366928458,
+        "median_95ci_half_width": 0.06438799344058853,
+        "coverage": 0.95025,
+        "positive_95ci": 0.0235,
+        "negative_95ci": 0.02625
+      },
+      "target_order_difference_production_first_minus_truth_first": {
+        "reject_and_produce": {
+          "population_reference": 0.008156812248709861,
+          "mean_estimate": 0.007473958333333333,
+          "median_95ci_half_width": 0.053545769476453786,
+          "coverage": 0.94975,
+          "positive_95ci": 0.03375,
+          "negative_95ci": 0.0105
+        },
+        "endorse": {
+          "population_reference": 0.002039203062177466,
+          "mean_estimate": 0.002421875,
+          "median_95ci_half_width": 0.1415000359645359,
+          "coverage": 0.9445,
+          "positive_95ci": 0.027,
+          "negative_95ci": 0.02625
+        },
+        "produce": {
+          "population_reference": 0.010196015310887329,
+          "mean_estimate": 0.010341145833333332,
+          "median_95ci_half_width": 0.11792232498472807,
+          "coverage": 0.94575,
+          "positive_95ci": 0.04125,
+          "negative_95ci": 0.01825
+        }
+      }
+    },
+    {
+      "scenario": {
+        "label": "shared gate or shared personal threshold",
+        "sharing": 1,
+        "slip_range": [
+          0.02,
+          0.08
+        ],
+        "carry": [
+          0.25,
+          0.05
+        ],
+        "target_extra_production_slip": 0.0
+      },
+      "families": 24,
+      "learners_per_condition_order_family": 12,
+      "learners": 1728,
+      "discordance_excess": {
+        "population_reference": -1.2313743102133889e-20,
+        "mean_estimate": 0.00016574393937296493,
+        "median_95ci_half_width": 0.019716432111918425,
+        "coverage": 0.948,
+        "positive_95ci": 0.0205,
+        "negative_95ci": 0.0315
+      },
+      "production_excess": {
+        "population_reference": 3.2699571603400563e-19,
+        "mean_estimate": 0.0005013145263835837,
+        "median_95ci_half_width": 0.03539687190080121,
+        "coverage": 0.95325,
+        "positive_95ci": 0.02525,
+        "negative_95ci": 0.0215
+      },
+      "target_order_difference_production_first_minus_truth_first": {
+        "reject_and_produce": {
+          "population_reference": 0.00816114154446061,
+          "mean_estimate": 0.007981770833333334,
+          "median_95ci_half_width": 0.03054772517664012,
+          "coverage": 0.94775,
+          "positive_95ci": 0.06925,
+          "negative_95ci": 0.0065
+        },
+        "endorse": {
+          "population_reference": 0.002040285386115153,
+          "mean_estimate": 0.00246875,
+          "median_95ci_half_width": 0.0789331072335662,
+          "coverage": 0.95375,
+          "positive_95ci": 0.02625,
+          "negative_95ci": 0.02125
+        },
+        "produce": {
+          "population_reference": 0.010201426930575765,
+          "mean_estimate": 0.010328125,
+          "median_95ci_half_width": 0.06480151086667578,
+          "coverage": 0.95225,
+          "positive_95ci": 0.04825,
+          "negative_95ci": 0.00925
+        }
+      }
+    },
+    {
+      "scenario": {
+        "label": "independent graded choices",
+        "sharing": 0,
+        "slip_range": [
+          0.02,
+          0.08
+        ],
+        "carry": [
+          0.25,
+          0.05
+        ],
+        "target_extra_production_slip": 0.0
+      },
+      "families": 12,
+      "learners_per_condition_order_family": 8,
+      "learners": 576,
+      "discordance_excess": {
+        "population_reference": 0.06355435478265299,
+        "mean_estimate": 0.06418115219764126,
+        "median_95ci_half_width": 0.051100264581394515,
+        "coverage": 0.94675,
+        "positive_95ci": 0.688,
+        "negative_95ci": 0.0
+      },
+      "production_excess": {
+        "population_reference": -0.010280845133641484,
+        "mean_estimate": -0.00922269901493804,
+        "median_95ci_half_width": 0.07579182146338384,
+        "coverage": 0.94625,
+        "positive_95ci": 0.013,
+        "negative_95ci": 0.049
+      },
+      "target_order_difference_production_first_minus_truth_first": {
+        "reject_and_produce": {
+          "population_reference": 0.02307678186802174,
+          "mean_estimate": 0.0235,
+          "median_95ci_half_width": 0.09170771500381827,
+          "coverage": 0.957,
+          "positive_95ci": 0.076,
+          "negative_95ci": 0.00525
+        },
+        "endorse": {
+          "population_reference": 0.0057691954670054365,
+          "mean_estimate": 0.006630208333333333,
+          "median_95ci_half_width": 0.14417639667776794,
+          "coverage": 0.947,
+          "positive_95ci": 0.03175,
+          "negative_95ci": 0.0205
+        },
+        "produce": {
+          "population_reference": 0.028845977335027178,
+          "mean_estimate": 0.03029427083333333,
+          "median_95ci_half_width": 0.11484288124475735,
+          "coverage": 0.951,
+          "positive_95ci": 0.0725,
+          "negative_95ci": 0.00675
+        }
+      }
+    },
+    {
+      "scenario": {
+        "label": "independent graded choices",
+        "sharing": 0,
+        "slip_range": [
+          0.02,
+          0.08
+        ],
+        "carry": [
+          0.25,
+          0.05
+        ],
+        "target_extra_production_slip": 0.0
+      },
+      "families": 24,
+      "learners_per_condition_order_family": 12,
+      "learners": 1728,
+      "discordance_excess": {
+        "population_reference": 0.06354478183740248,
+        "mean_estimate": 0.06373315735873195,
+        "median_95ci_half_width": 0.02839635672502494,
+        "coverage": 0.952,
+        "positive_95ci": 0.99675,
+        "negative_95ci": 0.0
+      },
+      "production_excess": {
+        "population_reference": -0.010279173188520374,
+        "mean_estimate": -0.00981294276187501,
+        "median_95ci_half_width": 0.04161482543811157,
+        "coverage": 0.95375,
+        "positive_95ci": 0.00725,
+        "negative_95ci": 0.06425
+      },
+      "target_order_difference_production_first_minus_truth_first": {
+        "reject_and_produce": {
+          "population_reference": 0.02308780345527241,
+          "mean_estimate": 0.02259288194444444,
+          "median_95ci_half_width": 0.05048023583397415,
+          "coverage": 0.95025,
+          "positive_95ci": 0.13775,
+          "negative_95ci": 0.0025
+        },
+        "endorse": {
+          "population_reference": 0.005771950863818105,
+          "mean_estimate": 0.0066996527777777775,
+          "median_95ci_half_width": 0.07970376448105855,
+          "coverage": 0.95175,
+          "positive_95ci": 0.03625,
+          "negative_95ci": 0.0175
+        },
+        "produce": {
+          "population_reference": 0.028859754319090526,
+          "mean_estimate": 0.028794270833333333,
+          "median_95ci_half_width": 0.06352545599554975,
+          "coverage": 0.9485,
+          "positive_95ci": 0.137,
+          "negative_95ci": 0.00175
+        }
+      }
+    },
+    {
+      "scenario": {
+        "label": "half shared; noisier responses",
+        "sharing": 0.5,
+        "slip_range": [
+          0.05,
+          0.15
+        ],
+        "carry": [
+          0.5,
+          0.2
+        ],
+        "target_extra_production_slip": 0.0
+      },
+      "families": 12,
+      "learners_per_condition_order_family": 8,
+      "learners": 576,
+      "discordance_excess": {
+        "population_reference": 0.019341639614270312,
+        "mean_estimate": 0.019335145876821364,
+        "median_95ci_half_width": 0.04791419338963451,
+        "coverage": 0.944,
+        "positive_95ci": 0.104,
+        "negative_95ci": 0.005
+      },
+      "production_excess": {
+        "population_reference": -0.008927481705039748,
+        "mean_estimate": -0.008544016642875739,
+        "median_95ci_half_width": 0.0763125185460691,
+        "coverage": 0.9485,
+        "positive_95ci": 0.01175,
+        "negative_95ci": 0.04425
+      },
+      "target_order_difference_production_first_minus_truth_first": {
+        "reject_and_produce": {
+          "population_reference": 0.032280340746932014,
+          "mean_estimate": 0.0324296875,
+          "median_95ci_half_width": 0.07820860213660086,
+          "coverage": 0.95525,
+          "positive_95ci": 0.11675,
+          "negative_95ci": 0.00075
+        },
+        "endorse": {
+          "population_reference": 0.02152022716462134,
+          "mean_estimate": 0.019059895833333333,
+          "median_95ci_half_width": 0.14696663690722123,
+          "coverage": 0.953,
+          "positive_95ci": 0.041,
+          "negative_95ci": 0.01275
+        },
+        "produce": {
+          "population_reference": 0.05380056791155335,
+          "mean_estimate": 0.05341145833333333,
+          "median_95ci_half_width": 0.11953226058396908,
+          "coverage": 0.953,
+          "positive_95ci": 0.13525,
+          "negative_95ci": 0.00125
+        }
+      }
+    },
+    {
+      "scenario": {
+        "label": "half shared; noisier responses",
+        "sharing": 0.5,
+        "slip_range": [
+          0.05,
+          0.15
+        ],
+        "carry": [
+          0.5,
+          0.2
+        ],
+        "target_extra_production_slip": 0.0
+      },
+      "families": 24,
+      "learners_per_condition_order_family": 12,
+      "learners": 1728,
+      "discordance_excess": {
+        "population_reference": 0.019362237659071246,
+        "mean_estimate": 0.019397081224780805,
+        "median_95ci_half_width": 0.026409138740236114,
+        "coverage": 0.95175,
+        "positive_95ci": 0.28775,
+        "negative_95ci": 0.0005
+      },
+      "production_excess": {
+        "population_reference": -0.00893707268334619,
+        "mean_estimate": -0.008695678875986225,
+        "median_95ci_half_width": 0.041769695421798106,
+        "coverage": 0.94925,
+        "positive_95ci": 0.00825,
+        "negative_95ci": 0.0645
+      },
+      "target_order_difference_production_first_minus_truth_first": {
+        "reject_and_produce": {
+          "population_reference": 0.032250841164596665,
+          "mean_estimate": 0.03262239583333334,
+          "median_95ci_half_width": 0.04278359641931624,
+          "coverage": 0.94175,
+          "positive_95ci": 0.32875,
+          "negative_95ci": 0.0005
+        },
+        "endorse": {
+          "population_reference": 0.02150056077639777,
+          "mean_estimate": 0.021765625,
+          "median_95ci_half_width": 0.08069669113766625,
+          "coverage": 0.95175,
+          "positive_95ci": 0.07925,
+          "negative_95ci": 0.006
+        },
+        "produce": {
+          "population_reference": 0.05375140194099443,
+          "mean_estimate": 0.05420746527777777,
+          "median_95ci_half_width": 0.06642543229265395,
+          "coverage": 0.95025,
+          "positive_95ci": 0.35625,
+          "negative_95ci": 0.0
+        }
+      }
+    },
+    {
+      "scenario": {
+        "label": "shared gate; target-only extra production slips",
+        "sharing": 1,
+        "slip_range": [
+          0.02,
+          0.08
+        ],
+        "carry": [
+          0.25,
+          0.05
+        ],
+        "target_extra_production_slip": 0.07
+      },
+      "families": 12,
+      "learners_per_condition_order_family": 8,
+      "learners": 576,
+      "discordance_excess": {
+        "population_reference": 0.03979508939896376,
+        "mean_estimate": 0.04029818017982642,
+        "median_95ci_half_width": 0.046219394217624825,
+        "coverage": 0.9505,
+        "positive_95ci": 0.3825,
+        "negative_95ci": 0.00025
+      },
+      "production_excess": {
+        "population_reference": 0.042775017721328586,
+        "mean_estimate": 0.04400482519618533,
+        "median_95ci_half_width": 0.07038313928681672,
+        "coverage": 0.948,
+        "positive_95ci": 0.22475,
+        "negative_95ci": 0.00075
+      },
+      "target_order_difference_production_first_minus_truth_first": {
+        "reject_and_produce": {
+          "population_reference": 0.01752081629354864,
+          "mean_estimate": 0.01633333333333333,
+          "median_95ci_half_width": 0.07911980105891576,
+          "coverage": 0.9555,
+          "positive_95ci": 0.05575,
+          "negative_95ci": 0.00625
+        },
+        "endorse": {
+          "population_reference": 0.004380204073387161,
+          "mean_estimate": 0.0039062499999999996,
+          "median_95ci_half_width": 0.14417639667776794,
+          "coverage": 0.95725,
+          "positive_95ci": 0.023,
+          "negative_95ci": 0.0175
+        },
+        "produce": {
+          "population_reference": 0.021901020366935805,
+          "mean_estimate": 0.019864583333333335,
+          "median_95ci_half_width": 0.1282120251455886,
+          "coverage": 0.95,
+          "positive_95ci": 0.04725,
+          "negative_95ci": 0.01075
+        }
+      }
+    },
+    {
+      "scenario": {
+        "label": "shared gate; target-only extra production slips",
+        "sharing": 1,
+        "slip_range": [
+          0.02,
+          0.08
+        ],
+        "carry": [
+          0.25,
+          0.05
+        ],
+        "target_extra_production_slip": 0.07
+      },
+      "families": 24,
+      "learners_per_condition_order_family": 12,
+      "learners": 1728,
+      "discordance_excess": {
+        "population_reference": 0.03979735516652844,
+        "mean_estimate": 0.03971372939936602,
+        "median_95ci_half_width": 0.025498505252565085,
+        "coverage": 0.95175,
+        "positive_95ci": 0.87525,
+        "negative_95ci": 0.0
+      },
+      "production_excess": {
+        "population_reference": 0.042780469513440875,
+        "mean_estimate": 0.043009502797955804,
+        "median_95ci_half_width": 0.038980344653912785,
+        "coverage": 0.95425,
+        "positive_95ci": 0.576,
+        "negative_95ci": 0.0
+      },
+      "target_order_difference_production_first_minus_truth_first": {
+        "reject_and_produce": {
+          "population_reference": 0.01752206945757046,
+          "mean_estimate": 0.017569444444444443,
+          "median_95ci_half_width": 0.044176291369894996,
+          "coverage": 0.94925,
+          "positive_95ci": 0.11975,
+          "negative_95ci": 0.0025
+        },
+        "endorse": {
+          "population_reference": 0.0043805173643926155,
+          "mean_estimate": 0.0032413194444444442,
+          "median_95ci_half_width": 0.0789686306913613,
+          "coverage": 0.93925,
+          "positive_95ci": 0.0375,
+          "negative_95ci": 0.021
+        },
+        "produce": {
+          "population_reference": 0.021902586821963076,
+          "mean_estimate": 0.021190104166666664,
+          "median_95ci_half_width": 0.07056814423324347,
+          "coverage": 0.947,
+          "positive_95ci": 0.0885,
+          "negative_95ci": 0.0055
+        }
+      }
+    },
+    {
+      "scenario": {
+        "label": "independent; equal carryover in both orders",
+        "sharing": 0,
+        "slip_range": [
+          0.02,
+          0.08
+        ],
+        "carry": [
+          0.4,
+          0.4
+        ],
+        "target_extra_production_slip": 0.0
+      },
+      "families": 12,
+      "learners_per_condition_order_family": 8,
+      "learners": 576,
+      "discordance_excess": {
+        "population_reference": 0.0450442889424241,
+        "mean_estimate": 0.044739719983624415,
+        "median_95ci_half_width": 0.043007551052743835,
+        "coverage": 0.9445,
+        "positive_95ci": 0.515,
+        "negative_95ci": 0.0
+      },
+      "production_excess": {
+        "population_reference": -0.022518809328200964,
+        "mean_estimate": -0.022727724568257373,
+        "median_95ci_half_width": 0.07099151832981195,
+        "coverage": 0.954,
+        "positive_95ci": 0.00325,
+        "negative_95ci": 0.08675
+      },
+      "target_order_difference_production_first_minus_truth_first": {
+        "reject_and_produce": {
+          "population_reference": 0.0,
+          "mean_estimate": 0.0004973958333333334,
+          "median_95ci_half_width": 0.076665874605931,
+          "coverage": 0.95125,
+          "positive_95ci": 0.0255,
+          "negative_95ci": 0.02325
+        },
+        "endorse": {
+          "population_reference": 0.04619578637166588,
+          "mean_estimate": 0.04393229166666667,
+          "median_95ci_half_width": 0.14549611661310813,
+          "coverage": 0.94075,
+          "positive_95ci": 0.08425,
+          "negative_95ci": 0.00675
+        },
+        "produce": {
+          "population_reference": 0.04619578637166588,
+          "mean_estimate": 0.04672395833333333,
+          "median_95ci_half_width": 0.11189148067617663,
+          "coverage": 0.945,
+          "positive_95ci": 0.1225,
+          "negative_95ci": 0.003
+        }
+      }
+    },
+    {
+      "scenario": {
+        "label": "independent; equal carryover in both orders",
+        "sharing": 0,
+        "slip_range": [
+          0.02,
+          0.08
+        ],
+        "carry": [
+          0.4,
+          0.4
+        ],
+        "target_extra_production_slip": 0.0
+      },
+      "families": 24,
+      "learners_per_condition_order_family": 12,
+      "learners": 1728,
+      "discordance_excess": {
+        "population_reference": 0.04504459645198828,
+        "mean_estimate": 0.04521095912383782,
+        "median_95ci_half_width": 0.023723360502330416,
+        "coverage": 0.95225,
+        "positive_95ci": 0.975,
+        "negative_95ci": 0.0
+      },
+      "production_excess": {
+        "population_reference": -0.022525022082268278,
+        "mean_estimate": -0.022421411894883787,
+        "median_95ci_half_width": 0.03869674191027462,
+        "coverage": 0.948,
+        "positive_95ci": 0.0005,
+        "negative_95ci": 0.20625
+      },
+      "target_order_difference_production_first_minus_truth_first": {
+        "reject_and_produce": {
+          "population_reference": 0.0,
+          "mean_estimate": 0.00010677083333333331,
+          "median_95ci_half_width": 0.04278359641931624,
+          "coverage": 0.95125,
+          "positive_95ci": 0.026,
+          "negative_95ci": 0.02275
+        },
+        "endorse": {
+          "population_reference": 0.046152736545626454,
+          "mean_estimate": 0.046390625,
+          "median_95ci_half_width": 0.08036242656877467,
+          "coverage": 0.9525,
+          "positive_95ci": 0.2055,
+          "negative_95ci": 0.00075
+        },
+        "produce": {
+          "population_reference": 0.046152736545626454,
+          "mean_estimate": 0.046052083333333334,
+          "median_95ci_half_width": 0.062241260348774405,
+          "coverage": 0.95325,
+          "positive_95ci": 0.3025,
+          "negative_95ci": 0.0
+        }
+      }
+    }
+  ]
+}
