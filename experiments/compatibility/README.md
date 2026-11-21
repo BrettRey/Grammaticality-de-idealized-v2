@@ -75,6 +75,55 @@ both rules fail. The equivalence holds for either initial state. More scenes
 made of these same transitions cannot distinguish the two rules by their
 truth judgments.
 
+## Does the order of exposure change the choice?
+
+Four groups see the same 24 opportunities in the same order and hear the
+target particle P six times. One use of P trades places with the alternative
+Q. It can occur at trial 13, 16, 19 or 22. These four trials have identical
+cabinet logs and refer to different sites. All groups finish with the same
+two Q examples. Afterward each learner chooses between two descriptions of a
+reopened target with the held-out time word. The outcome is the probability of
+choosing P on that first choice. Assign positions equally within each of the
+16 versions. Each learner receives one version at one position.
+
+| Learning rule | P at 13 | P at 16 | P at 19 | P at 22 |
+|---|---:|---:|---:|---:|
+| Stationary model using the counts for each scene | 19.85% | 19.85% | 19.85% | 19.85% |
+| Delta rule with learning rate 0.30 | 19.09% | 19.76% | 21.80% | 28.59% |
+
+The stationary hard and graded learners share the first row at the training
+payoff. The second row uses the independently proposed delta rule and its
+original transfer and choice parameters. All entries are model predictions.
+
+The four positions also test the *shape* of the recency effect. Under the
+delta rule, a P seen at trial $t$ contributes $\eta(1-\eta)^{24-t}$ to final
+strength. With log odds of choosing P linear in that strength, moving one P
+three trials later multiplies its contribution by $(1-\eta)^{-3}$. The five
+fixed uses of P contribute the same amount in every arm. Write $L_t$ for
+the log odds of choosing P in arm $t$, and $D_1=L_{16}-L_{13}$,
+$D_2=L_{19}-L_{16}$ and $D_3=L_{22}-L_{19}$. The model requires
+
+$$
+\frac{D_1}{D_2}=\frac{D_2}{D_3}=(1-\eta)^3.
+$$
+
+When $0<D_1<D_2$, the first three arms imply
+$\eta=1-(D_1/D_2)^{1/3}$ and predict $L_{22}=L_{19}+D_2^2/D_1$.
+This gives a fourth-arm prediction even if the common intercept and transfer
+gain are unknown. In the model example the first two arms differ by only
+0.67 percentage points. With observed data, uncertainty in that difference
+would carry into both the learning rate and the fourth-arm prediction.
+Flat population rates leave the rate unidentified by this contrast.
+
+The inferred rate describes how past choices are weighted. A learner can
+retain the whole history and apply the same geometric weights when choosing
+a description. Expanding the delta recursion gives exactly that weighted
+sum, so the two accounts agree for every history under the shared readout.
+The ratio also assumes a common learning rate and a common linear relation
+between strength and log odds across learners and versions. Mixing different
+response probabilities can change the ratio. Even a clean order effect
+would leave the hard-versus-graded question open.
+
 ## Replay
 
 From the repository root, with Python, NumPy and SciPy installed, run
@@ -94,6 +143,11 @@ checks. List arguments are the history (`restricted` or `split`), probe
 (`continuous`, `reopened`, `restored`, `earlier` or `later`) and version
 (0–15). Each learner would receive a single list. No responses have been
 collected.
+
+Run `python3 experiments/compatibility/exposure_order.py` to check the 64
+order-test lists, reproduce both predictions and reconstruct the fourth arm
+from the first three. Add `--list 22 0` to print the trial-22 list for
+version 0.
 
 The earlier calculations cover [choice at different payoffs](payoff.py),
 [learning from the exposure histories](shared_history.py) and

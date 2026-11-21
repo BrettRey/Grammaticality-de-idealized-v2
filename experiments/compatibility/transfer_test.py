@@ -123,7 +123,9 @@ def exposure_schedule(arm, version):
     return schedule
 
 
-def make_list(arm, probe, version):
+def make_list(arm, probe, version, *, schedule=None):
+    if schedule is None:
+        schedule = exposure_schedule(arm, version)
     trained, held = ("morning", "afternoon") if version % 2 else ("afternoon", "morning")
     times = dict(zip(("morning", "afternoon"),
                      ("vek", "nif") if version % 4 < 2 else ("nif", "vek")))
@@ -182,7 +184,7 @@ def make_list(arm, probe, version):
         "time_words": times,
         "familiarization_with_feedback": tutorial,
         "training": [trial(i, trained, path, particle)
-                     for i, (particle, path) in enumerate(exposure_schedule(arm, version), 1)],
+                     for i, (particle, path) in enumerate(schedule, 1)],
         "primary": {"scene": trial(25, held, primary_path, "P"),
                     "question": "Is this speaker's description of the target cabinet true?",
                     "responses": ["true", "false"]},
