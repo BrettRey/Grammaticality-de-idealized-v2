@@ -224,6 +224,12 @@ P/Q opportunities, the second the probe scene, and the third the list
 version. Add `--before-key` to move that learner's probe ahead of disclosure,
 or `--choice` to elicit a choice of description.
 
+The [finite-sample recovery calculation](disclosure-recovery.md) gives a
+12% chance of detecting full use with the planned crossover test at 256
+post-disclosure learners. It also bounds what any analysis of the same
+responses could recover and shows how reversed badge memories can cancel
+correct use.
+
 ## Replay
 
 From the repository root, with Python, NumPy and SciPy installed, run
