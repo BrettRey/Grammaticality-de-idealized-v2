@@ -124,6 +124,48 @@ between strength and log odds across learners and versions. Mixing different
 response probabilities can change the ratio. Even a clean order effect
 would leave the hard-versus-graded question open.
 
+## Could the speaker have chosen the marker?
+
+In the split history, change a single feature of what learners see. Before
+each recording a cue says “speaker chooses” or “speaker reads an assigned
+message.” The cue reveals no words. All learners hear the same 24 utterances
+in the same order for a given version and see the same scenes. All six uses
+of the target P are free choices, three while the cabinet stays locked and
+three after it reopens. The 18 uses of its competitor Q are split nine per
+scene. In one history the nine Qs in still-locked scenes are freely chosen
+and the other nine are assigned. In the other history the assignment is
+reversed. A forced Q supplies no evidence about what the speaker would
+have chosen. This assumes the device assigns a message before the speaker
+can choose, independently of the speaker's repertoire.
+
+| Scene in which Q was freely chosen | Endorse P, still locked | Endorse P, reopened | Produce P, still locked | Produce P, reopened |
+|---|---:|---:|---:|---:|
+| Still locked | 67.17% | 52.77% | 36.09% | 28.88% |
+| Reopened | 75.54% | 43.88% | 40.27% | 24.44% |
+
+These are predictions for the familiar but untrained adverb B. Each learner
+would receive one primary probe, with no assignment cue or feedback. Use
+independent groups for truth and form choice. In the original two-parameter
+learner, free Qs after reopening specifically count against the broader
+reading that would allow P there. Meanwhile all three still-locked P choices
+face zero freely chosen Qs in that scene, supporting the narrower use.
+Moving the informative omissions therefore predicts opposite changes.
+
+The hard and graded models yield the same table at the training payoff.
+With their specified response rules the production interaction is exactly
+half the truth interaction. A learner that uses only the positive P tokens,
+or that processes every recording as freely chosen, receives the same
+relevant history in both arms and predicts zero difference between arms.
+An interaction would show sensitivity to the circumstances of non-use.
+Selective attention to freely chosen messages could also yield it.
+The cue manipulates the speaker's freedom of choice while keeping the
+intended message fixed. Whether learners spontaneously recognize semantic
+opportunities in conversation remains a separate question.
+
+Run `python3 experiments/compatibility/opportunity_choice.py` to check the
+16 matched histories and reproduce the table and the comparison that ignores
+the cue.
+
 ## Replay
 
 From the repository root, with Python, NumPy and SciPy installed, run
@@ -157,3 +199,5 @@ regenerates [the synthetic design results](joint_measurement_results.json).
 The [English perfect comparison](english-perfect-contrast.md) takes the question
 into British conversation, screens *yesterday* reports in BNC Baby and tests
 what can be inferred from form choice and a listener’s choice of temporal anchor.
+The [listener design](listener-anchor.md) checks whether that anchor predicts
+responses under an independently varied attention cue.

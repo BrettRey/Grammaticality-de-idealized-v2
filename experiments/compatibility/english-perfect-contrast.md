@@ -46,6 +46,8 @@ A separate listener who does not see the goal card could infer the speaker’s g
 
 Park the two-goal form-choice comparison as an architectural test. The English evidence worth seeking is a clearly integrated perfect and a hearer response that resolves a changed temporal rule, with the ordinary tendency to shift topic independently estimated. The present corpus screen supplies comparison tokens and no such observation. The weekday outcomes remain reserved.
 
+The [listener follow-up](listener-anchor.md) crosses a post-report cue with independent anchor controls, tests the resulting prediction on the second cue, and gives an exact attention-based duplicate.
+
 ## Replay
 
 ```sh
