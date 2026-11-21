@@ -166,6 +166,64 @@ Run `python3 experiments/compatibility/opportunity_choice.py` to check the
 16 matched histories and reproduce the table and the comparison that ignores
 the cue.
 
+### What if learners discover the alternatives afterward?
+
+In a second design every speaker freely chooses between two expressions.
+Learners hear the same 24 messages and see the same scenes and card badges
+in both arms. Only the speaker sees the two particles on the card. After the
+last message, learners receive a key showing which particles each badge
+permitted. Every version uses two P/Q cards and one Q/R card. Q and R are
+familiar paraphrases. Both keys show the same words equally often.
+
+The circle card accounts for three P and three Q choices in each scene.
+Six further Qs in still-locked scenes carry one badge, and six Qs after
+reopening carry another. The keys exchange which of those badges allowed P.
+Thus the disclosure tells the learner *where speakers passed up P*.
+The model treats the recordings as choices by independent tutors, the cards
+as assigned independently of repertoire, and the chance of choosing Q over
+R as independent of the parameters governing P. Under these assumptions
+the Q/R choices contribute a constant to the likelihood. On P/Q cards the
+learner observes three P choices in each scene and either nine or three Qs.
+Writing $p_s$ and $p_r$ for the chances of choosing P when offered in
+still-locked and reopened scenes, respectively, the reopened-key likelihood
+divided by the still-locked-key likelihood is $[(1-p_r)/(1-p_s)]^6$ when
+Q and R are equiprobable. The six shared P tokens cancel from this ratio.
+
+| Scene with six additional Q choices over P | Endorse P, still locked | Endorse P, reopened | Choose P, still locked | Choose P, reopened |
+|---|---:|---:|---:|---:|
+| Still locked | 62.36% | 45.93% | 33.68% | 25.46% |
+| Reopened | 69.33% | 41.39% | 37.16% | 23.20% |
+
+Randomize each learner to one disclosure, one test scene and one probe,
+given either before or after the key. Use the familiar adverb B, which has
+never appeared with P. The test speaker has no badge. Take truth endorsement
+as primary. For each test scene, subtract endorsement under the still-locked
+key from endorsement under the reopened key. After disclosure, the predicted
+differences are +6.96 points while still locked and −4.54 after reopening.
+Subtracting the first from the second gives **−11.50 percentage points**.
+Before disclosure the two arms have identical observable histories, so their
+expected difference is zero on each scene, even for learners who infer
+possible menus from the badges. Form choice at the training payoff gives
+half the truth interaction under the specified response rules.
+
+A learner who fixes attention during exposure and ignores later information
+predicts zero interaction at both times. An interaction emerging after the
+key would show that later information about speakers' options affected
+responses to a fresh combination. The hard and graded models agree on the
+whole table. A learner could also remember which scene went with each badge
+and use the key when answering. Indeed, discarding all Q/R trials at test
+and applying the same P/Q likelihood reproduces the model for every history.
+The timing contrast leaves open when linguistic knowledge itself changed.
+Forgetting which scenes went with which badge could erase the interaction
+even in learners who take speakers' alternatives into account.
+
+Run `python3 experiments/compatibility/menu_disclosure.py` to verify all 256
+lists and reproduce the table. Add `--list reopened continuous 0` for a
+complete example. The first argument names the scene with the six additional
+P/Q opportunities, the second the probe scene, and the third the list
+version. Add `--before-key` to move that learner's probe ahead of disclosure,
+or `--choice` to elicit a choice of description.
+
 ## Replay
 
 From the repository root, with Python, NumPy and SciPy installed, run
